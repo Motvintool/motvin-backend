@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  motiv-backend:
+    build: .
+    container_name: motiv-backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data:ro    # Read-only mount for data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATA_ROOT=/app/data
+      - CACHE_MAX_COLLECTIONS=50
+      - CACHE_MAX_SIZE_MB=500
+      - CACHE_COLLECTION_TTL_HOURS=1
+      - CACHE_ICON_TTL_MINUTES=30
+      - LOG_LEVEL=info
+      - LOG_PRETTY=false
+    restart: unless-stopped
+    mem_limit: 1g
+    cpus: "2"

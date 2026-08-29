@@ -1,0 +1,572 @@
+{
+  "info": {
+    "name": "Motiv Backend - Icon Service",
+    "description": "Complete API collection for testing the Motiv Backend icon service with NestJS + Fastify",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "motiv-backend-icons-v1",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "item": [
+        {
+          "name": "Health Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            },
+            "description": "Check if the server is running and get system info"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Collections",
+      "item": [
+        {
+          "name": "Get All Collections",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collections",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collections"]
+            },
+            "description": "Get list of all icon collections with metadata"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Collection Metadata (Lucide)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/lucide",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "lucide"]
+            },
+            "description": "Get metadata for Lucide icon collection"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Collection Metadata (Tabler)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/tabler",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "tabler"]
+            },
+            "description": "Get metadata for Tabler icon collection"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Collection Metadata (Heroicons)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/heroicons",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "heroicons"]
+            },
+            "description": "Get metadata for Heroicons collection"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Icons List",
+      "item": [
+        {
+          "name": "Get Icons (Lucide - Default)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/lucide/icons?limit=50&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "lucide", "icons"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "50"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Get first 50 icons from Lucide"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icons (Tabler - Paginated)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/tabler/icons?limit=100&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "tabler", "icons"],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "100"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Get 100 icons from Tabler with pagination"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icons (Filter by Category)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/lucide/icons?category=UI&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "lucide", "icons"],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "UI"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Get icons filtered by category"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icons (Filter by Style)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/heroicons/icons?style=outline&limit=30",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "heroicons", "icons"],
+              "query": [
+                {
+                  "key": "style",
+                  "value": "outline"
+                },
+                {
+                  "key": "limit",
+                  "value": "30"
+                }
+              ]
+            },
+            "description": "Get outline style icons from Heroicons"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icons (Search in Collection)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/lucide/icons?search=home&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "lucide", "icons"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "home"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "Search for 'home' icons in Lucide collection"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "SVG Icons",
+      "item": [
+        {
+          "name": "Get Icon SVG (Default)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/lucide/home.svg",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "lucide", "home.svg"]
+            },
+            "description": "Get home icon from Lucide with default settings"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icon SVG (Custom Color)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/lucide/heart.svg?color=FF0000",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "lucide", "heart.svg"],
+              "query": [
+                {
+                  "key": "color",
+                  "value": "FF0000",
+                  "description": "Red color (hex without #)"
+                }
+              ]
+            },
+            "description": "Get heart icon with red color"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icon SVG (Custom Size)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/lucide/star.svg?size=48",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "lucide", "star.svg"],
+              "query": [
+                {
+                  "key": "size",
+                  "value": "48",
+                  "description": "48x48 pixels"
+                }
+              ]
+            },
+            "description": "Get star icon at 48x48 size"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icon SVG (Custom Stroke)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/lucide/user.svg?stroke=3",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "lucide", "user.svg"],
+              "query": [
+                {
+                  "key": "stroke",
+                  "value": "3",
+                  "description": "Stroke width 3"
+                }
+              ]
+            },
+            "description": "Get user icon with thicker stroke"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icon SVG (All Options)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/tabler/alert-circle.svg?color=FFA500&size=64&stroke=2.5",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "tabler", "alert-circle.svg"],
+              "query": [
+                {
+                  "key": "color",
+                  "value": "FFA500",
+                  "description": "Orange"
+                },
+                {
+                  "key": "size",
+                  "value": "64"
+                },
+                {
+                  "key": "stroke",
+                  "value": "2.5"
+                }
+              ]
+            },
+            "description": "Get icon with all customization options"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Icon SVG (Heroicons)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/heroicons/arrow-right.svg?color=3B82F6&size=32",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "heroicons", "arrow-right.svg"],
+              "query": [
+                {
+                  "key": "color",
+                  "value": "3B82F6",
+                  "description": "Blue"
+                },
+                {
+                  "key": "size",
+                  "value": "32"
+                }
+              ]
+            },
+            "description": "Get arrow icon from Heroicons"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Search Icons (Simple)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=home",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "home"
+                }
+              ]
+            },
+            "description": "Search for 'home' icons across all collections"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Icons (With Limit)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=user&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "user"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": "Search for 'user' icons with max 20 results"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Icons (Specific Collections)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=arrow&collection=lucide,heroicons",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "arrow"
+                },
+                {
+                  "key": "collection",
+                  "value": "lucide,heroicons",
+                  "description": "Comma-separated collection IDs"
+                }
+              ]
+            },
+            "description": "Search only in Lucide and Heroicons"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Icons (By Category)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=icon&category=UI&limit=30",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "icon"
+                },
+                {
+                  "key": "category",
+                  "value": "UI"
+                },
+                {
+                  "key": "limit",
+                  "value": "30"
+                }
+              ]
+            },
+            "description": "Search in UI category only"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Icons (By Style)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=check&style=outline",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "check"
+                },
+                {
+                  "key": "style",
+                  "value": "outline"
+                }
+              ]
+            },
+            "description": "Search for outline style icons only"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Icons (Complex Query)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=settings&collection=lucide,tabler&category=UI&style=outline&limit=15&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "settings"
+                },
+                {
+                  "key": "collection",
+                  "value": "lucide,tabler"
+                },
+                {
+                  "key": "category",
+                  "value": "UI"
+                },
+                {
+                  "key": "style",
+                  "value": "outline"
+                },
+                {
+                  "key": "limit",
+                  "value": "15"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Complex search with all filters"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Error Cases",
+      "item": [
+        {
+          "name": "Collection Not Found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/collection/nonexistent",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "collection", "nonexistent"]
+            },
+            "description": "Test error handling for non-existent collection"
+          },
+          "response": []
+        },
+        {
+          "name": "Icon Not Found",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/lucide/doesnotexist.svg",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "lucide", "doesnotexist.svg"]
+            },
+            "description": "Test error handling for non-existent icon"
+          },
+          "response": []
+        },
+        {
+          "name": "Search Without Query",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"]
+            },
+            "description": "Test validation - query parameter required"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
