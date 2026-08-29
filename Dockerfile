@@ -14,7 +14,7 @@ RUN npm install
 # Copy source
 COPY src/ ./src/
 
-# Build
+# Build TypeScript
 RUN npm run build
 
 # Production stage
@@ -31,8 +31,8 @@ RUN npm install --production && npm cache clean --force
 # Copy built app from builder
 COPY --from=builder /app/dist ./dist
 
-# Create data directory (will be mounted as volume)
-RUN mkdir -p /app/data
+# Copy icon data (pre-built locally)
+COPY data/ ./data/
 
 # Expose port
 EXPOSE 3000
