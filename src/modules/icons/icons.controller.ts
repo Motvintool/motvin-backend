@@ -104,27 +104,35 @@ export class IconsController {
     return reply.code(HttpStatus.OK).send(svg);
   }
 
+  // GET /api/icons/stats
+  @Get('stats')
+  async getStats() {
+    const stats = await this.iconsService.getStats();
+    return {
+      success: true,
+      data: stats,
+    };
+  }
+
   // GET /api/icons/search
   @Get('search')
   async searchIcons(
-    @Query('q') query: string,
+    @Query('q') query: string = '',  // Make optional with default empty string
     @Query('collection') collection?: string,
     @Query('category') category?: string,
     @Query('style') style?: string,
+    @Query('license') license?: string,
     @Query('limit') limit: number = 50,
     @Query('offset') offset: number = 0,
   ) {
-    if (!query) {
-      return {
-        success: false,
-        error: 'Query parameter "q" is required',
-      };
-    }
+    // Allow empty query for cross-collection browsing
+    // if (!query) removed - empty query is now valid
 
     const results = await this.iconsService.searchIcons(query, {
       collection: collection?.split(','),
       category,
       style,
+      license,
       limit: Math.min(limit, 200),
       offset,
     });

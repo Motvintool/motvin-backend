@@ -349,8 +349,56 @@
       ]
     },
     {
+      "name": "Stats API",
+      "item": [
+        {
+          "name": "Get Icon Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "stats"]
+            },
+            "description": "Get comprehensive statistics about all icons: total count, collections, categories, styles, and licenses"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "name": "Search",
       "item": [
+        {
+          "name": "Browse All Icons (Empty Query)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=&limit=60&offset=0",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "description": "Empty query for cross-collection browsing"
+                },
+                {
+                  "key": "limit",
+                  "value": "60"
+                },
+                {
+                  "key": "offset",
+                  "value": "0"
+                }
+              ]
+            },
+            "description": "Browse icons across all collections without search query (cross-collection pagination)"
+          },
+          "response": []
+        },
         {
           "name": "Search Icons (Simple)",
           "request": {
@@ -473,12 +521,42 @@
           "response": []
         },
         {
+          "name": "Search Icons (By License)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/icons/search?q=&license=MIT&limit=30",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "icons", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "",
+                  "description": "Empty for browsing"
+                },
+                {
+                  "key": "license",
+                  "value": "MIT",
+                  "description": "Filter by license type"
+                },
+                {
+                  "key": "limit",
+                  "value": "30"
+                }
+              ]
+            },
+            "description": "Browse icons with specific license (MIT, Apache-2.0, etc.)"
+          },
+          "response": []
+        },
+        {
           "name": "Search Icons (Complex Query)",
           "request": {
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/icons/search?q=settings&collection=lucide,tabler&category=UI&style=outline&limit=15&offset=0",
+              "raw": "{{baseUrl}}/api/icons/search?q=settings&collection=lucide,tabler&category=UI&style=outline&license=MIT&limit=15&offset=0",
               "host": ["{{baseUrl}}"],
               "path": ["api", "icons", "search"],
               "query": [
@@ -499,6 +577,11 @@
                   "value": "outline"
                 },
                 {
+                  "key": "license",
+                  "value": "MIT",
+                  "description": "License filter"
+                },
+                {
                   "key": "limit",
                   "value": "15"
                 },
@@ -508,7 +591,7 @@
                 }
               ]
             },
-            "description": "Complex search with all filters"
+            "description": "Complex search with all filters including license"
           },
           "response": []
         }
@@ -546,7 +629,7 @@
           "response": []
         },
         {
-          "name": "Search Without Query",
+          "name": "Search Without Query (Deprecated Test)",
           "request": {
             "method": "GET",
             "header": [],
@@ -555,7 +638,7 @@
               "host": ["{{baseUrl}}"],
               "path": ["api", "icons", "search"]
             },
-            "description": "Test validation - query parameter required"
+            "description": "CHANGED: Query parameter is now optional. Empty query returns all icons for cross-collection browsing. See 'Browse All Icons' in Search section."
           },
           "response": []
         }
