@@ -185,9 +185,12 @@ export class IconsService {
       const collectionLicense = await this.loaderService.getCollectionLicense(collectionId);
 
       // Skip entire collection if license filter doesn't match
-      if (options.license && collectionLicense !== options.license) {
-        this.logger.debug(`Skipping collection ${collectionId}: license ${collectionLicense} != ${options.license}`);
-        continue;
+      if (options.license) {
+        const licenses = options.license.split(',');
+        if (!licenses.includes(collectionLicense)) {
+          this.logger.debug(`Skipping collection ${collectionId}: license ${collectionLicense} not in ${options.license}`);
+          continue;
+        }
       }
 
       for (const icon of icons) {
@@ -202,8 +205,14 @@ export class IconsService {
         }
 
         // Filter by category/style (license already filtered at collection level)
-        if (options.category && icon.category !== options.category) continue;
-        if (options.style && icon.style !== options.style) continue;
+        if (options.category) {
+          const categories = options.category.split(',');
+          if (!categories.includes(icon.category)) continue;
+        }
+        if (options.style) {
+          const styles = options.style.split(',');
+          if (!styles.includes(icon.style)) continue;
+        }
 
         // Calculate relevance (simple scoring)
         let relevance = isEmptyQuery ? 0.5 : 0;  // Default relevance for empty query
@@ -225,6 +234,8 @@ export class IconsService {
           category: icon.category,
           tags: icon.tags,
           style: icon.style,
+          svg: icon.svg,
+          viewBox: icon.viewBox,
           license: collectionLicense,
           relevance,
         });
