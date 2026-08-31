@@ -218,7 +218,8 @@ export class LogosService {
         }
         if (options.style) {
           const styles = options.style.split(',');
-          if (!styles.includes(logo.style)) continue;
+          const logoStyle = logo.style || metadata?.styles?.[0];
+          if (!styles.includes(logoStyle)) continue;
         }
 
         // Calculate relevance (simple scoring)
@@ -240,7 +241,7 @@ export class LogosService {
           collectionName: metadata?.name || collectionId,
           category: logo.category,
           tags: logo.tags || [],
-          style: logo.style,
+          style: logo.style || metadata?.styles?.[0],
           svg: logo.body || logo.svg,
           viewBox: logo.viewBox,
           license: collectionLicense,

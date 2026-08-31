@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { IconsModule } from './modules/icons/icons.module';
 import { LogosModule } from './modules/logos/logos.module';
+import { IllustrationsModule } from './modules/illustrations/illustrations.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -14,6 +15,7 @@ import configuration from './config/configuration';
     // Feature modules
     IconsModule,
     LogosModule,
+    IllustrationsModule,
   ],
   controllers: [],
 })
