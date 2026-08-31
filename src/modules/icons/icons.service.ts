@@ -10,6 +10,7 @@ interface Icon {
   style: string;
   viewBox: string;
   svg: string;
+  body?: string;
 }
 
 interface IconOptions {
@@ -25,6 +26,7 @@ interface SearchOptions {
   category?: string;
   style?: string;
   license?: string;
+  ids?: string[];
   limit?: number;
   offset?: number;
 }
@@ -80,7 +82,7 @@ export class IconsService {
       filtered = filtered.filter(
         (icon) =>
           icon.name.toLowerCase().includes(searchLower) ||
-          icon.tags.some((tag) => tag.toLowerCase().includes(searchLower)),
+          (icon.tags || []).some((tag) => tag.toLowerCase().includes(searchLower)),
       );
     }
 
@@ -138,7 +140,8 @@ export class IconsService {
     const stroke = options.stroke || 2;
 
     // Replace color and stroke in SVG
-    let svg = icon.svg
+    const rawSvg = icon.svg || icon.body || '';
+    let svg = rawSvg
       .replace(/currentColor/g, color)
       .replace(/stroke-width="[^"]*"/g, `stroke-width="${stroke}"`);
 
@@ -167,7 +170,7 @@ export class IconsService {
     const needed = requestedOffset + requestedLimit;
 
     // Search across collections
-    const hasFilters = options.collection || options.category || options.style || options.license;
+    const hasFilters = options.collection || options.category || options.style || options.license || (options.ids && options.ids.length > 0);
     this.logger.debug(`Starting search: isEmptyQuery=${isEmptyQuery}, hasFilters=${!!hasFilters}, collectionsToSearch=${collectionsToSearch.length}, needed=${needed}`);
 
     for (const collectionId of collectionsToSearch) {
@@ -197,7 +200,7 @@ export class IconsService {
         // Match query (skip filtering if empty query)
         if (!isEmptyQuery) {
           const matchName = icon.name.toLowerCase().includes(queryLower);
-          const matchTags = icon.tags.some((tag) =>
+          const matchTags = (icon.tags || []).some((tag) =>
             tag.toLowerCase().includes(queryLower),
           );
 
@@ -213,12 +216,15 @@ export class IconsService {
           const styles = options.style.split(',');
           if (!styles.includes(icon.style)) continue;
         }
+        if (options.ids && options.ids.length > 0) {
+          if (!options.ids.includes(icon.id)) continue;
+        }
 
         // Calculate relevance (simple scoring)
         let relevance = isEmptyQuery ? 0.5 : 0;  // Default relevance for empty query
         if (!isEmptyQuery) {
           const matchName = icon.name.toLowerCase().includes(queryLower);
-          const matchTags = icon.tags.some((tag) => tag.toLowerCase().includes(queryLower));
+          const matchTags = (icon.tags || []).some((tag) => tag.toLowerCase().includes(queryLower));
 
           if (icon.name.toLowerCase() === queryLower) relevance = 1.0;
           else if (icon.name.toLowerCase().startsWith(queryLower)) relevance = 0.8;
@@ -232,7 +238,7 @@ export class IconsService {
           collection: collectionId,
           collectionName: metadata?.name || collectionId,
           category: icon.category,
-          tags: icon.tags,
+          tags: icon.tags || [],
           style: icon.style,
           svg: icon.svg,
           viewBox: icon.viewBox,

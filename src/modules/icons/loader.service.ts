@@ -107,9 +107,69 @@ export class LoaderService implements OnModuleInit {
       const data = await readFile(path, 'utf-8');
       const icons = JSON.parse(data);
 
+      const categoryKeywords = {
+        Arrows: ['arrow', 'chevron', 'caret', 'direction', 'point', 'up', 'down', 'left', 'right'],
+        Communication: ['phone', 'mail', 'chat', 'message', 'envelope', 'call', 'speech', 'comment', 'send', 'wifi', 'signal', 'network', 'bluetooth'],
+        Media: ['play', 'pause', 'stop', 'video', 'music', 'audio', 'sound', 'volume', 'speaker', 'mic', 'cast'],
+        People: ['user', 'person', 'people', 'avatar', 'profile', 'face', 'group', 'man', 'woman'],
+        Business: ['briefcase', 'office', 'chart', 'graph', 'money', 'dollar', 'euro', 'coin', 'wallet', 'trend', 'bag'],
+        Weather: ['sun', 'moon', 'cloud', 'rain', 'snow', 'wind', 'lightning', 'weather', 'storm', 'temp'],
+        Device: ['laptop', 'mobile', 'phone', 'tablet', 'screen', 'monitor', 'keyboard', 'mouse', 'battery', 'cpu', 'device', 'desktop', 'computer'],
+        Navigation: ['map', 'location', 'pin', 'gps', 'compass', 'globe', 'route', 'marker', 'local'],
+        File: ['file', 'folder', 'document', 'archive', 'paper', 'copy', 'paste', 'clipboard'],
+        Security: ['lock', 'key', 'shield', 'guard', 'protect', 'secure', 'password', 'unlock'],
+        Time: ['clock', 'time', 'watch', 'hour', 'minute', 'calendar', 'date', 'schedule'],
+        Status: ['check', 'cross', 'x', 'close', 'tick', 'success', 'warning', 'error', 'alert', 'info', 'bell', 'plus', 'minus', 'add', 'remove', 'delete', 'clear', 'cancel', 'badge'],
+        AI: ['ai', 'robot', 'bot', 'sparkle', 'magic', 'brain', 'smart', 'machine'],
+        Editing: ['edit', 'pencil', 'pen', 'write', 'draw', 'brush', 'crop', 'cut', 'paint', 'filter', 'view', 'eye', 'zoom', 'search', 'format', 'layout', 'list', 'table', 'sort', 'select'],
+        Characters: ['font', 'text', 'letter', 'character', 'type', 'bold', 'italic', 'heading', 'language'],
+        Hands: ['hand', 'finger', 'thumb', 'point', 'touch', 'grab', 'hold'],
+        Home: ['home', 'house', 'building', 'roof', 'door', 'nest'],
+        Album: ['album', 'photo', 'picture', 'image', 'gallery'],
+        Camera: ['camera', 'lens', 'shutter', 'focus'],
+        Nature: ['leaf', 'tree', 'plant', 'flower', 'forest', 'wood', 'bug', 'animal', 'water', 'fire', 'drop'],
+        Finance: ['bank', 'money', 'coin', 'card', 'credit', 'dollar', 'euro', 'wallet', 'pay', 'currency'],
+        Education: ['book', 'school', 'learn', 'student', 'graduate', 'degree', 'hat', 'read', 'class'],
+        Transport: ['car', 'bus', 'train', 'plane', 'truck', 'bike', 'ship', 'boat', 'vehicle', 'auto'],
+        Design: ['layer', 'vector', 'palette', 'color', 'paint', 'canvas', 'grid', 'align', 'distribute', 'path'],
+        Commerce: ['shop', 'cart', 'bag', 'store', 'buy', 'sell', 'price', 'tag', 'basket'],
+        Health: ['health', 'medical', 'hospital', 'pill', 'heart', 'pulse', 'doctor', 'nurse'],
+        Food: ['food', 'drink', 'cup', 'coffee', 'meal', 'fork', 'knife', 'spoon', 'pizza', 'burger', 'apple', 'dining'],
+        Social: ['share', 'like', 'thumb', 'heart', 'star', 'network', 'connect', 'link'],
+        Brands: ['logo', 'brand', 'facebook', 'twitter', 'google', 'apple', 'microsoft', 'github', 'amazon'],
+        Sports: ['ball', 'game', 'sport', 'play', 'run', 'jump', 'swim', 'fitness'],
+        Gaming: ['game', 'play', 'console', 'controller', 'joystick', 'pixel', 'vr', 'dice', 'chess'],
+        Development: ['code', 'bracket', 'terminal', 'bug', 'debug', 'program', 'api', 'server', 'database', 'web'],
+        System: ['setting', 'gear', 'cog', 'option', 'config', 'power', 'off', 'on', 'switch', 'menu', 'tool'],
+        Shapes: ['circle', 'square', 'triangle', 'rectangle', 'star', 'polygon', 'cube', 'shape'],
+        Music: ['music', 'note', 'clef', 'melody', 'song', 'tune'],
+        Travel: ['travel', 'bag', 'luggage', 'suitcase', 'ticket', 'flight', 'trip'],
+      };
+
+      const categoryRegexMap = new Map<string, RegExp>();
+      for (const [category, keywords] of Object.entries(categoryKeywords)) {
+        categoryRegexMap.set(category, new RegExp(`\\b(${keywords.join('|')})\\b`, 'i'));
+      }
+
+      // Pre-compute category for each icon before caching
+      for (const icon of icons) {
+        const searchStr = `${icon.name} ${(icon.tags || []).join(' ')}`.toLowerCase();
+        let matched = false;
+        for (const [category, regex] of categoryRegexMap.entries()) {
+          if (regex.test(searchStr)) {
+            icon.category = category;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          icon.category = 'Others';
+        }
+      }
+
       const loadTime = Date.now() - startTime;
       this.logger.log(
-        `Loaded ${icons.length} icons from ${collectionId} in ${loadTime}ms`,
+        `Loaded and categorized ${icons.length} icons from ${collectionId} in ${loadTime}ms`,
       );
 
       // Cache the collection
@@ -141,54 +201,11 @@ export class LoaderService implements OnModuleInit {
       styles: c.styles,
     }));
 
-    // Category keyword mapping (from frontend CATEGORY_MAP)
-    const categoryKeywords = {
-      Arrows: ['arrow', 'chevron', 'caret', 'direction', 'point', 'up', 'down', 'left', 'right'],
-      Communication: ['phone', 'mail', 'chat', 'message', 'envelope', 'call', 'speech', 'comment', 'send', 'wifi', 'signal', 'network', 'bluetooth'],
-      Media: ['play', 'pause', 'stop', 'video', 'music', 'audio', 'sound', 'volume', 'speaker', 'mic', 'cast'],
-      People: ['user', 'person', 'people', 'avatar', 'profile', 'face', 'group', 'man', 'woman'],
-      Business: ['briefcase', 'office', 'chart', 'graph', 'money', 'dollar', 'euro', 'coin', 'wallet', 'trend', 'bag'],
-      Weather: ['sun', 'moon', 'cloud', 'rain', 'snow', 'wind', 'lightning', 'weather', 'storm', 'temp'],
-      Device: ['laptop', 'mobile', 'phone', 'tablet', 'screen', 'monitor', 'keyboard', 'mouse', 'battery', 'cpu', 'device', 'desktop', 'computer'],
-      Navigation: ['map', 'location', 'pin', 'gps', 'compass', 'globe', 'route', 'marker', 'local'],
-      File: ['file', 'folder', 'document', 'archive', 'paper', 'copy', 'paste', 'clipboard'],
-      Security: ['lock', 'key', 'shield', 'guard', 'protect', 'secure', 'password', 'unlock'],
-      Time: ['clock', 'time', 'watch', 'hour', 'minute', 'calendar', 'date', 'schedule'],
-      Status: ['check', 'cross', 'x', 'close', 'tick', 'success', 'warning', 'error', 'alert', 'info', 'bell', 'plus', 'minus', 'add', 'remove', 'delete', 'clear', 'cancel', 'badge'],
-      AI: ['ai', 'robot', 'bot', 'sparkle', 'magic', 'brain', 'smart', 'machine'],
-      Editing: ['edit', 'pencil', 'pen', 'write', 'draw', 'brush', 'crop', 'cut', 'paint', 'filter', 'view', 'eye', 'zoom', 'search', 'format', 'layout', 'list', 'table', 'sort', 'select'],
-      Characters: ['font', 'text', 'letter', 'character', 'type', 'bold', 'italic', 'heading', 'language'],
-      Hands: ['hand', 'finger', 'thumb', 'point', 'touch', 'grab', 'hold'],
-      Home: ['home', 'house', 'building', 'roof', 'door', 'nest'],
-      Album: ['album', 'photo', 'picture', 'image', 'gallery'],
-      Camera: ['camera', 'lens', 'shutter', 'focus'],
-      Nature: ['leaf', 'tree', 'plant', 'flower', 'forest', 'wood', 'bug', 'animal', 'water', 'fire', 'drop'],
-      Finance: ['bank', 'money', 'coin', 'card', 'credit', 'dollar', 'euro', 'wallet', 'pay', 'currency'],
-      Education: ['book', 'school', 'learn', 'student', 'graduate', 'degree', 'hat', 'read', 'class'],
-      Transport: ['car', 'bus', 'train', 'plane', 'truck', 'bike', 'ship', 'boat', 'vehicle', 'auto'],
-      Design: ['layer', 'vector', 'palette', 'color', 'paint', 'canvas', 'grid', 'align', 'distribute', 'path'],
-      Commerce: ['shop', 'cart', 'bag', 'store', 'buy', 'sell', 'price', 'tag', 'basket'],
-      Health: ['health', 'medical', 'hospital', 'pill', 'heart', 'pulse', 'doctor', 'nurse'],
-      Food: ['food', 'drink', 'cup', 'coffee', 'meal', 'fork', 'knife', 'spoon', 'pizza', 'burger', 'apple', 'dining'],
-      Social: ['share', 'like', 'thumb', 'heart', 'star', 'network', 'connect', 'link'],
-      Brands: ['logo', 'brand', 'facebook', 'twitter', 'google', 'apple', 'microsoft', 'github', 'amazon'],
-      Sports: ['ball', 'game', 'sport', 'play', 'run', 'jump', 'swim', 'fitness'],
-      Gaming: ['game', 'play', 'console', 'controller', 'joystick', 'pixel', 'vr', 'dice', 'chess'],
-      Development: ['code', 'bracket', 'terminal', 'bug', 'debug', 'program', 'api', 'server', 'database', 'web'],
-      System: ['setting', 'gear', 'cog', 'option', 'config', 'power', 'off', 'on', 'switch', 'menu', 'tool'],
-      Shapes: ['circle', 'square', 'triangle', 'rectangle', 'star', 'polygon', 'cube', 'shape'],
-      Music: ['music', 'note', 'clef', 'melody', 'song', 'tune'],
-      Travel: ['travel', 'bag', 'luggage', 'suitcase', 'ticket', 'flight', 'trip'],
-    };
+    // Category list to initialize counts with 0
+    const categoryList = ['Arrows', 'Communication', 'Media', 'People', 'Business', 'Weather', 'Device', 'Navigation', 'File', 'Security', 'Time', 'Status', 'AI', 'Editing', 'Characters', 'Hands', 'Home', 'Album', 'Camera', 'Nature', 'Finance', 'Education', 'Transport', 'Design', 'Commerce', 'Health', 'Food', 'Social', 'Brands', 'Sports', 'Gaming', 'Development', 'System', 'Shapes', 'Music', 'Travel'];
 
-    // Build regex patterns for categories
-    const categoryRegexMap = new Map<string, RegExp>();
-    for (const [category, keywords] of Object.entries(categoryKeywords)) {
-      categoryRegexMap.set(category, new RegExp(`\\b(${keywords.join('|')})\\b`, 'i'));
-    }
 
-    // Initialize category counts with 0
-    for (const category of Object.keys(categoryKeywords)) {
+    for (const category of categoryList) {
       byCategory.set(category, 0);
     }
     byCategory.set('Others', 0);
@@ -215,20 +232,8 @@ export class LoaderService implements OnModuleInit {
         if (!icons) continue;
 
         for (const icon of icons) {
-          const searchStr = `${icon.name} ${(icon.tags || []).join(' ')}`.toLowerCase();
-
-          let matched = false;
-          for (const [category, regex] of categoryRegexMap.entries()) {
-            if (regex.test(searchStr)) {
-              byCategory.set(category, (byCategory.get(category) || 0) + 1);
-              matched = true;
-              break;
-            }
-          }
-
-          if (!matched) {
-            byCategory.set('Others', (byCategory.get('Others') || 0) + 1);
-          }
+          const cat = icon.category || 'Others';
+          byCategory.set(cat, (byCategory.get(cat) || 0) + 1);
         }
       } catch (error) {
         this.logger.warn(`Failed to load icons for ${collection.id}: ${error.message}`);
