@@ -1,6 +1,6 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { LoaderService } from './loader.service';
-import { CacheService } from './cache.service';
+import { Injectable, Logger } from "@nestjs/common";
+import { LoaderService } from "./loader.service";
+import { CacheService } from "./cache.service";
 
 interface Icon {
   id: string;
@@ -82,7 +82,9 @@ export class IconsService {
       filtered = filtered.filter(
         (icon) =>
           icon.name.toLowerCase().includes(searchLower) ||
-          (icon.tags || []).some((tag) => tag.toLowerCase().includes(searchLower)),
+          (icon.tags || []).some((tag) =>
+            tag.toLowerCase().includes(searchLower),
+          ),
       );
     }
 
@@ -134,13 +136,13 @@ export class IconsService {
 
     // Generate SVG with options
     const color = options.color
-      ? `#${options.color.replace('#', '')}`
-      : 'currentColor';
+      ? `#${options.color.replace("#", "")}`
+      : "currentColor";
     const size = options.size || 24;
     const stroke = options.stroke || 2;
 
     // Replace color and stroke in SVG
-    const rawSvg = icon.svg || icon.body || '';
+    const rawSvg = icon.svg || icon.body || "";
     let svg = rawSvg
       .replace(/currentColor/g, color)
       .replace(/stroke-width="[^"]*"/g, `stroke-width="${stroke}"`);
@@ -150,13 +152,20 @@ export class IconsService {
   }
 
   async searchIcons(query: string, options: SearchOptions) {
-    const queryLower = query ? query.toLowerCase() : '';
-    const isEmptyQuery = !query || query.trim() === '';
+    const queryLower = query ? query.toLowerCase() : "";
+    const isEmptyQuery = !query || query.trim() === "";
     const results = [];
 
     // Get collections to search
     const collectionsData = await this.loaderService.getCollectionsList();
     let collectionsToSearch = collectionsData.collections.map((c) => c.id);
+
+    const preferredCollection = "heroicons";
+    collectionsToSearch.sort((left, right) => {
+      if (left === preferredCollection) return -1;
+      if (right === preferredCollection) return 1;
+      return 0;
+    });
 
     if (options.collection && options.collection.length > 0) {
       collectionsToSearch = collectionsToSearch.filter((id) =>
@@ -170,28 +179,42 @@ export class IconsService {
     const needed = requestedOffset + requestedLimit;
 
     // Search across collections
-    const hasFilters = options.collection || options.category || options.style || options.license || (options.ids && options.ids.length > 0);
-    this.logger.debug(`Starting search: isEmptyQuery=${isEmptyQuery}, hasFilters=${!!hasFilters}, collectionsToSearch=${collectionsToSearch.length}, needed=${needed}`);
+    const hasFilters =
+      options.collection ||
+      options.category ||
+      options.style ||
+      options.license ||
+      (options.ids && options.ids.length > 0);
+    this.logger.debug(
+      `Starting search: isEmptyQuery=${isEmptyQuery}, hasFilters=${!!hasFilters}, collectionsToSearch=${collectionsToSearch.length}, needed=${needed}`,
+    );
 
     for (const collectionId of collectionsToSearch) {
       // Optimization: Stop loading if we have enough results for pagination (only if no specific filters)
       if (isEmptyQuery && !hasFilters && results.length >= needed + 1000) {
-        this.logger.debug(`Breaking early: results.length=${results.length} >= needed+1000=${needed+1000}`);
+        this.logger.debug(
+          `Breaking early: results.length=${results.length} >= needed+1000=${needed + 1000}`,
+        );
         break; // We have enough icons for current page + buffer
       }
 
       const icons = await this.loaderService.getCollection(collectionId);
       if (!icons) continue;
-      this.logger.debug(`Loaded collection ${collectionId}: ${icons.length} icons, total so far: ${results.length}`);
+      this.logger.debug(
+        `Loaded collection ${collectionId}: ${icons.length} icons, total so far: ${results.length}`,
+      );
 
       const metadata = await this.loaderService.getMetadata(collectionId);
-      const collectionLicense = await this.loaderService.getCollectionLicense(collectionId);
+      const collectionLicense =
+        await this.loaderService.getCollectionLicense(collectionId);
 
       // Skip entire collection if license filter doesn't match
       if (options.license) {
-        const licenses = options.license.split(',');
+        const licenses = options.license.split(",");
         if (!licenses.includes(collectionLicense)) {
-          this.logger.debug(`Skipping collection ${collectionId}: license ${collectionLicense} not in ${options.license}`);
+          this.logger.debug(
+            `Skipping collection ${collectionId}: license ${collectionLicense} not in ${options.license}`,
+          );
           continue;
         }
       }
@@ -209,11 +232,11 @@ export class IconsService {
 
         // Filter by category/style (license already filtered at collection level)
         if (options.category) {
-          const categories = options.category.split(',');
+          const categories = options.category.split(",");
           if (!categories.includes(icon.category)) continue;
         }
         if (options.style) {
-          const styles = options.style.split(',');
+          const styles = options.style.split(",");
           if (!styles.includes(icon.style)) continue;
         }
         if (options.ids && options.ids.length > 0) {
@@ -221,13 +244,16 @@ export class IconsService {
         }
 
         // Calculate relevance (simple scoring)
-        let relevance = isEmptyQuery ? 0.5 : 0;  // Default relevance for empty query
+        let relevance = isEmptyQuery ? 0.5 : 0; // Default relevance for empty query
         if (!isEmptyQuery) {
           const matchName = icon.name.toLowerCase().includes(queryLower);
-          const matchTags = (icon.tags || []).some((tag) => tag.toLowerCase().includes(queryLower));
+          const matchTags = (icon.tags || []).some((tag) =>
+            tag.toLowerCase().includes(queryLower),
+          );
 
           if (icon.name.toLowerCase() === queryLower) relevance = 1.0;
-          else if (icon.name.toLowerCase().startsWith(queryLower)) relevance = 0.8;
+          else if (icon.name.toLowerCase().startsWith(queryLower))
+            relevance = 0.8;
           else if (matchName) relevance = 0.6;
           else if (matchTags) relevance = 0.4;
         }
@@ -252,14 +278,20 @@ export class IconsService {
     results.sort((a, b) => b.relevance - a.relevance);
 
     // Pagination
-    this.logger.debug(`Pagination: results=${results.length}, offset=${requestedOffset}, limit=${requestedLimit}`);
-    const paginated = results.slice(requestedOffset, requestedOffset + requestedLimit);
+    this.logger.debug(
+      `Pagination: results=${results.length}, offset=${requestedOffset}, limit=${requestedLimit}`,
+    );
+    const paginated = results.slice(
+      requestedOffset,
+      requestedOffset + requestedLimit,
+    );
     this.logger.debug(`After slice: paginated=${paginated.length}`);
 
     // Determine total count based on filters (hasFilters already defined above)
-    const totalCount = isEmptyQuery && !hasFilters
-      ? collectionsData.collections.reduce((sum, c) => sum + c.total, 0)  // No query, no filters = global total
-      : results.length;  // With query or filters = actual filtered count
+    const totalCount =
+      isEmptyQuery && !hasFilters
+        ? collectionsData.collections.reduce((sum, c) => sum + c.total, 0) // No query, no filters = global total
+        : results.length; // With query or filters = actual filtered count
 
     return {
       query,
@@ -270,15 +302,15 @@ export class IconsService {
   }
 
   async getStats() {
-    const cacheKey = 'stats:global';
+    const cacheKey = "stats:global";
     const cached = this.cacheService.getCollection(cacheKey);
 
     if (cached) {
-      this.logger.debug('Cache HIT for stats');
+      this.logger.debug("Cache HIT for stats");
       return cached;
     }
 
-    this.logger.debug('Cache MISS for stats - calculating');
+    this.logger.debug("Cache MISS for stats - calculating");
     const stats = await this.loaderService.calculateStats();
 
     // Cache with 1 hour TTL (stats don't change often)
