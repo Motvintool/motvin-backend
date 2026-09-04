@@ -5,6 +5,7 @@ import {
 } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
+import compression from '@fastify/compress';
 
 async function bootstrap() {
   // Create NestJS app with Fastify adapter
@@ -25,6 +26,9 @@ async function bootstrap() {
     allowedHeaders: ['Content-Type', 'Accept'],
     maxAge: 86400,
   });
+
+  // Enable gzip/brotli compression for all responses
+  await app.register(compression, { encodings: ['gzip', 'deflate'] });
 
   // Global prefix
   app.setGlobalPrefix('api');
