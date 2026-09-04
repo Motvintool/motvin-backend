@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { LoaderService } from './loader.service';
 import { CacheService } from './cache.service';
+import { LRUCache } from 'lru-cache';
 
 interface Illustration {
   id: string;
@@ -34,6 +35,7 @@ interface SearchOptions {
 @Injectable()
 export class IllustrationsService {
   private readonly logger = new Logger(IllustrationsService.name);
+  private searchCache = new LRUCache({ max: 500, ttl: 1000 * 60 * 5 });
 
   constructor(
     private readonly loaderService: LoaderService,
@@ -107,6 +109,12 @@ export class IllustrationsService {
   }
 
   async searchIllustrations(query: string, options: SearchOptions) {
+    const cacheKey = JSON.stringify({ query, options });
+    const cachedResult = this.searchCache.get(cacheKey);
+    if (cachedResult) {
+      return cachedResult;
+    }
+
     const queryLower = query ? query.toLowerCase() : '';
     const isEmptyQuery = !query || query.trim() === '';
     const results: any[] = [];
@@ -188,7 +196,7 @@ export class IllustrationsService {
     const total = results.length;
     const paginated = results.slice(requestedOffset, requestedOffset + requestedLimit);
 
-    return {
+    const finalResult = {
       total,
       results: paginated,
       pagination: {
@@ -197,6 +205,8 @@ export class IllustrationsService {
         hasMore: requestedOffset + requestedLimit < total,
       },
     };
+    this.searchCache.set(cacheKey, finalResult);
+    return finalResult;
   }
 
   async getStats() {

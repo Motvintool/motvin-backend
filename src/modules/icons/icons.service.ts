@@ -1,6 +1,7 @@
 import { Injectable, Logger } from "@nestjs/common";
 import { LoaderService } from "./loader.service";
 import { CacheService } from "./cache.service";
+import { LRUCache } from 'lru-cache';
 
 interface Icon {
   id: string;
@@ -40,6 +41,7 @@ interface SVGOptions {
 @Injectable()
 export class IconsService {
   private readonly logger = new Logger(IconsService.name);
+  private searchCache = new LRUCache({ max: 500, ttl: 1000 * 60 * 5 }); // 5 minutes cache
 
   constructor(
     private readonly loaderService: LoaderService,
@@ -152,6 +154,12 @@ export class IconsService {
   }
 
   async searchIcons(query: string, options: SearchOptions) {
+    const cacheKey = JSON.stringify({ query, options });
+    const cachedResult = this.searchCache.get(cacheKey);
+    if (cachedResult) {
+      return cachedResult;
+    }
+
     const queryLower = query ? query.toLowerCase() : "";
     const isEmptyQuery = !query || query.trim() === "";
     const results = [];
@@ -293,12 +301,14 @@ export class IconsService {
         ? collectionsData.collections.reduce((sum, c) => sum + c.total, 0) // No query, no filters = global total
         : results.length; // With query or filters = actual filtered count
 
-    return {
+    const finalResult = {
       query,
       total: totalCount,
       returned: paginated.length,
       results: paginated,
     };
+    this.searchCache.set(cacheKey, finalResult);
+    return finalResult;
   }
 
   async getStats() {

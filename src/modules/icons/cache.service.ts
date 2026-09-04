@@ -18,7 +18,9 @@ export class CacheService implements OnModuleInit {
       max: config.maxCollections,
       maxSize: config.maxSizeMB * 1024 * 1024, // Convert MB to bytes
       sizeCalculation: (value) => {
-        return JSON.stringify(value).length;
+        // Fast approximation: assume each icon object takes ~2KB
+        // If it's an array of icons, return length * 2000. Otherwise 1.
+        return Array.isArray(value) ? value.length * 2000 : 1;
       },
       ttl: config.collectionTTL,
       updateAgeOnGet: true, // Reset TTL on access
@@ -29,7 +31,7 @@ export class CacheService implements OnModuleInit {
     this.iconCache = new LRUCache({
       max: 10000, // Max 10K icons
       maxSize: 50 * 1024 * 1024, // 50 MB
-      sizeCalculation: (value) => JSON.stringify(value).length,
+      sizeCalculation: (value) => 2000,
       ttl: config.iconTTL,
       updateAgeOnGet: true,
       allowStale: false,

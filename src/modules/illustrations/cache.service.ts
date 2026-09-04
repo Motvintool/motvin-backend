@@ -14,7 +14,7 @@ export class CacheService {
     this.collectionCache = new LRUCache({
       max: config?.maxCollections ?? 50,
       maxSize: (config?.maxSizeMB ?? 200) * 1024 * 1024,
-      sizeCalculation: (v) => JSON.stringify(v).length,
+      sizeCalculation: (v) => Array.isArray(v) ? v.length * 2000 : 2000,
       ttl: config?.collectionTTL ?? 3600000,
       updateAgeOnGet: true,
       allowStale: false,
@@ -23,7 +23,7 @@ export class CacheService {
     this.itemCache = new LRUCache({
       max: 5000,
       maxSize: 50 * 1024 * 1024,
-      sizeCalculation: (v) => JSON.stringify(v).length,
+      sizeCalculation: (v) => Array.isArray(v) ? v.length * 2000 : 2000,
       ttl: config?.iconTTL ?? 3600000,
       updateAgeOnGet: true,
       allowStale: false,
