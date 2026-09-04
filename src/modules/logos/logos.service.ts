@@ -1,7 +1,8 @@
-import { Injectable, Logger } from "@nestjs/common";
+import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { LoaderService } from "./loader.service";
 import { CacheService } from "./cache.service";
 import { LRUCache } from 'lru-cache';
+const MiniSearch = require('minisearch');
 
 interface Logo {
   id: string;
@@ -39,14 +40,64 @@ interface SVGOptions {
 }
 
 @Injectable()
-export class LogosService {
+export class LogosService implements OnModuleInit {
   private readonly logger = new Logger(LogosService.name);
   private searchCache = new LRUCache({ max: 500, ttl: 1000 * 60 * 5 }); // 5 minutes cache
+  private miniSearch: any;
+  private allLogosMetadata: any[] = [];
+  private searchIndexReady = false;
 
   constructor(
     private readonly loaderService: LoaderService,
     private readonly cacheService: CacheService,
   ) {}
+
+  async onModuleInit() {
+    this.logger.log('Initializing MiniSearch index in the background...');
+    this.miniSearch = new MiniSearch({
+      idField: 'uid',
+      fields: ['name', 'tags'],
+      storeFields: ['id', 'name', 'collection', 'collectionName', 'category', 'style', 'viewBox', 'license', 'imageUrl', 'source', 'sourceName', 'author', 'licenseUrl']
+    });
+    
+    this.buildSearchIndex().catch(err => this.logger.error('Failed to build search index', err));
+  }
+
+  private async buildSearchIndex() {
+    const collectionsData = await this.loaderService.getCollectionsList();
+    let totalIndexed = 0;
+    
+    for (const c of collectionsData.collections) {
+      const collectionId = c.id;
+      const items = await this.loaderService.getCollection(collectionId);
+      if (!items) continue;
+
+      const metadata = await this.loaderService.getMetadata(collectionId);
+      const collectionLicense = await this.loaderService.getCollectionLicense(collectionId);
+
+      // Inherit collection-level style (logos have no per-item style)
+      const collectionStyle = (c.styles && c.styles.length > 0) ? c.styles[0] : undefined;
+      const docs = items.map((item: any) => {
+        const { svg, body, tags, ...rest } = item;
+        const doc = {
+          ...rest,
+          uid: `${collectionId}_${item.id}`,
+          tags: (tags || []).join(' '),
+          collection: collectionId,
+          collectionName: metadata?.name || collectionId,
+          license: collectionLicense,
+          style: item.style || collectionStyle,
+        };
+        this.allLogosMetadata.push(doc);
+        return doc;
+      });
+
+      this.miniSearch.addAll(docs);
+      totalIndexed += docs.length;
+    }
+    this.searchIndexReady = true;
+    this.logger.log(`MiniSearch index built successfully. Indexed ${totalIndexed} logos.`);
+  }
 
   async getAllCollections() {
     return this.loaderService.getCollectionsList();
@@ -153,169 +204,80 @@ export class LogosService {
   }
 
   async searchLogos(query: string, options: SearchOptions) {
+    if (!this.searchIndexReady) {
+      this.logger.warn('Search index is still building. Search might be temporarily unavailable.');
+      return { query, total: 0, returned: 0, results: [] };
+    }
+
     const cacheKey = JSON.stringify({ query, options });
     const cachedResult = this.searchCache.get(cacheKey);
     if (cachedResult) {
       return cachedResult;
     }
 
-    const queryLower = query ? query.toLowerCase() : "";
     const isEmptyQuery = !query || query.trim() === "";
-    const results = [];
 
-    // Get collections to search
-    const collectionsData = await this.loaderService.getCollectionsList();
-    let collectionsToSearch = collectionsData.collections.map((c) => c.id);
+    const collectionsToSearch = options.collection && options.collection.length > 0 ? options.collection : null;
+    const categoryFilter = options.category ? options.category.split(",") : null;
+    const styleFilter = options.style ? options.style.split(",") : null;
+    const licenseFilter = options.license ? options.license.split(",") : null;
+    const idsFilter = options.ids && options.ids.length > 0 ? options.ids : null;
 
-    const preferredCollection = "logos";
-    collectionsToSearch.sort((left, right) => {
-      if (left === preferredCollection) return -1;
-      if (right === preferredCollection) return 1;
-      return 0;
-    });
+    const filterFn = (result: any) => {
+      if (collectionsToSearch && !collectionsToSearch.includes(result.collection)) return false;
+      if (categoryFilter && !categoryFilter.includes(result.category)) return false;
+      if (styleFilter) {
+        const itemStyle = (result.style || '').toLowerCase();
+        const match = styleFilter.some((s: string) => s.toLowerCase() === itemStyle);
+        if (!match) return false;
+      }
+      if (licenseFilter && !licenseFilter.includes(result.license)) return false;
+      if (idsFilter && !idsFilter.includes(result.id)) return false;
+      return true;
+    };
 
-    if (options.collection && options.collection.length > 0) {
-      collectionsToSearch = collectionsToSearch.filter((id) =>
-        options.collection.includes(id),
-      );
+    let results: any[] = [];
+    
+    if (isEmptyQuery) {
+      const hasFilters = collectionsToSearch || categoryFilter || styleFilter || licenseFilter || idsFilter;
+      results = hasFilters ? this.allLogosMetadata.filter(filterFn) : this.allLogosMetadata;
+      results = results.map((r: any) => ({ ...r, relevance: 0.5 }));
+    } else {
+      const searchResults = this.miniSearch.search(query, {
+        prefix: true,
+        combineWith: 'AND',
+        filter: filterFn,
+      });
+      results = searchResults.map((r: any) => ({ ...r, relevance: r.score }));
     }
 
-    // For empty query, optimize by loading only what we need
     const requestedOffset = Number(options.offset) || 0;
     const requestedLimit = Number(options.limit) || 50;
-    const needed = requestedOffset + requestedLimit;
+    const paginated = results.slice(requestedOffset, requestedOffset + requestedLimit);
 
-    // Search across collections
-    const hasFilters =
-      options.collection ||
-      options.category ||
-      options.style ||
-      options.license ||
-      (options.ids && options.ids.length > 0);
-    this.logger.debug(
-      `Starting search: isEmptyQuery=${isEmptyQuery}, hasFilters=${!!hasFilters}, collectionsToSearch=${collectionsToSearch.length}, needed=${needed}`,
-    );
-
-    for (const collectionId of collectionsToSearch) {
-      // Optimization: Stop loading if we have enough results for pagination (only if no specific filters)
-      if (isEmptyQuery && !hasFilters && results.length >= needed + 1000) {
-        this.logger.debug(
-          `Breaking early: results.length=${results.length} >= needed+1000=${needed + 1000}`,
-        );
-        break; // We have enough logos for current page + buffer
-      }
-
-      const logos = await this.loaderService.getCollection(collectionId);
-      if (!logos) continue;
-      this.logger.debug(
-        `Loaded collection ${collectionId}: ${logos.length} logos, total so far: ${results.length}`,
-      );
-
-      const metadata = await this.loaderService.getMetadata(collectionId);
-      const collectionLicense =
-        await this.loaderService.getCollectionLicense(collectionId);
-
-      // Skip entire collection if license filter doesn't match
-      if (options.license) {
-        const licenses = options.license.split(",");
-        if (!licenses.includes(collectionLicense)) {
-          this.logger.debug(
-            `Skipping collection ${collectionId}: license ${collectionLicense} not in ${options.license}`,
-          );
-          continue;
+    for (const item of paginated) {
+      const colItems = await this.loaderService.getCollection(item.collection);
+      if (colItems) {
+        const fullItem = colItems.find((i: any) => i.id === item.id);
+        if (fullItem) {
+          item.svg = fullItem.svg || fullItem.body || "";
+          item.tags = fullItem.tags || [];
         }
-      }
-
-      for (const logo of logos) {
-        // If specific IDs are requested, only include those
-        if (
-          options.ids &&
-          options.ids.length > 0 &&
-          !options.ids.includes(logo.id)
-        ) {
-          continue;
-        }
-
-        // Match query (skip filtering if empty query)
-        if (!isEmptyQuery) {
-          const matchName = logo.name.toLowerCase().includes(queryLower);
-          const matchTags = (logo.tags || []).some((tag) =>
-            tag.toLowerCase().includes(queryLower),
-          );
-
-          if (!matchName && !matchTags) continue;
-        }
-
-        // Filter by category/style (license already filtered at collection level)
-        if (options.category) {
-          const categories = options.category.split(",");
-          if (!categories.includes(logo.category)) continue;
-        }
-        if (options.style) {
-          const styles = options.style.split(",");
-          const logoStyle = logo.style || metadata?.styles?.[0];
-          if (!styles.includes(logoStyle)) continue;
-        }
-
-        // Calculate relevance (simple scoring)
-        let relevance = isEmptyQuery ? 0.5 : 0; // Default relevance for empty query
-        if (!isEmptyQuery) {
-          const matchName = logo.name.toLowerCase().includes(queryLower);
-          const matchTags = (logo.tags || []).some((tag) =>
-            tag.toLowerCase().includes(queryLower),
-          );
-
-          if (logo.name.toLowerCase() === queryLower) relevance = 1.0;
-          else if (logo.name.toLowerCase().startsWith(queryLower))
-            relevance = 0.8;
-          else if (matchName) relevance = 0.6;
-          else if (matchTags) relevance = 0.4;
-        }
-
-        results.push({
-          id: logo.id,
-          name: logo.name,
-          collection: collectionId,
-          collectionName: metadata?.name || collectionId,
-          category: logo.category,
-          tags: logo.tags || [],
-          style: logo.style || metadata?.styles?.[0],
-          svg: logo.body || logo.svg,
-          viewBox: logo.viewBox,
-          license: collectionLicense,
-          relevance,
-        });
       }
     }
-
-    // Sort by relevance
-    results.sort((a, b) => b.relevance - a.relevance);
-
-    // Pagination
-    this.logger.debug(
-      `Pagination: results=${results.length}, offset=${requestedOffset}, limit=${requestedLimit}`,
-    );
-    const paginated = results.slice(
-      requestedOffset,
-      requestedOffset + requestedLimit,
-    );
-    this.logger.debug(`After slice: paginated=${paginated.length}`);
-
-    // Determine total count based on filters (hasFilters already defined above)
-    const totalCount =
-      isEmptyQuery && !hasFilters
-        ? collectionsData.collections.reduce((sum, c) => sum + c.total, 0) // No query, no filters = global total
-        : results.length; // With query or filters = actual filtered count
 
     const finalResult = {
       query,
-      total: totalCount,
+      total: results.length,
       returned: paginated.length,
       results: paginated,
     };
+    
     this.searchCache.set(cacheKey, finalResult);
     return finalResult;
   }
+
+
 
   async getStats() {
     const cacheKey = "stats:global";
