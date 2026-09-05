@@ -392,6 +392,95 @@ async function processSolar() {
 }
 
 // Add all other special processors (Tabler, Bootstrap, Phosphor, Fluent, MingCute, etc.) here...
+
+async function processPhosphor() {
+  processedCount++;
+  process.stdout.write(`\r  [${processedCount}/${totalSources}] Phosphor (multi-style)`.padEnd(50));
+
+  try {
+    const data = await fetchJson(`${baseUrl}ph.json`);
+    const iconsObj = data.icons || {};
+    let count = 0;
+
+    Object.entries(iconsObj).forEach(([iconName, iconData]) => {
+      if (iconData.hidden) return;
+      const svgBody = iconData.body;
+      if (!svgBody) return;
+
+      let style, baseName;
+      if (iconName.endsWith('-thin')) {
+        style = 'thin'; baseName = iconName.replace(/-thin$/, '');
+      } else if (iconName.endsWith('-light')) {
+        style = 'light'; baseName = iconName.replace(/-light$/, '');
+      } else if (iconName.endsWith('-bold')) {
+        style = 'bold'; baseName = iconName.replace(/-bold$/, '');
+      } else if (iconName.endsWith('-fill')) {
+        style = 'solid'; baseName = iconName.replace(/-fill$/, '');
+      } else if (iconName.endsWith('-duotone')) {
+        style = 'duotone'; baseName = iconName.replace(/-duotone$/, '');
+      } else {
+        style = 'outline'; baseName = iconName;
+      }
+
+      const viewBox = getDimensions(iconData, data);
+      const added = addIcon('phosphor', 'Phosphor', {
+        id: `phosphor_${style}_${baseName}`,
+        name: baseName,
+        category: 'UI',
+        tags: [baseName, 'phosphor', style],
+        style: style,
+        viewBox: viewBox,
+        svg: svgBody
+      });
+      if (added) count++;
+    });
+
+    process.stdout.write(`✅ ${count}\n`);
+  } catch (e) {
+    process.stdout.write(`❌\n`);
+  }
+}
+
+async function processTabler() {
+  processedCount++;
+  process.stdout.write(`\r  [${processedCount}/${totalSources}] Tabler (multi-style)`.padEnd(50));
+
+  try {
+    const data = await fetchJson(`${baseUrl}tabler.json`);
+    const iconsObj = data.icons || {};
+    let count = 0;
+
+    Object.entries(iconsObj).forEach(([iconName, iconData]) => {
+      if (iconData.hidden) return;
+      const svgBody = iconData.body;
+      if (!svgBody) return;
+
+      let style, baseName;
+      if (iconName.endsWith('-filled')) {
+        style = 'solid'; baseName = iconName.replace(/-filled$/, '');
+      } else {
+        style = 'outline'; baseName = iconName;
+      }
+
+      const viewBox = getDimensions(iconData, data);
+      const added = addIcon('tabler', 'Tabler Icons', {
+        id: `tabler_${style}_${baseName}`,
+        name: baseName,
+        category: 'UI',
+        tags: [baseName, 'tabler', style],
+        style: style,
+        viewBox: viewBox,
+        svg: svgBody
+      });
+      if (added) count++;
+    });
+
+    process.stdout.write(`✅ ${count}\n`);
+  } catch (e) {
+    process.stdout.write(`❌\n`);
+  }
+}
+
 // [Truncated for brevity - add similar functions for each special processor]
 
 async function main() {
@@ -405,8 +494,10 @@ async function main() {
   const specialHandlers = sources.filter(s => s.special).length;
   totalSources = sources.length + 1; // +1 for Solar
 
-  // Process Solar first
+  // Process special collections first
   await processSolar();
+  await processPhosphor();
+  await processTabler();
 
   // Process all standard sources
   for (const src of sources) {

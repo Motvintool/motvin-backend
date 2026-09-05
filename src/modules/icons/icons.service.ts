@@ -1,6 +1,8 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { LoaderService } from './loader.service';
-import { CacheService } from './cache.service';
+import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
+import { LoaderService } from "./loader.service";
+import { CacheService } from "./cache.service";
+import { LRUCache } from 'lru-cache';
+const MiniSearch = require('minisearch');
 
 interface Icon {
   id: string;
@@ -10,6 +12,7 @@ interface Icon {
   style: string;
   viewBox: string;
   svg: string;
+  body?: string;
 }
 
 interface IconOptions {
@@ -25,6 +28,7 @@ interface SearchOptions {
   category?: string;
   style?: string;
   license?: string;
+  ids?: string[];
   limit?: number;
   offset?: number;
 }
@@ -36,13 +40,65 @@ interface SVGOptions {
 }
 
 @Injectable()
-export class IconsService {
+export class IconsService implements OnModuleInit {
   private readonly logger = new Logger(IconsService.name);
+  private searchCache = new LRUCache({ max: 500, ttl: 1000 * 60 * 5 }); // 5 minutes cache
+  private miniSearch: any;
+  private allIconsMetadata: any[] = [];
+  private searchIndexReady = false;
 
   constructor(
     private readonly loaderService: LoaderService,
     private readonly cacheService: CacheService,
   ) {}
+
+  async onModuleInit() {
+    this.logger.log('Initializing MiniSearch index in the background...');
+    this.miniSearch = new MiniSearch({
+      idField: 'uid',
+      fields: ['name', 'tags'],
+      storeFields: ['id', 'name', 'collection', 'collectionName', 'category', 'style', 'viewBox', 'license', 'isEditableStroke', 'imageUrl', 'source', 'sourceName', 'author', 'licenseUrl']
+    });
+    
+    // We don't await this so the server starts immediately. The search will wait or fallback until ready.
+    this.buildSearchIndex().catch(err => this.logger.error('Failed to build search index', err));
+  }
+
+  private async buildSearchIndex() {
+    const collectionsData = await this.loaderService.getCollectionsList();
+    let totalIndexed = 0;
+    
+    for (const c of collectionsData.collections) {
+      const collectionId = c.id;
+      const icons = await this.loaderService.getCollection(collectionId);
+      if (!icons) continue;
+
+      const metadata = await this.loaderService.getMetadata(collectionId);
+      const collectionLicense = await this.loaderService.getCollectionLicense(collectionId);
+
+      const docs = icons.map(icon => {
+        const { svg, body, tags, ...rest } = icon as any;
+        const rawSvg = svg || body || '';
+        const isEditableStroke = rawSvg.includes('stroke-width');
+        const doc = {
+          ...rest,
+          uid: `${collectionId}_${icon.id}`,
+          tags: (tags || []).join(' '),
+          collection: collectionId,
+          collectionName: metadata?.name || collectionId,
+          license: collectionLicense,
+          isEditableStroke,
+        };
+        this.allIconsMetadata.push(doc);
+        return doc;
+      });
+
+      this.miniSearch.addAll(docs);
+      totalIndexed += docs.length;
+    }
+    this.searchIndexReady = true;
+    this.logger.log(`MiniSearch index built successfully. Indexed ${totalIndexed} icons.`);
+  }
 
   async getAllCollections() {
     return this.loaderService.getCollectionsList();
@@ -80,7 +136,9 @@ export class IconsService {
       filtered = filtered.filter(
         (icon) =>
           icon.name.toLowerCase().includes(searchLower) ||
-          icon.tags.some((tag) => tag.toLowerCase().includes(searchLower)),
+          (icon.tags || []).some((tag) =>
+            tag.toLowerCase().includes(searchLower),
+          ),
       );
     }
 
@@ -132,13 +190,14 @@ export class IconsService {
 
     // Generate SVG with options
     const color = options.color
-      ? `#${options.color.replace('#', '')}`
-      : 'currentColor';
+      ? `#${options.color.replace("#", "")}`
+      : "currentColor";
     const size = options.size || 24;
     const stroke = options.stroke || 2;
 
     // Replace color and stroke in SVG
-    let svg = icon.svg
+    const rawSvg = icon.svg || icon.body || "";
+    let svg = rawSvg
       .replace(/currentColor/g, color)
       .replace(/stroke-width="[^"]*"/g, `stroke-width="${stroke}"`);
 
@@ -147,121 +206,97 @@ export class IconsService {
   }
 
   async searchIcons(query: string, options: SearchOptions) {
-    const queryLower = query ? query.toLowerCase() : '';
-    const isEmptyQuery = !query || query.trim() === '';
-    const results = [];
-
-    // Get collections to search
-    const collectionsData = await this.loaderService.getCollectionsList();
-    let collectionsToSearch = collectionsData.collections.map((c) => c.id);
-
-    if (options.collection && options.collection.length > 0) {
-      collectionsToSearch = collectionsToSearch.filter((id) =>
-        options.collection.includes(id),
-      );
+    if (!this.searchIndexReady) {
+      this.logger.warn('Search index is still building. Search might be temporarily unavailable.');
+      return { query, total: 0, returned: 0, results: [] };
     }
 
-    // For empty query, optimize by loading only what we need
-    const requestedOffset = Number(options.offset) || 0;
-    const requestedLimit = Number(options.limit) || 50;
-    const needed = requestedOffset + requestedLimit;
-
-    // Search across collections
-    const hasFilters = options.collection || options.category || options.style || options.license;
-    this.logger.debug(`Starting search: isEmptyQuery=${isEmptyQuery}, hasFilters=${!!hasFilters}, collectionsToSearch=${collectionsToSearch.length}, needed=${needed}`);
-
-    for (const collectionId of collectionsToSearch) {
-      // Optimization: Stop loading if we have enough results for pagination (only if no specific filters)
-      if (isEmptyQuery && !hasFilters && results.length >= needed + 1000) {
-        this.logger.debug(`Breaking early: results.length=${results.length} >= needed+1000=${needed+1000}`);
-        break; // We have enough icons for current page + buffer
-      }
-
-      const icons = await this.loaderService.getCollection(collectionId);
-      if (!icons) continue;
-      this.logger.debug(`Loaded collection ${collectionId}: ${icons.length} icons, total so far: ${results.length}`);
-
-      const metadata = await this.loaderService.getMetadata(collectionId);
-      const collectionLicense = await this.loaderService.getCollectionLicense(collectionId);
-
-      // Skip entire collection if license filter doesn't match
-      if (options.license && collectionLicense !== options.license) {
-        this.logger.debug(`Skipping collection ${collectionId}: license ${collectionLicense} != ${options.license}`);
-        continue;
-      }
-
-      for (const icon of icons) {
-        // Match query (skip filtering if empty query)
-        if (!isEmptyQuery) {
-          const matchName = icon.name.toLowerCase().includes(queryLower);
-          const matchTags = icon.tags.some((tag) =>
-            tag.toLowerCase().includes(queryLower),
-          );
-
-          if (!matchName && !matchTags) continue;
-        }
-
-        // Filter by category/style (license already filtered at collection level)
-        if (options.category && icon.category !== options.category) continue;
-        if (options.style && icon.style !== options.style) continue;
-
-        // Calculate relevance (simple scoring)
-        let relevance = isEmptyQuery ? 0.5 : 0;  // Default relevance for empty query
-        if (!isEmptyQuery) {
-          const matchName = icon.name.toLowerCase().includes(queryLower);
-          const matchTags = icon.tags.some((tag) => tag.toLowerCase().includes(queryLower));
-
-          if (icon.name.toLowerCase() === queryLower) relevance = 1.0;
-          else if (icon.name.toLowerCase().startsWith(queryLower)) relevance = 0.8;
-          else if (matchName) relevance = 0.6;
-          else if (matchTags) relevance = 0.4;
-        }
-
-        results.push({
-          id: icon.id,
-          name: icon.name,
-          collection: collectionId,
-          collectionName: metadata?.name || collectionId,
-          category: icon.category,
-          tags: icon.tags,
-          style: icon.style,
-          license: collectionLicense,
-          relevance,
-        });
-      }
+    const cacheKey = JSON.stringify({ query, options });
+    const cachedResult = this.searchCache.get(cacheKey);
+    if (cachedResult) {
+      return cachedResult;
     }
 
-    // Sort by relevance
-    results.sort((a, b) => b.relevance - a.relevance);
+    const isEmptyQuery = !query || query.trim() === "";
+
+    // Build filter helpers
+    const collectionsToSearch = options.collection && options.collection.length > 0 ? options.collection : null;
+    const categoryFilter = options.category ? options.category.split(",") : null;
+    const styleFilter = options.style ? options.style.split(",") : null;
+    const licenseFilter = options.license ? options.license.split(",") : null;
+    const idsFilter = options.ids && options.ids.length > 0 ? options.ids : null;
+
+    const filterFn = (result: any) => {
+      if (collectionsToSearch && !collectionsToSearch.includes(result.collection)) return false;
+      if (categoryFilter && !categoryFilter.includes(result.category)) return false;
+      if (styleFilter && !styleFilter.includes(result.style)) return false;
+      
+      // Filter out non-editable strokes when Outline style is requested
+      const hasOutlineFilter = styleFilter && styleFilter.some((s: string) => s.toLowerCase() === 'outline');
+      if (hasOutlineFilter && result.style && result.style.toLowerCase() === 'outline' && !result.isEditableStroke) {
+        return false;
+      }
+      
+      if (licenseFilter && !licenseFilter.includes(result.license)) return false;
+      if (idsFilter && !idsFilter.includes(result.id)) return false;
+      return true;
+    };
+
+    let results: any[] = [];
+    
+    if (isEmptyQuery) {
+      // Just filter the full metadata array
+      const hasFilters = collectionsToSearch || categoryFilter || styleFilter || licenseFilter || idsFilter;
+      results = hasFilters ? this.allIconsMetadata.filter(filterFn) : this.allIconsMetadata;
+      results = results.map(r => ({ ...r, relevance: 0.5 }));
+    } else {
+      // Use MiniSearch
+      const searchResults = this.miniSearch.search(query, {
+        prefix: true, // allows matching partial words like 'hom'
+        combineWith: 'AND',
+        filter: filterFn,
+      });
+      results = searchResults.map(r => ({ ...r, relevance: r.score }));
+    }
 
     // Pagination
-    this.logger.debug(`Pagination: results=${results.length}, offset=${requestedOffset}, limit=${requestedLimit}`);
+    const requestedOffset = Number(options.offset) || 0;
+    const requestedLimit = Number(options.limit) || 50;
     const paginated = results.slice(requestedOffset, requestedOffset + requestedLimit);
-    this.logger.debug(`After slice: paginated=${paginated.length}`);
 
-    // Determine total count based on filters (hasFilters already defined above)
-    const totalCount = isEmptyQuery && !hasFilters
-      ? collectionsData.collections.reduce((sum, c) => sum + c.total, 0)  // No query, no filters = global total
-      : results.length;  // With query or filters = actual filtered count
+    // Fetch full SVG payloads only for the paginated items
+    for (const item of paginated) {
+      const colIcons = await this.loaderService.getCollection(item.collection);
+      if (colIcons) {
+        const fullIcon = colIcons.find((i: any) => i.id === item.id);
+        if (fullIcon) {
+          item.svg = fullIcon.svg || fullIcon.body || "";
+          item.tags = fullIcon.tags || []; // restore tags array
+        }
+      }
+    }
 
-    return {
+    const finalResult = {
       query,
-      total: totalCount,
+      total: results.length,
       returned: paginated.length,
       results: paginated,
     };
+    
+    this.searchCache.set(cacheKey, finalResult);
+    return finalResult;
   }
 
   async getStats() {
-    const cacheKey = 'stats:global';
+    const cacheKey = "stats:global";
     const cached = this.cacheService.getCollection(cacheKey);
 
     if (cached) {
-      this.logger.debug('Cache HIT for stats');
+      this.logger.debug("Cache HIT for stats");
       return cached;
     }
 
-    this.logger.debug('Cache MISS for stats - calculating');
+    this.logger.debug("Cache MISS for stats - calculating");
     const stats = await this.loaderService.calculateStats();
 
     // Cache with 1 hour TTL (stats don't change often)

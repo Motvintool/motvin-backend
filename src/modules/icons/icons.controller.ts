@@ -122,6 +122,7 @@ export class IconsController {
     @Query('category') category?: string,
     @Query('style') style?: string,
     @Query('license') license?: string,
+    @Query('ids') ids?: string,
     @Query('limit') limit: number = 50,
     @Query('offset') offset: number = 0,
   ) {
@@ -133,6 +134,7 @@ export class IconsController {
       category,
       style,
       license,
+      ids: ids?.split(','),
       limit: Math.min(limit, 200),
       offset,
     });
