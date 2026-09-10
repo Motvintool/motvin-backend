@@ -3,6 +3,16 @@
 /**
  * Fetch ALL 300K+ icons from Iconify - Complete Version
  * Includes ALL collections with special multi-style processors
+ *
+ * The `style` this script assigns comes from the Iconify source file name, so it
+ * names the upstream file rather than the artwork: collections that pack several
+ * variants into one file all get a single style, and colored sets get "color",
+ * which is not one of the styles the UI ships.
+ *
+ * ALWAYS run `node scripts/reclassify-icon-styles.js` after this script. It
+ * verifies each icon against its artwork and moves it into the real style
+ * (outline / solid / rounded / duotone / thin / bold / 3d), and writes the
+ * per-style counts the style chips and stats depend on.
  */
 
 const fs = require('fs');

@@ -79,7 +79,14 @@ export class IconsService implements OnModuleInit {
       const docs = icons.map(icon => {
         const { svg, body, tags, ...rest } = icon as any;
         const rawSvg = svg || body || '';
-        const isEditableStroke = rawSvg.includes('stroke-width');
+        // Prefer the flag the reclassify pass persisted. The fallback looks for
+        // stroked geometry rather than a literal stroke-width attribute: plenty
+        // of stroked icons omit it and inherit the width the renderer injects,
+        // and they are still stroke-adjustable.
+        const isEditableStroke =
+          typeof (icon as any).isEditableStroke === 'boolean'
+            ? (icon as any).isEditableStroke
+            : /stroke\s*=\s*"(?!none)/i.test(rawSvg);
         const doc = {
           ...rest,
           uid: `${collectionId}_${icon.id}`,
