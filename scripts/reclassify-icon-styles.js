@@ -100,30 +100,97 @@ const SAFE_SUFFIX_TOKENS = new Set([
   "solid",
 ]);
 
-// Colors that carry no hue: artwork using only these is monochrome and
-// recolorable, not colored artwork.
-const MONOCHROME = new Set([
-  "none",
-  "currentcolor",
-  "inherit",
-  "transparent",
-  "#000",
-  "#000000",
-  "#000f",
-  "#000000ff",
-  "black",
-  "#fff",
-  "#ffffff",
-  "#ffff",
-  "#ffffffff",
-  "white",
+const STROKE_ATTR_RE = /stroke\s*=\s*"([^"]*)"/gi;
+
+// --------------------------------------------------------------------
+// Colour analysis
+//
+// "Does this artwork carry a hue, or is it a monochrome mark?" Answering it by
+// matching literal strings against a list of #000/#fff/black/white was wrong:
+// it called #212121, #333, #999 and gray "colour". Parse the value and compare
+// channels instead.
+// --------------------------------------------------------------------
+
+// Achromatic CSS named colours. Any other name is assumed to carry a hue.
+const NEUTRAL_NAMES = new Set([
+  "black", "white", "gray", "grey", "silver", "gainsboro", "whitesmoke",
+  "dimgray", "dimgrey", "darkgray", "darkgrey", "lightgray", "lightgrey",
+  "snow", "ivory",
 ]);
 
-const COLOR_ATTR_RE =
+// Values that paint nothing, or defer the decision elsewhere.
+const NON_PAINT = new Set(["", "none", "currentcolor", "inherit", "transparent"]);
+
+/** Does a single CSS colour value carry a hue? */
+function valueHasHue(raw) {
+  const v = String(raw || "").trim().toLowerCase();
+  if (NON_PAINT.has(v)) return false;
+  if (v.startsWith("url(")) return false; // a reference; judged separately
+  if (v.startsWith("var(")) return false; // theme token, not artwork colour
+
+  const hex = /^#([0-9a-f]{3,8})$/.exec(v);
+  if (hex) {
+    let h = hex[1];
+    if (h.length === 3 || h.length === 4) {
+      h = h.slice(0, 3).split("").map((c) => c + c).join("");
+    } else {
+      h = h.slice(0, 6);
+    }
+    if (h.length < 6) return false; // malformed, e.g. #00000 - browsers ignore it
+    return !(h.slice(0, 2) === h.slice(2, 4) && h.slice(2, 4) === h.slice(4, 6));
+  }
+
+  const rgb = /^rgba?\(\s*([\d.]+%?)[,\s]+([\d.]+%?)[,\s]+([\d.]+%?)/.exec(v);
+  if (rgb) {
+    const [r, g, b] = rgb.slice(1, 4).map((n) => parseFloat(n));
+    return !(r === g && g === b);
+  }
+
+  const hsl = /^hsla?\(\s*[\d.]+(?:deg|rad|turn)?[,\s]+([\d.]+)%/.exec(v);
+  if (hsl) return parseFloat(hsl[1]) !== 0;
+
+  if (NEUTRAL_NAMES.has(v)) return false;
+  return true; // an unrecognised name (tomato, navy, ...) carries a hue
+}
+
+const PAINT_ATTR_RE =
   /(?:fill|stroke|stop-color|flood-color|lighting-color)\s*=\s*"([^"]*)"/gi;
-const STROKE_ATTR_RE = /stroke\s*=\s*"([^"]*)"/gi;
-const STOP_COLOR_RE = /stop-color\s*=\s*"([^"]*)"/gi;
-const GRADIENT_RE = /<(?:linearGradient|radialGradient|pattern|image)\b/i;
+const STYLE_ATTR_RE = /style\s*=\s*"([^"]*)"/gi;
+const STYLE_BLOCK_RE = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+const CSS_PAINT_RE = /(?:fill|stroke|stop-color)\s*:\s*([^;}"\s!]+)/gi;
+const RASTER_RE = /<image\b/i;
+
+/** Every paint value declared, via attributes, inline style, or <style> rules. */
+function paintValues(svg) {
+  const values = [];
+  let m;
+
+  PAINT_ATTR_RE.lastIndex = 0;
+  while ((m = PAINT_ATTR_RE.exec(svg)) !== null) values.push(m[1]);
+
+  STYLE_ATTR_RE.lastIndex = 0;
+  while ((m = STYLE_ATTR_RE.exec(svg)) !== null) {
+    let d;
+    CSS_PAINT_RE.lastIndex = 0;
+    while ((d = CSS_PAINT_RE.exec(m[1])) !== null) values.push(d[1]);
+  }
+
+  STYLE_BLOCK_RE.lastIndex = 0;
+  while ((m = STYLE_BLOCK_RE.exec(svg)) !== null) {
+    let d;
+    CSS_PAINT_RE.lastIndex = 0;
+    while ((d = CSS_PAINT_RE.exec(m[1])) !== null) values.push(d[1]);
+  }
+
+  return values;
+}
+
+/** Coloured when any declared paint carries a hue, or a raster is embedded. */
+function isColoredArtwork(svg) {
+  if (!svg) return false;
+  if (paintValues(svg).some(valueHasHue)) return true;
+  return RASTER_RE.test(svg);
+}
 
 const splitTokens = (value) =>
   String(value || "")
@@ -137,26 +204,11 @@ const splitTokens = (value) =>
 function analyzeSvg(svg) {
   let match;
 
-  const hues = new Set();
-  COLOR_ATTR_RE.lastIndex = 0;
-  while ((match = COLOR_ATTR_RE.exec(svg)) !== null) {
-    const value = match[1].trim().toLowerCase();
-    if (!value || MONOCHROME.has(value)) continue;
-    if (value.startsWith("url(")) continue; // gradient reference, handled below
-    hues.add(value);
-  }
-
-  let colored = hues.size > 0;
-  if (!colored && GRADIENT_RE.test(svg)) {
-    // A gradient/pattern/raster is colored unless every stop we can read is
-    // monochrome. No readable stops means we cannot prove it is mono.
-    const stops = [];
-    STOP_COLOR_RE.lastIndex = 0;
-    while ((match = STOP_COLOR_RE.exec(svg)) !== null) {
-      stops.push(match[1].trim().toLowerCase());
-    }
-    colored = stops.length === 0 || stops.some((s) => !MONOCHROME.has(s));
-  }
+  // Shared with the logo and illustration passes so all three agree on what
+  // "carries a hue" means. Matching literal #000/#fff strings used to call
+  // greys like #555 and #212121 colour, which pushed 4,856 greyscale icons
+  // (IconPark and IPTwotone duotone sets) into 3D Icons.
+  const colored = isColoredArtwork(svg);
 
   // Is any geometry drawn with a stroke at all?
   let stroked = false;
