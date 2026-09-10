@@ -12,13 +12,19 @@
  *     Material Icons ships baseline/outline/round/sharp/twotone) reported a
  *     single style for all of them
  *
- * Styles after this pass: outline, solid, rounded, duotone, thin, bold, 3d.
+ * Styles after this pass: outline, solid, duotone, thin, 3d.
  *   3d      - colored artwork; the only bucket rendered with its native colors
- *   outline - adjustable stroke: drawn with real stroked geometry, so the
- *             stroke-width the renderer injects has something to act on
- *   duotone / thin / bold / rounded - explicit upstream variants, recovered from
- *             the declared style or from the icon name
- *   solid   - everything else: monochrome fill-only artwork
+ *   outline - any stroked artwork. The renderer applies its own stroke-width to
+ *             every non-none stroke, so all of it is width-adjustable, and the
+ *             Stroke Width control belongs to this style alone.
+ *   solid   - everything painted with a fill, whether it reads as a solid
+ *             shape or as a hollow outline drawn with fills
+ *   duotone / thin - the two upstream variants still honoured by name, because
+ *             the artwork alone cannot reveal them
+ *
+ * There is no "rounded" style: every icon that carried it was fill artwork and
+ * now sorts into Solid, and there is no "bold" style either - fill artwork all
+ * lands in Solid regardless of how heavy or hollow it looks.
  *
  * The original value is kept on each icon as `sourceStyle` so this pass stays
  * auditable and the upstream variant name is never lost.
@@ -34,33 +40,40 @@ const DRY_RUN = process.argv.includes("--dry-run");
 const onlyArg = process.argv.find((a) => a.startsWith("--only="));
 const ONLY = onlyArg ? new Set(onlyArg.split("=")[1].split(",")) : null;
 
-// The style chips the UI ships, in display order.
-const STYLES = ["outline", "solid", "rounded", "duotone", "thin", "bold", "3d"];
+// The style chips the UI ships, in display order. No "rounded" and no "bold":
+// both were fill artwork, which all belongs in Solid.
+const STYLES = ["outline", "solid", "duotone", "thin", "3d"];
 
 // Upstream variant names we trust over the artwork analysis, because they name a
-// weight/treatment the artwork cannot reveal: a "thin" Phosphor icon is
-// fill-only, but it is genuinely thin, not solid.
-const VARIANT_STYLES = new Set(["duotone", "thin", "bold", "rounded"]);
+// treatment the artwork cannot reveal: a "thin" Phosphor icon is fill-only, but
+// it is genuinely thin, not solid.
+//
+// "bold" is deliberately NOT here - there is no Bold style. Upstream
+// bold-weight icons are sorted by what they are: stroked ones become Outline,
+// filled ones Solid.
+const VARIANT_STYLES = new Set(["duotone", "thin"]);
 
 // Name/style tokens -> style. `null` means "this token tells us nothing the
-// artwork analysis cannot decide better" (an "outline"-named fill-only icon has
-// no adjustable stroke, so it is not Outline material).
+// artwork analysis cannot decide better": whether an icon is Outline or Solid
+// depends on if the artwork is actually stroked, not on what it is called.
 const TOKEN_STYLE = {
   baseline: "solid",
   sharp: "solid",
   filled: "solid",
   fill: "solid",
   solid: "solid",
-  round: "rounded",
-  rounded: "rounded",
   twotone: "duotone",
   "two-tone": "duotone",
   duotone: "duotone",
   duo: "duotone",
   thin: "thin",
   light: "thin",
-  bold: "bold",
-  heavy: "bold",
+  // Sorted by artwork, not by name: "rounded" is a shape and "bold" is a weight,
+  // and neither tells us whether the path is a fill or an editable stroke.
+  round: null,
+  rounded: null,
+  bold: null,
+  heavy: null,
   outline: null,
   outlined: null,
   line: null,
@@ -145,17 +158,22 @@ function analyzeSvg(svg) {
     colored = stops.length === 0 || stops.some((s) => !MONOCHROME.has(s));
   }
 
-  // Adjustable stroke means some geometry is drawn with a stroke.
-  let adjustableStroke = false;
+  // Is any geometry drawn with a stroke at all?
+  let stroked = false;
   STROKE_ATTR_RE.lastIndex = 0;
   while ((match = STROKE_ATTR_RE.exec(svg)) !== null) {
     if (match[1].trim().toLowerCase() !== "none") {
-      adjustableStroke = true;
+      stroked = true;
       break;
     }
   }
 
-  return { colored, adjustableStroke };
+  // Any stroked path is width-adjustable. renderSvg strips whatever
+  // stroke-width the artwork declared and applies its own to every path with a
+  // non-none stroke, so declaring one up front makes no difference.
+  const adjustableStroke = stroked;
+
+  return { colored, stroked, adjustableStroke };
 }
 
 /**
@@ -183,11 +201,21 @@ function detectPrefixPartition(icons) {
 
 /**
  * "light" is a weight in Stash/Iconamoon/Fluent, but a theme in Selfhst and
- * Skillicons, which ship `foo-light` next to `foo-dark`. The presence of dark
- * counterparts is the tell.
+ * Skillicons, which ship `foo-light` next to `foo-dark`. Genuine theme sets pair
+ * up almost one-to-one (Selfhst 2353 light / 2312 dark, Skillicons 162 / 162),
+ * so compare the counts rather than merely spotting a dark icon - Iconamoon has
+ * a single stray `-dark`, and treating that as a theme hid all 304 of its real
+ * `-light` weight variants.
  */
 function detectThemeVariants(icons) {
-  return icons.some((icon) => splitTokens(icon.name || icon.id).pop() === "dark");
+  let light = 0;
+  let dark = 0;
+  for (const icon of icons) {
+    const last = splitTokens(icon.name || icon.id).pop();
+    if (last === "light") light++;
+    else if (last === "dark") dark++;
+  }
+  return dark > 0 && dark >= light * 0.5;
 }
 
 /**
@@ -230,38 +258,54 @@ function detectSuffixVariants(icons) {
 }
 
 /**
- * Pick the style an icon belongs in. Colored artwork wins outright, then
- * explicit upstream variants, then the stroke/fill split between outline and
- * solid.
+ * Sort by what the artwork is:
+ *   any stroke -> outline  (the width is adjustable, so it belongs there)
+ *   otherwise  -> solid    (fill artwork, solid or hollow alike)
+ * Artwork with neither attribute inherits a fill when rendered, so it is solid.
+ */
+function byArtwork(info) {
+  return info.stroked ? "outline" : "solid";
+}
+
+/**
+ * Pick the style an icon belongs in. Colored artwork wins outright, then the
+ * two upstream variants we still honour by name (duotone, thin), then the
+ * artwork itself decides between outline and solid.
  */
 function classify(icon, info, ctx) {
   if (info.colored) return "3d";
 
+  // Stroked artwork is Outline, full stop - it outranks the upstream variant
+  // names. Only Outline exposes the Stroke Width control, so a stroked icon
+  // filed under Thin or Duotone would be adjustable artwork the user cannot
+  // adjust. (Solar, Glyphs and Keyline ship stroked duotone/thin sets.)
+  if (info.stroked) return "outline";
+
   const declared = String(icon.sourceStyle || "").toLowerCase().trim();
   if (VARIANT_STYLES.has(declared)) return declared;
-  if (declared in TOKEN_STYLE && TOKEN_STYLE[declared]) {
+  if (declared in TOKEN_STYLE) {
     const mapped = TOKEN_STYLE[declared];
-    if (VARIANT_STYLES.has(mapped)) return mapped;
+    if (mapped && VARIANT_STYLES.has(mapped)) return mapped;
   }
 
   const tokens = splitTokens(icon.name || icon.id);
+  const first = tokens[0];
+  const last = tokens.length > 1 ? tokens[tokens.length - 1] : undefined;
 
-  if (ctx.prefixPartition && tokens.length > 0 && tokens[0] in TOKEN_STYLE) {
-    const mapped = TOKEN_STYLE[tokens[0]];
-    if (mapped) return mapped;
-    return info.adjustableStroke ? "outline" : "solid";
+  if (ctx.prefixPartition && first !== undefined && first in TOKEN_STYLE) {
+    const mapped = TOKEN_STYLE[first];
+    if (mapped && VARIANT_STYLES.has(mapped)) return mapped;
+    return byArtwork(info);
   }
 
-  const last = tokens.length > 1 ? tokens[tokens.length - 1] : undefined;
   if (last && ctx.suffixVariants.has(last)) {
     if (!(last === "light" && ctx.themeVariants)) {
       const mapped = TOKEN_STYLE[last];
-      if (mapped) return mapped;
+      if (mapped && VARIANT_STYLES.has(mapped)) return mapped;
     }
   }
 
-  if (info.adjustableStroke) return "outline";
-  return "solid";
+  return byArtwork(info);
 }
 
 /**
