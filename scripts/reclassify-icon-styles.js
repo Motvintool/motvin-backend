@@ -458,7 +458,25 @@ function normalize(icon, collectionId) {
 
 const readJson = (file) => JSON.parse(fs.readFileSync(file, "utf-8"));
 const writeJson = (file, value) => {
-  if (!DRY_RUN) fs.writeFileSync(file, JSON.stringify(value));
+  if (DRY_RUN) return;
+  // Rewriting ~250 multi-megabyte files back to back, Windows intermittently
+  // fails the open with EBUSY/EPERM/UNKNOWN because a virus scanner or the
+  // search indexer still holds the handle. It surfaced twice here, on a
+  // different collection each time, and took the whole pass down *before*
+  // collections.json was written - so the icons were reclassified but the style
+  // chips still showed the pre-pass values. Retry rather than lose the run.
+  const payload = JSON.stringify(value);
+  for (let attempt = 0; ; attempt++) {
+    try {
+      fs.writeFileSync(file, payload);
+      return;
+    } catch (err) {
+      const transient = ["EBUSY", "EPERM", "UNKNOWN", "EMFILE", "ENFILE"].includes(err.code);
+      if (!transient || attempt >= 6) throw err;
+      // Synchronous backoff: this script is single-threaded top to bottom.
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 150 * (attempt + 1));
+    }
+  }
 };
 
 function main() {

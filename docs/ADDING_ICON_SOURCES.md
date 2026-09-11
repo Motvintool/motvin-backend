@@ -4,7 +4,7 @@ How to add an open-source icon set to the Icons page, using the scripts already
 in `scripts/`. Written from the sources added in practice — every warning below
 is something that actually went wrong, not a hypothetical.
 
-Current catalogue: **241 collections, 382,424 icons**.
+Current catalogue: **243 collections, 390,508 icons**.
 
 ---
 
@@ -203,6 +203,79 @@ node scripts/build-icons-data-full.js --only=carbon-pictograms,linea
 npm run reclassify:icon-styles
 ```
 
+### SVG-font source (`kind: 'svgfont'`)
+
+Some sets only ship as an icon font — one `.svg` per pack, every icon a
+`<glyph>` inside it, and no per-icon file anywhere. Atlas Icons is 41 such packs
+and is not on Iconify.
+
+```js
+{ kind: 'svgfont', repo: 'Vectopus/Atlas-icons-font', branch: 'main',
+  pathMatch: /^packs\/[^/]+\/fonts\/[^/]+\.svg$/,
+  sourceId: 'atlas-icons', sourceName: 'Atlas Icons', style: 'solid' },
+```
+
+Three things make font glyphs different from ordinary SVG:
+
+- **The y-axis is upside down.** Glyph outlines run *up* from the baseline, so a
+  path dropped straight into a viewBox renders inverted and off-canvas. The
+  importer wraps each one in `translate(0, ascent) scale(1, -1)`, read from the
+  font's own `<font-face>`, and sizes the viewBox
+  `0 0 <glyph horiz-adv-x> <units-per-em>`. Check a directional icon after
+  importing — `arrow-down` pointing up means the flip is wrong.
+- **The weight is in the name.** Atlas ships `crown-winner`, `crown-winner-thin`
+  and `crown-winner-bold`. The importer splits that suffix off the display name
+  and uses it to pick the style (`thin`/`light` → Thin), because font outlines
+  are always fills and the artwork could never reveal the weight. The id keeps
+  the raw glyph name, or two of every three icons would collide.
+
+- **They need `fill-rule="nonzero"`, explicitly.** Fonts are authored for the
+  nonzero winding rule: overlapping contours union, and counters are cut by
+  reversing direction. `renderSvg` stamps `fill-rule="evenodd"` on the wrapper
+  of *every* icon (`motvin-icons.js`, the `innerSvg` line), and under evenodd
+  those overlaps punch holes instead — bottom bars, podium bases and banner
+  edges vanish, so the linework looks unclosed. **87% of Atlas glyphs rendered
+  wrong** before the importer set nonzero on the transform group, which
+  overrides the inherited value.
+
+  Ordinary SVG icon sets are unaffected — a 12-collection sample showed 0 of 15
+  icons each differing between the two rules — so this is a font-glyph problem,
+  not a reason to change the renderer.
+
+Glyphs with no `glyph-name` or an empty `d` (`.notdef`, the space) are skipped:
+41 of Atlas's 8,021 `<glyph>` elements, leaving 7,980.
+
+Verify by rasterising the app's own output against ground-truth nonzero rather
+than eyeballing the grid — the damage is subtle at 24px and obvious at 72px:
+
+```js
+// differs > ~20 px out of 96x96 means the fill rule is wrong
+renderSvg(body, { iconStyle, sourceId, viewBox, size: 96 })   // vs
+`<svg viewBox="${viewBox}" fill-rule="nonzero">${body}</svg>`
+```
+
+### Files named by codepoint (`nameMap`)
+
+OpenMoji names every file after its Unicode codepoint — `1F600.svg` — which is
+unsearchable. `nameMap` points at a JSON in the same repo that carries the human
+name, and its synonyms become tags:
+
+```js
+{ kind: 'github', repo: 'hfg-gmuend/openmoji', branch: 'master', dir: 'black/svg',
+  nameMap: { file: 'data/openmoji.json', key: 'hexcode', label: 'annotation', tags: 'tags' },
+  sourceId: 'openmoji-black', sourceName: 'OpenMoji Black', style: 'outline' },
+```
+
+`1F600.svg` becomes `grinning-face`, tagged `cheerful, cheery, grin, happy, …`.
+The id still keeps the raw file name, so a codepoint the map misses (2 of 4,565
+here) degrades to its old name rather than colliding or vanishing. Check after
+importing:
+
+```bash
+node -e 'const a=require("./data/icons/<sourceId>/icons.json");
+console.log(a.filter(i=>/^[0-9a-f-]+$/i.test(i.name)).length, "of", a.length, "still codepoint-named")'
+```
+
 ### Scattered trees and prefixed file names
 
 `dir` is a single path prefix, which only works when a repo keeps its icons in
@@ -278,7 +351,7 @@ A bucket with a count of 1 that looks like a near-duplicate is usually a typo.
 
 ## Step 2: Import It
 
-**Always use `--only=`.** A bare run refetches all 241 collections *and rewrites
+**Always use `--only=`.** A bare run refetches all 243 collections *and rewrites
 every style from the upstream file name*, undoing Step 3 across the entire
 catalogue.
 
@@ -387,6 +460,13 @@ const HUE=v=>{v=String(v).trim().toLowerCase();
  if(m){let h=m[1];h=h.length<6?h.slice(0,3).split("").map(c=>c+c).join(""):h.slice(0,6);
   if(h.length<6)return false;const[r,g,b]=[0,2,4].map(i=>parseInt(h.slice(i,i+2),16));
   return Math.max(r,g,b)-Math.min(r,g,b)>TOL;}
+ // rgb()/rgba()/hsl() too - the classifier parses these, so a sweep that only
+ // knows hex calls rgb(100%,100%,100%) and rgba(229,229,229,.2) "coloured" and
+ // invents violations that are not there.
+ const rgb=/^rgba?\(\s*([\d.]+%?)[,\s]+([\d.]+%?)[,\s]+([\d.]+%?)/.exec(v);
+ if(rgb){const[r,g,b]=rgb.slice(1,4).map(n=>parseFloat(n));return Math.max(r,g,b)-Math.min(r,g,b)>TOL;}
+ const hsl=/^hsla?\(\s*[\d.]+(?:deg|rad|turn)?[,\s]+([\d.]+)%/.exec(v);
+ if(hsl)return parseFloat(hsl[1])!==0;
  return !["black","white","gray","grey","silver","gainsboro","whitesmoke","dimgray","darkgray","lightgray","snow","ivory"].includes(v);};
 let bad=0, tot={};
 for (const d of fs.readdirSync("data/icons")) {
@@ -395,9 +475,11 @@ for (const d of fs.readdirSync("data/icons")) {
   for (const i of JSON.parse(fs.readFileSync(f))) {
     const sv=i.svg||""; tot[i.style]=(tot[i.style]||0)+1;
 
-    // colour: attributes AND <style> class rules
+    // colour: attributes, <style> class rules AND inline style="fill:..."
     let paints=[...sv.matchAll(/(?:fill|stroke|stop-color)\s*=\s*"([^"]*)"/gi)].map(m=>m[1]);
     for (const b of sv.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi))
+      paints=paints.concat([...b[1].matchAll(/(?:fill|stroke|stop-color)\s*:\s*([^;}"\s!]+)/gi)].map(m=>m[1]));
+    for (const b of sv.matchAll(/style\s*=\s*"([^"]*)"/gi))
       paints=paints.concat([...b[1].matchAll(/(?:fill|stroke|stop-color)\s*:\s*([^;}"\s!]+)/gi)].map(m=>m[1]));
     const coloured = paints.some(HUE) || /<image\b/i.test(sv);
 
@@ -520,7 +602,8 @@ at the end.
 ### Every line renders doubled after moving a set out of Solid
 
 Only for fill-based artwork with **no `fill` and no `stroke` attribute at all** —
-bare `<path d="…">`, which is how Carbon Pictograms and Linea ship.
+bare `<path d="…">`, which is how Carbon Pictograms, Linea and every extracted
+font glyph (Atlas Icons) ship.
 
 `renderSvg` detects fill-based artwork correctly, then throws the answer away
 for any style other than `solid`/`brands` unless the source is on a hard-coded
@@ -550,6 +633,19 @@ renderSvg('<path d="M1,1z"/>', { iconStyle:'thin', sourceId:'<sourceId>', viewBo
 // want: fill="currentColor" stroke="none"   (not fill="none" stroke="currentColor")
 ```
 
+**The allowlist is keyed on `opts.sourceId`, so anything that forgets to pass it
+fails the check too.** `editorRenderOpts()` did, which left the detail view and
+everything it feeds — Copy SVG, Download SVG, the code preview, all export
+formats — stroking these sets long after the grid was fixed. Grid and editor are
+separate render paths; test both:
+
+```js
+// grid path
+renderSvg(body, { iconStyle: rec.style, sourceId: coll, viewBox: rec.viewBox, size: 24 })
+// editor path - what Copy SVG and Download SVG actually hand out
+state.editorIcon = { ...rec, source: coll, svg: body }; currentSvgString()
+```
+
 ### Icons in Outline whose Stroke Width does nothing
 
 `renderSvg` bails out entirely on `<mask>` or `<defs>` — naive regex rewriting
@@ -572,6 +668,32 @@ too strict; `ACHROMATIC_TOLERANCE = 8` handles it. This affected 702 icons.
 names. **225 such collisions exist and are expected** — ids are unique per
 collection, not globally. Do not key anything on `id` alone.
 
+### The reclassify pass dies partway and leaves the chips stale
+
+It rewrites ~250 multi-megabyte files back to back, and on Windows an open
+intermittently fails with `UNKNOWN`/`EBUSY` because a virus scanner or the
+search indexer still holds the handle. It happened twice here, on a *different*
+collection each run — which is the tell that the file is fine and the write is
+not.
+
+The damage is quiet: the crash lands inside the per-collection loop, **before**
+the single `writeJson(collectionsFile, …)` at the very end. So `icons.json` and
+`metadata.json` are updated, `collections.json` is not — and since that entry is
+what feeds the style chips, the UI keeps showing the pre-pass styles while the
+data underneath has moved. `styleCounts` missing from a collections entry is the
+symptom.
+
+`writeJson` now retries transient codes, but always check the exit status rather
+than the output — a `grep` over the log hides the stack trace completely:
+
+```bash
+npm run reclassify:icon-styles > /tmp/reclass.log 2>&1; echo "EXIT: $?"
+node -e 'const c=require("./data/icons/collections.json").collections;
+console.log(c.filter(x=>!x.styleCounts).length, "entries missing styleCounts")'
+```
+
+Both must read 0. Re-running is safe — the pass is idempotent.
+
 ### Your verifier agreeing with your bug
 
 Twice a check passed while the data was wrong, because the check reused the same
@@ -579,6 +701,15 @@ flawed logic as the classifier. When something looks suspicious, open the actual
 SVG markup instead of re-running the same test. VectorLogoZone hid 294 coloured
 logos this way (colour set via a `<style>` class rule, which the attribute-only
 check never read).
+
+It also fails the other way — a sweep **weaker** than the classifier invents
+violations that are not there. The sweep above reported 5 until it learned what
+`reclassify` already knew: `fill:rgb(100%,100%,100%)` is white and
+`rgba(229,229,229,.2)` is grey, but a hex-only check calls both colour. Before
+"fixing" data a sweep complains about, diff your check against `valueHasHue` and
+`paintValues` in `reclassify-icon-styles.js` — those two are the definition.
+Both gaps (`rgb()`/`hsl()`, and inline `style="fill:…"`) are patched into the
+snippet above.
 
 ---
 
@@ -595,15 +726,17 @@ check never read).
 [ ] Licence string matches an existing bucket's spelling exactly
 [ ] byLicense sum == total (gap 0)
 [ ] Imported with --only=<sourceId>
-[ ] npm run reclassify:icon-styles
+[ ] npm run reclassify:icon-styles  <- check EXIT CODE, not just output
 [ ] npm run build && restart backend
+[ ] every collections.json entry has styleCounts
 [ ] stats byStyle sums to total
 [ ] full-catalogue sweep shows 0 violations
 [ ] declared `thin`/`duotone` on bare-path artwork? -> add to `fillBasedSources`
     in JS/motvin-icons.js and bump `motvin-icons.js?v=` in icons.html
 [ ] browser: chips correct, Stroke Width only on Outline, icons visible
-[ ] browser: lines render single, not doubled
+[ ] browser: lines render single, not doubled (grid AND editor Copy SVG)
 [ ] copy output is clean: no artboard <rect>, no <defs>/<style>, no editor ids
+[ ] font-glyph source? -> fill-rule="nonzero" baked in; shapes close properly
 [ ] default view still opens on Phosphor
 ```
 

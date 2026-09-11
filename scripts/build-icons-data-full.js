@@ -384,6 +384,17 @@ const sources = [
 
   { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/zero',
     sourceId: 'zero-icons', sourceName: 'Zero Icons', style: 'solid' },
+
+  { kind: 'github', repo: 'webkul/vivid', branch: 'master', dir: 'icons',
+    sourceId: 'vivid', sourceName: 'Vivid', style: 'solid' },
+
+  // 41 themed packs, each an SVG font rather than a folder of .svg files, so it
+  // needs the glyph importer. `pathMatch` keeps it to the font files; the same
+  // packs also ship .eot/.ttf/.woff, which the tree filter drops already.
+  { kind: 'svgfont', repo: 'Vectopus/Atlas-icons-font', branch: 'main',
+    pathMatch: /^packs\/[^/]+\/fonts\/[^/]+\.svg$/,
+    sourceId: 'atlas-icons', sourceName: 'Atlas Icons', style: 'solid' },
+
 ];
 
 // A per-file fetch with a hard timeout. Without one a single stalled socket
@@ -435,7 +446,12 @@ async function mapLimit(items, limit, fn) {
 // and <desc> are accessibility labels for the standalone file - inside the grid
 // they only become stray tooltips, and both self-closing and paired forms occur.
 function unwrapSvg(text) {
-  const open = text.match(/<svg\b[^>]*>/i);
+  // The root is not always spelled `<svg …>`: some files namespace it
+  // (`<svg:svg>`, closed by `</svg:svg>`) and some put a space before the
+  // bracket (`</svg >`). A literal search for `</svg>` misses both and the
+  // slice then runs to the wrong offset, leaving a 21-character body or a
+  // trailing `</svg>` inside it — either way the icon never renders.
+  const open = text.match(/<(?:[A-Za-z0-9]+:)?svg\b[^>]*>/i);
   if (!open) return null;
   let viewBox = (open[0].match(/viewBox\s*=\s*"([^"]*)"/i) || [])[1];
   if (!viewBox) {
@@ -443,8 +459,21 @@ function unwrapSvg(text) {
     const h = (open[0].match(/\bheight\s*=\s*"([\d.]+)/i) || [])[1];
     viewBox = w && h ? `0 0 ${w} ${h}` : '0 0 24 24';
   }
+  let closeAt = -1;
+  for (const m of text.matchAll(/<\/(?:[A-Za-z0-9]+:)?svg\s*>/gi)) closeAt = m.index;
+  if (closeAt === -1) closeAt = text.length;
+
   let body = text
-    .slice(text.indexOf(open[0]) + open[0].length, text.lastIndexOf('</svg>'))
+    .slice(text.indexOf(open[0]) + open[0].length, closeAt)
+    // `svg:` is the SVG namespace itself, so the prefix is pure noise on real
+    // geometry - unprefix it before the junk-namespace pass below, which would
+    // otherwise delete `<svg:path>` as a foreign element and empty the icon.
+    .replace(/<(\/?)svg:/gi, '<$1')
+    // Control characters are not legal in XML at all, and one is enough to make
+    // the parser reject the whole document — the icon then renders as an empty
+    // cell with no other symptom. Upstream files carry them, and so did this
+    // importer for a while when a placeholder was built with a NUL.
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<title\b[^>]*\/>/gi, '')
     .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
@@ -458,6 +487,47 @@ function unwrapSvg(text) {
   // Only ids nothing in this icon points at are safe to drop — `url(#id)`,
   // `href="#id"` and friends still need theirs. A colour like `#fff` reads as a
   // reference here, which at worst keeps an id we could have removed.
+  // Namespaces die with the root element. We keep only the inner markup, so the
+  // `xmlns:inkscape` / `xmlns:xlink` declarations that lived on `<svg>` are gone
+  // while the prefixes that depend on them are not — and a fragment carrying an
+  // undeclared prefix is invalid XML, which an SVG parser refuses outright. The
+  // icon does not render badly, it fails to load at all and the grid shows a
+  // blank cell. 445 icons across five GitHub sources were dark this way.
+  //
+  // Editor leftovers (Inkscape, Sodipodi, Illustrator, Sketch, RDF metadata)
+  // draw nothing, so they go. `xlink:href` is the one that carries meaning —
+  // `<use>` and gradient inheritance rely on it — so it becomes plain `href`,
+  // which is SVG2 native and needs no namespace.
+  // Which prefixes the body itself declares has to be settled *before* anything
+  // is removed. Reading it from the half-rewritten string instead kept
+  // `inkscape:label` alive on the strength of an `xmlns:inkscape` that the same
+  // pass then deleted — the attribute outlived its declaration and the icon
+  // still failed to parse.
+  const declaredPrefixes = new Set(
+    [...body.matchAll(/\sxmlns:([A-Za-z0-9_-]+)\s*=/g)].map(m => m[1].toLowerCase())
+  );
+
+  body = body
+    .replace(/<metadata\b[\s\S]*?<\/metadata>/gi, '')
+    .replace(/<([a-z][a-z0-9]*):([a-z0-9-]+)\b[^>]*?\/>/gi, '')
+    .replace(/<([a-z][a-z0-9]*):([a-z0-9-]+)\b[\s\S]*?<\/\1:\2>/gi, '')
+    // `xlink:href` carries meaning, so it becomes plain `href` — but only where
+    // the element does not already have one. Illustrator writes both for
+    // compatibility, and blindly renaming produced `href` twice on the same
+    // element, which is itself a parse error.
+    .replace(/<[a-zA-Z][^>]*>/g, (tag) => {
+      if (!/\sxlink:href\s*=/i.test(tag)) return tag;
+      return /\shref\s*=/i.test(tag)
+        ? tag.replace(/\sxlink:href\s*=\s*"[^"]*"/gi, '')
+        : tag.replace(/\sxlink:href\s*=/gi, ' href=');
+    })
+    // Orphaned prefixes go. `xmlns:` declarations are exempt: they are what
+    // makes a surviving prefix legal.
+    .replace(/\s(?!xmlns:)([a-z][a-z0-9]*):[a-z0-9-]+\s*=\s*"[^"]*"/gi, (attr, prefix) =>
+      declaredPrefixes.has(prefix.toLowerCase()) ? attr : ''
+    )
+    .trim();
+
   const referenced = new Set(
     [...body.matchAll(/#([A-Za-z0-9_.:-]+)/g)].map(m => m[1])
   );
@@ -479,7 +549,19 @@ function unwrapSvg(text) {
     }
   }
   const [vbW, vbH] = viewBox.split(/[\s,]+/).map(Number).slice(2);
-  body = body.replace(/<rect\b([^>]*?)\/?>/gi, (tag, attrs) => {
+
+  // A rect inside <clipPath>, <mask> or <pattern> is not decoration — it is the
+  // shape doing the clipping. Removing one empties the container, and an empty
+  // clipPath clips *everything*, so the icon vanishes. Park those blocks before
+  // the sweep and put them back after.
+  const parked = [];
+  body = body.replace(
+    /<(clipPath|mask|pattern)\b[\s\S]*?<\/\1>/gi,
+    (block) => ` PARKED${parked.push(block) - 1} `
+  );
+  // Matches the paired form too: dropping only `<rect …>` leaves a stray
+  // `</rect>`, which makes the whole fragment invalid XML and blanks the icon.
+  body = body.replace(/<rect\b([^>]*?)\/?>(?:\s*<\/rect\s*>)?/gi, (tag, attrs) => {
     const num = (name) => {
       const m = attrs.match(new RegExp(`\\b${name}\\s*=\\s*"([^"]*)"`, 'i'));
       return m ? parseFloat(m[1]) || 0 : 0;
@@ -513,6 +595,7 @@ function unwrapSvg(text) {
     );
     return used ? block : '';
   });
+  body = body.replace(/\s?PARKED(\d+)\s?/g, (m, n) => parked[Number(n)]);
   body = body.replace(/<defs\b[^>]*>\s*<\/defs>/gi, '').trim();
 
   return body ? { viewBox, body } : null;
@@ -540,6 +623,31 @@ async function processGithub(src) {
         && (!src.dir || p.startsWith(src.dir + '/'))
         && (!src.pathMatch || src.pathMatch.test(p)));
 
+    // Some repos name files by codepoint rather than by word — OpenMoji ships
+    // `1F600.svg`, which is unsearchable. `nameMap` points at a JSON in the same
+    // repo that carries the human name, so the icon lands as "grinning face"
+    // with its own synonyms as tags.
+    let nameMap = null;
+    if (src.nameMap) {
+      const rows = await fetchJson(
+        `https://raw.githubusercontent.com/${src.repo}/${src.branch}/${src.nameMap.file}`
+      );
+      nameMap = new Map();
+      for (const row of (Array.isArray(rows) ? rows : [])) {
+        const key = row[src.nameMap.key];
+        const label = row[src.nameMap.label];
+        if (!key || !label) continue;
+        nameMap.set(String(key).toLowerCase(), {
+          name: String(label).trim().toLowerCase().replace(/\s+/g, '-'),
+          tags: String(row[src.nameMap.tags] || '')
+            .split(',').map(t => t.trim().toLowerCase()).filter(Boolean),
+          // Kept so `skipPlaceholder` can ask the set's own taxonomy what an
+          // icon is, rather than guessing from its name.
+          group: `${row.group || ''} ${row.subgroups || ''}`.trim().toLowerCase()
+        });
+      }
+    }
+
     let done = 0;
     const fetched = await mapLimit(files, 12, async (p) => {
       const text = await fetchText(
@@ -566,12 +674,30 @@ async function processGithub(src) {
       // `software_alarm` are different artwork) and addIcon would drop the
       // second of each as a duplicate id.
       const rawName = r.p.split('/').pop().replace(/\.svg$/i, '');
-      const name = src.stripName ? (rawName.replace(src.stripName, '') || rawName) : rawName;
+      const mapped = nameMap ? nameMap.get(rawName.toLowerCase()) : null;
+      const name = mapped
+        ? mapped.name
+        : (src.stripName ? (rawName.replace(src.stripName, '') || rawName) : rawName);
+
+      // A set can ship placeholders: OpenMoji's monochrome half has no flag
+      // artwork, so all 330 flag emoji are an empty stroked rectangle. They are
+      // not icons, they are 330 identical boxes padding the grid. Only artwork
+      // that is *nothing but* an unfilled rect qualifies, and only in the
+      // categories named here — `white-large-square` and `minus` are genuinely
+      // an empty box and stay.
+      if (src.skipPlaceholder) {
+        const bare = r.parsed.body.replace(/<\/?g\b[^>]*>/gi, '').trim();
+        const lone = bare.match(/^<rect\b([^>]*)\/?>$/i);
+        if (lone && /fill\s*=\s*"none"/i.test(lone[1])
+            && src.skipPlaceholder.test(`${mapped ? mapped.group : ''} ${name}`)) {
+          continue;
+        }
+      }
       const added = addIcon(src.sourceId, src.sourceName, {
         id: `${src.sourceId}_${src.style}_${rawName}`,
         name,
         category: 'UI',
-        tags: [...new Set([name, rawName, src.sourceId, src.style])],
+        tags: [...new Set([name, rawName, src.sourceId, src.style, ...(mapped ? mapped.tags : [])])],
         style: src.style,
         viewBox: r.parsed.viewBox,
         svg: src.wrap ? `<g ${src.wrap}>${r.parsed.body}</g>` : r.parsed.body
@@ -582,6 +708,90 @@ async function processGithub(src) {
     process.stdout.write(
       `\r  ${progress} ${src.sourceName.padEnd(35)}✅ ${count}${failed ? ` (${failed} failed)` : ''}\n`
     );
+  } catch (e) {
+    process.stdout.write(`❌ ${e.message}\n`);
+  }
+}
+
+// Some sets only ship as an SVG font — one file per pack, each glyph a `<glyph>`
+// with a path. Atlas Icons is 41 such files and is not on Iconify, so there is
+// no per-icon .svg to fetch anywhere.
+//
+// Font outlines live in a different coordinate space from SVG: y runs *up* from
+// the baseline, so a glyph pasted straight into a viewBox renders upside down
+// and off-canvas. `translate(0, ascent) scale(1, -1)` maps it back — the top of
+// the em box (y = ascent) to 0, the bottom (y = descent) to unitsPerEm.
+async function processSvgFont(src) {
+  try {
+    processedCount++;
+    const progress = `[${processedCount}/${totalSources}]`.padEnd(12);
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}`);
+
+    const tree = await fetchJson(
+      `https://api.github.com/repos/${src.repo}/git/trees/${src.branch}?recursive=1`
+    );
+    const files = (tree.tree || [])
+      .map(t => t.path)
+      .filter(p => p.toLowerCase().endsWith('.svg')
+        && (!src.dir || p.startsWith(src.dir + '/'))
+        && (!src.pathMatch || src.pathMatch.test(p)));
+
+    const fonts = await mapLimit(files, 8, async (p) => ({
+      p,
+      text: await fetchText(`https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`)
+    }));
+
+    let count = 0;
+    for (const f of fonts) {
+      if (!f || !f.text) continue;
+
+      const face = (f.text.match(/<font-face\b[^>]*>/i) || [''])[0];
+      const num = (attr, src2, fallback) => {
+        const m = src2.match(new RegExp(`${attr}\\s*=\\s*"(-?[\\d.]+)"`, 'i'));
+        return m ? parseFloat(m[1]) : fallback;
+      };
+      const unitsPerEm = num('units-per-em', face, 1000);
+      const ascent = num('ascent', face, unitsPerEm);
+      const fontAdv = num('horiz-adv-x', (f.text.match(/<font\b[^>]*>/i) || [''])[0], unitsPerEm);
+
+      for (const g of f.text.matchAll(/<glyph\b[^>]*\/?>/gi)) {
+        const tag = g[0];
+        const rawName = (tag.match(/glyph-name\s*=\s*"([^"]*)"/i) || [])[1];
+        const d = (tag.match(/\sd\s*=\s*"([^"]*)"/i) || [])[1];
+        if (!rawName || !d || !d.trim()) continue;   // .notdef and the space glyph
+
+        // The weight is part of the glyph name (`crown-winner-thin`). Split it
+        // off so a search for "crown-winner" finds all three, and let it pick
+        // the style: font outlines are always fills, so nothing in the artwork
+        // could reveal the weight on its own.
+        const weight = (rawName.match(/-(thin|light|bold)$/i) || [])[1];
+        const name = weight ? rawName.slice(0, -(weight.length + 1)) : rawName;
+        const style = /^(thin|light)$/i.test(weight || '') ? 'thin' : (src.style || 'solid');
+        const width = num('horiz-adv-x', tag, fontAdv);
+
+        const added = addIcon(src.sourceId, src.sourceName, {
+          // Keyed on the raw name: the three weights collapse onto one name and
+          // would otherwise drop two of every three icons as duplicate ids.
+          id: `${src.sourceId}_${style}_${rawName}`,
+          name,
+          category: 'UI',
+          tags: [...new Set([name, rawName, src.sourceId, style])],
+          style,
+          viewBox: `0 0 ${width} ${unitsPerEm}`,
+          // `fill-rule="nonzero"` is not decoration. Fonts are authored for the
+          // nonzero winding rule: overlapping contours union, and counters are
+          // cut by reversing direction. The renderer stamps `fill-rule="evenodd"`
+          // on every icon, under which those overlaps punch holes instead —
+          // 87% of Atlas glyphs rendered wrong, strokes visibly unclosed. Set on
+          // the group so it overrides the inherited value.
+          svg: `<g transform="translate(0,${ascent}) scale(1,-1)" fill-rule="nonzero"><path d="${d}"/></g>`
+        });
+        if (added) count++;
+      }
+      process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}${count}`);
+    }
+
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}✅ ${count}\n`);
   } catch (e) {
     process.stdout.write(`❌ ${e.message}\n`);
   }
@@ -783,7 +993,9 @@ async function main() {
   for (const src of sources) {
     if (src.special) continue;
     if (ONLY && !ONLY.has(src.sourceId)) continue;
-    if (src.kind === 'github') {
+    if (src.kind === 'svgfont') {
+      await processSvgFont(src);
+    } else if (src.kind === 'github') {
       await processGithub(src);
     } else {
       await processStandard(src);
