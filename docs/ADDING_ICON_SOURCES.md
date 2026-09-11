@@ -4,7 +4,7 @@ How to add an open-source icon set to the Icons page, using the scripts already
 in `scripts/`. Written from the sources added in practice — every warning below
 is something that actually went wrong, not a hypothetical.
 
-Current catalogue: **238 collections, 379,763 icons**.
+Current catalogue: **241 collections, 382,424 icons**.
 
 ---
 
@@ -65,7 +65,7 @@ An icon record looks like this. Match it exactly:
 ## Before You Start: Research
 
 **Iconify is the aggregator.** It carries essentially every permissively
-licensed set on GitHub, and this project already imports 231 of its 238
+licensed set on GitHub, and this project already imports every one of its
 collections. So "search GitHub for icon sets" and "don't duplicate what we
 have" collapse into almost the same constraint.
 
@@ -88,6 +88,21 @@ Object.entries(all)
   .forEach(([k,v]) => console.log(k.padEnd(20), String(v.total).padStart(7), (v.license||{}).title));
 '
 ```
+
+**This diff over-reports.** A prefix it lists is not necessarily missing — many
+collections are assembled from prefixes that differ from their `sourceId`
+(Boxicons from `bx`/`bxs`/`bxl`, Heroicons from `heroicons-outline` and
+`heroicons-solid`). The run above named seven "missing" sets that were all
+already imported. Confirm against the data directory before believing it:
+
+```bash
+for d in boxicons heroicons token meteocons; do
+  [ -d "data/icons/$d" ] && echo "PRESENT $d" || echo "ABSENT  $d"
+done
+```
+
+As of this writing **every Iconify collection is imported**, so a genuinely new
+set has to come from a GitHub repo that Iconify does not carry.
 
 ### Count *new* icons, not raw icons
 
@@ -160,7 +175,65 @@ paint it. Imported as-is, SVG defaults apply — `fill:black, stroke:none` — s
 every icon renders as a solid blob and lands in Solid. Ikonate is exactly this.
 `wrap` puts the paint the artwork expects around the body.
 
-`style` here is only a placeholder. Step 3 overwrites it from the artwork.
+`style` here is usually only a placeholder — Step 3 overwrites it from the
+artwork. The exception is `duotone` and `thin`, the two variants reclassify
+trusts by name over the artwork (`VARIANT_STYLES`). Declaring either is how you
+route a set the artwork alone cannot classify.
+
+### Declaring `thin` for fill-based line art
+
+Fine line art is often drawn as filled paths that *trace* a line rather than
+filling a silhouette. Nothing in the markup distinguishes that from a solid
+glyph, so reclassify sends it to Solid, where it looks out of place next to
+actual filled icons. Carbon Pictograms and Linea are both this, and both declare
+`style: 'thin'` to land in Thin instead.
+
+This only works on artwork with no adjustable stroke. Outline outranks a
+declared `thin` — a stroked icon filed under Thin would lose Stroke Width, the
+one control it should have — so declaring `thin` on stroked artwork is silently
+ignored.
+
+**`sourceStyle` is sticky.** Reclassify records the declared style once
+(`if (!("sourceStyle" in icon))`) and never rewrites it, so editing `style` in
+the build script does nothing to icons already on disk. Re-import the source to
+change it:
+
+```bash
+node scripts/build-icons-data-full.js --only=carbon-pictograms,linea
+npm run reclassify:icon-styles
+```
+
+### Scattered trees and prefixed file names
+
+`dir` is a single path prefix, which only works when a repo keeps its icons in
+one folder and nothing else. Two optional fields cover the rest:
+
+```js
+{
+  kind: 'github',
+  repo: 'linea-io/Linea-Iconset',
+  branch: 'master',
+  pathMatch: /\/_SVG expanded\//,    // filter the whole path, not a prefix
+  stripName: /^(basic_elaboration|arrows|basic|ecommerce|music|software|weather)_/,
+  sourceId: 'linea',
+  sourceName: 'Linea',
+  style: 'outline',
+},
+```
+
+- **`pathMatch`** tests the full path. Linea spreads its artwork across seven
+  category folders as `<category>/_SVG expanded/…` *and* keeps 722 iconfont
+  `.svg` files in the same tree. No `dir` prefix can express that; a bare import
+  would pull in the font artefacts.
+- **`stripName`** drops a category prefix baked into the file name. Linea ships
+  `basic_alarm.svg`, so without it users have to search for `basic_alarm` rather
+  than `alarm`. Order the alternation longest-first — `basic_elaboration` must
+  match before `basic`.
+
+`stripName` changes the **name only**. The id keeps the raw file name, because
+nine Linea icons collide once stripped (`basic_alarm` and `software_alarm` are
+different artwork) and `addIcon` silently drops the second of each as a
+duplicate id. Both spellings go into `tags`, so either one finds the icon.
 
 ### Also update `sources.json` (manual)
 
@@ -188,11 +261,24 @@ The gap must be **0**.
 }
 ```
 
+**Write the licence the way the file already spells it.** `license` is the
+filter bucket verbatim, so `Apache-2.0` does not join `Apache 2.0` — it opens a
+second, near-identical entry in the License list. The file uses display spelling
+(`Apache 2.0`, `CC0 1.0`, `CC BY 4.0`), not SPDX. Check before adding:
+
+```bash
+node -e 'const s=require("./data/icons/sources.json");const c={};
+Object.values(s).forEach(v=>c[v.license]=(c[v.license]||0)+1);
+console.log(Object.entries(c).sort((a,b)=>b[1]-a[1]))'
+```
+
+A bucket with a count of 1 that looks like a near-duplicate is usually a typo.
+
 ---
 
 ## Step 2: Import It
 
-**Always use `--only=`.** A bare run refetches all 231 collections *and rewrites
+**Always use `--only=`.** A bare run refetches all 241 collections *and rewrites
 every style from the upstream file name*, undoing Step 3 across the entire
 catalogue.
 
@@ -372,6 +458,57 @@ strips `<title>` and `<desc>` in **both** forms — paired *and* self-closing
 (`<title id="x"/>`). The self-closing form was missed at first and slipped
 through on 4 icons.
 
+### Pasted layers named `accessibility_00000157309047752657…_`
+
+Illustrator labels every shape it exports. That id survives Copy SVG, and a
+design tool uses it to name the pasted layer — and since the ids repeat across
+icons, pasting several into one document collides them. All 1,575 Carbon
+Pictograms shipped this way.
+
+`unwrapSvg` now drops ids, but only those nothing in the same icon references:
+`url(#id)`, `href="#id"` and `clip-path` still need theirs, so gradients, masks
+and clip paths are left intact. Worth re-checking after adding any
+editor-exported set:
+
+```bash
+node -e 'const a=require("./data/icons/<sourceId>/icons.json");
+console.log(a.filter(i=>/ id="/.test(i.svg||"")).length, "of", a.length, "still carry an id")'
+```
+
+A few survivors are normal — they are the referenced ones.
+
+### A filled rectangle covers the icon once pasted into a design tool
+
+Invisible in the browser, obvious the moment it leaves. Illustrator exports an
+artboard-sized "Transparent Rectangle" behind the artwork:
+
+```html
+<rect style="fill:none;" width="32" height="32"/>
+```
+
+Nothing shows on the web — the inline `style` beats the `fill` attribute
+`renderSvg` writes onto it. A design tool reads the attribute instead and pastes
+a filled square on top of the icon. 1,511 of 1,575 Carbon pictograms had one.
+
+`unwrapSvg` drops these, but only rects that cover the whole artboard *and*
+demonstrably paint nothing — via inline `fill:none`, a class the icon's own
+`<style>` block defines as `fill:none` (`.cls-1`, `.st0`), `fill="none"`, or
+opacity ≤ 0.05. Full-bleed coloured rects and small ones stay: Carbon draws
+chart bars as `<rect>`, and deleting those would gut the icon.
+
+Removing the rect can orphan the `<style>` block that existed only to hide it,
+so an unreferenced one is dropped too — not cosmetic, because `renderSvg` skips
+recolouring any icon containing `<defs>`, and the dead block would have cost
+44 icons their colour controls.
+
+Check what a copy actually hands over rather than trusting the grid:
+
+```js
+window.BulkExport.flattenSvg(await exportSvgFor(ICONS[0]))
+// want only <svg> and the drawing elements - no <rect> spanning the viewBox,
+// no <defs>/<style>, no id
+```
+
 ### Phosphor no longer first in the default view
 
 `collections.json` is in **curated order, not size order** — Phosphor first,
@@ -379,6 +516,39 @@ Heroicons second. The grid renders collections in this order when no filter is
 active, so sorting by `total` changes what users first see. Do not re-add a sort
 to the write step; `--only=` preserves the existing order and appends new sources
 at the end.
+
+### Every line renders doubled after moving a set out of Solid
+
+Only for fill-based artwork with **no `fill` and no `stroke` attribute at all** —
+bare `<path d="…">`, which is how Carbon Pictograms and Linea ship.
+
+`renderSvg` detects fill-based artwork correctly, then throws the answer away
+for any style other than `solid`/`brands` unless the source is on a hard-coded
+allowlist:
+
+```js
+let isFillBased = !/stroke\s*=\s*"(?!\s*none)/i.test(paths);
+if (opts.iconStyle !== "solid" && …) {
+  if (!fillBasedSources.includes(opts.sourceId)) isFillBased = false;
+}
+```
+
+With `isFillBased` false and no paint attributes to read, each path comes out
+`fill="none" stroke="currentColor"` — so a fill that *traces* a line gets
+outlined, and every line in the icon renders as two. In Solid the same artwork
+is fine, because the guard never fires; the breakage appears only when the set
+is reclassified into Thin or Duotone.
+
+Add such a source to `fillBasedSources` in `JS/motvin-icons.js` at the same time
+you declare `style: 'thin'`, and bump the pinned `motvin-icons.js?v=` in
+`icons.html` — the two changes belong in one commit. Verify against a bare path
+rather than one already on the page (the DOM copy has been rewritten and will
+pass either way):
+
+```js
+renderSvg('<path d="M1,1z"/>', { iconStyle:'thin', sourceId:'<sourceId>', viewBox:'0 0 32 32', size:24 })
+// want: fill="currentColor" stroke="none"   (not fill="none" stroke="currentColor")
+```
 
 ### Icons in Outline whose Stroke Width does nothing
 
@@ -415,19 +585,25 @@ check never read).
 ## Checklist
 
 ```
-[ ] Source is not already in data/icons or Iconify
+[ ] Source is not already in data/icons or Iconify (check data/, not just the diff)
 [ ] Licence is permissive; LICENSE file exists
 [ ] Counted NEW names, not the headline total
 [ ] Entry added to `sources` in build-icons-data-full.js
 [ ] Checked a raw .svg — does it need `wrap`?
+[ ] Tree scattered or file names prefixed? -> `pathMatch` / `stripName`
 [ ] Licence added to data/icons/sources.json  <- silent failure if skipped
+[ ] Licence string matches an existing bucket's spelling exactly
 [ ] byLicense sum == total (gap 0)
 [ ] Imported with --only=<sourceId>
 [ ] npm run reclassify:icon-styles
 [ ] npm run build && restart backend
 [ ] stats byStyle sums to total
 [ ] full-catalogue sweep shows 0 violations
+[ ] declared `thin`/`duotone` on bare-path artwork? -> add to `fillBasedSources`
+    in JS/motvin-icons.js and bump `motvin-icons.js?v=` in icons.html
 [ ] browser: chips correct, Stroke Width only on Outline, icons visible
+[ ] browser: lines render single, not doubled
+[ ] copy output is clean: no artboard <rect>, no <defs>/<style>, no editor ids
 [ ] default view still opens on Phosphor
 ```
 

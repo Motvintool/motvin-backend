@@ -362,6 +362,28 @@ const sources = [
     sourceId: 'geomicons', sourceName: 'Geomicons', style: 'solid' },
   { kind: 'github', repo: 'AllienWorks/cryptocoins', branch: 'master', dir: 'SVG',
     sourceId: 'cryptocoins', sourceName: 'Cryptocoins', style: 'solid' },
+
+  // Carbon's pictograms ship in the design-system monorepo and are not
+  // published to Iconify (only `carbon`, the icon set, is). The artwork is
+  // fill-based line art — the fill traces the stroke rather than filling a
+  // silhouette — so it needs no `wrap`. `thin` is a declared upstream weight
+  // rather than a placeholder here: the artwork alone cannot tell fine line art
+  // apart from a filled glyph, so left to reclassify it would land in Solid.
+  { kind: 'github', repo: 'carbon-design-system/carbon', branch: 'main',
+    dir: 'packages/pictograms/src/svg',
+    sourceId: 'carbon-pictograms', sourceName: 'Carbon Pictograms', style: 'thin' },
+
+  // Linea scatters its artwork across seven category folders and keeps 722
+  // iconfont .svg files in the same tree, so it needs `pathMatch` rather than a
+  // `dir` prefix. File names repeat the category (`basic_alarm.svg`); `stripName`
+  // keeps that out of the searchable name.
+  { kind: 'github', repo: 'linea-io/Linea-Iconset', branch: 'master',
+    pathMatch: /\/_SVG expanded\//,
+    stripName: /^(basic_elaboration|arrows|basic|ecommerce|music|software|weather)_/,
+    sourceId: 'linea', sourceName: 'Linea', style: 'thin' },
+
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/zero',
+    sourceId: 'zero-icons', sourceName: 'Zero Icons', style: 'solid' },
 ];
 
 // A per-file fetch with a hard timeout. Without one a single stalled socket
@@ -421,7 +443,7 @@ function unwrapSvg(text) {
     const h = (open[0].match(/\bheight\s*=\s*"([\d.]+)/i) || [])[1];
     viewBox = w && h ? `0 0 ${w} ${h}` : '0 0 24 24';
   }
-  const body = text
+  let body = text
     .slice(text.indexOf(open[0]) + open[0].length, text.lastIndexOf('</svg>'))
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<title\b[^>]*\/>/gi, '')
@@ -429,6 +451,70 @@ function unwrapSvg(text) {
     .replace(/<desc\b[^>]*\/>/gi, '')
     .replace(/<desc\b[^>]*>[\s\S]*?<\/desc>/gi, '')
     .trim();
+
+  // Illustrator labels every shape it exports (`id="accessibility_0000015730…_"`).
+  // A design tool uses that id as the name of the pasted layer, and the same ids
+  // repeat across icons, so paste a few into one document and they collide.
+  // Only ids nothing in this icon points at are safe to drop — `url(#id)`,
+  // `href="#id"` and friends still need theirs. A colour like `#fff` reads as a
+  // reference here, which at worst keeps an id we could have removed.
+  const referenced = new Set(
+    [...body.matchAll(/#([A-Za-z0-9_.:-]+)/g)].map(m => m[1])
+  );
+  body = body.replace(/\s+id="([^"]*)"/g, (m, id) => (referenced.has(id) ? m : ''));
+
+  // Illustrator leaves an artboard-sized "Transparent Rectangle" behind the
+  // artwork. On the web it paints nothing, because its inline style or class
+  // beats the fill the renderer adds — but the renderer still writes that fill
+  // onto the element, and a design tool reads the attribute and pastes a filled
+  // square on top of the icon. 1,511 Carbon pictograms shipped one.
+  //
+  // Only rects that cover the whole artboard *and* demonstrably paint nothing
+  // go: real artwork includes full-bleed shapes, and Carbon itself draws small
+  // rects (chart bars) that must survive.
+  const noPaintClasses = new Set();
+  for (const block of body.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)) {
+    for (const rule of block[1].matchAll(/\.([A-Za-z0-9_-]+)\s*\{([^}]*)\}/g)) {
+      if (/fill\s*:\s*none/i.test(rule[2])) noPaintClasses.add(rule[1]);
+    }
+  }
+  const [vbW, vbH] = viewBox.split(/[\s,]+/).map(Number).slice(2);
+  body = body.replace(/<rect\b([^>]*?)\/?>/gi, (tag, attrs) => {
+    const num = (name) => {
+      const m = attrs.match(new RegExp(`\\b${name}\\s*=\\s*"([^"]*)"`, 'i'));
+      return m ? parseFloat(m[1]) || 0 : 0;
+    };
+    const coversArtboard =
+      num('x') === 0 && num('y') === 0 &&
+      vbW && vbH &&
+      Math.abs(num('width') - vbW) < 0.5 && Math.abs(num('height') - vbH) < 0.5;
+    if (!coversArtboard) return tag;
+
+    const style = (attrs.match(/style\s*=\s*"([^"]*)"/i) || ['', ''])[1];
+    const cls = (attrs.match(/class\s*=\s*"([^"]*)"/i) || ['', ''])[1];
+    const opacity = /(?:^|[;\s])opacity\s*:\s*([\d.]+)/i.exec(style);
+    const paintsNothing =
+      /fill\s*:\s*none/i.test(style) ||
+      /\bfill\s*=\s*"\s*none\s*"/i.test(attrs) ||
+      cls.split(/\s+/).some((c) => noPaintClasses.has(c)) ||
+      (opacity && parseFloat(opacity[1]) <= 0.05);
+    return paintsNothing ? '' : tag;
+  });
+
+  // Dropping that rect can orphan the `<style>` block that existed only to hide
+  // it. Leaving it behind is not cosmetic: `renderSvg` bails out of recolouring
+  // any icon containing `<defs>`, so the dead block would cost those icons their
+  // colour controls.
+  body = body.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (block, css) => {
+    const classes = [...css.matchAll(/\.([A-Za-z0-9_-]+)\s*\{/g)].map((m) => m[1]);
+    if (!classes.length) return block;
+    const used = classes.some((c) =>
+      new RegExp(`class\\s*=\\s*"[^"]*\\b${c}\\b`).test(body)
+    );
+    return used ? block : '';
+  });
+  body = body.replace(/<defs\b[^>]*>\s*<\/defs>/gi, '').trim();
+
   return body ? { viewBox, body } : null;
 }
 
@@ -443,9 +529,16 @@ async function processGithub(src) {
     const tree = await fetchJson(
       `https://api.github.com/repos/${src.repo}/git/trees/${src.branch}?recursive=1`
     );
+    // `dir` is a single path prefix, which is not enough for repos that scatter
+    // their icons across several top-level folders and keep unrelated .svg files
+    // alongside them. `pathMatch` filters the tree on the full path instead:
+    // Linea keeps its artwork in `<category>/_SVG expanded/` under seven roots,
+    // next to 722 iconfont .svg files that must not be imported.
     const files = (tree.tree || [])
       .map(t => t.path)
-      .filter(p => p.toLowerCase().endsWith('.svg') && (!src.dir || p.startsWith(src.dir + '/')));
+      .filter(p => p.toLowerCase().endsWith('.svg')
+        && (!src.dir || p.startsWith(src.dir + '/'))
+        && (!src.pathMatch || src.pathMatch.test(p)));
 
     let done = 0;
     const fetched = await mapLimit(files, 12, async (p) => {
@@ -466,12 +559,19 @@ async function processGithub(src) {
       const r = fetched[i];
       if (!r) { failed++; continue; }
       if (!r.parsed) continue;
-      const name = r.p.split('/').pop().replace(/\.svg$/i, '');
+      // `stripName` drops a redundant category prefix baked into the file name
+      // (Linea ships `basic_alarm.svg`, `arrows_check.svg`), which would
+      // otherwise be what users have to search for. The id keeps the raw file
+      // name: nine Linea icons share a name once stripped (`basic_alarm` and
+      // `software_alarm` are different artwork) and addIcon would drop the
+      // second of each as a duplicate id.
+      const rawName = r.p.split('/').pop().replace(/\.svg$/i, '');
+      const name = src.stripName ? (rawName.replace(src.stripName, '') || rawName) : rawName;
       const added = addIcon(src.sourceId, src.sourceName, {
-        id: `${src.sourceId}_${src.style}_${name}`,
+        id: `${src.sourceId}_${src.style}_${rawName}`,
         name,
         category: 'UI',
-        tags: [name, src.sourceId, src.style],
+        tags: [...new Set([name, rawName, src.sourceId, src.style])],
         style: src.style,
         viewBox: r.parsed.viewBox,
         svg: src.wrap ? `<g ${src.wrap}>${r.parsed.body}</g>` : r.parsed.body
