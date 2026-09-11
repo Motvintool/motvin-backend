@@ -277,6 +277,24 @@ function detectThemeVariants(icons) {
  * shapes, not a weight; Hugeicons has exactly one `text-bold`. Requiring the
  * token to cover a set rather than a stray icon separates the two.
  */
+const DUOTONE_TOKENS = new Set(["duotone", "twotone", "two-tone", "duo"]);
+
+/**
+ * Some sets name the duotone variant in the middle of a compound suffix rather
+ * than at the end - IconMind ships `a-record-duotone-bold`, so the last token
+ * is the weight and "duotone" sits before it. Trust a mid-name duotone only
+ * where it covers a real share of the collection: it is half of IconMind and
+ * 12% of Letsicons, but a stray 0.1% in Glyphs is a subject word.
+ */
+function detectDuotoneAnywhere(icons) {
+  let hits = 0;
+  for (const icon of icons) {
+    const tokens = splitTokens(icon.name || icon.id);
+    if (tokens.some((t) => DUOTONE_TOKENS.has(t))) hits++;
+  }
+  return icons.length > 0 && hits / icons.length >= 0.05;
+}
+
 function detectSuffixVariants(icons) {
   const terminal = new Map();
   const midName = new Map();
@@ -324,15 +342,12 @@ function byArtwork(info) {
  * two upstream variants we still honour by name (duotone, thin), then the
  * artwork itself decides between outline and solid.
  */
-function classify(icon, info, ctx) {
-  if (info.colored) return "3d";
-
-  // Stroked artwork is Outline, full stop - it outranks the upstream variant
-  // names. Only Outline exposes the Stroke Width control, so a stroked icon
-  // filed under Thin or Duotone would be adjustable artwork the user cannot
-  // adjust. (Solar, Glyphs and Keyline ship stroked duotone/thin sets.)
-  if (info.stroked) return "outline";
-
+/**
+ * Which upstream variant does this icon's name or declared style claim?
+ * Returns "duotone", "thin", or null. The name is only trusted through the same
+ * gates the rest of the pass uses, so a subject word never counts as a variant.
+ */
+function declaredVariant(icon, ctx) {
   const declared = String(icon.sourceStyle || "").toLowerCase().trim();
   if (VARIANT_STYLES.has(declared)) return declared;
   if (declared in TOKEN_STYLE) {
@@ -344,10 +359,16 @@ function classify(icon, info, ctx) {
   const first = tokens[0];
   const last = tokens.length > 1 ? tokens[tokens.length - 1] : undefined;
 
+  // Checked before the prefix/suffix rules because a compound suffix ends in
+  // the weight, not the variant: IconMind's `-duotone-thin` would otherwise
+  // read as Thin and lose the duotone it plainly declares.
+  if (ctx.duotoneAnywhere && tokens.some((t) => DUOTONE_TOKENS.has(t))) {
+    return "duotone";
+  }
+
   if (ctx.prefixPartition && first !== undefined && first in TOKEN_STYLE) {
     const mapped = TOKEN_STYLE[first];
-    if (mapped && VARIANT_STYLES.has(mapped)) return mapped;
-    return byArtwork(info);
+    return mapped && VARIANT_STYLES.has(mapped) ? mapped : null;
   }
 
   if (last && ctx.suffixVariants.has(last)) {
@@ -357,6 +378,27 @@ function classify(icon, info, ctx) {
     }
   }
 
+  return null;
+}
+
+function classify(icon, info, ctx) {
+  if (info.colored) return "3d";
+
+  const variant = declaredVariant(icon, ctx);
+
+  // Duotone outranks the artwork: a two-tone icon is duotone whether it is
+  // drawn with strokes or fills, so IconPark, Solar and IconMind's duotone sets
+  // stay together instead of scattering into Outline.
+  if (variant === "duotone") return "duotone";
+
+  // Everything else stroked is Outline - only Outline exposes Stroke Width, so
+  // a stroked icon filed elsewhere would be adjustable artwork nobody can
+  // adjust. That is why Thin does not get the same override as Duotone.
+  if (info.stroked) return "outline";
+
+  if (variant) return variant;
+
+  if (ctx.prefixPartition) return byArtwork(info);
   return byArtwork(info);
 }
 
@@ -420,6 +462,7 @@ function main() {
       prefixPartition: detectPrefixPartition(icons),
       themeVariants: detectThemeVariants(icons),
       suffixVariants: detectSuffixVariants(icons),
+      duotoneAnywhere: detectDuotoneAnywhere(icons),
     };
 
     const counts = {};

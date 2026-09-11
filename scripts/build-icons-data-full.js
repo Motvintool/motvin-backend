@@ -317,7 +317,100 @@ const sources = [
   { file: 'sidekickicons', sourceId: 'sidekick', sourceName: 'Sidekick', style: 'outline', special: true },
   { file: 'lsicon', sourceId: 'lsicon', sourceName: 'Lsicon', style: 'outline', special: true },
   { file: 'tdesign', sourceId: 'tdesign', sourceName: 'TDesign', style: 'outline', special: true },
+  { file: 'iconmind', sourceId: 'iconmind', sourceName: 'IconMind', style: 'outline' },
+
+  // Not published to Iconify, so fetched straight from the repo as raw .svg
+  // files. `wrap` supplies the paint the artwork expects: Ikonate ships bare
+  // geometry with no fill/stroke at all (it is meant to be styled by CSS), and
+  // imported as-is every icon would default to fill:black and render as a blob.
+  {
+    kind: 'github',
+    repo: 'mikolajdobrucki/ikonate',
+    branch: 'master',
+    dir: 'icons',
+    sourceId: 'ikonate',
+    sourceName: 'Ikonate',
+    style: 'outline',
+    wrap: 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"',
+  },
 ];
+
+function fetchText(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, { headers: { 'User-Agent': 'motvin-build' } }, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return resolve(fetchText(res.headers.location));
+      }
+      if (res.statusCode >= 300) return reject(new Error(`HTTP ${res.statusCode}`));
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+    }).on('error', reject);
+  });
+}
+
+// Strip the outer <svg> wrapper, keeping its viewBox and inner markup. <title>
+// and <desc> are accessibility labels for the standalone file - inside the grid
+// they only become stray tooltips, and both self-closing and paired forms occur.
+function unwrapSvg(text) {
+  const open = text.match(/<svg\b[^>]*>/i);
+  if (!open) return null;
+  let viewBox = (open[0].match(/viewBox\s*=\s*"([^"]*)"/i) || [])[1];
+  if (!viewBox) {
+    const w = (open[0].match(/\bwidth\s*=\s*"([\d.]+)/i) || [])[1];
+    const h = (open[0].match(/\bheight\s*=\s*"([\d.]+)/i) || [])[1];
+    viewBox = w && h ? `0 0 ${w} ${h}` : '0 0 24 24';
+  }
+  const body = text
+    .slice(text.indexOf(open[0]) + open[0].length, text.lastIndexOf('</svg>'))
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<title\b[^>]*\/>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
+    .replace(/<desc\b[^>]*\/>/gi, '')
+    .replace(/<desc\b[^>]*>[\s\S]*?<\/desc>/gi, '')
+    .trim();
+  return body ? { viewBox, body } : null;
+}
+
+// For sets that never made it to Iconify: walk the repo tree and convert each
+// raw .svg into the same record shape processStandard produces.
+async function processGithub(src) {
+  try {
+    processedCount++;
+    const progress = `[${processedCount}/${totalSources}]`.padEnd(12);
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}`);
+
+    const tree = await fetchJson(
+      `https://api.github.com/repos/${src.repo}/git/trees/${src.branch}?recursive=1`
+    );
+    const files = (tree.tree || [])
+      .map(t => t.path)
+      .filter(p => p.toLowerCase().endsWith('.svg') && (!src.dir || p.startsWith(src.dir + '/')));
+
+    let count = 0;
+    for (const p of files) {
+      const name = p.split('/').pop().replace(/\.svg$/i, '');
+      const parsed = unwrapSvg(
+        await fetchText(`https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`)
+      );
+      if (!parsed) continue;
+      const added = addIcon(src.sourceId, src.sourceName, {
+        id: `${src.sourceId}_${src.style}_${name}`,
+        name,
+        category: 'UI',
+        tags: [name, src.sourceId, src.style],
+        style: src.style,
+        viewBox: parsed.viewBox,
+        svg: src.wrap ? `<g ${src.wrap}>${parsed.body}</g>` : parsed.body
+      });
+      if (added) count++;
+    }
+
+    process.stdout.write(`✅ ${count}\n`);
+  } catch (e) {
+    process.stdout.write(`❌ ${e.message}\n`);
+  }
+}
 
 async function processStandard(src) {
   try {
@@ -511,7 +604,10 @@ async function main() {
 
   // Process all standard sources
   for (const src of sources) {
-    if (!src.special) {
+    if (src.special) continue;
+    if (src.kind === 'github') {
+      await processGithub(src);
+    } else {
       await processStandard(src);
     }
   }
@@ -563,7 +659,10 @@ async function main() {
     lastUpdated: new Date().toISOString(),
     totalCollections: collectionsList.length,
     totalIcons: totalIconsProcessed,
-    collections: collectionsList.sort((a, b) => b.total - a.total),
+    // Insertion order, not size order. The grid renders collections in this
+    // order when no filter is active, so sorting by total would push Phosphor
+    // off the front of the default view and change what users first see.
+    collections: collectionsList,
   };
 
   fs.writeFileSync(
