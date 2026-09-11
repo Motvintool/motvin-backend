@@ -111,6 +111,9 @@ const STROKE_ATTR_RE = /stroke\s*=\s*"([^"]*)"/gi;
 // channels instead.
 // --------------------------------------------------------------------
 
+// Channel spread below this reads as grey/black to the eye, not as colour.
+const ACHROMATIC_TOLERANCE = 8;
+
 // Achromatic CSS named colours. Any other name is assumed to carry a hue.
 const NEUTRAL_NAMES = new Set([
   "black", "white", "gray", "grey", "silver", "gainsboro", "whitesmoke",
@@ -137,13 +140,18 @@ function valueHasHue(raw) {
       h = h.slice(0, 6);
     }
     if (h.length < 6) return false; // malformed, e.g. #00000 - browsers ignore it
-    return !(h.slice(0, 2) === h.slice(2, 4) && h.slice(2, 4) === h.slice(4, 6));
+    const r = parseInt(h.slice(0, 2), 16);
+    const g = parseInt(h.slice(2, 4), 16);
+    const bl = parseInt(h.slice(4, 6), 16);
+    // Exact equality is too strict: #070400 is r7 g4 b0, a 7/255 spread nobody
+    // can see, yet it pushed a black logo into 3D Icons. Allow a small delta.
+    return Math.max(r, g, bl) - Math.min(r, g, bl) > ACHROMATIC_TOLERANCE;
   }
 
   const rgb = /^rgba?\(\s*([\d.]+%?)[,\s]+([\d.]+%?)[,\s]+([\d.]+%?)/.exec(v);
   if (rgb) {
     const [r, g, b] = rgb.slice(1, 4).map((n) => parseFloat(n));
-    return !(r === g && g === b);
+    return Math.max(r, g, b) - Math.min(r, g, b) > ACHROMATIC_TOLERANCE;
   }
 
   const hsl = /^hsla?\(\s*[\d.]+(?:deg|rad|turn)?[,\s]+([\d.]+)%/.exec(v);
@@ -220,10 +228,28 @@ function analyzeSvg(svg) {
     }
   }
 
-  // Any stroked path is width-adjustable. renderSvg strips whatever
-  // stroke-width the artwork declared and applies its own to every path with a
-  // non-none stroke, so declaring one up front makes no difference.
-  const adjustableStroke = stroked;
+  // renderSvg bails out entirely on <mask>/<defs> - naive regex rewriting would
+  // destroy those shapes - so the stroke it would otherwise inject never lands.
+  // Such artwork is not width-adjustable and does not belong in Outline.
+  const rendererCanRestyle = !/<mask|<defs/i.test(svg);
+
+  // A white-only stroke on artwork with nothing hollow is a hairline separator,
+  // not the icon's linework (Windows Metro draws filled glyphs this way).
+  const strokesOutsideDefs = [];
+  let sm;
+  const outside = svg.replace(/<(defs|mask)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
+  const re2 = /stroke\s*=\s*"([^"]*)"/gi;
+  while ((sm = re2.exec(outside)) !== null) {
+    const v = sm[1].trim().toLowerCase();
+    if (v !== "none") strokesOutsideDefs.push(v);
+  }
+  const WHITES = new Set(["#fff", "#ffffff", "#ffff", "#ffffffff", "white"]);
+  const hairlineOnly =
+    strokesOutsideDefs.length > 0 &&
+    strokesOutsideDefs.every((v) => WHITES.has(v)) &&
+    !/fill\s*=\s*"none"/i.test(svg);
+
+  const adjustableStroke = stroked && rendererCanRestyle && !hairlineOnly;
 
   return { colored, stroked, adjustableStroke };
 }
@@ -334,7 +360,7 @@ function detectSuffixVariants(icons) {
  * Artwork with neither attribute inherits a fill when rendered, so it is solid.
  */
 function byArtwork(info) {
-  return info.stroked ? "outline" : "solid";
+  return info.adjustableStroke ? "outline" : "solid";
 }
 
 /**
@@ -394,7 +420,7 @@ function classify(icon, info, ctx) {
   // Everything else stroked is Outline - only Outline exposes Stroke Width, so
   // a stroked icon filed elsewhere would be adjustable artwork nobody can
   // adjust. That is why Thin does not get the same override as Duotone.
-  if (info.stroked) return "outline";
+  if (info.adjustableStroke) return "outline";
 
   if (variant) return variant;
 

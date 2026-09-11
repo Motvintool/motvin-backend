@@ -22,6 +22,12 @@ const https = require('https');
 const baseUrl = 'https://raw.githubusercontent.com/iconify/icon-sets/master/json/';
 const outputDir = path.join(__dirname, '../data/icons');
 
+// --only=id,id imports just those sources and merges them into the existing
+// catalogue. Without it this script refetches all 231 collections and rewrites
+// every style from the upstream file name, undoing reclassify-icon-styles.js.
+const onlyArg = process.argv.find(a => a.startsWith('--only='));
+const ONLY = onlyArg ? new Set(onlyArg.split('=')[1].split(',')) : null;
+
 const collectionsMap = new Map();
 const seenIds = new Set(); // Prevent duplicates
 let totalIconsProcessed = 0;
@@ -30,7 +36,10 @@ let totalSources = 0;
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    // The GitHub API rejects requests without a User-Agent with a 403, which
+    // reads exactly like a rate limit. Raw githubusercontent does not care, so
+    // sending it always is harmless.
+    https.get(url, { headers: { 'User-Agent': 'motvin-build' } }, (res) => {
       if (res.statusCode >= 300) {
         return reject(new Error(`HTTP ${res.statusCode}`));
       }
@@ -333,20 +342,71 @@ const sources = [
     style: 'outline',
     wrap: 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"',
   },
+
+  // Legacy glyph sets that never reached Iconify. leungwensen/svg-icon bundles
+  // 31 sets; the 23 not listed here are ones we already carry from upstream.
+  // These are fill-based webfont exports, so no `wrap` is needed.
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/windows',
+    sourceId: 'windows-metro', sourceName: 'Windows Metro UI', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/metro',
+    sourceId: 'metro', sourceName: 'Metro', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/mfglabs',
+    sourceId: 'mfglabs', sourceName: 'MFG Labs', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/zocial',
+    sourceId: 'zocial', sourceName: 'Zocial', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/payment',
+    sourceId: 'payment', sourceName: 'Payment Icons', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/payment-web',
+    sourceId: 'payment-web', sourceName: 'Payment Web', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/geom',
+    sourceId: 'geomicons', sourceName: 'Geomicons', style: 'solid' },
+  { kind: 'github', repo: 'AllienWorks/cryptocoins', branch: 'master', dir: 'SVG',
+    sourceId: 'cryptocoins', sourceName: 'Cryptocoins', style: 'solid' },
 ];
 
-function fetchText(url) {
+// A per-file fetch with a hard timeout. Without one a single stalled socket
+// hangs the whole import silently - github serves thousands of small files and
+// an occasional connection just never completes.
+function fetchText(url, attempt = 0) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'motvin-build' } }, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return resolve(fetchText(res.headers.location));
+    const req = https.get(
+      url,
+      { headers: { 'User-Agent': 'motvin-build' } },
+      (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          res.resume();
+          return resolve(fetchText(res.headers.location, attempt));
+        }
+        if (res.statusCode >= 300) {
+          res.resume();
+          return reject(new Error(`HTTP ${res.statusCode}`));
+        }
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => resolve(data));
       }
-      if (res.statusCode >= 300) return reject(new Error(`HTTP ${res.statusCode}`));
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => resolve(data));
-    }).on('error', reject);
+    );
+    req.setTimeout(15000, () => req.destroy(new Error('timeout')));
+    req.on('error', (e) => {
+      if (attempt < 2) return resolve(fetchText(url, attempt + 1));
+      reject(e);
+    });
   });
+}
+
+// Fetch in small batches - 2,500 files one at a time takes many minutes.
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length);
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (next < items.length) {
+        const i = next++;
+        try { out[i] = await fn(items[i], i); } catch { out[i] = null; }
+      }
+    })
+  );
+  return out;
 }
 
 // Strip the outer <svg> wrapper, keeping its viewBox and inner markup. <title>
@@ -387,26 +447,41 @@ async function processGithub(src) {
       .map(t => t.path)
       .filter(p => p.toLowerCase().endsWith('.svg') && (!src.dir || p.startsWith(src.dir + '/')));
 
-    let count = 0;
-    for (const p of files) {
-      const name = p.split('/').pop().replace(/\.svg$/i, '');
-      const parsed = unwrapSvg(
-        await fetchText(`https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`)
+    let done = 0;
+    const fetched = await mapLimit(files, 12, async (p) => {
+      const text = await fetchText(
+        `https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`
       );
-      if (!parsed) continue;
+      if (++done % 100 === 0) {
+        process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}${done}/${files.length}`);
+      }
+      return { p, parsed: unwrapSvg(text) };
+    });
+
+    let count = 0;
+    let failed = 0;
+    // Added in tree order, not completion order, so the result is the same
+    // whatever order the parallel fetches happen to finish in.
+    for (let i = 0; i < files.length; i++) {
+      const r = fetched[i];
+      if (!r) { failed++; continue; }
+      if (!r.parsed) continue;
+      const name = r.p.split('/').pop().replace(/\.svg$/i, '');
       const added = addIcon(src.sourceId, src.sourceName, {
         id: `${src.sourceId}_${src.style}_${name}`,
         name,
         category: 'UI',
         tags: [name, src.sourceId, src.style],
         style: src.style,
-        viewBox: parsed.viewBox,
-        svg: src.wrap ? `<g ${src.wrap}>${parsed.body}</g>` : parsed.body
+        viewBox: r.parsed.viewBox,
+        svg: src.wrap ? `<g ${src.wrap}>${r.parsed.body}</g>` : r.parsed.body
       });
       if (added) count++;
     }
 
-    process.stdout.write(`✅ ${count}\n`);
+    process.stdout.write(
+      `\r  ${progress} ${src.sourceName.padEnd(35)}✅ ${count}${failed ? ` (${failed} failed)` : ''}\n`
+    );
   } catch (e) {
     process.stdout.write(`❌ ${e.message}\n`);
   }
@@ -598,13 +673,16 @@ async function main() {
   totalSources = sources.length + 1; // +1 for Solar
 
   // Process special collections first
-  await processSolar();
-  await processPhosphor();
-  await processTabler();
+  if (!ONLY) {
+    await processSolar();
+    await processPhosphor();
+    await processTabler();
+  }
 
   // Process all standard sources
   for (const src of sources) {
     if (src.special) continue;
+    if (ONLY && !ONLY.has(src.sourceId)) continue;
     if (src.kind === 'github') {
       await processGithub(src);
     } else {
@@ -654,15 +732,29 @@ async function main() {
     console.log(`  ✅ ${collectionId.padEnd(25)} ${metadata.total.toString().padStart(7)} icons (${sizeKB.toLocaleString()} KB)`);
   }
 
+  // In --only mode splice the new entries into the existing catalogue so the
+  // collections we did not refetch keep their data, order and styleCounts.
+  let finalList = collectionsList;
+  let finalTotal = totalIconsProcessed;
+  if (ONLY) {
+    const existingPath = path.join(outputDir, 'collections.json');
+    const existing = JSON.parse(fs.readFileSync(existingPath, 'utf-8'));
+    const added = new Map(collectionsList.map(c => [c.id, c]));
+    finalList = existing.collections.map(c => added.get(c.id) || c);
+    const known = new Set(finalList.map(c => c.id));
+    for (const c of collectionsList) if (!known.has(c.id)) finalList.push(c);
+    finalTotal = finalList.reduce((n, c) => n + (c.total || 0), 0);
+  }
+
   const collectionsFile = {
     version: '1.0.0',
     lastUpdated: new Date().toISOString(),
-    totalCollections: collectionsList.length,
-    totalIcons: totalIconsProcessed,
+    totalCollections: finalList.length,
+    totalIcons: finalTotal,
     // Insertion order, not size order. The grid renders collections in this
     // order when no filter is active, so sorting by total would push Phosphor
     // off the front of the default view and change what users first see.
-    collections: collectionsList,
+    collections: finalList,
   };
 
   fs.writeFileSync(
@@ -673,8 +765,8 @@ async function main() {
   console.log('\n' + '='.repeat(70));
   console.log('✨ COMPLETE! ALL ICONS FETCHED!');
   console.log('='.repeat(70));
-  console.log(`📊 Collections: ${collectionsList.length}`);
-  console.log(`🎨 Total Icons: ${totalIconsProcessed.toLocaleString()}`);
+  console.log(`📊 Collections: ${finalList.length}`);
+  console.log(`🎨 Total Icons: ${finalTotal.toLocaleString()}`);
   console.log(`📁 Location:    ${outputDir}`);
   console.log('='.repeat(70));
 
