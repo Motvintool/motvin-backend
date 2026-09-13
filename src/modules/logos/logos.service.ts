@@ -194,13 +194,20 @@ export class LogosService implements OnModuleInit {
     const size = options.size || 24;
     const stroke = options.stroke || 2;
 
+    // Logo collections store their markup under `body`, not `svg` - reading
+    // only `logo.svg` threw on every request to this endpoint. The icons and
+    // illustrations services already accept either.
+    const rawSvg = (logo as any).svg || (logo as any).body || "";
+    if (!rawSvg) return null;
+
     // Replace color and stroke in SVG
-    let svg = logo.svg
+    let svg = rawSvg
       .replace(/currentColor/g, color)
       .replace(/stroke-width="[^"]*"/g, `stroke-width="${stroke}"`);
 
     // Wrap in SVG element
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${logo.viewBox}">${svg}</svg>`;
+    const viewBox = logo.viewBox || "0 0 24 24";
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}">${svg}</svg>`;
   }
 
   async searchLogos(query: string, options: SearchOptions) {

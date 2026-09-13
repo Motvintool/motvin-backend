@@ -541,6 +541,9 @@ export class LoaderService implements OnModuleInit {
       name: c.name,
       total: c.total,
       styles: c.styles,
+      // Drives the per-source style chips, so selecting one source only offers
+      // the styles that source actually ships.
+      styleCounts: c.styleCounts || null,
       license: this.sourcesData?.[c.id]?.license || "Unknown",
       licenseUrl: this.sourcesData?.[c.id]?.licenseUrl || "",
     }));
@@ -593,11 +596,21 @@ export class LoaderService implements OnModuleInit {
     // Load and process icons from each collection
     const startTime = Date.now();
     for (const collection of this.collectionsData.collections) {
-      // Style counts (from collection metadata)
-      collection.styles.forEach((style) => {
-        const count = byStyle.get(style) || 0;
-        byStyle.set(style, count + collection.total);
-      });
+      // Style counts come from styleCounts, which holds the real per-style
+      // tally. Falling back to collection.total per style would count a
+      // 4-style collection like Phosphor four times over.
+      if (collection.styleCounts) {
+        for (const [style, count] of Object.entries<number>(
+          collection.styleCounts,
+        )) {
+          byStyle.set(style, (byStyle.get(style) || 0) + count);
+        }
+      } else {
+        collection.styles.forEach((style) => {
+          const count = byStyle.get(style) || 0;
+          byStyle.set(style, count + collection.total);
+        });
+      }
 
       // License counts (from sources.json)
       if (this.sourcesData && this.sourcesData[collection.id]) {

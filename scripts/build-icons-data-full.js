@@ -3,6 +3,16 @@
 /**
  * Fetch ALL 300K+ icons from Iconify - Complete Version
  * Includes ALL collections with special multi-style processors
+ *
+ * The `style` this script assigns comes from the Iconify source file name, so it
+ * names the upstream file rather than the artwork: collections that pack several
+ * variants into one file all get a single style, and colored sets get "color",
+ * which is not one of the styles the UI ships.
+ *
+ * ALWAYS run `node scripts/reclassify-icon-styles.js` after this script. It
+ * verifies each icon against its artwork and moves it into the real style
+ * (outline / solid / rounded / duotone / thin / bold / 3d), and writes the
+ * per-style counts the style chips and stats depend on.
  */
 
 const fs = require('fs');
@@ -12,6 +22,12 @@ const https = require('https');
 const baseUrl = 'https://raw.githubusercontent.com/iconify/icon-sets/master/json/';
 const outputDir = path.join(__dirname, '../data/icons');
 
+// --only=id,id imports just those sources and merges them into the existing
+// catalogue. Without it this script refetches all 231 collections and rewrites
+// every style from the upstream file name, undoing reclassify-icon-styles.js.
+const onlyArg = process.argv.find(a => a.startsWith('--only='));
+const ONLY = onlyArg ? new Set(onlyArg.split('=')[1].split(',')) : null;
+
 const collectionsMap = new Map();
 const seenIds = new Set(); // Prevent duplicates
 let totalIconsProcessed = 0;
@@ -20,7 +36,10 @@ let totalSources = 0;
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, (res) => {
+    // The GitHub API rejects requests without a User-Agent with a 403, which
+    // reads exactly like a rate limit. Raw githubusercontent does not care, so
+    // sending it always is harmless.
+    https.get(url, { headers: { 'User-Agent': 'motvin-build' } }, (res) => {
       if (res.statusCode >= 300) {
         return reject(new Error(`HTTP ${res.statusCode}`));
       }
@@ -307,7 +326,476 @@ const sources = [
   { file: 'sidekickicons', sourceId: 'sidekick', sourceName: 'Sidekick', style: 'outline', special: true },
   { file: 'lsicon', sourceId: 'lsicon', sourceName: 'Lsicon', style: 'outline', special: true },
   { file: 'tdesign', sourceId: 'tdesign', sourceName: 'TDesign', style: 'outline', special: true },
+  { file: 'iconmind', sourceId: 'iconmind', sourceName: 'IconMind', style: 'outline' },
+
+  // Not published to Iconify, so fetched straight from the repo as raw .svg
+  // files. `wrap` supplies the paint the artwork expects: Ikonate ships bare
+  // geometry with no fill/stroke at all (it is meant to be styled by CSS), and
+  // imported as-is every icon would default to fill:black and render as a blob.
+  {
+    kind: 'github',
+    repo: 'mikolajdobrucki/ikonate',
+    branch: 'master',
+    dir: 'icons',
+    sourceId: 'ikonate',
+    sourceName: 'Ikonate',
+    style: 'outline',
+    wrap: 'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"',
+  },
+
+  // Legacy glyph sets that never reached Iconify. leungwensen/svg-icon bundles
+  // 31 sets; the 23 not listed here are ones we already carry from upstream.
+  // These are fill-based webfont exports, so no `wrap` is needed.
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/windows',
+    sourceId: 'windows-metro', sourceName: 'Windows Metro UI', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/metro',
+    sourceId: 'metro', sourceName: 'Metro', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/mfglabs',
+    sourceId: 'mfglabs', sourceName: 'MFG Labs', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/zocial',
+    sourceId: 'zocial', sourceName: 'Zocial', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/payment',
+    sourceId: 'payment', sourceName: 'Payment Icons', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/payment-web',
+    sourceId: 'payment-web', sourceName: 'Payment Web', style: 'solid' },
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/geom',
+    sourceId: 'geomicons', sourceName: 'Geomicons', style: 'solid' },
+  { kind: 'github', repo: 'AllienWorks/cryptocoins', branch: 'master', dir: 'SVG',
+    sourceId: 'cryptocoins', sourceName: 'Cryptocoins', style: 'solid' },
+
+  // Carbon's pictograms ship in the design-system monorepo and are not
+  // published to Iconify (only `carbon`, the icon set, is). The artwork is
+  // fill-based line art — the fill traces the stroke rather than filling a
+  // silhouette — so it needs no `wrap`. `thin` is a declared upstream weight
+  // rather than a placeholder here: the artwork alone cannot tell fine line art
+  // apart from a filled glyph, so left to reclassify it would land in Solid.
+  { kind: 'github', repo: 'carbon-design-system/carbon', branch: 'main',
+    dir: 'packages/pictograms/src/svg',
+    sourceId: 'carbon-pictograms', sourceName: 'Carbon Pictograms', style: 'thin' },
+
+  // Linea scatters its artwork across seven category folders and keeps 722
+  // iconfont .svg files in the same tree, so it needs `pathMatch` rather than a
+  // `dir` prefix. File names repeat the category (`basic_alarm.svg`); `stripName`
+  // keeps that out of the searchable name.
+  { kind: 'github', repo: 'linea-io/Linea-Iconset', branch: 'master',
+    pathMatch: /\/_SVG expanded\//,
+    stripName: /^(basic_elaboration|arrows|basic|ecommerce|music|software|weather)_/,
+    sourceId: 'linea', sourceName: 'Linea', style: 'thin' },
+
+  { kind: 'github', repo: 'leungwensen/svg-icon', branch: 'master', dir: 'dist/svg/zero',
+    sourceId: 'zero-icons', sourceName: 'Zero Icons', style: 'solid' },
+
+  { kind: 'github', repo: 'webkul/vivid', branch: 'master', dir: 'icons',
+    sourceId: 'vivid', sourceName: 'Vivid', style: 'solid' },
+
+  // 41 themed packs, each an SVG font rather than a folder of .svg files, so it
+  // needs the glyph importer. `pathMatch` keeps it to the font files; the same
+  // packs also ship .eot/.ttf/.woff, which the tree filter drops already.
+  { kind: 'svgfont', repo: 'Vectopus/Atlas-icons-font', branch: 'main',
+    pathMatch: /^packs\/[^/]+\/fonts\/[^/]+\.svg$/,
+    sourceId: 'atlas-icons', sourceName: 'Atlas Icons', style: 'solid' },
+
 ];
+
+// A per-file fetch with a hard timeout. Without one a single stalled socket
+// hangs the whole import silently - github serves thousands of small files and
+// an occasional connection just never completes.
+function fetchText(url, attempt = 0) {
+  return new Promise((resolve, reject) => {
+    const req = https.get(
+      url,
+      { headers: { 'User-Agent': 'motvin-build' } },
+      (res) => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          res.resume();
+          return resolve(fetchText(res.headers.location, attempt));
+        }
+        if (res.statusCode >= 300) {
+          res.resume();
+          return reject(new Error(`HTTP ${res.statusCode}`));
+        }
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => resolve(data));
+      }
+    );
+    req.setTimeout(15000, () => req.destroy(new Error('timeout')));
+    req.on('error', (e) => {
+      if (attempt < 2) return resolve(fetchText(url, attempt + 1));
+      reject(e);
+    });
+  });
+}
+
+// Fetch in small batches - 2,500 files one at a time takes many minutes.
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length);
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (next < items.length) {
+        const i = next++;
+        try { out[i] = await fn(items[i], i); } catch { out[i] = null; }
+      }
+    })
+  );
+  return out;
+}
+
+// Strip the outer <svg> wrapper, keeping its viewBox and inner markup. <title>
+// and <desc> are accessibility labels for the standalone file - inside the grid
+// they only become stray tooltips, and both self-closing and paired forms occur.
+function unwrapSvg(text) {
+  // The root is not always spelled `<svg …>`: some files namespace it
+  // (`<svg:svg>`, closed by `</svg:svg>`) and some put a space before the
+  // bracket (`</svg >`). A literal search for `</svg>` misses both and the
+  // slice then runs to the wrong offset, leaving a 21-character body or a
+  // trailing `</svg>` inside it — either way the icon never renders.
+  const open = text.match(/<(?:[A-Za-z0-9]+:)?svg\b[^>]*>/i);
+  if (!open) return null;
+  let viewBox = (open[0].match(/viewBox\s*=\s*"([^"]*)"/i) || [])[1];
+  if (!viewBox) {
+    const w = (open[0].match(/\bwidth\s*=\s*"([\d.]+)/i) || [])[1];
+    const h = (open[0].match(/\bheight\s*=\s*"([\d.]+)/i) || [])[1];
+    viewBox = w && h ? `0 0 ${w} ${h}` : '0 0 24 24';
+  }
+  let closeAt = -1;
+  for (const m of text.matchAll(/<\/(?:[A-Za-z0-9]+:)?svg\s*>/gi)) closeAt = m.index;
+  if (closeAt === -1) closeAt = text.length;
+
+  let body = text
+    .slice(text.indexOf(open[0]) + open[0].length, closeAt)
+    // `svg:` is the SVG namespace itself, so the prefix is pure noise on real
+    // geometry - unprefix it before the junk-namespace pass below, which would
+    // otherwise delete `<svg:path>` as a foreign element and empty the icon.
+    .replace(/<(\/?)svg:/gi, '<$1')
+    // Control characters are not legal in XML at all, and one is enough to make
+    // the parser reject the whole document — the icon then renders as an empty
+    // cell with no other symptom. Upstream files carry them, and so did this
+    // importer for a while when a placeholder was built with a NUL.
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<title\b[^>]*\/>/gi, '')
+    .replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi, '')
+    .replace(/<desc\b[^>]*\/>/gi, '')
+    .replace(/<desc\b[^>]*>[\s\S]*?<\/desc>/gi, '')
+    .trim();
+
+  // Illustrator labels every shape it exports (`id="accessibility_0000015730…_"`).
+  // A design tool uses that id as the name of the pasted layer, and the same ids
+  // repeat across icons, so paste a few into one document and they collide.
+  // Only ids nothing in this icon points at are safe to drop — `url(#id)`,
+  // `href="#id"` and friends still need theirs. A colour like `#fff` reads as a
+  // reference here, which at worst keeps an id we could have removed.
+  // Namespaces die with the root element. We keep only the inner markup, so the
+  // `xmlns:inkscape` / `xmlns:xlink` declarations that lived on `<svg>` are gone
+  // while the prefixes that depend on them are not — and a fragment carrying an
+  // undeclared prefix is invalid XML, which an SVG parser refuses outright. The
+  // icon does not render badly, it fails to load at all and the grid shows a
+  // blank cell. 445 icons across five GitHub sources were dark this way.
+  //
+  // Editor leftovers (Inkscape, Sodipodi, Illustrator, Sketch, RDF metadata)
+  // draw nothing, so they go. `xlink:href` is the one that carries meaning —
+  // `<use>` and gradient inheritance rely on it — so it becomes plain `href`,
+  // which is SVG2 native and needs no namespace.
+  // Which prefixes the body itself declares has to be settled *before* anything
+  // is removed. Reading it from the half-rewritten string instead kept
+  // `inkscape:label` alive on the strength of an `xmlns:inkscape` that the same
+  // pass then deleted — the attribute outlived its declaration and the icon
+  // still failed to parse.
+  const declaredPrefixes = new Set(
+    [...body.matchAll(/\sxmlns:([A-Za-z0-9_-]+)\s*=/g)].map(m => m[1].toLowerCase())
+  );
+
+  body = body
+    .replace(/<metadata\b[\s\S]*?<\/metadata>/gi, '')
+    .replace(/<([a-z][a-z0-9]*):([a-z0-9-]+)\b[^>]*?\/>/gi, '')
+    .replace(/<([a-z][a-z0-9]*):([a-z0-9-]+)\b[\s\S]*?<\/\1:\2>/gi, '')
+    // `xlink:href` carries meaning, so it becomes plain `href` — but only where
+    // the element does not already have one. Illustrator writes both for
+    // compatibility, and blindly renaming produced `href` twice on the same
+    // element, which is itself a parse error.
+    .replace(/<[a-zA-Z][^>]*>/g, (tag) => {
+      if (!/\sxlink:href\s*=/i.test(tag)) return tag;
+      return /\shref\s*=/i.test(tag)
+        ? tag.replace(/\sxlink:href\s*=\s*"[^"]*"/gi, '')
+        : tag.replace(/\sxlink:href\s*=/gi, ' href=');
+    })
+    // Orphaned prefixes go. `xmlns:` declarations are exempt: they are what
+    // makes a surviving prefix legal.
+    .replace(/\s(?!xmlns:)([a-z][a-z0-9]*):[a-z0-9-]+\s*=\s*"[^"]*"/gi, (attr, prefix) =>
+      declaredPrefixes.has(prefix.toLowerCase()) ? attr : ''
+    )
+    .trim();
+
+  const referenced = new Set(
+    [...body.matchAll(/#([A-Za-z0-9_.:-]+)/g)].map(m => m[1])
+  );
+  body = body.replace(/\s+id="([^"]*)"/g, (m, id) => (referenced.has(id) ? m : ''));
+
+  // Illustrator leaves an artboard-sized "Transparent Rectangle" behind the
+  // artwork. On the web it paints nothing, because its inline style or class
+  // beats the fill the renderer adds — but the renderer still writes that fill
+  // onto the element, and a design tool reads the attribute and pastes a filled
+  // square on top of the icon. 1,511 Carbon pictograms shipped one.
+  //
+  // Only rects that cover the whole artboard *and* demonstrably paint nothing
+  // go: real artwork includes full-bleed shapes, and Carbon itself draws small
+  // rects (chart bars) that must survive.
+  const noPaintClasses = new Set();
+  for (const block of body.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)) {
+    for (const rule of block[1].matchAll(/\.([A-Za-z0-9_-]+)\s*\{([^}]*)\}/g)) {
+      if (/fill\s*:\s*none/i.test(rule[2])) noPaintClasses.add(rule[1]);
+    }
+  }
+  const [vbW, vbH] = viewBox.split(/[\s,]+/).map(Number).slice(2);
+
+  // A rect inside <clipPath>, <mask> or <pattern> is not decoration — it is the
+  // shape doing the clipping. Removing one empties the container, and an empty
+  // clipPath clips *everything*, so the icon vanishes. Park those blocks before
+  // the sweep and put them back after.
+  const parked = [];
+  body = body.replace(
+    /<(clipPath|mask|pattern)\b[\s\S]*?<\/\1>/gi,
+    (block) => ` PARKED${parked.push(block) - 1} `
+  );
+  // Matches the paired form too: dropping only `<rect …>` leaves a stray
+  // `</rect>`, which makes the whole fragment invalid XML and blanks the icon.
+  body = body.replace(/<rect\b([^>]*?)\/?>(?:\s*<\/rect\s*>)?/gi, (tag, attrs) => {
+    const num = (name) => {
+      const m = attrs.match(new RegExp(`\\b${name}\\s*=\\s*"([^"]*)"`, 'i'));
+      return m ? parseFloat(m[1]) || 0 : 0;
+    };
+    const coversArtboard =
+      num('x') === 0 && num('y') === 0 &&
+      vbW && vbH &&
+      Math.abs(num('width') - vbW) < 0.5 && Math.abs(num('height') - vbH) < 0.5;
+    if (!coversArtboard) return tag;
+
+    const style = (attrs.match(/style\s*=\s*"([^"]*)"/i) || ['', ''])[1];
+    const cls = (attrs.match(/class\s*=\s*"([^"]*)"/i) || ['', ''])[1];
+    const opacity = /(?:^|[;\s])opacity\s*:\s*([\d.]+)/i.exec(style);
+    const paintsNothing =
+      /fill\s*:\s*none/i.test(style) ||
+      /\bfill\s*=\s*"\s*none\s*"/i.test(attrs) ||
+      cls.split(/\s+/).some((c) => noPaintClasses.has(c)) ||
+      (opacity && parseFloat(opacity[1]) <= 0.05);
+    return paintsNothing ? '' : tag;
+  });
+
+  // Dropping that rect can orphan the `<style>` block that existed only to hide
+  // it. Leaving it behind is not cosmetic: `renderSvg` bails out of recolouring
+  // any icon containing `<defs>`, so the dead block would cost those icons their
+  // colour controls.
+  body = body.replace(/<style[^>]*>([\s\S]*?)<\/style>/gi, (block, css) => {
+    const classes = [...css.matchAll(/\.([A-Za-z0-9_-]+)\s*\{/g)].map((m) => m[1]);
+    if (!classes.length) return block;
+    const used = classes.some((c) =>
+      new RegExp(`class\\s*=\\s*"[^"]*\\b${c}\\b`).test(body)
+    );
+    return used ? block : '';
+  });
+  body = body.replace(/\s?PARKED(\d+)\s?/g, (m, n) => parked[Number(n)]);
+  body = body.replace(/<defs\b[^>]*>\s*<\/defs>/gi, '').trim();
+
+  return body ? { viewBox, body } : null;
+}
+
+// For sets that never made it to Iconify: walk the repo tree and convert each
+// raw .svg into the same record shape processStandard produces.
+async function processGithub(src) {
+  try {
+    processedCount++;
+    const progress = `[${processedCount}/${totalSources}]`.padEnd(12);
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}`);
+
+    const tree = await fetchJson(
+      `https://api.github.com/repos/${src.repo}/git/trees/${src.branch}?recursive=1`
+    );
+    // `dir` is a single path prefix, which is not enough for repos that scatter
+    // their icons across several top-level folders and keep unrelated .svg files
+    // alongside them. `pathMatch` filters the tree on the full path instead:
+    // Linea keeps its artwork in `<category>/_SVG expanded/` under seven roots,
+    // next to 722 iconfont .svg files that must not be imported.
+    const files = (tree.tree || [])
+      .map(t => t.path)
+      .filter(p => p.toLowerCase().endsWith('.svg')
+        && (!src.dir || p.startsWith(src.dir + '/'))
+        && (!src.pathMatch || src.pathMatch.test(p)));
+
+    // Some repos name files by codepoint rather than by word — OpenMoji ships
+    // `1F600.svg`, which is unsearchable. `nameMap` points at a JSON in the same
+    // repo that carries the human name, so the icon lands as "grinning face"
+    // with its own synonyms as tags.
+    let nameMap = null;
+    if (src.nameMap) {
+      const rows = await fetchJson(
+        `https://raw.githubusercontent.com/${src.repo}/${src.branch}/${src.nameMap.file}`
+      );
+      nameMap = new Map();
+      for (const row of (Array.isArray(rows) ? rows : [])) {
+        const key = row[src.nameMap.key];
+        const label = row[src.nameMap.label];
+        if (!key || !label) continue;
+        nameMap.set(String(key).toLowerCase(), {
+          name: String(label).trim().toLowerCase().replace(/\s+/g, '-'),
+          tags: String(row[src.nameMap.tags] || '')
+            .split(',').map(t => t.trim().toLowerCase()).filter(Boolean),
+          // Kept so `skipPlaceholder` can ask the set's own taxonomy what an
+          // icon is, rather than guessing from its name.
+          group: `${row.group || ''} ${row.subgroups || ''}`.trim().toLowerCase()
+        });
+      }
+    }
+
+    let done = 0;
+    const fetched = await mapLimit(files, 12, async (p) => {
+      const text = await fetchText(
+        `https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`
+      );
+      if (++done % 100 === 0) {
+        process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}${done}/${files.length}`);
+      }
+      return { p, parsed: unwrapSvg(text) };
+    });
+
+    let count = 0;
+    let failed = 0;
+    // Added in tree order, not completion order, so the result is the same
+    // whatever order the parallel fetches happen to finish in.
+    for (let i = 0; i < files.length; i++) {
+      const r = fetched[i];
+      if (!r) { failed++; continue; }
+      if (!r.parsed) continue;
+      // `stripName` drops a redundant category prefix baked into the file name
+      // (Linea ships `basic_alarm.svg`, `arrows_check.svg`), which would
+      // otherwise be what users have to search for. The id keeps the raw file
+      // name: nine Linea icons share a name once stripped (`basic_alarm` and
+      // `software_alarm` are different artwork) and addIcon would drop the
+      // second of each as a duplicate id.
+      const rawName = r.p.split('/').pop().replace(/\.svg$/i, '');
+      const mapped = nameMap ? nameMap.get(rawName.toLowerCase()) : null;
+      const name = mapped
+        ? mapped.name
+        : (src.stripName ? (rawName.replace(src.stripName, '') || rawName) : rawName);
+
+      // A set can ship placeholders: OpenMoji's monochrome half has no flag
+      // artwork, so all 330 flag emoji are an empty stroked rectangle. They are
+      // not icons, they are 330 identical boxes padding the grid. Only artwork
+      // that is *nothing but* an unfilled rect qualifies, and only in the
+      // categories named here — `white-large-square` and `minus` are genuinely
+      // an empty box and stay.
+      if (src.skipPlaceholder) {
+        const bare = r.parsed.body.replace(/<\/?g\b[^>]*>/gi, '').trim();
+        const lone = bare.match(/^<rect\b([^>]*)\/?>$/i);
+        if (lone && /fill\s*=\s*"none"/i.test(lone[1])
+            && src.skipPlaceholder.test(`${mapped ? mapped.group : ''} ${name}`)) {
+          continue;
+        }
+      }
+      const added = addIcon(src.sourceId, src.sourceName, {
+        id: `${src.sourceId}_${src.style}_${rawName}`,
+        name,
+        category: 'UI',
+        tags: [...new Set([name, rawName, src.sourceId, src.style, ...(mapped ? mapped.tags : [])])],
+        style: src.style,
+        viewBox: r.parsed.viewBox,
+        svg: src.wrap ? `<g ${src.wrap}>${r.parsed.body}</g>` : r.parsed.body
+      });
+      if (added) count++;
+    }
+
+    process.stdout.write(
+      `\r  ${progress} ${src.sourceName.padEnd(35)}✅ ${count}${failed ? ` (${failed} failed)` : ''}\n`
+    );
+  } catch (e) {
+    process.stdout.write(`❌ ${e.message}\n`);
+  }
+}
+
+// Some sets only ship as an SVG font — one file per pack, each glyph a `<glyph>`
+// with a path. Atlas Icons is 41 such files and is not on Iconify, so there is
+// no per-icon .svg to fetch anywhere.
+//
+// Font outlines live in a different coordinate space from SVG: y runs *up* from
+// the baseline, so a glyph pasted straight into a viewBox renders upside down
+// and off-canvas. `translate(0, ascent) scale(1, -1)` maps it back — the top of
+// the em box (y = ascent) to 0, the bottom (y = descent) to unitsPerEm.
+async function processSvgFont(src) {
+  try {
+    processedCount++;
+    const progress = `[${processedCount}/${totalSources}]`.padEnd(12);
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}`);
+
+    const tree = await fetchJson(
+      `https://api.github.com/repos/${src.repo}/git/trees/${src.branch}?recursive=1`
+    );
+    const files = (tree.tree || [])
+      .map(t => t.path)
+      .filter(p => p.toLowerCase().endsWith('.svg')
+        && (!src.dir || p.startsWith(src.dir + '/'))
+        && (!src.pathMatch || src.pathMatch.test(p)));
+
+    const fonts = await mapLimit(files, 8, async (p) => ({
+      p,
+      text: await fetchText(`https://raw.githubusercontent.com/${src.repo}/${src.branch}/${p}`)
+    }));
+
+    let count = 0;
+    for (const f of fonts) {
+      if (!f || !f.text) continue;
+
+      const face = (f.text.match(/<font-face\b[^>]*>/i) || [''])[0];
+      const num = (attr, src2, fallback) => {
+        const m = src2.match(new RegExp(`${attr}\\s*=\\s*"(-?[\\d.]+)"`, 'i'));
+        return m ? parseFloat(m[1]) : fallback;
+      };
+      const unitsPerEm = num('units-per-em', face, 1000);
+      const ascent = num('ascent', face, unitsPerEm);
+      const fontAdv = num('horiz-adv-x', (f.text.match(/<font\b[^>]*>/i) || [''])[0], unitsPerEm);
+
+      for (const g of f.text.matchAll(/<glyph\b[^>]*\/?>/gi)) {
+        const tag = g[0];
+        const rawName = (tag.match(/glyph-name\s*=\s*"([^"]*)"/i) || [])[1];
+        const d = (tag.match(/\sd\s*=\s*"([^"]*)"/i) || [])[1];
+        if (!rawName || !d || !d.trim()) continue;   // .notdef and the space glyph
+
+        // The weight is part of the glyph name (`crown-winner-thin`). Split it
+        // off so a search for "crown-winner" finds all three, and let it pick
+        // the style: font outlines are always fills, so nothing in the artwork
+        // could reveal the weight on its own.
+        const weight = (rawName.match(/-(thin|light|bold)$/i) || [])[1];
+        const name = weight ? rawName.slice(0, -(weight.length + 1)) : rawName;
+        const style = /^(thin|light)$/i.test(weight || '') ? 'thin' : (src.style || 'solid');
+        const width = num('horiz-adv-x', tag, fontAdv);
+
+        const added = addIcon(src.sourceId, src.sourceName, {
+          // Keyed on the raw name: the three weights collapse onto one name and
+          // would otherwise drop two of every three icons as duplicate ids.
+          id: `${src.sourceId}_${style}_${rawName}`,
+          name,
+          category: 'UI',
+          tags: [...new Set([name, rawName, src.sourceId, style])],
+          style,
+          viewBox: `0 0 ${width} ${unitsPerEm}`,
+          // `fill-rule="nonzero"` is not decoration. Fonts are authored for the
+          // nonzero winding rule: overlapping contours union, and counters are
+          // cut by reversing direction. The renderer stamps `fill-rule="evenodd"`
+          // on every icon, under which those overlaps punch holes instead —
+          // 87% of Atlas glyphs rendered wrong, strokes visibly unclosed. Set on
+          // the group so it overrides the inherited value.
+          svg: `<g transform="translate(0,${ascent}) scale(1,-1)" fill-rule="nonzero"><path d="${d}"/></g>`
+        });
+        if (added) count++;
+      }
+      process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}${count}`);
+    }
+
+    process.stdout.write(`\r  ${progress} ${src.sourceName.padEnd(35)}✅ ${count}\n`);
+  } catch (e) {
+    process.stdout.write(`❌ ${e.message}\n`);
+  }
+}
 
 async function processStandard(src) {
   try {
@@ -495,13 +983,21 @@ async function main() {
   totalSources = sources.length + 1; // +1 for Solar
 
   // Process special collections first
-  await processSolar();
-  await processPhosphor();
-  await processTabler();
+  if (!ONLY) {
+    await processSolar();
+    await processPhosphor();
+    await processTabler();
+  }
 
   // Process all standard sources
   for (const src of sources) {
-    if (!src.special) {
+    if (src.special) continue;
+    if (ONLY && !ONLY.has(src.sourceId)) continue;
+    if (src.kind === 'svgfont') {
+      await processSvgFont(src);
+    } else if (src.kind === 'github') {
+      await processGithub(src);
+    } else {
       await processStandard(src);
     }
   }
@@ -548,12 +1044,29 @@ async function main() {
     console.log(`  ✅ ${collectionId.padEnd(25)} ${metadata.total.toString().padStart(7)} icons (${sizeKB.toLocaleString()} KB)`);
   }
 
+  // In --only mode splice the new entries into the existing catalogue so the
+  // collections we did not refetch keep their data, order and styleCounts.
+  let finalList = collectionsList;
+  let finalTotal = totalIconsProcessed;
+  if (ONLY) {
+    const existingPath = path.join(outputDir, 'collections.json');
+    const existing = JSON.parse(fs.readFileSync(existingPath, 'utf-8'));
+    const added = new Map(collectionsList.map(c => [c.id, c]));
+    finalList = existing.collections.map(c => added.get(c.id) || c);
+    const known = new Set(finalList.map(c => c.id));
+    for (const c of collectionsList) if (!known.has(c.id)) finalList.push(c);
+    finalTotal = finalList.reduce((n, c) => n + (c.total || 0), 0);
+  }
+
   const collectionsFile = {
     version: '1.0.0',
     lastUpdated: new Date().toISOString(),
-    totalCollections: collectionsList.length,
-    totalIcons: totalIconsProcessed,
-    collections: collectionsList.sort((a, b) => b.total - a.total),
+    totalCollections: finalList.length,
+    totalIcons: finalTotal,
+    // Insertion order, not size order. The grid renders collections in this
+    // order when no filter is active, so sorting by total would push Phosphor
+    // off the front of the default view and change what users first see.
+    collections: finalList,
   };
 
   fs.writeFileSync(
@@ -564,8 +1077,8 @@ async function main() {
   console.log('\n' + '='.repeat(70));
   console.log('✨ COMPLETE! ALL ICONS FETCHED!');
   console.log('='.repeat(70));
-  console.log(`📊 Collections: ${collectionsList.length}`);
-  console.log(`🎨 Total Icons: ${totalIconsProcessed.toLocaleString()}`);
+  console.log(`📊 Collections: ${finalList.length}`);
+  console.log(`🎨 Total Icons: ${finalTotal.toLocaleString()}`);
   console.log(`📁 Location:    ${outputDir}`);
   console.log('='.repeat(70));
 

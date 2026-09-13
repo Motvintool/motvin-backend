@@ -4,6 +4,15 @@ import { CacheService } from "./cache.service";
 import { LRUCache } from 'lru-cache';
 const MiniSearch = require('minisearch');
 
+// The order the style chips appear in, used to group search results the same
+// way. Anything unrecognised sorts last rather than jumping to the front.
+const STYLE_ORDER = ['outline', 'solid', 'duotone', 'thin', '3d'];
+
+function styleRank(style?: string): number {
+  const i = STYLE_ORDER.indexOf(String(style || '').toLowerCase());
+  return i === -1 ? STYLE_ORDER.length : i;
+}
+
 interface Icon {
   id: string;
   name: string;
@@ -79,7 +88,14 @@ export class IconsService implements OnModuleInit {
       const docs = icons.map(icon => {
         const { svg, body, tags, ...rest } = icon as any;
         const rawSvg = svg || body || '';
-        const isEditableStroke = rawSvg.includes('stroke-width');
+        // Prefer the flag the reclassify pass persisted. The fallback looks for
+        // stroked geometry rather than a literal stroke-width attribute: plenty
+        // of stroked icons omit it and inherit the width the renderer injects,
+        // and they are still stroke-adjustable.
+        const isEditableStroke =
+          typeof (icon as any).isEditableStroke === 'boolean'
+            ? (icon as any).isEditableStroke
+            : /stroke\s*=\s*"(?!none)/i.test(rawSvg);
         const doc = {
           ...rest,
           uid: `${collectionId}_${icon.id}`,
@@ -257,6 +273,18 @@ export class IconsService implements OnModuleInit {
         filter: filterFn,
       });
       results = searchResults.map(r => ({ ...r, relevance: r.score }));
+
+      // Group search hits by style instead of interleaving them, so "edit"
+      // returns every Outline match, then Solid, and so on. Relevance still
+      // orders icons within a style, and the sort is stable so equally scored
+      // hits keep MiniSearch's order.
+      //
+      // Deliberately not applied to the empty query: browsing with no search
+      // renders collections in their curated order (Phosphor first), and
+      // regrouping that by style would change the default view.
+      results.sort(
+        (a, b) => styleRank(a.style) - styleRank(b.style) || b.relevance - a.relevance,
+      );
     }
 
     // Pagination

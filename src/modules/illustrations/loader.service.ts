@@ -271,14 +271,28 @@ export class LoaderService implements OnModuleInit {
       name: c.name,
       total: c.total,
       styles: c.styles,
+      // Drives the per-source style chips, so selecting one source only offers
+      // the styles that source actually ships.
+      styleCounts: c.styleCounts || null,
       license: this.sourcesData?.[c.id]?.license || "Unknown",
       licenseUrl: this.sourcesData?.[c.id]?.licenseUrl || "",
     }));
 
     for (const collection of this.collectionsData.collections) {
-      collection.styles.forEach((style: string) => {
-        byStyle.set(style, (byStyle.get(style) || 0) + collection.total);
-      });
+      // Style counts come from styleCounts, which holds the real per-style
+      // tally. Adding collection.total once per style would count Fluent Emoji
+      // twice now that it ships both Color and Solid artwork.
+      if (collection.styleCounts) {
+        for (const [style, count] of Object.entries<number>(
+          collection.styleCounts,
+        )) {
+          byStyle.set(style, (byStyle.get(style) || 0) + count);
+        }
+      } else {
+        collection.styles.forEach((style: string) => {
+          byStyle.set(style, (byStyle.get(style) || 0) + collection.total);
+        });
+      }
 
       if (this.sourcesData?.[collection.id]) {
         const license = this.sourcesData[collection.id].license;
