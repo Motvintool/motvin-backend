@@ -195,6 +195,19 @@ export class LoaderService implements OnModuleInit {
     }
   }
 
+  /**
+   * Drops the cached manifest so the next read re-loads it.
+   *
+   * The mtime check is throttled to once a second, which is fine for edits
+   * made outside the app but too slow after an admin write: the UI fetches the
+   * image it just uploaded immediately, and would otherwise be told it does not
+   * exist. The admin service calls this after every rebuild.
+   */
+  invalidate() {
+    this.manifestMtime = 0;
+    this.lastChecked = 0;
+  }
+
   async getManifest(): Promise<InspirationsManifest> {
     await this.reloadIfChanged();
     return this.manifest;

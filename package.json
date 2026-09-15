@@ -18,7 +18,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "build:inspirations": "node scripts/build-inspirations-data.js"
+    "build:inspirations": "ts-node src/modules/inspirations/manifest.cli.ts"
   },
   "dependencies": {
     "@fastify/compress": "^7.0.3",

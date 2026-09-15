@@ -117,7 +117,11 @@ Each entry records how the capture was obtained and what may be done with it:
 ```
 
 - `permission` — `owner-granted`, `open-source`, `public-domain`,
-  `own-work`, or `fair-use-reference`.
+  `own-work`, or `fair-use-reference`. **Required to approve**: it is what says
+  why the material may be shown at all.
+- `license`, `licenseUrl`, `attribution` — optional. Recorded when known and
+  shown on the screen page; an entry with no licence reads "Not recorded", and
+  a missing attribution falls back to the app's name.
 - `redistribution` — `allowed` lets visitors download the file.
   `view-only` displays it in the gallery but disables download.
 - `status` — `pending`, `review`, `approved`, `rejected`. Only `approved`
@@ -132,13 +136,26 @@ republish. Sources that are safe to build on:
 - Motvin's own products and captures,
 - public-domain and government design systems.
 
-## Rebuilding the manifest
+## Two ways to fill this folder
+
+**The admin page**, at `/inspirations/admin` in the web app, is the normal
+route: upload screenshots, record each app's licence, approve it, and the
+manifest is rebuilt for you on every change. Access is limited to the accounts
+in `INSPIRATIONS_ADMIN_EMAILS`, checked server-side against the caller's
+Firebase ID token, so the page cannot be used by anyone else.
+
+Deleting an app on that page deletes everything stored for it: its screenshots
+on every platform, their sidecars and analysis files, its logo, its licence
+entry and its flows. There is no trash folder, so the confirmation names the
+file count before anything goes.
+
+**By hand**, by dropping files into the folders above and editing the JSON, then
+rebuilding:
 
 ```bash
 npm run build:inspirations
 ```
 
-Scans the folders, reads image dimensions, applies the licensing gate, and
-writes `manifest.json`. Run it after adding, removing, or re-approving
-anything. The API serves the manifest and streams files straight from
-`screens/` and `logos/`.
+Either way the same builder runs: it scans the folders, reads image dimensions,
+applies the licensing gate, and writes `manifest.json`. The API serves that
+manifest and streams files straight from `screens/` and `logos/`.

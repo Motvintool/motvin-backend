@@ -1,57 +1,76 @@
-#!/usr/bin/env node
 /**
  * Builds data/inspirations/manifest.json from what is actually stored on disk.
  *
- *   node scripts/build-inspirations-data.js
- *
- * Walks screens/<platform>/<app>/, reads each image's real pixel dimensions
- * from its header, merges the hand-maintained catalogue files, resolves every
- * pattern's examples from its match rules, and writes one manifest the API
- * serves.
+ * One implementation, two callers: the CLI (`npm run build:inspirations`) and
+ * the admin API, which rebuilds after every write. Keeping it here rather than
+ * in scripts/ means it ships in dist/ and works inside the Docker image.
  *
  * The licensing gate is enforced here: a screen is published only when its app
  * has an entry in sources.json with "status": "approved". Anything else is
  * counted, reported, and left out of the manifest.
  */
 
-const fs = require('fs');
-const path = require('path');
+import {
+  existsSync,
+  closeSync,
+  openSync,
+  readdirSync,
+  readFileSync,
+  readSync,
+  statSync,
+  writeFileSync,
+} from 'fs';
+import { basename, extname, join } from 'path';
 
-const DATA_DIR = path.join(__dirname, '..', 'data', 'inspirations');
-const SCREENS_DIR = path.join(DATA_DIR, 'screens');
-const LOGOS_DIR = path.join(DATA_DIR, 'logos');
-const ANALYSIS_DIR = path.join(DATA_DIR, 'analysis');
-const OUT_FILE = path.join(DATA_DIR, 'manifest.json');
+export const PLATFORMS = ['web', 'ios', 'android'] as const;
+export const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
+export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 
-const PLATFORMS = ['web', 'ios', 'android'];
-const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
-
-const SCREEN_TYPES = [
+export const SCREEN_TYPES = [
   'landing', 'login', 'signup', 'dashboard', 'search', 'pricing', 'checkout',
   'settings', 'profile', 'onboarding', 'feed', 'product', 'other',
-];
+] as const;
 
-const INDUSTRIES = [
+export const INDUSTRIES = [
   'saas', 'fintech', 'healthcare', 'ecommerce', 'education', 'travel',
   'productivity', 'ai', 'social', 'finance',
-];
+] as const;
 
-const STYLES = [
+export const STYLES = [
   'minimal', 'editorial', 'bold', 'dark', 'light', 'playful', 'corporate',
   'experimental',
-];
+] as const;
+
+export const FLOW_CATEGORIES = [
+  'onboarding', 'checkout', 'authentication', 'search', 'settings', 'creation',
+  'discovery',
+] as const;
+
+export const PERMISSIONS = [
+  'owner-granted', 'open-source', 'public-domain', 'own-work', 'fair-use-reference',
+] as const;
+
+export const REVIEW_STATUSES = ['pending', 'review', 'approved', 'rejected'] as const;
 
 const APPROVED_STATUS = 'approved';
+
+export type BuildReport = {
+  counts: Record<string, number>;
+  skipped: { appId: string; platform: string; count: number; reason: string }[];
+  warnings: string[];
+  problems: string[];
+  manifestPath: string;
+};
 
 // ─── Image dimensions ───────────────────────────────────────────────────────
 // Read from the file header rather than decoding, so no image dependency is
 // needed. Returns null for anything unrecognised; the caller reports it.
 
-function readDimensions(file) {
-  const fd = fs.openSync(file, 'r');
+export function readDimensions(file: string): { width: number; height: number } | null {
+  const fd = openSync(file, 'r');
   try {
     const head = Buffer.alloc(64 * 1024);
-    const read = fs.readSync(fd, head, 0, head.length, 0);
+    const read = readSync(fd, head, 0, head.length, 0);
     const buf = head.subarray(0, read);
 
     if (buf.length >= 24 && buf.readUInt32BE(0) === 0x89504e47) {
@@ -78,11 +97,11 @@ function readDimensions(file) {
 
     return null;
   } finally {
-    fs.closeSync(fd);
+    closeSync(fd);
   }
 }
 
-function readWebpDimensions(buf) {
+function readWebpDimensions(buf: Buffer) {
   const format = buf.toString('ascii', 12, 16);
   if (format === 'VP8X') {
     // Canvas size is stored minus one, as two 24-bit little-endian values.
@@ -107,18 +126,18 @@ function readWebpDimensions(buf) {
   return null;
 }
 
-function readJpegDimensions(fd, firstChunk) {
+function readJpegDimensions(fd: number, firstChunk: Buffer) {
   // Walk the marker segments until a Start Of Frame carries the size. The
   // header may sit past the first read for images with large EXIF blocks.
   let buf = firstChunk;
   let offset = 2;
   let fileOffset = 0;
 
-  const ensure = (need) => {
+  const ensure = (need: number) => {
     if (offset + need <= buf.length) return true;
     const next = Buffer.alloc(64 * 1024);
     const from = fileOffset + offset;
-    const read = fs.readSync(fd, next, 0, next.length, from);
+    const read = readSync(fd, next, 0, next.length, from);
     if (read <= 0) return false;
     buf = next.subarray(0, read);
     fileOffset = from;
@@ -147,7 +166,7 @@ function readJpegDimensions(fd, firstChunk) {
   return null;
 }
 
-function readAvifDimensions(buf) {
+function readAvifDimensions(buf: Buffer) {
   // ispe (image spatial extents) carries the display size.
   const ispe = buf.indexOf('ispe', 0, 'ascii');
   if (ispe === -1 || ispe + 16 > buf.length) return null;
@@ -156,67 +175,75 @@ function readAvifDimensions(buf) {
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
-function readJson(file, fallback) {
-  if (!fs.existsSync(file)) return fallback;
+export function readJson<T>(file: string, fallback: T): T {
+  if (!existsSync(file)) return fallback;
   try {
-    return JSON.parse(fs.readFileSync(file, 'utf-8'));
+    return JSON.parse(readFileSync(file, 'utf-8')) as T;
   } catch (error) {
-    throw new Error(`${path.basename(file)} is not valid JSON: ${error.message}`);
+    throw new Error(`${basename(file)} is not valid JSON: ${(error as Error).message}`);
   }
 }
 
-function listDirs(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir, { withFileTypes: true })
+function listDirs(dir: string): string[] {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true })
     .filter((e) => e.isDirectory())
     .map((e) => e.name)
     .sort();
 }
 
-function listImages(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir, { withFileTypes: true })
-    .filter((e) => e.isFile() && IMAGE_EXT.includes(path.extname(e.name).toLowerCase()))
+function listFiles(dir: string, extensions: string[]): string[] {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isFile() && extensions.includes(extname(e.name).toLowerCase()))
     .map((e) => e.name)
     .sort();
 }
 
-function titleCase(slug) {
-  return slug.split('-').map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
+export function titleCase(slug: string): string {
+  return slug.split(/[-_]/).map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
 }
 
-function uniq(list) {
+function uniq<T>(list: T[]): T[] {
   return Array.from(new Set(list.filter(Boolean)));
+}
+
+/** `screens/<platform>/<app>/<file>` → the id the rest of the system uses. */
+export function screenIdFor(platform: string, appId: string, file: string): string {
+  return `${appId}-${platform}-${basename(file, extname(file))}`;
 }
 
 // ─── Build ──────────────────────────────────────────────────────────────────
 
-function build() {
-  const problems = [];
-  const warnings = [];
-  const skipped = [];
+export function buildInspirationsManifest(root: string): BuildReport {
+  const problems: string[] = [];
+  const warnings: string[] = [];
+  const skipped: BuildReport['skipped'] = [];
 
-  const appsFile = readJson(path.join(DATA_DIR, 'apps.json'), { apps: [] });
-  const flowsFile = readJson(path.join(DATA_DIR, 'flows.json'), { flows: [] });
-  const patternsFile = readJson(path.join(DATA_DIR, 'patterns.json'), { patterns: [] });
-  const sourcesFile = readJson(path.join(DATA_DIR, 'sources.json'), { sources: {} });
+  const screensDir = join(root, 'screens');
+  const logosDir = join(root, 'logos');
+  const analysisDir = join(root, 'analysis');
+  const outFile = join(root, 'manifest.json');
+
+  const appsFile = readJson<{ apps?: any[] }>(join(root, 'apps.json'), { apps: [] });
+  const flowsFile = readJson<{ flows?: any[] }>(join(root, 'flows.json'), { flows: [] });
+  const patternsFile = readJson<{ patterns?: any[] }>(join(root, 'patterns.json'), { patterns: [] });
+  const sourcesFile = readJson<{ sources?: Record<string, any> }>(join(root, 'sources.json'), { sources: {} });
 
   const sources = sourcesFile.sources || {};
-  const appRecords = new Map((appsFile.apps || []).map((a) => [a.id, a]));
-  const logoFiles = new Map(
-    listImages(LOGOS_DIR)
-      .concat(fs.existsSync(LOGOS_DIR) ? fs.readdirSync(LOGOS_DIR).filter((f) => f.endsWith('.svg')) : [])
-      .map((f) => [path.basename(f, path.extname(f)), f]),
+  const appRecords = new Map<string, any>((appsFile.apps || []).map((a) => [a.id, a]));
+  const logoFiles = new Map<string, string>(
+    listFiles(logosDir, LOGO_EXT).map((f) => [basename(f, extname(f)), f]),
   );
 
-  const screens = [];
-  const appsSeen = new Set();
+  const screens: any[] = [];
+  const appsSeen = new Set<string>();
 
   for (const platform of PLATFORMS) {
-    const platformDir = path.join(SCREENS_DIR, platform);
+    const platformDir = join(screensDir, platform);
     for (const appId of listDirs(platformDir)) {
-      const appDir = path.join(platformDir, appId);
-      const images = listImages(appDir);
+      const appDir = join(platformDir, appId);
+      const images = listFiles(appDir, IMAGE_EXT);
       if (images.length === 0) continue;
 
       const source = sources[appId];
@@ -241,15 +268,15 @@ function build() {
       appsSeen.add(appId);
 
       for (const file of images) {
-        const base = path.basename(file, path.extname(file));
-        const id = `${appId}-${platform}-${base}`;
-        const abs = path.join(appDir, file);
+        const base = basename(file, extname(file));
+        const id = screenIdFor(platform, appId, file);
+        const abs = join(appDir, file);
 
-        let dimensions = null;
+        let dimensions: { width: number; height: number } | null = null;
         try {
           dimensions = readDimensions(abs);
         } catch (error) {
-          problems.push(`could not read ${platform}/${appId}/${file}: ${error.message}`);
+          problems.push(`could not read ${platform}/${appId}/${file}: ${(error as Error).message}`);
           continue;
         }
         if (!dimensions || !dimensions.width || !dimensions.height) {
@@ -257,24 +284,22 @@ function build() {
           continue;
         }
 
-        const sidecar = readJson(path.join(appDir, `${base}.json`), {});
+        const sidecar = readJson<any>(join(appDir, `${base}.json`), {});
         const typeFromName = base.split('-')[0].toLowerCase();
-        const screenType = sidecar.screenType
-          || (SCREEN_TYPES.includes(typeFromName) ? typeFromName : 'other');
+        const screenType =
+          sidecar.screenType || ((SCREEN_TYPES as readonly string[]).includes(typeFromName) ? typeFromName : 'other');
 
-        if (sidecar.screenType && !SCREEN_TYPES.includes(sidecar.screenType)) {
+        if (sidecar.screenType && !(SCREEN_TYPES as readonly string[]).includes(sidecar.screenType)) {
           problems.push(`${platform}/${appId}/${base}.json has unknown screenType "${sidecar.screenType}"`);
           continue;
         }
-        const badStyles = (sidecar.style || []).filter((s) => !STYLES.includes(s));
+        const badStyles = (sidecar.style || []).filter((s: string) => !(STYLES as readonly string[]).includes(s));
         if (badStyles.length) {
           warnings.push(`${platform}/${appId}/${base}.json has unknown style(s): ${badStyles.join(', ')}`);
         }
-        if (!SCREEN_TYPES.includes(typeFromName) && !sidecar.screenType) {
+        if (!(SCREEN_TYPES as readonly string[]).includes(typeFromName) && !sidecar.screenType) {
           warnings.push(`${platform}/${appId}/${file} filename does not start with a known screen type — filed as "other"`);
         }
-
-        const analysisFile = path.join(ANALYSIS_DIR, `${id}.json`);
 
         screens.push({
           id,
@@ -284,15 +309,15 @@ function build() {
           url: `/api/inspirations/screens/${platform}/${appId}/${file}`,
           width: dimensions.width,
           height: dimensions.height,
-          bytes: fs.statSync(abs).size,
+          bytes: statSync(abs).size,
           platform,
           screenType,
           industry: app.industry,
           tags: uniq([...(sidecar.tags || []), app.industry, screenType, platform]),
-          elements: uniq(sidecar.elements || []),
-          style: uniq((sidecar.style || []).filter((s) => STYLES.includes(s))),
+          elements: uniq<string>(sidecar.elements || []),
+          style: uniq<string>((sidecar.style || []).filter((s: string) => (STYLES as readonly string[]).includes(s))),
           capturedAt: sidecar.capturedAt || source.capturedAt || null,
-          hasAnalysis: fs.existsSync(analysisFile),
+          hasAnalysis: existsSync(join(analysisDir, `${id}.json`)),
           downloadable: source.redistribution === 'allowed',
           source: {
             url: source.sourceUrl || app.website || null,
@@ -306,73 +331,79 @@ function build() {
     }
   }
 
-  // Apps — only those with at least one published screen.
-  const screensByApp = new Map();
+  const screensByApp = new Map<string, any[]>();
   for (const screen of screens) {
     if (!screensByApp.has(screen.appId)) screensByApp.set(screen.appId, []);
-    screensByApp.get(screen.appId).push(screen);
+    screensByApp.get(screen.appId)!.push(screen);
   }
 
-  const publishedFlows = (flowsFile.flows || []).filter((flow) => {
-    const known = new Set(screens.map((s) => s.id));
-    const missing = (flow.screenIds || []).filter((id) => !known.has(id));
-    if (missing.length) {
-      warnings.push(`flow "${flow.id}" drops ${missing.length} screen id(s) not stored or not approved: ${missing.join(', ')}`);
-    }
-    flow.screenIds = (flow.screenIds || []).filter((id) => known.has(id));
-    return flow.screenIds.length >= 2;
-  });
+  const knownScreenIds = new Set(screens.map((s) => s.id));
+  const publishedFlows = (flowsFile.flows || [])
+    .map((flow) => {
+      const missing = (flow.screenIds || []).filter((id: string) => !knownScreenIds.has(id));
+      if (missing.length) {
+        warnings.push(
+          `flow "${flow.id}" drops ${missing.length} screen id(s) not stored or not approved: ${missing.join(', ')}`,
+        );
+      }
+      return { ...flow, screenIds: (flow.screenIds || []).filter((id: string) => knownScreenIds.has(id)) };
+    })
+    .filter((flow) => flow.screenIds.length >= 2);
 
-  const apps = Array.from(appsSeen).map((appId) => {
-    const app = appRecords.get(appId);
-    const appScreens = screensByApp.get(appId) || [];
-    const source = sources[appId] || {};
-    const logo = app.logo || logoFiles.get(appId) || null;
-    return {
-      id: appId,
-      name: app.name || titleCase(appId),
-      slug: appId,
-      industry: app.industry,
-      platforms: uniq(appScreens.map((s) => s.platform)),
-      website: app.website || null,
-      tagline: app.tagline || null,
-      logo: logo ? `/api/inspirations/logos/${logo}` : null,
-      screenCount: appScreens.length,
-      flowCount: publishedFlows.filter((f) => f.appId === appId).length,
-      license: source.license || null,
-      attribution: source.attribution || app.name || titleCase(appId),
-    };
-  }).sort((a, b) => b.screenCount - a.screenCount || a.name.localeCompare(b.name));
+  const apps = Array.from(appsSeen)
+    .map((appId) => {
+      const app = appRecords.get(appId);
+      const appScreens = screensByApp.get(appId) || [];
+      const source = sources[appId] || {};
+      const logo = app.logo || logoFiles.get(appId) || null;
+      return {
+        id: appId,
+        name: app.name || titleCase(appId),
+        slug: appId,
+        industry: app.industry,
+        platforms: uniq<string>(appScreens.map((s) => s.platform)),
+        website: app.website || null,
+        tagline: app.tagline || null,
+        logo: logo ? `/api/inspirations/logos/${logo}` : null,
+        screenCount: appScreens.length,
+        flowCount: publishedFlows.filter((f) => f.appId === appId).length,
+        license: source.license || null,
+        attribution: source.attribution || app.name || titleCase(appId),
+      };
+    })
+    .sort((a, b) => b.screenCount - a.screenCount || a.name.localeCompare(b.name));
 
   for (const app of appRecords.values()) {
-    if (!app.industry || !INDUSTRIES.includes(app.industry)) {
+    if (!app.industry || !(INDUSTRIES as readonly string[]).includes(app.industry)) {
       problems.push(`app "${app.id}" has an unknown industry "${app.industry}"`);
     }
   }
 
   // Patterns resolve their own examples from the stored screens.
-  const patterns = (patternsFile.patterns || []).map((pattern) => {
-    const m = pattern.match || {};
-    const matched = screens.filter((screen) => {
-      if (m.platforms && !m.platforms.includes(screen.platform)) return false;
-      if (m.screenTypes && !m.screenTypes.includes(screen.screenType)) return false;
-      if (m.industries && !m.industries.includes(screen.industry)) return false;
-      if (m.elements && !m.elements.some((e) => screen.elements.includes(e))) return false;
-      if (m.tags && !m.tags.some((t) => screen.tags.includes(t))) return false;
-      return true;
-    });
-    return {
-      id: `pattern-${pattern.slug}`,
-      slug: pattern.slug,
-      name: pattern.name,
-      category: pattern.category,
-      description: pattern.description,
-      tags: pattern.tags || [],
-      screenIds: matched.map((s) => s.id),
-    };
-  }).filter((p) => p.screenIds.length > 0);
+  const patterns = (patternsFile.patterns || [])
+    .map((pattern) => {
+      const m = pattern.match || {};
+      const matched = screens.filter((screen) => {
+        if (m.platforms && !m.platforms.includes(screen.platform)) return false;
+        if (m.screenTypes && !m.screenTypes.includes(screen.screenType)) return false;
+        if (m.industries && !m.industries.includes(screen.industry)) return false;
+        if (m.elements && !m.elements.some((e: string) => screen.elements.includes(e))) return false;
+        if (m.tags && !m.tags.some((t: string) => screen.tags.includes(t))) return false;
+        return true;
+      });
+      return {
+        id: `pattern-${pattern.slug}`,
+        slug: pattern.slug,
+        name: pattern.name,
+        category: pattern.category,
+        description: pattern.description,
+        tags: pattern.tags || [],
+        screenIds: matched.map((s) => s.id),
+      };
+    })
+    .filter((p) => p.screenIds.length > 0);
 
-  const elementCounts = {};
+  const elementCounts: Record<string, number> = {};
   for (const screen of screens) {
     for (const element of screen.elements) {
       elementCounts[element] = (elementCounts[element] || 0) + 1;
@@ -391,7 +422,7 @@ function build() {
     },
     // What the store actually holds, so filters never offer a value with
     // nothing behind it. `vocabulary` keeps the full accepted sets for
-    // validation and for the ingest tooling.
+    // validation and for the admin tooling.
     taxonomy: {
       platforms: PLATFORMS.filter((p) => screens.some((s) => s.platform === p)),
       screenTypes: SCREEN_TYPES.filter((t) => screens.some((s) => s.screenType === t)),
@@ -404,6 +435,9 @@ function build() {
       screenTypes: SCREEN_TYPES,
       industries: INDUSTRIES,
       styles: STYLES,
+      flowCategories: FLOW_CATEGORIES,
+      permissions: PERMISSIONS,
+      reviewStatuses: REVIEW_STATUSES,
     },
     apps,
     screens,
@@ -412,37 +446,7 @@ function build() {
     elementCounts,
   };
 
-  fs.writeFileSync(OUT_FILE, JSON.stringify(manifest, null, 2) + '\n');
+  writeFileSync(outFile, JSON.stringify(manifest, null, 2) + '\n');
 
-  // ── Report ──
-  console.log('Inspirations manifest');
-  console.log(`  apps          ${manifest.counts.apps}`);
-  console.log(`  screens       ${manifest.counts.screens}`);
-  console.log(`  flows         ${manifest.counts.flows}`);
-  console.log(`  patterns      ${manifest.counts.patterns}`);
-  console.log(`  ui elements   ${manifest.counts['ui-elements']}`);
-  console.log(`  written to    ${path.relative(process.cwd(), OUT_FILE)}`);
-
-  if (skipped.length) {
-    console.log('\nHeld back by the licensing gate:');
-    for (const s of skipped) {
-      console.log(`  ${s.platform}/${s.appId} — ${s.count} image(s): ${s.reason}`);
-    }
-  }
-  if (warnings.length) {
-    console.log('\nWarnings:');
-    for (const w of warnings) console.log(`  ${w}`);
-  }
-  if (problems.length) {
-    console.log('\nProblems:');
-    for (const p of problems) console.log(`  ${p}`);
-  }
-  if (manifest.counts.screens === 0) {
-    console.log('\nNo screens published yet. Add images under data/inspirations/screens/<platform>/<app>/,');
-    console.log('list the app in apps.json, approve it in sources.json, then run this again.');
-  }
-
-  return problems.length === 0 ? 0 : 1;
+  return { counts: manifest.counts, skipped, warnings, problems, manifestPath: outFile };
 }
-
-process.exit(build());
