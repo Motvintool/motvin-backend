@@ -83,6 +83,7 @@ export interface InspirationsManifest {
     industries: string[];
     styles: string[];
     elements: string[];
+    flowCategories: string[];
   };
   apps: InspirationApp[];
   screens: InspirationScreen[];
@@ -95,7 +96,7 @@ const EMPTY_MANIFEST: InspirationsManifest = {
   version: 1,
   generatedAt: new Date(0).toISOString(),
   counts: { apps: 0, screens: 0, flows: 0, patterns: 0, 'ui-elements': 0 },
-  taxonomy: { platforms: [], screenTypes: [], industries: [], styles: [], elements: [] },
+  taxonomy: { platforms: [], screenTypes: [], industries: [], styles: [], elements: [], flowCategories: [] },
   apps: [],
   screens: [],
   flows: [],

@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-15T19:55:13.503Z",
+  "generatedAt": "2026-09-16T05:13:22.980Z",
   "counts": {
     "apps": 1,
-    "screens": 2,
-    "flows": 0,
+    "screens": 3,
+    "flows": 2,
     "patterns": 0,
     "ui-elements": 0
   },
@@ -19,7 +19,11 @@
       "social"
     ],
     "styles": [],
-    "elements": []
+    "elements": [],
+    "flowCategories": [
+      "checkout",
+      "onboarding"
+    ]
   },
   "vocabulary": {
     "platforms": [
@@ -99,8 +103,8 @@
       "website": null,
       "tagline": null,
       "logo": "/api/inspirations/logos/bumble-find-new-people-chat-singles.png",
-      "screenCount": 2,
-      "flowCount": 0,
+      "screenCount": 3,
+      "flowCount": 2,
       "license": null,
       "attribution": "Bumble — Find new people & chat singles"
     }
@@ -165,9 +169,63 @@
         "attribution": "Bumble — Find new people & chat singles",
         "permission": "open-source"
       }
+    },
+    {
+      "id": "bumble-find-new-people-chat-singles-ios-other-bumble-ios-59",
+      "appId": "bumble-find-new-people-chat-singles",
+      "name": "Other Bumble Ios 59",
+      "file": "ios/bumble-find-new-people-chat-singles/other-bumble-ios-59.png",
+      "url": "/api/inspirations/screens/ios/bumble-find-new-people-chat-singles/other-bumble-ios-59.png",
+      "width": 1179,
+      "height": 2676,
+      "bytes": 1325575,
+      "platform": "ios",
+      "screenType": "other",
+      "industry": "social",
+      "tags": [
+        "social",
+        "other",
+        "ios"
+      ],
+      "elements": [],
+      "style": [],
+      "capturedAt": null,
+      "hasAnalysis": false,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Bumble — Find new people & chat singles",
+        "permission": "open-source"
+      }
     }
   ],
-  "flows": [],
+  "flows": [
+    {
+      "id": "bumble-find-new-people-chat-singles-ios-start",
+      "appId": "bumble-find-new-people-chat-singles",
+      "name": "start",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-59",
+        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-34",
+        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-0"
+      ]
+    },
+    {
+      "id": "bumble-find-new-people-chat-singles-ios-price",
+      "appId": "bumble-find-new-people-chat-singles",
+      "name": "price",
+      "category": "checkout",
+      "platform": "ios",
+      "screenIds": [
+        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-34",
+        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-0"
+      ]
+    }
+  ],
   "patterns": [],
   "elementCounts": {}
 }

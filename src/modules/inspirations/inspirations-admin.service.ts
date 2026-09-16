@@ -198,7 +198,11 @@ export class InspirationsAdminService {
         screenTypes: SCREEN_TYPES,
         industries: INDUSTRIES,
         styles: STYLES,
-        flowCategories: FLOW_CATEGORIES,
+        // Presets first, then anything this library has actually used, so the
+        // category box suggests real history rather than only the defaults.
+        flowCategories: Array.from(
+          new Set([...FLOW_CATEGORIES, ...flows.map((f: any) => f.category).filter(Boolean)]),
+        ),
         permissions: PERMISSIONS,
         reviewStatuses: REVIEW_STATUSES,
       },
@@ -524,16 +528,18 @@ export class InspirationsAdminService {
     const platform = this.assertPlatform(input?.platform);
     const name = String(input?.name || '').trim();
     if (!name) throw new BadRequestException('name is required');
-    if (!(FLOW_CATEGORIES as readonly string[]).includes(input?.category)) {
-      throw new BadRequestException(`category must be one of ${FLOW_CATEGORIES.join(', ')}`);
-    }
+    // Categories are free text. The presets are suggestions, not a closed set:
+    // a library ends up with journeys ("Upgrade", "Invite a teammate") that no
+    // fixed list anticipates.
+    const category = String(input?.category || '').trim().slice(0, 40);
+    if (!category) throw new BadRequestException('category is required');
     const screenIds: string[] = Array.isArray(input?.screenIds) ? input.screenIds.map(String) : [];
     if (screenIds.length < 2) throw new BadRequestException('a flow needs at least two screens');
 
     const file = join(this.root, 'flows.json');
     const data = readJson<{ version?: number; flows?: any[] }>(file, { version: 1, flows: [] });
     const flows = data.flows || [];
-    const record = { id, appId, name, category: input.category, platform, screenIds };
+    const record = { id, appId, name, category, platform, screenIds };
 
     const index = flows.findIndex((f) => f.id === id);
     if (index === -1) flows.push(record);

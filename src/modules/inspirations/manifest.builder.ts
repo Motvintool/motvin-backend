@@ -429,6 +429,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       industries: INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
       styles: STYLES.filter((v) => screens.some((s) => s.style.includes(v))),
       elements: Object.keys(elementCounts).sort(),
+      flowCategories: Array.from(new Set(publishedFlows.map((f) => f.category).filter(Boolean))).sort(),
     },
     vocabulary: {
       platforms: PLATFORMS,
