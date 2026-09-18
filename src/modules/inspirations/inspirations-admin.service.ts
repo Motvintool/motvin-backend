@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'fs';
 import { basename, extname, join, resolve, sep } from 'path';
 import {
+  APPROVED_STATUS,
   buildInspirationsManifest,
   FLOW_CATEGORIES,
   IMAGE_EXT,
@@ -141,8 +142,7 @@ export class InspirationsAdminService {
         if (!entry.isDirectory()) continue;
         const appId = entry.name;
         const appDir = join(platformDir, appId);
-        for (const f of readdirSync(appDir)) {
-          if (!IMAGE_EXT.includes(extname(f).toLowerCase())) continue;
+        for (const f of this.listAppImages(appDir)) {
           const abs = join(appDir, f);
           const id = screenIdFor(platform, appId, f);
           let dims: { width: number; height: number } | null = null;
@@ -170,7 +170,7 @@ export class InspirationsAdminService {
             width: dims?.width ?? null,
             height: dims?.height ?? null,
             sidecar: readJson<Record<string, unknown> | null>(
-              join(appDir, `${basename(f, extname(f))}.json`),
+              join(appDir, `${f.slice(0, f.length - extname(f).length)}.json`),
               null,
             ),
             published,
@@ -258,6 +258,8 @@ export class InspirationsAdminService {
       rmSync(target, { force: true });
       throw new BadRequestException('That file is not a readable image');
     }
+
+    this.ensurePublishable(appId);
 
     const report = this.rebuild();
     this.logger.log(`Uploaded screens/${platform}/${appId}/${base}${ext} (${dims.width}x${dims.height})`);
@@ -371,6 +373,28 @@ export class InspirationsAdminService {
     const data = readJson<{ version?: number; apps?: any[] }>(file, { version: 1, apps: [] });
     const apps = data.apps || [];
 
+    // Rating and count travel together: a score with no sample size, or a
+    // sample size with no score, is half a fact. Sending neither leaves any
+    // previously recorded pair untouched.
+    const hasRating = input.rating !== undefined && input.rating !== null && input.rating !== '';
+    const hasCount = input.ratingCount !== undefined && input.ratingCount !== null && input.ratingCount !== '';
+    if (hasRating !== hasCount) {
+      throw new BadRequestException('rating and ratingCount must be given together');
+    }
+
+    let ratingFields: Record<string, number> = {};
+    if (hasRating) {
+      const rating = Number(input.rating);
+      const ratingCount = Number(input.ratingCount);
+      if (!Number.isFinite(rating) || rating < 0 || rating > 5) {
+        throw new BadRequestException('rating must be between 0 and 5');
+      }
+      if (!Number.isInteger(ratingCount) || ratingCount < 0) {
+        throw new BadRequestException('ratingCount must be a whole number');
+      }
+      ratingFields = { rating, ratingCount };
+    }
+
     const record = {
       id,
       name,
@@ -378,6 +402,7 @@ export class InspirationsAdminService {
       website: input.website ? String(input.website).trim() : '',
       tagline: input.tagline ? String(input.tagline).trim() : '',
       ...(input.logo ? { logo: String(input.logo) } : {}),
+      ...ratingFields,
     };
 
     const index = apps.findIndex((a) => a.id === id);
@@ -385,7 +410,71 @@ export class InspirationsAdminService {
     else apps[index] = { ...apps[index], ...record };
 
     this.writeJson(file, { version: data.version || 1, apps });
+    this.ensurePublishable(id);
     return { app: record, report: this.rebuild() };
+  }
+
+  /**
+   * Every image stored for one app, relative to its folder.
+   *
+   * Reads one level of nesting, because automatic capture files screens as
+   * `<flow>/1.png` — the folder is the flow and the number is the order it was
+   * walked. Manual uploads stay loose in the app folder. Both shapes are valid
+   * and both appear here.
+   */
+  private listAppImages(appDir: string): string[] {
+    if (!existsSync(appDir)) return [];
+    const out: string[] = [];
+    for (const entry of readdirSync(appDir, { withFileTypes: true })) {
+      if (entry.isFile() && IMAGE_EXT.includes(extname(entry.name).toLowerCase())) {
+        out.push(entry.name);
+      } else if (entry.isDirectory()) {
+        for (const inner of readdirSync(join(appDir, entry.name))) {
+          if (IMAGE_EXT.includes(extname(inner).toLowerCase())) out.push(`${entry.name}/${inner}`);
+        }
+      }
+    }
+    return out;
+  }
+
+  /**
+   * Makes sure an app's screens will publish.
+   *
+   * sources.json is still written — it is where a screen's origin, licence and
+   * attribution live, and the manifest reads all of that. What it no longer
+   * does is hold anything back: every app gets an approved entry as soon as it
+   * has an app record or a screen, so captures reach the gallery without a
+   * separate approval step.
+   *
+   * An entry that already exists keeps its recorded provenance; only its status
+   * is raised, so nothing previously filled in by hand is overwritten.
+   */
+  private ensurePublishable(appId: string) {
+    const file = join(this.root, 'sources.json');
+    const data = readJson<{ version?: number; sources?: Record<string, any> }>(file, {
+      version: 1,
+      sources: {},
+    });
+    const sources = data.sources || {};
+    const existing = sources[appId];
+
+    if (existing?.status === APPROVED_STATUS) return;
+
+    sources[appId] = {
+      sourceUrl: '',
+      capturedAt: new Date().toISOString().slice(0, 10),
+      capturedBy: '',
+      permission: '',
+      license: '',
+      licenseUrl: '',
+      attribution: '',
+      redistribution: 'allowed',
+      notes: '',
+      ...(existing || {}),
+      status: APPROVED_STATUS,
+    };
+
+    this.writeJson(file, { version: data.version || 1, sources });
   }
 
   /**
@@ -408,8 +497,7 @@ export class InspirationsAdminService {
       const dir = this.inStore('screens', platform, id);
       if (!existsSync(dir)) continue;
 
-      for (const file of readdirSync(dir)) {
-        if (!IMAGE_EXT.includes(extname(file).toLowerCase())) continue;
+      for (const file of this.listAppImages(dir)) {
         screensRemoved++;
         const screenId = screenIdFor(platform, id, file);
         const analysis = this.inStore('analysis', `${screenId}.json`);

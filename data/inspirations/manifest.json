@@ -1,27 +1,34 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T05:13:22.980Z",
+  "generatedAt": "2026-09-18T02:24:50.006Z",
   "counts": {
-    "apps": 1,
-    "screens": 3,
+    "apps": 2,
+    "screens": 9,
     "flows": 2,
-    "patterns": 0,
-    "ui-elements": 0
+    "patterns": 2,
+    "ui-elements": 4
   },
   "taxonomy": {
     "platforms": [
       "ios"
     ],
     "screenTypes": [
+      "login",
+      "settings",
       "other"
     ],
     "industries": [
+      "productivity",
       "social"
     ],
-    "styles": [],
-    "elements": [],
+    "styles": [
+      "light"
+    ],
+    "elements": [
+      "list"
+    ],
     "flowCategories": [
-      "checkout",
+      "authentication",
       "onboarding"
     ]
   },
@@ -93,26 +100,292 @@
   },
   "apps": [
     {
+      "id": "airbnb",
+      "name": "Airbnb",
+      "slug": "airbnb",
+      "industry": "productivity",
+      "platforms": [
+        "ios"
+      ],
+      "website": null,
+      "tagline": null,
+      "logo": "/api/inspirations/logos/airbnb.png",
+      "screenCount": 7,
+      "flowCount": 1,
+      "license": null,
+      "attribution": "Airbnb",
+      "rating": null,
+      "ratingCount": null
+    },
+    {
       "id": "bumble-find-new-people-chat-singles",
-      "name": "Bumble — Find new people & chat singles",
+      "name": "Bumble",
       "slug": "bumble-find-new-people-chat-singles",
       "industry": "social",
       "platforms": [
         "ios"
       ],
       "website": null,
-      "tagline": null,
+      "tagline": "Find new people & chat singles",
       "logo": "/api/inspirations/logos/bumble-find-new-people-chat-singles.png",
-      "screenCount": 3,
-      "flowCount": 2,
+      "screenCount": 2,
+      "flowCount": 1,
       "license": null,
-      "attribution": "Bumble — Find new people & chat singles"
+      "attribution": "Bumble",
+      "rating": null,
+      "ratingCount": null
     }
   ],
   "screens": [
     {
+      "id": "airbnb-ios-login-1",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Other",
+      "file": "ios/airbnb/login/1.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/1.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 36598,
+      "platform": "ios",
+      "screenType": "other",
+      "industry": "productivity",
+      "tags": [
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-2",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Log in or sign up",
+      "file": "ios/airbnb/login/2.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/2.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 88738,
+      "platform": "ios",
+      "screenType": "login",
+      "industry": "productivity",
+      "tags": [
+        "login",
+        "ios",
+        "productivity"
+      ],
+      "elements": [],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-3",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "accounts.google.com",
+      "file": "ios/airbnb/login/3.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/3.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 63374,
+      "platform": "ios",
+      "screenType": "other",
+      "industry": "productivity",
+      "tags": [
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-4",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Choose an account",
+      "file": "ios/airbnb/login/4.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/4.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 164327,
+      "platform": "ios",
+      "screenType": "login",
+      "industry": "productivity",
+      "tags": [
+        "review",
+        "login",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-5",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Sign in to Airbnb",
+      "file": "ios/airbnb/login/5.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/5.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 249419,
+      "platform": "ios",
+      "screenType": "login",
+      "industry": "productivity",
+      "tags": [
+        "profile",
+        "review",
+        "login",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-6",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Google will allow Airbnb to access",
+      "file": "ios/airbnb/login/6.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/6.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 242876,
+      "platform": "ios",
+      "screenType": "login",
+      "industry": "productivity",
+      "tags": [
+        "profile",
+        "review",
+        "login",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-login-7",
+      "appId": "airbnb",
+      "flow": "login",
+      "name": "Let's create your account",
+      "file": "ios/airbnb/login/7.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/7.png",
+      "width": 576,
+      "height": 1248,
+      "bytes": 196965,
+      "platform": "ios",
+      "screenType": "settings",
+      "industry": "productivity",
+      "tags": [
+        "payment",
+        "settings",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-16",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
       "id": "bumble-find-new-people-chat-singles-ios-other-bumble-ios-0",
       "appId": "bumble-find-new-people-chat-singles",
+      "flow": null,
       "name": "Other Bumble Ios 0",
       "file": "ios/bumble-find-new-people-chat-singles/other-bumble-ios-0.png",
       "url": "/api/inspirations/screens/ios/bumble-find-new-people-chat-singles/other-bumble-ios-0.png",
@@ -129,50 +402,21 @@
       ],
       "elements": [],
       "style": [],
-      "capturedAt": null,
+      "capturedAt": "2026-09-16",
       "hasAnalysis": false,
       "downloadable": true,
       "source": {
         "url": null,
         "license": null,
         "licenseUrl": null,
-        "attribution": "Bumble — Find new people & chat singles",
-        "permission": "open-source"
-      }
-    },
-    {
-      "id": "bumble-find-new-people-chat-singles-ios-other-bumble-ios-34",
-      "appId": "bumble-find-new-people-chat-singles",
-      "name": "Other Bumble Ios 34",
-      "file": "ios/bumble-find-new-people-chat-singles/other-bumble-ios-34.png",
-      "url": "/api/inspirations/screens/ios/bumble-find-new-people-chat-singles/other-bumble-ios-34.png",
-      "width": 1179,
-      "height": 2556,
-      "bytes": 437378,
-      "platform": "ios",
-      "screenType": "other",
-      "industry": "social",
-      "tags": [
-        "social",
-        "other",
-        "ios"
-      ],
-      "elements": [],
-      "style": [],
-      "capturedAt": null,
-      "hasAnalysis": false,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Bumble — Find new people & chat singles",
-        "permission": "open-source"
+        "attribution": "Bumble",
+        "permission": "owner-granted"
       }
     },
     {
       "id": "bumble-find-new-people-chat-singles-ios-other-bumble-ios-59",
       "appId": "bumble-find-new-people-chat-singles",
+      "flow": null,
       "name": "Other Bumble Ios 59",
       "file": "ios/bumble-find-new-people-chat-singles/other-bumble-ios-59.png",
       "url": "/api/inspirations/screens/ios/bumble-find-new-people-chat-singles/other-bumble-ios-59.png",
@@ -189,15 +433,15 @@
       ],
       "elements": [],
       "style": [],
-      "capturedAt": null,
+      "capturedAt": "2026-09-16",
       "hasAnalysis": false,
       "downloadable": true,
       "source": {
         "url": null,
         "license": null,
         "licenseUrl": null,
-        "attribution": "Bumble — Find new people & chat singles",
-        "permission": "open-source"
+        "attribution": "Bumble",
+        "permission": "owner-granted"
       }
     }
   ],
@@ -210,22 +454,60 @@
       "platform": "ios",
       "screenIds": [
         "bumble-find-new-people-chat-singles-ios-other-bumble-ios-59",
-        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-34",
         "bumble-find-new-people-chat-singles-ios-other-bumble-ios-0"
       ]
     },
     {
-      "id": "bumble-find-new-people-chat-singles-ios-price",
-      "appId": "bumble-find-new-people-chat-singles",
-      "name": "price",
-      "category": "checkout",
+      "id": "airbnb-ios-login",
+      "appId": "airbnb",
+      "name": "Login",
+      "category": "authentication",
       "platform": "ios",
       "screenIds": [
-        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-34",
-        "bumble-find-new-people-chat-singles-ios-other-bumble-ios-0"
+        "airbnb-ios-login-1",
+        "airbnb-ios-login-2",
+        "airbnb-ios-login-3",
+        "airbnb-ios-login-4",
+        "airbnb-ios-login-5",
+        "airbnb-ios-login-6",
+        "airbnb-ios-login-7"
       ]
     }
   ],
-  "patterns": [],
-  "elementCounts": {}
+  "patterns": [
+    {
+      "id": "pattern-login-forms",
+      "slug": "login-forms",
+      "name": "Login forms",
+      "category": "Forms",
+      "description": "Email and password sign-in with social options.",
+      "tags": [
+        "auth",
+        "login"
+      ],
+      "screenIds": [
+        "airbnb-ios-login-2",
+        "airbnb-ios-login-4",
+        "airbnb-ios-login-5",
+        "airbnb-ios-login-6"
+      ]
+    },
+    {
+      "id": "pattern-settings-forms",
+      "slug": "settings-forms",
+      "name": "Settings forms",
+      "category": "Forms",
+      "description": "Grouped preference forms with toggles.",
+      "tags": [
+        "settings",
+        "toggles"
+      ],
+      "screenIds": [
+        "airbnb-ios-login-7"
+      ]
+    }
+  ],
+  "elementCounts": {
+    "list": 4
+  }
 }

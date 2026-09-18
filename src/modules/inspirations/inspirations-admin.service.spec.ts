@@ -129,11 +129,34 @@ describe('InspirationsAdminService', () => {
       service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
     });
 
-    it('keeps an unapproved app out of the manifest but leaves the file on disk', () => {
+    it('publishes a new app without a separate approval step', () => {
       const manifest = readManifest(store);
 
-      expect(manifest.counts.screens).toBe(0);
+      expect(manifest.counts.screens).toBe(1);
       expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+    });
+
+    it('records the app in sources.json so its origin is still tracked', () => {
+      const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
+
+      expect(sources.acme).toBeDefined();
+      expect(sources.acme.status).toBe('approved');
+    });
+
+    it('leaves provenance already recorded by hand untouched', () => {
+      service.saveSource('acme', {
+        permission: 'owner-granted',
+        attribution: 'Acme Inc.',
+        redistribution: 'view-only',
+        status: 'approved',
+      });
+      // A later upload must not reset what someone entered deliberately.
+      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false);
+
+      const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
+      expect(sources.acme.permission).toBe('owner-granted');
+      expect(sources.acme.attribution).toBe('Acme Inc.');
+      expect(sources.acme.redistribution).toBe('view-only');
     });
 
     it('publishes once the source entry is approved', () => {
@@ -275,12 +298,14 @@ describe('InspirationsAdminService', () => {
     });
 
     it('reports held-back files with a reason in the admin state', () => {
+      // Uploading under a slug with no apps.json record is now the main way a
+      // file can fail to publish, the licence gate having been removed.
       service.uploadScreen('ios', 'other-co', 'login.png', PNG_1X1, false);
       const state = service.getState();
 
       const held = state.files.find((f) => f.appId === 'other-co');
       expect(held?.published).toBe(false);
-      expect(held?.blockedReason).toMatch(/licence/i);
+      expect(held?.blockedReason).toMatch(/apps\.json/i);
       expect(state.files.find((f) => f.appId === 'acme')?.published).toBe(true);
     });
   });

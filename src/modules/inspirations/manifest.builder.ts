@@ -52,7 +52,7 @@ export const PERMISSIONS = [
 
 export const REVIEW_STATUSES = ['pending', 'review', 'approved', 'rejected'] as const;
 
-const APPROVED_STATUS = 'approved';
+export const APPROVED_STATUS = 'approved';
 
 export type BuildReport = {
   counts: Record<string, number>;
@@ -197,7 +197,80 @@ function listFiles(dir: string, extensions: string[]): string[] {
   return readdirSync(dir, { withFileTypes: true })
     .filter((e) => e.isFile() && extensions.includes(extname(e.name).toLowerCase()))
     .map((e) => e.name)
-    .sort();
+    .sort(byName);
+}
+
+/** `1.png` before `2.png` before `10.png`, which a plain sort gets wrong. */
+function byName(a: string, b: string): number {
+  return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+}
+
+/**
+ * Every screen stored for one app, as paths relative to its folder.
+ *
+ * Two layouts live side by side, and both are wanted:
+ *
+ *   dashboard.webp              a loose screen, its type read from the name
+ *   onboarding/1.png            a screen inside a flow, in walk order
+ *
+ * The flow layout is what the automatic capture writes: the folder is the
+ * flow's name and the numbers are the order someone actually walked it, which
+ * is the thing a gallery wants and a filename cannot carry. Exactly one level
+ * of nesting is read — deeper folders are ignored rather than flattened, so a
+ * stray directory cannot quietly inject screens.
+ */
+function listScreenFiles(appDir: string): string[] {
+  if (!existsSync(appDir)) return [];
+  const loose: string[] = [];
+  const grouped: string[] = [];
+
+  for (const entry of readdirSync(appDir, { withFileTypes: true })) {
+    if (entry.isFile() && IMAGE_EXT.includes(extname(entry.name).toLowerCase())) {
+      loose.push(entry.name);
+    } else if (entry.isDirectory()) {
+      for (const inner of listFiles(join(appDir, entry.name), IMAGE_EXT)) {
+        grouped.push(`${entry.name}/${inner}`);
+      }
+    }
+  }
+
+  return [...loose.sort(byName), ...grouped.sort(byName)];
+}
+
+/**
+ * An app's rating, when one has been recorded on its apps.json entry.
+ *
+ * Both values are all-or-nothing: a score with no count, or a count with no
+ * score, is half a fact and is dropped with a problem reported. Anything out
+ * of range is rejected rather than clamped — a 7-out-of-5 is a data entry
+ * mistake, and silently turning it into 5 hides that.
+ */
+function readRating(
+  app: any,
+  problems: string[],
+  appId: string,
+): { rating: number | null; ratingCount: number | null } {
+  const hasRating = app.rating !== undefined && app.rating !== null && app.rating !== '';
+  const hasCount = app.ratingCount !== undefined && app.ratingCount !== null && app.ratingCount !== '';
+  if (!hasRating && !hasCount) return { rating: null, ratingCount: null };
+
+  const rating = Number(app.rating);
+  const count = Number(app.ratingCount);
+
+  if (!hasRating || !hasCount) {
+    problems.push(`app "${appId}" needs both "rating" and "ratingCount", or neither`);
+    return { rating: null, ratingCount: null };
+  }
+  if (!Number.isFinite(rating) || rating < 0 || rating > 5) {
+    problems.push(`app "${appId}" has a rating of ${app.rating}; it must be between 0 and 5`);
+    return { rating: null, ratingCount: null };
+  }
+  if (!Number.isInteger(count) || count < 0) {
+    problems.push(`app "${appId}" has a ratingCount of ${app.ratingCount}; it must be a whole number`);
+    return { rating: null, ratingCount: null };
+  }
+
+  return { rating, ratingCount: count };
 }
 
 export function titleCase(slug: string): string {
@@ -208,9 +281,16 @@ function uniq<T>(list: T[]): T[] {
   return Array.from(new Set(list.filter(Boolean)));
 }
 
-/** `screens/<platform>/<app>/<file>` → the id the rest of the system uses. */
+/**
+ * `screens/<platform>/<app>/<file>` → the id the rest of the system uses.
+ *
+ * `file` may carry a flow folder (`onboarding/1.png`), in which case the folder
+ * becomes part of the id. Without that, every flow's `1.png` would collide.
+ */
 export function screenIdFor(platform: string, appId: string, file: string): string {
-  return `${appId}-${platform}-${basename(file, extname(file))}`;
+  const withoutExtension = file.slice(0, file.length - extname(file).length);
+  const slug = withoutExtension.split('/').filter(Boolean).join('-');
+  return `${appId}-${platform}-${slug}`;
 }
 
 // ─── Build ──────────────────────────────────────────────────────────────────
@@ -243,7 +323,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
     const platformDir = join(screensDir, platform);
     for (const appId of listDirs(platformDir)) {
       const appDir = join(platformDir, appId);
-      const images = listFiles(appDir, IMAGE_EXT);
+      const images = listScreenFiles(appDir);
       if (images.length === 0) continue;
 
       const source = sources[appId];
@@ -269,6 +349,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
 
       for (const file of images) {
         const base = basename(file, extname(file));
+        // `onboarding/1.png` → flow "onboarding". A loose file has no flow.
+        const flowFolder = file.includes('/') ? file.split('/')[0] : null;
         const id = screenIdFor(platform, appId, file);
         const abs = join(appDir, file);
 
@@ -284,7 +366,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
           continue;
         }
 
-        const sidecar = readJson<any>(join(appDir, `${base}.json`), {});
+        // The sidecar sits next to the image, inside the flow folder when there
+        // is one.
+        const sidecarPath = join(appDir, `${file.slice(0, file.length - extname(file).length)}.json`);
+        const sidecar = readJson<any>(sidecarPath, {});
         const typeFromName = base.split('-')[0].toLowerCase();
         const screenType =
           sidecar.screenType || ((SCREEN_TYPES as readonly string[]).includes(typeFromName) ? typeFromName : 'other');
@@ -297,14 +382,18 @@ export function buildInspirationsManifest(root: string): BuildReport {
         if (badStyles.length) {
           warnings.push(`${platform}/${appId}/${base}.json has unknown style(s): ${badStyles.join(', ')}`);
         }
-        if (!(SCREEN_TYPES as readonly string[]).includes(typeFromName) && !sidecar.screenType) {
+        // A screen inside a flow folder is numbered by its position, so its
+        // name carries no type and is not expected to — the sidecar is the
+        // source of truth there. Only a loose file gets the warning.
+        if (!flowFolder && !(SCREEN_TYPES as readonly string[]).includes(typeFromName) && !sidecar.screenType) {
           warnings.push(`${platform}/${appId}/${file} filename does not start with a known screen type — filed as "other"`);
         }
 
         screens.push({
           id,
           appId,
-          name: sidecar.name || titleCase(base),
+          flow: flowFolder,
+          name: sidecar.name || (flowFolder ? `${titleCase(flowFolder)} ${base}` : titleCase(base)),
           file: `${platform}/${appId}/${file}`,
           url: `/api/inspirations/screens/${platform}/${appId}/${file}`,
           width: dimensions.width,
@@ -369,6 +458,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
         flowCount: publishedFlows.filter((f) => f.appId === appId).length,
         license: source.license || null,
         attribution: source.attribution || app.name || titleCase(appId),
+        ...readRating(app, problems, appId),
       };
     })
     .sort((a, b) => b.screenCount - a.screenCount || a.name.localeCompare(b.name));

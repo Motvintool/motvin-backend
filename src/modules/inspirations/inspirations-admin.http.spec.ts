@@ -115,7 +115,7 @@ describe('Inspirations admin API over HTTP', () => {
     expect(JSON.parse(res.payload).message).toMatch(/not a readable image/i);
   });
 
-  it('serves the uploaded file publicly once its app is approved', async () => {
+  it('serves the uploaded file publicly straight away', async () => {
     const instance = app.getHttpAdapter().getInstance();
     await instance.inject({
       method: 'PUT',
@@ -124,26 +124,23 @@ describe('Inspirations admin API over HTTP', () => {
     });
     await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
 
-    // Held back before approval.
-    const before = await instance.inject({ method: 'GET', url: '/api/inspirations/screens/ios/acme/dashboard.png' });
-    expect(before.statusCode).toBe(404);
+    const res = await instance.inject({ method: 'GET', url: '/api/inspirations/screens/ios/acme/dashboard.png' });
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['content-type']).toBe('image/png');
+    expect(Buffer.from(res.rawPayload).equals(PNG_1X1)).toBe(true);
+  });
 
+  it('still records the app in sources.json, so origin survives the upload', async () => {
+    const instance = app.getHttpAdapter().getInstance();
     await instance.inject({
       method: 'PUT',
-      url: '/api/inspirations/admin/sources/acme',
-      payload: {
-        permission: 'own-work',
-        license: 'CC0',
-        attribution: 'Motvin',
-        redistribution: 'allowed',
-        status: 'approved',
-      },
+      url: '/api/inspirations/admin/apps/acme',
+      payload: { name: 'Acme', industry: 'saas' },
     });
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
 
-    const after = await instance.inject({ method: 'GET', url: '/api/inspirations/screens/ios/acme/dashboard.png' });
-    expect(after.statusCode).toBe(200);
-    expect(after.headers['content-type']).toBe('image/png');
-    expect(Buffer.from(after.rawPayload).equals(PNG_1X1)).toBe(true);
+    const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
+    expect(sources.acme.status).toBe('approved');
   });
 
   it('deletes an app and its files through the API', async () => {
@@ -170,7 +167,7 @@ describe('Inspirations admin API over HTTP', () => {
     expect(state.files).toHaveLength(0);
   });
 
-  it('returns the admin state, including files held back', async () => {
+  it('returns the admin state with the uploaded file published', async () => {
     const instance = app.getHttpAdapter().getInstance();
     await instance.inject({
       method: 'PUT',
@@ -185,7 +182,7 @@ describe('Inspirations admin API over HTTP', () => {
     const state = JSON.parse(res.payload).data;
     expect(state.apps).toHaveLength(1);
     expect(state.files).toHaveLength(1);
-    expect(state.files[0].published).toBe(false);
-    expect(state.files[0].blockedReason).toMatch(/licence/i);
+    expect(state.files[0].published).toBe(true);
+    expect(state.files[0].blockedReason).toBeNull();
   });
 });

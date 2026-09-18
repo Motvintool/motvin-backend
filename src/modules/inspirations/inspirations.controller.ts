@@ -177,6 +177,27 @@ export class InspirationsController {
     return this.sendFile(`screens/${platform}/${app}/${file}`, file, download === '1', reply);
   }
 
+  /**
+   * GET /api/inspirations/screens/:platform/:app/:flow/:file — the image bytes
+   * for a screen stored inside a flow folder.
+   *
+   * Declared as its own route rather than a wildcard, because exactly one extra
+   * level exists and naming it keeps the path a set of ordinary segments. The
+   * real gate is the servable-file map, which is built from the manifest, so an
+   * unpublished path cannot resolve either way.
+   */
+  @Get('screens/:platform/:app/:flow/:file')
+  async getFlowScreenFile(
+    @Param('platform') platform: string,
+    @Param('app') app: string,
+    @Param('flow') flow: string,
+    @Param('file') file: string,
+    @Query('download') download: string,
+    @Res() reply: FastifyReply,
+  ) {
+    return this.sendFile(`screens/${platform}/${app}/${flow}/${file}`, file, download === '1', reply);
+  }
+
   // GET /api/inspirations/logos/:file
   @Get('logos/:file')
   async getLogoFile(@Param('file') file: string, @Res() reply: FastifyReply) {
