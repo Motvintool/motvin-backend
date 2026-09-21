@@ -389,11 +389,17 @@ export function buildInspirationsManifest(root: string): BuildReport {
           warnings.push(`${platform}/${appId}/${file} filename does not start with a known screen type — filed as "other"`);
         }
 
+        // A loose file's basename is `${screenType}-${appId}-${platform}-${index}`
+        // — every part but the type is already shown elsewhere (app logo/name,
+        // platform pill, URL), so titleCasing the whole thing just repeats that
+        // context back as a garbled string (e.g. "Other Bumble Ios 59"). The
+        // type on its own is the only part of the filename that's actually a
+        // name. Sidecar-named and in-flow screens are unaffected.
         screens.push({
           id,
           appId,
           flow: flowFolder,
-          name: sidecar.name || (flowFolder ? `${titleCase(flowFolder)} ${base}` : titleCase(base)),
+          name: sidecar.name || (flowFolder ? `${titleCase(flowFolder)} ${base}` : titleCase(screenType)),
           file: `${platform}/${appId}/${file}`,
           url: `/api/inspirations/screens/${platform}/${appId}/${file}`,
           width: dimensions.width,

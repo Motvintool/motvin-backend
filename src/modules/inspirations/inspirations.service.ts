@@ -101,9 +101,48 @@ export class InspirationsService {
     return this.paginate(screens, query.limit, query.offset);
   }
 
-  async getApps(industry?: string): Promise<InspirationApp[]> {
-    const apps = await this.loader.getApps();
-    return industry ? apps.filter((a) => a.industry === industry) : apps;
+  async getApps(industry?: string, sort?: 'newest' | 'oldest' | 'az' | 'rating'): Promise<InspirationApp[]> {
+    let apps = await this.loader.getApps();
+    if (industry) apps = apps.filter((a) => a.industry === industry);
+
+    if (sort === 'az') {
+      apps = [...apps].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === 'newest' || sort === 'oldest') {
+      // An app has no timestamp of its own — "newest"/"oldest" go by the
+      // latest/earliest capturedAt among its own screens, the same signal
+      // getScreens' own newest/oldest sort already orders by. Apps with no
+      // dated screens have no ordering signal either way, so they sort last
+      // regardless of direction rather than jumping to the front for "oldest".
+      const screens = await this.loader.getScreens();
+      const timesByApp = new Map<string, number[]>();
+      for (const screen of screens) {
+        if (!screen.capturedAt) continue;
+        const ms = new Date(screen.capturedAt).getTime();
+        if (Number.isNaN(ms)) continue;
+        if (!timesByApp.has(screen.appId)) timesByApp.set(screen.appId, []);
+        timesByApp.get(screen.appId)!.push(ms);
+      }
+      const metric = (id: string) => {
+        const times = timesByApp.get(id);
+        if (!times?.length) return null;
+        return sort === 'newest' ? Math.max(...times) : Math.min(...times);
+      };
+      apps = [...apps].sort((a, b) => {
+        const ma = metric(a.id);
+        const mb = metric(b.id);
+        if (ma === null || mb === null) return ma === mb ? 0 : ma === null ? 1 : -1;
+        return sort === 'newest' ? mb - ma : ma - mb;
+      });
+    } else if (sort === 'rating') {
+      // Unrated apps (both fields null) sort last, ordered by score then by
+      // how many ratings back it up.
+      apps = [...apps].sort((a, b) => {
+        if (a.rating === null || b.rating === null) return a.rating === b.rating ? 0 : a.rating === null ? 1 : -1;
+        return b.rating - a.rating || (b.ratingCount ?? 0) - (a.ratingCount ?? 0);
+      });
+    }
+
+    return apps;
   }
 
   async getApp(slug: string) {

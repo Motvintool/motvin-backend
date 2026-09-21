@@ -52,6 +52,8 @@ export interface InspirationApp {
   flowCount: number;
   license: string | null;
   attribution: string;
+  rating: number | null;
+  ratingCount: number | null;
 }
 
 export interface InspirationFlow {

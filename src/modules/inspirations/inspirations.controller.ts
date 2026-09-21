@@ -108,8 +108,8 @@ export class InspirationsController {
 
   // GET /api/inspirations/apps
   @Get('apps')
-  async getApps(@Query('industry') industry?: string) {
-    return { success: true, data: await this.service.getApps(industry) };
+  async getApps(@Query('industry') industry?: string, @Query('sort') sort?: 'newest' | 'oldest' | 'az' | 'rating') {
+    return { success: true, data: await this.service.getApps(industry, sort) };
   }
 
   // GET /api/inspirations/app/:slug
