@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { createWorker } from 'tesseract.js';
 import {
   InspirationApp,
   InspirationFlow,
@@ -33,6 +34,9 @@ export interface Page<T> {
   offset: number;
   nextOffset: number | null;
 }
+
+type TextHighlight = { left: number; top: number; width: number; height: number };
+type RecognizedScreenshot = { text: string; words: Array<TextHighlight & { text: string }> };
 
 /** Words that map onto the taxonomy, so plain-language queries still land. */
 const SYNONYMS: Record<string, string[]> = {
@@ -69,6 +73,8 @@ const STOP = new Set([
 
 @Injectable()
 export class InspirationsService {
+  private readonly screenshotText = new Map<string, Promise<RecognizedScreenshot>>();
+
   constructor(private readonly loader: LoaderService) {}
 
   async getCounts() {
@@ -282,7 +288,86 @@ export class InspirationsService {
     };
   }
 
+  /** OCR-backed search is opt-in: the regular search remains metadata-only. */
+  async searchScreenshotText(q: string, limit = 50, offset = 0) {
+    const [screens, manifest] = await Promise.all([this.loader.getScreens(), this.loader.getManifest()]);
+    const intent = this.interpret(q, manifest);
+    const query = q.trim().toLocaleLowerCase();
+    const queryTerms = query.split(/\s+/).filter(Boolean);
+    if (!query) {
+      return { intent, apps: [], screens: [], flows: [], patterns: [], total: 0, screenTotal: 0 };
+    }
+
+    const matchedScreens: InspirationScreen[] = [];
+    const textHighlights: Record<string, TextHighlight[]> = {};
+    for (const screen of screens) {
+      const recognized = await this.textInScreenshot(screen);
+      if (recognized.text.includes(query)) {
+        matchedScreens.push(screen);
+        textHighlights[screen.id] = recognized.words
+          .filter(({ text }) => queryTerms.some((term) => text.includes(term)))
+          .map(({ text: _text, ...highlight }) => highlight);
+      }
+    }
+
+    return {
+      intent,
+      apps: [],
+      screens: matchedScreens.slice(offset, offset + limit),
+      flows: [],
+      patterns: [],
+      total: matchedScreens.length,
+      screenTotal: matchedScreens.length,
+      textHighlights,
+    };
+  }
+
   // ─── internals ────────────────────────────────────────────────────────────
+
+  private textInScreenshot(screen: InspirationScreen): Promise<RecognizedScreenshot> {
+    const cached = this.screenshotText.get(screen.id);
+    if (cached) return cached;
+
+    const extraction = (async () => {
+      const file = await this.loader.resolveServableFile(`screens/${screen.file}`);
+      if (!file) return { text: '', words: [] };
+      try {
+        const worker = await createWorker('eng');
+        try {
+          const { data } = await worker.recognize(file, {}, { text: true, tsv: true });
+          return {
+            text: data.text.toLocaleLowerCase(),
+            words: this.ocrWords(data.tsv ?? '', screen),
+          };
+        } finally {
+          await worker.terminate();
+        }
+      } catch {
+        return { text: '', words: [] };
+      }
+    })();
+    this.screenshotText.set(screen.id, extraction);
+    return extraction;
+  }
+
+  private ocrWords(tsv: string, screen: InspirationScreen): RecognizedScreenshot['words'] {
+    return tsv.split('\n').slice(1).flatMap((line) => {
+      const [level, , , , , , left, top, width, height, , text] = line.split('\t');
+      if (level !== '5' || !text?.trim()) return [];
+      const x = Number(left);
+      const y = Number(top);
+      const w = Number(width);
+      const h = Number(height);
+      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) return [];
+      return [{
+        text: text.toLocaleLowerCase(),
+        left: (x / screen.width) * 100,
+        top: (y / screen.height) * 100,
+        width: (w / screen.width) * 100,
+        height: (h / screen.height) * 100,
+      }];
+    });
+  }
 
   private interpret(raw: string, manifest: { taxonomy: any }) {
     const { platforms, screenTypes, industries, styles } = manifest.taxonomy;

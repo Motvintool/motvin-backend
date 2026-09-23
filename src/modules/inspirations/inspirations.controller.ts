@@ -158,10 +158,15 @@ export class InspirationsController {
   @Get('search')
   async search(
     @Query('q') q = '',
+    @Query('mode') mode?: string,
     @Query('limit') limit = 50,
     @Query('offset') offset = 0,
   ) {
-    const data = await this.service.search(q, Math.min(Number(limit) || 50, 200), Number(offset) || 0);
+    const safeLimit = Math.min(Number(limit) || 50, 200);
+    const safeOffset = Number(offset) || 0;
+    const data = mode === 'text'
+      ? await this.service.searchScreenshotText(q, safeLimit, safeOffset)
+      : await this.service.search(q, safeLimit, safeOffset);
     return { success: true, data };
   }
 
