@@ -55,6 +55,7 @@ export class InspirationsController {
   async getScreens(
     @Query('platform') platform?: string,
     @Query('type') type?: string,
+    @Query('state') state?: string,
     @Query('industry') industry?: string,
     @Query('style') style?: string,
     @Query('element') element?: string,
@@ -67,6 +68,7 @@ export class InspirationsController {
     const data = await this.service.getScreens({
       platform: splitList(platform),
       screenType: splitList(type),
+      state: splitList(state),
       industry: splitList(industry),
       style: splitList(style),
       element: splitList(element),
@@ -251,12 +253,17 @@ export class InspirationsController {
     return reply.send(createReadStream(absolute));
   }
 
-  /** screens/<platform>/<app>/<file> → the screen id the build script assigned. */
+  /**
+   * screens/<platform>/<app>/<file> or screens/<platform>/<app>/<flow>/<file>
+   * → the screen id the build script assigned. The flow folder, when there is
+   * one, is part of the id, exactly as manifest.builder.ts derives it.
+   */
   private screenIdForKey(key: string): string | null {
     const parts = key.split('/');
-    if (parts.length !== 4) return null;
-    const [, platform, app, file] = parts;
-    const base = file.replace(/\.[^.]+$/, '');
+    if (parts.length !== 4 && parts.length !== 5) return null;
+    const [, platform, app, ...rest] = parts;
+    const file = rest.join('/');
+    const base = file.replace(/\.[^.]+$/, '').split('/').join('-');
     return `${app}-${platform}-${base}`;
   }
 }

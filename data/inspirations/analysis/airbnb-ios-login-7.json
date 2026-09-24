@@ -1,34 +1,69 @@
 {
+  "screenId": "airbnb-ios-login-7",
   "screen_id": "airbnb-ios-login-7",
-  "screen_type": "settings",
-  "published_as": "settings",
-  "category": "productivity",
-  "flow": "settings",
-  "flow_name": "Login",
-  "flow_position": 7,
-  "description": "",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-24T15:26:36.043Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": null,
+  "flow": null,
+  "name": "Let's create your account",
+  "description": "Sign up screen with 4 input fields. Light theme, 18 text elements.",
   "tags": [
-    "payment",
-    "settings",
+    "signup",
     "ios"
   ],
   "elements": [
-    "list"
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "legal-text"
   ],
   "style": [
     "light"
   ],
-  "crawler": {
-    "nodeId": "s007",
-    "depth": 7,
-    "path": [],
-    "visits": 1,
-    "blocked": false,
-    "blockedReason": null,
-    "actions": [],
-    "reachedFrom": [],
-    "leadsTo": []
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Let's create your account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 4 input fields. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Not part of a recorded journey"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [],
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Let's create your account"
   },
+  "blocked": true,
+  "blocked_reason": "account creation screen — crawler does not register accounts",
   "capturedAt": "2026-09-16",
-  "capturedBy": "motvin-ios-crawler"
+  "capturedBy": "motvin-ios-crawler/classify"
 }

@@ -1,0 +1,176 @@
+{
+  "screenId": "swiggy-ios-logging-in-5",
+  "screen_id": "swiggy-ios-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-24T15:41:08.679Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Logging in",
+  "flow_position": 5,
+  "name": "Fresh, hot & crisp",
+  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+  "tags": [
+    "delivery",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner",
+    "bottom-sheet",
+    "coach-mark"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Fresh, hot & crisp”",
+        "Category strip: Scenes, Food, Instamart, Dineout",
+        "Bottom sheet over a dimmed background, covering 50% of the height from 48% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+        "Calls to action: “Continue to Food”, “ORDER NOW”",
+        "28 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Logging in”",
+        "Reached from “Address Unavailable — loading”",
+        "Leads to “Address Unavailable”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 0:07 in the recording",
+        "Frame 43 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e0e07",
+      "role": "background",
+      "share": 0.544
+    },
+    {
+      "hex": "#8e8d8d",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#372c25",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#f6f6f6",
+      "role": "text",
+      "share": 0.052
+    },
+    {
+      "hex": "#d8d9d9",
+      "role": "surface",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 43,
+    "atSeconds": 7.4,
+    "endSeconds": 9,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.484375,
+        "w": 1,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [
+      "Scenes",
+      "Food",
+      "Instamart",
+      "Dineout"
+    ],
+    "ctas": [
+      "Continue to Food",
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Fresh, hot & crisp"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "at 0:07",
+        "name": "Address Unavailable — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "at 0:09",
+        "name": "Address Unavailable"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-24",
+  "capturedBy": "motvin-ios-crawler"
+}

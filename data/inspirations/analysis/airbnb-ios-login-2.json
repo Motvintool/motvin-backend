@@ -1,31 +1,71 @@
 {
+  "screenId": "airbnb-ios-login-2",
   "screen_id": "airbnb-ios-login-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-24T15:26:34.538Z",
   "screen_type": "login",
   "published_as": "login",
-  "category": "productivity",
-  "flow": "authentication",
-  "flow_name": "Login",
-  "flow_position": 2,
-  "description": "",
+  "states": [],
+  "category": null,
+  "flow": null,
+  "name": "Log in or sign up",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
   "tags": [
     "login",
     "ios"
   ],
-  "elements": [],
-  "style": [
-    "light"
+  "elements": [
+    "cta",
+    "button"
   ],
-  "crawler": {
-    "nodeId": "s002",
-    "depth": 1,
-    "path": [],
-    "visits": 1,
-    "blocked": true,
-    "blockedReason": "authentication screen — crawler does not sign in",
-    "actions": [],
-    "reachedFrom": [],
-    "leadsTo": []
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in or sign up”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
+        "Calls to action: “Log in or sign up”, “Continue”",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Not part of a recorded journey"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [],
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up",
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": "Log in or sign up"
   },
+  "blocked": true,
+  "blocked_reason": "authentication screen — crawler does not sign in",
   "capturedAt": "2026-09-16",
-  "capturedBy": "motvin-ios-crawler"
+  "capturedBy": "motvin-ios-crawler/classify"
 }

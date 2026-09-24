@@ -17,6 +17,7 @@ import {
 export interface ScreenQuery {
   platform?: string[];
   screenType?: string[];
+  state?: string[];
   industry?: string[];
   style?: string[];
   element?: string[];
@@ -47,7 +48,10 @@ const SYNONYMS: Record<string, string[]> = {
   learn: ['education'], course: ['education'], courses: ['education'],
   trip: ['travel'], hotel: ['travel'], booking: ['travel'], flights: ['travel'],
   tasks: ['productivity'], notes: ['productivity'], todo: ['productivity'],
-  chat: ['ai'], assistant: ['ai'], copilot: ['ai'], llm: ['ai'],
+  assistant: ['ai'], copilot: ['ai'], llm: ['ai'],
+  food: ['food'], restaurant: ['food'], grocery: ['food'], delivery: ['food'],
+  entertainment: ['entertainment'], streaming: ['entertainment'], movies: ['entertainment'],
+  lifestyle: ['lifestyle'], dating: ['lifestyle'], wellness: ['lifestyle'],
   community: ['social'], creators: ['social'],
   b2b: ['saas'], software: ['saas'], analytics: ['saas', 'dashboard'],
   home: ['landing', 'feed'], homepage: ['landing'], hero: ['landing'], marketing: ['landing'],
@@ -57,9 +61,24 @@ const SYNONYMS: Record<string, string[]> = {
   plans: ['pricing'], subscription: ['pricing'], billing: ['pricing'],
   payment: ['checkout'], cart: ['checkout'], order: ['checkout'],
   preferences: ['settings'], account: ['settings', 'profile'],
-  welcome: ['onboarding'], intro: ['onboarding'],
+  welcome: ['onboarding'], intro: ['onboarding'], splash: ['splash'], launch: ['splash'],
+  tutorial: ['onboarding'], tip: ['onboarding'], tips: ['onboarding'], walkthrough: ['onboarding'],
   timeline: ['feed'], activity: ['feed'],
-  detail: ['product'], listing: ['product'],
+  detail: ['detail', 'product'], listing: ['product'],
+  empty: ['empty'], blank: ['empty'], nothing: ['empty'],
+  loading: ['loading'], spinner: ['loading'], skeleton: ['loading'], loader: ['loading'],
+  error: ['error'], errors: ['error'], failed: ['error'], offline: ['error'],
+  success: ['success'], confirmation: ['success'], confirmed: ['success'], done: ['success'],
+  modal: ['modal'], dialog: ['modal'], popup: ['modal'], sheet: ['modal'], alert: ['modal'], toast: ['modal'],
+  permission: ['permission'], permissions: ['permission'], prompt: ['permission'],
+  otp: ['login'], verification: ['login'], verify: ['login'], code: ['login'],
+  chat: ['messages', 'ai'], chats: ['messages'], inbox: ['messages'], messaging: ['messages'],
+  notifications: ['notifications'], alerts: ['notifications'],
+  map: ['map'], maps: ['map'], location: ['map'], directions: ['map'],
+  calendar: ['calendar'], dates: ['calendar'], schedule: ['calendar'],
+  player: ['player'], video: ['player'], music: ['player'], podcast: ['player'],
+  form: ['form'], input: ['form'], fields: ['form'],
+  keyboard: ['keyboard'], scrolled: ['scrolled'],
   mobile: ['ios', 'android'], iphone: ['ios'], desktop: ['web'], website: ['web'],
   clean: ['minimal'], simple: ['minimal'], black: ['dark'], white: ['light'],
   enterprise: ['corporate'], professional: ['corporate'],
@@ -92,6 +111,7 @@ export class InspirationsService {
     if (query.app) screens = screens.filter((s) => s.appId === query.app);
     if (query.platform?.length) screens = screens.filter((s) => query.platform.includes(s.platform));
     if (query.screenType?.length) screens = screens.filter((s) => query.screenType.includes(s.screenType));
+    if (query.state?.length) screens = screens.filter((s) => query.state.some((v) => s.states.includes(v)));
     if (query.industry?.length) screens = screens.filter((s) => query.industry.includes(s.industry));
     if (query.style?.length) screens = screens.filter((s) => query.style.some((v) => s.style.includes(v)));
     if (query.element?.length) screens = screens.filter((s) => query.element.some((v) => s.elements.includes(v)));
@@ -231,6 +251,8 @@ export class InspirationsService {
       .map((s) => {
         let score = 0;
         if (s.screenType === screen.screenType) score += 5;
+        if (s.fineType && s.fineType === screen.fineType && s.fineType !== s.screenType) score += 2;
+        score += (s.states || []).filter((v) => (screen.states || []).includes(v)).length * 2;
         if (s.industry === screen.industry) score += 3;
         if (s.platform === screen.platform) score += 2;
         score += s.style.filter((v) => screen.style.includes(v)).length * 1.5;
@@ -371,6 +393,7 @@ export class InspirationsService {
 
   private interpret(raw: string, manifest: { taxonomy: any }) {
     const { platforms, screenTypes, industries, styles } = manifest.taxonomy;
+    const states: string[] = manifest.taxonomy.states || [];
     const terms = raw
       .toLowerCase()
       .split(/\s+/)
@@ -384,6 +407,7 @@ export class InspirationsService {
       screenTypes: [] as string[],
       platforms: [] as string[],
       styles: [] as string[],
+      states: [] as string[],
       free: [] as string[],
     };
 
@@ -399,6 +423,7 @@ export class InspirationsService {
         if (screenTypes.includes(c)) { add(intent.screenTypes, c); matched = true; }
         if (platforms.includes(c)) { add(intent.platforms, c); matched = true; }
         if (styles.includes(c)) { add(intent.styles, c); matched = true; }
+        if (states.includes(c)) { add(intent.states, c); matched = true; }
       }
       if (!matched || term.length > 3) intent.free.push(term);
     }
@@ -412,6 +437,7 @@ export class InspirationsService {
       screenTypes: Array.from(new Set(screens.map((s) => s.screenType))),
       industries: Array.from(new Set(screens.map((s) => s.industry))),
       styles: Array.from(new Set(screens.flatMap((s) => s.style))),
+      states: Array.from(new Set(screens.flatMap((s) => s.states || []))),
     };
     const intent = this.interpret(q, { taxonomy });
 
@@ -421,14 +447,16 @@ export class InspirationsService {
         if (intent.screenTypes.length && !intent.screenTypes.includes(screen.screenType)) return null;
         if (intent.platforms.length && !intent.platforms.includes(screen.platform)) return null;
         if (intent.styles.length && !intent.styles.some((s) => screen.style.includes(s))) return null;
+        if (intent.states.length && !intent.states.some((s) => (screen.states || []).includes(s))) return null;
 
         let score = 0;
         if (intent.industries.includes(screen.industry)) score += 3;
         if (intent.screenTypes.includes(screen.screenType)) score += 4;
         if (intent.platforms.includes(screen.platform)) score += 2;
         score += intent.styles.filter((s) => screen.style.includes(s)).length * 2;
+        score += intent.states.filter((s) => (screen.states || []).includes(s)).length * 4;
 
-        const hay = `${screen.name} ${screen.tags.join(' ')} ${appNames.get(screen.appId) || ''}`.toLowerCase();
+        const hay = `${screen.name} ${screen.description || ''} ${screen.fineType || ''} ${screen.tags.join(' ')} ${appNames.get(screen.appId) || ''}`.toLowerCase();
         score += intent.free.filter((t) => hay.includes(t)).length;
 
         return score > 0 ? { screen, score } : null;

@@ -1,0 +1,159 @@
+{
+  "screenId": "swiggy-ios-browsing-5",
+  "screen_id": "swiggy-ios-browsing-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-24T15:41:08.687Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Browsing",
+  "flow_position": 5,
+  "name": "Address Unavailable (4)",
+  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+  "tags": [
+    "search",
+    "offer",
+    "address",
+    "haminga",
+    "scenes",
+    "bites",
+    "my corner",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Haminga, Scenes, Bites, My corner, Dineout",
+        "Navigation title reads “Address Unavailable”",
+        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “Browsing”",
+        "Reached from “Address Unavailable — loading (2)”",
+        "Leads to “Address Unavailable (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:12 in the recording",
+        "Frame 67 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.626
+    },
+    {
+      "hex": "#cbc9c4",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#460710",
+      "role": "accent",
+      "share": 0.067
+    },
+    {
+      "hex": "#e4e1dd",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#931d1e",
+      "role": "surface",
+      "share": 0.033
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 67,
+    "atSeconds": 12.4,
+    "endSeconds": 13.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [
+      "Haminga",
+      "Scenes",
+      "Bites",
+      "My corner",
+      "Dineout"
+    ],
+    "chipLabels": [
+      "Food",
+      "Dineout",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Address Unavailable"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "at 0:12",
+        "name": "Address Unavailable — loading (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "at 0:14",
+        "name": "Address Unavailable (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-24",
+  "capturedBy": "motvin-ios-crawler"
+}

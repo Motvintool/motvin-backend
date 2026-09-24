@@ -15,6 +15,7 @@ import {
   readJson,
   REVIEW_STATUSES,
   screenIdFor,
+  SCREEN_STATES,
   SCREEN_TYPES,
   STYLES,
   titleCase,
@@ -196,6 +197,7 @@ export class InspirationsAdminService {
       vocabulary: {
         platforms: PLATFORMS,
         screenTypes: SCREEN_TYPES,
+        states: SCREEN_STATES,
         industries: INDUSTRIES,
         styles: STYLES,
         // Presets first, then anything this library has actually used, so the
@@ -288,13 +290,24 @@ export class InspirationsAdminService {
     const badStyle = styles.find((s) => !(STYLES as readonly string[]).includes(s));
     if (badStyle) throw new BadRequestException(`unknown style "${badStyle}"`);
 
+    const states: string[] = Array.isArray(meta.states) ? meta.states.map(String) : [];
+    const badState = states.find((v) => !(SCREEN_STATES as readonly string[]).includes(v));
+    if (badState) throw new BadRequestException(`unknown state "${badState}"`);
+
+    // Fields automatic capture wrote and the form does not edit are carried
+    // over, so saving a name never wipes a description or the capture facts.
+    const existing = readJson<Record<string, unknown>>(this.inStore('screens', platform, appId, `${base}.json`), {});
     const sidecar = {
+      ...existing,
       name: typeof meta.name === 'string' && meta.name.trim() ? meta.name.trim() : titleCase(base),
       screenType: meta.screenType || undefined,
+      states,
+      description:
+        typeof meta.description === 'string' ? meta.description.trim().slice(0, 600) : (existing.description as string | undefined) ?? '',
       tags: Array.isArray(meta.tags) ? meta.tags.map(String).filter(Boolean) : [],
       elements: Array.isArray(meta.elements) ? meta.elements.map(String).filter(Boolean) : [],
       style: styles,
-      capturedAt: typeof meta.capturedAt === 'string' && meta.capturedAt ? meta.capturedAt : undefined,
+      capturedAt: typeof meta.capturedAt === 'string' && meta.capturedAt ? meta.capturedAt : (existing.capturedAt as string | undefined),
     };
 
     this.writeJson(this.inStore('screens', platform, appId, `${base}.json`), sidecar);

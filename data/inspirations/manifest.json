@@ -1,34 +1,69 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T13:51:06.252Z",
+  "generatedAt": "2026-09-24T15:41:35.231Z",
   "counts": {
-    "apps": 2,
-    "screens": 8,
-    "flows": 1,
-    "patterns": 2,
-    "ui-elements": 4
+    "apps": 3,
+    "screens": 15,
+    "flows": 3,
+    "patterns": 7,
+    "ui-elements": 73
   },
   "taxonomy": {
     "platforms": [
       "ios"
     ],
     "screenTypes": [
+      "splash",
+      "onboarding",
       "login",
-      "settings",
+      "signup",
+      "home",
+      "feed",
+      "empty",
+      "loading",
       "other"
+    ],
+    "states": [
+      "loading",
+      "empty",
+      "coach-mark",
+      "keyboard"
     ],
     "industries": [
       "saas",
       "productivity"
     ],
     "styles": [
+      "minimal",
+      "bold",
+      "dark",
       "light"
     ],
     "elements": [
-      "list"
+      "banner",
+      "bottom-sheet",
+      "button",
+      "carousel",
+      "chip",
+      "coach-mark",
+      "cta",
+      "empty-state",
+      "form",
+      "keyboard",
+      "legal-text",
+      "list",
+      "nav-bar",
+      "page-indicator",
+      "price",
+      "progress",
+      "search-bar",
+      "skeleton",
+      "tab-bar",
+      "text-field"
     ],
     "flowCategories": [
-      "authentication"
+      "authentication",
+      "discovery"
     ]
   },
   "vocabulary": {
@@ -39,18 +74,47 @@
     ],
     "screenTypes": [
       "landing",
+      "splash",
+      "onboarding",
+      "permission",
       "login",
       "signup",
+      "home",
       "dashboard",
-      "search",
-      "pricing",
-      "checkout",
-      "settings",
-      "profile",
-      "onboarding",
       "feed",
+      "search",
+      "detail",
       "product",
+      "cart",
+      "checkout",
+      "pricing",
+      "profile",
+      "settings",
+      "notifications",
+      "messages",
+      "map",
+      "calendar",
+      "player",
+      "form",
+      "modal",
+      "success",
+      "error",
+      "empty",
+      "loading",
       "other"
+    ],
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "success",
+      "modal",
+      "bottom-sheet",
+      "toast",
+      "coach-mark",
+      "permission",
+      "scrolled",
+      "keyboard"
     ],
     "industries": [
       "saas",
@@ -62,7 +126,10 @@
       "productivity",
       "ai",
       "social",
-      "finance"
+      "finance",
+      "food",
+      "entertainment",
+      "lifestyle"
     ],
     "styles": [
       "minimal",
@@ -99,6 +166,24 @@
   },
   "apps": [
     {
+      "id": "swiggy",
+      "name": "Swiggy",
+      "slug": "swiggy",
+      "industry": "productivity",
+      "platforms": [
+        "ios"
+      ],
+      "website": null,
+      "tagline": null,
+      "logo": "/api/inspirations/logos/swiggy.png",
+      "screenCount": 11,
+      "flowCount": 2,
+      "license": null,
+      "attribution": "Swiggy",
+      "rating": null,
+      "ratingCount": null
+    },
+    {
       "id": "airbnb",
       "name": "Airbnb",
       "slug": "airbnb",
@@ -109,7 +194,7 @@
       "website": "https://www.instagram.com/siren.uix/",
       "tagline": "Explore new rooms & singles",
       "logo": "/api/inspirations/logos/airbnb.png",
-      "screenCount": 7,
+      "screenCount": 3,
       "flowCount": 1,
       "license": null,
       "attribution": "Airbnb",
@@ -140,23 +225,28 @@
       "id": "airbnb-ios-login-1",
       "appId": "airbnb",
       "flow": "login",
-      "name": "Other",
+      "name": "Splash screen",
       "file": "ios/airbnb/login/1.png",
       "url": "/api/inspirations/screens/ios/airbnb/login/1.png",
       "width": 576,
       "height": 1248,
       "bytes": 36598,
       "platform": "ios",
-      "screenType": "other",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme.",
+      "capture": null,
       "industry": "productivity",
       "tags": [
-        "other",
+        "splash",
         "ios",
         "productivity"
       ],
       "elements": [],
       "style": [
-        "light"
+        "light",
+        "minimal"
       ],
       "capturedAt": "2026-09-16",
       "hasAnalysis": true,
@@ -181,158 +271,23 @@
       "bytes": 88738,
       "platform": "ios",
       "screenType": "login",
+      "fineType": "login",
+      "states": [],
+      "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
+      "capture": null,
       "industry": "productivity",
       "tags": [
-        "login",
-        "ios",
-        "productivity"
-      ],
-      "elements": [],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-16",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://www.instagram.com/siren.uix/",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Airbnb",
-        "permission": null
-      }
-    },
-    {
-      "id": "airbnb-ios-login-3",
-      "appId": "airbnb",
-      "flow": "login",
-      "name": "accounts.google.com",
-      "file": "ios/airbnb/login/3.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/3.png",
-      "width": 576,
-      "height": 1248,
-      "bytes": 63374,
-      "platform": "ios",
-      "screenType": "other",
-      "industry": "productivity",
-      "tags": [
-        "other",
-        "ios",
-        "productivity"
-      ],
-      "elements": [],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-16",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://www.instagram.com/siren.uix/",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Airbnb",
-        "permission": null
-      }
-    },
-    {
-      "id": "airbnb-ios-login-4",
-      "appId": "airbnb",
-      "flow": "login",
-      "name": "Choose an account",
-      "file": "ios/airbnb/login/4.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/4.png",
-      "width": 576,
-      "height": 1248,
-      "bytes": 164327,
-      "platform": "ios",
-      "screenType": "login",
-      "industry": "productivity",
-      "tags": [
-        "review",
         "login",
         "ios",
         "productivity"
       ],
       "elements": [
-        "list"
+        "cta",
+        "button"
       ],
       "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-16",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://www.instagram.com/siren.uix/",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Airbnb",
-        "permission": null
-      }
-    },
-    {
-      "id": "airbnb-ios-login-5",
-      "appId": "airbnb",
-      "flow": "login",
-      "name": "Sign in to Airbnb",
-      "file": "ios/airbnb/login/5.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/5.png",
-      "width": 576,
-      "height": 1248,
-      "bytes": 249419,
-      "platform": "ios",
-      "screenType": "login",
-      "industry": "productivity",
-      "tags": [
-        "profile",
-        "review",
-        "login",
-        "ios",
-        "productivity"
-      ],
-      "elements": [
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-16",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://www.instagram.com/siren.uix/",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Airbnb",
-        "permission": null
-      }
-    },
-    {
-      "id": "airbnb-ios-login-6",
-      "appId": "airbnb",
-      "flow": "login",
-      "name": "Google will allow Airbnb to access",
-      "file": "ios/airbnb/login/6.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/6.png",
-      "width": 576,
-      "height": 1248,
-      "bytes": 242876,
-      "platform": "ios",
-      "screenType": "login",
-      "industry": "productivity",
-      "tags": [
-        "profile",
-        "review",
-        "login",
-        "ios",
-        "productivity"
-      ],
-      "elements": [
-        "list"
-      ],
-      "style": [
-        "light"
+        "light",
+        "minimal"
       ],
       "capturedAt": "2026-09-16",
       "hasAnalysis": true,
@@ -356,16 +311,23 @@
       "height": 1248,
       "bytes": 196965,
       "platform": "ios",
-      "screenType": "settings",
+      "screenType": "signup",
+      "fineType": "signup",
+      "states": [],
+      "description": "Sign up screen with 4 input fields. Light theme, 18 text elements.",
+      "capture": null,
       "industry": "productivity",
       "tags": [
-        "payment",
-        "settings",
+        "signup",
         "ios",
         "productivity"
       ],
       "elements": [
-        "list"
+        "nav-bar",
+        "text-field",
+        "form",
+        "list",
+        "legal-text"
       ],
       "style": [
         "light"
@@ -382,6 +344,635 @@
       }
     },
     {
+      "id": "swiggy-ios-browsing-1",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable",
+      "file": "ios/swiggy/browsing/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/1.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1592774,
+      "platform": "ios",
+      "screenType": "home",
+      "fineType": "home",
+      "states": [],
+      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+      "capture": {
+        "atSeconds": 9.2,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "reorder",
+        "food",
+        "bolt",
+        "eatright",
+        "home",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-2",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable (2)",
+      "file": "ios/swiggy/browsing/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/2.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 568716,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
+      "capture": {
+        "atSeconds": 10.2,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "address",
+        "categories",
+        "instamart",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-3",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable (3)",
+      "file": "ios/swiggy/browsing/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/3.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1294813,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 11,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "address",
+        "redbull",
+        "categories",
+        "instamart",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-4",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable — loading (2)",
+      "file": "ios/swiggy/browsing/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/4.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 317151,
+      "platform": "ios",
+      "screenType": "loading",
+      "fineType": "loading",
+      "states": [
+        "loading"
+      ],
+      "description": "Loading state of Address Unavailable with a row of 4 category chips. Light theme, 6 text elements.",
+      "capture": {
+        "atSeconds": 11.8,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "address",
+        "loading",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "chip",
+        "skeleton",
+        "progress"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-5",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable (4)",
+      "file": "ios/swiggy/browsing/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/5.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1004327,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+      "capture": {
+        "atSeconds": 12.4,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "offer",
+        "address",
+        "haminga",
+        "scenes",
+        "bites",
+        "my corner",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-6",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Address Unavailable (5)",
+      "file": "ios/swiggy/browsing/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/6.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1816258,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+      "capture": {
+        "atSeconds": 14.2,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "address",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-1",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Splash screen",
+      "file": "ios/swiggy/logging-in/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/1.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 119017,
+      "platform": "ios",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme.",
+      "capture": {
+        "atSeconds": 0,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "splash",
+        "ios",
+        "productivity"
+      ],
+      "elements": [],
+      "style": [
+        "light",
+        "bold"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-2",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "One app for food, grocery, dining",
+      "file": "ios/swiggy/logging-in/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/2.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 547015,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+      "capture": {
+        "atSeconds": 1.8,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "login",
+        "keyboard",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button",
+        "legal-text"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-3",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Select your location",
+      "file": "ios/swiggy/logging-in/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/3.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 898779,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
+      "capture": {
+        "atSeconds": 3,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "location",
+        "address",
+        "empty-state",
+        "empty",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-4",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Address Unavailable — loading",
+      "file": "ios/swiggy/logging-in/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/4.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 257815,
+      "platform": "ios",
+      "screenType": "loading",
+      "fineType": "loading",
+      "states": [
+        "loading"
+      ],
+      "description": "Loading state of Address Unavailable with a 4-item tab bar, a search bar and prices. Light theme, 6 text elements.",
+      "capture": {
+        "atSeconds": 5.4,
+        "holdSeconds": 1.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "eatright",
+        "reorder",
+        "food",
+        "bolt",
+        "loading",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "skeleton",
+        "progress"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-5",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Fresh, hot & crisp",
+      "file": "ios/swiggy/logging-in/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/5.png",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1725410,
+      "platform": "ios",
+      "screenType": "onboarding",
+      "fineType": "coach_mark",
+      "states": [
+        "coach-mark"
+      ],
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "capture": {
+        "atSeconds": 7.4,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "coach-mark",
+        "ios",
+        "productivity",
+        "onboarding"
+      ],
+      "elements": [
+        "tab-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner",
+        "bottom-sheet",
+        "coach-mark"
+      ],
+      "style": [
+        "dark",
+        "bold"
+      ],
+      "capturedAt": "2026-09-24",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
       "id": "whatsapp-ios-other-bumble-ios-0",
       "appId": "whatsapp",
       "flow": null,
@@ -393,6 +984,10 @@
       "bytes": 58251,
       "platform": "ios",
       "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "",
+      "capture": null,
       "industry": "saas",
       "tags": [
         "saas",
@@ -423,15 +1018,77 @@
       "screenIds": [
         "airbnb-ios-login-1",
         "airbnb-ios-login-2",
-        "airbnb-ios-login-3",
-        "airbnb-ios-login-4",
-        "airbnb-ios-login-5",
-        "airbnb-ios-login-6",
         "airbnb-ios-login-7"
+      ]
+    },
+    {
+      "id": "swiggy-ios-logging-in",
+      "appId": "swiggy",
+      "name": "Logging in",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-logging-in-1",
+        "swiggy-ios-logging-in-2",
+        "swiggy-ios-logging-in-3",
+        "swiggy-ios-logging-in-4",
+        "swiggy-ios-logging-in-5"
+      ]
+    },
+    {
+      "id": "swiggy-ios-browsing",
+      "appId": "swiggy",
+      "name": "Browsing",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-browsing-1",
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-browsing-3",
+        "swiggy-ios-browsing-4",
+        "swiggy-ios-browsing-5",
+        "swiggy-ios-browsing-6"
       ]
     }
   ],
   "patterns": [
+    {
+      "id": "pattern-filter-chips",
+      "slug": "filter-chips",
+      "name": "Filter chips",
+      "category": "Filters",
+      "description": "Horizontally scrolling filter chips above a result set.",
+      "tags": [
+        "chips",
+        "filter"
+      ],
+      "screenIds": [
+        "swiggy-ios-browsing-1",
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-browsing-3",
+        "swiggy-ios-browsing-4",
+        "swiggy-ios-browsing-5",
+        "swiggy-ios-browsing-6",
+        "swiggy-ios-logging-in-5"
+      ]
+    },
+    {
+      "id": "pattern-feed-cards",
+      "slug": "feed-cards",
+      "name": "Feed cards",
+      "category": "Cards",
+      "description": "Content cards inside vertical feeds.",
+      "tags": [
+        "feed",
+        "post"
+      ],
+      "screenIds": [
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-browsing-3",
+        "swiggy-ios-browsing-5",
+        "swiggy-ios-browsing-6"
+      ]
+    },
     {
       "id": "pattern-login-forms",
       "slug": "login-forms",
@@ -444,27 +1101,86 @@
       ],
       "screenIds": [
         "airbnb-ios-login-2",
-        "airbnb-ios-login-4",
-        "airbnb-ios-login-5",
-        "airbnb-ios-login-6"
+        "swiggy-ios-logging-in-2"
       ]
     },
     {
-      "id": "pattern-settings-forms",
-      "slug": "settings-forms",
-      "name": "Settings forms",
+      "id": "pattern-signup-forms",
+      "slug": "signup-forms",
+      "name": "Signup forms",
       "category": "Forms",
-      "description": "Grouped preference forms with toggles.",
+      "description": "Account creation with inline validation.",
       "tags": [
-        "settings",
-        "toggles"
+        "auth",
+        "signup"
       ],
       "screenIds": [
         "airbnb-ios-login-7"
       ]
+    },
+    {
+      "id": "pattern-bottom-sheets",
+      "slug": "bottom-sheets",
+      "name": "Bottom sheets",
+      "category": "Modals",
+      "description": "Mobile sheets sliding from the bottom edge.",
+      "tags": [
+        "sheet",
+        "mobile"
+      ],
+      "screenIds": [
+        "swiggy-ios-logging-in-5"
+      ]
+    },
+    {
+      "id": "pattern-empty-states",
+      "slug": "empty-states",
+      "name": "Empty states",
+      "category": "Empty States",
+      "description": "First-run and no-results states with a clear next step.",
+      "tags": [
+        "empty",
+        "first run"
+      ],
+      "screenIds": [
+        "swiggy-ios-logging-in-3"
+      ]
+    },
+    {
+      "id": "pattern-welcome-carousels",
+      "slug": "welcome-carousels",
+      "name": "Welcome carousels",
+      "category": "Onboarding",
+      "description": "Swipeable intro screens before sign-up.",
+      "tags": [
+        "carousel",
+        "intro"
+      ],
+      "screenIds": [
+        "swiggy-ios-logging-in-5"
+      ]
     }
   ],
   "elementCounts": {
-    "list": 4
+    "cta": 5,
+    "button": 5,
+    "nav-bar": 10,
+    "text-field": 2,
+    "form": 2,
+    "list": 8,
+    "legal-text": 3,
+    "tab-bar": 5,
+    "search-bar": 7,
+    "price": 3,
+    "chip": 7,
+    "banner": 4,
+    "carousel": 2,
+    "page-indicator": 2,
+    "skeleton": 2,
+    "progress": 2,
+    "keyboard": 1,
+    "empty-state": 1,
+    "bottom-sheet": 1,
+    "coach-mark": 1
   }
 }

@@ -26,14 +26,33 @@ export const PLATFORMS = ['web', 'ios', 'android'] as const;
 export const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
 export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 
+/**
+ * What a screen is. Wide enough that a designer can ask for "empty states" or
+ * "splash screens" across the whole library, narrow enough that every value
+ * has a clear meaning. The crawler's finer vocabulary maps onto this one and
+ * is kept alongside it as `fineType`.
+ */
 export const SCREEN_TYPES = [
-  'landing', 'login', 'signup', 'dashboard', 'search', 'pricing', 'checkout',
-  'settings', 'profile', 'onboarding', 'feed', 'product', 'other',
+  'landing', 'splash', 'onboarding', 'permission', 'login', 'signup', 'home',
+  'dashboard', 'feed', 'search', 'detail', 'product', 'cart', 'checkout',
+  'pricing', 'profile', 'settings', 'notifications', 'messages', 'map',
+  'calendar', 'player', 'form', 'modal', 'success', 'error', 'empty', 'loading',
+  'other',
+] as const;
+
+/**
+ * The condition a screen is in, independent of what it is: a checkout can be
+ * loading, a feed can be empty, a settings page can have a sheet over it. A
+ * screen may carry several.
+ */
+export const SCREEN_STATES = [
+  'loading', 'empty', 'error', 'success', 'modal', 'bottom-sheet', 'toast',
+  'coach-mark', 'permission', 'scrolled', 'keyboard',
 ] as const;
 
 export const INDUSTRIES = [
   'saas', 'fintech', 'healthcare', 'ecommerce', 'education', 'travel',
-  'productivity', 'ai', 'social', 'finance',
+  'productivity', 'ai', 'social', 'finance', 'food', 'entertainment', 'lifestyle',
 ] as const;
 
 export const STYLES = [
@@ -273,6 +292,15 @@ function readRating(
   return { rating, ratingCount: count };
 }
 
+function numberOrNull(value: unknown): number | null {
+  const n = Number(value);
+  return value === undefined || value === null || value === '' || !Number.isFinite(n) ? null : n;
+}
+
+function stringOrNull(value: unknown): string | null {
+  return typeof value === 'string' && value.trim() ? value.trim() : null;
+}
+
 export function titleCase(slug: string): string {
   return slug.split(/[-_]/).map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
 }
@@ -378,10 +406,40 @@ export function buildInspirationsManifest(root: string): BuildReport {
           problems.push(`${platform}/${appId}/${base}.json has unknown screenType "${sidecar.screenType}"`);
           continue;
         }
+        // A third-party sign-in page (Google, Apple, Facebook) is not the app's
+        // design. The capture pipeline leaves these out of the store; one that
+        // arrived another way is held back here and named in the report.
+        if (sidecar.fineType === 'external_auth') {
+          warnings.push(`${platform}/${appId}/${file} is a third-party sign-in page — not published`);
+          continue;
+        }
         const badStyles = (sidecar.style || []).filter((s: string) => !(STYLES as readonly string[]).includes(s));
         if (badStyles.length) {
           warnings.push(`${platform}/${appId}/${base}.json has unknown style(s): ${badStyles.join(', ')}`);
         }
+        const states: string[] = uniq<string>(
+          (Array.isArray(sidecar.states) ? sidecar.states : []).filter((v: string) =>
+            (SCREEN_STATES as readonly string[]).includes(v),
+          ),
+        );
+        const badStates = (sidecar.states || []).filter((v: string) => !(SCREEN_STATES as readonly string[]).includes(v));
+        if (badStates.length) {
+          warnings.push(`${platform}/${appId}/${base}.json has unknown state(s): ${badStates.join(', ')}`);
+        }
+        // Facts about the moment of capture, when automatic capture recorded
+        // them. Only the ones the gallery can use travel into the manifest.
+        const capture =
+          sidecar.capture && typeof sidecar.capture === 'object'
+            ? {
+                atSeconds: numberOrNull(sidecar.capture.atSeconds),
+                holdSeconds: numberOrNull(sidecar.capture.holdSeconds),
+                brief: sidecar.capture.brief === true,
+                visits: numberOrNull(sidecar.capture.visits),
+                overlayOf: stringOrNull(sidecar.capture.overlayOf),
+                loadingOf: stringOrNull(sidecar.capture.loadingOf),
+                scrolledFrom: stringOrNull(sidecar.capture.scrolledFrom),
+              }
+            : null;
         // A screen inside a flow folder is numbered by its position, so its
         // name carries no type and is not expected to — the sidecar is the
         // source of truth there. Only a loose file gets the warning.
@@ -407,8 +465,12 @@ export function buildInspirationsManifest(root: string): BuildReport {
           bytes: statSync(abs).size,
           platform,
           screenType,
+          fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
+          states,
+          description: typeof sidecar.description === 'string' ? sidecar.description : '',
+          capture,
           industry: app.industry,
-          tags: uniq([...(sidecar.tags || []), app.industry, screenType, platform]),
+          tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
           elements: uniq<string>(sidecar.elements || []),
           style: uniq<string>((sidecar.style || []).filter((s: string) => (STYLES as readonly string[]).includes(s))),
           capturedAt: sidecar.capturedAt || source.capturedAt || null,
@@ -522,6 +584,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
     taxonomy: {
       platforms: PLATFORMS.filter((p) => screens.some((s) => s.platform === p)),
       screenTypes: SCREEN_TYPES.filter((t) => screens.some((s) => s.screenType === t)),
+      states: SCREEN_STATES.filter((v) => screens.some((s) => s.states.includes(v))),
       industries: INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
       styles: STYLES.filter((v) => screens.some((s) => s.style.includes(v))),
       elements: Object.keys(elementCounts).sort(),
@@ -530,6 +593,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
     vocabulary: {
       platforms: PLATFORMS,
       screenTypes: SCREEN_TYPES,
+      states: SCREEN_STATES,
       industries: INDUSTRIES,
       styles: STYLES,
       flowCategories: FLOW_CATEGORIES,

@@ -23,6 +23,20 @@ export interface InspirationScreen {
   bytes: number;
   platform: string;
   screenType: string;
+  /** The crawler's finer type (e.g. `coach_mark`, `otp`), when recorded. */
+  fineType: string;
+  /** Conditions the screen is in: loading, empty, modal, … */
+  states: string[];
+  description: string;
+  capture: {
+    atSeconds: number | null;
+    holdSeconds: number | null;
+    brief: boolean;
+    visits: number | null;
+    overlayOf: string | null;
+    loadingOf: string | null;
+    scrolledFrom: string | null;
+  } | null;
   industry: string;
   tags: string[];
   elements: string[];
@@ -82,6 +96,7 @@ export interface InspirationsManifest {
   taxonomy: {
     platforms: string[];
     screenTypes: string[];
+    states: string[];
     industries: string[];
     styles: string[];
     elements: string[];
@@ -98,7 +113,7 @@ const EMPTY_MANIFEST: InspirationsManifest = {
   version: 1,
   generatedAt: new Date(0).toISOString(),
   counts: { apps: 0, screens: 0, flows: 0, patterns: 0, 'ui-elements': 0 },
-  taxonomy: { platforms: [], screenTypes: [], industries: [], styles: [], elements: [], flowCategories: [] },
+  taxonomy: { platforms: [], screenTypes: [], states: [], industries: [], styles: [], elements: [], flowCategories: [] },
   apps: [],
   screens: [],
   flows: [],
@@ -161,6 +176,16 @@ export class LoaderService implements OnModuleInit {
 
     try {
       const parsed = JSON.parse(await readFile(file, 'utf-8')) as InspirationsManifest;
+      // A manifest built before states and descriptions existed still has to
+      // serve; the missing fields read as empty rather than undefined.
+      parsed.screens = (parsed.screens || []).map((screen) => ({
+        ...screen,
+        fineType: screen.fineType || screen.screenType,
+        states: Array.isArray(screen.states) ? screen.states : [],
+        description: screen.description || '',
+        capture: screen.capture ?? null,
+      }));
+      parsed.taxonomy = { ...EMPTY_MANIFEST.taxonomy, ...(parsed.taxonomy || {}) };
       this.manifest = { ...EMPTY_MANIFEST, ...parsed };
       this.manifestMtime = mtime;
       this.index();

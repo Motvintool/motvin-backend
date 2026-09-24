@@ -1,0 +1,149 @@
+{
+  "screenId": "swiggy-ios-logging-in-2",
+  "screen_id": "swiggy-ios-logging-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-24T15:41:08.675Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "One app for food, grocery, dining",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “One app for food, grocery, dining”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+        "Calls to action: “Continue”",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Logging in”",
+        "Reached from “Splash screen”",
+        "Leads to “Select your location”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:01 in the recording",
+        "Frame 13 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f7f7",
+      "role": "background",
+      "share": 0.56
+    },
+    {
+      "hex": "#fe5302",
+      "role": "accent",
+      "share": 0.173
+    },
+    {
+      "hex": "#e1e2e3",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#fb7d40",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#c5c5c5",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 13,
+    "atSeconds": 1.8,
+    "endSeconds": 3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "title": "One app for food, grocery, dining"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "at 0:01",
+        "name": "Splash screen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "at 0:03",
+        "name": "Select your location"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-24",
+  "capturedBy": "motvin-ios-crawler"
+}
