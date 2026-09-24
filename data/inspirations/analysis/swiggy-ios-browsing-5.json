@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-browsing-5",
   "screen_id": "swiggy-ios-browsing-5",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T15:41:08.687Z",
+  "analyzedAt": "2026-09-24T16:22:20.347Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,16 +10,16 @@
   "flow": "discovery",
   "flow_name": "Browsing",
   "flow_position": 5,
-  "name": "Address Unavailable (4)",
+  "name": "Address Unavailable · Dineout",
   "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
   "tags": [
     "search",
     "offer",
     "address",
-    "haminga",
-    "scenes",
+    "dineout",
     "bites",
     "my corner",
+    "scenes",
     "feed",
     "ios"
   ],
@@ -38,7 +38,7 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 5 items: Haminga, Scenes, Bites, My corner, Dineout",
+        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, Haminga",
         "Navigation title reads “Address Unavailable”",
         "Category strip: Food, Dineout, Scenes, Instamart",
         "Search bar present",
@@ -56,8 +56,8 @@
       "title": "Navigation",
       "points": [
         "Step 5 of 6 in “Browsing”",
-        "Reached from “Address Unavailable — loading (2)”",
-        "Leads to “Address Unavailable (5)”"
+        "Reached from “Address Unavailable — loading · Dineout”",
+        "Leads to “Address Unavailable”"
       ]
     },
     {
@@ -115,11 +115,11 @@
   "signals": {
     "lineCount": 30,
     "tabLabels": [
-      "Haminga",
-      "Scenes",
+      "Dineout",
       "Bites",
       "My corner",
-      "Dineout"
+      "Scenes",
+      "Haminga"
     ],
     "chipLabels": [
       "Food",
@@ -129,7 +129,8 @@
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Address Unavailable"
+    "title": "Address Unavailable",
+    "headline": "Starting At 749!"
   },
   "crawler": {
     "nodeId": "s010",
@@ -143,14 +144,14 @@
       {
         "from": "s009",
         "via": "at 0:12",
-        "name": "Address Unavailable — loading (2)"
+        "name": "Address Unavailable — loading · Dineout"
       }
     ],
     "leadsTo": [
       {
         "to": "s011",
         "via": "at 0:14",
-        "name": "Address Unavailable (5)"
+        "name": "Address Unavailable"
       }
     ]
   },

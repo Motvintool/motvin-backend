@@ -488,6 +488,30 @@ export function buildInspirationsManifest(root: string): BuildReport {
     }
   }
 
+  // Within one app, screens read in the order they were seen: by the moment
+  // of capture when a recording supplied one, then by the flow they belong to
+  // in the order flows were recorded and their position in it, then by name.
+  // Without this a folder walk puts "browsing/1" before "onboarding/1" and an
+  // app page opens on the middle of the journey instead of its splash.
+  const flowOrder = new Map<string, number>();
+  (flowsFile.flows || []).forEach((flow, index) => {
+    (flow.screenIds || []).forEach((id: string, position: number) => {
+      if (!flowOrder.has(id)) flowOrder.set(id, index * 10_000 + position);
+    });
+  });
+  const appOrder = new Map<string, number>();
+  screens.forEach((screen, index) => appOrder.set(screen.appId, Math.min(appOrder.get(screen.appId) ?? index, index)));
+  screens.sort((a, b) => {
+    if (a.appId !== b.appId) return (appOrder.get(a.appId) ?? 0) - (appOrder.get(b.appId) ?? 0);
+    const ta = a.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
+    const tb = b.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
+    if (ta !== tb) return ta - tb;
+    const fa = flowOrder.get(a.id) ?? Number.POSITIVE_INFINITY;
+    const fb = flowOrder.get(b.id) ?? Number.POSITIVE_INFINITY;
+    if (fa !== fb) return fa - fb;
+    return a.file.localeCompare(b.file, undefined, { numeric: true });
+  });
+
   const screensByApp = new Map<string, any[]>();
   for (const screen of screens) {
     if (!screensByApp.has(screen.appId)) screensByApp.set(screen.appId, []);

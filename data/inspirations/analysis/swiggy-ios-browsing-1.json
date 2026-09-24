@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-browsing-1",
   "screen_id": "swiggy-ios-browsing-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T15:41:08.681Z",
+  "analyzedAt": "2026-09-24T16:22:20.334Z",
   "screen_type": "home",
   "published_as": "home",
   "states": [],
@@ -10,16 +10,16 @@
   "flow": "discovery",
   "flow_name": "Browsing",
   "flow_position": 1,
-  "name": "Address Unavailable",
+  "name": "Address Unavailable · Food",
   "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
   "tags": [
     "search",
     "delivery",
     "address",
-    "reorder",
     "food",
     "bolt",
     "eatright",
+    "reorder",
     "home",
     "ios"
   ],
@@ -41,7 +41,7 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Reorder, Food, Bolt, EatRight",
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
         "Navigation title reads “Address Unavailable”",
         "Category strip: Dineout, Scenes, Food, Instamart",
         "Search bar present",
@@ -60,8 +60,8 @@
       "title": "Navigation",
       "points": [
         "Step 1 of 6 in “Browsing”",
-        "Reached from “Fresh, hot & crisp” and “Address Unavailable (5)”",
-        "Leads to “Address Unavailable (2)”",
+        "Reached from “Fresh, hot & crisp” and “Address Unavailable”",
+        "Leads to “Address Unavailable — loading · Instamart”",
         "Returned to 2 times in the recording"
       ]
     },
@@ -120,10 +120,10 @@
   "signals": {
     "lineCount": 30,
     "tabLabels": [
-      "Reorder",
       "Food",
       "Bolt",
-      "EatRight"
+      "EatRight",
+      "Reorder"
     ],
     "chipLabels": [
       "Dineout",
@@ -135,7 +135,8 @@
       "ORDER NOW"
     ],
     "keyboard": false,
-    "title": "Address Unavailable"
+    "title": "Address Unavailable",
+    "headline": "Bolt S | Food In 15 Mins!"
   },
   "crawler": {
     "nodeId": "s006",
@@ -154,14 +155,14 @@
       {
         "from": "s011",
         "via": "at 0:15",
-        "name": "Address Unavailable (5)"
+        "name": "Address Unavailable"
       }
     ],
     "leadsTo": [
       {
         "to": "s007",
         "via": "at 0:10",
-        "name": "Address Unavailable (2)"
+        "name": "Address Unavailable — loading · Instamart"
       }
     ]
   },

@@ -2,22 +2,24 @@
   "screenId": "swiggy-ios-browsing-2",
   "screen_id": "swiggy-ios-browsing-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T15:41:08.683Z",
-  "screen_type": "category",
-  "published_as": "feed",
-  "states": [],
+  "analyzedAt": "2026-09-24T16:22:20.342Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Browsing",
   "flow_position": 2,
-  "name": "Address Unavailable (2)",
-  "description": "Category screen with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
+  "name": "Address Unavailable — loading · Instamart",
+  "description": "Loading state of Address Unavailable with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
   "tags": [
     "search",
     "address",
-    "categories",
     "instamart",
-    "category",
+    "categories",
+    "loading",
     "ios"
   ],
   "elements": [
@@ -26,7 +28,9 @@
     "list",
     "chip",
     "carousel",
-    "page-indicator"
+    "page-indicator",
+    "skeleton",
+    "progress"
   ],
   "style": [
     "light"
@@ -46,16 +50,17 @@
     {
       "title": "Content",
       "points": [
-        "Category screen with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
-        "17 text elements recognised"
+        "Loading state of Address Unavailable with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: loading"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 2 of 6 in “Browsing”",
-        "Reached from “Address Unavailable”",
-        "Leads to “Address Unavailable (3)”"
+        "Reached from “Address Unavailable · Food”",
+        "Leads to “Address Unavailable · Instamart”"
       ]
     },
     {
@@ -113,8 +118,8 @@
   "signals": {
     "lineCount": 17,
     "tabLabels": [
-      "Categories",
-      "Instamart"
+      "Instamart",
+      "Categories"
     ],
     "chipLabels": [
       "Dineout",
@@ -124,7 +129,8 @@
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Address Unavailable"
+    "title": "Address Unavailable",
+    "headline": "Dineout"
   },
   "crawler": {
     "nodeId": "s007",
@@ -138,14 +144,14 @@
       {
         "from": "s006",
         "via": "at 0:10",
-        "name": "Address Unavailable"
+        "name": "Address Unavailable · Food"
       }
     ],
     "leadsTo": [
       {
         "to": "s008",
         "via": "at 0:11",
-        "name": "Address Unavailable (3)"
+        "name": "Address Unavailable · Instamart"
       }
     ]
   },

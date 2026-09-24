@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-browsing-4",
   "screen_id": "swiggy-ios-browsing-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T15:41:08.686Z",
+  "analyzedAt": "2026-09-24T16:22:20.346Z",
   "screen_type": "loading",
   "published_as": "loading",
   "states": [
@@ -12,15 +12,18 @@
   "flow": "discovery",
   "flow_name": "Browsing",
   "flow_position": 4,
-  "name": "Address Unavailable — loading (2)",
-  "description": "Loading state of Address Unavailable with a row of 4 category chips. Light theme, 6 text elements.",
+  "name": "Address Unavailable — loading · Dineout",
+  "description": "Loading state of Address Unavailable with a row of 4 category chips and a search bar. Light theme, 8 text elements.",
   "tags": [
+    "search",
     "address",
+    "dineout",
     "loading",
     "ios"
   ],
   "elements": [
     "nav-bar",
+    "search-bar",
     "chip",
     "skeleton",
     "progress"
@@ -34,15 +37,16 @@
       "points": [
         "No tab bar",
         "Navigation title reads “Address Unavailable”",
-        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Category strip: Scenes, Food, Dineout, Instamart",
+        "Search bar present",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Loading state of Address Unavailable with a row of 4 category chips. Light theme, 6 text elements.",
-        "6 text elements recognised",
+        "Loading state of Address Unavailable with a row of 4 category chips and a search bar. Light theme, 8 text elements.",
+        "8 text elements recognised",
         "State: loading"
       ]
     },
@@ -50,37 +54,37 @@
       "title": "Navigation",
       "points": [
         "Step 4 of 6 in “Browsing”",
-        "Reached from “Address Unavailable (3)”",
-        "Leads to “Address Unavailable (4)”"
+        "Reached from “Address Unavailable · Instamart”",
+        "Leads to “Address Unavailable · Dineout”"
       ]
     },
     {
       "title": "Capture",
       "points": [
         "Held for 0.6s at 0:11 in the recording",
-        "Frame 60 of 85 sampled at 5 fps",
+        "Frame 61 of 85 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f8f8fa",
+      "hex": "#fafafb",
       "role": "background",
-      "share": 0.943
+      "share": 0.925
     },
     {
-      "hex": "#dadcd4",
+      "hex": "#d9dbd5",
       "role": "surface",
-      "share": 0.028
+      "share": 0.04
     },
     {
-      "hex": "#c0c6b0",
+      "hex": "#c1c4b8",
       "role": "surface",
-      "share": 0.005
+      "share": 0.01
     },
     {
-      "hex": "#f5797a",
+      "hex": "#eb7a7d",
       "role": "accent",
       "share": 0.002
     },
@@ -94,7 +98,7 @@
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 85,
-    "frame": 60,
+    "frame": 61,
     "atSeconds": 11.8,
     "endSeconds": 12.4,
     "holdSeconds": 0.6,
@@ -107,17 +111,20 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 6,
-    "tabLabels": [],
+    "lineCount": 8,
+    "tabLabels": [
+      "Dineout"
+    ],
     "chipLabels": [
-      "Dineout",
       "Scenes",
       "Food",
+      "Dineout",
       "Instamart"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Address Unavailable"
+    "title": "Address Unavailable",
+    "headline": "In the spotlight"
   },
   "crawler": {
     "nodeId": "s009",
@@ -131,14 +138,14 @@
       {
         "from": "s008",
         "via": "at 0:11",
-        "name": "Address Unavailable (3)"
+        "name": "Address Unavailable · Instamart"
       }
     ],
     "leadsTo": [
       {
         "to": "s010",
         "via": "at 0:12",
-        "name": "Address Unavailable (4)"
+        "name": "Address Unavailable · Dineout"
       }
     ]
   },
