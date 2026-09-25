@@ -77,6 +77,8 @@ export interface InspirationFlow {
   category: string;
   platform: string;
   screenIds: string[];
+  /** The flow this one branches from, for the nested flow tree; null at the top level. */
+  parentId: string | null;
 }
 
 export interface InspirationPattern {
@@ -185,6 +187,7 @@ export class LoaderService implements OnModuleInit {
         description: screen.description || '',
         capture: screen.capture ?? null,
       }));
+      parsed.flows = (parsed.flows || []).map((flow) => ({ ...flow, parentId: flow.parentId ?? null }));
       parsed.taxonomy = { ...EMPTY_MANIFEST.taxonomy, ...(parsed.taxonomy || {}) };
       this.manifest = { ...EMPTY_MANIFEST, ...parsed };
       this.manifestMtime = mtime;

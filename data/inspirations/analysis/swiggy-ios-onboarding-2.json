@@ -2,146 +2,173 @@
   "screenId": "swiggy-ios-onboarding-2",
   "screen_id": "swiggy-ios-onboarding-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T16:22:20.204Z",
-  "screen_type": "login",
-  "published_as": "login",
+  "analyzedAt": "2026-09-24T17:18:08.157Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
   "states": [
-    "keyboard"
+    "coach-mark"
   ],
   "category": "productivity",
-  "flow": "authentication",
+  "flow": "onboarding",
   "flow_name": "Onboarding",
   "flow_position": 2,
-  "name": "One app for food, grocery, dining",
-  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "name": "Fresh, hot & crisp",
+  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 27 text elements.",
   "tags": [
-    "login",
-    "keyboard",
+    "delivery",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "coach-mark",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "keyboard",
-    "text-field",
-    "form",
+    "tab-bar",
+    "price",
     "list",
+    "chip",
     "cta",
     "button",
-    "legal-text"
+    "banner",
+    "bottom-sheet",
+    "coach-mark"
   ],
   "style": [
-    "light"
+    "dark",
+    "bold"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “One app for food, grocery, dining”",
-        "Keyboard is open, so the lower half is input",
-        "Light style"
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Fresh, hot & crisp”",
+        "Category strip: Scenes, Instamart, Food, Dineout",
+        "Bottom sheet over a dimmed background, covering 50% of the height from 48% down",
+        "Dark, Bold style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-        "Calls to action: “Continue”",
-        "28 text elements recognised",
-        "State: keyboard"
+        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 27 text elements.",
+        "Calls to action: “Continue to Food”, “ORDER NOW”",
+        "27 text elements recognised",
+        "State: coach-mark"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 5 in “Onboarding”",
-        "Reached from “Splash screen”",
-        "Leads to “Select your location”"
+        "Step 2 of 2 in “Onboarding”",
+        "Reached from “Food home — loading”",
+        "Leads to “Food home”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:01 in the recording",
-        "Frame 13 of 85 sampled at 5 fps",
+        "Held for 1.6s at 0:07 in the recording",
+        "Frame 43 of 86 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f7f7",
+      "hex": "#1f0d06",
       "role": "background",
-      "share": 0.56
+      "share": 0.526
     },
     {
-      "hex": "#fe5302",
-      "role": "accent",
-      "share": 0.173
-    },
-    {
-      "hex": "#e1e2e3",
+      "hex": "#989694",
       "role": "surface",
-      "share": 0.167
+      "share": 0.077
     },
     {
-      "hex": "#fb7d40",
+      "hex": "#3c2e28",
       "role": "surface",
-      "share": 0.027
+      "share": 0.056
     },
     {
-      "hex": "#c5c5c5",
+      "hex": "#f5f6f6",
+      "role": "text",
+      "share": 0.054
+    },
+    {
+      "hex": "#dbdcdb",
       "role": "surface",
-      "share": 0.022
+      "share": 0.032
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "swiggy-walkthrough.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 13,
-    "atSeconds": 1.8,
-    "endSeconds": 3,
-    "holdSeconds": 1.2,
+    "frames": 86,
+    "frame": 43,
+    "atSeconds": 7.4,
+    "endSeconds": 9,
+    "holdSeconds": 1.6,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.484375,
+        "w": 1,
+        "h": 0.5
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 28,
-    "tabLabels": [],
-    "chipLabels": [],
-    "ctas": [
-      "Continue"
+    "lineCount": 27,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
     ],
-    "keyboard": true,
-    "title": "One app for food, grocery, dining",
-    "headline": "Enter your number"
+    "chipLabels": [
+      "Scenes",
+      "Instamart",
+      "Food",
+      "Dineout"
+    ],
+    "ctas": [
+      "Continue to Food",
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Fresh, hot & crisp",
+    "headline": "O%o OFF"
   },
   "crawler": {
-    "nodeId": "s002",
-    "depth": 1,
+    "nodeId": "s005",
+    "depth": 4,
     "path": [],
     "visits": 1,
-    "blocked": true,
-    "blockedReason": "authentication screen — crawler does not sign in",
+    "blocked": false,
+    "blockedReason": null,
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s001",
-        "via": "at 0:01",
-        "name": "Splash screen"
+        "from": "s004",
+        "via": "at 0:07",
+        "name": "Food home — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s003",
-        "via": "at 0:03",
-        "name": "Select your location"
+        "to": "s006",
+        "via": "at 0:09",
+        "name": "Food home"
       }
     ]
   },

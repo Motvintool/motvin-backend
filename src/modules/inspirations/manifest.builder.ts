@@ -459,7 +459,11 @@ export function buildInspirationsManifest(root: string): BuildReport {
           flow: flowFolder,
           name: sidecar.name || (flowFolder ? `${titleCase(flowFolder)} ${base}` : titleCase(screenType)),
           file: `${platform}/${appId}/${file}`,
-          url: `/api/inspirations/screens/${platform}/${appId}/${file}`,
+          // The image is served as immutable for a week, and a recapture
+          // writes a new frame to the same path. The file's modification time
+          // in the query makes every republish a new URL, so a browser never
+          // keeps showing the frame that was there before.
+          url: `/api/inspirations/screens/${platform}/${appId}/${file}?v=${Math.floor(statSync(abs).mtimeMs / 1000).toString(36)}`,
           width: dimensions.width,
           height: dimensions.height,
           bytes: statSync(abs).size,
@@ -530,6 +534,19 @@ export function buildInspirationsManifest(root: string): BuildReport {
       return { ...flow, screenIds: (flow.screenIds || []).filter((id: string) => knownScreenIds.has(id)) };
     })
     .filter((flow) => flow.screenIds.length >= 2);
+
+  // A flow may nest inside another of the same app. The reference has to be
+  // to a flow that is itself published, and never to itself, or the tree the
+  // gallery draws from it would have a dangling branch.
+  const publishedFlowIds = new Set(publishedFlows.map((flow) => flow.id));
+  for (const flow of publishedFlows) {
+    const parentId = typeof flow.parentId === 'string' ? flow.parentId : null;
+    const parent = parentId ? publishedFlows.find((candidate) => candidate.id === parentId) : null;
+    if (parentId && (!publishedFlowIds.has(parentId) || parentId === flow.id || parent?.appId !== flow.appId)) {
+      warnings.push(`flow "${flow.id}" names a parent "${parentId}" that is not published for the same app — shown at the top level`);
+    }
+    flow.parentId = parent && parentId !== flow.id && parent.appId === flow.appId ? parentId : null;
+  }
 
   const apps = Array.from(appsSeen)
     .map((appId) => {

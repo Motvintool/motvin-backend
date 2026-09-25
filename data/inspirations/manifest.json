@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T16:22:35.571Z",
+  "generatedAt": "2026-09-24T17:19:34.499Z",
   "counts": {
     "apps": 3,
-    "screens": 15,
-    "flows": 3,
+    "screens": 12,
+    "flows": 5,
     "patterns": 7,
-    "ui-elements": 76
+    "ui-elements": 57
   },
   "taxonomy": {
     "platforms": [
@@ -20,11 +20,9 @@
       "home",
       "feed",
       "empty",
-      "loading",
       "other"
     ],
     "states": [
-      "loading",
       "empty",
       "coach-mark",
       "keyboard"
@@ -55,9 +53,7 @@
       "nav-bar",
       "page-indicator",
       "price",
-      "progress",
       "search-bar",
-      "skeleton",
       "tab-bar",
       "text-field"
     ],
@@ -177,8 +173,8 @@
       "website": null,
       "tagline": null,
       "logo": "/api/inspirations/logos/swiggy.png",
-      "screenCount": 11,
-      "flowCount": 2,
+      "screenCount": 8,
+      "flowCount": 4,
       "license": null,
       "attribution": "Swiggy",
       "rating": null,
@@ -228,7 +224,7 @@
       "flow": "login",
       "name": "Splash screen",
       "file": "ios/airbnb/login/1.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/1.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/1.png?v=tlglmk",
       "width": 576,
       "height": 1248,
       "bytes": 36598,
@@ -266,7 +262,7 @@
       "flow": "login",
       "name": "Log in or sign up",
       "file": "ios/airbnb/login/2.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/2.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/2.png?v=tlglmk",
       "width": 576,
       "height": 1248,
       "bytes": 88738,
@@ -307,7 +303,7 @@
       "flow": "login",
       "name": "Let's create your account",
       "file": "ios/airbnb/login/7.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/7.png",
+      "url": "/api/inspirations/screens/ios/airbnb/login/7.png?v=tlglmk",
       "width": 576,
       "height": 1248,
       "bytes": 196965,
@@ -350,10 +346,10 @@
       "flow": "onboarding",
       "name": "Splash screen",
       "file": "ios/swiggy/onboarding/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 165942,
+      "bytes": 190652,
       "platform": "ios",
       "screenType": "splash",
       "fineType": "splash",
@@ -391,15 +387,15 @@
       }
     },
     {
-      "id": "swiggy-ios-onboarding-2",
+      "id": "swiggy-ios-logging-in-1",
       "appId": "swiggy",
-      "flow": "onboarding",
+      "flow": "logging-in",
       "name": "One app for food, grocery, dining",
-      "file": "ios/swiggy/onboarding/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png",
+      "file": "ios/swiggy/logging-in/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/1.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 547015,
+      "bytes": 631554,
       "platform": "ios",
       "screenType": "login",
       "fineType": "login",
@@ -408,8 +404,8 @@
       ],
       "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
       "capture": {
-        "atSeconds": 1.8,
-        "holdSeconds": 1.2,
+        "atSeconds": 1.4,
+        "holdSeconds": 1.6,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -448,15 +444,15 @@
       }
     },
     {
-      "id": "swiggy-ios-onboarding-3",
+      "id": "swiggy-ios-logging-in-2",
       "appId": "swiggy",
-      "flow": "onboarding",
+      "flow": "logging-in",
       "name": "Select your location",
-      "file": "ios/swiggy/onboarding/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/3.png",
+      "file": "ios/swiggy/logging-in/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/2.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 898779,
+      "bytes": 682494,
       "platform": "ios",
       "screenType": "empty",
       "fineType": "empty_state",
@@ -503,83 +499,22 @@
       }
     },
     {
-      "id": "swiggy-ios-onboarding-4",
-      "appId": "swiggy",
-      "flow": "onboarding",
-      "name": "Address Unavailable — loading · Food",
-      "file": "ios/swiggy/onboarding/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/4.png",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 257815,
-      "platform": "ios",
-      "screenType": "loading",
-      "fineType": "loading",
-      "states": [
-        "loading"
-      ],
-      "description": "Loading state of Address Unavailable with a 4-item tab bar, a search bar and prices. Light theme, 6 text elements.",
-      "capture": {
-        "atSeconds": 5.4,
-        "holdSeconds": 1.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "productivity",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "loading",
-        "ios",
-        "productivity"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "skeleton",
-        "progress"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-24",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-onboarding-5",
+      "id": "swiggy-ios-onboarding-2",
       "appId": "swiggy",
       "flow": "onboarding",
       "name": "Fresh, hot & crisp",
-      "file": "ios/swiggy/onboarding/5.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/5.png",
+      "file": "ios/swiggy/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 1725410,
+      "bytes": 2036766,
       "platform": "ios",
       "screenType": "onboarding",
       "fineType": "coach_mark",
       "states": [
         "coach-mark"
       ],
-      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 27 text elements.",
       "capture": {
         "atSeconds": 7.4,
         "holdSeconds": 1.6,
@@ -631,12 +566,12 @@
       "id": "swiggy-ios-browsing-1",
       "appId": "swiggy",
       "flow": "browsing",
-      "name": "Address Unavailable · Food",
+      "name": "Food home",
       "file": "ios/swiggy/browsing/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/1.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 1592774,
+      "bytes": 1744357,
       "platform": "ios",
       "screenType": "home",
       "fineType": "home",
@@ -644,7 +579,7 @@
       "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
       "capture": {
         "atSeconds": 9.2,
-        "holdSeconds": 1,
+        "holdSeconds": 1.2,
         "brief": false,
         "visits": 2,
         "overlayOf": null,
@@ -693,79 +628,19 @@
       "id": "swiggy-ios-browsing-2",
       "appId": "swiggy",
       "flow": "browsing",
-      "name": "Address Unavailable — loading · Instamart",
+      "name": "Instamart home",
       "file": "ios/swiggy/browsing/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/2.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 568716,
-      "platform": "ios",
-      "screenType": "loading",
-      "fineType": "loading",
-      "states": [
-        "loading"
-      ],
-      "description": "Loading state of Address Unavailable with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
-      "capture": {
-        "atSeconds": 10.2,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "productivity",
-      "tags": [
-        "search",
-        "address",
-        "instamart",
-        "categories",
-        "loading",
-        "ios",
-        "productivity"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "carousel",
-        "page-indicator",
-        "skeleton",
-        "progress"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-24",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-browsing-3",
-      "appId": "swiggy",
-      "flow": "browsing",
-      "name": "Address Unavailable · Instamart",
-      "file": "ios/swiggy/browsing/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/3.png",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1294813,
+      "bytes": 1325170,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "feed",
       "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 25 text elements.",
       "capture": {
-        "atSeconds": 11,
+        "atSeconds": 11.2,
         "holdSeconds": 0.8,
         "brief": false,
         "visits": 1,
@@ -810,78 +685,22 @@
       }
     },
     {
-      "id": "swiggy-ios-browsing-4",
+      "id": "swiggy-ios-dineout-1",
       "appId": "swiggy",
-      "flow": "browsing",
-      "name": "Address Unavailable — loading · Dineout",
-      "file": "ios/swiggy/browsing/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/4.png",
+      "flow": "dineout",
+      "name": "Dineout home",
+      "file": "ios/swiggy/dineout/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 387527,
-      "platform": "ios",
-      "screenType": "loading",
-      "fineType": "loading",
-      "states": [
-        "loading"
-      ],
-      "description": "Loading state of Address Unavailable with a row of 4 category chips and a search bar. Light theme, 8 text elements.",
-      "capture": {
-        "atSeconds": 11.8,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "productivity",
-      "tags": [
-        "search",
-        "address",
-        "dineout",
-        "loading",
-        "ios",
-        "productivity"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "chip",
-        "skeleton",
-        "progress"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-24",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-browsing-5",
-      "appId": "swiggy",
-      "flow": "browsing",
-      "name": "Address Unavailable · Dineout",
-      "file": "ios/swiggy/browsing/5.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/5.png",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1004327,
+      "bytes": 1112174,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "feed",
       "states": [],
       "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
       "capture": {
-        "atSeconds": 12.4,
+        "atSeconds": 12.6,
         "holdSeconds": 1.2,
         "brief": false,
         "visits": 1,
@@ -925,22 +744,22 @@
       }
     },
     {
-      "id": "swiggy-ios-browsing-6",
+      "id": "swiggy-ios-dineout-2",
       "appId": "swiggy",
-      "flow": "browsing",
-      "name": "Address Unavailable",
-      "file": "ios/swiggy/browsing/6.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/6.png",
+      "flow": "dineout",
+      "name": "Scenes",
+      "file": "ios/swiggy/dineout/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/2.png?v=tlvpe8",
       "width": 1170,
       "height": 2532,
-      "bytes": 1816258,
+      "bytes": 2034749,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "category",
       "states": [],
       "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
       "capture": {
-        "atSeconds": 14.2,
+        "atSeconds": 14.4,
         "holdSeconds": 1.6,
         "brief": false,
         "visits": 1,
@@ -985,7 +804,7 @@
       "flow": null,
       "name": "Other",
       "file": "ios/whatsapp/other-bumble-ios-0.png",
-      "url": "/api/inspirations/screens/ios/whatsapp/other-bumble-ios-0.png",
+      "url": "/api/inspirations/screens/ios/whatsapp/other-bumble-ios-0.png?v=tlpq9h",
       "width": 1179,
       "height": 2554,
       "bytes": 58251,
@@ -1026,7 +845,8 @@
         "airbnb-ios-login-1",
         "airbnb-ios-login-2",
         "airbnb-ios-login-7"
-      ]
+      ],
+      "parentId": null
     },
     {
       "id": "swiggy-ios-onboarding",
@@ -1036,11 +856,11 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-onboarding-1",
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-onboarding-3",
-        "swiggy-ios-onboarding-4",
-        "swiggy-ios-onboarding-5"
-      ]
+        "swiggy-ios-logging-in-1",
+        "swiggy-ios-logging-in-2",
+        "swiggy-ios-onboarding-2"
+      ],
+      "parentId": null
     },
     {
       "id": "swiggy-ios-browsing",
@@ -1050,12 +870,33 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-browsing-1",
-        "swiggy-ios-browsing-2",
-        "swiggy-ios-browsing-3",
-        "swiggy-ios-browsing-4",
-        "swiggy-ios-browsing-5",
-        "swiggy-ios-browsing-6"
-      ]
+        "swiggy-ios-browsing-2"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-dineout-1",
+        "swiggy-ios-dineout-2"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-logging-in",
+      "appId": "swiggy",
+      "name": "Logging in",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-logging-in-1",
+        "swiggy-ios-logging-in-2"
+      ],
+      "parentId": "swiggy-ios-onboarding"
     }
   ],
   "patterns": [
@@ -1070,13 +911,11 @@
         "filter"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-5",
+        "swiggy-ios-onboarding-2",
         "swiggy-ios-browsing-1",
         "swiggy-ios-browsing-2",
-        "swiggy-ios-browsing-3",
-        "swiggy-ios-browsing-4",
-        "swiggy-ios-browsing-5",
-        "swiggy-ios-browsing-6"
+        "swiggy-ios-dineout-1",
+        "swiggy-ios-dineout-2"
       ]
     },
     {
@@ -1090,9 +929,9 @@
         "post"
       ],
       "screenIds": [
-        "swiggy-ios-browsing-3",
-        "swiggy-ios-browsing-5",
-        "swiggy-ios-browsing-6"
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-dineout-1",
+        "swiggy-ios-dineout-2"
       ]
     },
     {
@@ -1107,7 +946,7 @@
       ],
       "screenIds": [
         "airbnb-ios-login-2",
-        "swiggy-ios-onboarding-2"
+        "swiggy-ios-logging-in-1"
       ]
     },
     {
@@ -1135,7 +974,7 @@
         "mobile"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-5"
+        "swiggy-ios-onboarding-2"
       ]
     },
     {
@@ -1149,7 +988,7 @@
         "first run"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-3"
+        "swiggy-ios-logging-in-2"
       ]
     },
     {
@@ -1163,30 +1002,28 @@
         "intro"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-5"
+        "swiggy-ios-onboarding-2"
       ]
     }
   ],
   "elementCounts": {
     "cta": 5,
     "button": 5,
-    "nav-bar": 10,
+    "nav-bar": 7,
     "text-field": 2,
     "form": 2,
-    "list": 8,
+    "list": 7,
     "legal-text": 3,
     "keyboard": 1,
-    "search-bar": 8,
+    "search-bar": 5,
     "empty-state": 1,
-    "tab-bar": 5,
-    "price": 3,
-    "skeleton": 3,
-    "progress": 3,
-    "chip": 7,
+    "tab-bar": 4,
+    "price": 2,
+    "chip": 5,
     "banner": 4,
     "bottom-sheet": 1,
     "coach-mark": 1,
-    "carousel": 2,
-    "page-indicator": 2
+    "carousel": 1,
+    "page-indicator": 1
   }
 }

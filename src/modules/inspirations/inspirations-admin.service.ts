@@ -44,6 +44,8 @@ export type AdminScreenFile = {
   appId: string;
   file: string;
   bytes: number;
+  /** Modification time in ms — a version for the image URL, so a recapture never shows a cached frame. */
+  mtime: number;
   width: number | null;
   height: number | null;
   sidecar: Record<string, unknown> | null;
@@ -168,6 +170,7 @@ export class InspirationsAdminService {
             appId,
             file: f,
             bytes: statSync(abs).size,
+            mtime: Math.floor(statSync(abs).mtimeMs),
             width: dims?.width ?? null,
             height: dims?.height ?? null,
             sidecar: readJson<Record<string, unknown> | null>(
@@ -640,7 +643,13 @@ export class InspirationsAdminService {
     const file = join(this.root, 'flows.json');
     const data = readJson<{ version?: number; flows?: any[] }>(file, { version: 1, flows: [] });
     const flows = data.flows || [];
-    const record = { id, appId, name, category, platform, screenIds };
+    // The flow this one nests under, if any. Validated as a slug here; the
+    // builder checks it names a published flow of the same app.
+    const parentId =
+      typeof input?.parentId === 'string' && input.parentId.trim() && input.parentId !== id
+        ? this.assertSlug(input.parentId, 'parent flow id')
+        : null;
+    const record = { id, appId, name, category, platform, screenIds, parentId };
 
     const index = flows.findIndex((f) => f.id === id);
     if (index === -1) flows.push(record);

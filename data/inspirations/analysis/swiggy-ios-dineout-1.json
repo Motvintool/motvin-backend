@@ -1,16 +1,16 @@
 {
-  "screenId": "swiggy-ios-browsing-5",
-  "screen_id": "swiggy-ios-browsing-5",
+  "screenId": "swiggy-ios-dineout-1",
+  "screen_id": "swiggy-ios-dineout-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T16:22:20.347Z",
+  "analyzedAt": "2026-09-24T17:18:08.161Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
-  "flow_name": "Browsing",
-  "flow_position": 5,
-  "name": "Address Unavailable · Dineout",
+  "flow_name": "Dineout",
+  "flow_position": 1,
+  "name": "Dineout home",
   "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
   "tags": [
     "search",
@@ -39,8 +39,8 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, Haminga",
-        "Navigation title reads “Address Unavailable”",
-        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Navigation title reads “Starting At 749!”",
+        "Category strip: Dineout, Food, Scenes, Instamart",
         "Search bar present",
         "Light style"
       ]
@@ -55,54 +55,54 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 6 in “Browsing”",
-        "Reached from “Address Unavailable — loading · Dineout”",
-        "Leads to “Address Unavailable”"
+        "Step 1 of 2 in “Dineout”",
+        "Reached from “Dineout home — loading”",
+        "Leads to “Scenes”"
       ]
     },
     {
       "title": "Capture",
       "points": [
         "Held for 1.2s at 0:12 in the recording",
-        "Frame 67 of 85 sampled at 5 fps",
+        "Frame 68 of 86 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#fafaf9",
       "role": "background",
-      "share": 0.626
+      "share": 0.63
     },
     {
-      "hex": "#cbc9c4",
+      "hex": "#cfcdc8",
       "role": "surface",
-      "share": 0.071
+      "share": 0.062
     },
     {
-      "hex": "#460710",
+      "hex": "#4d050d",
       "role": "accent",
-      "share": 0.067
+      "share": 0.062
     },
     {
-      "hex": "#e4e1dd",
+      "hex": "#e3dedb",
       "role": "surface",
-      "share": 0.037
+      "share": 0.036
     },
     {
-      "hex": "#931d1e",
+      "hex": "#723c37",
       "role": "surface",
-      "share": 0.033
+      "share": 0.026
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "swiggy-walkthrough.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 67,
-    "atSeconds": 12.4,
-    "endSeconds": 13.6,
+    "frames": 86,
+    "frame": 68,
+    "atSeconds": 12.6,
+    "endSeconds": 13.8,
     "holdSeconds": 1.2,
     "brief": false,
     "kind": "screen",
@@ -122,14 +122,14 @@
       "Haminga"
     ],
     "chipLabels": [
-      "Food",
       "Dineout",
+      "Food",
       "Scenes",
       "Instamart"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Address Unavailable",
+    "title": "Starting At 749!",
     "headline": "Starting At 749!"
   },
   "crawler": {
@@ -144,14 +144,14 @@
       {
         "from": "s009",
         "via": "at 0:12",
-        "name": "Address Unavailable — loading · Dineout"
+        "name": "Dineout home — loading"
       }
     ],
     "leadsTo": [
       {
         "to": "s011",
         "via": "at 0:14",
-        "name": "Address Unavailable"
+        "name": "Scenes"
       }
     ]
   },

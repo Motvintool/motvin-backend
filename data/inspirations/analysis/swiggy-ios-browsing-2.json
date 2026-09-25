@@ -2,35 +2,35 @@
   "screenId": "swiggy-ios-browsing-2",
   "screen_id": "swiggy-ios-browsing-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-24T16:22:20.342Z",
-  "screen_type": "loading",
-  "published_as": "loading",
-  "states": [
-    "loading"
-  ],
+  "analyzedAt": "2026-09-24T17:18:08.160Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Browsing",
   "flow_position": 2,
-  "name": "Address Unavailable — loading · Instamart",
-  "description": "Loading state of Address Unavailable with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
+  "name": "Instamart home",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 25 text elements.",
   "tags": [
     "search",
     "address",
     "instamart",
     "categories",
-    "loading",
+    "redbull",
+    "feed",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
     "search-bar",
     "list",
     "chip",
     "carousel",
     "page-indicator",
-    "skeleton",
-    "progress"
+    "cta",
+    "button"
   ],
   "style": [
     "light"
@@ -39,8 +39,8 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Address Unavailable”",
+        "Tab bar with 3 items: Instamart, Categories, RedBull",
+        "Navigation title reads “Corner”",
         "Category strip: Dineout, Scenes, Food, Instamart",
         "Search bar present",
         "Paged carousel with a page indicator",
@@ -50,65 +50,65 @@
     {
       "title": "Content",
       "points": [
-        "Loading state of Address Unavailable with a row of 4 category chips, a search bar and a paged carousel. Light theme, 17 text elements.",
-        "17 text elements recognised",
-        "State: loading"
+        "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 25 text elements.",
+        "Calls to action: “SHOP NOW”",
+        "25 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 6 in “Browsing”",
-        "Reached from “Address Unavailable · Food”",
-        "Leads to “Address Unavailable · Instamart”"
+        "Step 2 of 2 in “Browsing”",
+        "Reached from “Instamart home — loading”",
+        "Leads to “Dineout home — loading”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.8s at 0:10 in the recording",
-        "Frame 54 of 85 sampled at 5 fps",
+        "Held for 0.8s at 0:11 in the recording",
+        "Frame 59 of 86 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f8f8fa",
+      "hex": "#fafbfb",
       "role": "background",
-      "share": 0.875
+      "share": 0.604
     },
     {
-      "hex": "#dbdbdc",
+      "hex": "#dfdbd3",
       "role": "surface",
-      "share": 0.042
+      "share": 0.12
     },
     {
-      "hex": "#c5c5c7",
+      "hex": "#c1b3a2",
       "role": "surface",
-      "share": 0.015
+      "share": 0.102
     },
     {
-      "hex": "#dd7c7b",
-      "role": "accent",
-      "share": 0.003
-    },
-    {
-      "hex": "#b7a8aa",
+      "hex": "#a09487",
       "role": "surface",
-      "share": 0.001
+      "share": 0.024
+    },
+    {
+      "hex": "#7f776c",
+      "role": "text",
+      "share": 0.01
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "swiggy-walkthrough.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 54,
-    "atSeconds": 10.2,
-    "endSeconds": 11,
+    "frames": 86,
+    "frame": 59,
+    "atSeconds": 11.2,
+    "endSeconds": 12,
     "holdSeconds": 0.8,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -116,10 +116,11 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 17,
+    "lineCount": 25,
     "tabLabels": [
       "Instamart",
-      "Categories"
+      "Categories",
+      "RedBull"
     ],
     "chipLabels": [
       "Dineout",
@@ -127,14 +128,16 @@
       "Food",
       "Instamart"
     ],
-    "ctas": [],
+    "ctas": [
+      "SHOP NOW"
+    ],
     "keyboard": false,
-    "title": "Address Unavailable",
-    "headline": "Dineout"
+    "title": "Corner",
+    "headline": "Corner"
   },
   "crawler": {
-    "nodeId": "s007",
-    "depth": 6,
+    "nodeId": "s008",
+    "depth": 7,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -142,16 +145,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s006",
-        "via": "at 0:10",
-        "name": "Address Unavailable · Food"
+        "from": "s007",
+        "via": "at 0:11",
+        "name": "Instamart home — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s008",
-        "via": "at 0:11",
-        "name": "Address Unavailable · Instamart"
+        "to": "s009",
+        "via": "at 0:12",
+        "name": "Dineout home — loading"
       }
     ]
   },
