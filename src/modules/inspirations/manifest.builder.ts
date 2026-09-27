@@ -531,7 +531,22 @@ export function buildInspirationsManifest(root: string): BuildReport {
           `flow "${flow.id}" drops ${missing.length} screen id(s) not stored or not approved: ${missing.join(', ')}`,
         );
       }
-      return { ...flow, screenIds: (flow.screenIds || []).filter((id: string) => knownScreenIds.has(id)) };
+      const screenIds = (flow.screenIds || []).filter((id: string) => knownScreenIds.has(id));
+      // The move that led to each step, when automatic capture recorded it.
+      const kinds = ['tap', 'type', 'switch-tab', 'scroll', 'back', 'dismiss', 'wait', 'open'];
+      const steps = (Array.isArray(flow.steps) ? flow.steps : [])
+        .filter((step: any) => step && knownScreenIds.has(step.screenId))
+        .map((step: any) => ({
+          screenId: step.screenId,
+          action:
+            step.action && kinds.includes(step.action.kind)
+              ? {
+                  kind: step.action.kind,
+                  label: typeof step.action.label === 'string' && step.action.label.trim() ? step.action.label.trim().slice(0, 60) : null,
+                }
+              : null,
+        }));
+      return { ...flow, screenIds, steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })) };
     })
     // A flow of one screen is a journey of one step — a sheet opened and
     // dismissed, a section glimpsed once — and belongs in the tree.

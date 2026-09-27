@@ -79,6 +79,8 @@ export interface InspirationFlow {
   screenIds: string[];
   /** The flow this one branches from, for the nested flow tree; null at the top level. */
   parentId: string | null;
+  /** Each step with the move that led to it from the step before, when recorded. */
+  steps?: { screenId: string; action: { kind: string; label: string | null } | null }[];
 }
 
 export interface InspirationPattern {
