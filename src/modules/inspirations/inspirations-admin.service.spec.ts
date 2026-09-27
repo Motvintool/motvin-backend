@@ -395,7 +395,7 @@ describe('InspirationsAdminService', () => {
       expect(result.removed.screens).toBe(0);
     });
 
-    it('needs at least two screens for a flow', () => {
+    it('needs at least one screen for a flow', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       expect(() =>
         service.saveFlow({
@@ -404,9 +404,9 @@ describe('InspirationsAdminService', () => {
           name: 'Onboarding',
           category: 'onboarding',
           platform: 'web',
-          screenIds: ['acme-web-dashboard'],
+          screenIds: [],
         }),
-      ).toThrow(/at least two/i);
+      ).toThrow(/at least one/i);
     });
 
     it('publishes a flow whose screens are all published', () => {
@@ -434,7 +434,7 @@ describe('InspirationsAdminService', () => {
       expect(manifest.flows[0].screenIds).toEqual(['acme-web-login', 'acme-web-dashboard']);
     });
 
-    it('drops flow steps that are not published, and the flow with them', () => {
+    it('drops flow steps that are not published, and keeps the flow with what remains', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false);
       service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
@@ -456,7 +456,9 @@ describe('InspirationsAdminService', () => {
       service.deleteScreen('web', 'acme', 'dashboard.png');
 
       const report = service.rebuild();
-      expect(report.counts.flows).toBe(0);
+      // A journey of one remaining step is still a journey — a section seen
+      // once, a sheet opened and dismissed — so the flow survives, shorter.
+      expect(report.counts.flows).toBe(1);
       expect(report.warnings.join(' ')).toMatch(/acme-web-dashboard/);
     });
   });

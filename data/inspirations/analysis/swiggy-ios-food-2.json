@@ -2,30 +2,36 @@
   "screenId": "swiggy-ios-food-2",
   "screen_id": "swiggy-ios-food-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.134Z",
-  "screen_type": "feed",
-  "published_as": "feed",
+  "analyzedAt": "2026-09-27T14:49:31.174Z",
+  "screen_type": "home",
+  "published_as": "home",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 2,
-  "name": "Food home (5)",
-  "description": "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
+  "name": "Food home",
+  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
   "tags": [
+    "search",
+    "delivery",
+    "address",
     "food",
     "bolt",
     "eatright",
     "reorder",
-    "feed",
+    "home",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
+    "search-bar",
     "price",
     "list",
     "chip",
+    "cta",
+    "button",
     "banner"
   ],
   "style": [
@@ -36,80 +42,83 @@
       "title": "Layout",
       "points": [
         "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Powered by”",
-        "Category strip: LOW, HIGH, ADDED, CAI, SUGAR, PROTEIN",
+        "Navigation title reads “Search for 'EatRight'”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Search bar present",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
-        "39 text elements recognised"
+        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "28 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 15 in “Food”",
-        "Reached from “Crunchy Treats, Tasty Deals! — loading”",
-        "Leads to “Food home (6)”"
+        "Step 2 of 10 in “Food”",
+        "Reached from “Fresh, hot & crisp”, “Food home (2)”, “Scenes”, “Food home (6)” and “NIC Ice Creams home”",
+        "Leads to “Search, Order, Enjoy, Repeat!”, “Instamart home — loading”, “Food home — loading”, “Grocery, dining” and “Food home — scrolled”",
+        "Returned to 5 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.6s at 1:02 in the recording",
-        "Frame 321 of 1141 sampled at 5 fps",
+        "Held for 3s at 0:12 in the recording",
+        "Frame 62 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#fcfcfc",
       "role": "background",
-      "share": 0.401
+      "share": 0.229
     },
     {
-      "hex": "#230a50",
+      "hex": "#020a2a",
+      "role": "text",
+      "share": 0.192
+    },
+    {
+      "hex": "#5b6588",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#f9d801",
       "role": "accent",
-      "share": 0.161
+      "share": 0.023
     },
     {
-      "hex": "#d6dddb",
+      "hex": "#601234",
       "role": "surface",
-      "share": 0.046
-    },
-    {
-      "hex": "#5a25aa",
-      "role": "surface",
-      "share": 0.014
-    },
-    {
-      "hex": "#343234",
-      "role": "surface",
-      "share": 0.01
+      "share": 0.023
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 321,
-    "atSeconds": 62.8,
-    "endSeconds": 64.4,
-    "holdSeconds": 1.6,
+    "frame": 62,
+    "atSeconds": 12.2,
+    "endSeconds": 15.2,
+    "holdSeconds": 3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 5
   },
   "signals": {
-    "lineCount": 39,
+    "lineCount": 28,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -117,21 +126,21 @@
       "Reorder"
     ],
     "chipLabels": [
-      "LOW",
-      "HIGH",
-      "ADDED",
-      "CAI",
-      "SUGAR",
-      "PROTEIN"
+      "Scenes",
+      "Dineout",
+      "Food",
+      "Instamart"
     ],
-    "ctas": [],
+    "ctas": [
+      "ORDER NOW"
+    ],
     "keyboard": false,
-    "title": "Powered by",
-    "headline": "FITPASS"
+    "title": "Search for 'EatRight'",
+    "headline": "WEEKEND"
   },
   "crawler": {
-    "nodeId": "s028",
-    "depth": 27,
+    "nodeId": "s006",
+    "depth": 5,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -139,16 +148,56 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s011",
-        "via": "at 1:02",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
+        "from": "s005",
+        "via": "at 0:12",
+        "name": "Fresh, hot & crisp"
+      },
+      {
+        "from": "s008",
+        "via": "at 0:17",
+        "name": "Food home (2)"
+      },
+      {
+        "from": "s022",
+        "via": "at 0:44",
+        "name": "Scenes"
+      },
+      {
+        "from": "s029",
+        "via": "at 1:08",
+        "name": "Food home (6)"
+      },
+      {
+        "from": "s031",
+        "via": "at 1:14",
+        "name": "NIC Ice Creams home"
       }
     ],
     "leadsTo": [
       {
-        "to": "s029",
-        "via": "at 1:04",
-        "name": "Food home (6)"
+        "to": "s007",
+        "via": "at 0:15",
+        "name": "Search, Order, Enjoy, Repeat!"
+      },
+      {
+        "to": "s009",
+        "via": "at 0:18",
+        "name": "Instamart home — loading"
+      },
+      {
+        "to": "s023",
+        "via": "at 0:46",
+        "name": "Food home — loading"
+      },
+      {
+        "to": "s030",
+        "via": "at 1:12",
+        "name": "Grocery, dining"
+      },
+      {
+        "to": "s032",
+        "via": "at 1:18",
+        "name": "Food home — scrolled"
       }
     ]
   },

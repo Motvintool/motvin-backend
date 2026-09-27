@@ -2,33 +2,29 @@
   "screenId": "swiggy-ios-food-5",
   "screen_id": "swiggy-ios-food-5",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.141Z",
-  "screen_type": "category",
+  "analyzedAt": "2026-09-27T14:49:31.236Z",
+  "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 5,
-  "name": "NIC Ice Creams home",
-  "description": "Category screen with a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 22 text elements, shown only briefly.",
+  "name": "Food home (4)",
+  "description": "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
   "tags": [
-    "search",
     "delivery",
-    "address",
-    "nic ice creams",
-    "category",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "search-bar",
+    "tab-bar",
     "price",
     "list",
-    "chip",
-    "cta",
-    "button",
-    "legal-text",
     "banner"
   ],
   "style": [
@@ -38,103 +34,96 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Search for 'Cake'”",
-        "Category strip: Dineout, Scenes, Food, Instamart",
-        "Search bar present",
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “99 store”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Category screen with a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 22 text elements, shown only briefly.",
-        "Calls to action: “ORDER NOW”",
-        "22 text elements recognised"
+        "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
+        "34 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 15 in “Food”",
-        "Reached from “Grocery, dining”",
-        "Leads to “Food home”"
+        "Step 5 of 10 in “Food”",
+        "Reached from “Food home — loading” and “Food home (3)”",
+        "Leads to “Crunchy Treats, Tasty Deals! — loading” and “Crispy Chicken Burger”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.2s at 1:14 in the recording",
-        "Shown only briefly; kept because it was distinct from its neighbours",
-        "Frame 370 of 1141 sampled at 5 fps",
+        "Held for 2.8s at 0:58 in the recording",
+        "Frame 306 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#fdfcfc",
       "role": "background",
-      "share": 0.16
+      "share": 0.429
     },
     {
-      "hex": "#03092a",
-      "role": "text",
-      "share": 0.141
-    },
-    {
-      "hex": "#fe5201",
+      "hex": "#09a6f9",
       "role": "accent",
-      "share": 0.061
+      "share": 0.174
     },
     {
-      "hex": "#cbcad3",
+      "hex": "#dcdedc",
       "role": "surface",
-      "share": 0.059
+      "share": 0.072
     },
     {
-      "hex": "#8770b1",
+      "hex": "#44b6f3",
       "role": "surface",
-      "share": 0.033
+      "share": 0.014
+    },
+    {
+      "hex": "#cac8ca",
+      "role": "surface",
+      "share": 0.012
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 370,
-    "atSeconds": 74,
-    "endSeconds": 74.2,
-    "holdSeconds": 0.2,
-    "brief": true,
+    "frame": 306,
+    "atSeconds": 58.6,
+    "endSeconds": 61.4,
+    "holdSeconds": 2.8,
+    "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
-    "lineCount": 22,
+    "lineCount": 34,
     "tabLabels": [
-      "NIC Ice Creams"
-    ],
-    "chipLabels": [
-      "Dineout",
-      "Scenes",
       "Food",
-      "Instamart"
+      "Bolt",
+      "EatRight",
+      "Reorder"
     ],
-    "ctas": [
-      "ORDER NOW"
-    ],
+    "chipLabels": [],
+    "ctas": [],
     "keyboard": false,
-    "title": "Search for 'Cake'",
-    "headline": "On mouth-watering"
+    "title": "99 store",
+    "headline": "99 store"
   },
   "crawler": {
-    "nodeId": "s031",
-    "depth": 30,
+    "nodeId": "s027",
+    "depth": 26,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -142,16 +131,26 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s030",
-        "via": "at 1:14",
-        "name": "Grocery, dining"
+        "from": "s026",
+        "via": "at 0:58",
+        "name": "Food home — loading"
+      },
+      {
+        "from": "s024",
+        "via": "at 3:38",
+        "name": "Food home (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s006",
-        "via": "at 1:14",
-        "name": "Food home"
+        "to": "s011",
+        "via": "at 1:01",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "to": "s077",
+        "via": "at 3:41",
+        "name": "Crispy Chicken Burger"
       }
     ]
   },

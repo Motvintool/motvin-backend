@@ -2,105 +2,113 @@
   "screenId": "swiggy-ios-food-3",
   "screen_id": "swiggy-ios-food-3",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.137Z",
-  "screen_type": "home",
-  "published_as": "home",
+  "analyzedAt": "2026-09-27T14:49:31.182Z",
+  "screen_type": "feed",
+  "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 3,
-  "name": "Food home (6)",
-  "description": "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
+  "name": "Food home (2)",
+  "description": "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
   "tags": [
-    "discount",
+    "search",
+    "delivery",
+    "address",
     "food",
     "bolt",
     "eatright",
     "reorder",
-    "home",
+    "feed",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
+    "search-bar",
+    "price",
+    "list",
     "cta",
-    "button"
+    "button",
+    "legal-text",
+    "banner"
   ],
   "style": [
-    "light",
-    "minimal"
+    "light"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 5 items: Food, Bolt, EatRight, Reorder, Big",
-        "Navigation title reads “Uh Oh! You don't have any food orders”",
-        "Light, Minimal style"
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Instamar To=P4eut”",
+        "Search bar present",
+        "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
-        "Calls to action: “Order Now”",
-        "4 text elements recognised"
+        "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
+        "Calls to action: “ORDER NOW”",
+        "38 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 15 in “Food”",
-        "Reached from “Food home (5)”",
+        "Step 3 of 10 in “Food”",
+        "Reached from “Search, Order, Enjoy, Repeat!”",
         "Leads to “Food home”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 4.4s at 1:04 in the recording",
-        "Frame 343 of 1141 sampled at 5 fps",
+        "Held for 0.2s at 0:17 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 87 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f2f2f6",
+      "hex": "#f9f9fa",
       "role": "background",
-      "share": 0.938
+      "share": 0.282
     },
     {
-      "hex": "#d6d4d8",
+      "hex": "#030923",
+      "role": "accent",
+      "share": 0.149
+    },
+    {
+      "hex": "#dad9dc",
       "role": "surface",
-      "share": 0.024
+      "share": 0.071
     },
     {
-      "hex": "#8d8f93",
+      "hex": "#766ca0",
       "role": "surface",
-      "share": 0.008
+      "share": 0.051
     },
     {
-      "hex": "#1b1d22",
-      "role": "text",
-      "share": 0.008
-    },
-    {
-      "hex": "#bbbbbf",
+      "hex": "#4b4c52",
       "role": "surface",
-      "share": 0.006
+      "share": 0.03
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 343,
-    "atSeconds": 64.4,
-    "endSeconds": 68.8,
-    "holdSeconds": 4.4,
-    "brief": false,
+    "frame": 87,
+    "atSeconds": 17.4,
+    "endSeconds": 17.6,
+    "holdSeconds": 0.2,
+    "brief": true,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
@@ -109,25 +117,24 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 4,
+    "lineCount": 38,
     "tabLabels": [
       "Food",
       "Bolt",
       "EatRight",
-      "Reorder",
-      "Big"
+      "Reorder"
     ],
     "chipLabels": [],
     "ctas": [
-      "Order Now"
+      "ORDER NOW"
     ],
     "keyboard": false,
-    "title": "Uh Oh! You don't have any food orders",
-    "headline": "Uh Oh! You don't have any food orders"
+    "title": "Instamar To=P4eut",
+    "headline": "Instamar To=P4eut"
   },
   "crawler": {
-    "nodeId": "s029",
-    "depth": 28,
+    "nodeId": "s008",
+    "depth": 7,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -135,15 +142,15 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s028",
-        "via": "at 1:04",
-        "name": "Food home (5)"
+        "from": "s007",
+        "via": "at 0:17",
+        "name": "Search, Order, Enjoy, Repeat!"
       }
     ],
     "leadsTo": [
       {
         "to": "s006",
-        "via": "at 1:08",
+        "via": "at 0:17",
         "name": "Food home"
       }
     ]

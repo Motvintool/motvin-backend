@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-chinese-2",
   "screen_id": "swiggy-ios-chinese-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.211Z",
+  "analyzedAt": "2026-09-27T14:49:31.355Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,8 +10,8 @@
   "flow": "discovery",
   "flow_name": "Chinese",
   "flow_position": 2,
-  "name": "Chinese home",
-  "description": "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
+  "name": "Chinese home (2)",
+  "description": "Feed screen. Light theme, 34 text elements.",
   "tags": [
     "chinese",
     "biryani",
@@ -19,7 +19,6 @@
     "ios"
   ],
   "elements": [
-    "tab-bar",
     "nav-bar",
     "list",
     "banner"
@@ -31,7 +30,7 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 3 items: Chinese, Chinese, Biryani",
+        "No tab bar",
         "Navigation title reads “Deals On Your Favs”",
         "Light style"
       ]
@@ -39,23 +38,23 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
-        "35 text elements recognised"
+        "Feed screen. Light theme, 34 text elements.",
+        "34 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 7 in “Chinese”",
-        "Reached from “Biryani home”",
-        "Leads to “Chinese home (2)”"
+        "Step 2 of 2 in “Chinese”",
+        "Reached from “Chinese home”",
+        "Leads to “Biryani home”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.8s at 3:17 in the recording",
-        "Frame 988 of 1141 sampled at 5 fps",
+        "Held for 0.6s at 3:18 in the recording",
+        "Frame 992 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -64,37 +63,37 @@
     {
       "hex": "#fbfbfb",
       "role": "background",
-      "share": 0.309
+      "share": 0.313
     },
     {
-      "hex": "#021249",
+      "hex": "#021349",
       "role": "accent",
-      "share": 0.188
+      "share": 0.191
     },
     {
-      "hex": "#cfcfd0",
+      "hex": "#d4d4d5",
       "role": "surface",
-      "share": 0.085
+      "share": 0.11
     },
     {
-      "hex": "#3c4150",
+      "hex": "#383e4c",
       "role": "surface",
-      "share": 0.039
+      "share": 0.044
     },
     {
-      "hex": "#eae3df",
+      "hex": "#575048",
       "role": "surface",
-      "share": 0.028
+      "share": 0.015
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 988,
-    "atSeconds": 197.2,
-    "endSeconds": 198,
-    "holdSeconds": 0.8,
+    "frame": 992,
+    "atSeconds": 198,
+    "endSeconds": 198.6,
+    "holdSeconds": 0.6,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -104,9 +103,8 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 35,
+    "lineCount": 34,
     "tabLabels": [
-      "Chinese",
       "Chinese",
       "Biryani"
     ],
@@ -117,8 +115,8 @@
     "headline": "Deals On Your Favs"
   },
   "crawler": {
-    "nodeId": "s068",
-    "depth": 67,
+    "nodeId": "s069",
+    "depth": 68,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -126,16 +124,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s067",
-        "via": "at 3:17",
-        "name": "Biryani home"
+        "from": "s068",
+        "via": "at 3:18",
+        "name": "Chinese home"
       }
     ],
     "leadsTo": [
       {
-        "to": "s069",
+        "to": "s067",
         "via": "at 3:18",
-        "name": "Chinese home (2)"
+        "name": "Biryani home"
       }
     ]
   },

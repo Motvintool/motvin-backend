@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-7",
   "screen_id": "swiggy-ios-dineout-7",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.197Z",
+  "analyzedAt": "2026-09-27T14:49:31.341Z",
   "screen_type": "empty_state",
   "published_as": "empty",
   "states": [
@@ -12,7 +12,7 @@
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 7,
-  "name": "My Corner",
+  "name": "My Corner (3)",
   "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
   "tags": [
     "booking",
@@ -39,7 +39,7 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, PONNENC",
+        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, DONNENG",
         "Navigation title reads “My Corner”",
         "Light style"
       ]
@@ -56,61 +56,62 @@
       "title": "Navigation",
       "points": [
         "Step 7 of 7 in “Dineout”",
-        "Reached from “Crunchy Treats, Tasty Deals! — loading”",
-        "Leads to “Sizzlewood By The — loading”"
+        "Reached from “My Corner (2)” and “Search (2)”",
+        "Leads to “Search — loading” and “Dineout home (2)”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2s at 2:47 in the recording",
-        "Frame 846 of 1141 sampled at 5 fps",
+        "Held for 0.8s at 2:56 in the recording",
+        "Frame 885 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fbfbfb",
+      "hex": "#fbfafb",
       "role": "background",
-      "share": 0.64
+      "share": 0.655
     },
     {
-      "hex": "#dbdbda",
+      "hex": "#d8d9db",
       "role": "surface",
-      "share": 0.117
+      "share": 0.092
     },
     {
-      "hex": "#715e4e",
-      "role": "text",
-      "share": 0.069
-    },
-    {
-      "hex": "#92806a",
+      "hex": "#bebab3",
       "role": "surface",
-      "share": 0.045
+      "share": 0.056
     },
     {
-      "hex": "#c1c0bd",
+      "hex": "#a25422",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#9f9fa0",
       "role": "surface",
-      "share": 0.044
+      "share": 0.008
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 846,
-    "atSeconds": 167.4,
-    "endSeconds": 169.4,
-    "holdSeconds": 2,
+    "frame": 885,
+    "atSeconds": 176.4,
+    "endSeconds": 177.2,
+    "holdSeconds": 0.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
     "lineCount": 14,
@@ -119,7 +120,7 @@
       "Bites",
       "My corner",
       "Scenes",
-      "PONNENC"
+      "DONNENG"
     ],
     "chipLabels": [],
     "ctas": [],
@@ -128,8 +129,8 @@
     "headline": "Sizzlewood By The Gun BBQ"
   },
   "crawler": {
-    "nodeId": "s058",
-    "depth": 57,
+    "nodeId": "s063",
+    "depth": 62,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -137,16 +138,26 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s011",
-        "via": "at 2:47",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
+        "from": "s062",
+        "via": "at 2:56",
+        "name": "My Corner (2)"
+      },
+      {
+        "from": "s066",
+        "via": "at 3:01",
+        "name": "Search (2)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s059",
-        "via": "at 2:49",
-        "name": "Sizzlewood By The — loading"
+        "to": "s064",
+        "via": "at 2:57",
+        "name": "Search — loading"
+      },
+      {
+        "to": "s055",
+        "via": "at 3:03",
+        "name": "Dineout home (2)"
       }
     ]
   },

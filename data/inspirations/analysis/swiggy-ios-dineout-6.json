@@ -2,101 +2,108 @@
   "screenId": "swiggy-ios-dineout-6",
   "screen_id": "swiggy-ios-dineout-6",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.196Z",
-  "screen_type": "product_detail",
-  "published_as": "product",
-  "states": [],
+  "analyzedAt": "2026-09-27T14:49:31.338Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 6,
-  "name": "Product detail",
-  "description": "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
+  "name": "My Corner (2)",
+  "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
   "tags": [
+    "booking",
+    "offer",
     "dineout",
     "bites",
     "my corner",
     "scenes",
-    "product-detail",
+    "empty-state",
+    "empty",
     "ios"
   ],
   "elements": [
     "tab-bar",
-    "price",
-    "cta",
-    "button"
+    "nav-bar",
+    "list",
+    "banner",
+    "empty-state"
   ],
   "style": [
-    "dark"
+    "light"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, PONNENC",
-        "Dark style"
+        "Navigation title reads “My Corner”",
+        "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
-        "Calls to action: “Book Now”",
-        "6 text elements recognised"
+        "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
+        "14 text elements recognised",
+        "State: empty"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 6 of 7 in “Dineout”",
-        "Reached from “Product detail — loading”",
-        "Leads to “Crunchy Treats, Tasty Deals! — loading”"
+        "Reached from “Flat 20% off on Total Bill”",
+        "Leads to “My Corner (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 2:45 in the recording",
-        "Frame 829 of 1141 sampled at 5 fps",
+        "Held for 2s at 2:54 in the recording",
+        "Frame 880 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#9f2d10",
+      "hex": "#fbfafb",
       "role": "background",
-      "share": 0.168
+      "share": 0.654
     },
     {
-      "hex": "#0d0c0f",
+      "hex": "#dbd9db",
       "role": "surface",
-      "share": 0.16
+      "share": 0.115
     },
     {
-      "hex": "#362624",
+      "hex": "#babbbd",
       "role": "surface",
-      "share": 0.16
+      "share": 0.041
     },
     {
-      "hex": "#fd8c30",
-      "role": "accent",
-      "share": 0.128
-    },
-    {
-      "hex": "#565155",
+      "hex": "#9d979b",
       "role": "surface",
-      "share": 0.1
+      "share": 0.032
+    },
+    {
+      "hex": "#221a22",
+      "role": "text",
+      "share": 0.03
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 829,
-    "atSeconds": 165.4,
-    "endSeconds": 166,
-    "holdSeconds": 0.6,
+    "frame": 880,
+    "atSeconds": 174.4,
+    "endSeconds": 176.4,
+    "holdSeconds": 2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -106,7 +113,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 6,
+    "lineCount": 14,
     "tabLabels": [
       "Dineout",
       "Bites",
@@ -115,16 +122,14 @@
       "PONNENC"
     ],
     "chipLabels": [],
-    "ctas": [
-      "Book Now"
-    ],
+    "ctas": [],
     "keyboard": false,
-    "title": null,
-    "headline": "This is where flavours come alive"
+    "title": "My Corner",
+    "headline": "Sizzlewood By The Gun BBQ"
   },
   "crawler": {
-    "nodeId": "s057",
-    "depth": 56,
+    "nodeId": "s062",
+    "depth": 61,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -132,16 +137,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s056",
-        "via": "at 2:45",
-        "name": "Product detail — loading"
+        "from": "s061",
+        "via": "at 2:54",
+        "name": "Flat 20% off on Total Bill"
       }
     ],
     "leadsTo": [
       {
-        "to": "s011",
-        "via": "at 2:46",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
+        "to": "s063",
+        "via": "at 2:56",
+        "name": "My Corner (3)"
       }
     ]
   },

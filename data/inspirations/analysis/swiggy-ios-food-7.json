@@ -2,125 +2,132 @@
   "screenId": "swiggy-ios-food-7",
   "screen_id": "swiggy-ios-food-7",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.146Z",
-  "screen_type": "feed",
-  "published_as": "feed",
+  "analyzedAt": "2026-09-27T14:49:31.243Z",
+  "screen_type": "home",
+  "published_as": "home",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 7,
-  "name": "Swiggy Seal",
-  "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 29 text elements.",
+  "name": "Food home (6)",
+  "description": "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
   "tags": [
-    "search",
-    "rating",
-    "feed",
+    "discount",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "home",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
-    "search-bar",
-    "price",
-    "list",
-    "carousel",
-    "page-indicator",
-    "banner"
+    "cta",
+    "button"
   ],
   "style": [
-    "light"
+    "light",
+    "minimal"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Swiggy Seal”",
-        "Search bar present",
-        "Paged carousel with a page indicator",
-        "Light style"
+        "Tab bar with 5 items: Food, Bolt, EatRight, Reorder, Big",
+        "Navigation title reads “Uh Oh! You don't have any food orders”",
+        "Light, Minimal style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a search bar, a paged carousel and prices. Light theme, 29 text elements.",
-        "29 text elements recognised"
+        "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
+        "Calls to action: “Order Now”",
+        "4 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 7 of 15 in “Food”",
-        "Reached from “Food home — scrolled”, “Search in NIC Ice Creams”, “Swiggy Seal (2)” and “Nic (2)”",
-        "Leads to “Search in NIC Ice Creams”, “Swiggy Seal (2)”, “Nic” and “NIC Ice Creams”",
-        "Returned to 4 times in the recording"
+        "Step 7 of 10 in “Food”",
+        "Reached from “Food home (5)”",
+        "Leads to “Food home”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.8s at 1:21 in the recording",
-        "Frame 423 of 1141 sampled at 5 fps",
+        "Held for 4.4s at 1:04 in the recording",
+        "Frame 343 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fdfcfc",
+      "hex": "#f2f2f6",
       "role": "background",
-      "share": 0.393
+      "share": 0.938
     },
     {
-      "hex": "#05070b",
-      "role": "accent",
-      "share": 0.144
-    },
-    {
-      "hex": "#dee0dc",
-      "role": "surface",
-      "share": 0.07
-    },
-    {
-      "hex": "#a9b974",
-      "role": "surface",
-      "share": 0.026
-    },
-    {
-      "hex": "#4a4c4d",
+      "hex": "#d6d4d8",
       "role": "surface",
       "share": 0.024
+    },
+    {
+      "hex": "#8d8f93",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#1b1d22",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#bbbbbf",
+      "role": "surface",
+      "share": 0.006
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 423,
-    "atSeconds": 81,
-    "endSeconds": 84.8,
-    "holdSeconds": 3.8,
+    "frame": 343,
+    "atSeconds": 64.4,
+    "endSeconds": 68.8,
+    "holdSeconds": 4.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 4
+    "visits": 1
   },
   "signals": {
-    "lineCount": 29,
-    "tabLabels": [],
+    "lineCount": 4,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder",
+      "Big"
+    ],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Order Now"
+    ],
     "keyboard": false,
-    "title": "Swiggy Seal",
-    "headline": "Top Picks"
+    "title": "Uh Oh! You don't have any food orders",
+    "headline": "Uh Oh! You don't have any food orders"
   },
   "crawler": {
-    "nodeId": "s033",
-    "depth": 32,
+    "nodeId": "s029",
+    "depth": 28,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -128,46 +135,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s032",
-        "via": "at 1:21",
-        "name": "Food home — scrolled"
-      },
-      {
-        "from": "s034",
-        "via": "at 1:31",
-        "name": "Search in NIC Ice Creams"
-      },
-      {
-        "from": "s035",
-        "via": "at 1:38",
-        "name": "Swiggy Seal (2)"
-      },
-      {
-        "from": "s037",
-        "via": "at 1:43",
-        "name": "Nic (2)"
+        "from": "s028",
+        "via": "at 1:04",
+        "name": "Food home (5)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s034",
-        "via": "at 1:25",
-        "name": "Search in NIC Ice Creams"
-      },
-      {
-        "to": "s035",
-        "via": "at 1:37",
-        "name": "Swiggy Seal (2)"
-      },
-      {
-        "to": "s036",
-        "via": "at 1:40",
-        "name": "Nic"
-      },
-      {
-        "to": "s038",
-        "via": "at 1:45",
-        "name": "NIC Ice Creams"
+        "to": "s006",
+        "via": "at 1:08",
+        "name": "Food home"
       }
     ]
   },

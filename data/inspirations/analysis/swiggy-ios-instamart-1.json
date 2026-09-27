@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-instamart-1",
   "screen_id": "swiggy-ios-instamart-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.101Z",
+  "analyzedAt": "2026-09-27T14:49:31.186Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,16 +10,14 @@
   "flow": "discovery",
   "flow_name": "Instamart",
   "flow_position": 1,
-  "name": "Food home (2)",
-  "description": "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
+  "name": "Instamart home",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 27 text elements.",
   "tags": [
     "search",
-    "delivery",
     "address",
-    "food",
-    "bolt",
-    "eatright",
-    "reorder",
+    "instamart",
+    "categories",
+    "redbull",
     "feed",
     "ios"
   ],
@@ -27,12 +25,12 @@
     "tab-bar",
     "nav-bar",
     "search-bar",
-    "price",
     "list",
+    "chip",
+    "carousel",
+    "page-indicator",
     "cta",
-    "button",
-    "legal-text",
-    "banner"
+    "button"
   ],
   "style": [
     "light"
@@ -41,74 +39,75 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Instamar To=P4eut”",
+        "Tab bar with 3 items: Instamart, Categories, RedBull",
+        "Navigation title reads “Corner”",
+        "Category strip: Dineout, Scenes, Food, Instamart",
         "Search bar present",
+        "Paged carousel with a page indicator",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
-        "Calls to action: “ORDER NOW”",
-        "38 text elements recognised"
+        "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 27 text elements.",
+        "Calls to action: “SHOP NOW”",
+        "27 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 10 in “Instamart”",
-        "Reached from “Search, Order, Enjoy, Repeat!”",
-        "Leads to “Food home”"
+        "Step 1 of 4 in “Instamart”",
+        "Reached from “Instamart home — loading”",
+        "Leads to “Crunchy Treats, Tasty Deals! — loading”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.2s at 0:17 in the recording",
-        "Shown only briefly; kept because it was distinct from its neighbours",
-        "Frame 87 of 1141 sampled at 5 fps",
+        "Held for 3.4s at 0:19 in the recording",
+        "Frame 114 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f9f9fa",
+      "hex": "#fafbfb",
       "role": "background",
-      "share": 0.282
+      "share": 0.542
     },
     {
-      "hex": "#030923",
-      "role": "accent",
-      "share": 0.149
-    },
-    {
-      "hex": "#dad9dc",
+      "hex": "#b9a994",
       "role": "surface",
-      "share": 0.071
+      "share": 0.114
     },
     {
-      "hex": "#766ca0",
+      "hex": "#ded9d2",
       "role": "surface",
-      "share": 0.051
+      "share": 0.113
     },
     {
-      "hex": "#4b4c52",
+      "hex": "#9b8a79",
+      "role": "text",
+      "share": 0.031
+    },
+    {
+      "hex": "#cac2b6",
       "role": "surface",
-      "share": 0.03
+      "share": 0.013
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 87,
-    "atSeconds": 17.4,
-    "endSeconds": 17.6,
-    "holdSeconds": 0.2,
-    "brief": true,
+    "frame": 114,
+    "atSeconds": 19.6,
+    "endSeconds": 23,
+    "holdSeconds": 3.4,
+    "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
@@ -117,24 +116,28 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 38,
+    "lineCount": 27,
     "tabLabels": [
-      "Food",
-      "Bolt",
-      "EatRight",
-      "Reorder"
+      "Instamart",
+      "Categories",
+      "RedBull"
     ],
-    "chipLabels": [],
+    "chipLabels": [
+      "Dineout",
+      "Scenes",
+      "Food",
+      "Instamart"
+    ],
     "ctas": [
-      "ORDER NOW"
+      "SHOP NOW"
     ],
     "keyboard": false,
-    "title": "Instamar To=P4eut",
-    "headline": "Instamar To=P4eut"
+    "title": "Corner",
+    "headline": "Corner"
   },
   "crawler": {
-    "nodeId": "s008",
-    "depth": 7,
+    "nodeId": "s010",
+    "depth": 9,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -142,16 +145,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s007",
-        "via": "at 0:17",
-        "name": "Search, Order, Enjoy, Repeat!"
+        "from": "s009",
+        "via": "at 0:19",
+        "name": "Instamart home — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s006",
-        "via": "at 0:17",
-        "name": "Food home"
+        "to": "s011",
+        "via": "at 0:23",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
       }
     ]
   },

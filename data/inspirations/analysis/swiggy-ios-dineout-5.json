@@ -2,33 +2,35 @@
   "screenId": "swiggy-ios-dineout-5",
   "screen_id": "swiggy-ios-dineout-5",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.194Z",
-  "screen_type": "feed",
-  "published_as": "feed",
-  "states": [],
+  "analyzedAt": "2026-09-27T14:49:31.329Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 5,
-  "name": "Dineout home (2)",
-  "description": "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
+  "name": "My Corner",
+  "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
   "tags": [
-    "search",
+    "booking",
     "offer",
     "dineout",
     "bites",
     "my corner",
     "scenes",
-    "feed",
+    "empty-state",
+    "empty",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
-    "search-bar",
     "list",
-    "chip",
-    "banner"
+    "banner",
+    "empty-state"
   ],
   "style": [
     "light"
@@ -37,102 +39,97 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Dineout, Bites, My corner, Scenes",
-        "Navigation title reads “Search for Restaurants”",
-        "Category strip: Pre-Book, near me, Offers",
-        "Search bar present",
+        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, PONNENC",
+        "Navigation title reads “My Corner”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
-        "30 text elements recognised"
+        "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
+        "14 text elements recognised",
+        "State: empty"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 5 of 7 in “Dineout”",
-        "Reached from “Scenes (2)” and “My Corner (3)”",
-        "Leads to “Product detail — loading” and “Dineout home”",
-        "Returned to 2 times in the recording"
+        "Reached from “Crunchy Treats, Tasty Deals! — loading”",
+        "Leads to “Sizzlewood By The — loading”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 2:41 in the recording",
-        "Frame 815 of 1141 sampled at 5 fps",
+        "Held for 2s at 2:47 in the recording",
+        "Frame 846 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fbf9f7",
+      "hex": "#fbfbfb",
       "role": "background",
-      "share": 0.613
+      "share": 0.64
     },
     {
-      "hex": "#c9c3be",
+      "hex": "#dbdbda",
       "role": "surface",
-      "share": 0.122
+      "share": 0.117
     },
     {
-      "hex": "#e5e0d9",
-      "role": "surface",
-      "share": 0.041
-    },
-    {
-      "hex": "#32353b",
+      "hex": "#715e4e",
       "role": "text",
-      "share": 0.034
+      "share": 0.069
     },
     {
-      "hex": "#62656a",
+      "hex": "#92806a",
       "role": "surface",
-      "share": 0.012
+      "share": 0.045
+    },
+    {
+      "hex": "#c1c0bd",
+      "role": "surface",
+      "share": 0.044
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 815,
-    "atSeconds": 161.4,
-    "endSeconds": 163.2,
-    "holdSeconds": 1.8,
+    "frame": 846,
+    "atSeconds": 167.4,
+    "endSeconds": 169.4,
+    "holdSeconds": 2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
-    "lineCount": 30,
+    "lineCount": 14,
     "tabLabels": [
       "Dineout",
       "Bites",
       "My corner",
-      "Scenes"
+      "Scenes",
+      "PONNENC"
     ],
-    "chipLabels": [
-      "Pre-Book",
-      "near me",
-      "Offers"
-    ],
+    "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Search for Restaurants",
-    "headline": "Hey, what's on your mind?"
+    "title": "My Corner",
+    "headline": "Sizzlewood By The Gun BBQ"
   },
   "crawler": {
-    "nodeId": "s055",
-    "depth": 54,
+    "nodeId": "s058",
+    "depth": 57,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -140,26 +137,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s054",
-        "via": "at 2:41",
-        "name": "Scenes (2)"
-      },
-      {
-        "from": "s063",
-        "via": "at 3:03",
-        "name": "My Corner (3)"
+        "from": "s011",
+        "via": "at 2:47",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s056",
-        "via": "at 2:43",
-        "name": "Product detail — loading"
-      },
-      {
-        "to": "s021",
-        "via": "at 3:05",
-        "name": "Dineout home"
+        "to": "s059",
+        "via": "at 2:49",
+        "name": "Sizzlewood By The — loading"
       }
     ]
   },

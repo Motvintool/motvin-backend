@@ -2,27 +2,28 @@
   "screenId": "swiggy-ios-food-4",
   "screen_id": "swiggy-ios-food-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.139Z",
-  "screen_type": "onboarding",
-  "published_as": "onboarding",
+  "analyzedAt": "2026-09-27T14:49:31.228Z",
+  "screen_type": "feed",
+  "published_as": "feed",
   "states": [],
   "category": "productivity",
-  "flow": "onboarding",
+  "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 4,
-  "name": "Grocery, dining",
-  "description": "Onboarding screen with a primary action labelled “Login”. Light theme, 10 text elements.",
+  "name": "Food home (3)",
+  "description": "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
   "tags": [
-    "login",
-    "offer",
-    "onboarding",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
     "ios"
   ],
   "elements": [
-    "cta",
-    "button",
-    "legal-text",
-    "banner"
+    "tab-bar",
+    "nav-bar",
+    "list"
   ],
   "style": [
     "light"
@@ -31,93 +32,96 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Grocery, dining”",
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Bolt”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Onboarding screen with a primary action labelled “Login”. Light theme, 10 text elements.",
-        "Calls to action: “Login”",
-        "10 text elements recognised"
+        "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
+        "16 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 15 in “Food”",
-        "Reached from “Food home”",
-        "Leads to “NIC Ice Creams home”"
+        "Step 4 of 10 in “Food”",
+        "Reached from “Food home — loading”, “Search, Order, Enjoy, Repeat! (2)” and “NIC Ice Creams home (2)”",
+        "Leads to “Search, Order, Enjoy, Repeat! (2)”, “Food home — loading” and “Food home (4)”",
+        "Returned to 3 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 1:12 in the recording",
-        "Frame 369 of 1141 sampled at 5 fps",
+        "Held for 3.2s at 0:48 in the recording",
+        "Frame 257 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#ff5201",
+      "hex": "#fcfcfc",
       "role": "background",
-      "share": 0.464
+      "share": 0.396
     },
     {
-      "hex": "#fafafa",
-      "role": "text",
-      "share": 0.341
-    },
-    {
-      "hex": "#fc854b",
+      "hex": "#641534",
       "role": "accent",
-      "share": 0.064
+      "share": 0.144
     },
     {
-      "hex": "#f9b694",
+      "hex": "#dddcdd",
       "role": "surface",
-      "share": 0.026
+      "share": 0.049
     },
     {
-      "hex": "#dfe0e0",
+      "hex": "#23262d",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#43464c",
       "role": "surface",
-      "share": 0.022
+      "share": 0.018
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 369,
-    "atSeconds": 72.2,
-    "endSeconds": 74,
-    "holdSeconds": 1.8,
+    "frame": 257,
+    "atSeconds": 48.4,
+    "endSeconds": 51.6,
+    "holdSeconds": 3.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 3
   },
   "signals": {
-    "lineCount": 10,
-    "tabLabels": [],
-    "chipLabels": [],
-    "ctas": [
-      "Login"
+    "lineCount": 16,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
     ],
+    "chipLabels": [],
+    "ctas": [],
     "keyboard": false,
-    "title": "Grocery, dining",
-    "headline": "Grocery, dining"
+    "title": "Bolt",
+    "headline": "Ad Shero Home Food"
   },
   "crawler": {
-    "nodeId": "s030",
-    "depth": 29,
+    "nodeId": "s024",
+    "depth": 23,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -125,16 +129,36 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s006",
-        "via": "at 1:12",
-        "name": "Food home"
+        "from": "s023",
+        "via": "at 0:48",
+        "name": "Food home — loading"
+      },
+      {
+        "from": "s025",
+        "via": "at 0:54",
+        "name": "Search, Order, Enjoy, Repeat! (2)"
+      },
+      {
+        "from": "s076",
+        "via": "at 3:35",
+        "name": "NIC Ice Creams home (2)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s031",
-        "via": "at 1:14",
-        "name": "NIC Ice Creams home"
+        "to": "s025",
+        "via": "at 0:52",
+        "name": "Search, Order, Enjoy, Repeat! (2)"
+      },
+      {
+        "to": "s026",
+        "via": "at 0:57",
+        "name": "Food home — loading"
+      },
+      {
+        "to": "s027",
+        "via": "at 3:38",
+        "name": "Food home (4)"
       }
     ]
   },

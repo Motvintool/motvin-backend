@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-3",
   "screen_id": "swiggy-ios-dineout-3",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.128Z",
+  "analyzedAt": "2026-09-27T14:49:31.324Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,20 +10,25 @@
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 3,
-  "name": "Food home (3)",
-  "description": "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
+  "name": "Dineout home (2)",
+  "description": "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
   "tags": [
-    "food",
-    "bolt",
-    "eatright",
-    "reorder",
+    "search",
+    "offer",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
     "feed",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
-    "list"
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
   ],
   "style": [
     "light"
@@ -32,96 +37,102 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Bolt”",
+        "Tab bar with 4 items: Dineout, Bites, My corner, Scenes",
+        "Navigation title reads “Search for Restaurants”",
+        "Category strip: Pre-Book, near me, Offers",
+        "Search bar present",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
-        "16 text elements recognised"
+        "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
+        "30 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 3 of 7 in “Dineout”",
-        "Reached from “Food home — loading”, “Search, Order, Enjoy, Repeat! (2)” and “NIC Ice Creams home (2)”",
-        "Leads to “Search, Order, Enjoy, Repeat! (2)”, “Food home — loading” and “Food home (4)”",
-        "Returned to 3 times in the recording"
+        "Reached from “Scenes (2)” and “My Corner (3)”",
+        "Leads to “Product detail — loading” and “Dineout home”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.2s at 0:48 in the recording",
-        "Frame 257 of 1141 sampled at 5 fps",
+        "Held for 1.8s at 2:41 in the recording",
+        "Frame 815 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fcfcfc",
+      "hex": "#fbf9f7",
       "role": "background",
-      "share": 0.396
+      "share": 0.613
     },
     {
-      "hex": "#641534",
-      "role": "accent",
-      "share": 0.144
-    },
-    {
-      "hex": "#dddcdd",
+      "hex": "#c9c3be",
       "role": "surface",
-      "share": 0.049
+      "share": 0.122
     },
     {
-      "hex": "#23262d",
+      "hex": "#e5e0d9",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#32353b",
       "role": "text",
       "share": 0.034
     },
     {
-      "hex": "#43464c",
+      "hex": "#62656a",
       "role": "surface",
-      "share": 0.018
+      "share": 0.012
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 257,
-    "atSeconds": 48.4,
-    "endSeconds": 51.6,
-    "holdSeconds": 3.2,
+    "frame": 815,
+    "atSeconds": 161.4,
+    "endSeconds": 163.2,
+    "holdSeconds": 1.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 3
+    "visits": 2
   },
   "signals": {
-    "lineCount": 16,
+    "lineCount": 30,
     "tabLabels": [
-      "Food",
-      "Bolt",
-      "EatRight",
-      "Reorder"
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes"
     ],
-    "chipLabels": [],
+    "chipLabels": [
+      "Pre-Book",
+      "near me",
+      "Offers"
+    ],
     "ctas": [],
     "keyboard": false,
-    "title": "Bolt",
-    "headline": "Ad Shero Home Food"
+    "title": "Search for Restaurants",
+    "headline": "Hey, what's on your mind?"
   },
   "crawler": {
-    "nodeId": "s024",
-    "depth": 23,
+    "nodeId": "s055",
+    "depth": 54,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -129,36 +140,26 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s023",
-        "via": "at 0:48",
-        "name": "Food home — loading"
+        "from": "s054",
+        "via": "at 2:41",
+        "name": "Scenes (2)"
       },
       {
-        "from": "s025",
-        "via": "at 0:54",
-        "name": "Search, Order, Enjoy, Repeat! (2)"
-      },
-      {
-        "from": "s076",
-        "via": "at 3:35",
-        "name": "NIC Ice Creams home (2)"
+        "from": "s063",
+        "via": "at 3:03",
+        "name": "My Corner (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s025",
-        "via": "at 0:52",
-        "name": "Search, Order, Enjoy, Repeat! (2)"
+        "to": "s056",
+        "via": "at 2:43",
+        "name": "Product detail — loading"
       },
       {
-        "to": "s026",
-        "via": "at 0:57",
-        "name": "Food home — loading"
-      },
-      {
-        "to": "s027",
-        "via": "at 3:38",
-        "name": "Food home (4)"
+        "to": "s021",
+        "via": "at 3:05",
+        "name": "Dineout home"
       }
     ]
   },

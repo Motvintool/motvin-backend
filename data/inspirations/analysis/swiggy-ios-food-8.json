@@ -2,25 +2,39 @@
   "screenId": "swiggy-ios-food-8",
   "screen_id": "swiggy-ios-food-8",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.148Z",
-  "screen_type": "other",
-  "published_as": "other",
-  "states": [],
+  "analyzedAt": "2026-09-27T14:49:31.252Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [
+    "scrolled"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 8,
-  "name": "Search in NIC Ice Creams",
-  "description": "Other screen with a search bar. Light theme, 22 text elements.",
+  "name": "Food home — scrolled",
+  "description": "Feed screen, scrolled further down from Food home with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
   "tags": [
     "search",
-    "other",
+    "delivery",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
+    "scrolled",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
     "search-bar",
-    "list"
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
   ],
   "style": [
     "light"
@@ -29,8 +43,9 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Search in NIC Ice Creams”",
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Search for 'EatRight'”",
+        "Category strip: Purattasi, Get, Get A, Flavol",
         "Search bar present",
         "Light style"
       ]
@@ -38,64 +53,66 @@
     {
       "title": "Content",
       "points": [
-        "Other screen with a search bar. Light theme, 22 text elements.",
-        "22 text elements recognised"
+        "Feed screen, scrolled further down from Food home with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "35 text elements recognised",
+        "State: scrolled"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 8 of 15 in “Food”",
-        "Reached from “Swiggy Seal”",
+        "Step 8 of 10 in “Food”",
+        "Reached from “Food home”",
         "Leads to “Swiggy Seal”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.8s at 1:25 in the recording",
-        "Frame 443 of 1141 sampled at 5 fps",
+        "Held for 2s at 1:18 in the recording",
+        "Frame 401 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#faf9f3",
+      "hex": "#fafbfb",
       "role": "background",
-      "share": 0.299
+      "share": 0.241
     },
     {
-      "hex": "#dfdcd1",
-      "role": "surface",
-      "share": 0.283
+      "hex": "#040c35",
+      "role": "text",
+      "share": 0.145
     },
     {
-      "hex": "#cdccbd",
+      "hex": "#d9d9da",
       "role": "surface",
-      "share": 0.107
+      "share": 0.037
     },
     {
-      "hex": "#fbe3b4",
-      "role": "surface",
-      "share": 0.033
+      "hex": "#f9d801",
+      "role": "accent",
+      "share": 0.025
     },
     {
-      "hex": "#9f9f96",
+      "hex": "#12c365",
       "role": "surface",
-      "share": 0.033
+      "share": 0.023
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 443,
-    "atSeconds": 85,
-    "endSeconds": 88.8,
-    "holdSeconds": 3.8,
+    "frame": 401,
+    "atSeconds": 78.4,
+    "endSeconds": 80.4,
+    "holdSeconds": 2,
     "brief": false,
-    "kind": "screen",
+    "kind": "scrolled",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -103,17 +120,29 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 22,
-    "tabLabels": [],
-    "chipLabels": [],
-    "ctas": [],
+    "lineCount": 35,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [
+      "Purattasi",
+      "Get",
+      "Get A",
+      "Flavol"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
     "keyboard": false,
-    "title": "Search in NIC Ice Creams",
-    "headline": "No Added Sugar Kesar Pista Stick"
+    "title": "Search for 'EatRight'",
+    "headline": "Sprite"
   },
   "crawler": {
-    "nodeId": "s034",
-    "depth": 33,
+    "nodeId": "s032",
+    "depth": 31,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -121,15 +150,15 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s033",
-        "via": "at 1:25",
-        "name": "Swiggy Seal"
+        "from": "s006",
+        "via": "at 1:18",
+        "name": "Food home"
       }
     ],
     "leadsTo": [
       {
         "to": "s033",
-        "via": "at 1:31",
+        "via": "at 1:21",
         "name": "Swiggy Seal"
       }
     ]

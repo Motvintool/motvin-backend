@@ -533,7 +533,9 @@ export function buildInspirationsManifest(root: string): BuildReport {
       }
       return { ...flow, screenIds: (flow.screenIds || []).filter((id: string) => knownScreenIds.has(id)) };
     })
-    .filter((flow) => flow.screenIds.length >= 2);
+    // A flow of one screen is a journey of one step — a sheet opened and
+    // dismissed, a section glimpsed once — and belongs in the tree.
+    .filter((flow) => flow.screenIds.length >= 1);
 
   // A flow may nest inside another of the same app. The reference has to be
   // to a flow that is itself published, and never to itself, or the tree the

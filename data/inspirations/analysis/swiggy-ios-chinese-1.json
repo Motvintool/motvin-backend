@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-chinese-1",
   "screen_id": "swiggy-ios-chinese-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.210Z",
+  "analyzedAt": "2026-09-27T14:49:31.353Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,14 +10,16 @@
   "flow": "discovery",
   "flow_name": "Chinese",
   "flow_position": 1,
-  "name": "Biryani home",
-  "description": "Feed screen. Light theme, 36 text elements.",
+  "name": "Chinese home",
+  "description": "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
   "tags": [
+    "chinese",
     "biryani",
     "feed",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
     "list",
     "banner"
@@ -29,7 +31,7 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
+        "Tab bar with 3 items: Chinese, Chinese, Biryani",
         "Navigation title reads “Deals On Your Favs”",
         "Light style"
       ]
@@ -37,24 +39,23 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen. Light theme, 36 text elements.",
-        "36 text elements recognised"
+        "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
+        "35 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 7 in “Chinese”",
-        "Reached from “Crunchy Treats, Tasty Deals! — loading”, “Chinese home (2)” and “Ani home”",
-        "Leads to “Chinese home”, “Hut® — loading” and “IIC Ice Creams home”",
-        "Returned to 4 times in the recording"
+        "Step 1 of 2 in “Chinese”",
+        "Reached from “Biryani home”",
+        "Leads to “Chinese home (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2s at 3:13 in the recording",
-        "Frame 977 of 1141 sampled at 5 fps",
+        "Held for 0.8s at 3:17 in the recording",
+        "Frame 988 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -63,49 +64,50 @@
     {
       "hex": "#fbfbfb",
       "role": "background",
-      "share": 0.316
+      "share": 0.309
     },
     {
-      "hex": "#021349",
+      "hex": "#021249",
       "role": "accent",
-      "share": 0.191
+      "share": 0.188
     },
     {
-      "hex": "#d9d9da",
+      "hex": "#cfcfd0",
       "role": "surface",
-      "share": 0.079
+      "share": 0.085
     },
     {
-      "hex": "#c6c5c6",
+      "hex": "#3c4150",
       "role": "surface",
-      "share": 0.038
+      "share": 0.039
     },
     {
-      "hex": "#383d4d",
+      "hex": "#eae3df",
       "role": "surface",
-      "share": 0.038
+      "share": 0.028
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 977,
-    "atSeconds": 193.6,
-    "endSeconds": 195.6,
-    "holdSeconds": 2,
+    "frame": 988,
+    "atSeconds": 197.2,
+    "endSeconds": 198,
+    "holdSeconds": 0.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 4
+    "visits": 1
   },
   "signals": {
-    "lineCount": 36,
+    "lineCount": 35,
     "tabLabels": [
-      "Biryani",
+      "Chinese",
+      "Chinese",
       "Biryani"
     ],
     "chipLabels": [],
@@ -115,8 +117,8 @@
     "headline": "Deals On Your Favs"
   },
   "crawler": {
-    "nodeId": "s067",
-    "depth": 66,
+    "nodeId": "s068",
+    "depth": 67,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -124,36 +126,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s011",
-        "via": "at 3:13",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
-      },
-      {
-        "from": "s069",
-        "via": "at 3:18",
-        "name": "Chinese home (2)"
-      },
-      {
-        "from": "s074",
-        "via": "at 3:30",
-        "name": "Ani home"
+        "from": "s067",
+        "via": "at 3:17",
+        "name": "Biryani home"
       }
     ],
     "leadsTo": [
       {
-        "to": "s068",
-        "via": "at 3:17",
-        "name": "Chinese home"
-      },
-      {
-        "to": "s070",
-        "via": "at 3:19",
-        "name": "Hut® — loading"
-      },
-      {
-        "to": "s075",
-        "via": "at 3:32",
-        "name": "IIC Ice Creams home"
+        "to": "s069",
+        "via": "at 3:18",
+        "name": "Chinese home (2)"
       }
     ]
   },

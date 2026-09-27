@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-instamart-4",
   "screen_id": "swiggy-ios-instamart-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.109Z",
+  "analyzedAt": "2026-09-27T14:49:31.292Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -10,21 +10,19 @@
   "flow": "discovery",
   "flow_name": "Instamart",
   "flow_position": 4,
-  "name": "Chocolate Bar home",
-  "description": "Feed screen with a 6-item tab bar, a row of 5 category chips, a search bar and prices. Light theme, 96 text elements.",
+  "name": "Instamart home (4)",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips and prices. Light theme, 43 text elements.",
   "tags": [
-    "search",
-    "price",
-    "chocolate bar",
-    "imported",
-    "chocolate pack",
+    "delivery",
+    "instamart",
+    "categories",
+    "red bull",
     "feed",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
-    "search-bar",
     "price",
     "list",
     "chip",
@@ -37,105 +35,101 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 6 items: Chocolate Bar, Chocolate Bar, Imported, Chocolate Pack, Nut Milk, Chocolc",
-        "Navigation title reads “Crunchy Treats, Tasty Deals!”",
-        "Category strip: SWITCH, SWITCH, SWITCH, SWITCH, SUPERVOS",
-        "Search bar present",
+        "Tab bar with 3 items: Instamart, Categories, Red Bull",
+        "Navigation title reads “Categories”",
+        "Category strip: The Magic O, MUN, nOICE, of the Lost",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 6-item tab bar, a row of 5 category chips, a search bar and prices. Light theme, 96 text elements.",
-        "96 text elements recognised"
+        "Feed screen with a 3-item tab bar, a row of 4 category chips and prices. Light theme, 43 text elements.",
+        "43 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 10 in “Instamart”",
-        "Reached from “Crunchy Treats, Tasty Deals!”",
-        "Leads to “Instamart home (2)”"
+        "Step 4 of 4 in “Instamart”",
+        "Reached from “Crunchy Treats, Tasty Deals! — loading”, “Paulo Coelho home”, “Lay's home”, “In the spotlight — loading”, “Surf home” and “Fresh Vegetables · Organics”",
+        "Leads to “Naval Ravikant home”, “In the spotlight — loading”, “Crunchy Treats, Tasty Deals! — loading” and “Instamart home (3)”",
+        "Returned to 6 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:26 in the recording",
-        "Frame 139 of 1141 sampled at 5 fps",
+        "Held for 2.8s at 2:01 in the recording",
+        "Frame 619 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f9fa",
+      "hex": "#fafcfd",
       "role": "background",
-      "share": 0.542
+      "share": 0.7
     },
     {
-      "hex": "#d7dbde",
+      "hex": "#cbd0d0",
       "role": "surface",
-      "share": 0.2
+      "share": 0.082
     },
     {
-      "hex": "#9a755d",
-      "role": "accent",
-      "share": 0.014
-    },
-    {
-      "hex": "#bbc1c1",
+      "hex": "#e1e7e6",
       "role": "surface",
-      "share": 0.008
+      "share": 0.024
     },
     {
-      "hex": "#a89f94",
+      "hex": "#fcebb7",
       "role": "surface",
-      "share": 0.008
+      "share": 0.012
+    },
+    {
+      "hex": "#aab6b6",
+      "role": "surface",
+      "share": 0.005
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 139,
-    "atSeconds": 26.8,
-    "endSeconds": 28,
-    "holdSeconds": 1.2,
+    "frame": 619,
+    "atSeconds": 121.2,
+    "endSeconds": 124,
+    "holdSeconds": 2.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 6
   },
   "signals": {
-    "lineCount": 96,
+    "lineCount": 43,
     "tabLabels": [
-      "Chocolate Bar",
-      "Chocolate Bar",
-      "Imported",
-      "Chocolate Pack",
-      "Nut Milk",
-      "Chocolc"
+      "Instamart",
+      "Categories",
+      "Red Bull"
     ],
     "chipLabels": [
-      "SWITCH",
-      "SWITCH",
-      "SWITCH",
-      "SWITCH",
-      "SUPERVOS"
+      "The Magic O",
+      "MUN",
+      "nOICE",
+      "of the Lost"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Crunchy Treats, Tasty Deals!",
-    "headline": "TORIÊRONE"
+    "title": "Categories",
+    "headline": "Fortune"
   },
   "crawler": {
-    "nodeId": "s013",
-    "depth": 12,
+    "nodeId": "s043",
+    "depth": 42,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -143,16 +137,66 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s012",
-        "via": "at 0:26",
-        "name": "Crunchy Treats, Tasty Deals!"
+        "from": "s011",
+        "via": "at 2:01",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "from": "s045",
+        "via": "at 2:06",
+        "name": "Paulo Coelho home"
+      },
+      {
+        "from": "s047",
+        "via": "at 2:09",
+        "name": "Lay's home"
+      },
+      {
+        "from": "s017",
+        "via": "at 2:11",
+        "name": "In the spotlight — loading"
+      },
+      {
+        "from": "s049",
+        "via": "at 2:22",
+        "name": "Surf home"
+      },
+      {
+        "from": "s046",
+        "via": "at 2:31",
+        "name": "Fresh Vegetables · Organics"
       }
     ],
     "leadsTo": [
       {
-        "to": "s014",
-        "via": "at 0:28",
-        "name": "Instamart home (2)"
+        "to": "s044",
+        "via": "at 2:04",
+        "name": "Naval Ravikant home"
+      },
+      {
+        "to": "s017",
+        "via": "at 2:06",
+        "name": "In the spotlight — loading"
+      },
+      {
+        "to": "s017",
+        "via": "at 2:09",
+        "name": "In the spotlight — loading"
+      },
+      {
+        "to": "s011",
+        "via": "at 2:15",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "to": "s011",
+        "via": "at 2:23",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "to": "s016",
+        "via": "at 2:33",
+        "name": "Instamart home (3)"
       }
     ]
   },

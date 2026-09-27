@@ -1,0 +1,145 @@
+{
+  "screenId": "swiggy-ios-lay-s-1",
+  "screen_id": "swiggy-ios-lay-s-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:49:31.303Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Lay's",
+  "flow_position": 1,
+  "name": "Lay's home",
+  "description": "Category screen with a row of 3 category chips. Light theme, 45 text elements, shown only briefly.",
+  "tags": [
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Categories”",
+        "Category strip: nOICE, Veg, of the Lost",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Light theme, 45 text elements, shown only briefly.",
+        "45 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Lay's”",
+        "Reached from “Fresh Vegetables · Organics”",
+        "Leads to “Instamart home (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 2:08 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 644 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8fafb",
+      "role": "background",
+      "share": 0.647
+    },
+    {
+      "hex": "#dadbdb",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#c5c4c3",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#fbe9b6",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#b59580",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 644,
+    "atSeconds": 128.8,
+    "endSeconds": 129,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [
+      "Lay's"
+    ],
+    "chipLabels": [
+      "nOICE",
+      "Veg",
+      "of the Lost"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Categories",
+    "headline": "Fortune"
+  },
+  "crawler": {
+    "nodeId": "s047",
+    "depth": 46,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s046",
+        "via": "at 2:08",
+        "name": "Fresh Vegetables · Organics"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s043",
+        "via": "at 2:09",
+        "name": "Instamart home (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

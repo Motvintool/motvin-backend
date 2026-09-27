@@ -2,137 +2,129 @@
   "screenId": "swiggy-ios-dineout-4",
   "screen_id": "swiggy-ios-dineout-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.130Z",
-  "screen_type": "search",
-  "published_as": "search",
-  "states": [
-    "modal",
-    "keyboard"
-  ],
+  "analyzedAt": "2026-09-27T14:49:31.327Z",
+  "screen_type": "product_detail",
+  "published_as": "product",
+  "states": [],
   "category": "productivity",
-  "flow": "search",
+  "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 4,
-  "name": "Search, Order, Enjoy, Repeat! (2)",
-  "description": "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
+  "name": "Product detail",
+  "description": "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
   "tags": [
-    "search",
-    "modal",
-    "keyboard",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "product-detail",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "keyboard",
-    "text-field",
-    "search-bar",
-    "list",
-    "modal"
+    "tab-bar",
+    "price",
+    "cta",
+    "button"
   ],
   "style": [
-    "light"
+    "dark"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Search, Order, Enjoy, Repeat!”",
-        "Keyboard is open, so the lower half is input",
-        "Search bar present",
-        "Dialog over a dimmed background, covering 33% of the height from 6% down",
-        "Light style"
+        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, PONNENC",
+        "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
-        "37 text elements recognised",
-        "State: modal, keyboard"
+        "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
+        "Calls to action: “Book Now”",
+        "6 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 4 of 7 in “Dineout”",
-        "Reached from “Food home (3)”",
-        "Leads to “Food home (3)”"
+        "Reached from “Product detail — loading”",
+        "Leads to “Crunchy Treats, Tasty Deals! — loading”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.6s at 0:52 in the recording",
-        "Frame 272 of 1141 sampled at 5 fps",
+        "Held for 0.6s at 2:45 in the recording",
+        "Frame 829 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#4a4a49",
+      "hex": "#9f2d10",
       "role": "background",
-      "share": 0.248
+      "share": 0.168
     },
     {
-      "hex": "#b2b3b4",
+      "hex": "#0d0c0f",
       "role": "surface",
-      "share": 0.209
+      "share": 0.16
     },
     {
-      "hex": "#d4d4d6",
+      "hex": "#362624",
       "role": "surface",
-      "share": 0.161
+      "share": 0.16
     },
     {
-      "hex": "#fcfcfc",
-      "role": "text",
-      "share": 0.154
-    },
-    {
-      "hex": "#230f12",
+      "hex": "#fd8c30",
       "role": "accent",
-      "share": 0.145
+      "share": 0.128
+    },
+    {
+      "hex": "#565155",
+      "role": "surface",
+      "share": 0.1
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 272,
-    "atSeconds": 52,
-    "endSeconds": 54.6,
-    "holdSeconds": 2.6,
+    "frame": 829,
+    "atSeconds": 165.4,
+    "endSeconds": 166,
+    "holdSeconds": 0.6,
     "brief": false,
-    "kind": "overlay",
-    "overlay": {
-      "kind": "dialog",
-      "dimmed": true,
-      "box": {
-        "x": 0.03125,
-        "y": 0.0625,
-        "w": 0.96875,
-        "h": 0.328125
-      }
-    },
+    "kind": "screen",
+    "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 37,
-    "tabLabels": [],
+    "lineCount": 6,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "PONNENC"
+    ],
     "chipLabels": [],
-    "ctas": [],
-    "keyboard": true,
-    "title": "Search, Order, Enjoy, Repeat!",
-    "headline": "What's on your mind?"
+    "ctas": [
+      "Book Now"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "This is where flavours come alive"
   },
   "crawler": {
-    "nodeId": "s025",
-    "depth": 24,
+    "nodeId": "s057",
+    "depth": 56,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -140,16 +132,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s024",
-        "via": "at 0:52",
-        "name": "Food home (3)"
+        "from": "s056",
+        "via": "at 2:45",
+        "name": "Product detail — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s024",
-        "via": "at 0:54",
-        "name": "Food home (3)"
+        "to": "s011",
+        "via": "at 2:46",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
       }
     ]
   },

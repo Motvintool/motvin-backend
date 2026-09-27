@@ -2,128 +2,156 @@
   "screenId": "swiggy-ios-food-1",
   "screen_id": "swiggy-ios-food-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T14:00:25.132Z",
-  "screen_type": "feed",
-  "published_as": "feed",
-  "states": [],
+  "analyzedAt": "2026-09-27T14:49:31.169Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "onboarding",
   "flow_name": "Food",
   "flow_position": 1,
-  "name": "Food home (4)",
-  "description": "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
+  "name": "Fresh, hot & crisp",
+  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
   "tags": [
     "delivery",
     "food",
     "bolt",
     "eatright",
     "reorder",
-    "feed",
+    "coach-mark",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "price",
     "list",
-    "banner"
+    "chip",
+    "cta",
+    "button",
+    "banner",
+    "bottom-sheet",
+    "coach-mark"
   ],
   "style": [
-    "light"
+    "dark",
+    "bold"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “99 store”",
-        "Light style"
+        "Navigation title reads “Fresh, hot & crisp”",
+        "Category strip: Scenes, Food, Instamart, Dineout",
+        "Bottom sheet over a dimmed background, covering 50% of the height from 48% down",
+        "Dark, Bold style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
-        "34 text elements recognised"
+        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
+        "Calls to action: “Continue to Food”, “ORDER NOW”",
+        "25 text elements recognised",
+        "State: coach-mark"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 15 in “Food”",
-        "Reached from “Food home — loading” and “Food home (3)”",
-        "Leads to “Crunchy Treats, Tasty Deals! — loading” and “Crispy Chicken Burger”",
-        "Returned to 2 times in the recording"
+        "Step 1 of 10 in “Food”",
+        "Reached from “Food home — loading”",
+        "Leads to “Food home”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.8s at 0:58 in the recording",
-        "Frame 306 of 1141 sampled at 5 fps",
+        "Held for 1.8s at 0:10 in the recording",
+        "Frame 58 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fdfcfc",
+      "hex": "#1e0e07",
       "role": "background",
-      "share": 0.429
+      "share": 0.552
     },
     {
-      "hex": "#09a6f9",
-      "role": "accent",
-      "share": 0.174
-    },
-    {
-      "hex": "#dcdedc",
+      "hex": "#8f8d8c",
       "role": "surface",
-      "share": 0.072
+      "share": 0.087
     },
     {
-      "hex": "#44b6f3",
-      "role": "surface",
-      "share": 0.014
+      "hex": "#f6f6f6",
+      "role": "text",
+      "share": 0.052
     },
     {
-      "hex": "#cac8ca",
+      "hex": "#382d25",
       "role": "surface",
-      "share": 0.012
+      "share": 0.051
+    },
+    {
+      "hex": "#6e5e58",
+      "role": "surface",
+      "share": 0.037
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 306,
-    "atSeconds": 58.6,
-    "endSeconds": 61.4,
-    "holdSeconds": 2.8,
+    "frame": 58,
+    "atSeconds": 10,
+    "endSeconds": 11.8,
+    "holdSeconds": 1.8,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.484375,
+        "w": 0.96875,
+        "h": 0.5
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
-    "lineCount": 34,
+    "lineCount": 25,
     "tabLabels": [
       "Food",
       "Bolt",
       "EatRight",
       "Reorder"
     ],
-    "chipLabels": [],
-    "ctas": [],
+    "chipLabels": [
+      "Scenes",
+      "Food",
+      "Instamart",
+      "Dineout"
+    ],
+    "ctas": [
+      "Continue to Food",
+      "ORDER NOW"
+    ],
     "keyboard": false,
-    "title": "99 store",
-    "headline": "99 store"
+    "title": "Fresh, hot & crisp",
+    "headline": "EEKEND"
   },
   "crawler": {
-    "nodeId": "s027",
-    "depth": 26,
+    "nodeId": "s005",
+    "depth": 4,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -131,26 +159,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s026",
-        "via": "at 0:58",
+        "from": "s004",
+        "via": "at 0:10",
         "name": "Food home — loading"
-      },
-      {
-        "from": "s024",
-        "via": "at 3:38",
-        "name": "Food home (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s011",
-        "via": "at 1:01",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
-      },
-      {
-        "to": "s077",
-        "via": "at 3:41",
-        "name": "Crispy Chicken Burger"
+        "to": "s006",
+        "via": "at 0:12",
+        "name": "Food home"
       }
     ]
   },

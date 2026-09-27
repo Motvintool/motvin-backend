@@ -638,7 +638,7 @@ export class InspirationsAdminService {
     const category = String(input?.category || '').trim().slice(0, 40);
     if (!category) throw new BadRequestException('category is required');
     const screenIds: string[] = Array.isArray(input?.screenIds) ? input.screenIds.map(String) : [];
-    if (screenIds.length < 2) throw new BadRequestException('a flow needs at least two screens');
+    if (screenIds.length < 1) throw new BadRequestException('a flow needs at least one screen');
 
     const file = join(this.root, 'flows.json');
     const data = readJson<{ version?: number; flows?: any[] }>(file, { version: 1, flows: [] });
