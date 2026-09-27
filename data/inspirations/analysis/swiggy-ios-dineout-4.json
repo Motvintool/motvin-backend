@@ -1,0 +1,158 @@
+{
+  "screenId": "swiggy-ios-dineout-4",
+  "screen_id": "swiggy-ios-dineout-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.130Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Dineout",
+  "flow_position": 4,
+  "name": "Search, Order, Enjoy, Repeat! (2)",
+  "description": "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
+  "tags": [
+    "search",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search, Order, Enjoy, Repeat!”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 33% of the height from 6% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
+        "37 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 7 in “Dineout”",
+        "Reached from “Food home (3)”",
+        "Leads to “Food home (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.6s at 0:52 in the recording",
+        "Frame 272 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#4a4a49",
+      "role": "background",
+      "share": 0.248
+    },
+    {
+      "hex": "#b2b3b4",
+      "role": "surface",
+      "share": 0.209
+    },
+    {
+      "hex": "#d4d4d6",
+      "role": "surface",
+      "share": 0.161
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.154
+    },
+    {
+      "hex": "#230f12",
+      "role": "accent",
+      "share": 0.145
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 272,
+    "atSeconds": 52,
+    "endSeconds": 54.6,
+    "holdSeconds": 2.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.96875,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search, Order, Enjoy, Repeat!",
+    "headline": "What's on your mind?"
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "at 0:52",
+        "name": "Food home (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "at 0:54",
+        "name": "Food home (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

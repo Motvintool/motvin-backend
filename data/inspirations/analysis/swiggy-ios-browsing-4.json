@@ -1,0 +1,149 @@
+{
+  "screenId": "swiggy-ios-browsing-4",
+  "screen_id": "swiggy-ios-browsing-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.162Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Browsing",
+  "flow_position": 4,
+  "name": "Dosa home",
+  "description": "Category screen with a row of 3 category chips. Light theme, 39 text elements.",
+  "tags": [
+    "delivery",
+    "dosa",
+    "burger",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ITEMS”",
+        "Category strip: Ice Cream, Chinese, Sweets",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Light theme, 39 text elements.",
+        "39 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Browsing”",
+        "Reached from “MALAI KULFI home”",
+        "Leads to “Food home (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:52 in the recording",
+        "Frame 568 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f8f9",
+      "role": "background",
+      "share": 0.459
+    },
+    {
+      "hex": "#d7d8d7",
+      "role": "surface",
+      "share": 0.177
+    },
+    {
+      "hex": "#c3bcb4",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#a99a8c",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#333437",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 568,
+    "atSeconds": 112,
+    "endSeconds": 113.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 39,
+    "tabLabels": [
+      "Dosa",
+      "Burger"
+    ],
+    "chipLabels": [
+      "Ice Cream",
+      "Chinese",
+      "Sweets"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "ITEMS",
+    "headline": "Store"
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "at 1:52",
+        "name": "MALAI KULFI home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "at 1:53",
+        "name": "Food home (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

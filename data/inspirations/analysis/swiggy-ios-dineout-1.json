@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-1",
   "screen_id": "swiggy-ios-dineout-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-26T07:57:57.000Z",
+  "analyzedAt": "2026-09-27T14:00:25.123Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -11,10 +11,9 @@
   "flow_name": "Dineout",
   "flow_position": 1,
   "name": "Dineout home",
-  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+  "description": "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Dark theme, 30 text elements.",
   "tags": [
     "search",
-    "offer",
     "address",
     "dineout",
     "bites",
@@ -32,85 +31,86 @@
     "banner"
   ],
   "style": [
-    "light"
+    "dark"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 5 items: Dineout, Bites, My corner, Scenes, Haminga",
-        "Navigation title reads “Starting At 749!”",
+        "Tab bar with 4 items: Dineout, Bites, My corner, Scenes",
+        "Navigation title reads “IGIRF”",
         "Category strip: Food, Dineout, Scenes, Instamart",
         "Search bar present",
-        "Light style"
+        "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+        "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Dark theme, 30 text elements.",
         "30 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Dineout”",
-        "Reached from “Dineout home — loading”",
-        "Leads to “Scenes”"
+        "Step 1 of 7 in “Dineout”",
+        "Reached from “View home”, “Instamart home (3)” and “Dineout home (2)”",
+        "Leads to “Scenes”, “Scenes (2)” and “Food home (8)”",
+        "Returned to 3 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:12 in the recording",
-        "Frame 67 of 85 sampled at 5 fps",
+        "Held for 2.6s at 0:39 in the recording",
+        "Frame 207 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#130d0c",
       "role": "background",
-      "share": 0.626
+      "share": 0.474
     },
     {
-      "hex": "#cbc9c4",
+      "hex": "#3a3332",
       "role": "surface",
-      "share": 0.071
+      "share": 0.161
     },
     {
-      "hex": "#460710",
+      "hex": "#fcfbfb",
+      "role": "text",
+      "share": 0.152
+    },
+    {
+      "hex": "#615050",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#470607",
       "role": "accent",
-      "share": 0.067
-    },
-    {
-      "hex": "#e4e1dd",
-      "role": "surface",
-      "share": 0.037
-    },
-    {
-      "hex": "#931d1e",
-      "role": "surface",
-      "share": 0.033
+      "share": 0.017
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
-    "frames": 85,
-    "frame": 67,
-    "atSeconds": 12.4,
-    "endSeconds": 13.6,
-    "holdSeconds": 1.2,
+    "frames": 1141,
+    "frame": 207,
+    "atSeconds": 39,
+    "endSeconds": 41.6,
+    "holdSeconds": 2.6,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 3
   },
   "signals": {
     "lineCount": 30,
@@ -118,8 +118,7 @@
       "Dineout",
       "Bites",
       "My corner",
-      "Scenes",
-      "Haminga"
+      "Scenes"
     ],
     "chipLabels": [
       "Food",
@@ -129,12 +128,12 @@
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Starting At 749!",
-    "headline": "Starting At 749!"
+    "title": "IGIRF",
+    "headline": "IGIRF"
   },
   "crawler": {
-    "nodeId": "s010",
-    "depth": 9,
+    "nodeId": "s021",
+    "depth": 20,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -142,19 +141,39 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s009",
-        "via": "at 0:12",
-        "name": "Dineout home — loading"
+        "from": "s020",
+        "via": "at 0:39",
+        "name": "View home"
+      },
+      {
+        "from": "s016",
+        "via": "at 2:34",
+        "name": "Instamart home (3)"
+      },
+      {
+        "from": "s055",
+        "via": "at 3:05",
+        "name": "Dineout home (2)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s011",
-        "via": "at 0:14",
+        "to": "s022",
+        "via": "at 0:42",
         "name": "Scenes"
+      },
+      {
+        "to": "s054",
+        "via": "at 2:39",
+        "name": "Scenes (2)"
+      },
+      {
+        "to": "s042",
+        "via": "at 3:08",
+        "name": "Food home (8)"
       }
     ]
   },
-  "capturedAt": "2026-09-26",
+  "capturedAt": "2026-09-27",
   "capturedBy": "motvin-ios-crawler"
 }

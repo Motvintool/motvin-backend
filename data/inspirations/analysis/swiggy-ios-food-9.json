@@ -1,0 +1,153 @@
+{
+  "screenId": "swiggy-ios-food-9",
+  "screen_id": "swiggy-ios-food-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.169Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Food",
+  "flow_position": 9,
+  "name": "Food home (7)",
+  "description": "Feed screen with a 4-item tab bar, a search bar and prices. Light theme, 36 text elements, shown only briefly.",
+  "tags": [
+    "search",
+    "delivery",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Search for 'EatRight'”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar, a search bar and prices. Light theme, 36 text elements, shown only briefly.",
+        "36 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 15 in “Food”",
+        "Reached from “Dosa home”",
+        "Leads to “Food home (8)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 1:53 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 569 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f9f9",
+      "role": "background",
+      "share": 0.536
+    },
+    {
+      "hex": "#d9d8d5",
+      "role": "surface",
+      "share": 0.163
+    },
+    {
+      "hex": "#c3bab0",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#aa9885",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#858484",
+      "role": "text",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 569,
+    "atSeconds": 113.8,
+    "endSeconds": 114,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search for 'EatRight'",
+    "headline": "Because you viewed NIC Ice Creams"
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "at 1:53",
+        "name": "Dosa home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s042",
+        "via": "at 1:54",
+        "name": "Food home (8)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

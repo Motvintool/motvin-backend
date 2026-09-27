@@ -1,0 +1,176 @@
+{
+  "screenId": "swiggy-ios-food-10",
+  "screen_id": "swiggy-ios-food-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.172Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Food",
+  "flow_position": 10,
+  "name": "Food home (8)",
+  "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+  "tags": [
+    "search",
+    "delivery",
+    "address",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Search for 'Pizza'”",
+        "Category strip: Food, Scenes, Dineout, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "28 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 15 in “Food”",
+        "Reached from “Food home (7)” and “Dineout home”",
+        "Leads to “Instamart home (3)” and “Crunchy Treats, Tasty Deals! — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 1:54 in the recording",
+        "Frame 581 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfbfb",
+      "role": "background",
+      "share": 0.228
+    },
+    {
+      "hex": "#010829",
+      "role": "text",
+      "share": 0.199
+    },
+    {
+      "hex": "#5b6488",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#f9d801",
+      "role": "accent",
+      "share": 0.023
+    },
+    {
+      "hex": "#16c568",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 581,
+    "atSeconds": 114,
+    "endSeconds": 116.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [
+      "Food",
+      "Scenes",
+      "Dineout",
+      "Instamart"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Search for 'Pizza'",
+    "headline": "WEEKEND"
+  },
+  "crawler": {
+    "nodeId": "s042",
+    "depth": 41,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s041",
+        "via": "at 1:54",
+        "name": "Food home (7)"
+      },
+      {
+        "from": "s021",
+        "via": "at 3:08",
+        "name": "Dineout home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "at 1:56",
+        "name": "Instamart home (3)"
+      },
+      {
+        "to": "s011",
+        "via": "at 3:12",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

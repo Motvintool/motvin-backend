@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T11:50:15.701Z",
+  "generatedAt": "2026-09-27T14:00:26.554Z",
   "counts": {
     "apps": 3,
-    "screens": 12,
-    "flows": 5,
-    "patterns": 7,
-    "ui-elements": 57
+    "screens": 68,
+    "flows": 12,
+    "patterns": 10,
+    "ui-elements": 366
   },
   "taxonomy": {
     "platforms": [
@@ -19,12 +19,18 @@
       "signup",
       "home",
       "feed",
+      "search",
+      "product",
+      "modal",
       "empty",
       "other"
     ],
     "states": [
       "empty",
+      "modal",
+      "bottom-sheet",
       "coach-mark",
+      "scrolled",
       "keyboard"
     ],
     "industries": [
@@ -50,6 +56,7 @@
       "keyboard",
       "legal-text",
       "list",
+      "modal",
       "nav-bar",
       "page-indicator",
       "price",
@@ -60,7 +67,8 @@
     "flowCategories": [
       "authentication",
       "discovery",
-      "onboarding"
+      "onboarding",
+      "search"
     ]
   },
   "vocabulary": {
@@ -171,10 +179,10 @@
         "ios"
       ],
       "website": null,
-      "tagline": "Food, grocery & dining out",
+      "tagline": null,
       "logo": "/api/inspirations/logos/swiggy.png",
-      "screenCount": 8,
-      "flowCount": 4,
+      "screenCount": 64,
+      "flowCount": 11,
       "license": null,
       "attribution": "Swiggy",
       "rating": null,
@@ -346,10 +354,10 @@
       "flow": "onboarding",
       "name": "Splash screen",
       "file": "ios/swiggy/onboarding/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tlyosk",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 165942,
+      "bytes": 157112,
       "platform": "ios",
       "screenType": "splash",
       "fineType": "splash",
@@ -357,7 +365,7 @@
       "description": "Launch screen shown while the app starts. Light theme.",
       "capture": {
         "atSeconds": 0,
-        "holdSeconds": 1,
+        "holdSeconds": 1.4,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -375,7 +383,7 @@
         "light",
         "bold"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -387,15 +395,15 @@
       }
     },
     {
-      "id": "swiggy-ios-logging-in-1",
+      "id": "swiggy-ios-onboarding-2",
       "appId": "swiggy",
-      "flow": "logging-in",
+      "flow": "onboarding",
       "name": "One app for food, grocery, dining",
-      "file": "ios/swiggy/logging-in/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/logging-in/1.png?v=tlyosk",
+      "file": "ios/swiggy/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 547015,
+      "bytes": 546429,
       "platform": "ios",
       "screenType": "login",
       "fineType": "login",
@@ -404,8 +412,8 @@
       ],
       "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
       "capture": {
-        "atSeconds": 1.8,
-        "holdSeconds": 1.2,
+        "atSeconds": 2.4,
+        "holdSeconds": 2,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -432,7 +440,7 @@
       "style": [
         "light"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -444,15 +452,15 @@
       }
     },
     {
-      "id": "swiggy-ios-logging-in-2",
+      "id": "swiggy-ios-onboarding-3",
       "appId": "swiggy",
-      "flow": "logging-in",
+      "flow": "onboarding",
       "name": "Select your location",
-      "file": "ios/swiggy/logging-in/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/logging-in/2.png?v=tlyosk",
+      "file": "ios/swiggy/onboarding/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/3.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 898779,
+      "bytes": 624668,
       "platform": "ios",
       "screenType": "empty",
       "fineType": "empty_state",
@@ -461,10 +469,10 @@
       ],
       "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
       "capture": {
-        "atSeconds": 3,
+        "atSeconds": 6.2,
         "holdSeconds": 0.6,
         "brief": false,
-        "visits": 2,
+        "visits": 1,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
@@ -487,7 +495,7 @@
       "style": [
         "light"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -499,25 +507,25 @@
       }
     },
     {
-      "id": "swiggy-ios-onboarding-2",
+      "id": "swiggy-ios-onboarding-4",
       "appId": "swiggy",
       "flow": "onboarding",
       "name": "Fresh, hot & crisp",
-      "file": "ios/swiggy/onboarding/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tlyosk",
+      "file": "ios/swiggy/onboarding/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/4.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 1725410,
+      "bytes": 1843752,
       "platform": "ios",
       "screenType": "onboarding",
       "fineType": "coach_mark",
       "states": [
         "coach-mark"
       ],
-      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
       "capture": {
-        "atSeconds": 7.4,
-        "holdSeconds": 1.6,
+        "atSeconds": 10,
+        "holdSeconds": 1.8,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -551,7 +559,7 @@
         "dark",
         "bold"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -563,25 +571,25 @@
       }
     },
     {
-      "id": "swiggy-ios-browsing-1",
+      "id": "swiggy-ios-onboarding-5",
       "appId": "swiggy",
-      "flow": "browsing",
+      "flow": "onboarding",
       "name": "Food home",
-      "file": "ios/swiggy/browsing/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/1.png?v=tlyosk",
+      "file": "ios/swiggy/onboarding/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/5.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 1592774,
+      "bytes": 1618516,
       "platform": "ios",
       "screenType": "home",
       "fineType": "home",
       "states": [],
-      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
       "capture": {
-        "atSeconds": 9.2,
-        "holdSeconds": 1,
+        "atSeconds": 12.2,
+        "holdSeconds": 3,
         "brief": false,
-        "visits": 2,
+        "visits": 5,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
@@ -613,7 +621,7 @@
       "style": [
         "light"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -625,23 +633,144 @@
       }
     },
     {
-      "id": "swiggy-ios-browsing-2",
+      "id": "swiggy-ios-onboarding-6",
       "appId": "swiggy",
-      "flow": "browsing",
-      "name": "Instamart home",
-      "file": "ios/swiggy/browsing/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/browsing/2.png?v=tlyosl",
+      "flow": "onboarding",
+      "name": "Search, Order, Enjoy, Repeat!",
+      "file": "ios/swiggy/onboarding/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/6.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 1294813,
+      "bytes": 822332,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
+      "capture": {
+        "atSeconds": 15.6,
+        "holdSeconds": 1.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "keyboard",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "search-bar",
+        "price",
+        "list",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-1",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Food home (2)",
+      "file": "ios/swiggy/instamart/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1732538,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "feed",
       "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "description": "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
       "capture": {
-        "atSeconds": 11,
-        "holdSeconds": 0.8,
+        "atSeconds": 17.4,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "cta",
+        "button",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-2",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Instamart home",
+      "file": "ios/swiggy/instamart/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1438491,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 27 text elements.",
+      "capture": {
+        "atSeconds": 19.6,
+        "holdSeconds": 3.4,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -673,7 +802,481 @@
       "style": [
         "light"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-3",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Crunchy Treats, Tasty Deals!",
+      "file": "ios/swiggy/instamart/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1398935,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 5 category chips, a search bar and prices. Light theme, 76 text elements.",
+      "capture": {
+        "atSeconds": 23.8,
+        "holdSeconds": 3,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-4",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Chocolate Bar home",
+      "file": "ios/swiggy/instamart/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1766374,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 6-item tab bar, a row of 5 category chips, a search bar and prices. Light theme, 96 text elements.",
+      "capture": {
+        "atSeconds": 26.8,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "price",
+        "chocolate bar",
+        "imported",
+        "chocolate pack",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-5",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Instamart home (2)",
+      "file": "ios/swiggy/instamart/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/5.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1193380,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 28.6,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "instamart",
+        "categories",
+        "redbull",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-6",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Paan",
+      "file": "ios/swiggy/instamart/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/6.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1210567,
+      "platform": "ios",
+      "screenType": "onboarding",
+      "fineType": "coach_mark",
+      "states": [
+        "coach-mark"
+      ],
+      "description": "Coach mark dialog over a dimmed screen, on top of Instamart home with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 19 text elements.",
+      "capture": {
+        "atSeconds": 29.6,
+        "holdSeconds": 2.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "cart",
+        "address",
+        "scan it",
+        "say it",
+        "write it",
+        "coach-mark",
+        "ios",
+        "productivity",
+        "onboarding"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button",
+        "modal",
+        "coach-mark"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-7",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Instamart home (3)",
+      "file": "ios/swiggy/instamart/7.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/7.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1141834,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 25 text elements.",
+      "capture": {
+        "atSeconds": 32.4,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 4,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "instamart",
+        "categories",
+        "red bull",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-8",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "In the spotlight",
+      "file": "ios/swiggy/instamart/8.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/8.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1270717,
+      "platform": "ios",
+      "screenType": "product",
+      "fineType": "product_detail",
+      "states": [],
+      "description": "Product detail screen with a 5-item tab bar, a row of 4 category chips, a search bar and prices. Light theme, 26 text elements.",
+      "capture": {
+        "atSeconds": 33.6,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "address",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "product-detail",
+        "ios",
+        "productivity",
+        "product"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-9",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Search 'Chinese' or 'Cafe'",
+      "file": "ios/swiggy/instamart/9.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/9.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1250447,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Search screen with a search bar and the keyboard open. Light theme, 27 text elements.",
+      "capture": {
+        "atSeconds": 35.8,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "booking",
+        "keyboard",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "search-bar",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-instamart-10",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "View home",
+      "file": "ios/swiggy/instamart/10.png",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/10.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1486498,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar and a search bar. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 37.4,
+        "holdSeconds": 1.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "booking",
+        "view",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -690,20 +1293,20 @@
       "flow": "dineout",
       "name": "Dineout home",
       "file": "ios/swiggy/dineout/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tlyosl",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 1004327,
+      "bytes": 1152666,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "feed",
       "states": [],
-      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+      "description": "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Dark theme, 30 text elements.",
       "capture": {
-        "atSeconds": 12.4,
-        "holdSeconds": 1.2,
+        "atSeconds": 39,
+        "holdSeconds": 2.6,
         "brief": false,
-        "visits": 1,
+        "visits": 3,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
@@ -711,7 +1314,6 @@
       "industry": "productivity",
       "tags": [
         "search",
-        "offer",
         "address",
         "dineout",
         "bites",
@@ -730,9 +1332,9 @@
         "banner"
       ],
       "style": [
-        "light"
+        "dark"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -749,18 +1351,18 @@
       "flow": "dineout",
       "name": "Scenes",
       "file": "ios/swiggy/dineout/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/2.png?v=tlyosl",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/2.png?v=tm108p",
       "width": 1170,
       "height": 2532,
-      "bytes": 1816258,
+      "bytes": 1825065,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "category",
       "states": [],
-      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 15 text elements.",
       "capture": {
-        "atSeconds": 14.2,
-        "holdSeconds": 1.6,
+        "atSeconds": 42.4,
+        "holdSeconds": 2,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
@@ -787,7 +1389,2533 @@
       "style": [
         "dark"
       ],
-      "capturedAt": "2026-09-26",
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-dineout-3",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Food home (3)",
+      "file": "ios/swiggy/dineout/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1586812,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
+      "capture": {
+        "atSeconds": 48.4,
+        "holdSeconds": 3.2,
+        "brief": false,
+        "visits": 3,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-dineout-4",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Search, Order, Enjoy, Repeat! (2)",
+      "file": "ios/swiggy/dineout/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 759560,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search",
+      "states": [
+        "modal",
+        "keyboard"
+      ],
+      "description": "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
+      "capture": {
+        "atSeconds": 52,
+        "holdSeconds": 2.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "modal",
+        "keyboard",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "search-bar",
+        "list",
+        "modal"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-1",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home (4)",
+      "file": "ios/swiggy/food/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1694792,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
+      "capture": {
+        "atSeconds": 58.6,
+        "holdSeconds": 2.8,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "price",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-2",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home (5)",
+      "file": "ios/swiggy/food/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1443537,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
+      "capture": {
+        "atSeconds": 62.8,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-3",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home (6)",
+      "file": "ios/swiggy/food/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 220740,
+      "platform": "ios",
+      "screenType": "home",
+      "fineType": "home",
+      "states": [],
+      "description": "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
+      "capture": {
+        "atSeconds": 64.4,
+        "holdSeconds": 4.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "discount",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "home",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light",
+        "minimal"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-4",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Grocery, dining",
+      "file": "ios/swiggy/food/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 662021,
+      "platform": "ios",
+      "screenType": "onboarding",
+      "fineType": "onboarding",
+      "states": [],
+      "description": "Onboarding screen with a primary action labelled “Login”. Light theme, 10 text elements.",
+      "capture": {
+        "atSeconds": 72.2,
+        "holdSeconds": 1.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "login",
+        "offer",
+        "onboarding",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "cta",
+        "button",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-5",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "NIC Ice Creams home",
+      "file": "ios/swiggy/food/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/5.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1817065,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 22 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 74,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "nic ice creams",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-6",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home — scrolled",
+      "file": "ios/swiggy/food/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/6.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 2149137,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [
+        "scrolled"
+      ],
+      "description": "Feed screen, scrolled further down from Food home with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
+      "capture": {
+        "atSeconds": 78.4,
+        "holdSeconds": 2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "scrolled",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-7",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Swiggy Seal",
+      "file": "ios/swiggy/food/7.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/7.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1056099,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 29 text elements.",
+      "capture": {
+        "atSeconds": 81,
+        "holdSeconds": 3.8,
+        "brief": false,
+        "visits": 4,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "carousel",
+        "page-indicator",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-8",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Search in NIC Ice Creams",
+      "file": "ios/swiggy/food/8.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/8.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1688618,
+      "platform": "ios",
+      "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "Other screen with a search bar. Light theme, 22 text elements.",
+      "capture": {
+        "atSeconds": 85,
+        "holdSeconds": 3.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-1",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Swiggy Seal (2)",
+      "file": "ios/swiggy/logging-in/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 506317,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Login screen with the keyboard open and a primary action labelled “LOGIN”. Light theme, 34 text elements.",
+      "capture": {
+        "atSeconds": 97.2,
+        "holdSeconds": 1.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "rating",
+        "login",
+        "keyboard",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button",
+        "legal-text"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-2",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Nic",
+      "file": "ios/swiggy/logging-in/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1065220,
+      "platform": "ios",
+      "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "Other screen with prices. Light theme, 18 text elements.",
+      "capture": {
+        "atSeconds": 100.4,
+        "holdSeconds": 2.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "price",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-1",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Nic (2)",
+      "file": "ios/swiggy/browsing/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1008873,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 21 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 102.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "carousel",
+        "page-indicator",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-2",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "NIC Ice Creams",
+      "file": "ios/swiggy/browsing/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 679379,
+      "platform": "ios",
+      "screenType": "modal",
+      "fineType": "dialog",
+      "states": [
+        "modal"
+      ],
+      "description": "Dialog over a dimmed screen, on top of Swiggy Seal with a search bar and a paged carousel. Dark theme, 41 text elements.",
+      "capture": {
+        "atSeconds": 105,
+        "holdSeconds": 2.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "j free c",
+        "dialog",
+        "modal",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "carousel",
+        "page-indicator",
+        "banner",
+        "modal"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-3",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "MALAI KULFI home",
+      "file": "ios/swiggy/browsing/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1192908,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a search bar and prices. Light theme, 25 text elements.",
+      "capture": {
+        "atSeconds": 108.2,
+        "holdSeconds": 3,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "delivery",
+        "malai kulfi",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-browsing-4",
+      "appId": "swiggy",
+      "flow": "browsing",
+      "name": "Dosa home",
+      "file": "ios/swiggy/browsing/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/browsing/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1837790,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 3 category chips. Light theme, 39 text elements.",
+      "capture": {
+        "atSeconds": 112,
+        "holdSeconds": 1.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "delivery",
+        "dosa",
+        "burger",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-9",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home (7)",
+      "file": "ios/swiggy/food/9.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/9.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1554109,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar, a search bar and prices. Light theme, 36 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 113.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-10",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home (8)",
+      "file": "ios/swiggy/food/10.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/10.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1920768,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+      "capture": {
+        "atSeconds": 114,
+        "holdSeconds": 2.4,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-11",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Instamart home (4)",
+      "file": "ios/swiggy/food/11.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/11.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1294804,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips and prices. Light theme, 43 text elements.",
+      "capture": {
+        "atSeconds": 121.2,
+        "holdSeconds": 2.8,
+        "brief": false,
+        "visits": 6,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "delivery",
+        "instamart",
+        "categories",
+        "red bull",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-12",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Paulo Coelho home",
+      "file": "ios/swiggy/food/12.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/12.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1768817,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips and prices. Light theme, 58 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 125.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "paulo coelho",
+        "miralles",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "price",
+        "list",
+        "chip"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-13",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Fresh Vegetables · Organics",
+      "file": "ios/swiggy/food/13.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/13.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1673996,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search_results",
+      "states": [],
+      "description": "Search results screen with a row of 3 category chips and prices. Light theme, 46 text elements.",
+      "capture": {
+        "atSeconds": 127.8,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 3,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "price",
+        "premium",
+        "organics",
+        "search-results",
+        "ios",
+        "productivity",
+        "search"
+      ],
+      "elements": [
+        "nav-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-14",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Lay's home",
+      "file": "ios/swiggy/food/14.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/14.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1710137,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 3 category chips. Light theme, 45 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 128.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "chip"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-food-15",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Sort By",
+      "file": "ios/swiggy/food/15.png",
+      "url": "/api/inspirations/screens/ios/swiggy/food/15.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1205860,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search_results",
+      "states": [],
+      "description": "Search results screen with a row of 3 category chips and prices. Light theme, 65 text elements.",
+      "capture": {
+        "atSeconds": 136.2,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search-results",
+        "ios",
+        "productivity",
+        "search"
+      ],
+      "elements": [
+        "nav-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-surf-1",
+      "appId": "swiggy",
+      "flow": "surf",
+      "name": "Surf home",
+      "file": "ios/swiggy/surf/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/surf/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1591288,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 3 category chips. Light theme, 51 text elements.",
+      "capture": {
+        "atSeconds": 138,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "surf",
+        "oxcel",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "chip"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-surf-2",
+      "appId": "swiggy",
+      "flow": "surf",
+      "name": "Surf home (2)",
+      "file": "ios/swiggy/surf/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/surf/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1643567,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips. Light theme, 54 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 140.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "surf",
+        "oxcel",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "chip"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-searching-1",
+      "appId": "swiggy",
+      "flow": "searching",
+      "name": "Fresh Vegetables",
+      "file": "ios/swiggy/searching/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/searching/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 551432,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search_results",
+      "states": [],
+      "description": "Search results screen with a row of 3 category chips. Light theme, 18 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 145.6,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "filter",
+        "price",
+        "discount",
+        "search-results",
+        "ios",
+        "productivity",
+        "search"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "chip"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-searching-2",
+      "appId": "swiggy",
+      "flow": "searching",
+      "name": "Fresh Vegetables — scrolled",
+      "file": "ios/swiggy/searching/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/searching/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 195263,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search_results",
+      "states": [
+        "scrolled"
+      ],
+      "description": "Search results screen, scrolled further down from Fresh Vegetables. Light theme, 13 text elements.",
+      "capture": {
+        "atSeconds": 145.8,
+        "holdSeconds": 2.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "filter",
+        "price",
+        "search-results",
+        "scrolled",
+        "ios",
+        "productivity",
+        "search"
+      ],
+      "elements": [
+        "nav-bar",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-searching-3",
+      "appId": "swiggy",
+      "flow": "searching",
+      "name": "Scenes (2)",
+      "file": "ios/swiggy/searching/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/searching/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1341932,
+      "platform": "ios",
+      "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "Other screen with a primary action labelled “EXPLORE NOW”. Dark theme, 5 text elements.",
+      "capture": {
+        "atSeconds": 159.2,
+        "holdSeconds": 2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "cta",
+        "button"
+      ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-dineout-5",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Dineout home (2)",
+      "file": "ios/swiggy/dineout/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/5.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1269782,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
+      "capture": {
+        "atSeconds": 161.4,
+        "holdSeconds": 1.8,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "offer",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-dineout-6",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Product detail",
+      "file": "ios/swiggy/dineout/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/6.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1652231,
+      "platform": "ios",
+      "screenType": "product",
+      "fineType": "product_detail",
+      "states": [],
+      "description": "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
+      "capture": {
+        "atSeconds": 165.4,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "product-detail",
+        "ios",
+        "productivity",
+        "product"
+      ],
+      "elements": [
+        "tab-bar",
+        "price",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-dineout-7",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "My Corner",
+      "file": "ios/swiggy/dineout/7.png",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/7.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1072525,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
+      "capture": {
+        "atSeconds": 167.4,
+        "holdSeconds": 2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "booking",
+        "offer",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "empty-state",
+        "empty",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "list",
+        "banner",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-3",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Sizzlewood By The",
+      "file": "ios/swiggy/logging-in/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1272427,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [],
+      "description": "Login screen with a primary action labelled “Login to avail offer & pay”. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 170.4,
+        "holdSeconds": 3.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "rating",
+        "login",
+        "booking",
+        "offer",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-4",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "Flat 20% off on Total Bill",
+      "file": "ios/swiggy/logging-in/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1228909,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "bottom-sheet"
+      ],
+      "description": "Login bottom sheet, on top of Sizzlewood By The with a primary action labelled “Login to avail offer & pay”. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 173.6,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "rating",
+        "login",
+        "booking",
+        "offer",
+        "bottom-sheet",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "list",
+        "cta",
+        "button",
+        "banner",
+        "bottom-sheet"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-5",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "My Corner (2)",
+      "file": "ios/swiggy/logging-in/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/5.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1139490,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
+      "capture": {
+        "atSeconds": 174.4,
+        "holdSeconds": 2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "booking",
+        "offer",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "empty-state",
+        "empty",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "list",
+        "banner",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-logging-in-6",
+      "appId": "swiggy",
+      "flow": "logging-in",
+      "name": "My Corner (3)",
+      "file": "ios/swiggy/logging-in/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/logging-in/6.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1321463,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
+      "capture": {
+        "atSeconds": 176.4,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "booking",
+        "offer",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "empty-state",
+        "empty",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "list",
+        "banner",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-find-a-plan-1",
+      "appId": "swiggy",
+      "flow": "find-a-plan",
+      "name": "Search",
+      "file": "ios/swiggy/find-a-plan/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/find-a-plan/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1929599,
+      "platform": "ios",
+      "screenType": "search",
+      "fineType": "search",
+      "states": [],
+      "description": "Search screen with a search bar and a paged carousel. Dark theme, 9 text elements.",
+      "capture": {
+        "atSeconds": 178.8,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "find a plan",
+        "that costs",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "carousel",
+        "page-indicator",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-find-a-plan-2",
+      "appId": "swiggy",
+      "flow": "find-a-plan",
+      "name": "Search (2)",
+      "file": "ios/swiggy/find-a-plan/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/find-a-plan/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 2203232,
+      "platform": "ios",
+      "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "Other screen with a search bar and a paged carousel. Dark theme, 14 text elements.",
+      "capture": {
+        "atSeconds": 180,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "find a plan",
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "carousel",
+        "page-indicator"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-1",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Biryani home",
+      "file": "ios/swiggy/chinese/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1631794,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen. Light theme, 36 text elements.",
+      "capture": {
+        "atSeconds": 193.6,
+        "holdSeconds": 2,
+        "brief": false,
+        "visits": 4,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "biryani",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-2",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Chinese home",
+      "file": "ios/swiggy/chinese/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1789628,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
+      "capture": {
+        "atSeconds": 197.2,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "chinese",
+        "biryani",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-3",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Chinese home (2)",
+      "file": "ios/swiggy/chinese/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/3.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1782602,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen. Light theme, 34 text elements.",
+      "capture": {
+        "atSeconds": 198,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "chinese",
+        "biryani",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-4",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Hut®",
+      "file": "ios/swiggy/chinese/4.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/4.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1235901,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with a search bar and a paged carousel. Light theme, 26 text elements.",
+      "capture": {
+        "atSeconds": 201.2,
+        "holdSeconds": 1.4,
+        "brief": false,
+        "visits": 5,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "carousel",
+        "page-indicator",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-5",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Pizza Hut",
+      "file": "ios/swiggy/chinese/5.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/5.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 542535,
+      "platform": "ios",
+      "screenType": "modal",
+      "fineType": "dialog",
+      "states": [
+        "modal"
+      ],
+      "description": "Dialog over a dimmed screen, on top of Loading state with a search bar and a paged carousel. Light theme, 24 text elements.",
+      "capture": {
+        "atSeconds": 204.2,
+        "holdSeconds": 3.4,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "rating",
+        "discount",
+        "dialog",
+        "modal",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "carousel",
+        "page-indicator",
+        "legal-text",
+        "banner",
+        "modal"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-6",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "Ani home",
+      "file": "ios/swiggy/chinese/6.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/6.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1728570,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "feed",
+      "states": [],
+      "description": "Feed screen with prices. Light theme, 41 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 210.4,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "ani",
+        "biryani",
+        "feed",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "price",
+        "list",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-chinese-7",
+      "appId": "swiggy",
+      "flow": "chinese",
+      "name": "IIC Ice Creams home",
+      "file": "ios/swiggy/chinese/7.png",
+      "url": "/api/inspirations/screens/ios/swiggy/chinese/7.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1823167,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips, a search bar and prices. Light theme, 33 text elements, shown only briefly.",
+      "capture": {
+        "atSeconds": 212.4,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "iic ice creams",
+        "the cascade",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-nic-ice-creams-1",
+      "appId": "swiggy",
+      "flow": "nic-ice-creams",
+      "name": "NIC Ice Creams home (2)",
+      "file": "ios/swiggy/nic-ice-creams/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/nic-ice-creams/1.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1755563,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips, a search bar and prices. Light theme, 30 text elements.",
+      "capture": {
+        "atSeconds": 212.6,
+        "holdSeconds": 3,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "nic ice creams",
+        "category",
+        "ios",
+        "productivity",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-nic-ice-creams-2",
+      "appId": "swiggy",
+      "flow": "nic-ice-creams",
+      "name": "Crispy Chicken Burger",
+      "file": "ios/swiggy/nic-ice-creams/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/nic-ice-creams/2.png?v=tm108p",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 512649,
+      "platform": "ios",
+      "screenType": "other",
+      "fineType": "other",
+      "states": [],
+      "description": "Other screen with prices. Light theme, 19 text elements.",
+      "capture": {
+        "atSeconds": 221.6,
+        "holdSeconds": 6.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "other",
+        "ios",
+        "productivity"
+      ],
+      "elements": [
+        "price",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-27",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
@@ -856,9 +3984,11 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-onboarding-1",
-        "swiggy-ios-logging-in-1",
-        "swiggy-ios-logging-in-2",
-        "swiggy-ios-onboarding-2"
+        "swiggy-ios-onboarding-2",
+        "swiggy-ios-onboarding-3",
+        "swiggy-ios-onboarding-4",
+        "swiggy-ios-onboarding-5",
+        "swiggy-ios-onboarding-6"
       ],
       "parentId": null
     },
@@ -870,7 +4000,9 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-browsing-1",
-        "swiggy-ios-browsing-2"
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-browsing-3",
+        "swiggy-ios-browsing-4"
       ],
       "parentId": null
     },
@@ -882,7 +4014,12 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-2"
+        "swiggy-ios-dineout-2",
+        "swiggy-ios-dineout-3",
+        "swiggy-ios-dineout-4",
+        "swiggy-ios-dineout-5",
+        "swiggy-ios-dineout-6",
+        "swiggy-ios-dineout-7"
       ],
       "parentId": null
     },
@@ -894,12 +4031,148 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-logging-in-1",
-        "swiggy-ios-logging-in-2"
+        "swiggy-ios-logging-in-2",
+        "swiggy-ios-logging-in-3",
+        "swiggy-ios-logging-in-4",
+        "swiggy-ios-logging-in-5",
+        "swiggy-ios-logging-in-6"
       ],
-      "parentId": "swiggy-ios-onboarding"
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-instamart-1",
+        "swiggy-ios-instamart-2",
+        "swiggy-ios-instamart-3",
+        "swiggy-ios-instamart-4",
+        "swiggy-ios-instamart-5",
+        "swiggy-ios-instamart-6",
+        "swiggy-ios-instamart-7",
+        "swiggy-ios-instamart-8",
+        "swiggy-ios-instamart-9",
+        "swiggy-ios-instamart-10"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-food-1",
+        "swiggy-ios-food-2",
+        "swiggy-ios-food-3",
+        "swiggy-ios-food-4",
+        "swiggy-ios-food-5",
+        "swiggy-ios-food-6",
+        "swiggy-ios-food-7",
+        "swiggy-ios-food-8",
+        "swiggy-ios-food-9",
+        "swiggy-ios-food-10",
+        "swiggy-ios-food-11",
+        "swiggy-ios-food-12",
+        "swiggy-ios-food-13",
+        "swiggy-ios-food-14",
+        "swiggy-ios-food-15"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-surf",
+      "appId": "swiggy",
+      "name": "Surf",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-surf-1",
+        "swiggy-ios-surf-2"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-searching",
+      "appId": "swiggy",
+      "name": "Searching",
+      "category": "search",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-searching-1",
+        "swiggy-ios-searching-2",
+        "swiggy-ios-searching-3"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-find-a-plan",
+      "appId": "swiggy",
+      "name": "FIND A PLAN",
+      "category": "search",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-find-a-plan-1",
+        "swiggy-ios-find-a-plan-2"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-chinese",
+      "appId": "swiggy",
+      "name": "Chinese",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-chinese-1",
+        "swiggy-ios-chinese-2",
+        "swiggy-ios-chinese-3",
+        "swiggy-ios-chinese-4",
+        "swiggy-ios-chinese-5",
+        "swiggy-ios-chinese-6",
+        "swiggy-ios-chinese-7"
+      ],
+      "parentId": null
+    },
+    {
+      "id": "swiggy-ios-nic-ice-creams",
+      "appId": "swiggy",
+      "name": "NIC Ice Creams",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-nic-ice-creams-1",
+        "swiggy-ios-nic-ice-creams-2"
+      ],
+      "parentId": null
     }
   ],
   "patterns": [
+    {
+      "id": "pattern-search-results",
+      "slug": "search-results",
+      "name": "Search results",
+      "category": "Search",
+      "description": "Result lists and grids with dense metadata.",
+      "tags": [
+        "results",
+        "list"
+      ],
+      "screenIds": [
+        "swiggy-ios-onboarding-6",
+        "swiggy-ios-instamart-9",
+        "swiggy-ios-dineout-4",
+        "swiggy-ios-food-13",
+        "swiggy-ios-food-15",
+        "swiggy-ios-searching-1",
+        "swiggy-ios-searching-2",
+        "swiggy-ios-find-a-plan-1"
+      ]
+    },
     {
       "id": "pattern-filter-chips",
       "slug": "filter-chips",
@@ -911,11 +4184,33 @@
         "filter"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-browsing-1",
-        "swiggy-ios-browsing-2",
+        "swiggy-ios-onboarding-4",
+        "swiggy-ios-onboarding-5",
+        "swiggy-ios-instamart-2",
+        "swiggy-ios-instamart-3",
+        "swiggy-ios-instamart-4",
+        "swiggy-ios-instamart-5",
+        "swiggy-ios-instamart-6",
+        "swiggy-ios-instamart-7",
+        "swiggy-ios-instamart-8",
         "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-2"
+        "swiggy-ios-dineout-2",
+        "swiggy-ios-food-2",
+        "swiggy-ios-food-5",
+        "swiggy-ios-food-6",
+        "swiggy-ios-browsing-4",
+        "swiggy-ios-food-10",
+        "swiggy-ios-food-11",
+        "swiggy-ios-food-12",
+        "swiggy-ios-food-13",
+        "swiggy-ios-food-14",
+        "swiggy-ios-food-15",
+        "swiggy-ios-surf-1",
+        "swiggy-ios-surf-2",
+        "swiggy-ios-searching-1",
+        "swiggy-ios-dineout-5",
+        "swiggy-ios-chinese-7",
+        "swiggy-ios-nic-ice-creams-1"
       ]
     },
     {
@@ -929,9 +4224,54 @@
         "post"
       ],
       "screenIds": [
-        "swiggy-ios-browsing-2",
+        "swiggy-ios-instamart-1",
+        "swiggy-ios-instamart-2",
+        "swiggy-ios-instamart-3",
+        "swiggy-ios-instamart-4",
+        "swiggy-ios-instamart-5",
+        "swiggy-ios-instamart-7",
+        "swiggy-ios-instamart-10",
         "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-2"
+        "swiggy-ios-dineout-2",
+        "swiggy-ios-dineout-3",
+        "swiggy-ios-food-1",
+        "swiggy-ios-food-2",
+        "swiggy-ios-food-5",
+        "swiggy-ios-food-6",
+        "swiggy-ios-food-7",
+        "swiggy-ios-browsing-1",
+        "swiggy-ios-browsing-3",
+        "swiggy-ios-browsing-4",
+        "swiggy-ios-food-9",
+        "swiggy-ios-food-10",
+        "swiggy-ios-food-11",
+        "swiggy-ios-food-12",
+        "swiggy-ios-food-14",
+        "swiggy-ios-surf-1",
+        "swiggy-ios-surf-2",
+        "swiggy-ios-dineout-5",
+        "swiggy-ios-chinese-1",
+        "swiggy-ios-chinese-2",
+        "swiggy-ios-chinese-3",
+        "swiggy-ios-chinese-4",
+        "swiggy-ios-chinese-6",
+        "swiggy-ios-chinese-7",
+        "swiggy-ios-nic-ice-creams-1"
+      ]
+    },
+    {
+      "id": "pattern-product-cards",
+      "slug": "product-cards",
+      "name": "Product cards",
+      "category": "Cards",
+      "description": "Image-led cards with price and quick actions.",
+      "tags": [
+        "product",
+        "catalog"
+      ],
+      "screenIds": [
+        "swiggy-ios-instamart-8",
+        "swiggy-ios-dineout-6"
       ]
     },
     {
@@ -946,7 +4286,10 @@
       ],
       "screenIds": [
         "airbnb-ios-login-2",
-        "swiggy-ios-logging-in-1"
+        "swiggy-ios-onboarding-2",
+        "swiggy-ios-logging-in-1",
+        "swiggy-ios-logging-in-3",
+        "swiggy-ios-logging-in-4"
       ]
     },
     {
@@ -964,6 +4307,23 @@
       ]
     },
     {
+      "id": "pattern-dialogs",
+      "slug": "dialogs",
+      "name": "Dialogs",
+      "category": "Modals",
+      "description": "Centered modal dialogs.",
+      "tags": [
+        "modal",
+        "dialog"
+      ],
+      "screenIds": [
+        "swiggy-ios-instamart-6",
+        "swiggy-ios-dineout-4",
+        "swiggy-ios-browsing-2",
+        "swiggy-ios-chinese-5"
+      ]
+    },
+    {
       "id": "pattern-bottom-sheets",
       "slug": "bottom-sheets",
       "name": "Bottom sheets",
@@ -974,7 +4334,8 @@
         "mobile"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-2"
+        "swiggy-ios-onboarding-4",
+        "swiggy-ios-logging-in-4"
       ]
     },
     {
@@ -988,7 +4349,10 @@
         "first run"
       ],
       "screenIds": [
-        "swiggy-ios-logging-in-2"
+        "swiggy-ios-onboarding-3",
+        "swiggy-ios-dineout-7",
+        "swiggy-ios-logging-in-5",
+        "swiggy-ios-logging-in-6"
       ]
     },
     {
@@ -1002,28 +4366,31 @@
         "intro"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-2"
+        "swiggy-ios-onboarding-4",
+        "swiggy-ios-instamart-6",
+        "swiggy-ios-food-4"
       ]
     }
   ],
   "elementCounts": {
-    "cta": 5,
-    "button": 5,
-    "nav-bar": 7,
-    "text-field": 2,
-    "form": 2,
-    "list": 7,
-    "legal-text": 3,
-    "keyboard": 1,
-    "search-bar": 5,
-    "empty-state": 1,
-    "tab-bar": 4,
-    "price": 2,
-    "chip": 5,
-    "banner": 4,
-    "bottom-sheet": 1,
-    "coach-mark": 1,
-    "carousel": 1,
-    "page-indicator": 1
+    "cta": 20,
+    "button": 20,
+    "nav-bar": 56,
+    "text-field": 6,
+    "form": 3,
+    "list": 58,
+    "legal-text": 9,
+    "keyboard": 5,
+    "search-bar": 32,
+    "empty-state": 4,
+    "tab-bar": 25,
+    "price": 28,
+    "chip": 27,
+    "banner": 43,
+    "bottom-sheet": 2,
+    "coach-mark": 2,
+    "carousel": 11,
+    "page-indicator": 11,
+    "modal": 4
   }
 }

@@ -2,30 +2,24 @@
   "screenId": "swiggy-ios-logging-in-2",
   "screen_id": "swiggy-ios-logging-in-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-26T07:57:56.994Z",
-  "screen_type": "empty_state",
-  "published_as": "empty",
-  "states": [
-    "empty"
-  ],
+  "analyzedAt": "2026-09-27T14:00:25.154Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Logging in",
   "flow_position": 2,
-  "name": "Select your location",
-  "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
+  "name": "Nic",
+  "description": "Other screen with prices. Light theme, 18 text elements.",
   "tags": [
-    "search",
-    "location",
-    "address",
-    "empty-state",
-    "empty",
+    "other",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "search-bar",
-    "empty-state"
+    "price",
+    "list"
   ],
   "style": [
     "light"
@@ -35,92 +29,89 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Select your location”",
-        "Search bar present",
+        "Navigation title reads “Nic”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-        "6 text elements recognised",
-        "State: empty"
+        "Other screen with prices. Light theme, 18 text elements.",
+        "18 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 2 in “Logging in”",
-        "Reached from “One app for food, grocery, dining”",
-        "Leads to “Food home — loading”",
-        "Returned to 2 times in the recording"
+        "Step 2 of 6 in “Logging in”",
+        "Reached from “Swiggy Seal”",
+        "Leads to “Nic (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 0:03 in the recording",
-        "Frame 24 of 85 sampled at 5 fps",
+        "Held for 2.4s at 1:40 in the recording",
+        "Frame 513 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f2f2f6",
+      "hex": "#f9f9f9",
       "role": "background",
-      "share": 0.944
+      "share": 0.303
     },
     {
-      "hex": "#d0d2da",
-      "role": "surface",
-      "share": 0.043
-    },
-    {
-      "hex": "#bcbec5",
-      "role": "surface",
-      "share": 0.004
-    },
-    {
-      "hex": "#e27073",
+      "hex": "#020609",
       "role": "accent",
-      "share": 0.003
+      "share": 0.166
     },
     {
-      "hex": "#9fa3af",
+      "hex": "#9eb45b",
       "role": "surface",
-      "share": 0.002
+      "share": 0.117
+    },
+    {
+      "hex": "#dcdfd5",
+      "role": "surface",
+      "share": 0.107
+    },
+    {
+      "hex": "#b9c681",
+      "role": "surface",
+      "share": 0.071
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
-    "frames": 85,
-    "frame": 24,
-    "atSeconds": 3,
-    "endSeconds": 3.4,
-    "holdSeconds": 0.6,
+    "frames": 1141,
+    "frame": 513,
+    "atSeconds": 100.4,
+    "endSeconds": 102.8,
+    "holdSeconds": 2.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
-    "lineCount": 6,
+    "lineCount": 18,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Select your location",
-    "headline": "Please log in to see"
+    "title": "Nic",
+    "headline": "Tender Coconut Ice"
   },
   "crawler": {
-    "nodeId": "s003",
-    "depth": 2,
+    "nodeId": "s036",
+    "depth": 35,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -128,19 +119,19 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s002",
-        "via": "at 0:03",
-        "name": "One app for food, grocery, dining"
+        "from": "s033",
+        "via": "at 1:40",
+        "name": "Swiggy Seal"
       }
     ],
     "leadsTo": [
       {
-        "to": "s004",
-        "via": "at 0:05",
-        "name": "Food home — loading"
+        "to": "s037",
+        "via": "at 1:42",
+        "name": "Nic (2)"
       }
     ]
   },
-  "capturedAt": "2026-09-26",
+  "capturedAt": "2026-09-27",
   "capturedBy": "motvin-ios-crawler"
 }

@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-2",
   "screen_id": "swiggy-ios-dineout-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-26T07:57:57.002Z",
+  "analyzedAt": "2026-09-27T14:00:25.125Z",
   "screen_type": "category",
   "published_as": "feed",
   "states": [],
@@ -11,7 +11,7 @@
   "flow_name": "Dineout",
   "flow_position": 2,
   "name": "Scenes",
-  "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+  "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 15 text elements.",
   "tags": [
     "search",
     "address",
@@ -35,7 +35,7 @@
       "points": [
         "No tab bar",
         "Navigation title reads “Scenes”",
-        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Category strip: Scenes, Dineout, Food, Instamart",
         "Search bar present",
         "Dark style"
       ]
@@ -43,14 +43,14 @@
     {
       "title": "Content",
       "points": [
-        "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
-        "14 text elements recognised"
+        "Category screen with a row of 4 category chips and a search bar. Dark theme, 15 text elements.",
+        "15 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 2 in “Dineout”",
+        "Step 2 of 7 in “Dineout”",
         "Reached from “Dineout home”",
         "Leads to “Food home”"
       ]
@@ -58,8 +58,8 @@
     {
       "title": "Capture",
       "points": [
-        "Held for 1.6s at 0:14 in the recording",
-        "Frame 78 of 85 sampled at 5 fps",
+        "Held for 2s at 0:42 in the recording",
+        "Frame 221 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -68,25 +68,25 @@
     {
       "hex": "#150f0f",
       "role": "background",
-      "share": 0.61
+      "share": 0.604
     },
     {
-      "hex": "#552414",
+      "hex": "#552514",
       "role": "accent",
-      "share": 0.097
+      "share": 0.101
     },
     {
-      "hex": "#8e4623",
+      "hex": "#8d4623",
       "role": "surface",
-      "share": 0.044
+      "share": 0.049
     },
     {
-      "hex": "#313435",
+      "hex": "#464f53",
       "role": "surface",
-      "share": 0.023
+      "share": 0.019
     },
     {
-      "hex": "#485155",
+      "hex": "#2d2e35",
       "role": "surface",
       "share": 0.018
     }
@@ -94,11 +94,11 @@
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
-    "frames": 85,
-    "frame": 78,
-    "atSeconds": 14.2,
-    "endSeconds": 15.8,
-    "holdSeconds": 1.6,
+    "frames": 1141,
+    "frame": 221,
+    "atSeconds": 42.4,
+    "endSeconds": 44.4,
+    "holdSeconds": 2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -108,11 +108,11 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 14,
+    "lineCount": 15,
     "tabLabels": [],
     "chipLabels": [
-      "Dineout",
       "Scenes",
+      "Dineout",
       "Food",
       "Instamart"
     ],
@@ -122,8 +122,8 @@
     "headline": "DANDIYA"
   },
   "crawler": {
-    "nodeId": "s011",
-    "depth": 10,
+    "nodeId": "s022",
+    "depth": 21,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -131,19 +131,19 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s010",
-        "via": "at 0:14",
+        "from": "s021",
+        "via": "at 0:42",
         "name": "Dineout home"
       }
     ],
     "leadsTo": [
       {
         "to": "s006",
-        "via": "at 0:15",
+        "via": "at 0:44",
         "name": "Food home"
       }
     ]
   },
-  "capturedAt": "2026-09-26",
+  "capturedAt": "2026-09-27",
   "capturedBy": "motvin-ios-crawler"
 }

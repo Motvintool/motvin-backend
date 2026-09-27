@@ -1,0 +1,157 @@
+{
+  "screenId": "swiggy-ios-food-2",
+  "screen_id": "swiggy-ios-food-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.134Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Food",
+  "flow_position": 2,
+  "name": "Food home (5)",
+  "description": "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
+  "tags": [
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "price",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Powered by”",
+        "Category strip: LOW, HIGH, ADDED, CAI, SUGAR, PROTEIN",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
+        "39 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 15 in “Food”",
+        "Reached from “Crunchy Treats, Tasty Deals! — loading”",
+        "Leads to “Food home (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 1:02 in the recording",
+        "Frame 321 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.401
+    },
+    {
+      "hex": "#230a50",
+      "role": "accent",
+      "share": 0.161
+    },
+    {
+      "hex": "#d6dddb",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#5a25aa",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#343234",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 321,
+    "atSeconds": 62.8,
+    "endSeconds": 64.4,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 39,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [
+      "LOW",
+      "HIGH",
+      "ADDED",
+      "CAI",
+      "SUGAR",
+      "PROTEIN"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Powered by",
+    "headline": "FITPASS"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "at 1:02",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "at 1:04",
+        "name": "Food home (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

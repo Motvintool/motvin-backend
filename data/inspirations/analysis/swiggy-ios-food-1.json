@@ -1,0 +1,159 @@
+{
+  "screenId": "swiggy-ios-food-1",
+  "screen_id": "swiggy-ios-food-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.132Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Food",
+  "flow_position": 1,
+  "name": "Food home (4)",
+  "description": "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
+  "tags": [
+    "delivery",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “99 store”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
+        "34 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 15 in “Food”",
+        "Reached from “Food home — loading” and “Food home (3)”",
+        "Leads to “Crunchy Treats, Tasty Deals! — loading” and “Crispy Chicken Burger”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.8s at 0:58 in the recording",
+        "Frame 306 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfc",
+      "role": "background",
+      "share": 0.429
+    },
+    {
+      "hex": "#09a6f9",
+      "role": "accent",
+      "share": 0.174
+    },
+    {
+      "hex": "#dcdedc",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#44b6f3",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#cac8ca",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 306,
+    "atSeconds": 58.6,
+    "endSeconds": 61.4,
+    "holdSeconds": 2.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "99 store",
+    "headline": "99 store"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "at 0:58",
+        "name": "Food home — loading"
+      },
+      {
+        "from": "s024",
+        "via": "at 3:38",
+        "name": "Food home (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "at 1:01",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "to": "s077",
+        "via": "at 3:41",
+        "name": "Crispy Chicken Burger"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

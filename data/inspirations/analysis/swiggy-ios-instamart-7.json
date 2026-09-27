@@ -1,0 +1,187 @@
+{
+  "screenId": "swiggy-ios-instamart-7",
+  "screen_id": "swiggy-ios-instamart-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T14:00:25.115Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Instamart",
+  "flow_position": 7,
+  "name": "Instamart home (3)",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 25 text elements.",
+  "tags": [
+    "search",
+    "delivery",
+    "address",
+    "instamart",
+    "categories",
+    "red bull",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Instamart, Categories, Red Bull",
+        "Navigation title reads “Got Sweeter”",
+        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 25 text elements.",
+        "Calls to action: “SHOP NOW”",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 10 in “Instamart”",
+        "Reached from “Paan”, “Food home (8)” and “Instamart home (4)”",
+        "Leads to “In the spotlight — loading”, “Crunchy Treats, Tasty Deals! — loading” and “Dineout home”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:32 in the recording",
+        "Frame 164 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9fbfb",
+      "role": "background",
+      "share": 0.61
+    },
+    {
+      "hex": "#dddbd4",
+      "role": "surface",
+      "share": 0.151
+    },
+    {
+      "hex": "#bbb8b0",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#35283e",
+      "role": "accent",
+      "share": 0.015
+    },
+    {
+      "hex": "#9e9c99",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 164,
+    "atSeconds": 32.4,
+    "endSeconds": 33,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [
+      "Instamart",
+      "Categories",
+      "Red Bull"
+    ],
+    "chipLabels": [
+      "Dineout",
+      "Scenes",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [
+      "SHOP NOW"
+    ],
+    "keyboard": false,
+    "title": "Got Sweeter",
+    "headline": "Got Sweeter"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "at 0:32",
+        "name": "Paan"
+      },
+      {
+        "from": "s042",
+        "via": "at 1:56",
+        "name": "Food home (8)"
+      },
+      {
+        "from": "s043",
+        "via": "at 2:33",
+        "name": "Instamart home (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "at 0:33",
+        "name": "In the spotlight — loading"
+      },
+      {
+        "to": "s011",
+        "via": "at 2:01",
+        "name": "Crunchy Treats, Tasty Deals! — loading"
+      },
+      {
+        "to": "s021",
+        "via": "at 2:34",
+        "name": "Dineout home"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

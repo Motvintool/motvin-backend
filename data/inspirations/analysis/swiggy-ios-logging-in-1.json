@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-logging-in-1",
   "screen_id": "swiggy-ios-logging-in-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-26T07:57:56.992Z",
+  "analyzedAt": "2026-09-27T14:00:25.151Z",
   "screen_type": "login",
   "published_as": "login",
   "states": [
@@ -12,9 +12,10 @@
   "flow": "authentication",
   "flow_name": "Logging in",
   "flow_position": 1,
-  "name": "One app for food, grocery, dining",
-  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "name": "Swiggy Seal (2)",
+  "description": "Login screen with the keyboard open and a primary action labelled “LOGIN”. Light theme, 34 text elements.",
   "tags": [
+    "rating",
     "login",
     "keyboard",
     "ios"
@@ -37,7 +38,7 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “One app for food, grocery, dining”",
+        "Navigation title reads “Swiggy Seal”",
         "Keyboard is open, so the lower half is input",
         "Light style"
       ]
@@ -45,64 +46,64 @@
     {
       "title": "Content",
       "points": [
-        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-        "Calls to action: “Continue”",
-        "28 text elements recognised",
+        "Login screen with the keyboard open and a primary action labelled “LOGIN”. Light theme, 34 text elements.",
+        "Calls to action: “LOGIN”, “Continue”",
+        "34 text elements recognised",
         "State: keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Logging in”",
-        "Reached from “Splash screen”",
-        "Leads to “Select your location”"
+        "Step 1 of 6 in “Logging in”",
+        "Reached from “Swiggy Seal”",
+        "Leads to “Swiggy Seal”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:01 in the recording",
-        "Frame 13 of 85 sampled at 5 fps",
+        "Held for 1.4s at 1:37 in the recording",
+        "Frame 492 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f7f7",
+      "hex": "#efeeed",
       "role": "background",
-      "share": 0.56
+      "share": 0.565
     },
     {
-      "hex": "#fe5302",
-      "role": "accent",
-      "share": 0.173
-    },
-    {
-      "hex": "#e1e2e3",
+      "hex": "#d6d7d7",
       "role": "surface",
       "share": 0.167
     },
     {
-      "hex": "#fb7d40",
-      "role": "surface",
-      "share": 0.027
+      "hex": "#0b0f19",
+      "role": "accent",
+      "share": 0.129
     },
     {
-      "hex": "#c5c5c5",
+      "hex": "#f9cbb5",
       "role": "surface",
-      "share": 0.022
+      "share": 0.053
+    },
+    {
+      "hex": "#b8bbbd",
+      "role": "surface",
+      "share": 0.046
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
-    "frames": 85,
-    "frame": 13,
-    "atSeconds": 1.8,
-    "endSeconds": 3,
-    "holdSeconds": 1.2,
+    "frames": 1141,
+    "frame": 492,
+    "atSeconds": 97.2,
+    "endSeconds": 98.6,
+    "holdSeconds": 1.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -112,19 +113,20 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 28,
+    "lineCount": 34,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [
+      "LOGIN",
       "Continue"
     ],
     "keyboard": true,
-    "title": "One app for food, grocery, dining",
-    "headline": "Enter your number"
+    "title": "Swiggy Seal",
+    "headline": "NIC Ice Creams"
   },
   "crawler": {
-    "nodeId": "s002",
-    "depth": 1,
+    "nodeId": "s035",
+    "depth": 34,
     "path": [],
     "visits": 1,
     "blocked": true,
@@ -132,19 +134,19 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s001",
-        "via": "at 0:01",
-        "name": "Splash screen"
+        "from": "s033",
+        "via": "at 1:37",
+        "name": "Swiggy Seal"
       }
     ],
     "leadsTo": [
       {
-        "to": "s003",
-        "via": "at 0:03",
-        "name": "Select your location"
+        "to": "s033",
+        "via": "at 1:38",
+        "name": "Swiggy Seal"
       }
     ]
   },
-  "capturedAt": "2026-09-26",
+  "capturedAt": "2026-09-27",
   "capturedBy": "motvin-ios-crawler"
 }
