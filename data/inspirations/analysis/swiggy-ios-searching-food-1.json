@@ -2,21 +2,22 @@
   "screenId": "swiggy-ios-searching-food-1",
   "screen_id": "swiggy-ios-searching-food-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.856Z",
+  "analyzedAt": "2026-09-27T16:17:10.422Z",
   "screen_type": "search",
   "published_as": "search",
   "states": [
+    "modal",
     "keyboard"
   ],
   "category": "productivity",
   "flow": "search",
   "flow_name": "Searching Food",
   "flow_position": 1,
-  "name": "Search, Order, Enjoy, Repeat!",
-  "description": "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
+  "name": "Search · modal",
+  "description": "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
   "tags": [
     "search",
-    "delivery",
+    "modal",
     "keyboard",
     "ios"
   ],
@@ -25,11 +26,8 @@
     "keyboard",
     "text-field",
     "search-bar",
-    "price",
     "list",
-    "cta",
-    "button",
-    "banner"
+    "modal"
   ],
   "style": [
     "light"
@@ -42,92 +40,99 @@
         "Navigation title reads “Search, Order, Enjoy, Repeat!”",
         "Keyboard is open, so the lower half is input",
         "Search bar present",
+        "Dialog over a dimmed background, covering 33% of the height from 6% down",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
-        "Calls to action: “ORDER NOW”",
-        "35 text elements recognised",
-        "State: keyboard"
+        "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
+        "37 text elements recognised",
+        "State: modal, keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
         "Step 1 of 1 in “Searching Food”",
-        "Reached from “Food home”",
-        "Leads to “Food home (2)”"
+        "Reached from “Food home (3)”",
+        "Leads to “Food home (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 0:15 in the recording",
-        "Frame 86 of 1141 sampled at 5 fps",
+        "Held for 2.6s at 0:52 in the recording",
+        "Frame 272 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#434142",
+      "hex": "#4a4a49",
       "role": "background",
-      "share": 0.201
+      "share": 0.248
     },
     {
-      "hex": "#b4b4b5",
+      "hex": "#b2b3b4",
       "role": "surface",
-      "share": 0.2
+      "share": 0.209
     },
     {
-      "hex": "#d9d9da",
+      "hex": "#d4d4d6",
       "role": "surface",
-      "share": 0.183
+      "share": 0.161
     },
     {
-      "hex": "#fdfcfd",
+      "hex": "#fcfcfc",
       "role": "text",
-      "share": 0.176
+      "share": 0.154
     },
     {
-      "hex": "#282126",
-      "role": "surface",
-      "share": 0.127
+      "hex": "#230f12",
+      "role": "accent",
+      "share": 0.145
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 86,
-    "atSeconds": 15.6,
-    "endSeconds": 17.4,
-    "holdSeconds": 1.8,
+    "frame": 272,
+    "atSeconds": 52,
+    "endSeconds": 54.6,
+    "holdSeconds": 2.6,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.96875,
+        "h": 0.328125
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 35,
+    "lineCount": 37,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [
-      "ORDER NOW"
-    ],
+    "ctas": [],
     "keyboard": true,
     "title": "Search, Order, Enjoy, Repeat!",
-    "headline": "On mouth-watering"
+    "headline": "What's on your mind?"
   },
   "crawler": {
-    "nodeId": "s007",
-    "depth": 6,
+    "nodeId": "s025",
+    "depth": 24,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -135,16 +140,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s006",
-        "via": "at 0:15",
-        "name": "Food home"
+        "from": "s024",
+        "via": "Tap “What's on your mind?”",
+        "name": "Food home (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s008",
-        "via": "at 0:17",
-        "name": "Food home (2)"
+        "to": "s024",
+        "via": "Dismiss",
+        "name": "Food home (3)"
       }
     ]
   },

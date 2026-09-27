@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-onboarding-2",
   "screen_id": "swiggy-ios-onboarding-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.846Z",
+  "analyzedAt": "2026-09-27T16:17:10.324Z",
   "screen_type": "login",
   "published_as": "login",
   "states": [
@@ -12,7 +12,7 @@
   "flow": "authentication",
   "flow_name": "Onboarding",
   "flow_position": 2,
-  "name": "One app for food, grocery, dining",
+  "name": "Phone number entry",
   "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
   "tags": [
     "login",
@@ -56,7 +56,7 @@
       "points": [
         "Step 2 of 3 in “Onboarding”",
         "Reached from “Splash screen”",
-        "Leads to “Select your location”"
+        "Leads to “Location picker (logged out)”"
       ]
     },
     {
@@ -133,15 +133,15 @@
     "reachedFrom": [
       {
         "from": "s001",
-        "via": "at 0:02",
+        "via": "Open One app for food, grocery, dining",
         "name": "Splash screen"
       }
     ],
     "leadsTo": [
       {
         "to": "s003",
-        "via": "at 0:06",
-        "name": "Select your location"
+        "via": "Open Select your location",
+        "name": "Location picker (logged out)"
       }
     ]
   },

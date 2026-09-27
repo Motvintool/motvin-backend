@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-onboarding-3",
   "screen_id": "swiggy-ios-onboarding-3",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.849Z",
+  "analyzedAt": "2026-09-27T16:17:10.326Z",
   "screen_type": "empty_state",
   "published_as": "empty",
   "states": [
@@ -12,7 +12,7 @@
   "flow": "discovery",
   "flow_name": "Onboarding",
   "flow_position": 3,
-  "name": "Select your location",
+  "name": "Location picker (logged out)",
   "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
   "tags": [
     "search",
@@ -52,7 +52,7 @@
       "title": "Navigation",
       "points": [
         "Step 3 of 3 in “Onboarding”",
-        "Reached from “One app for food, grocery, dining”",
+        "Reached from “Phone number entry”",
         "Leads to “Food home — loading”"
       ]
     },
@@ -128,14 +128,14 @@
     "reachedFrom": [
       {
         "from": "s002",
-        "via": "at 0:06",
-        "name": "One app for food, grocery, dining"
+        "via": "Open Select your location",
+        "name": "Phone number entry"
       }
     ],
     "leadsTo": [
       {
         "to": "s004",
-        "via": "at 0:08",
+        "via": "Open Search for 'Sweets'",
         "name": "Food home — loading"
       }
     ]

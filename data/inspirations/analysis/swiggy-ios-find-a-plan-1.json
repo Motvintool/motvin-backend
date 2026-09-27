@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-find-a-plan-1",
   "screen_id": "swiggy-ios-find-a-plan-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.975Z",
+  "analyzedAt": "2026-09-27T16:17:10.594Z",
   "screen_type": "search",
   "published_as": "search",
   "states": [],
@@ -10,7 +10,7 @@
   "flow": "search",
   "flow_name": "FIND A PLAN",
   "flow_position": 1,
-  "name": "Search",
+  "name": "FIND A PLAN search",
   "description": "Search screen with a search bar and a paged carousel. Dark theme, 9 text elements.",
   "tags": [
     "search",
@@ -51,8 +51,8 @@
       "title": "Navigation",
       "points": [
         "Step 1 of 2 in “FIND A PLAN”",
-        "Reached from “Search — loading”",
-        "Leads to “Search (2)”"
+        "Reached from “FIND A PLAN search — loading”",
+        "Leads to “Search · FIND A PLAN”"
       ]
     },
     {
@@ -130,15 +130,15 @@
     "reachedFrom": [
       {
         "from": "s064",
-        "via": "at 2:58",
-        "name": "Search — loading"
+        "via": "Wait 1s",
+        "name": "FIND A PLAN search — loading"
       }
     ],
     "leadsTo": [
       {
         "to": "s066",
-        "via": "at 3:00",
-        "name": "Search (2)"
+        "via": "Tap “Search”",
+        "name": "Search · FIND A PLAN"
       }
     ]
   },

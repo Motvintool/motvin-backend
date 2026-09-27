@@ -1,8 +1,8 @@
 {
-  "screenId": "swiggy-ios-pizza-hut-1",
-  "screen_id": "swiggy-ios-pizza-hut-1",
+  "screenId": "swiggy-ios-opening-pizza-hut-1",
+  "screen_id": "swiggy-ios-opening-pizza-hut-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.987Z",
+  "analyzedAt": "2026-09-27T16:17:10.623Z",
   "screen_type": "dialog",
   "published_as": "modal",
   "states": [
@@ -10,9 +10,9 @@
   ],
   "category": "productivity",
   "flow": "discovery",
-  "flow_name": "Pizza Hut",
+  "flow_name": "Opening Pizza Hut",
   "flow_position": 1,
-  "name": "Pizza Hut",
+  "name": "Pizza Hut dialog",
   "description": "Dialog over a dimmed screen, on top of Loading state with a search bar and a paged carousel. Light theme, 24 text elements.",
   "tags": [
     "search",
@@ -58,7 +58,7 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Pizza Hut”",
+        "Step 1 of 1 in “Opening Pizza Hut”",
         "Reached from “Loading state”",
         "Leads to “Hut®”"
       ]
@@ -144,14 +144,14 @@
     "reachedFrom": [
       {
         "from": "s072",
-        "via": "at 3:24",
+        "via": "Wait 0.2s",
         "name": "Loading state"
       }
     ],
     "leadsTo": [
       {
         "to": "s071",
-        "via": "at 3:28",
+        "via": "Back to Hut®",
         "name": "Hut®"
       }
     ]

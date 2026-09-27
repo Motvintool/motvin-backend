@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-organics-1",
   "screen_id": "swiggy-ios-organics-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.946Z",
+  "analyzedAt": "2026-09-27T16:17:10.526Z",
   "screen_type": "search_results",
   "published_as": "search",
   "states": [],
@@ -10,7 +10,7 @@
   "flow": "search",
   "flow_name": "Organics",
   "flow_position": 1,
-  "name": "Fresh Vegetables · Organics",
+  "name": "Search results · Organics",
   "description": "Search results screen with a row of 3 category chips and prices. Light theme, 46 text elements.",
   "tags": [
     "price",
@@ -50,8 +50,8 @@
       "title": "Navigation",
       "points": [
         "Step 1 of 1 in “Organics”",
-        "Reached from “In the spotlight — loading”, “Crunchy Treats, Tasty Deals! — loading” and “Fresh Vegetables — scrolled”",
-        "Leads to “Lay's home”, “Fresh Vegetables” and “Instamart home (4)”",
+        "Reached from “In the spotlight — loading”, “Home — loading” and “Search results — scrolled”",
+        "Leads to “Lay's home”, “Search results (2)” and “Instamart home (4)”",
         "Returned to 3 times in the recording"
       ]
     },
@@ -133,34 +133,34 @@
     "reachedFrom": [
       {
         "from": "s017",
-        "via": "at 2:07",
+        "via": "Wait 0.6s",
         "name": "In the spotlight — loading"
       },
       {
         "from": "s011",
-        "via": "at 2:24",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
+        "via": "Wait 0.6s",
+        "name": "Home — loading"
       },
       {
         "from": "s053",
-        "via": "at 2:29",
-        "name": "Fresh Vegetables — scrolled"
+        "via": "Back to Search results",
+        "name": "Search results — scrolled"
       }
     ],
     "leadsTo": [
       {
         "to": "s047",
-        "via": "at 2:08",
+        "via": "Open Categories",
         "name": "Lay's home"
       },
       {
         "to": "s052",
-        "via": "at 2:25",
-        "name": "Fresh Vegetables"
+        "via": "Tap “Fresh Vegetables”",
+        "name": "Search results (2)"
       },
       {
         "to": "s043",
-        "via": "at 2:31",
+        "via": "Back to Instamart home",
         "name": "Instamart home (4)"
       }
     ]

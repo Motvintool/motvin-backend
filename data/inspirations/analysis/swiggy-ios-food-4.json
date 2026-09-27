@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-food-4",
   "screen_id": "swiggy-ios-food-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.895Z",
+  "analyzedAt": "2026-09-27T16:17:10.416Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -48,8 +48,8 @@
       "title": "Navigation",
       "points": [
         "Step 4 of 10 in “Food”",
-        "Reached from “Food home — loading”, “Search, Order, Enjoy, Repeat! (2)” and “NIC Ice Creams home (2)”",
-        "Leads to “Search, Order, Enjoy, Repeat! (2)”, “Food home — loading” and “Food home (4)”",
+        "Reached from “Food home — loading”, “Search · modal” and “NIC Ice Creams home (2)”",
+        "Leads to “Search · modal”, “Food home — loading” and “Food home (4)”",
         "Returned to 3 times in the recording"
       ]
     },
@@ -130,34 +130,34 @@
     "reachedFrom": [
       {
         "from": "s023",
-        "via": "at 0:48",
+        "via": "Wait 1.6s",
         "name": "Food home — loading"
       },
       {
         "from": "s025",
-        "via": "at 0:54",
-        "name": "Search, Order, Enjoy, Repeat! (2)"
+        "via": "Dismiss",
+        "name": "Search · modal"
       },
       {
         "from": "s076",
-        "via": "at 3:35",
+        "via": "Back to Food home",
         "name": "NIC Ice Creams home (2)"
       }
     ],
     "leadsTo": [
       {
         "to": "s025",
-        "via": "at 0:52",
-        "name": "Search, Order, Enjoy, Repeat! (2)"
+        "via": "Tap “What's on your mind?”",
+        "name": "Search · modal"
       },
       {
         "to": "s026",
-        "via": "at 0:57",
+        "via": "Tap “Fried Rice”",
         "name": "Food home — loading"
       },
       {
         "to": "s027",
-        "via": "at 3:38",
+        "via": "Back to Food home",
         "name": "Food home (4)"
       }
     ]

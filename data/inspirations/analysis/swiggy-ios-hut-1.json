@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-hut-1",
   "screen_id": "swiggy-ios-hut-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.986Z",
+  "analyzedAt": "2026-09-27T16:17:10.621Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
@@ -51,7 +51,7 @@
       "title": "Navigation",
       "points": [
         "Step 1 of 1 in “Hut®”",
-        "Reached from “Hut® — loading” and “Pizza Hut”",
+        "Reached from “Hut® — loading” and “Pizza Hut dialog”",
         "Leads to “Loading state” and “Ani home”",
         "Returned to 5 times in the recording"
       ]
@@ -128,24 +128,24 @@
     "reachedFrom": [
       {
         "from": "s070",
-        "via": "at 3:21",
+        "via": "Wait 1.4s",
         "name": "Hut® — loading"
       },
       {
         "from": "s073",
-        "via": "at 3:28",
-        "name": "Pizza Hut"
+        "via": "Back to Hut®",
+        "name": "Pizza Hut dialog"
       }
     ],
     "leadsTo": [
       {
         "to": "s072",
-        "via": "at 3:24",
+        "via": "Tap “Hut®”",
         "name": "Loading state"
       },
       {
         "to": "s074",
-        "via": "at 3:30",
+        "via": "Open Best in Pizz",
         "name": "Ani home"
       }
     ]

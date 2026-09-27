@@ -32,11 +32,19 @@
         },
         {
           "screenId": "swiggy-ios-onboarding-2",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "One app for food, grocery, dining",
+            "basis": "destination"
+          }
         },
         {
           "screenId": "swiggy-ios-onboarding-3",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
         }
       ]
     },
@@ -66,7 +74,11 @@
         },
         {
           "screenId": "swiggy-ios-food-2",
-          "action": null
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
         },
         {
           "screenId": "swiggy-ios-food-3",
@@ -78,7 +90,11 @@
         },
         {
           "screenId": "swiggy-ios-food-5",
-          "action": null
+          "action": {
+            "kind": "back",
+            "label": "Food home",
+            "basis": "structure"
+          }
         },
         {
           "screenId": "swiggy-ios-food-6",
@@ -86,7 +102,11 @@
         },
         {
           "screenId": "swiggy-ios-food-7",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "Uh Oh! You don't have any food orders",
+            "basis": "destination"
+          }
         },
         {
           "screenId": "swiggy-ios-food-8",
@@ -98,7 +118,11 @@
         },
         {
           "screenId": "swiggy-ios-food-10",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "Search for 'Pizza'",
+            "basis": "destination"
+          }
         }
       ]
     },
@@ -130,6 +154,40 @@
         },
         {
           "screenId": "swiggy-ios-instamart-4",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-chocolate-bar",
+      "appId": "swiggy",
+      "name": "Chocolate Bar",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-chocolate-bar-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-chocolate-bar-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-scan-it",
+      "appId": "swiggy",
+      "name": "Scan it",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-scan-it-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-scan-it-1",
           "action": null
         }
       ]
@@ -177,85 +235,11 @@
         },
         {
           "screenId": "swiggy-ios-dineout-7",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-logging-in",
-      "appId": "swiggy",
-      "name": "Logging in",
-      "category": "authentication",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-onboarding-3"
-      ],
-      "parentId": "swiggy-ios-onboarding",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-onboarding-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-onboarding-3",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-scenes",
-      "appId": "swiggy",
-      "name": "Scenes",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-dineout-2",
-        "swiggy-ios-scenes-1"
-      ],
-      "parentId": "swiggy-ios-dineout",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-dineout-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-scenes-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-chocolate-bar",
-      "appId": "swiggy",
-      "name": "Chocolate Bar",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-chocolate-bar-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-chocolate-bar-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-scan-it",
-      "appId": "swiggy",
-      "name": "Scan it",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-scan-it-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-scan-it-1",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "My Corner",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -272,6 +256,28 @@
       "steps": [
         {
           "screenId": "swiggy-ios-view-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-scenes-1",
+        "swiggy-ios-scenes-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-scenes-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-scenes-2",
           "action": null
         }
       ]
@@ -440,7 +446,11 @@
         },
         {
           "screenId": "swiggy-ios-find-a-plan-2",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "Search",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -479,7 +489,11 @@
         },
         {
           "screenId": "swiggy-ios-chinese-2",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "Deals On Your Favs",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -518,14 +532,40 @@
       ]
     },
     {
-      "id": "swiggy-ios-searching-food",
+      "id": "swiggy-ios-entering-phone-number",
       "appId": "swiggy",
-      "name": "Searching Food",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-onboarding-2",
+        "swiggy-ios-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-searching-for-dishes-restaurants",
+      "appId": "swiggy",
+      "name": "Searching for “dishes & restaurants”",
       "category": "search",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-food-2",
-        "swiggy-ios-searching-food-1"
+        "swiggy-ios-searching-for-dishes-restaurants-1"
       ],
       "parentId": "swiggy-ios-food",
       "steps": [
@@ -534,8 +574,12 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-searching-food-1",
-          "action": null
+          "screenId": "swiggy-ios-searching-for-dishes-restaurants-1",
+          "action": {
+            "kind": "type",
+            "label": "dishes & restaurants",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -562,14 +606,14 @@
       ]
     },
     {
-      "id": "swiggy-ios-searching-dineout",
+      "id": "swiggy-ios-searching-for-restaurants-localities-cuisines",
       "appId": "swiggy",
-      "name": "Searching Dineout",
+      "name": "Searching for “restaurants, localities, cuisines”",
       "category": "search",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-dineout-1",
-        "swiggy-ios-searching-dineout-1"
+        "swiggy-ios-searching-for-restaurants-localities-cuisines-1"
       ],
       "parentId": "swiggy-ios-dineout",
       "steps": [
@@ -578,20 +622,24 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-searching-dineout-1",
-          "action": null
+          "screenId": "swiggy-ios-searching-for-restaurants-localities-cuisines-1",
+          "action": {
+            "kind": "type",
+            "label": "restaurants, localities, cuisines",
+            "basis": "match"
+          }
         }
       ]
     },
     {
-      "id": "swiggy-ios-searching-food-2",
+      "id": "swiggy-ios-searching-food",
       "appId": "swiggy",
-      "name": "Searching Food (2)",
+      "name": "Searching Food",
       "category": "search",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-food-4",
-        "swiggy-ios-searching-food-2-1"
+        "swiggy-ios-searching-food-1"
       ],
       "parentId": "swiggy-ios-food",
       "steps": [
@@ -600,8 +648,12 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-searching-food-2-1",
-          "action": null
+          "screenId": "swiggy-ios-searching-food-1",
+          "action": {
+            "kind": "tap",
+            "label": "What's on your mind?",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -645,7 +697,11 @@
         },
         {
           "screenId": "swiggy-ios-swiggy-seal-1",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "Swiggy Seal",
+            "basis": "destination"
+          }
         }
       ]
     },
@@ -690,46 +746,32 @@
         },
         {
           "screenId": "swiggy-ios-searching-organics-1",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "Fresh Vegetables",
+            "basis": "match"
+          }
         },
         {
           "screenId": "swiggy-ios-searching-organics-2",
-          "action": null
+          "action": {
+            "kind": "scroll",
+            "label": null,
+            "basis": "structure"
+          }
         }
       ]
     },
     {
-      "id": "swiggy-ios-scenes-2",
-      "appId": "swiggy",
-      "name": "Scenes (2)",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-dineout-2",
-        "swiggy-ios-scenes-2-1"
-      ],
-      "parentId": "swiggy-ios-dineout",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-dineout-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-scenes-2-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-logging-in-3",
+      "id": "swiggy-ios-logging-in",
       "appId": "swiggy",
       "name": "Logging in",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-dineout-5",
-        "swiggy-ios-logging-in-3-1",
-        "swiggy-ios-logging-in-3-2"
+        "swiggy-ios-logging-in-1",
+        "swiggy-ios-logging-in-2"
       ],
       "parentId": "swiggy-ios-dineout",
       "steps": [
@@ -738,12 +780,16 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-logging-in-3-1",
+          "screenId": "swiggy-ios-logging-in-1",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-logging-in-3-2",
-          "action": null
+          "screenId": "swiggy-ios-logging-in-2",
+          "action": {
+            "kind": "tap",
+            "label": "Sizzlewood By The",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -809,19 +855,23 @@
         },
         {
           "screenId": "swiggy-ios-search-in-nic-ice-creams-1",
-          "action": null
+          "action": {
+            "kind": "open",
+            "label": "Search in NIC Ice Creams",
+            "basis": "destination"
+          }
         }
       ]
     },
     {
-      "id": "swiggy-ios-logging-in-2",
+      "id": "swiggy-ios-logging-in-with-phone-number",
       "appId": "swiggy",
-      "name": "Logging in",
+      "name": "Logging in with phone number",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-logging-in-2-1"
+        "swiggy-ios-logging-in-with-phone-number-1"
       ],
       "parentId": "swiggy-ios-swiggy-seal",
       "steps": [
@@ -830,8 +880,12 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-logging-in-2-1",
-          "action": null
+          "screenId": "swiggy-ios-logging-in-with-phone-number-1",
+          "action": {
+            "kind": "tap",
+            "label": "Swiggy Seal",
+            "basis": "match"
+          }
         }
       ]
     },
@@ -854,23 +908,31 @@
         },
         {
           "screenId": "swiggy-ios-nic-1",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "nic",
+            "basis": "match"
+          }
         },
         {
           "screenId": "swiggy-ios-nic-2",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "nic",
+            "basis": "match"
+          }
         }
       ]
     },
     {
-      "id": "swiggy-ios-pizza-hut",
+      "id": "swiggy-ios-opening-pizza-hut",
       "appId": "swiggy",
-      "name": "Pizza Hut",
+      "name": "Opening Pizza Hut",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-hut-1",
-        "swiggy-ios-pizza-hut-1"
+        "swiggy-ios-opening-pizza-hut-1"
       ],
       "parentId": "swiggy-ios-hut",
       "steps": [
@@ -879,7 +941,7 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-pizza-hut-1",
+          "screenId": "swiggy-ios-opening-pizza-hut-1",
           "action": null
         }
       ]

@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-7",
   "screen_id": "swiggy-ios-dineout-7",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.974Z",
+  "analyzedAt": "2026-09-27T16:17:10.589Z",
   "screen_type": "empty_state",
   "published_as": "empty",
   "states": [
@@ -12,7 +12,7 @@
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 7,
-  "name": "My Corner (3)",
+  "name": "My Corner (empty) (3)",
   "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
   "tags": [
     "booking",
@@ -56,8 +56,8 @@
       "title": "Navigation",
       "points": [
         "Step 7 of 7 in “Dineout”",
-        "Reached from “My Corner (2)” and “Search (2)”",
-        "Leads to “Search — loading” and “Dineout home (2)”",
+        "Reached from “My Corner (empty) (2)” and “Search · FIND A PLAN”",
+        "Leads to “FIND A PLAN search — loading” and “Dineout home (2)”",
         "Returned to 2 times in the recording"
       ]
     },
@@ -139,24 +139,24 @@
     "reachedFrom": [
       {
         "from": "s062",
-        "via": "at 2:56",
-        "name": "My Corner (2)"
+        "via": "Tap “My Corner”",
+        "name": "My Corner (empty) (2)"
       },
       {
         "from": "s066",
-        "via": "at 3:01",
-        "name": "Search (2)"
+        "via": "Back to My Corner (empty)",
+        "name": "Search · FIND A PLAN"
       }
     ],
     "leadsTo": [
       {
         "to": "s064",
-        "via": "at 2:57",
-        "name": "Search — loading"
+        "via": "Open Search",
+        "name": "FIND A PLAN search — loading"
       },
       {
         "to": "s055",
-        "via": "at 3:03",
+        "via": "Back to Dineout home",
         "name": "Dineout home (2)"
       }
     ]

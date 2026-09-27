@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-dineout-4",
   "screen_id": "swiggy-ios-dineout-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.965Z",
+  "analyzedAt": "2026-09-27T16:17:10.568Z",
   "screen_type": "product_detail",
   "published_as": "product",
   "states": [],
@@ -10,7 +10,7 @@
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 4,
-  "name": "Product detail",
+  "name": "Item detail",
   "description": "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
   "tags": [
     "dineout",
@@ -49,8 +49,8 @@
       "title": "Navigation",
       "points": [
         "Step 4 of 7 in “Dineout”",
-        "Reached from “Product detail — loading”",
-        "Leads to “Crunchy Treats, Tasty Deals! — loading”"
+        "Reached from “Item detail — loading”",
+        "Leads to “Home — loading”"
       ]
     },
     {
@@ -133,15 +133,15 @@
     "reachedFrom": [
       {
         "from": "s056",
-        "via": "at 2:45",
-        "name": "Product detail — loading"
+        "via": "Wait 0.6s",
+        "name": "Item detail — loading"
       }
     ],
     "leadsTo": [
       {
         "to": "s011",
-        "via": "at 2:46",
-        "name": "Crunchy Treats, Tasty Deals! — loading"
+        "via": "Back to Home — loading",
+        "name": "Home — loading"
       }
     ]
   },

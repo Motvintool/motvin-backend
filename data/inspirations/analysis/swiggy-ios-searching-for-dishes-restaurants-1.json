@@ -1,8 +1,8 @@
 {
-  "screenId": "swiggy-ios-searching-dineout-1",
-  "screen_id": "swiggy-ios-searching-dineout-1",
+  "screenId": "swiggy-ios-searching-for-dishes-restaurants-1",
+  "screen_id": "swiggy-ios-searching-for-dishes-restaurants-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T15:22:29.884Z",
+  "analyzedAt": "2026-09-27T16:17:10.343Z",
   "screen_type": "search",
   "published_as": "search",
   "states": [
@@ -10,13 +10,13 @@
   ],
   "category": "productivity",
   "flow": "search",
-  "flow_name": "Searching Dineout",
+  "flow_name": "Searching for “dishes & restaurants”",
   "flow_position": 1,
-  "name": "Search 'Chinese' or 'Cafe'",
-  "description": "Search screen with a search bar and the keyboard open. Light theme, 27 text elements.",
+  "name": "Search",
+  "description": "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
   "tags": [
     "search",
-    "booking",
+    "delivery",
     "keyboard",
     "ios"
   ],
@@ -25,7 +25,10 @@
     "keyboard",
     "text-field",
     "search-bar",
+    "price",
     "list",
+    "cta",
+    "button",
     "banner"
   ],
   "style": [
@@ -36,7 +39,7 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Search 'Chinese' or 'Cafe'”",
+        "Navigation title reads “Search, Order, Enjoy, Repeat!”",
         "Keyboard is open, so the lower half is input",
         "Search bar present",
         "Light style"
@@ -45,63 +48,64 @@
     {
       "title": "Content",
       "points": [
-        "Search screen with a search bar and the keyboard open. Light theme, 27 text elements.",
-        "27 text elements recognised",
+        "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "35 text elements recognised",
         "State: keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Searching Dineout”",
-        "Reached from “In the spotlight”",
-        "Leads to “View home”"
+        "Step 1 of 1 in “Searching for “dishes & restaurants””",
+        "Reached from “Food home”",
+        "Leads to “Food home (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.6s at 0:35 in the recording",
-        "Frame 185 of 1141 sampled at 5 fps",
+        "Held for 1.8s at 0:15 in the recording",
+        "Frame 86 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#434142",
       "role": "background",
-      "share": 0.41
+      "share": 0.201
     },
     {
-      "hex": "#e0dedd",
+      "hex": "#b4b4b5",
       "role": "surface",
-      "share": 0.262
+      "share": 0.2
     },
     {
-      "hex": "#c3c2c1",
+      "hex": "#d9d9da",
       "role": "surface",
-      "share": 0.049
+      "share": 0.183
     },
     {
-      "hex": "#28221f",
+      "hex": "#fdfcfd",
       "role": "text",
-      "share": 0.028
+      "share": 0.176
     },
     {
-      "hex": "#4e4a43",
+      "hex": "#282126",
       "role": "surface",
-      "share": 0.022
+      "share": 0.127
     }
   ],
   "capture": {
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 185,
-    "atSeconds": 35.8,
-    "endSeconds": 37.4,
-    "holdSeconds": 1.6,
+    "frame": 86,
+    "atSeconds": 15.6,
+    "endSeconds": 17.4,
+    "holdSeconds": 1.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -111,17 +115,19 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 27,
+    "lineCount": 35,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "ORDER NOW"
+    ],
     "keyboard": true,
-    "title": "Search 'Chinese' or 'Cafe'",
-    "headline": "QWER"
+    "title": "Search, Order, Enjoy, Repeat!",
+    "headline": "On mouth-watering"
   },
   "crawler": {
-    "nodeId": "s019",
-    "depth": 18,
+    "nodeId": "s007",
+    "depth": 6,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -129,16 +135,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s018",
-        "via": "at 0:35",
-        "name": "In the spotlight"
+        "from": "s006",
+        "via": "Type “dishes & restaurants”",
+        "name": "Food home"
       }
     ],
     "leadsTo": [
       {
-        "to": "s020",
-        "via": "at 0:37",
-        "name": "View home"
+        "to": "s008",
+        "via": "Type “Pizza”",
+        "name": "Food home (2)"
       }
     ]
   },
