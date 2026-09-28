@@ -2,20 +2,20 @@
   "screenId": "swiggy-ios-food-1",
   "screen_id": "swiggy-ios-food-1",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-28T06:47:32.022Z",
+  "analyzedAt": "2026-09-28T07:53:21.814Z",
   "screen_type": "coach_mark",
   "published_as": "onboarding",
   "states": [
     "coach-mark"
   ],
-  "category": "food",
+  "category": "ecommerce",
   "flow": "onboarding",
   "flow_name": "Food",
   "flow_position": 1,
   "name": "Welcome tip",
-  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
-  "purpose": "The user is viewing a welcome tip for the app",
-  "primary_action": "View welcome tip",
+  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+  "purpose": "User is prompted to explore categories and offers",
+  "primary_action": "Continue to Food",
   "tags": [
     "delivery",
     "food",
@@ -54,16 +54,16 @@
     {
       "title": "Content",
       "points": [
-        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
+        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
         "Calls to action: “Continue to Food”, “ORDER NOW”",
-        "25 text elements recognised",
+        "28 text elements recognised",
         "State: coach-mark"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 10 in “Food”",
+        "Step 1 of 2 in “Food”",
         "Reached from “Food home — loading”",
         "Leads to “Food home”"
       ]
@@ -71,8 +71,8 @@
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 0:10 in the recording",
-        "Frame 58 of 1141 sampled at 5 fps",
+        "Held for 1.6s at 0:07 in the recording",
+        "Frame 43 of 85 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -81,12 +81,17 @@
     {
       "hex": "#1e0e07",
       "role": "background",
-      "share": 0.552
+      "share": 0.544
     },
     {
-      "hex": "#8f8d8c",
+      "hex": "#8e8d8d",
       "role": "surface",
-      "share": 0.087
+      "share": 0.076
+    },
+    {
+      "hex": "#372c25",
+      "role": "surface",
+      "share": 0.056
     },
     {
       "hex": "#f6f6f6",
@@ -94,33 +99,28 @@
       "share": 0.052
     },
     {
-      "hex": "#382d25",
+      "hex": "#d8d9d9",
       "role": "surface",
-      "share": 0.051
-    },
-    {
-      "hex": "#6e5e58",
-      "role": "surface",
-      "share": 0.037
+      "share": 0.034
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "Zomato.mp4",
     "fps": 5,
-    "frames": 1141,
-    "frame": 58,
-    "atSeconds": 10,
-    "endSeconds": 11.8,
-    "holdSeconds": 1.8,
+    "frames": 85,
+    "frame": 43,
+    "atSeconds": 7.4,
+    "endSeconds": 9,
+    "holdSeconds": 1.6,
     "brief": false,
     "kind": "overlay",
     "overlay": {
       "kind": "bottom_sheet",
       "dimmed": true,
       "box": {
-        "x": 0.03125,
+        "x": 0,
         "y": 0.484375,
-        "w": 0.96875,
+        "w": 1,
         "h": 0.5
       }
     },
@@ -130,7 +130,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 25,
+    "lineCount": 28,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -149,7 +149,7 @@
     ],
     "keyboard": false,
     "title": "Fresh, hot & crisp",
-    "headline": "EEKEND"
+    "headline": "OLo OFF"
   },
   "crawler": {
     "nodeId": "s005",
@@ -162,7 +162,7 @@
     "reachedFrom": [
       {
         "from": "s004",
-        "via": "Wait 1.2s",
+        "via": "Wait 1.8s",
         "name": "Food home — loading"
       }
     ],

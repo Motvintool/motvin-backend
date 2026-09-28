@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T06:47:33.554Z",
+  "generatedAt": "2026-09-28T08:00:14.242Z",
   "counts": {
     "apps": 3,
-    "screens": 68,
-    "flows": 28,
-    "patterns": 10,
-    "ui-elements": 362
+    "screens": 12,
+    "flows": 7,
+    "patterns": 7,
+    "ui-elements": 55
   },
   "taxonomy": {
     "platforms": [
@@ -19,24 +19,18 @@
       "signup",
       "home",
       "feed",
-      "search",
-      "product",
-      "modal",
       "empty",
       "other"
     ],
     "states": [
       "empty",
-      "modal",
-      "bottom-sheet",
       "coach-mark",
-      "scrolled",
       "keyboard"
     ],
     "industries": [
       "saas",
-      "productivity",
-      "food"
+      "ecommerce",
+      "productivity"
     ],
     "styles": [
       "minimal",
@@ -57,7 +51,6 @@
       "keyboard",
       "legal-text",
       "list",
-      "modal",
       "nav-bar",
       "page-indicator",
       "price",
@@ -68,8 +61,7 @@
     "flowCategories": [
       "authentication",
       "discovery",
-      "onboarding",
-      "search"
+      "onboarding"
     ]
   },
   "vocabulary": {
@@ -175,15 +167,15 @@
       "id": "swiggy",
       "name": "Swiggy",
       "slug": "swiggy",
-      "industry": "food",
+      "industry": "ecommerce",
       "platforms": [
         "ios"
       ],
-      "website": null,
-      "tagline": "One app for food, grocery, dining & more in minutes!",
-      "logo": null,
-      "screenCount": 64,
-      "flowCount": 27,
+      "website": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
+      "tagline": "Taste the city, delivered.",
+      "logo": "/api/inspirations/logos/swiggy.png",
+      "screenCount": 8,
+      "flowCount": 6,
       "license": null,
       "attribution": "Swiggy",
       "rating": null,
@@ -198,7 +190,7 @@
         "ios"
       ],
       "website": "https://www.instagram.com/siren.uix/",
-      "tagline": "Explore new rooms & singles",
+      "tagline": "Find your perfect stay.",
       "logo": "/api/inspirations/logos/airbnb.png",
       "screenCount": 3,
       "flowCount": 1,
@@ -361,31 +353,31 @@
       "flow": "onboarding",
       "name": "Splash screen",
       "file": "ios/swiggy/onboarding/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 157112,
+      "bytes": 165942,
       "platform": "ios",
       "screenType": "splash",
       "fineType": "splash",
       "states": [],
       "description": "Launch screen shown while the app starts. Light theme.",
-      "purpose": "The app is launching and displaying a splash screen with a logo",
-      "primaryAction": "None",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for app to load",
       "capture": {
         "atSeconds": 0,
-        "holdSeconds": 1.4,
+        "holdSeconds": 1,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "splash",
         "ios",
-        "food"
+        "ecommerce"
       ],
       "elements": [],
       "style": [
@@ -396,7 +388,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -409,10 +401,10 @@
       "flow": "onboarding",
       "name": "Phone number entry",
       "file": "ios/swiggy/onboarding/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 546429,
+      "bytes": 547015,
       "platform": "ios",
       "screenType": "login",
       "fineType": "login",
@@ -420,23 +412,23 @@
         "keyboard"
       ],
       "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-      "purpose": "The user is entering their mobile number to proceed with the app",
+      "purpose": "User enters their mobile number to proceed with the app",
       "primaryAction": "Enter mobile number",
       "capture": {
-        "atSeconds": 2.4,
-        "holdSeconds": 2,
+        "atSeconds": 1.8,
+        "holdSeconds": 1.2,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "login",
         "keyboard",
         "ios",
-        "food"
+        "ecommerce"
       ],
       "elements": [
         "nav-bar",
@@ -455,7 +447,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -468,10 +460,10 @@
       "flow": "onboarding",
       "name": "Location picker (logged out)",
       "file": "ios/swiggy/onboarding/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/3.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/onboarding/3.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 624668,
+      "bytes": 898779,
       "platform": "ios",
       "screenType": "empty",
       "fineType": "empty_state",
@@ -479,18 +471,18 @@
         "empty"
       ],
       "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-      "purpose": "The user is selecting their location to proceed with the app",
-      "primaryAction": "Select location",
+      "purpose": "User selects their location to proceed with the app",
+      "primaryAction": "Select location or use current location",
       "capture": {
-        "atSeconds": 6.2,
+        "atSeconds": 3,
         "holdSeconds": 0.6,
         "brief": false,
-        "visits": 1,
+        "visits": 2,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "search",
         "location",
@@ -498,7 +490,7 @@
         "empty-state",
         "empty",
         "ios",
-        "food"
+        "ecommerce"
       ],
       "elements": [
         "nav-bar",
@@ -512,7 +504,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -525,29 +517,29 @@
       "flow": "food",
       "name": "Welcome tip",
       "file": "ios/swiggy/food/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/1.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/food/1.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 1843752,
+      "bytes": 1725410,
       "platform": "ios",
       "screenType": "onboarding",
       "fineType": "coach_mark",
       "states": [
         "coach-mark"
       ],
-      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 25 text elements.",
-      "purpose": "The user is viewing a welcome tip for the app",
-      "primaryAction": "View welcome tip",
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "purpose": "User is prompted to explore categories and offers",
+      "primaryAction": "Continue to Food",
       "capture": {
-        "atSeconds": 10,
-        "holdSeconds": 1.8,
+        "atSeconds": 7.4,
+        "holdSeconds": 1.6,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "delivery",
         "food",
@@ -556,6 +548,7 @@
         "reorder",
         "coach-mark",
         "ios",
+        "ecommerce",
         "onboarding"
       ],
       "elements": [
@@ -577,7 +570,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -590,27 +583,27 @@
       "flow": "food",
       "name": "Food home",
       "file": "ios/swiggy/food/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/2.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/food/2.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 1618516,
+      "bytes": 1592774,
       "platform": "ios",
       "screenType": "home",
       "fineType": "home",
       "states": [],
-      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
-      "purpose": "The user is viewing the main food category page",
-      "primaryAction": "View food home",
+      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+      "purpose": "User views the main food categories and offers",
+      "primaryAction": "View food categories and offers",
       "capture": {
-        "atSeconds": 12.2,
-        "holdSeconds": 3,
+        "atSeconds": 9.2,
+        "holdSeconds": 1,
         "brief": false,
-        "visits": 5,
+        "visits": 2,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "search",
         "delivery",
@@ -620,7 +613,8 @@
         "eatright",
         "reorder",
         "home",
-        "ios"
+        "ios",
+        "ecommerce"
       ],
       "elements": [
         "tab-bar",
@@ -640,131 +634,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-for-dishes-restaurants-1",
-      "appId": "swiggy",
-      "flow": "searching-for-dishes-restaurants",
-      "name": "Search",
-      "file": "ios/swiggy/searching-for-dishes-restaurants/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-for-dishes-restaurants/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 822332,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search",
-      "states": [
-        "keyboard"
-      ],
-      "description": "Search screen with a search bar, the keyboard open, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
-      "purpose": "The search interface for finding dishes and restaurants",
-      "primaryAction": "Enter search query",
-      "capture": {
-        "atSeconds": 15.6,
-        "holdSeconds": 1.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "keyboard",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "keyboard",
-        "text-field",
-        "search-bar",
-        "price",
-        "list",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-3",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (2)",
-      "file": "ios/swiggy/food/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1732538,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 38 text elements, shown only briefly.",
-      "purpose": "The user is viewing the main food category page",
-      "primaryAction": "View food home",
-      "capture": {
-        "atSeconds": 17.4,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "cta",
-        "button",
-        "legal-text",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -775,29 +645,29 @@
       "id": "swiggy-ios-instamart-1",
       "appId": "swiggy",
       "flow": "instamart",
-      "name": "Instamart home",
+      "name": "Instamart",
       "file": "ios/swiggy/instamart/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/instamart/1.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/instamart/1.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 1438491,
+      "bytes": 1294813,
       "platform": "ios",
       "screenType": "feed",
-      "fineType": "feed",
+      "fineType": "category",
       "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 27 text elements.",
-      "purpose": "The main screen for the Instamart category showing various products and promotions",
-      "primaryAction": "Search for products",
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "purpose": "User navigates to the Instamart category section",
+      "primaryAction": "View Instamart categories",
       "capture": {
-        "atSeconds": 19.6,
-        "holdSeconds": 3.4,
+        "atSeconds": 11,
+        "holdSeconds": 0.8,
         "brief": false,
         "visits": 1,
         "overlayOf": null,
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "search",
         "address",
@@ -805,11 +675,11 @@
         "categories",
         "redbull",
         "feed",
+        "category",
         "ios",
-        "food"
+        "ecommerce"
       ],
       "elements": [
-        "tab-bar",
         "nav-bar",
         "search-bar",
         "list",
@@ -826,320 +696,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-search-for-protein-paneer-1",
-      "appId": "swiggy",
-      "flow": "search-for-protein-paneer",
-      "name": "Search results",
-      "file": "ios/swiggy/search-for-protein-paneer/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/search-for-protein-paneer/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1398935,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 5 category chips, a search bar and prices. Light theme, 76 text elements.",
-      "purpose": "Search for 'Protein Paneer' products",
-      "primaryAction": "Search",
-      "capture": {
-        "atSeconds": 23.8,
-        "holdSeconds": 3,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-search-for-protein-paneer-2",
-      "appId": "swiggy",
-      "flow": "search-for-protein-paneer",
-      "name": "Search results (2)",
-      "file": "ios/swiggy/search-for-protein-paneer/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/search-for-protein-paneer/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1766374,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a 6-item tab bar, a row of 5 category chips, a search bar and prices. Light theme, 96 text elements.",
-      "purpose": "Search for 'Protein Atta' products",
-      "primaryAction": "Search",
-      "capture": {
-        "atSeconds": 26.8,
-        "holdSeconds": 1.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "price",
-        "chocolate bar",
-        "imported",
-        "chocolate pack",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-instamart-2",
-      "appId": "swiggy",
-      "flow": "instamart",
-      "name": "Instamart home (2)",
-      "file": "ios/swiggy/instamart/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/instamart/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1193380,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 24 text elements.",
-      "purpose": "The main screen for the Instamart category showing various products and promotions",
-      "primaryAction": "Search for products",
-      "capture": {
-        "atSeconds": 28.6,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "instamart",
-        "categories",
-        "redbull",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "carousel",
-        "page-indicator",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-reading-a-feature-tip-1",
-      "appId": "swiggy",
-      "flow": "reading-a-feature-tip",
-      "name": "Feature tip",
-      "file": "ios/swiggy/reading-a-feature-tip/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/reading-a-feature-tip/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1210567,
-      "platform": "ios",
-      "screenType": "onboarding",
-      "fineType": "coach_mark",
-      "states": [
-        "coach-mark"
-      ],
-      "description": "Coach mark dialog over a dimmed screen, on top of Instamart home with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 19 text elements.",
-      "purpose": "Display a feature tip about address availability",
-      "primaryAction": "Tap to add address",
-      "capture": {
-        "atSeconds": 29.6,
-        "holdSeconds": 2.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "cart",
-        "address",
-        "scan it",
-        "say it",
-        "write it",
-        "coach-mark",
-        "ios",
-        "food",
-        "onboarding"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "carousel",
-        "page-indicator",
-        "cta",
-        "button",
-        "modal",
-        "coach-mark"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-instamart-3",
-      "appId": "swiggy",
-      "flow": "instamart",
-      "name": "Instamart home (3)",
-      "file": "ios/swiggy/instamart/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/instamart/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1141834,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel, a primary action labelled “SHOP NOW” and prices. Light theme, 25 text elements.",
-      "purpose": "The main screen for the Instamart category showing various products and promotions",
-      "primaryAction": "Search for products",
-      "capture": {
-        "atSeconds": 32.4,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 4,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "instamart",
-        "categories",
-        "red bull",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "carousel",
-        "page-indicator",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -1150,21 +707,21 @@
       "id": "swiggy-ios-dineout-1",
       "appId": "swiggy",
       "flow": "dineout",
-      "name": "Item detail",
+      "name": "Category listing",
       "file": "ios/swiggy/dineout/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 1270717,
+      "bytes": 1004327,
       "platform": "ios",
-      "screenType": "product",
-      "fineType": "product_detail",
+      "screenType": "feed",
+      "fineType": "category",
       "states": [],
-      "description": "Product detail screen with a 5-item tab bar, a row of 4 category chips, a search bar and prices. Light theme, 26 text elements.",
-      "purpose": "Display a product detail for a specific item",
-      "primaryAction": "View product details",
+      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+      "purpose": "The user is viewing a list of categories for dining options.",
+      "primaryAction": "Click on a category to view its details",
       "capture": {
-        "atSeconds": 33.6,
+        "atSeconds": 12.4,
         "holdSeconds": 1.2,
         "brief": false,
         "visits": 1,
@@ -1172,140 +729,25 @@
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "search",
+        "offer",
         "address",
         "dineout",
         "bites",
         "my corner",
         "scenes",
-        "product-detail",
-        "ios",
-        "food",
-        "product"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-for-restaurants-localities-cuisines-1",
-      "appId": "swiggy",
-      "flow": "searching-for-restaurants-localities-cuisines",
-      "name": "Search (2)",
-      "file": "ios/swiggy/searching-for-restaurants-localities-cuisines/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-for-restaurants-localities-cuisines/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1250447,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search",
-      "states": [
-        "keyboard"
-      ],
-      "description": "Search screen with a search bar and the keyboard open. Light theme, 27 text elements.",
-      "purpose": "Searching for restaurants, localities, or cuisines",
-      "primaryAction": "Enter a search query",
-      "capture": {
-        "atSeconds": 35.8,
-        "holdSeconds": 1.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "booking",
-        "keyboard",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "keyboard",
-        "text-field",
-        "search-bar",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-for-restaurants-localities-cuisines-2",
-      "appId": "swiggy",
-      "flow": "searching-for-restaurants-localities-cuisines",
-      "name": "View",
-      "file": "ios/swiggy/searching-for-restaurants-localities-cuisines/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-for-restaurants-localities-cuisines/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1486498,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar and a search bar. Light theme, 24 text elements.",
-      "purpose": "Viewing recommended restaurants and categories",
-      "primaryAction": "View recommended restaurants",
-      "capture": {
-        "atSeconds": 37.4,
-        "holdSeconds": 1.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "booking",
-        "view",
         "feed",
         "category",
         "ios",
-        "food"
+        "ecommerce"
       ],
       "elements": [
         "nav-bar",
         "search-bar",
         "list",
+        "chip",
         "banner"
       ],
       "style": [
@@ -1315,67 +757,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-2",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "Dineout home",
-      "file": "ios/swiggy/dineout/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1152666,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Dark theme, 30 text elements.",
-      "purpose": "Display the main feed for the Dineout section",
-      "primaryAction": "Browse restaurants",
-      "capture": {
-        "atSeconds": 39,
-        "holdSeconds": 2.6,
-        "brief": false,
-        "visits": 3,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "address",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -1386,247 +768,21 @@
       "id": "swiggy-ios-scenes-1",
       "appId": "swiggy",
       "flow": "scenes",
-      "name": "Category listing",
+      "name": "Category listing (2)",
       "file": "ios/swiggy/scenes/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/scenes/1.png?v=tm2aq8",
+      "url": "/api/inspirations/screens/ios/swiggy/scenes/1.png?v=tm2dwa",
       "width": 1170,
       "height": 2532,
-      "bytes": 1825065,
+      "bytes": 1816258,
       "platform": "ios",
       "screenType": "feed",
       "fineType": "category",
       "states": [],
-      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 15 text elements.",
-      "purpose": "The user is viewing a list of categories for food and related services.",
-      "primaryAction": "Select a category to explore",
+      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+      "purpose": "The user is viewing a list of categories for dining options.",
+      "primaryAction": "Click on a category to view its details",
       "capture": {
-        "atSeconds": 42.4,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "address",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "legal-text",
-        "banner"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-4",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (3)",
-      "file": "ios/swiggy/food/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/4.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1586812,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar. Light theme, 16 text elements.",
-      "purpose": "Displaying a curated selection of popular dishes with options to filter by cuisine type and dietary preferences",
-      "primaryAction": "Browse dishes",
-      "capture": {
-        "atSeconds": 48.4,
-        "holdSeconds": 3.2,
-        "brief": false,
-        "visits": 3,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-food-1",
-      "appId": "swiggy",
-      "flow": "searching-food",
-      "name": "Search modal",
-      "file": "ios/swiggy/searching-food/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-food/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 759560,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search",
-      "states": [
-        "modal",
-        "keyboard"
-      ],
-      "description": "Search dialog over a dimmed screen, on top of Food home with a search bar and the keyboard open. Light theme, 37 text elements.",
-      "purpose": "The user is interacting with a search interface to find specific items.",
-      "primaryAction": "Enter a search query",
-      "capture": {
-        "atSeconds": 52,
-        "holdSeconds": 2.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "modal",
-        "keyboard",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "keyboard",
-        "text-field",
-        "search-bar",
-        "list",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-5",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (4)",
-      "file": "ios/swiggy/food/5.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/5.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1694792,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar and prices. Light theme, 34 text elements.",
-      "purpose": "Presenting a variety of popular cuisines and top burger deals with filtering options for dietary preferences",
-      "primaryAction": "Browse dishes",
-      "capture": {
-        "atSeconds": 58.6,
-        "holdSeconds": 2.8,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "delivery",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "price",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-6",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (5)",
-      "file": "ios/swiggy/food/6.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/6.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1443537,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
-      "purpose": "Showing a section focused on protein loaded dishes with options to filter by weight category",
-      "primaryAction": "Browse dishes",
-      "capture": {
-        "atSeconds": 62.8,
+        "atSeconds": 14.2,
         "holdSeconds": 1.6,
         "brief": false,
         "visits": 1,
@@ -1634,1851 +790,20 @@
         "loadingOf": null,
         "scrolledFrom": null
       },
-      "industry": "food",
-      "tags": [
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-7",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (6)",
-      "file": "ios/swiggy/food/7.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/7.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 220740,
-      "platform": "ios",
-      "screenType": "home",
-      "fineType": "home",
-      "states": [],
-      "description": "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
-      "purpose": "Displaying a message indicating no food orders and providing an option to order now",
-      "primaryAction": "Order food",
-      "capture": {
-        "atSeconds": 64.4,
-        "holdSeconds": 4.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "discount",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "home",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "cta",
-        "button"
-      ],
-      "style": [
-        "light",
-        "minimal"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-grocery-dining-1",
-      "appId": "swiggy",
-      "flow": "grocery-dining",
-      "name": "Onboarding screen",
-      "file": "ios/swiggy/grocery-dining/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/grocery-dining/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 662021,
-      "platform": "ios",
-      "screenType": "onboarding",
-      "fineType": "onboarding",
-      "states": [],
-      "description": "Onboarding screen with a primary action labelled “Login”. Light theme, 10 text elements.",
-      "purpose": "The user is on the initial setup screen for the app.",
-      "primaryAction": "Login to the app",
-      "capture": {
-        "atSeconds": 72.2,
-        "holdSeconds": 1.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "login",
-        "offer",
-        "onboarding",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "cta",
-        "button",
-        "legal-text",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-grocery-dining-2",
-      "appId": "swiggy",
-      "flow": "grocery-dining",
-      "name": "Category listing (2)",
-      "file": "ios/swiggy/grocery-dining/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/grocery-dining/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1817065,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 22 text elements, shown only briefly.",
-      "purpose": "The user is viewing a list of categories for food and related services.",
-      "primaryAction": "Select a category to explore",
-      "capture": {
-        "atSeconds": 74,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
+      "industry": "ecommerce",
       "tags": [
         "search",
-        "delivery",
         "address",
-        "nic ice creams",
         "category",
         "ios",
-        "food",
+        "ecommerce",
         "feed"
       ],
       "elements": [
         "nav-bar",
         "search-bar",
-        "price",
         "list",
         "chip",
-        "cta",
-        "button",
-        "legal-text",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-8",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home · scrolled",
-      "file": "ios/swiggy/food/8.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/8.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 2149137,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [
-        "scrolled"
-      ],
-      "description": "Feed screen, scrolled further down from Food home with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 35 text elements.",
-      "purpose": "Showing a promotional section with deals and a search bar for 'EatRight'",
-      "primaryAction": "Browse dishes",
-      "capture": {
-        "atSeconds": 78.4,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "scrolled",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-swiggy-seal-1",
-      "appId": "swiggy",
-      "flow": "swiggy-seal",
-      "name": "Product detail",
-      "file": "ios/swiggy/swiggy-seal/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/swiggy-seal/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1056099,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 29 text elements.",
-      "purpose": "Displaying detailed information about NIC Ice Creams including ratings, preparation time, and available items",
-      "primaryAction": "View details of a specific ice cream product",
-      "capture": {
-        "atSeconds": 81,
-        "holdSeconds": 3.8,
-        "brief": false,
-        "visits": 4,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "carousel",
-        "page-indicator",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-opening-a-page-1",
-      "appId": "swiggy",
-      "flow": "opening-a-page",
-      "name": "Search results (3)",
-      "file": "ios/swiggy/opening-a-page/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/opening-a-page/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1688618,
-      "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
-      "states": [],
-      "description": "Other screen with a search bar. Light theme, 22 text elements.",
-      "purpose": "Showing search results for NIC Ice Creams with various product options and categories",
-      "primaryAction": "Search for specific ice cream products",
-      "capture": {
-        "atSeconds": 85,
-        "holdSeconds": 3.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "other",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-logging-in-with-phone-number-1",
-      "appId": "swiggy",
-      "flow": "logging-in-with-phone-number",
-      "name": "Login screen",
-      "file": "ios/swiggy/logging-in-with-phone-number/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/logging-in-with-phone-number/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 506317,
-      "platform": "ios",
-      "screenType": "login",
-      "fineType": "login",
-      "states": [
-        "keyboard"
-      ],
-      "description": "Login screen with the keyboard open and a primary action labelled “LOGIN”. Light theme, 34 text elements.",
-      "purpose": "Prompting the user to enter their phone number to log in or continue with a login process",
-      "primaryAction": "Enter phone number to proceed with login",
-      "capture": {
-        "atSeconds": 97.2,
-        "holdSeconds": 1.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "rating",
-        "login",
-        "keyboard",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "keyboard",
-        "text-field",
-        "form",
-        "list",
-        "cta",
-        "button",
-        "legal-text"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-opening-a-page-2-1",
-      "appId": "swiggy",
-      "flow": "opening-a-page-2",
-      "name": "Product detail (2)",
-      "file": "ios/swiggy/opening-a-page-2/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/opening-a-page-2/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1065220,
-      "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
-      "states": [],
-      "description": "Other screen with prices. Light theme, 18 text elements.",
-      "purpose": "Displaying a specific product detail for a selected item",
-      "primaryAction": "Add to cart",
-      "capture": {
-        "atSeconds": 100.4,
-        "holdSeconds": 2.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "other",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "price",
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-opening-a-page-2-2",
-      "appId": "swiggy",
-      "flow": "opening-a-page-2",
-      "name": "Product detail (3)",
-      "file": "ios/swiggy/opening-a-page-2/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/opening-a-page-2/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1008873,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 21 text elements, shown only briefly.",
-      "purpose": "Displaying a specific product detail for a selected item",
-      "primaryAction": "Add to cart",
-      "capture": {
-        "atSeconds": 102.8,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "carousel",
-        "page-indicator",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-swiggy-seal-2",
-      "appId": "swiggy",
-      "flow": "swiggy-seal",
-      "name": "Product detail · modal",
-      "file": "ios/swiggy/swiggy-seal/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/swiggy-seal/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 679379,
-      "platform": "ios",
-      "screenType": "modal",
-      "fineType": "dialog",
-      "states": [
-        "modal"
-      ],
-      "description": "Dialog over a dimmed screen, on top of Swiggy Seal with a search bar and a paged carousel. Dark theme, 41 text elements.",
-      "purpose": "Showing a promotional offer for NIC Ice Creams with additional discounts and special deals",
-      "primaryAction": "View promotional offers for the selected product",
-      "capture": {
-        "atSeconds": 105,
-        "holdSeconds": 2.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "j free c",
-        "dialog",
-        "modal",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "carousel",
-        "page-indicator",
-        "banner",
-        "modal"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-swiggy-seal-3",
-      "appId": "swiggy",
-      "flow": "swiggy-seal",
-      "name": "Category listing (3)",
-      "file": "ios/swiggy/swiggy-seal/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/swiggy-seal/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1192908,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a search bar and prices. Light theme, 25 text elements.",
-      "purpose": "Listing various ice cream products under the NIC Ice Creams category",
-      "primaryAction": "Browse through different ice cream options available in the",
-      "capture": {
-        "atSeconds": 108.2,
-        "holdSeconds": 3,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "delivery",
-        "malai kulfi",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-swiggy-seal-4",
-      "appId": "swiggy",
-      "flow": "swiggy-seal",
-      "name": "Category listing (4)",
-      "file": "ios/swiggy/swiggy-seal/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/swiggy-seal/4.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1837790,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 3 category chips. Light theme, 39 text elements.",
-      "purpose": "Displaying a variety of food items categorized under NIC Ice Creams with promotions and related products",
-      "primaryAction": "Browse through different food items and promotions",
-      "capture": {
-        "atSeconds": 112,
-        "holdSeconds": 1.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "delivery",
-        "dosa",
-        "burger",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-9",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (7)",
-      "file": "ios/swiggy/food/9.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/9.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1554109,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a search bar and prices. Light theme, 36 text elements, shown only briefly.",
-      "purpose": "Presenting a selection of items with discounts and promotions, including a section for items viewed previously",
-      "primaryAction": "Browse dishes",
-      "capture": {
-        "atSeconds": 113.8,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-10",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home (8)",
-      "file": "ios/swiggy/food/10.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/10.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1920768,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
-      "purpose": "The main screen for the Food category showing various promotions and featured dishes",
-      "primaryAction": "Search for dishes",
-      "capture": {
-        "atSeconds": 114,
-        "holdSeconds": 2.4,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "feed",
-        "ios"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-instamart-4",
-      "appId": "swiggy",
-      "flow": "instamart",
-      "name": "Instamart home (4)",
-      "file": "ios/swiggy/instamart/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/instamart/4.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1294804,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips and prices. Light theme, 43 text elements.",
-      "purpose": "The main screen for the Instamart category showing various products and promotions",
-      "primaryAction": "Search for products",
-      "capture": {
-        "atSeconds": 121.2,
-        "holdSeconds": 2.8,
-        "brief": false,
-        "visits": 6,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "delivery",
-        "instamart",
-        "categories",
-        "red bull",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-oy-store-1",
-      "appId": "swiggy",
-      "flow": "oy-store",
-      "name": "Category listing (5)",
-      "file": "ios/swiggy/oy-store/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/oy-store/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1768817,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips and prices. Light theme, 58 text elements, shown only briefly.",
-      "purpose": "Displaying a list of categories for shopping",
-      "primaryAction": "Select category",
-      "capture": {
-        "atSeconds": 125.8,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "paulo coelho",
-        "miralles",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "price",
-        "list",
-        "chip"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-1",
-      "appId": "swiggy",
-      "flow": "searching-instamart",
-      "name": "Search results (4)",
-      "file": "ios/swiggy/searching-instamart/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-instamart/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1673996,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search_results",
-      "states": [],
-      "description": "Search results screen with a row of 3 category chips and prices. Light theme, 46 text elements.",
-      "purpose": "Displaying search results for a specific query",
-      "primaryAction": "View products",
-      "capture": {
-        "atSeconds": 127.8,
-        "holdSeconds": 1,
-        "brief": false,
-        "visits": 3,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "price",
-        "premium",
-        "organics",
-        "search-results",
-        "ios",
-        "food",
-        "search"
-      ],
-      "elements": [
-        "nav-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-2",
-      "appId": "swiggy",
-      "flow": "searching-instamart",
-      "name": "Category listing (6)",
-      "file": "ios/swiggy/searching-instamart/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-instamart/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1710137,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 3 category chips. Light theme, 45 text elements, shown only briefly.",
-      "purpose": "Displaying a list of categories for shopping",
-      "primaryAction": "Select category",
-      "capture": {
-        "atSeconds": 128.8,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "chip"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-2-1",
-      "appId": "swiggy",
-      "flow": "searching-instamart-2",
-      "name": "Search results (5)",
-      "file": "ios/swiggy/searching-instamart-2/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-instamart-2/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1205860,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search_results",
-      "states": [],
-      "description": "Search results screen with a row of 3 category chips and prices. Light theme, 65 text elements.",
-      "purpose": "Displaying search results for a specific query",
-      "primaryAction": "View products",
-      "capture": {
-        "atSeconds": 136.2,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search-results",
-        "ios",
-        "food",
-        "search"
-      ],
-      "elements": [
-        "nav-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-2-2",
-      "appId": "swiggy",
-      "flow": "searching-instamart-2",
-      "name": "Category listing (7)",
-      "file": "ios/swiggy/searching-instamart-2/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching-instamart-2/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1591288,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 3 category chips. Light theme, 51 text elements.",
-      "purpose": "Displaying various food categories for selection",
-      "primaryAction": "Select a category to view items",
-      "capture": {
-        "atSeconds": 138,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "surf",
-        "oxcel",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "chip"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-categories-1",
-      "appId": "swiggy",
-      "flow": "categories",
-      "name": "Category listing (8)",
-      "file": "ios/swiggy/categories/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/categories/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1643567,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips. Light theme, 54 text elements, shown only briefly.",
-      "purpose": "Displaying various food categories for selection",
-      "primaryAction": "Select a category to view items",
-      "capture": {
-        "atSeconds": 140.8,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "surf",
-        "oxcel",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "chip"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-1",
-      "appId": "swiggy",
-      "flow": "searching",
-      "name": "Search results (6)",
-      "file": "ios/swiggy/searching/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 551432,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search_results",
-      "states": [],
-      "description": "Search results screen with a row of 3 category chips. Light theme, 18 text elements, shown only briefly.",
-      "purpose": "Displaying the search results for a specific category",
-      "primaryAction": "View search results",
-      "capture": {
-        "atSeconds": 145.6,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "filter",
-        "price",
-        "discount",
-        "search-results",
-        "ios",
-        "food",
-        "search"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "chip"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-searching-2",
-      "appId": "swiggy",
-      "flow": "searching",
-      "name": "Search results · scrolled",
-      "file": "ios/swiggy/searching/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/searching/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 195263,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search_results",
-      "states": [
-        "scrolled"
-      ],
-      "description": "Search results screen, scrolled further down from Search results. Light theme, 13 text elements.",
-      "purpose": "Displaying the search results for a specific category",
-      "primaryAction": "View search results",
-      "capture": {
-        "atSeconds": 145.8,
-        "holdSeconds": 2.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "filter",
-        "price",
-        "search-results",
-        "scrolled",
-        "ios",
-        "food",
-        "search"
-      ],
-      "elements": [
-        "nav-bar",
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-scenes-2",
-      "appId": "swiggy",
-      "flow": "scenes",
-      "name": "Scenes",
-      "file": "ios/swiggy/scenes/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/scenes/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1341932,
-      "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
-      "states": [],
-      "description": "Other screen with a primary action labelled “EXPLORE NOW”. Dark theme, 5 text elements.",
-      "purpose": "The user is viewing a promotional scene for a special offer.",
-      "primaryAction": "Explore the promotional content",
-      "capture": {
-        "atSeconds": 159.2,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "other",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "cta",
-        "button"
-      ],
-      "style": [
-        "dark",
-        "minimal"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-3",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "Dineout home (2)",
-      "file": "ios/swiggy/dineout/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1269782,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a 4-item tab bar, a row of 3 category chips and a search bar. Light theme, 30 text elements.",
-      "purpose": "Display the main feed for the Dineout section",
-      "primaryAction": "Browse restaurants",
-      "capture": {
-        "atSeconds": 161.4,
-        "holdSeconds": 1.8,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "offer",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-4",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "Item detail (2)",
-      "file": "ios/swiggy/dineout/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/4.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1652231,
-      "platform": "ios",
-      "screenType": "product",
-      "fineType": "product_detail",
-      "states": [],
-      "description": "Product detail screen with a 5-item tab bar, a primary action labelled “Book Now” and prices. Dark theme, 6 text elements.",
-      "purpose": "Viewing a specific restaurant's details",
-      "primaryAction": "Click to view the restaurant's details",
-      "capture": {
-        "atSeconds": 165.4,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "product-detail",
-        "ios",
-        "food",
-        "product"
-      ],
-      "elements": [
-        "tab-bar",
-        "price",
-        "cta",
-        "button"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-5",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "My Corner (empty)",
-      "file": "ios/swiggy/dineout/5.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/5.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1072525,
-      "platform": "ios",
-      "screenType": "empty",
-      "fineType": "empty_state",
-      "states": [
-        "empty"
-      ],
-      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
-      "purpose": "Displaying the user's wishlist and browsing history",
-      "primaryAction": "Start by wishlisting few restaurants below",
-      "capture": {
-        "atSeconds": 167.4,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "booking",
-        "offer",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "empty-state",
-        "empty",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "list",
-        "banner",
-        "empty-state"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-logging-in-1",
-      "appId": "swiggy",
-      "flow": "logging-in",
-      "name": "Restaurant detail",
-      "file": "ios/swiggy/logging-in/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/logging-in/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1272427,
-      "platform": "ios",
-      "screenType": "login",
-      "fineType": "login",
-      "states": [],
-      "description": "Login screen with a primary action labelled “Login to avail offer & pay”. Light theme, 24 text elements.",
-      "purpose": "Displaying information about a specific restaurant",
-      "primaryAction": "View restaurant details",
-      "capture": {
-        "atSeconds": 170.4,
-        "holdSeconds": 3.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "rating",
-        "login",
-        "booking",
-        "offer",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "list",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-logging-in-2",
-      "appId": "swiggy",
-      "flow": "logging-in",
-      "name": "Restaurant detail · bottom sheet",
-      "file": "ios/swiggy/logging-in/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/logging-in/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1228909,
-      "platform": "ios",
-      "screenType": "login",
-      "fineType": "login",
-      "states": [
-        "bottom-sheet"
-      ],
-      "description": "Login bottom sheet, on top of Sign in with a primary action labelled “Login to avail offer & pay”. Light theme, 24 text elements.",
-      "purpose": "Displaying information about a specific restaurant",
-      "primaryAction": "View restaurant details",
-      "capture": {
-        "atSeconds": 173.6,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "rating",
-        "login",
-        "booking",
-        "offer",
-        "bottom-sheet",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "list",
-        "cta",
-        "button",
-        "banner",
-        "bottom-sheet"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-6",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "My Corner (empty) (2)",
-      "file": "ios/swiggy/dineout/6.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/6.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1139490,
-      "platform": "ios",
-      "screenType": "empty",
-      "fineType": "empty_state",
-      "states": [
-        "empty"
-      ],
-      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
-      "purpose": "Displaying the user's wishlist and browsing history",
-      "primaryAction": "Start by wishlisting few restaurants below",
-      "capture": {
-        "atSeconds": 174.4,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "booking",
-        "offer",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "empty-state",
-        "empty",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "list",
-        "banner",
-        "empty-state"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-7",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "My Corner (empty) (3)",
-      "file": "ios/swiggy/dineout/7.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/7.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1321463,
-      "platform": "ios",
-      "screenType": "empty",
-      "fineType": "empty_state",
-      "states": [
-        "empty"
-      ],
-      "description": "Empty state screen with a 5-item tab bar. Light theme, 14 text elements, an empty state.",
-      "purpose": "Displaying the user's wishlist and browsing history",
-      "primaryAction": "Start by wishlisting few restaurants below",
-      "capture": {
-        "atSeconds": 176.4,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "booking",
-        "offer",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "empty-state",
-        "empty",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "list",
-        "banner",
-        "empty-state"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-scenes-3",
-      "appId": "swiggy",
-      "flow": "scenes",
-      "name": "Search results (7)",
-      "file": "ios/swiggy/scenes/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/scenes/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1929599,
-      "platform": "ios",
-      "screenType": "search",
-      "fineType": "search",
-      "states": [],
-      "description": "Search screen with a search bar and a paged carousel. Dark theme, 9 text elements.",
-      "purpose": "The user is viewing search results for a specific promotional offer.",
-      "primaryAction": "View the search results",
-      "capture": {
-        "atSeconds": 178.8,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "find a plan",
-        "that costs",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "carousel",
-        "page-indicator",
         "legal-text",
         "banner"
       ],
@@ -3489,565 +814,7 @@
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-search-1",
-      "appId": "swiggy",
-      "flow": "search",
-      "name": "Search (3)",
-      "file": "ios/swiggy/search/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/search/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 2203232,
-      "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
-      "states": [],
-      "description": "Other screen with a search bar and a paged carousel. Dark theme, 14 text elements.",
-      "purpose": "The user is searching for a specific restaurant or event, likely looking for a dining option.",
-      "primaryAction": "Search for a restaurant or event",
-      "capture": {
-        "atSeconds": 180,
-        "holdSeconds": 1.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "find a plan",
-        "other",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "carousel",
-        "page-indicator"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-1",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (9)",
-      "file": "ios/swiggy/deals-on-your-favs/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1631794,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen. Light theme, 36 text elements.",
-      "purpose": "The user is viewing a list of restaurants categorized by type, such as Biryani, Chinese, etc.",
-      "primaryAction": "Browse categories of restaurants",
-      "capture": {
-        "atSeconds": 193.6,
-        "holdSeconds": 2,
-        "brief": false,
-        "visits": 4,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "biryani",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-2",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (10)",
-      "file": "ios/swiggy/deals-on-your-favs/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/2.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1789628,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar. Light theme, 35 text elements.",
-      "purpose": "The user is viewing a list of restaurants categorized by type, such as Chinese, etc.",
-      "primaryAction": "Browse categories of restaurants",
-      "capture": {
-        "atSeconds": 197.2,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "chinese",
-        "biryani",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-3",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (11)",
-      "file": "ios/swiggy/deals-on-your-favs/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/3.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1782602,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen. Light theme, 34 text elements.",
-      "purpose": "The user is viewing a list of restaurants categorized by type, such as Chinese, etc.",
-      "primaryAction": "Browse categories of restaurants",
-      "capture": {
-        "atSeconds": 198,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "chinese",
-        "biryani",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-4",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Feed",
-      "file": "ios/swiggy/deals-on-your-favs/4.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/4.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1235901,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "feed",
-      "states": [],
-      "description": "Feed screen with a search bar and a paged carousel. Light theme, 26 text elements.",
-      "purpose": "The user is viewing a list of top recommended dishes or restaurants, including details like ratings and prices.",
-      "primaryAction": "Browse top recommended dishes",
-      "capture": {
-        "atSeconds": 201.2,
-        "holdSeconds": 1.4,
-        "brief": false,
-        "visits": 5,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "feed",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "carousel",
-        "page-indicator",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-opening-pizza-hut-1",
-      "appId": "swiggy",
-      "flow": "opening-pizza-hut",
-      "name": "Restaurant detail · modal",
-      "file": "ios/swiggy/opening-pizza-hut/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/opening-pizza-hut/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 542535,
-      "platform": "ios",
-      "screenType": "modal",
-      "fineType": "dialog",
-      "states": [
-        "modal"
-      ],
-      "description": "Dialog over a dimmed screen, on top of Loading state with a search bar and a paged carousel. Light theme, 24 text elements.",
-      "purpose": "Showing detailed information about a specific restaurant including its rating, menu items, and promotional offers",
-      "primaryAction": "View restaurant details and promotional offers",
-      "capture": {
-        "atSeconds": 204.2,
-        "holdSeconds": 3.4,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "rating",
-        "discount",
-        "dialog",
-        "modal",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "carousel",
-        "page-indicator",
-        "legal-text",
-        "banner",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-5",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (12)",
-      "file": "ios/swiggy/deals-on-your-favs/5.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/5.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1728570,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with prices. Light theme, 41 text elements, shown only briefly.",
-      "purpose": "The user is viewing a list of restaurants categorized by type, such as Chinese, etc.",
-      "primaryAction": "Browse categories of restaurants",
-      "capture": {
-        "atSeconds": 210.4,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "ani",
-        "biryani",
-        "feed",
-        "category",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "nav-bar",
-        "price",
-        "list",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-6",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (13)",
-      "file": "ios/swiggy/deals-on-your-favs/6.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/6.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1823167,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips, a search bar and prices. Light theme, 33 text elements, shown only briefly.",
-      "purpose": "Displaying various food categories and promotions for users to browse and select items",
-      "primaryAction": "Browse food categories and promotions",
-      "capture": {
-        "atSeconds": 212.4,
-        "holdSeconds": 0.2,
-        "brief": true,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "iic ice creams",
-        "the cascade",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs-7",
-      "appId": "swiggy",
-      "flow": "deals-on-your-favs",
-      "name": "Category listing (14)",
-      "file": "ios/swiggy/deals-on-your-favs/7.png",
-      "url": "/api/inspirations/screens/ios/swiggy/deals-on-your-favs/7.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1755563,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips, a search bar and prices. Light theme, 30 text elements.",
-      "purpose": "Displaying various food categories and promotions for users to browse and select items",
-      "primaryAction": "Browse food categories and promotions",
-      "capture": {
-        "atSeconds": 212.6,
-        "holdSeconds": 3,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "nic ice creams",
-        "category",
-        "ios",
-        "food",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-crispy-chicken-burger-1",
-      "appId": "swiggy",
-      "flow": "crispy-chicken-burger",
-      "name": "Item detail (3)",
-      "file": "ios/swiggy/crispy-chicken-burger/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/crispy-chicken-burger/1.png?v=tm2aq8",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 512649,
-      "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
-      "states": [],
-      "description": "Other screen with prices. Light theme, 19 text elements.",
-      "purpose": "Displaying detailed information about a specific food item including its price, available combinations, and options to add to cart",
-      "primaryAction": "View item details and add to cart",
-      "capture": {
-        "atSeconds": 221.6,
-        "holdSeconds": 6.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "food",
-      "tags": [
-        "other",
-        "ios",
-        "food"
-      ],
-      "elements": [
-        "price",
-        "list"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": null,
+        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
         "license": null,
         "licenseUrl": null,
         "attribution": "Swiggy",
@@ -4163,15 +930,7 @@
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-food-1",
-        "swiggy-ios-food-2",
-        "swiggy-ios-food-3",
-        "swiggy-ios-food-4",
-        "swiggy-ios-food-5",
-        "swiggy-ios-food-6",
-        "swiggy-ios-food-7",
-        "swiggy-ios-food-8",
-        "swiggy-ios-food-9",
-        "swiggy-ios-food-10"
+        "swiggy-ios-food-2"
       ],
       "parentId": null,
       "steps": [
@@ -4185,47 +944,6 @@
             "kind": "dismiss",
             "label": "Welcome tip"
           }
-        },
-        {
-          "screenId": "swiggy-ios-food-3",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-5",
-          "action": {
-            "kind": "back",
-            "label": "Food home"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-food-6",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-7",
-          "action": {
-            "kind": "open",
-            "label": "Food home"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-food-8",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-9",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-10",
-          "action": {
-            "kind": "open",
-            "label": "Food home"
-          }
         }
       ],
       "summary": null
@@ -4237,27 +955,12 @@
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-instamart-1",
-        "swiggy-ios-instamart-2",
-        "swiggy-ios-instamart-3",
-        "swiggy-ios-instamart-4"
+        "swiggy-ios-instamart-1"
       ],
       "parentId": null,
       "steps": [
         {
           "screenId": "swiggy-ios-instamart-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-instamart-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-instamart-3",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-instamart-4",
           "action": null
         }
       ],
@@ -4270,46 +973,13 @@
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-2",
-        "swiggy-ios-dineout-3",
-        "swiggy-ios-dineout-4",
-        "swiggy-ios-dineout-5",
-        "swiggy-ios-dineout-6",
-        "swiggy-ios-dineout-7"
+        "swiggy-ios-dineout-1"
       ],
       "parentId": null,
       "steps": [
         {
           "screenId": "swiggy-ios-dineout-1",
           "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-3",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-5",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-6",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-dineout-7",
-          "action": {
-            "kind": "tap",
-            "label": "My Corner"
-          }
         }
       ],
       "summary": null
@@ -4321,22 +991,12 @@
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-scenes-1",
-        "swiggy-ios-scenes-2",
-        "swiggy-ios-scenes-3"
+        "swiggy-ios-scenes-1"
       ],
       "parentId": null,
       "steps": [
         {
           "screenId": "swiggy-ios-scenes-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-scenes-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-scenes-3",
           "action": null
         }
       ],
@@ -4345,7 +1005,7 @@
     {
       "id": "swiggy-ios-entering-phone-number",
       "appId": "swiggy",
-      "name": "Logging in",
+      "name": "Entering phone number",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
@@ -4367,673 +1027,9 @@
         }
       ],
       "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-for-dishes-restaurants",
-      "appId": "swiggy",
-      "name": "Adding Items to Cart",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-2",
-        "swiggy-ios-searching-for-dishes-restaurants-1"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-for-dishes-restaurants-1",
-          "action": {
-            "kind": "type",
-            "label": "dishes & restaurants"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-search-for-protein-paneer",
-      "appId": "swiggy",
-      "name": "Searching for Protein Paneer in Instamart",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-1",
-        "swiggy-ios-search-for-protein-paneer-1",
-        "swiggy-ios-search-for-protein-paneer-2"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-search-for-protein-paneer-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-search-for-protein-paneer-2",
-          "action": {
-            "kind": "open",
-            "label": "Search for 'Protein Atta'"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-reading-a-feature-tip",
-      "appId": "swiggy",
-      "name": "Viewing feature tip",
-      "category": "onboarding",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-2",
-        "swiggy-ios-reading-a-feature-tip-1"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-reading-a-feature-tip-1",
-          "action": {
-            "kind": "switch-tab",
-            "label": "Scan it"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-for-restaurants-localities-cuisines",
-      "appId": "swiggy",
-      "name": "Searching Restaurants in Dineout",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-dineout-1",
-        "swiggy-ios-searching-for-restaurants-localities-cuisines-1",
-        "swiggy-ios-searching-for-restaurants-localities-cuisines-2"
-      ],
-      "parentId": "swiggy-ios-dineout",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-dineout-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-for-restaurants-localities-cuisines-1",
-          "action": {
-            "kind": "type",
-            "label": "restaurants, localities, cuisines"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-searching-for-restaurants-localities-cuisines-2",
-          "action": {
-            "kind": "type",
-            "label": "restaurants, localities, cuisines"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-food",
-      "appId": "swiggy",
-      "name": "Searching with What's on Your Mind?",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-4",
-        "swiggy-ios-searching-food-1"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-food-1",
-          "action": {
-            "kind": "tap",
-            "label": "What's on your mind?"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-grocery-dining",
-      "appId": "swiggy",
-      "name": "Browsing Food Categories",
-      "category": "onboarding",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-7",
-        "swiggy-ios-grocery-dining-1",
-        "swiggy-ios-grocery-dining-2"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-7",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-grocery-dining-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-grocery-dining-2",
-          "action": {
-            "kind": "open",
-            "label": "NIC Ice Creams home"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-swiggy-seal",
-      "appId": "swiggy",
-      "name": "Exploring ice cream Categories",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-8",
-        "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-swiggy-seal-2",
-        "swiggy-ios-swiggy-seal-3",
-        "swiggy-ios-swiggy-seal-4"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-8",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-swiggy-seal-1",
-          "action": {
-            "kind": "open",
-            "label": "Swiggy Seal"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-swiggy-seal-2",
-          "action": {
-            "kind": "tap",
-            "label": "NIC Ice Creams"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-swiggy-seal-3",
-          "action": {
-            "kind": "open",
-            "label": "Search in NIC Ice Cre"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-swiggy-seal-4",
-          "action": {
-            "kind": "open",
-            "label": "Dosa home"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-oy-store",
-      "appId": "swiggy",
-      "name": "Exploring Oy Store in Instamart",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-oy-store-1"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-oy-store-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-instamart",
-      "appId": "swiggy",
-      "name": "Searching Instamart - snacks",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-searching-instamart-1",
-        "swiggy-ios-searching-instamart-2"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-instamart-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-instamart-2",
-          "action": {
-            "kind": "open",
-            "label": "Categories"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-2",
-      "appId": "swiggy",
-      "name": "Searching Instamart - chips",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-searching-instamart-2-1",
-        "swiggy-ios-searching-instamart-2-2"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-instamart-2-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-instamart-2-2",
-          "action": {
-            "kind": "open",
-            "label": "Categories"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching-instamart-3",
-      "appId": "swiggy",
-      "name": "Searching Instamart - fresh vegetables",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-searching-instamart-1"
-      ],
-      "parentId": "swiggy-ios-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-instamart-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-logging-in",
-      "appId": "swiggy",
-      "name": "Logging In to Dineout",
-      "category": "authentication",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-dineout-5",
-        "swiggy-ios-logging-in-1",
-        "swiggy-ios-logging-in-2"
-      ],
-      "parentId": "swiggy-ios-dineout",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-dineout-5",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-logging-in-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-logging-in-2",
-          "action": {
-            "kind": "tap",
-            "label": "Sizzlewood By The"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-search",
-      "appId": "swiggy",
-      "name": "Searching in Scenes",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-scenes-3",
-        "swiggy-ios-search-1"
-      ],
-      "parentId": "swiggy-ios-scenes",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-scenes-3",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-search-1",
-          "action": {
-            "kind": "tap",
-            "label": "Search"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-deals-on-your-favs",
-      "appId": "swiggy",
-      "name": "Exploring Food deals",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-10",
-        "swiggy-ios-deals-on-your-favs-1",
-        "swiggy-ios-deals-on-your-favs-2",
-        "swiggy-ios-deals-on-your-favs-3",
-        "swiggy-ios-deals-on-your-favs-4",
-        "swiggy-ios-deals-on-your-favs-5",
-        "swiggy-ios-deals-on-your-favs-6",
-        "swiggy-ios-deals-on-your-favs-7"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-10",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-2",
-          "action": {
-            "kind": "tap",
-            "label": "Deals On Your Favs"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-3",
-          "action": {
-            "kind": "tap",
-            "label": "Deals On Your Favs"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-5",
-          "action": {
-            "kind": "open",
-            "label": "Best in Pizz"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-6",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-7",
-          "action": {
-            "kind": "tap",
-            "label": "Enjoy Flat 100 OFF*"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-crispy-chicken-burger",
-      "appId": "swiggy",
-      "name": "Exploring crispy chicken burger",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-10",
-        "swiggy-ios-crispy-chicken-burger-1"
-      ],
-      "parentId": "swiggy-ios-food",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-10",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-crispy-chicken-burger-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-opening-a-page",
-      "appId": "swiggy",
-      "name": "Other",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-opening-a-page-1"
-      ],
-      "parentId": "swiggy-ios-swiggy-seal",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-swiggy-seal-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-opening-a-page-1",
-          "action": {
-            "kind": "open",
-            "label": "Other"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-logging-in-with-phone-number",
-      "appId": "swiggy",
-      "name": "Logging In with Phone Number",
-      "category": "authentication",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-logging-in-with-phone-number-1"
-      ],
-      "parentId": "swiggy-ios-swiggy-seal",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-swiggy-seal-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-logging-in-with-phone-number-1",
-          "action": {
-            "kind": "tap",
-            "label": "Swiggy Seal"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-opening-a-page-2",
-      "appId": "swiggy",
-      "name": "Exploring ice creams",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-opening-a-page-2-1",
-        "swiggy-ios-opening-a-page-2-2"
-      ],
-      "parentId": "swiggy-ios-swiggy-seal",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-swiggy-seal-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-opening-a-page-2-1",
-          "action": {
-            "kind": "open",
-            "label": "Other"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-opening-a-page-2-2",
-          "action": {
-            "kind": "tap",
-            "label": "NIC Ice Creams"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-categories",
-      "appId": "swiggy",
-      "name": "Browsing surf category",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-searching-instamart-2-2",
-        "swiggy-ios-categories-1"
-      ],
-      "parentId": "swiggy-ios-searching-instamart-2",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-searching-instamart-2-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-categories-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-searching",
-      "appId": "swiggy",
-      "name": "Scrolling Instamart - fresh vegetables",
-      "category": "search",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-searching-instamart-1",
-        "swiggy-ios-searching-1",
-        "swiggy-ios-searching-2"
-      ],
-      "parentId": "swiggy-ios-searching-instamart-3",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-searching-instamart-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-searching-1",
-          "action": {
-            "kind": "tap",
-            "label": "Fresh Vegetables"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-searching-2",
-          "action": {
-            "kind": "scroll",
-            "label": null
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-opening-pizza-hut",
-      "appId": "swiggy",
-      "name": "Exploring pizza hut deals",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-deals-on-your-favs-4",
-        "swiggy-ios-opening-pizza-hut-1"
-      ],
-      "parentId": "swiggy-ios-deals-on-your-favs",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-deals-on-your-favs-4",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-opening-pizza-hut-1",
-          "action": null
-        }
-      ],
-      "summary": null
     }
   ],
   "patterns": [
-    {
-      "id": "pattern-search-results",
-      "slug": "search-results",
-      "name": "Search results",
-      "category": "Search",
-      "description": "Result lists and grids with dense metadata.",
-      "tags": [
-        "results",
-        "list"
-      ],
-      "screenIds": [
-        "swiggy-ios-searching-for-dishes-restaurants-1",
-        "swiggy-ios-searching-for-restaurants-localities-cuisines-1",
-        "swiggy-ios-searching-food-1",
-        "swiggy-ios-searching-instamart-1",
-        "swiggy-ios-searching-instamart-2-1",
-        "swiggy-ios-searching-1",
-        "swiggy-ios-searching-2",
-        "swiggy-ios-scenes-3"
-      ]
-    },
     {
       "id": "pattern-filter-chips",
       "slug": "filter-chips",
@@ -5048,30 +1044,8 @@
         "swiggy-ios-food-1",
         "swiggy-ios-food-2",
         "swiggy-ios-instamart-1",
-        "swiggy-ios-search-for-protein-paneer-1",
-        "swiggy-ios-search-for-protein-paneer-2",
-        "swiggy-ios-instamart-2",
-        "swiggy-ios-reading-a-feature-tip-1",
-        "swiggy-ios-instamart-3",
         "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-2",
-        "swiggy-ios-scenes-1",
-        "swiggy-ios-food-6",
-        "swiggy-ios-grocery-dining-2",
-        "swiggy-ios-food-8",
-        "swiggy-ios-swiggy-seal-4",
-        "swiggy-ios-food-10",
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-oy-store-1",
-        "swiggy-ios-searching-instamart-1",
-        "swiggy-ios-searching-instamart-2",
-        "swiggy-ios-searching-instamart-2-1",
-        "swiggy-ios-searching-instamart-2-2",
-        "swiggy-ios-categories-1",
-        "swiggy-ios-searching-1",
-        "swiggy-ios-dineout-3",
-        "swiggy-ios-deals-on-your-favs-6",
-        "swiggy-ios-deals-on-your-favs-7"
+        "swiggy-ios-scenes-1"
       ]
     },
     {
@@ -5085,54 +1059,9 @@
         "post"
       ],
       "screenIds": [
-        "swiggy-ios-food-3",
         "swiggy-ios-instamart-1",
-        "swiggy-ios-search-for-protein-paneer-1",
-        "swiggy-ios-search-for-protein-paneer-2",
-        "swiggy-ios-instamart-2",
-        "swiggy-ios-instamart-3",
-        "swiggy-ios-searching-for-restaurants-localities-cuisines-2",
-        "swiggy-ios-dineout-2",
-        "swiggy-ios-scenes-1",
-        "swiggy-ios-food-4",
-        "swiggy-ios-food-5",
-        "swiggy-ios-food-6",
-        "swiggy-ios-grocery-dining-2",
-        "swiggy-ios-food-8",
-        "swiggy-ios-swiggy-seal-1",
-        "swiggy-ios-opening-a-page-2-2",
-        "swiggy-ios-swiggy-seal-3",
-        "swiggy-ios-swiggy-seal-4",
-        "swiggy-ios-food-9",
-        "swiggy-ios-food-10",
-        "swiggy-ios-instamart-4",
-        "swiggy-ios-oy-store-1",
-        "swiggy-ios-searching-instamart-2",
-        "swiggy-ios-searching-instamart-2-2",
-        "swiggy-ios-categories-1",
-        "swiggy-ios-dineout-3",
-        "swiggy-ios-deals-on-your-favs-1",
-        "swiggy-ios-deals-on-your-favs-2",
-        "swiggy-ios-deals-on-your-favs-3",
-        "swiggy-ios-deals-on-your-favs-4",
-        "swiggy-ios-deals-on-your-favs-5",
-        "swiggy-ios-deals-on-your-favs-6",
-        "swiggy-ios-deals-on-your-favs-7"
-      ]
-    },
-    {
-      "id": "pattern-product-cards",
-      "slug": "product-cards",
-      "name": "Product cards",
-      "category": "Cards",
-      "description": "Image-led cards with price and quick actions.",
-      "tags": [
-        "product",
-        "catalog"
-      ],
-      "screenIds": [
         "swiggy-ios-dineout-1",
-        "swiggy-ios-dineout-4"
+        "swiggy-ios-scenes-1"
       ]
     },
     {
@@ -5147,10 +1076,7 @@
       ],
       "screenIds": [
         "airbnb-ios-login-2",
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-logging-in-with-phone-number-1",
-        "swiggy-ios-logging-in-1",
-        "swiggy-ios-logging-in-2"
+        "swiggy-ios-onboarding-2"
       ]
     },
     {
@@ -5168,23 +1094,6 @@
       ]
     },
     {
-      "id": "pattern-dialogs",
-      "slug": "dialogs",
-      "name": "Dialogs",
-      "category": "Modals",
-      "description": "Centered modal dialogs.",
-      "tags": [
-        "modal",
-        "dialog"
-      ],
-      "screenIds": [
-        "swiggy-ios-reading-a-feature-tip-1",
-        "swiggy-ios-searching-food-1",
-        "swiggy-ios-swiggy-seal-2",
-        "swiggy-ios-opening-pizza-hut-1"
-      ]
-    },
-    {
       "id": "pattern-bottom-sheets",
       "slug": "bottom-sheets",
       "name": "Bottom sheets",
@@ -5195,8 +1104,7 @@
         "mobile"
       ],
       "screenIds": [
-        "swiggy-ios-food-1",
-        "swiggy-ios-logging-in-2"
+        "swiggy-ios-food-1"
       ]
     },
     {
@@ -5210,10 +1118,7 @@
         "first run"
       ],
       "screenIds": [
-        "swiggy-ios-onboarding-3",
-        "swiggy-ios-dineout-5",
-        "swiggy-ios-dineout-6",
-        "swiggy-ios-dineout-7"
+        "swiggy-ios-onboarding-3"
       ]
     },
     {
@@ -5227,31 +1132,28 @@
         "intro"
       ],
       "screenIds": [
-        "swiggy-ios-food-1",
-        "swiggy-ios-reading-a-feature-tip-1",
-        "swiggy-ios-grocery-dining-1"
+        "swiggy-ios-food-1"
       ]
     }
   ],
   "elementCounts": {
-    "cta": 20,
-    "button": 20,
-    "nav-bar": 56,
-    "text-field": 6,
-    "form": 3,
-    "list": 58,
-    "legal-text": 9,
-    "keyboard": 5,
-    "search-bar": 32,
-    "empty-state": 4,
-    "tab-bar": 21,
-    "price": 28,
-    "chip": 27,
-    "banner": 43,
-    "bottom-sheet": 2,
-    "coach-mark": 2,
-    "carousel": 11,
-    "page-indicator": 11,
-    "modal": 4
+    "cta": 5,
+    "button": 5,
+    "nav-bar": 7,
+    "text-field": 2,
+    "form": 2,
+    "list": 7,
+    "legal-text": 3,
+    "keyboard": 1,
+    "search-bar": 5,
+    "empty-state": 1,
+    "tab-bar": 2,
+    "price": 2,
+    "chip": 5,
+    "banner": 4,
+    "bottom-sheet": 1,
+    "coach-mark": 1,
+    "carousel": 1,
+    "page-indicator": 1
   }
 }

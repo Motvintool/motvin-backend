@@ -2,18 +2,18 @@
   "screenId": "swiggy-ios-food-2",
   "screen_id": "swiggy-ios-food-2",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-28T06:47:32.023Z",
+  "analyzedAt": "2026-09-28T07:53:21.815Z",
   "screen_type": "home",
   "published_as": "home",
   "states": [],
-  "category": "food",
+  "category": "ecommerce",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 2,
   "name": "Food home",
-  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
-  "purpose": "The user is viewing the main food category page",
-  "primary_action": "View food home",
+  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+  "purpose": "User views the main food categories and offers",
+  "primary_action": "View food categories and offers",
   "tags": [
     "search",
     "delivery",
@@ -45,7 +45,7 @@
       "points": [
         "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
         "Navigation title reads “Search for 'EatRight'”",
-        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Category strip: Dineout, Scenes, Food, Instamart",
         "Search bar present",
         "Light style"
       ]
@@ -53,25 +53,25 @@
     {
       "title": "Content",
       "points": [
-        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
         "Calls to action: “ORDER NOW”",
-        "28 text elements recognised"
+        "30 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 10 in “Food”",
-        "Reached from “Welcome tip”, “Food home (2)”, “Category page”, “Food home (6)” and “NIC Ice Creams”",
-        "Leads to “Search”, “Instamart home — loading”, “Food home — loading”, “Grocery, dining” and “Food home — scrolled”",
-        "Returned to 5 times in the recording"
+        "Step 2 of 2 in “Food”",
+        "Reached from “Welcome tip” and “Category page”",
+        "Leads to “Instamart home — loading”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3s at 0:12 in the recording",
-        "Frame 62 of 1141 sampled at 5 fps",
+        "Held for 1s at 0:09 in the recording",
+        "Frame 50 of 85 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -80,12 +80,17 @@
     {
       "hex": "#fcfcfc",
       "role": "background",
-      "share": 0.229
+      "share": 0.237
     },
     {
-      "hex": "#020a2a",
+      "hex": "#020a2b",
       "role": "text",
-      "share": 0.192
+      "share": 0.193
+    },
+    {
+      "hex": "#601234",
+      "role": "surface",
+      "share": 0.024
     },
     {
       "hex": "#5b6588",
@@ -93,34 +98,29 @@
       "share": 0.023
     },
     {
-      "hex": "#f9d801",
+      "hex": "#f9d901",
       "role": "accent",
-      "share": 0.023
-    },
-    {
-      "hex": "#601234",
-      "role": "surface",
       "share": 0.023
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "Zomato.mp4",
     "fps": 5,
-    "frames": 1141,
-    "frame": 62,
-    "atSeconds": 12.2,
-    "endSeconds": 15.2,
-    "holdSeconds": 3,
+    "frames": 85,
+    "frame": 50,
+    "atSeconds": 9.2,
+    "endSeconds": 10.2,
+    "holdSeconds": 1,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 5
+    "visits": 2
   },
   "signals": {
-    "lineCount": 28,
+    "lineCount": 30,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -128,8 +128,8 @@
       "Reorder"
     ],
     "chipLabels": [
-      "Scenes",
       "Dineout",
+      "Scenes",
       "Food",
       "Instamart"
     ],
@@ -138,7 +138,7 @@
     ],
     "keyboard": false,
     "title": "Search for 'EatRight'",
-    "headline": "WEEKEND"
+    "headline": "Bolt S | Food In 15 Mins!"
   },
   "crawler": {
     "nodeId": "s006",
@@ -155,51 +155,16 @@
         "name": "Welcome tip"
       },
       {
-        "from": "s008",
-        "via": "Back to Food home",
-        "name": "Food home (2)"
-      },
-      {
-        "from": "s022",
+        "from": "s011",
         "via": "Back to Food home",
         "name": "Category page"
-      },
-      {
-        "from": "s029",
-        "via": "Back to Food home",
-        "name": "Food home (6)"
-      },
-      {
-        "from": "s031",
-        "via": "Back to Food home",
-        "name": "NIC Ice Creams"
       }
     ],
     "leadsTo": [
       {
         "to": "s007",
-        "via": "Type “dishes & restaurants”",
-        "name": "Search"
-      },
-      {
-        "to": "s009",
         "via": "Tap “Dineout”",
         "name": "Instamart home — loading"
-      },
-      {
-        "to": "s023",
-        "via": "Tap “Food”",
-        "name": "Food home — loading"
-      },
-      {
-        "to": "s030",
-        "via": "Open Grocery, dining",
-        "name": "Grocery, dining"
-      },
-      {
-        "to": "s032",
-        "via": "Scroll",
-        "name": "Food home — scrolled"
       }
     ]
   },

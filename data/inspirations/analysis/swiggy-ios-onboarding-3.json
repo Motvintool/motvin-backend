@@ -2,20 +2,20 @@
   "screenId": "swiggy-ios-onboarding-3",
   "screen_id": "swiggy-ios-onboarding-3",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-28T06:47:32.021Z",
+  "analyzedAt": "2026-09-28T07:53:21.813Z",
   "screen_type": "empty_state",
   "published_as": "empty",
   "states": [
     "empty"
   ],
-  "category": "food",
+  "category": "ecommerce",
   "flow": "discovery",
   "flow_name": "Onboarding",
   "flow_position": 3,
   "name": "Location picker (logged out)",
   "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-  "purpose": "The user is selecting their location to proceed with the app",
-  "primary_action": "Select location",
+  "purpose": "User selects their location to proceed with the app",
+  "primary_action": "Select location or use current location",
   "tags": [
     "search",
     "location",
@@ -55,14 +55,15 @@
       "points": [
         "Step 3 of 3 in “Onboarding”",
         "Reached from “Phone number entry”",
-        "Leads to “Food home — loading”"
+        "Leads to “Food home — loading”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 0:06 in the recording",
-        "Frame 33 of 1141 sampled at 5 fps",
+        "Held for 0.6s at 0:03 in the recording",
+        "Frame 24 of 85 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -74,33 +75,33 @@
       "share": 0.944
     },
     {
-      "hex": "#d0d2d8",
+      "hex": "#d0d2da",
       "role": "surface",
-      "share": 0.046
+      "share": 0.043
     },
     {
-      "hex": "#a5aab7",
+      "hex": "#bcbec5",
       "role": "surface",
-      "share": 0.003
+      "share": 0.004
     },
     {
-      "hex": "#e47275",
-      "role": "surface",
-      "share": 0.003
-    },
-    {
-      "hex": "#dc494d",
+      "hex": "#e27073",
       "role": "accent",
-      "share": 0.001
+      "share": 0.003
+    },
+    {
+      "hex": "#9fa3af",
+      "role": "surface",
+      "share": 0.002
     }
   ],
   "capture": {
-    "source": "Swiggy.mp4",
+    "source": "Zomato.mp4",
     "fps": 5,
-    "frames": 1141,
-    "frame": 33,
-    "atSeconds": 6.2,
-    "endSeconds": 6.8,
+    "frames": 85,
+    "frame": 24,
+    "atSeconds": 3,
+    "endSeconds": 3.4,
     "holdSeconds": 0.6,
     "brief": false,
     "kind": "screen",
@@ -108,7 +109,7 @@
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
     "lineCount": 6,
