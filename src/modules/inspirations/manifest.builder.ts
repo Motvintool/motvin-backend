@@ -472,6 +472,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
           fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
           states,
           description: typeof sidecar.description === 'string' ? sidecar.description : '',
+          purpose: stringOrNull(sidecar.purpose),
+          primaryAction: stringOrNull(sidecar.primaryAction),
           capture,
           industry: app.industry,
           tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
@@ -546,7 +548,12 @@ export function buildInspirationsManifest(root: string): BuildReport {
                 }
               : null,
         }));
-      return { ...flow, screenIds, steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })) };
+      return {
+        ...flow,
+        summary: stringOrNull(flow.summary),
+        screenIds,
+        steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })),
+      };
     })
     // A flow of one screen is a journey of one step — a sheet opened and
     // dismissed, a section glimpsed once — and belongs in the tree.

@@ -1,19 +1,21 @@
 {
   "screenId": "swiggy-ios-opening-pizza-hut-1",
   "screen_id": "swiggy-ios-opening-pizza-hut-1",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.623Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.201Z",
   "screen_type": "dialog",
   "published_as": "modal",
   "states": [
     "modal"
   ],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Opening Pizza Hut",
   "flow_position": 1,
   "name": "Pizza Hut dialog",
-  "description": "Dialog over a dimmed screen, on top of Loading state with a search bar and a paged carousel. Light theme, 24 text elements.",
+  "description": "A dialog box showing details about Pizza Hut, including ratings, location, and menu items.",
+  "purpose": "Displays detailed information about Pizza Hut.",
+  "primary_action": null,
   "tags": [
     "search",
     "rating",
@@ -60,7 +62,7 @@
       "points": [
         "Step 1 of 1 in “Opening Pizza Hut”",
         "Reached from “Loading state”",
-        "Leads to “Hut®”"
+        "Leads to “Best in Pizza”"
       ]
     },
     {
@@ -151,8 +153,8 @@
     "leadsTo": [
       {
         "to": "s071",
-        "via": "Back to Hut®",
-        "name": "Hut®"
+        "via": "Back to Best in Pizza",
+        "name": "Best in Pizza"
       }
     ]
   },

@@ -1,17 +1,19 @@
 {
   "screenId": "swiggy-ios-food-7",
   "screen_id": "swiggy-ios-food-7",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.438Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.175Z",
   "screen_type": "home",
   "published_as": "home",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 7,
   "name": "Food home (6)",
-  "description": "Home screen with a 5-item tab bar and a primary action labelled “Order Now”. Light theme, 4 text elements.",
+  "description": "The main screen of the app, showing a feed of restaurants and cuisines. It's the starting point for browsing food options.",
+  "purpose": "Displays the main food menu with restaurants and cuisines.",
+  "primary_action": "Back",
   "tags": [
     "discount",
     "food",
@@ -36,7 +38,6 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Food, Bolt, EatRight, Reorder, Big",
-        "Navigation title reads “Uh Oh! You don't have any food orders”",
         "Light, Minimal style"
       ]
     },
@@ -122,7 +123,7 @@
       "Order Now"
     ],
     "keyboard": false,
-    "title": "Uh Oh! You don't have any food orders",
+    "title": null,
     "headline": "Uh Oh! You don't have any food orders"
   },
   "crawler": {
@@ -136,7 +137,7 @@
     "reachedFrom": [
       {
         "from": "s028",
-        "via": "Open Uh Oh! You don't have any food orders",
+        "via": "Open Food home",
         "name": "Food home (5)"
       }
     ],

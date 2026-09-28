@@ -1,0 +1,160 @@
+{
+  "screenId": "swiggy-ios-grocery-dining-2",
+  "screen_id": "swiggy-ios-grocery-dining-2",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:04:58.709Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Grocery, dining",
+  "flow_position": 2,
+  "name": "NIC Ice Creams",
+  "description": "A screen that displays a category of ice creams.",
+  "purpose": "Displays a category of ice creams.",
+  "primary_action": null,
+  "tags": [
+    "search",
+    "delivery",
+    "address",
+    "nic ice creams",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "legal-text",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 22 text elements, shown only briefly.",
+        "Calls to action: “ORDER NOW”",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Grocery, dining”",
+        "Reached from “Grocery, dining”",
+        "Leads to “Food home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 1:14 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 370 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.16
+    },
+    {
+      "hex": "#03092a",
+      "role": "text",
+      "share": 0.141
+    },
+    {
+      "hex": "#fe5201",
+      "role": "accent",
+      "share": 0.061
+    },
+    {
+      "hex": "#cbcad3",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#8770b1",
+      "role": "surface",
+      "share": 0.033
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 370,
+    "atSeconds": 74,
+    "endSeconds": 74.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [
+      "Dineout",
+      "Scenes",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "On mouth-watering",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Open NIC Ice Creams home",
+        "name": "Grocery, dining"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Back to Food home",
+        "name": "Food home"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

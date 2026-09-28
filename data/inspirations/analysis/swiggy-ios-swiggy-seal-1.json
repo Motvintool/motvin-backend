@@ -2,16 +2,18 @@
   "screenId": "swiggy-ios-swiggy-seal-1",
   "screen_id": "swiggy-ios-swiggy-seal-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.458Z",
+  "analyzedAt": "2026-09-27T17:55:59.136Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Swiggy Seal",
   "flow_position": 1,
   "name": "Swiggy Seal",
   "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 29 text elements.",
+  "purpose": null,
+  "primary_action": null,
   "tags": [
     "search",
     "rating",
@@ -51,9 +53,9 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Swiggy Seal”",
-        "Reached from “Food home — scrolled”, “Search in NIC Ice Creams”, “Phone number entry (2)” and “Nic (2)”",
-        "Leads to “Search in NIC Ice Creams”, “Phone number entry (2)”, “Nic” and “NIC Ice Creams dialog”",
+        "Step 1 of 4 in “Swiggy Seal”",
+        "Reached from “Food home — scrolled”, “Other”, “Phone number entry (2)” and “NIC Ice Creams (2)”",
+        "Leads to “Other”, “Phone number entry (2)”, “Other (2)” and “NIC Ice Creams dialog”",
         "Returned to 4 times in the recording"
       ]
     },
@@ -135,7 +137,7 @@
       {
         "from": "s034",
         "via": "Back to Swiggy Seal",
-        "name": "Search in NIC Ice Creams"
+        "name": "Other"
       },
       {
         "from": "s035",
@@ -145,14 +147,14 @@
       {
         "from": "s037",
         "via": "Back to Swiggy Seal",
-        "name": "Nic (2)"
+        "name": "NIC Ice Creams (2)"
       }
     ],
     "leadsTo": [
       {
         "to": "s034",
-        "via": "Open Search in NIC Ice Creams",
-        "name": "Search in NIC Ice Creams"
+        "via": "Open Other",
+        "name": "Other"
       },
       {
         "to": "s035",
@@ -161,8 +163,8 @@
       },
       {
         "to": "s036",
-        "via": "Tap “nic”",
-        "name": "Nic"
+        "via": "Open Other",
+        "name": "Other (2)"
       },
       {
         "to": "s038",

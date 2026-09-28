@@ -28,6 +28,10 @@ export interface InspirationScreen {
   /** Conditions the screen is in: loading, empty, modal, … */
   states: string[];
   description: string;
+  /** What the screen is for, in a sentence, when a researcher wrote one. */
+  purpose: string | null;
+  /** The one thing a person mostly does on the screen, as an imperative. */
+  primaryAction: string | null;
   capture: {
     atSeconds: number | null;
     holdSeconds: number | null;
@@ -81,6 +85,8 @@ export interface InspirationFlow {
   parentId: string | null;
   /** Each step with the move that led to it from the step before, when recorded. */
   steps?: { screenId: string; action: { kind: string; label: string | null } | null }[];
+  /** One sentence on what the person does across the journey, when written. */
+  summary?: string | null;
 }
 
 export interface InspirationPattern {
@@ -187,6 +193,8 @@ export class LoaderService implements OnModuleInit {
         fineType: screen.fineType || screen.screenType,
         states: Array.isArray(screen.states) ? screen.states : [],
         description: screen.description || '',
+        purpose: screen.purpose ?? null,
+        primaryAction: screen.primaryAction ?? null,
         capture: screen.capture ?? null,
       }));
       parsed.flows = (parsed.flows || []).map((flow) => ({ ...flow, parentId: flow.parentId ?? null }));

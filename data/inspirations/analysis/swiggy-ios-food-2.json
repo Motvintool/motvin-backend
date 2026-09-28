@@ -1,17 +1,19 @@
 {
   "screenId": "swiggy-ios-food-2",
   "screen_id": "swiggy-ios-food-2",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.336Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.162Z",
   "screen_type": "home",
   "published_as": "home",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 2,
   "name": "Food home",
-  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+  "description": "The main food screen, showing a list of categories and restaurants. It's designed for easy navigation and discovery of food options.",
+  "purpose": "Displays the home screen for browsing food options.",
+  "primary_action": null,
   "tags": [
     "search",
     "delivery",
@@ -60,7 +62,7 @@
       "title": "Navigation",
       "points": [
         "Step 2 of 10 in “Food”",
-        "Reached from “Welcome tip”, “Food home (2)”, “Scenes”, “Food home (6)” and “NIC Ice Creams home”",
+        "Reached from “Welcome tip”, “Food home (2)”, “Category page”, “Food home (6)” and “NIC Ice Creams”",
         "Leads to “Search”, “Instamart home — loading”, “Food home — loading”, “Grocery, dining” and “Food home — scrolled”",
         "Returned to 5 times in the recording"
       ]
@@ -160,7 +162,7 @@
       {
         "from": "s022",
         "via": "Back to Food home",
-        "name": "Scenes"
+        "name": "Category page"
       },
       {
         "from": "s029",
@@ -170,7 +172,7 @@
       {
         "from": "s031",
         "via": "Back to Food home",
-        "name": "NIC Ice Creams home"
+        "name": "NIC Ice Creams"
       }
     ],
     "leadsTo": [

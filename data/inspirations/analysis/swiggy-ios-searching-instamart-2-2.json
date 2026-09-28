@@ -1,0 +1,158 @@
+{
+  "screenId": "swiggy-ios-searching-instamart-2-2",
+  "screen_id": "swiggy-ios-searching-instamart-2-2",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.186Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Searching Instamart",
+  "flow_position": 2,
+  "name": "Surf",
+  "description": "A product detail screen showing the Surf, its price, and options to add it to the cart.",
+  "purpose": "Displays details of the Surf product.",
+  "primary_action": "Add to cart",
+  "tags": [
+    "surf",
+    "oxcel",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Categories”",
+        "Category strip: nutri, choice, STLI",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Light theme, 51 text elements.",
+        "51 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Searching Instamart”",
+        "Reached from “Search results (2)” and “Surf (2)”",
+        "Leads to “Search for 'Protein Paneer' — loading” and “Instamart home (4)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 2:18 in the recording",
+        "Frame 693 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9fbfc",
+      "role": "background",
+      "share": 0.639
+    },
+    {
+      "hex": "#d7d8d7",
+      "role": "surface",
+      "share": 0.129
+    },
+    {
+      "hex": "#b5b6bb",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#e2b796",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#898d91",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 693,
+    "atSeconds": 138,
+    "endSeconds": 138.8,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 51,
+    "tabLabels": [],
+    "chipLabels": [
+      "nutri",
+      "choice",
+      "STLI"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Categories",
+    "headline": "Beauty & Wellness",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s048",
+        "via": "Open Categories",
+        "name": "Search results (2)"
+      },
+      {
+        "from": "s051",
+        "via": "Back to Surf home",
+        "name": "Surf (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Back to Search for 'Protein Paneer' — loading",
+        "name": "Search for 'Protein Paneer' — loading"
+      },
+      {
+        "to": "s043",
+        "via": "Back to Instamart home",
+        "name": "Instamart home (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}

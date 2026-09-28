@@ -1,18 +1,23 @@
 {
   "screenId": "swiggy-ios-searching-instamart-1",
   "screen_id": "swiggy-ios-searching-instamart-1",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.539Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.182Z",
   "screen_type": "search_results",
   "published_as": "search",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "search",
   "flow_name": "Searching Instamart",
   "flow_position": 1,
   "name": "Search results",
-  "description": "Search results screen with a row of 3 category chips and prices. Light theme, 65 text elements.",
+  "description": "The search results screen, showing a list of products matching the user's search query.",
+  "purpose": "Displays the search results for a specific query.",
+  "primary_action": null,
   "tags": [
+    "price",
+    "premium",
+    "organics",
     "search-results",
     "ios"
   ],
@@ -31,58 +36,59 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Sort By”",
-        "Category strip: COCONUT, Thyps, COLA",
+        "Navigation title reads “Fresh Vegetables”",
+        "Category strip: Price Drop, Sort By V, Brar",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Search results screen with a row of 3 category chips and prices. Light theme, 65 text elements.",
-        "65 text elements recognised"
+        "Search results screen with a row of 3 category chips and prices. Light theme, 46 text elements.",
+        "46 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Searching Instamart”",
-        "Reached from “Home — loading”",
-        "Leads to “Surf home”"
+        "Step 1 of 2 in “Searching Instamart”",
+        "Reached from “Item detail — loading”, “Search for 'Protein Paneer' — loading” and “Search results — scrolled”",
+        "Leads to “Lay's”, “Search results (3)” and “Instamart home (4)”",
+        "Returned to 3 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 2:16 in the recording",
-        "Frame 683 of 1141 sampled at 5 fps",
+        "Held for 1s at 2:07 in the recording",
+        "Frame 643 of 1141 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f9fafb",
+      "hex": "#f8f9fa",
       "role": "background",
-      "share": 0.734
+      "share": 0.635
     },
     {
-      "hex": "#d7dddf",
+      "hex": "#dadcdb",
       "role": "surface",
-      "share": 0.101
+      "share": 0.144
     },
     {
-      "hex": "#b3c1c2",
+      "hex": "#c7c1bb",
       "role": "surface",
-      "share": 0.022
+      "share": 0.027
     },
     {
-      "hex": "#8da1a0",
+      "hex": "#5e6f2f",
       "role": "text",
-      "share": 0.011
+      "share": 0.006
     },
     {
-      "hex": "#84b5db",
+      "hex": "#de6429",
       "role": "accent",
       "share": 0.004
     }
@@ -91,34 +97,35 @@
     "source": "Swiggy.mp4",
     "fps": 5,
     "frames": 1141,
-    "frame": 683,
-    "atSeconds": 136.2,
-    "endSeconds": 136.8,
-    "holdSeconds": 0.6,
+    "frame": 643,
+    "atSeconds": 127.8,
+    "endSeconds": 128.8,
+    "holdSeconds": 1,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 3
   },
   "signals": {
-    "lineCount": 65,
+    "lineCount": 46,
     "tabLabels": [],
     "chipLabels": [
-      "COCONUT",
-      "Thyps",
-      "COLA"
+      "Price Drop",
+      "Sort By V",
+      "Brar"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Sort By",
-    "headline": "COCONUT"
+    "title": "Fresh Vegetables",
+    "headline": "Vegetables",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s048",
-    "depth": 47,
+    "nodeId": "s046",
+    "depth": 45,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -126,16 +133,36 @@
     "actions": [],
     "reachedFrom": [
       {
+        "from": "s017",
+        "via": "Wait 0.6s",
+        "name": "Item detail — loading"
+      },
+      {
         "from": "s011",
         "via": "Wait 0.6s",
-        "name": "Home — loading"
+        "name": "Search for 'Protein Paneer' — loading"
+      },
+      {
+        "from": "s053",
+        "via": "Back to Search results",
+        "name": "Search results — scrolled"
       }
     ],
     "leadsTo": [
       {
-        "to": "s049",
+        "to": "s047",
         "via": "Open Categories",
-        "name": "Surf home"
+        "name": "Lay's"
+      },
+      {
+        "to": "s052",
+        "via": "Tap “Fresh Vegetables”",
+        "name": "Search results (3)"
+      },
+      {
+        "to": "s043",
+        "via": "Back to Instamart home",
+        "name": "Instamart home (4)"
       }
     ]
   },

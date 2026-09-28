@@ -1,17 +1,19 @@
 {
   "screenId": "swiggy-ios-food-6",
   "screen_id": "swiggy-ios-food-6",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.431Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.168Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 6,
   "name": "Food home (5)",
-  "description": "Feed screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 39 text elements.",
+  "description": "The main screen of the app, showing a feed of restaurants and cuisines. It's the starting point for browsing food options.",
+  "purpose": "Displays the main food menu with restaurants and cuisines.",
+  "primary_action": null,
   "tags": [
     "food",
     "bolt",
@@ -52,7 +54,7 @@
       "title": "Navigation",
       "points": [
         "Step 6 of 10 in “Food”",
-        "Reached from “Home — loading”",
+        "Reached from “Search for 'Protein Paneer' — loading”",
         "Leads to “Food home (6)”"
       ]
     },
@@ -141,13 +143,13 @@
       {
         "from": "s011",
         "via": "Wait 0.6s",
-        "name": "Home — loading"
+        "name": "Search for 'Protein Paneer' — loading"
       }
     ],
     "leadsTo": [
       {
         "to": "s029",
-        "via": "Open Uh Oh! You don't have any food orders",
+        "via": "Open Food home",
         "name": "Food home (6)"
       }
     ]

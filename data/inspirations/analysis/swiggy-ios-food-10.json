@@ -2,16 +2,18 @@
   "screenId": "swiggy-ios-food-10",
   "screen_id": "swiggy-ios-food-10",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.504Z",
+  "analyzedAt": "2026-09-27T17:55:59.276Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "discovery",
   "flow_name": "Food",
   "flow_position": 10,
   "name": "Food home (8)",
   "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 28 text elements.",
+  "purpose": null,
+  "primary_action": null,
   "tags": [
     "search",
     "delivery",
@@ -42,7 +44,6 @@
       "title": "Layout",
       "points": [
         "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Search for 'Pizza'”",
         "Category strip: Food, Scenes, Dineout, Instamart",
         "Search bar present",
         "Light style"
@@ -61,7 +62,7 @@
       "points": [
         "Step 10 of 10 in “Food”",
         "Reached from “Food home (7)” and “Dineout home”",
-        "Leads to “Instamart home (3)” and “Home — loading”",
+        "Leads to “Instamart home (3)” and “Search for 'Protein Paneer' — loading”",
         "Returned to 2 times in the recording"
       ]
     },
@@ -135,7 +136,7 @@
       "ORDER NOW"
     ],
     "keyboard": false,
-    "title": "Search for 'Pizza'",
+    "title": null,
     "headline": "WEEKEND"
   },
   "crawler": {
@@ -149,7 +150,7 @@
     "reachedFrom": [
       {
         "from": "s041",
-        "via": "Open Search for 'Pizza'",
+        "via": "Open Food home",
         "name": "Food home (7)"
       },
       {
@@ -166,8 +167,8 @@
       },
       {
         "to": "s011",
-        "via": "Back to Home — loading",
-        "name": "Home — loading"
+        "via": "Back to Search for 'Protein Paneer' — loading",
+        "name": "Search for 'Protein Paneer' — loading"
       }
     ]
   },

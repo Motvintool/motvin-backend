@@ -1,17 +1,19 @@
 {
   "screenId": "swiggy-ios-grocery-dining-1",
   "screen_id": "swiggy-ios-grocery-dining-1",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.442Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:04:58.708Z",
   "screen_type": "onboarding",
   "published_as": "onboarding",
   "states": [],
-  "category": "productivity",
+  "category": "food",
   "flow": "onboarding",
   "flow_name": "Grocery, dining",
   "flow_position": 1,
   "name": "Grocery, dining",
-  "description": "Onboarding screen with a primary action labelled “Login”. Light theme, 10 text elements.",
+  "description": "A screen that displays the various options available for grocery and dining within the Food section.",
+  "purpose": "Displays the various options available for grocery and dining.",
+  "primary_action": null,
   "tags": [
     "login",
     "offer",
@@ -47,9 +49,9 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Grocery, dining”",
+        "Step 1 of 2 in “Grocery, dining”",
         "Reached from “Food home”",
-        "Leads to “NIC Ice Creams home”"
+        "Leads to “NIC Ice Creams”"
       ]
     },
     {
@@ -133,8 +135,8 @@
     "leadsTo": [
       {
         "to": "s031",
-        "via": "Open Search for 'Cake'",
-        "name": "NIC Ice Creams home"
+        "via": "Open NIC Ice Creams home",
+        "name": "NIC Ice Creams"
       }
     ]
   },

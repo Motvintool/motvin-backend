@@ -1,19 +1,21 @@
 {
   "screenId": "swiggy-ios-onboarding-2",
   "screen_id": "swiggy-ios-onboarding-2",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-09-27T16:17:10.324Z",
+  "analyzer": "ollama/gemma3:4b",
+  "analyzedAt": "2026-09-27T18:16:35.157Z",
   "screen_type": "login",
   "published_as": "login",
   "states": [
     "keyboard"
   ],
-  "category": "productivity",
+  "category": "food",
   "flow": "authentication",
   "flow_name": "Onboarding",
   "flow_position": 2,
   "name": "Phone number entry",
-  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "description": "A screen with a text field for entering the user's mobile number. It includes a country code selector and a numeric keypad for input.",
+  "purpose": "Allows the user to enter their mobile number for verification.",
+  "primary_action": "Enter mobile number",
   "tags": [
     "login",
     "keyboard",
@@ -37,7 +39,7 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “One app for food, grocery, dining”",
+        "Navigation title reads “Enter your number”",
         "Keyboard is open, so the lower half is input",
         "Light style"
       ]
@@ -119,7 +121,7 @@
       "Continue"
     ],
     "keyboard": true,
-    "title": "One app for food, grocery, dining",
+    "title": "Enter your number",
     "headline": "Enter your number"
   },
   "crawler": {
@@ -133,7 +135,7 @@
     "reachedFrom": [
       {
         "from": "s001",
-        "via": "Open One app for food, grocery, dining",
+        "via": "Open Enter your number",
         "name": "Splash screen"
       }
     ],

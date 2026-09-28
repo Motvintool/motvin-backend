@@ -1,0 +1,151 @@
+{
+  "screenId": "swiggy-ios-search-for-protein-paneer-1",
+  "screen_id": "swiggy-ios-search-for-protein-paneer-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-09-27T17:55:58.857Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Search for 'Protein Paneer'",
+  "flow_position": 1,
+  "name": "Search for 'Protein Paneer'",
+  "description": "Category screen with a row of 5 category chips, a search bar and prices. Light theme, 76 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search for 'Protein Paneer'”",
+        "Category strip: SWITCH, SWITCH, SWITCH, SWITCH, SUPERVOS",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 5 category chips, a search bar and prices. Light theme, 76 text elements.",
+        "76 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Search for 'Protein Paneer'”",
+        "Reached from “Search for 'Protein Paneer' — loading”",
+        "Leads to “Chocolate Bar”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:23 in the recording",
+        "Frame 133 of 1141 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f6f7",
+      "role": "background",
+      "share": 0.514
+    },
+    {
+      "hex": "#d9dcdd",
+      "role": "surface",
+      "share": 0.296
+    },
+    {
+      "hex": "#b9b5b6",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#cec6bb",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#0278ff",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Swiggy.mp4",
+    "fps": 5,
+    "frames": 1141,
+    "frame": 133,
+    "atSeconds": 23.8,
+    "endSeconds": 26.8,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 76,
+    "tabLabels": [],
+    "chipLabels": [
+      "SWITCH",
+      "SWITCH",
+      "SWITCH",
+      "SWITCH",
+      "SUPERVOS"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search for 'Protein Paneer'",
+    "headline": "SUPERVOS"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Wait 0.6s",
+        "name": "Search for 'Protein Paneer' — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Open Search for 'Protein Atta'",
+        "name": "Chocolate Bar"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-27",
+  "capturedBy": "motvin-ios-crawler"
+}
