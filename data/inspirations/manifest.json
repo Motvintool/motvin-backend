@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T08:00:14.242Z",
+  "generatedAt": "2026-09-28T11:08:33.757Z",
   "counts": {
-    "apps": 3,
-    "screens": 12,
-    "flows": 7,
-    "patterns": 7,
-    "ui-elements": 55
+    "apps": 2,
+    "screens": 4,
+    "flows": 1,
+    "patterns": 2,
+    "ui-elements": 7
   },
   "taxonomy": {
     "platforms": [
@@ -14,54 +14,30 @@
     ],
     "screenTypes": [
       "splash",
-      "onboarding",
       "login",
       "signup",
-      "home",
-      "feed",
-      "empty",
       "other"
     ],
-    "states": [
-      "empty",
-      "coach-mark",
-      "keyboard"
-    ],
+    "states": [],
     "industries": [
       "saas",
-      "ecommerce",
       "productivity"
     ],
     "styles": [
       "minimal",
-      "bold",
-      "dark",
       "light"
     ],
     "elements": [
-      "banner",
-      "bottom-sheet",
       "button",
-      "carousel",
-      "chip",
-      "coach-mark",
       "cta",
-      "empty-state",
       "form",
-      "keyboard",
       "legal-text",
       "list",
       "nav-bar",
-      "page-indicator",
-      "price",
-      "search-bar",
-      "tab-bar",
       "text-field"
     ],
     "flowCategories": [
-      "authentication",
-      "discovery",
-      "onboarding"
+      "authentication"
     ]
   },
   "vocabulary": {
@@ -164,24 +140,6 @@
   },
   "apps": [
     {
-      "id": "swiggy",
-      "name": "Swiggy",
-      "slug": "swiggy",
-      "industry": "ecommerce",
-      "platforms": [
-        "ios"
-      ],
-      "website": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-      "tagline": "Taste the city, delivered.",
-      "logo": "/api/inspirations/logos/swiggy.png",
-      "screenCount": 8,
-      "flowCount": 6,
-      "license": null,
-      "attribution": "Swiggy",
-      "rating": null,
-      "ratingCount": null
-    },
-    {
       "id": "airbnb",
       "name": "Airbnb",
       "slug": "airbnb",
@@ -190,7 +148,7 @@
         "ios"
       ],
       "website": "https://www.instagram.com/siren.uix/",
-      "tagline": "Find your perfect stay.",
+      "tagline": "Discover your next adventure.",
       "logo": "/api/inspirations/logos/airbnb.png",
       "screenCount": 3,
       "flowCount": 1,
@@ -348,480 +306,6 @@
       }
     },
     {
-      "id": "swiggy-ios-onboarding-1",
-      "appId": "swiggy",
-      "flow": "onboarding",
-      "name": "Splash screen",
-      "file": "ios/swiggy/onboarding/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/1.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 165942,
-      "platform": "ios",
-      "screenType": "splash",
-      "fineType": "splash",
-      "states": [],
-      "description": "Launch screen shown while the app starts. Light theme.",
-      "purpose": "Initial loading screen for the app",
-      "primaryAction": "Wait for app to load",
-      "capture": {
-        "atSeconds": 0,
-        "holdSeconds": 1,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "splash",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [],
-      "style": [
-        "light",
-        "bold"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-onboarding-2",
-      "appId": "swiggy",
-      "flow": "onboarding",
-      "name": "Phone number entry",
-      "file": "ios/swiggy/onboarding/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/2.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 547015,
-      "platform": "ios",
-      "screenType": "login",
-      "fineType": "login",
-      "states": [
-        "keyboard"
-      ],
-      "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-      "purpose": "User enters their mobile number to proceed with the app",
-      "primaryAction": "Enter mobile number",
-      "capture": {
-        "atSeconds": 1.8,
-        "holdSeconds": 1.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "login",
-        "keyboard",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [
-        "nav-bar",
-        "keyboard",
-        "text-field",
-        "form",
-        "list",
-        "cta",
-        "button",
-        "legal-text"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-onboarding-3",
-      "appId": "swiggy",
-      "flow": "onboarding",
-      "name": "Location picker (logged out)",
-      "file": "ios/swiggy/onboarding/3.png",
-      "url": "/api/inspirations/screens/ios/swiggy/onboarding/3.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 898779,
-      "platform": "ios",
-      "screenType": "empty",
-      "fineType": "empty_state",
-      "states": [
-        "empty"
-      ],
-      "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-      "purpose": "User selects their location to proceed with the app",
-      "primaryAction": "Select location or use current location",
-      "capture": {
-        "atSeconds": 3,
-        "holdSeconds": 0.6,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "search",
-        "location",
-        "address",
-        "empty-state",
-        "empty",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "empty-state"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-1",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Welcome tip",
-      "file": "ios/swiggy/food/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/1.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1725410,
-      "platform": "ios",
-      "screenType": "onboarding",
-      "fineType": "coach_mark",
-      "states": [
-        "coach-mark"
-      ],
-      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
-      "purpose": "User is prompted to explore categories and offers",
-      "primaryAction": "Continue to Food",
-      "capture": {
-        "atSeconds": 7.4,
-        "holdSeconds": 1.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "delivery",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "coach-mark",
-        "ios",
-        "ecommerce",
-        "onboarding"
-      ],
-      "elements": [
-        "tab-bar",
-        "price",
-        "list",
-        "chip",
-        "cta",
-        "button",
-        "banner",
-        "bottom-sheet",
-        "coach-mark"
-      ],
-      "style": [
-        "dark",
-        "bold"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-food-2",
-      "appId": "swiggy",
-      "flow": "food",
-      "name": "Food home",
-      "file": "ios/swiggy/food/2.png",
-      "url": "/api/inspirations/screens/ios/swiggy/food/2.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1592774,
-      "platform": "ios",
-      "screenType": "home",
-      "fineType": "home",
-      "states": [],
-      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
-      "purpose": "User views the main food categories and offers",
-      "primaryAction": "View food categories and offers",
-      "capture": {
-        "atSeconds": 9.2,
-        "holdSeconds": 1,
-        "brief": false,
-        "visits": 2,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "search",
-        "delivery",
-        "address",
-        "food",
-        "bolt",
-        "eatright",
-        "reorder",
-        "home",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [
-        "tab-bar",
-        "nav-bar",
-        "search-bar",
-        "price",
-        "list",
-        "chip",
-        "cta",
-        "button",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-instamart-1",
-      "appId": "swiggy",
-      "flow": "instamart",
-      "name": "Instamart",
-      "file": "ios/swiggy/instamart/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/instamart/1.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1294813,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
-      "purpose": "User navigates to the Instamart category section",
-      "primaryAction": "View Instamart categories",
-      "capture": {
-        "atSeconds": 11,
-        "holdSeconds": 0.8,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "search",
-        "address",
-        "instamart",
-        "categories",
-        "redbull",
-        "feed",
-        "category",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "carousel",
-        "page-indicator",
-        "cta",
-        "button"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-dineout-1",
-      "appId": "swiggy",
-      "flow": "dineout",
-      "name": "Category listing",
-      "file": "ios/swiggy/dineout/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/dineout/1.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1004327,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
-      "purpose": "The user is viewing a list of categories for dining options.",
-      "primaryAction": "Click on a category to view its details",
-      "capture": {
-        "atSeconds": 12.4,
-        "holdSeconds": 1.2,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "search",
-        "offer",
-        "address",
-        "dineout",
-        "bites",
-        "my corner",
-        "scenes",
-        "feed",
-        "category",
-        "ios",
-        "ecommerce"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
-      "id": "swiggy-ios-scenes-1",
-      "appId": "swiggy",
-      "flow": "scenes",
-      "name": "Category listing (2)",
-      "file": "ios/swiggy/scenes/1.png",
-      "url": "/api/inspirations/screens/ios/swiggy/scenes/1.png?v=tm2dwa",
-      "width": 1170,
-      "height": 2532,
-      "bytes": 1816258,
-      "platform": "ios",
-      "screenType": "feed",
-      "fineType": "category",
-      "states": [],
-      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
-      "purpose": "The user is viewing a list of categories for dining options.",
-      "primaryAction": "Click on a category to view its details",
-      "capture": {
-        "atSeconds": 14.2,
-        "holdSeconds": 1.6,
-        "brief": false,
-        "visits": 1,
-        "overlayOf": null,
-        "loadingOf": null,
-        "scrolledFrom": null
-      },
-      "industry": "ecommerce",
-      "tags": [
-        "search",
-        "address",
-        "category",
-        "ios",
-        "ecommerce",
-        "feed"
-      ],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "list",
-        "chip",
-        "legal-text",
-        "banner"
-      ],
-      "style": [
-        "dark"
-      ],
-      "capturedAt": "2026-09-28",
-      "hasAnalysis": true,
-      "downloadable": true,
-      "source": {
-        "url": "https://apps.apple.com/in/app/swiggy-food-instamart-dineout/id989540920",
-        "license": null,
-        "licenseUrl": null,
-        "attribution": "Swiggy",
-        "permission": null
-      }
-    },
-    {
       "id": "whatsapp-ios-other-bumble-ios-0",
       "appId": "whatsapp",
       "flow": null,
@@ -887,183 +371,9 @@
         }
       ],
       "parentId": null
-    },
-    {
-      "id": "swiggy-ios-onboarding",
-      "appId": "swiggy",
-      "name": "Onboarding",
-      "category": "onboarding",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-onboarding-1",
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-onboarding-3"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-onboarding-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-onboarding-2",
-          "action": {
-            "kind": "open",
-            "label": "Enter your number"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-onboarding-3",
-          "action": {
-            "kind": "open",
-            "label": "Select your location"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-food",
-      "appId": "swiggy",
-      "name": "Food",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-food-1",
-        "swiggy-ios-food-2"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-food-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-food-2",
-          "action": {
-            "kind": "dismiss",
-            "label": "Welcome tip"
-          }
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-instamart",
-      "appId": "swiggy",
-      "name": "Instamart",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-instamart-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-instamart-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-dineout",
-      "appId": "swiggy",
-      "name": "Dineout",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-dineout-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-dineout-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-scenes",
-      "appId": "swiggy",
-      "name": "Scenes",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-scenes-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "swiggy-ios-scenes-1",
-          "action": null
-        }
-      ],
-      "summary": null
-    },
-    {
-      "id": "swiggy-ios-entering-phone-number",
-      "appId": "swiggy",
-      "name": "Entering phone number",
-      "category": "authentication",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-onboarding-2",
-        "swiggy-ios-onboarding-3"
-      ],
-      "parentId": "swiggy-ios-onboarding",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-onboarding-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-onboarding-3",
-          "action": {
-            "kind": "open",
-            "label": "Select your location"
-          }
-        }
-      ],
-      "summary": null
     }
   ],
   "patterns": [
-    {
-      "id": "pattern-filter-chips",
-      "slug": "filter-chips",
-      "name": "Filter chips",
-      "category": "Filters",
-      "description": "Horizontally scrolling filter chips above a result set.",
-      "tags": [
-        "chips",
-        "filter"
-      ],
-      "screenIds": [
-        "swiggy-ios-food-1",
-        "swiggy-ios-food-2",
-        "swiggy-ios-instamart-1",
-        "swiggy-ios-dineout-1",
-        "swiggy-ios-scenes-1"
-      ]
-    },
-    {
-      "id": "pattern-feed-cards",
-      "slug": "feed-cards",
-      "name": "Feed cards",
-      "category": "Cards",
-      "description": "Content cards inside vertical feeds.",
-      "tags": [
-        "feed",
-        "post"
-      ],
-      "screenIds": [
-        "swiggy-ios-instamart-1",
-        "swiggy-ios-dineout-1",
-        "swiggy-ios-scenes-1"
-      ]
-    },
     {
       "id": "pattern-login-forms",
       "slug": "login-forms",
@@ -1075,8 +385,7 @@
         "login"
       ],
       "screenIds": [
-        "airbnb-ios-login-2",
-        "swiggy-ios-onboarding-2"
+        "airbnb-ios-login-2"
       ]
     },
     {
@@ -1092,68 +401,15 @@
       "screenIds": [
         "airbnb-ios-login-7"
       ]
-    },
-    {
-      "id": "pattern-bottom-sheets",
-      "slug": "bottom-sheets",
-      "name": "Bottom sheets",
-      "category": "Modals",
-      "description": "Mobile sheets sliding from the bottom edge.",
-      "tags": [
-        "sheet",
-        "mobile"
-      ],
-      "screenIds": [
-        "swiggy-ios-food-1"
-      ]
-    },
-    {
-      "id": "pattern-empty-states",
-      "slug": "empty-states",
-      "name": "Empty states",
-      "category": "Empty States",
-      "description": "First-run and no-results states with a clear next step.",
-      "tags": [
-        "empty",
-        "first run"
-      ],
-      "screenIds": [
-        "swiggy-ios-onboarding-3"
-      ]
-    },
-    {
-      "id": "pattern-welcome-carousels",
-      "slug": "welcome-carousels",
-      "name": "Welcome carousels",
-      "category": "Onboarding",
-      "description": "Swipeable intro screens before sign-up.",
-      "tags": [
-        "carousel",
-        "intro"
-      ],
-      "screenIds": [
-        "swiggy-ios-food-1"
-      ]
     }
   ],
   "elementCounts": {
-    "cta": 5,
-    "button": 5,
-    "nav-bar": 7,
-    "text-field": 2,
-    "form": 2,
-    "list": 7,
-    "legal-text": 3,
-    "keyboard": 1,
-    "search-bar": 5,
-    "empty-state": 1,
-    "tab-bar": 2,
-    "price": 2,
-    "chip": 5,
-    "banner": 4,
-    "bottom-sheet": 1,
-    "coach-mark": 1,
-    "carousel": 1,
-    "page-indicator": 1
+    "cta": 1,
+    "button": 1,
+    "nav-bar": 1,
+    "text-field": 1,
+    "form": 1,
+    "list": 1,
+    "legal-text": 1
   }
 }
