@@ -1,0 +1,166 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-7-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-7-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.631Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 1,
+  "name": "Domino's Pizza feed",
+  "description": "Feed screen with a primary action labelled “APPLY”. Dark theme, 35 text elements.",
+  "purpose": "Displaying the main feed for Domino's Pizza with order options and promotions",
+  "primary_action": "Browse order options and apply promotions",
+  "tags": [
+    "delivery",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's Pizza”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a primary action labelled “APPLY”. Dark theme, 35 text elements.",
+        "Calls to action: “APPLY”",
+        "35 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Logging in with phone number”",
+        "Reached from “Search results — loading”, “Domino's Pizza” and “Domino's Pizza (4)”",
+        "Leads to “Domino's Pizza”, “Phone number entry (5)” and “Led”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.6s at 7:15 in the recording",
+        "Frame 2207 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242227",
+      "role": "background",
+      "share": 0.688
+    },
+    {
+      "hex": "#493b38",
+      "role": "surface",
+      "share": 0.122
+    },
+    {
+      "hex": "#575355",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#fa667b",
+      "role": "text",
+      "share": 0.046
+    },
+    {
+      "hex": "#dc5063",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2207,
+    "atSeconds": 435.4,
+    "endSeconds": 435.6,
+    "holdSeconds": 4.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "APPLY"
+    ],
+    "keyboard": false,
+    "title": "Domino's Pizza",
+    "headline": "Pepper Barbecue Chicken"
+  },
+  "crawler": {
+    "nodeId": "s111",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s023",
+        "via": "Dismiss",
+        "name": "Domino's Pizza"
+      },
+      {
+        "from": "s112",
+        "via": "Back to Domino's Pizza",
+        "name": "Domino's Pizza (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Back to Domino's Pizza",
+        "name": "Domino's Pizza"
+      },
+      {
+        "to": "s025",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (5)"
+      },
+      {
+        "to": "s113",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Led"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

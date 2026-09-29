@@ -1,0 +1,144 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-profile-3",
+  "screen_id": "zomato-ios-versions-2026-09-29-profile-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.610Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 3,
+  "name": "Profile (2)",
+  "description": "Profile screen. Dark theme, 17 text elements, shown only briefly.",
+  "purpose": "User profile settings and preferences",
+  "primary_action": "Manage personal preferences",
+  "tags": [
+    "profile",
+    "payment",
+    "booking",
+    "rewards",
+    "ining help",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Bill Payments”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 17 text elements, shown only briefly.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Profile”",
+        "Reached from “Profile — loading”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 3:44 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1123 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18171d",
+      "role": "background",
+      "share": 0.793
+    },
+    {
+      "hex": "#3a393f",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#7740e4",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#535258",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#632cb3",
+      "role": "accent",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1123,
+    "atSeconds": 224.6,
+    "endSeconds": 224.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Bill Payments",
+    "headline": "G & experiences",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s065",
+    "depth": 65,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s064",
+        "via": "Wait 2s",
+        "name": "Profile — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-zoho-corporation-v-kcal-4",
+  "screen_id": "zomato-ios-versions-2026-09-29-zoho-corporation-v-kcal-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.651Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Zoho Corporation v (Kcal)",
+  "flow_position": 4,
+  "name": "Discard cart confirmation · modal",
+  "description": "Dialog over a dimmed screen, on top of Zoho Corporation v with a search bar and a primary action labelled “Explore now”. Dark theme, 23 text elements.",
+  "purpose": "Confirm discarding the cart from Anjappar",
+  "primary_action": "Confirm",
+  "tags": [
+    "search",
+    "cart",
+    "subscription",
+    "tein",
+    "all a",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subscriptions”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 31% of the height from 22% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Zoho Corporation v with a search bar and a primary action labelled “Explore now”. Dark theme, 23 text elements.",
+        "Calls to action: “Explore now”",
+        "23 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 11 in “Zoho Corporation v (Kcal)”",
+        "Reached from “Zoho Corporation v (6)”",
+        "Leads to “Zoho Corporation v (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.2s at 9:15 in the recording",
+        "Frame 2788 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#221515",
+      "role": "background",
+      "share": 0.543
+    },
+    {
+      "hex": "#47332d",
+      "role": "surface",
+      "share": 0.319
+    },
+    {
+      "hex": "#6c4a3d",
+      "role": "accent",
+      "share": 0.049
+    },
+    {
+      "hex": "#5a5758",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#727073",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2788,
+    "atSeconds": 555,
+    "endSeconds": 558.2,
+    "holdSeconds": 3.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.21875,
+        "w": 0.84375,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Explore now"
+    ],
+    "keyboard": false,
+    "title": "Subscriptions",
+    "headline": "Subscriptions",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s151",
+    "depth": 151,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s150",
+        "via": "Tap “subscriptions”",
+        "name": "Zoho Corporation v (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s152",
+        "via": "Tap “subscriptions”",
+        "name": "Zoho Corporation v (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,141 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-9",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-9",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.601Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Opening a page",
+  "flow_position": 9,
+  "name": "Product detail",
+  "description": "Other screen with a search bar. Dark theme, 11 text elements.",
+  "purpose": "Displaying a specific product with its details and options for purchase",
+  "primary_action": "Add to cart",
+  "tags": [
+    "search",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Domino's Pizza”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 11 in “Opening a page”",
+        "Reached from “Search in Domi's Pizza”",
+        "Leads to “Search results — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.2s at 1:30 in the recording",
+        "Frame 467 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222126",
+      "role": "background",
+      "share": 0.33
+    },
+    {
+      "hex": "#3c3b44",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#5b5c61",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#f65c6d",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#b6864f",
+      "role": "text",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 467,
+    "atSeconds": 90.4,
+    "endSeconds": 93.6,
+    "holdSeconds": 3.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search in Domino's Pizza",
+    "headline": "Spicy Chicken Po"
+  },
+  "crawler": {
+    "nodeId": "s042",
+    "depth": 41,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s041",
+        "via": "Open Search in Domino's Pizza",
+        "name": "Search in Domi's Pizza"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

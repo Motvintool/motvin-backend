@@ -1,0 +1,208 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-home-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-home-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.584Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Home",
+  "flow_position": 1,
+  "name": "Search results",
+  "description": "Search results screen with a 3-item tab bar, a search bar and a primary action labelled “Order now”. Dark theme, 32 text elements.",
+  "purpose": "The user is searching for ice cream items to find a restaurant or product to order",
+  "primary_action": "Search for ice cream items",
+  "tags": [
+    "search",
+    "filter",
+    "home",
+    "dining",
+    "healthy mode",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Dining, Healthy Mode",
+        "Navigation title reads “Zoho Corporation v”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a 3-item tab bar, a search bar and a primary action labelled “Order now”. Dark theme, 32 text elements.",
+        "Calls to action: “Order now”, “Explore ›”",
+        "32 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 13 in “Home”",
+        "Reached from “Search results”, “Search results — loading”, “Cart (7)”, “Zoho Corporation v (13)” and “Search results (11)”",
+        "Leads to “Search results (2)”, “Payment method”, “Cart (9)”, “Search results (11)” and “Other (10)”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:13 in the recording",
+        "Frame 77 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1b29",
+      "role": "background",
+      "share": 0.406
+    },
+    {
+      "hex": "#191253",
+      "role": "surface",
+      "share": 0.098
+    },
+    {
+      "hex": "#41343e",
+      "role": "surface",
+      "share": 0.089
+    },
+    {
+      "hex": "#5a5858",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#8b1374",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 77,
+    "atSeconds": 13.6,
+    "endSeconds": 16,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [
+      "Home",
+      "Dining",
+      "Healthy Mode"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Order now",
+      "Explore ›"
+    ],
+    "keyboard": false,
+    "title": "Zoho Corporation v",
+    "headline": "4 Near & Fast"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Wait 0.2s",
+        "name": "Search results"
+      },
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s117",
+        "via": "Back to Search results",
+        "name": "Cart (7)"
+      },
+      {
+        "from": "s162",
+        "via": "Back to Search results",
+        "name": "Zoho Corporation v (13)"
+      },
+      {
+        "from": "s160",
+        "via": "Dismiss",
+        "name": "Search results (11)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Tap “Zoho Corporation v”",
+        "name": "Search results (2)"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s122",
+        "via": "Tap “BurgerMan”",
+        "name": "Cart (9)"
+      },
+      {
+        "to": "s160",
+        "via": "Back to Search results",
+        "name": "Search results (11)"
+      },
+      {
+        "to": "s085",
+        "via": "Back to Other",
+        "name": "Other (10)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

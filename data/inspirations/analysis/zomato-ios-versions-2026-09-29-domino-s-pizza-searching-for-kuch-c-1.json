@@ -1,0 +1,150 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-domino-s-pizza-searching-for-kuch-c-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-domino-s-pizza-searching-for-kuch-c-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.632Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Domino's Pizza (Searching for “Kuch c”)",
+  "flow_position": 1,
+  "name": "Restaurant detail (4)",
+  "description": "Feed screen with a 3-item tab bar and a search bar. Dark theme, 45 text elements, shown only briefly.",
+  "purpose": "Displaying details of a specific restaurant, including menu items and promotional offers.",
+  "primary_action": "View menu items",
+  "tags": [
+    "search",
+    "delivery",
+    "offer",
+    "led",
+    "continue",
+    "select address",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's Pizza”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a search bar. Dark theme, 45 text elements, shown only briefly.",
+        "45 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Domino's Pizza (Searching for “Kuch c”)”",
+        "Reached from “Domino's Pizza (3)”",
+        "Leads to “Search results (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:32 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2261 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#231f23",
+      "role": "background",
+      "share": 0.794
+    },
+    {
+      "hex": "#4c3737",
+      "role": "surface",
+      "share": 0.148
+    },
+    {
+      "hex": "#705846",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#6b2817",
+      "role": "accent",
+      "share": 0.013
+    },
+    {
+      "hex": "#777479",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2261,
+    "atSeconds": 452.2,
+    "endSeconds": 452.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Domino's Pizza",
+    "headline": "Ollections",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s113",
+    "depth": 113,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s111",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Domino's Pizza (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s108",
+        "via": "Type “Q Search”",
+        "name": "Search results (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

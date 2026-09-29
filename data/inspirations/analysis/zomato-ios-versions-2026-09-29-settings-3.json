@@ -1,0 +1,156 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-settings-3",
+  "screen_id": "zomato-ios-versions-2026-09-29-settings-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.621Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 3,
+  "name": "Settings · bottom sheet",
+  "description": "Settings bottom sheet over a dimmed screen, on top of Zomato for Enterprise with 1 input field. Dark theme, 14 text elements.",
+  "purpose": "Manage device settings and account information",
+  "primary_action": "Save changes",
+  "tags": [
+    "settings",
+    "search",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Battery”",
+        "Bottom sheet over a dimmed background, covering 34% of the height from 64% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings bottom sheet over a dimmed screen, on top of Zomato for Enterprise with 1 input field. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Settings”",
+        "Reached from “Zomato for Enterprise (2)”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 5:52 in the recording",
+        "Frame 1765 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050406",
+      "role": "background",
+      "share": 0.474
+    },
+    {
+      "hex": "#201e22",
+      "role": "surface",
+      "share": 0.441
+    },
+    {
+      "hex": "#4e4c4f",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#3a393c",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#6c6b6f",
+      "role": "text",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1765,
+    "atSeconds": 352.4,
+    "endSeconds": 353.2,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.640625,
+        "w": 0.875,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Battery",
+    "headline": "Surendar V",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s091",
+    "depth": 91,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s079",
+        "via": "Open Battery",
+        "name": "Zomato for Enterprise (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

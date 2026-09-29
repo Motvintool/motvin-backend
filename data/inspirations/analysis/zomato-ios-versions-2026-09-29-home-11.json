@@ -1,0 +1,184 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-home-11",
+  "screen_id": "zomato-ios-versions-2026-09-29-home-11",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.654Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Home",
+  "flow_position": 11,
+  "name": "Home · modal",
+  "description": "Search results dialog over a dimmed screen, on top of Cart with a 3-item tab bar, a search bar and a primary action labelled “Apply”. Dark theme, 37 text elements.",
+  "purpose": "The main page of the app showing the search bar, promotional banners, and recommended food items.",
+  "primary_action": "Search for items or apply filters",
+  "tags": [
+    "search",
+    "filter",
+    "settings",
+    "home",
+    "dining",
+    "healthy mode",
+    "search-results",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Dining, Healthy Mode",
+        "Navigation title reads “BurgerMan”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 27% of the height from 58% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results dialog over a dimmed screen, on top of Cart with a 3-item tab bar, a search bar and a primary action labelled “Apply”. Dark theme, 37 text elements.",
+        "Calls to action: “Apply”, “Explore ›”",
+        "37 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 13 in “Home”",
+        "Reached from “Cart (10)” and “Search results”",
+        "Leads to “Search results (12)” and “Search results”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.6s at 9:49 in the recording",
+        "Frame 2961 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f1f",
+      "role": "background",
+      "share": 0.815
+    },
+    {
+      "hex": "#483c30",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#60584f",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#158348",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#304058",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2961,
+    "atSeconds": 589.8,
+    "endSeconds": 594.4,
+    "holdSeconds": 4.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.46875,
+        "y": 0.578125,
+        "w": 0.3125,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [
+      "Home",
+      "Dining",
+      "Healthy Mode"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Apply",
+      "Explore ›"
+    ],
+    "keyboard": false,
+    "title": "BurgerMan",
+    "headline": "FREE"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s123",
+        "via": "Tap “BurgerMan”",
+        "name": "Cart (10)"
+      },
+      {
+        "from": "s009",
+        "via": "Back to Search results",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Tap “No packaging charges”",
+        "name": "Search results (12)"
+      },
+      {
+        "to": "s009",
+        "via": "Dismiss",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

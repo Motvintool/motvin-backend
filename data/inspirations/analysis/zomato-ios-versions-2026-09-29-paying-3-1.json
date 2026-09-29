@@ -1,0 +1,142 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-paying-3-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-paying-3-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.588Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 1,
+  "name": "Payment settings",
+  "description": "Payment screen. Dark theme, 18 text elements.",
+  "purpose": "Configure payment options for the user",
+  "primary_action": "Add payment methods",
+  "tags": [
+    "settings",
+    "payment",
+    "wallet",
+    "pay later",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payment settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 13 in “Paying”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:27 in the recording",
+        "Frame 146 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1d24",
+      "role": "background",
+      "share": 0.857
+    },
+    {
+      "hex": "#3e3e45",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#5e5e63",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#dedcde",
+      "role": "text",
+      "share": 0.016
+    },
+    {
+      "hex": "#afafb2",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 146,
+    "atSeconds": 27.6,
+    "endSeconds": 29.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Payment settings",
+    "headline": "Google Pay UPI",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Payment settings",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-completing-the-task-6",
+  "screen_id": "zomato-ios-versions-2026-09-29-completing-the-task-6",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.614Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Completing the task",
+  "flow_position": 6,
+  "name": "Processing payment confirmation",
+  "description": "Toast over a dimmed screen, on top of Payment method — scrolled. Dark theme, 6 text elements.",
+  "purpose": "Confirming the cancellation of a payment transaction",
+  "primary_action": "Confirm cancellation",
+  "tags": [
+    "payment",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Processing Payment”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Payment method — scrolled. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 6 in “Completing the task”",
+        "Reached from “Search results — loading”",
+        "Leads to “Payment method — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.4s at 4:24 in the recording",
+        "Frame 1330 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0d11",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#2d2b2f",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#59585b",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#444245",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#a9a8a9",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1330,
+    "atSeconds": 264.8,
+    "endSeconds": 266.2,
+    "holdSeconds": 1.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.953125,
+        "w": 0.75,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Processing Payment",
+    "headline": "Confirmation"
+  },
+  "crawler": {
+    "nodeId": "s073",
+    "depth": 73,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Dismiss",
+        "name": "Payment method — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

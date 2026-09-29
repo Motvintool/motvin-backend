@@ -1,0 +1,147 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-paying-3-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-paying-3-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.589Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 2,
+  "name": "Order placed",
+  "description": "Success screen with a search bar. Dark theme, 27 text elements.",
+  "purpose": "Confirm the delivery of an order",
+  "primary_action": "View order details",
+  "tags": [
+    "search",
+    "zomato",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search by restaurant or dish”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen with a search bar. Dark theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 13 in “Paying”",
+        "Reached from “Search results — loading”",
+        "Leads to “Search results — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.2s at 0:31 in the recording",
+        "Frame 182 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1e24",
+      "role": "background",
+      "share": 0.828
+    },
+    {
+      "hex": "#403b42",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#56555a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#f66573",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#934243",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 182,
+    "atSeconds": 31.4,
+    "endSeconds": 36.6,
+    "holdSeconds": 5.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search by restaurant or dish",
+    "headline": "The Pizza Project by Oven Story",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

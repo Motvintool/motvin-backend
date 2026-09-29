@@ -1,0 +1,140 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-chatting-with-support-paying-3-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-chatting-with-support-paying-3-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.615Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Chatting with support (Paying)",
+  "flow_position": 1,
+  "name": "Add new company screen",
+  "description": "Other screen. Dark theme, 15 text elements.",
+  "purpose": "Screen for adding a new company to Zomato for Enterprise",
+  "primary_action": "Add new company",
+  "tags": [
+    "continue",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Zomato for Enterprise”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Chatting with support (Paying)”",
+        "Reached from “Payment method — scrolled”",
+        "Leads to “Zomato for Enterprise (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.4s at 4:46 in the recording",
+        "Frame 1438 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1d20",
+      "role": "background",
+      "share": 0.815
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#5e5d5f",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#604f1e",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#877c69",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1438,
+    "atSeconds": 286.4,
+    "endSeconds": 287.8,
+    "holdSeconds": 1.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Zomato for Enterprise",
+    "headline": "Zomato for Enterprise",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s078",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open Zomato for Enterprise",
+        "name": "Payment method — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s079",
+        "via": "Tap “Zomato for Enterprise”",
+        "name": "Zomato for Enterprise (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

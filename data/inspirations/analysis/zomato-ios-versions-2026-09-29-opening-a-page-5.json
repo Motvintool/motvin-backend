@@ -1,0 +1,139 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-5",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-5",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.599Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Opening a page",
+  "flow_position": 5,
+  "name": "Item detail",
+  "description": "Search screen with a search bar. Dark theme, 9 text elements.",
+  "purpose": "Displaying details of a specific menu item",
+  "primary_action": "View details of a specific menu item",
+  "tags": [
+    "search",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Do”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 11 in “Opening a page”",
+        "Reached from “Search”",
+        "Leads to “Search (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:26 in the recording",
+        "Frame 439 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e24",
+      "role": "background",
+      "share": 0.593
+    },
+    {
+      "hex": "#3c3b42",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#babbca",
+      "role": "text",
+      "share": 0.03
+    },
+    {
+      "hex": "#0d0b0e",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#757a85",
+      "role": "surface",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 439,
+    "atSeconds": 86.8,
+    "endSeconds": 88,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search in Do",
+    "headline": "Pepper Barbecue Chicken"
+  },
+  "crawler": {
+    "nodeId": "s038",
+    "depth": 37,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s037",
+        "via": "Open Search in Do",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s039",
+        "via": "Tap “Search in Do”",
+        "name": "Search (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

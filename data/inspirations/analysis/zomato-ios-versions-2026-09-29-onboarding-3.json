@@ -1,0 +1,143 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-onboarding-3",
+  "screen_id": "zomato-ios-versions-2026-09-29-onboarding-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.579Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Phone number entry (2)",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 11 text elements, shown only briefly.",
+  "purpose": "The user is entering their mobile number to log in or sign up",
+  "primary_action": "Enter mobile number",
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 11 text elements, shown only briefly.",
+        "Calls to action: “Log in or sign up”, “Continue”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Onboarding”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 0:02 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 14 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfbfc",
+      "role": "background",
+      "share": 0.369
+    },
+    {
+      "hex": "#090807",
+      "role": "text",
+      "share": 0.271
+    },
+    {
+      "hex": "#eae1e4",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#272624",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#ef4d5e",
+      "role": "accent",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 14,
+    "atSeconds": 2.8,
+    "endSeconds": 3,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up",
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "ON EVERY ME/"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “ON EVERY ME/”",
+        "name": "Phone number entry (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

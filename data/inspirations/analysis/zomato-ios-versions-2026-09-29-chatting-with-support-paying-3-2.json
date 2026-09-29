@@ -1,0 +1,205 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-chatting-with-support-paying-3-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-chatting-with-support-paying-3-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.616Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Chatting with support (Paying)",
+  "flow_position": 2,
+  "name": "Transaction history screen",
+  "description": "Category screen with a row of 4 category chips. Dark theme, 10 text elements.",
+  "purpose": "Displaying transaction history for Zomato for Enterprise",
+  "primary_action": "View transaction history",
+  "tags": [
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Zomato for Enterprise”",
+        "Category strip: All, Refunds, Additions, Deductions",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 4 category chips. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Chatting with support (Paying)”",
+        "Reached from “Zomato for Enterprise”, “Payment method”, “Profile (4)”, “Settings” and “Listing (5)”",
+        "Leads to “Payment method”, “Other (8)”, “Profile (4)”, “Settings · bottom sheet” and “Call now”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:47 in the recording",
+        "Frame 1444 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19191e",
+      "role": "background",
+      "share": 0.867
+    },
+    {
+      "hex": "#3f3828",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#4d4c54",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#706b60",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#615026",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1444,
+    "atSeconds": 287.8,
+    "endSeconds": 289,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [
+      "All",
+      "Refunds",
+      "Additions",
+      "Deductions"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Zomato for Enterprise",
+    "headline": "Your transactions will appear here"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 79,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Tap “Zomato for Enterprise”",
+        "name": "Zomato for Enterprise"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Payment method"
+      },
+      {
+        "from": "s083",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Profile (4)"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Payment method"
+      },
+      {
+        "from": "s090",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Settings"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Payment method"
+      },
+      {
+        "from": "s166",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Listing (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s080",
+        "via": "Open Feeding indıa",
+        "name": "Other (8)"
+      },
+      {
+        "to": "s083",
+        "via": "Back to Profile",
+        "name": "Profile (4)"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s091",
+        "via": "Open Battery",
+        "name": "Settings · bottom sheet"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s167",
+        "via": "Open Call now",
+        "name": "Call now"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

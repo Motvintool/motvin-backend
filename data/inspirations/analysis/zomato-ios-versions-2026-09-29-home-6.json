@@ -1,0 +1,158 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-home-6",
+  "screen_id": "zomato-ios-versions-2026-09-29-home-6",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.635Z",
+  "screen_type": "cart",
+  "published_as": "cart",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Home",
+  "flow_position": 6,
+  "name": "Cart (6)",
+  "description": "Cart screen with a 3-item tab bar, a search bar and a primary action labelled “Explore now”. Dark theme, 30 text elements.",
+  "purpose": "The user is viewing the items in their cart to check if they need to proceed with an order",
+  "primary_action": "View cart items",
+  "tags": [
+    "search",
+    "filter",
+    "cart",
+    "subscription",
+    "home",
+    "dining",
+    "healthy mode",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Dining, Healthy Mode",
+        "Navigation title reads “Zoho Corporation v”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Cart screen with a 3-item tab bar, a search bar and a primary action labelled “Explore now”. Dark theme, 30 text elements.",
+        "Calls to action: “Explore now”, “Explore ›”",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 13 in “Home”",
+        "Reached from “Search results (9)”",
+        "Leads to “Confirm”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 7:47 in the recording",
+        "Frame 2341 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c21",
+      "role": "background",
+      "share": 0.303
+    },
+    {
+      "hex": "#23a0f5",
+      "role": "accent",
+      "share": 0.106
+    },
+    {
+      "hex": "#64c2fb",
+      "role": "text",
+      "share": 0.101
+    },
+    {
+      "hex": "#3f3c39",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#3d6179",
+      "role": "surface",
+      "share": 0.042
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2341,
+    "atSeconds": 467.4,
+    "endSeconds": 468.4,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [
+      "Home",
+      "Dining",
+      "Healthy Mode"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Explore now",
+      "Explore ›"
+    ],
+    "keyboard": false,
+    "title": "Zoho Corporation v",
+    "headline": "Subscriptions"
+  },
+  "crawler": {
+    "nodeId": "s120",
+    "depth": 120,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s119",
+        "via": "Open Zoho Corporation v",
+        "name": "Search results (9)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s121",
+        "via": "Tap “• Zoho Corporation v”",
+        "name": "Confirm"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

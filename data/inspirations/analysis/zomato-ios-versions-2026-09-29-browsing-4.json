@@ -1,0 +1,153 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-browsing-4",
+  "screen_id": "zomato-ios-versions-2026-09-29-browsing-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.659Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing",
+  "flow_position": 4,
+  "name": "Restaurant detail (7)",
+  "description": "Detail screen with a row of 5 category chips. Dark theme, 23 text elements.",
+  "purpose": "Viewing the details of a specific restaurant, including menu items and offers",
+  "primary_action": "Browse menu items and offers",
+  "tags": [
+    "payment",
+    "review",
+    "offer",
+    "book a table",
+    "pay bill",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Ask anything”",
+        "Category strip: Ask anything, Reviews, Offers, Menu, Explor",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a row of 5 category chips. Dark theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Browsing”",
+        "Reached from “Offers for today, dinnerv”",
+        "Leads to “Offers”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.8s at 10:35 in the recording",
+        "Frame 3188 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.754
+    },
+    {
+      "hex": "#393337",
+      "role": "surface",
+      "share": 0.156
+    },
+    {
+      "hex": "#535152",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#55221d",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#dfdde0",
+      "role": "text",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 3188,
+    "atSeconds": 635,
+    "endSeconds": 637.8,
+    "holdSeconds": 2.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [
+      "Ask anything",
+      "Reviews",
+      "Offers",
+      "Menu",
+      "Explor"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Ask anything",
+    "headline": "Ask anything about this place",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s169",
+    "depth": 169,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s168",
+        "via": "Tap “Ask anything”",
+        "name": "Offers for today, dinnerv"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s170",
+        "via": "Tap “Ask anything”",
+        "name": "Offers"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

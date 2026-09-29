@@ -1,0 +1,177 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-home-3",
+  "screen_id": "zomato-ios-versions-2026-09-29-home-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.585Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Home",
+  "flow_position": 3,
+  "name": "Search results (3)",
+  "description": "Search results bottom sheet, on top of Search results with a 3-item tab bar, a search bar, a paged carousel and a primary action labelled “Explore ›”. Dark theme, 27 text elements.",
+  "purpose": "The user is searching for comfort food items to find a restaurant or product to order",
+  "primary_action": "Search for comfort food items",
+  "tags": [
+    "search",
+    "filter",
+    "price",
+    "delivery",
+    "offer",
+    "home",
+    "dining",
+    "healthy mode",
+    "search-results",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "banner",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Dining, Healthy Mode",
+        "Navigation title reads “No packaging charges”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Bottom sheet, covering 50% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results bottom sheet, on top of Search results with a 3-item tab bar, a search bar, a paged carousel and a primary action labelled “Explore ›”. Dark theme, 27 text elements.",
+        "Calls to action: “Explore ›”",
+        "27 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 13 in “Home”",
+        "Reached from “Search results (2)”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 0:17 in the recording",
+        "Frame 91 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1919",
+      "role": "background",
+      "share": 0.505
+    },
+    {
+      "hex": "#1c3e7f",
+      "role": "accent",
+      "share": 0.082
+    },
+    {
+      "hex": "#3a3632",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#030203",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#fceacf",
+      "role": "text",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 91,
+    "atSeconds": 17.6,
+    "endSeconds": 18.4,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.5,
+        "w": 1,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [
+      "Home",
+      "Dining",
+      "Healthy Mode"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Explore ›"
+    ],
+    "keyboard": false,
+    "title": "No packaging charges",
+    "headline": "FREE DELIVERY"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Type “O Zoho Corporation v”",
+        "name": "Search results (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Open Your preferences",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

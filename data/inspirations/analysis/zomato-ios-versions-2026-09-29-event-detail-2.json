@@ -1,0 +1,144 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-event-detail-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-event-detail-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.647Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Event detail",
+  "flow_position": 2,
+  "name": "Listing",
+  "description": "Feed screen with a primary action labelled “Save #50 on this order” and prices. Dark theme, 16 text elements.",
+  "purpose": "Displaying a list of recommended dishes or items with their prices and nutritional information.",
+  "primary_action": "View listing items",
+  "tags": [
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a primary action labelled “Save #50 on this order” and prices. Dark theme, 16 text elements.",
+        "Calls to action: “Save #50 on this order”",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Event detail”",
+        "Reached from “Other (13)”",
+        "Leads to “Other (14)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 9:03 in the recording",
+        "Frame 2726 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202024",
+      "role": "background",
+      "share": 0.65
+    },
+    {
+      "hex": "#363c4a",
+      "role": "surface",
+      "share": 0.112
+    },
+    {
+      "hex": "#214588",
+      "role": "accent",
+      "share": 0.071
+    },
+    {
+      "hex": "#bf4351",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#f65464",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2726,
+    "atSeconds": 543,
+    "endSeconds": 545.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save #50 on this order"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Mutton Liver Fry"
+  },
+  "crawler": {
+    "nodeId": "s144",
+    "depth": 144,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s143",
+        "via": "Tap “Mutton Liver Fry”",
+        "name": "Other (13)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s145",
+        "via": "Tap “Mutton Liver Fry”",
+        "name": "Other (14)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

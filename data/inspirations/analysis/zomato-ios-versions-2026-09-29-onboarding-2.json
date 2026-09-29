@@ -1,0 +1,143 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-onboarding-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-onboarding-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.577Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 8 text elements.",
+  "purpose": "The user is entering their mobile number to log in or sign up",
+  "primary_action": "Enter mobile number",
+  "tags": [
+    "delivery",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 8 text elements.",
+        "Calls to action: “Log in or sign up”, “Continue”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Onboarding”",
+        "Reached from “Splash screen”",
+        "Leads to “Phone number entry (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 0:01 in the recording",
+        "Frame 13 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfc",
+      "role": "background",
+      "share": 0.332
+    },
+    {
+      "hex": "#020102",
+      "role": "text",
+      "share": 0.296
+    },
+    {
+      "hex": "#ecb498",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#f05564",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#292725",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 13,
+    "atSeconds": 1.2,
+    "endSeconds": 2.8,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up",
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "DELIVERY APP"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Phone number entry",
+        "name": "Splash screen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

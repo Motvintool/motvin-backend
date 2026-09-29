@@ -1,0 +1,141 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-7",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-7",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.600Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Opening a page",
+  "flow_position": 7,
+  "name": "Restaurant detail (2)",
+  "description": "Other screen with a search bar. Dark theme, 14 text elements.",
+  "purpose": "Displaying details of a specific restaurant",
+  "primary_action": "View details of a specific restaurant",
+  "tags": [
+    "search",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 11 in “Opening a page”",
+        "Reached from “Search (3)”",
+        "Leads to “Search in Domi's Pizza”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2s at 1:28 in the recording",
+        "Frame 450 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1d23",
+      "role": "background",
+      "share": 0.608
+    },
+    {
+      "hex": "#f4f2f5",
+      "role": "text",
+      "share": 0.126
+    },
+    {
+      "hex": "#3b3a41",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#56555b",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#8d3440",
+      "role": "accent",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 450,
+    "atSeconds": 88.2,
+    "endSeconds": 90.2,
+    "holdSeconds": 2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Domino's",
+    "headline": "Domino's"
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "Open Domino's",
+        "name": "Search (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Tap “Search in Do!”",
+        "name": "Search in Domi's Pizza"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

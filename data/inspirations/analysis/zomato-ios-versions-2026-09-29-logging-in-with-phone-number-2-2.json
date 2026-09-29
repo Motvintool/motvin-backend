@@ -1,0 +1,146 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-2-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-2-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.596Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 2,
+  "name": "Category listing",
+  "description": "Feed screen with prices. Dark theme, 35 text elements, shown only briefly.",
+  "purpose": "Displaying a list of categories for the user to select from when browsing the restaurant menu.",
+  "primary_action": "Select a category to view the items under that category",
+  "tags": [
+    "delivery",
+    "address",
+    "add address",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's Pizza”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with prices. Dark theme, 35 text elements, shown only briefly.",
+        "35 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in with phone number”",
+        "Reached from “Phone number entry (5)”",
+        "Leads to “Domino's Pizza”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 1:11 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 356 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f23",
+      "role": "background",
+      "share": 0.718
+    },
+    {
+      "hex": "#463c35",
+      "role": "surface",
+      "share": 0.163
+    },
+    {
+      "hex": "#565253",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#060407",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#d5a67d",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 356,
+    "atSeconds": 71.2,
+    "endSeconds": 71.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Domino's Pizza",
+    "headline": "Chicken Doubles Pizza Party",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 31,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Phone number entry (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Back to Domino's Pizza",
+        "name": "Domino's Pizza"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

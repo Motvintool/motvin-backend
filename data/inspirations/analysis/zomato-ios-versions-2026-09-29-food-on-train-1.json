@@ -1,0 +1,138 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-food-on-train-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-food-on-train-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.609Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Food on Train",
+  "flow_position": 1,
+  "name": "Food on Train",
+  "description": "Other screen. Dark theme, 11 text elements.",
+  "purpose": "User is navigating to the Food on Train section for train food",
+  "primary_action": "Enter train number or PNR",
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Food on Train”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Food on Train”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.6s at 3:10 in the recording",
+        "Frame 972 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1d24",
+      "role": "background",
+      "share": 0.494
+    },
+    {
+      "hex": "#b03235",
+      "role": "surface",
+      "share": 0.162
+    },
+    {
+      "hex": "#842024",
+      "role": "accent",
+      "share": 0.058
+    },
+    {
+      "hex": "#f6d69d",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#d19772",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 972,
+    "atSeconds": 190,
+    "endSeconds": 194.6,
+    "holdSeconds": 4.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Food on Train",
+    "headline": "ENJOY REGIONAL FLAVOURS"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 61,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Food on Train",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

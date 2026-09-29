@@ -1,0 +1,150 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-report-a-safety-emergency-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-report-a-safety-emergency-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.620Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Report a Safety Emergency",
+  "flow_position": 1,
+  "name": "Safety emergency report",
+  "description": "Other screen. Dark theme, 12 text elements.",
+  "purpose": "A screen for reporting a safety emergency or accident",
+  "primary_action": "Report an accident or emergency",
+  "tags": [
+    "chat",
+    "message",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Report a Safety Emergency”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Report a Safety Emergency”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 5:37 in the recording",
+        "Frame 1688 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1f26",
+      "role": "background",
+      "share": 0.765
+    },
+    {
+      "hex": "#d44f5e",
+      "role": "accent",
+      "share": 0.1
+    },
+    {
+      "hex": "#3e3d44",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#8e3843",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#e7a7af",
+      "role": "text",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1688,
+    "atSeconds": 337,
+    "endSeconds": 337.8,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Report a Safety Emergency",
+    "headline": "Report an Accident or"
+  },
+  "crawler": {
+    "nodeId": "s088",
+    "depth": 88,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Report a Safety Emergency",
+        "name": "Payment method"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Report a Safety Emergency",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-searching-for-kuch-c-2-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-searching-for-kuch-c-2-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.633Z",
+  "screen_type": "cart",
+  "published_as": "cart",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Opening a page (Searching for “Kuch c”)",
+  "flow_position": 1,
+  "name": "Cart (4)",
+  "description": "Cart screen. Dark theme, 30 text elements, shown only briefly.",
+  "purpose": "Showing the user's current cart contents and offers.",
+  "primary_action": "View cart",
+  "tags": [
+    "filter",
+    "cart",
+    "price",
+    "delivery",
+    "offer",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's Pizz”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Cart screen. Dark theme, 30 text elements, shown only briefly.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Opening a page (Searching for “Kuch c”)”",
+        "Reached from “Search results (7)”",
+        "Leads to “Cart (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:33 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2269 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1c21",
+      "role": "background",
+      "share": 0.515
+    },
+    {
+      "hex": "#3f3e41",
+      "role": "surface",
+      "share": 0.11
+    },
+    {
+      "hex": "#243e64",
+      "role": "accent",
+      "share": 0.078
+    },
+    {
+      "hex": "#5c5c62",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#603227",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2269,
+    "atSeconds": 453.8,
+    "endSeconds": 454,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Domino's Pizz",
+    "headline": "Domino's Pizz"
+  },
+  "crawler": {
+    "nodeId": "s114",
+    "depth": 114,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Tap “Domino's”",
+        "name": "Search results (7)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s104",
+        "via": "Back to Cart",
+        "name": "Cart (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

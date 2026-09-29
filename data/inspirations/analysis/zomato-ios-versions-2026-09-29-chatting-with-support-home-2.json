@@ -1,0 +1,157 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-chatting-with-support-home-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-chatting-with-support-home-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.644Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Chatting with support (Home)",
+  "flow_position": 2,
+  "name": "Category listing (6)",
+  "description": "Feed screen with a 3-item tab bar, a row of 5 category chips and a search bar. Dark theme, 36 text elements, shown only briefly.",
+  "purpose": "Presenting a list of restaurants with their details and offers",
+  "primary_action": "View restaurant details and offers",
+  "tags": [
+    "search",
+    "offer",
+    "romantic",
+    "biryani",
+    "rooftop",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Zoho Corporation v”",
+        "Category strip: FAMIL, PURATASSI, UP TO, FAVOL, SPECIALS",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar, a row of 5 category chips and a search bar. Dark theme, 36 text elements, shown only briefly.",
+        "36 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Chatting with support (Home)”",
+        "Reached from “Book a table”",
+        "Leads to “Cart (12)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 8:35 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2579 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1b20",
+      "role": "background",
+      "share": 0.543
+    },
+    {
+      "hex": "#3e3b3f",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#575558",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#3c3c91",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#5f5fbd",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2579,
+    "atSeconds": 515.8,
+    "endSeconds": 516,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [
+      "FAMIL",
+      "PURATASSI",
+      "UP TO",
+      "FAVOL",
+      "SPECIALS"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Zoho Corporation v",
+    "headline": "TOP PICKS +",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 137,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Open Zoho Corporation v",
+        "name": "Book a table"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s130",
+        "via": "Switch to Home",
+        "name": "Cart (12)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

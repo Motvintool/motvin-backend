@@ -1,0 +1,148 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-paying-3-9",
+  "screen_id": "zomato-ios-versions-2026-09-29-paying-3-9",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.602Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Paying",
+  "flow_position": 9,
+  "name": "Bookmarks",
+  "description": "Other screen. Dark theme, 9 text elements.",
+  "purpose": "View saved restaurant collections",
+  "primary_action": "View bookmarks",
+  "tags": [
+    "delivery",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 13 in “Paying”",
+        "Reached from “Payment method”",
+        "Leads to “Form” and “Payment method”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 2:14 in the recording",
+        "Frame 684 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1f",
+      "role": "background",
+      "share": 0.672
+    },
+    {
+      "hex": "#5b678d",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#de5050",
+      "role": "accent",
+      "share": 0.028
+    },
+    {
+      "hex": "#ee8479",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#485068",
+      "role": "surface",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 684,
+    "atSeconds": 134.6,
+    "endSeconds": 137,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Dining"
+  },
+  "crawler": {
+    "nodeId": "s047",
+    "depth": 46,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Other",
+        "name": "Payment method"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Other",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s048",
+        "via": "Tap “COLLECTIONS”",
+        "name": "Form"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

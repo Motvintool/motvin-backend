@@ -1,0 +1,155 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-completing-the-task-3",
+  "screen_id": "zomato-ios-versions-2026-09-29-completing-the-task-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.613Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Completing the task",
+  "flow_position": 3,
+  "name": "Gift card selection (2)",
+  "description": "Success screen. Dark theme, 20 text elements.",
+  "purpose": "Selecting a gift card amount for a Zomato gift card purchase",
+  "primary_action": "Choose a gift card amount",
+  "tags": [
+    "continue",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Help”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Completing the task”",
+        "Reached from “Gift card amount” and “Checkout”",
+        "Leads to “Search results — loading” and “Payment method”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.4s at 4:12 in the recording",
+        "Frame 1279 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1b21",
+      "role": "background",
+      "share": 0.442
+    },
+    {
+      "hex": "#cc4a58",
+      "role": "accent",
+      "share": 0.177
+    },
+    {
+      "hex": "#8a3641",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#444047",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#afd2fd",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1279,
+    "atSeconds": 252.6,
+    "endSeconds": 256,
+    "holdSeconds": 3.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Help",
+    "headline": "THANK",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s070",
+    "depth": 70,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s069",
+        "via": "Dismiss",
+        "name": "Gift card amount"
+      },
+      {
+        "from": "s074",
+        "via": "Back to Help",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,149 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-searching-for-kuch-c-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-searching-for-kuch-c-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.623Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Searching for “Kuch c”",
+  "flow_position": 1,
+  "name": "Search (2)",
+  "description": "Search screen with a search bar and the keyboard open. Dark theme, 35 text elements.",
+  "purpose": "Initiate a search for food items or categories using the search bar",
+  "primary_action": "Enter a search query to find food items",
+  "tags": [
+    "search",
+    "offer",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Think it, search it”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Dark theme, 35 text elements.",
+        "35 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Searching for “Kuch c””",
+        "Reached from “Cart”",
+        "Leads to “Domino's Pizza (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.4s at 6:31 in the recording",
+        "Frame 1979 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d22",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#423c3c",
+      "role": "surface",
+      "share": 0.16
+    },
+    {
+      "hex": "#635e5b",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#857c79",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#623a25",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1979,
+    "atSeconds": 391.6,
+    "endSeconds": 396,
+    "holdSeconds": 4.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Think it, search it",
+    "headline": "Crunchy and crispy"
+  },
+  "crawler": {
+    "nodeId": "s095",
+    "depth": 95,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s092",
+        "via": "Type “Kuch c”",
+        "name": "Cart"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Type “Kuch”",
+        "name": "Domino's Pizza (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

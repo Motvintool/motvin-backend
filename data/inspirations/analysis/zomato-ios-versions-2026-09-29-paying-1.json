@@ -1,0 +1,485 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-paying-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-paying-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.586Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 1,
+  "name": "Payment method",
+  "description": "Payment screen with 1 input field. Dark theme, 19 text elements.",
+  "purpose": "Showing user's payment methods and options for renewing membership",
+  "primary_action": "View payment methods",
+  "tags": [
+    "profile",
+    "payment",
+    "rating",
+    "delivery",
+    "address",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your preferences”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with 1 input field. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Paying”",
+        "Reached from “Search results (3)”, “Profile”, “Settings · modal”, “Payment method (3)”, “Order placed (2)”, “Search results — loading”, “Success”, “Search results”, “Food on Train”, “Payment method — scrolled”, “Phone number entry (11)”, “Profile (3)”, “Other (5)”, “Profile — loading”, “Other (2)”, “Dining Support”, “Help (2)”, “Enter gift card code”, “Zomato Credits”, “Other (7)”, “Zomato for Enterprise (2)”, “Other (8)”, “Other (9)”, “Profile (4)”, “Report a Safety Emergency”, “Accessibility Settings” and “Settings · bottom sheet”",
+        "Leads to “Profile”, “Payment method (2)”, “Payment method (3)”, “Search results — loading”, “Other (2)”, “Manage recommendations (empty)”, “Food on Train”, “Payment method — scrolled”, “Phone number entry (11)”, “Profile — loading”, “Other (5)”, “Dining Support”, “Enter gift card code”, “Zomato Credits”, “Zomato for Enterprise (2)”, “Form (2)”, “Profile (4)”, “Report a Safety Emergency”, “Accessibility Settings” and “Cart”",
+        "Returned to 43 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:19 in the recording",
+        "Frame 106 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1e25",
+      "role": "background",
+      "share": 0.872
+    },
+    {
+      "hex": "#403e43",
+      "role": "surface",
+      "share": 0.069
+    },
+    {
+      "hex": "#58575c",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#18489e",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#787177",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 106,
+    "atSeconds": 19,
+    "endSeconds": 21.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 43
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your preferences",
+    "headline": "Your preferences"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Open Your preferences",
+        "name": "Search results (3)"
+      },
+      {
+        "from": "s013",
+        "via": "Back to Payment method",
+        "name": "Profile"
+      },
+      {
+        "from": "s015",
+        "via": "Back to Payment method",
+        "name": "Settings · modal"
+      },
+      {
+        "from": "s016",
+        "via": "Back to Payment method",
+        "name": "Payment method (3)"
+      },
+      {
+        "from": "s020",
+        "via": "Back to Payment method",
+        "name": "Order placed (2)"
+      },
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s049",
+        "via": "Back to Payment method",
+        "name": "Success"
+      },
+      {
+        "from": "s009",
+        "via": "Back to Payment method",
+        "name": "Search results"
+      },
+      {
+        "from": "s061",
+        "via": "Back to Payment method",
+        "name": "Food on Train"
+      },
+      {
+        "from": "s062",
+        "via": "Back to Payment method",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "from": "s009",
+        "via": "Back to Payment method",
+        "name": "Search results"
+      },
+      {
+        "from": "s063",
+        "via": "Back to Payment method",
+        "name": "Phone number entry (11)"
+      },
+      {
+        "from": "s065",
+        "via": "Back to Payment method",
+        "name": "Profile (3)"
+      },
+      {
+        "from": "s066",
+        "via": "Back to Payment method",
+        "name": "Other (5)"
+      },
+      {
+        "from": "s064",
+        "via": "Wait 2s",
+        "name": "Profile — loading"
+      },
+      {
+        "from": "s064",
+        "via": "Wait 2s",
+        "name": "Profile — loading"
+      },
+      {
+        "from": "s047",
+        "via": "Back to Payment method",
+        "name": "Other (2)"
+      },
+      {
+        "from": "s067",
+        "via": "Back to Payment method",
+        "name": "Dining Support"
+      },
+      {
+        "from": "s070",
+        "via": "Back to Payment method",
+        "name": "Help (2)"
+      },
+      {
+        "from": "s075",
+        "via": "Back to Payment method",
+        "name": "Enter gift card code"
+      },
+      {
+        "from": "s076",
+        "via": "Back to Payment method",
+        "name": "Zomato Credits"
+      },
+      {
+        "from": "s077",
+        "via": "Back to Payment method",
+        "name": "Other (7)"
+      },
+      {
+        "from": "s079",
+        "via": "Back to Payment method",
+        "name": "Zomato for Enterprise (2)"
+      },
+      {
+        "from": "s080",
+        "via": "Back to Payment method",
+        "name": "Other (8)"
+      },
+      {
+        "from": "s082",
+        "via": "Back to Payment method",
+        "name": "Other (9)"
+      },
+      {
+        "from": "s083",
+        "via": "Back to Payment method",
+        "name": "Profile (4)"
+      },
+      {
+        "from": "s079",
+        "via": "Back to Payment method",
+        "name": "Zomato for Enterprise (2)"
+      },
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s088",
+        "via": "Back to Payment method",
+        "name": "Report a Safety Emergency"
+      },
+      {
+        "from": "s089",
+        "via": "Back to Payment method",
+        "name": "Accessibility Settings"
+      },
+      {
+        "from": "s091",
+        "via": "Back to Payment method",
+        "name": "Settings · bottom sheet"
+      },
+      {
+        "from": "s007",
+        "via": "Wait 1s",
+        "name": "Search results — loading"
+      },
+      {
+        "from": "s089",
+        "via": "Back to Payment method",
+        "name": "Accessibility Settings"
+      },
+      {
+        "from": "s088",
+        "via": "Back to Payment method",
+        "name": "Report a Safety Emergency"
+      },
+      {
+        "from": "s079",
+        "via": "Back to Payment method",
+        "name": "Zomato for Enterprise (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Tap “Surendar”",
+        "name": "Profile"
+      },
+      {
+        "to": "s014",
+        "via": "Tap “Renew your Gold Membership”",
+        "name": "Payment method (2)"
+      },
+      {
+        "to": "s016",
+        "via": "Open Payment settings",
+        "name": "Payment method (3)"
+      },
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s047",
+        "via": "Open Other",
+        "name": "Other (2)"
+      },
+      {
+        "to": "s052",
+        "via": "Open Manage recommendations",
+        "name": "Manage recommendations (empty)"
+      },
+      {
+        "to": "s061",
+        "via": "Open Food on Train",
+        "name": "Food on Train"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s063",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry (11)"
+      },
+      {
+        "to": "s064",
+        "via": "Open Bill Payments",
+        "name": "Profile — loading"
+      },
+      {
+        "to": "s066",
+        "via": "Open Other",
+        "name": "Other (5)"
+      },
+      {
+        "to": "s064",
+        "via": "Back to Profile — loading",
+        "name": "Profile — loading"
+      },
+      {
+        "to": "s064",
+        "via": "Back to Profile — loading",
+        "name": "Profile — loading"
+      },
+      {
+        "to": "s047",
+        "via": "Back to Other",
+        "name": "Other (2)"
+      },
+      {
+        "to": "s067",
+        "via": "Open Dining Support",
+        "name": "Dining Support"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s075",
+        "via": "Open Enter gift card code",
+        "name": "Enter gift card code"
+      },
+      {
+        "to": "s076",
+        "via": "Open Zomato Credits",
+        "name": "Zomato Credits"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s079",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Zomato for Enterprise (2)"
+      },
+      {
+        "to": "s081",
+        "via": "Type “zomato”",
+        "name": "Form (2)"
+      },
+      {
+        "to": "s083",
+        "via": "Tap “Surendar”",
+        "name": "Profile (4)"
+      },
+      {
+        "to": "s079",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Zomato for Enterprise (2)"
+      },
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s088",
+        "via": "Open Report a Safety Emergency",
+        "name": "Report a Safety Emergency"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s062",
+        "via": "Scroll",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s089",
+        "via": "Back to Accessibility Settings",
+        "name": "Accessibility Settings"
+      },
+      {
+        "to": "s088",
+        "via": "Back to Report a Safety Emergency",
+        "name": "Report a Safety Emergency"
+      },
+      {
+        "to": "s079",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Zomato for Enterprise (2)"
+      },
+      {
+        "to": "s092",
+        "via": "Open Zoho Corporation v",
+        "name": "Cart"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-settings-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-settings-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.621Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 2,
+  "name": "Notification Preferences",
+  "description": "Settings screen with 2 input fields. Dark theme, 19 text elements.",
+  "purpose": "Configure notification settings for the user",
+  "primary_action": "Enable notifications",
+  "tags": [
+    "profile",
+    "settings",
+    "review",
+    "photo",
+    "notification",
+    "offer",
+    "by you",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Push Notifications”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 2 input fields. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Settings”",
+        "Reached from “Payment method — scrolled”",
+        "Leads to “Zomato for Enterprise (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:48 in the recording",
+        "Frame 1754 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1f",
+      "role": "background",
+      "share": 0.769
+    },
+    {
+      "hex": "#3d3c42",
+      "role": "surface",
+      "share": 0.177
+    },
+    {
+      "hex": "#5e5b60",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#787685",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#ea5d6b",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1754,
+    "atSeconds": 348.6,
+    "endSeconds": 351,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Push Notifications",
+    "headline": "Promos and offers",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s090",
+    "depth": 90,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open Push Notifications",
+        "name": "Payment method — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s079",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Zomato for Enterprise (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

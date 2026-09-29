@@ -1,0 +1,145 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-10",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-10",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.601Z",
+  "screen_type": "product_detail",
+  "published_as": "product",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Opening a page",
+  "flow_position": 10,
+  "name": "Restaurant detail (3)",
+  "description": "Product detail screen with a search bar and prices. Dark theme, 18 text elements.",
+  "purpose": "Providing information about a specific restaurant including its location, ratings, and delivery options",
+  "primary_action": "View cart",
+  "tags": [
+    "search",
+    "delivery",
+    "offer",
+    "product-detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Product detail screen with a search bar and prices. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Opening a page”",
+        "Reached from “Item detail”",
+        "Leads to “Ato”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 1:43 in the recording",
+        "Frame 521 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201f23",
+      "role": "background",
+      "share": 0.372
+    },
+    {
+      "hex": "#3f3b36",
+      "role": "surface",
+      "share": 0.103
+    },
+    {
+      "hex": "#cd9556",
+      "role": "text",
+      "share": 0.064
+    },
+    {
+      "hex": "#744d37",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#f65a6b",
+      "role": "accent",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 521,
+    "atSeconds": 103.8,
+    "endSeconds": 104.8,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search",
+    "headline": "Domino's Pizza"
+  },
+  "crawler": {
+    "nodeId": "s044",
+    "depth": 43,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s043",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Item detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s045",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Ato"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

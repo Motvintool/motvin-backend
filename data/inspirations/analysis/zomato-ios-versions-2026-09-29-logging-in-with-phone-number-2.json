@@ -1,0 +1,155 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-2",
+  "screen_id": "zomato-ios-versions-2026-09-29-logging-in-with-phone-number-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.595Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 2,
+  "name": "Address options",
+  "description": "Login screen with 1 input field. Dark theme, 21 text elements.",
+  "purpose": "Editing or deleting saved addresses",
+  "primary_action": "Edit or delete an address",
+  "tags": [
+    "delivery",
+    "address",
+    "delete address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Domino's Pizza”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Logging in with phone number”",
+        "Reached from “Phone number entry (5)” and “Phone number entry (7)”",
+        "Leads to “Location picker (4)” and “Order placed (3)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:00 in the recording",
+        "Frame 307 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232225",
+      "role": "background",
+      "share": 0.876
+    },
+    {
+      "hex": "#3f3c3b",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#0d0b0e",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#57565b",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#a9a8a9",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 307,
+    "atSeconds": 60.4,
+    "endSeconds": 61.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Domino's Pizza",
+    "headline": "Select an address",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s029",
+    "depth": 28,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Phone number entry (5)"
+      },
+      {
+        "from": "s031",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (7)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s030",
+        "via": "Open Location picker",
+        "name": "Location picker (4)"
+      },
+      {
+        "to": "s021",
+        "via": "Back to Order placed",
+        "name": "Order placed (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

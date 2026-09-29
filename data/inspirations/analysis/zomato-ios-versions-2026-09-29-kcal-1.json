@@ -1,0 +1,184 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-kcal-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-kcal-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.646Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Kcal",
+  "flow_position": 1,
+  "name": "Restaurant detail · kcal",
+  "description": "Search results dialog over a dimmed screen, on top of Other with a 3-item tab bar, a search bar and a primary action labelled “Apply coupon on cart”. Dark theme, 34 text elements.",
+  "purpose": "Displaying the details of a restaurant including its location, ratings, and available dishes with promotional offers.",
+  "primary_action": "View restaurant details",
+  "tags": [
+    "search",
+    "filter",
+    "cart",
+    "offer",
+    "kcal",
+    "protein",
+    "added",
+    "search-results",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: kcal, protein, added",
+        "Navigation title reads “Your Orders and Collections”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 39% of the height from 23% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results dialog over a dimmed screen, on top of Other with a 3-item tab bar, a search bar and a primary action labelled “Apply coupon on cart”. Dark theme, 34 text elements.",
+        "Calls to action: “Apply coupon on cart”",
+        "34 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Kcal”",
+        "Reached from “Other (12)” and “Listing (4)”",
+        "Leads to “Search results — loading” and “Cart · kcal”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 8:56 in the recording",
+        "Frame 2707 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1c22",
+      "role": "background",
+      "share": 0.714
+    },
+    {
+      "hex": "#424148",
+      "role": "surface",
+      "share": 0.175
+    },
+    {
+      "hex": "#fb657c",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#8b8a8e",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#646367",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2707,
+    "atSeconds": 536.2,
+    "endSeconds": 541.6,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.234375,
+        "w": 0.9375,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [
+      "kcal",
+      "protein",
+      "added"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Apply coupon on cart"
+    ],
+    "keyboard": false,
+    "title": "Your Orders and Collections",
+    "headline": "35-40 mins • Schedule for later v"
+  },
+  "crawler": {
+    "nodeId": "s142",
+    "depth": 142,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s105",
+        "via": "Type “Q Search”",
+        "name": "Other (12)"
+      },
+      {
+        "from": "s146",
+        "via": "Type “Q Search”",
+        "name": "Listing (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Switch to Home",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s147",
+        "via": "Open Search",
+        "name": "Cart · kcal"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

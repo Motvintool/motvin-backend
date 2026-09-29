@@ -1,0 +1,140 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-opening-a-page-6",
+  "screen_id": "zomato-ios-versions-2026-09-29-opening-a-page-6",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.599Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Opening a page",
+  "flow_position": 6,
+  "name": "Item detail (2)",
+  "description": "Search screen with a search bar. Dark theme, 9 text elements, shown only briefly.",
+  "purpose": "Displaying details of a specific menu item",
+  "primary_action": "View details of a specific menu item",
+  "tags": [
+    "search",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Do”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar. Dark theme, 9 text elements, shown only briefly.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 11 in “Opening a page”",
+        "Reached from “Search (2)”",
+        "Leads to “Domino's”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 1:28 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 440 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201f24",
+      "role": "background",
+      "share": 0.609
+    },
+    {
+      "hex": "#393840",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#0d0b0e",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#bbbccb",
+      "role": "text",
+      "share": 0.026
+    },
+    {
+      "hex": "#777c87",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 440,
+    "atSeconds": 88,
+    "endSeconds": 88.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search in Do",
+    "headline": "Pepper Barbecue Chicken"
+  },
+  "crawler": {
+    "nodeId": "s039",
+    "depth": 38,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s038",
+        "via": "Tap “Search in Do”",
+        "name": "Search (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s040",
+        "via": "Open Domino's",
+        "name": "Domino's"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

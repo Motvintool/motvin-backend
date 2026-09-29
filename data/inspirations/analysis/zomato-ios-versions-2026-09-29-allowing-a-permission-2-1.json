@@ -1,0 +1,165 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-29-allowing-a-permission-2-1",
+  "screen_id": "zomato-ios-versions-2026-09-29-allowing-a-permission-2-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T13:46:13.625Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "food",
+  "flow": "onboarding",
+  "flow_name": "Allowing a permission",
+  "flow_position": 1,
+  "name": "Permission prompt (2)",
+  "description": "Permission dialog over a dimmed screen, on top of Domino's Pizza home with a search bar and a primary action labelled “Allow”. Dark theme, 27 text elements.",
+  "purpose": "Requesting permission for microphone access",
+  "primary_action": "Allow or Disallow",
+  "tags": [
+    "search",
+    "chat",
+    "delivery",
+    "view cart",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The Microphone”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 45% of the height from 27% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Domino's Pizza home with a search bar and a primary action labelled “Allow”. Dark theme, 27 text elements.",
+        "Calls to action: “Allow”",
+        "27 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Allowing a permission”",
+        "Reached from “Domino's Pizza (2)”",
+        "Leads to “Domino's Pizza (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 6:41 in the recording",
+        "Frame 2011 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151215",
+      "role": "background",
+      "share": 0.711
+    },
+    {
+      "hex": "#362f2c",
+      "role": "surface",
+      "share": 0.23
+    },
+    {
+      "hex": "#524d4d",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#7c413c",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#6e6761",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2011,
+    "atSeconds": 401.6,
+    "endSeconds": 402.4,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.265625,
+        "w": 0.59375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "The Microphone",
+    "headline": "The Microphone",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s098",
+    "depth": 98,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s096",
+        "via": "Open The Microphone",
+        "name": "Domino's Pizza (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Dismiss",
+        "name": "Domino's Pizza (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}
