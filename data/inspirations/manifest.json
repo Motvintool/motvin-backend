@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T13:34:40.143Z",
+  "generatedAt": "2026-09-29T07:37:58.429Z",
   "counts": {
     "apps": 2,
-    "screens": 4,
-    "flows": 1,
-    "patterns": 2,
-    "ui-elements": 7
+    "screens": 25,
+    "flows": 17,
+    "patterns": 7,
+    "ui-elements": 124
   },
   "taxonomy": {
     "platforms": [
@@ -14,30 +14,53 @@
     ],
     "screenTypes": [
       "splash",
+      "onboarding",
       "login",
       "signup",
-      "other"
+      "home",
+      "feed",
+      "empty"
     ],
-    "states": [],
+    "states": [
+      "empty",
+      "coach-mark",
+      "scrolled",
+      "keyboard"
+    ],
     "industries": [
-      "saas",
-      "productivity"
+      "travel",
+      "food"
     ],
     "styles": [
       "minimal",
+      "bold",
+      "dark",
       "light"
     ],
     "elements": [
+      "banner",
+      "bottom-sheet",
       "button",
+      "carousel",
+      "chip",
+      "coach-mark",
       "cta",
+      "empty-state",
       "form",
+      "keyboard",
       "legal-text",
       "list",
       "nav-bar",
+      "page-indicator",
+      "price",
+      "search-bar",
+      "tab-bar",
       "text-field"
     ],
     "flowCategories": [
-      "authentication"
+      "authentication",
+      "discovery",
+      "onboarding"
     ]
   },
   "vocabulary": {
@@ -140,77 +163,124 @@
   },
   "apps": [
     {
-      "id": "airbnb",
-      "name": "Airbnb",
-      "slug": "airbnb",
-      "industry": "productivity",
+      "id": "swiggy",
+      "name": "Swiggy",
+      "slug": "swiggy",
+      "industry": "food",
       "platforms": [
         "ios"
       ],
-      "website": "https://www.instagram.com/siren.uix/",
-      "tagline": "Find your space, build your trip.",
-      "logo": "/api/inspirations/logos/airbnb.png",
-      "screenCount": 3,
-      "flowCount": 1,
+      "website": "https://www.swiggy.com",
+      "tagline": "One app for food, grocery, dining & more in minutes!",
+      "logo": "/api/inspirations/logos/swiggy.png",
+      "screenCount": 17,
+      "flowCount": 13,
       "license": null,
-      "attribution": "Airbnb",
+      "attribution": "Swiggy",
+      "versions": [
+        {
+          "id": "2026-10-20",
+          "label": "20 Oct 2026",
+          "capturedAt": "2026-09-29",
+          "isLatest": true
+        },
+        {
+          "id": "2026-09-29",
+          "label": "29 Sep 2026",
+          "capturedAt": "2026-09-29",
+          "isLatest": false
+        },
+        {
+          "id": "2026-05-28",
+          "label": "28 May 2026",
+          "capturedAt": "2026-09-29",
+          "isLatest": false
+        }
+      ],
+      "currentVersion": "2026-10-20",
       "rating": null,
       "ratingCount": null
     },
     {
-      "id": "whatsapp",
-      "name": "Whatsapp",
-      "slug": "whatsapp",
-      "industry": "saas",
+      "id": "airbnb",
+      "name": "Airbnb",
+      "slug": "airbnb",
+      "industry": "travel",
       "platforms": [
         "ios"
       ],
       "website": null,
-      "tagline": "Secret for chat",
-      "logo": "/api/inspirations/logos/whatsapp.webp",
-      "screenCount": 1,
-      "flowCount": 0,
+      "tagline": "Find unique accommodations and travel experiences worldwide",
+      "logo": "/api/inspirations/logos/airbnb.png",
+      "screenCount": 8,
+      "flowCount": 4,
       "license": null,
-      "attribution": "Whatsapp",
+      "attribution": "Airbnb",
+      "versions": [
+        {
+          "id": "2026-09-30",
+          "label": "30 Sep 2026",
+          "capturedAt": "2026-09-29",
+          "isLatest": true
+        },
+        {
+          "id": "2026-09-29",
+          "label": "29 Sep 2026",
+          "capturedAt": "2026-09-29",
+          "isLatest": false
+        }
+      ],
+      "currentVersion": "2026-09-30",
       "rating": null,
       "ratingCount": null
     }
   ],
   "screens": [
     {
-      "id": "airbnb-ios-login-1",
+      "id": "airbnb-ios-versions-2026-09-29-onboarding-1",
       "appId": "airbnb",
-      "flow": "login",
+      "flow": "onboarding",
       "name": "Splash screen",
-      "file": "ios/airbnb/login/1.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/1.png?v=tlglmk",
+      "file": "ios/airbnb/versions/2026-09-29/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-29/onboarding/1.png?v=tm47ns",
       "width": 576,
       "height": 1248,
-      "bytes": 36598,
+      "bytes": 58380,
       "platform": "ios",
       "screenType": "splash",
       "fineType": "splash",
       "states": [],
-      "description": "Launch screen shown while the app starts. Light theme.",
-      "purpose": null,
-      "primaryAction": null,
-      "capture": null,
-      "industry": "productivity",
+      "description": "Launch screen shown while the app starts. Light theme, 1 text element, shown only briefly.",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for app to load",
+      "capture": {
+        "atSeconds": 1.6,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
       "tags": [
         "splash",
         "ios",
-        "productivity"
+        "travel"
       ],
-      "elements": [],
+      "elements": [
+        "nav-bar"
+      ],
       "style": [
         "light",
         "minimal"
       ],
-      "capturedAt": "2026-09-16",
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": "https://www.instagram.com/siren.uix/",
+        "url": null,
         "license": null,
         "licenseUrl": null,
         "attribution": "Airbnb",
@@ -218,42 +288,104 @@
       }
     },
     {
-      "id": "airbnb-ios-login-2",
+      "id": "airbnb-ios-versions-2026-09-30-onboarding-1",
       "appId": "airbnb",
-      "flow": "login",
-      "name": "Log in or sign up",
-      "file": "ios/airbnb/login/2.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/2.png?v=tlglmk",
+      "flow": "onboarding",
+      "name": "Splash screen",
+      "file": "ios/airbnb/versions/2026-09-30/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-30/onboarding/1.png?v=tm47q4",
+      "width": 576,
+      "height": 1248,
+      "bytes": 58380,
+      "platform": "ios",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme, 1 text element, shown only briefly.",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for the app to load",
+      "capture": {
+        "atSeconds": 1.6,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
+      "tags": [
+        "splash",
+        "ios",
+        "travel"
+      ],
+      "elements": [
+        "nav-bar"
+      ],
+      "style": [
+        "light",
+        "minimal"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-30",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-onboarding-2",
+      "appId": "airbnb",
+      "flow": "onboarding",
+      "name": "Login screen",
+      "file": "ios/airbnb/versions/2026-09-29/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-29/onboarding/2.png?v=tm47ns",
       "width": 576,
       "height": 1248,
       "bytes": 88738,
       "platform": "ios",
       "screenType": "login",
       "fineType": "login",
-      "states": [],
-      "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
-      "purpose": null,
-      "primaryAction": null,
-      "capture": null,
-      "industry": "productivity",
+      "states": [
+        "scrolled"
+      ],
+      "description": "Login screen, scrolled further down from Splash screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
+      "purpose": "Screen for users to log in or sign up",
+      "primaryAction": "Enter phone number or email and click Continue",
+      "capture": {
+        "atSeconds": 1.8,
+        "holdSeconds": 2.4,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
       "tags": [
         "login",
+        "scrolled",
         "ios",
-        "productivity"
+        "travel"
       ],
       "elements": [
         "cta",
         "button"
       ],
       "style": [
-        "light",
-        "minimal"
+        "light"
       ],
-      "capturedAt": "2026-09-16",
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": "https://www.instagram.com/siren.uix/",
+        "url": null,
         "license": null,
         "licenseUrl": null,
         "attribution": "Airbnb",
@@ -261,12 +393,178 @@
       }
     },
     {
-      "id": "airbnb-ios-login-7",
+      "id": "airbnb-ios-versions-2026-09-30-onboarding-2",
       "appId": "airbnb",
-      "flow": "login",
-      "name": "Let's create your account",
-      "file": "ios/airbnb/login/7.png",
-      "url": "/api/inspirations/screens/ios/airbnb/login/7.png?v=tlglmk",
+      "flow": "onboarding",
+      "name": "Login screen",
+      "file": "ios/airbnb/versions/2026-09-30/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-30/onboarding/2.png?v=tm47q4",
+      "width": 576,
+      "height": 1248,
+      "bytes": 88738,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "scrolled"
+      ],
+      "description": "Login screen, scrolled further down from Splash screen with a primary action labelled “Log in or sign up”. Light theme, 5 text elements.",
+      "purpose": "Screen for users to log in or sign up",
+      "primaryAction": "Enter phone number or email and click Continue",
+      "capture": {
+        "atSeconds": 1.8,
+        "holdSeconds": 2.4,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
+      "tags": [
+        "login",
+        "scrolled",
+        "ios",
+        "travel"
+      ],
+      "elements": [
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-30",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-onboarding-3",
+      "appId": "airbnb",
+      "flow": "onboarding",
+      "name": "Phone number entry",
+      "file": "ios/airbnb/versions/2026-09-29/onboarding/3.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-29/onboarding/3.png?v=tm47ns",
+      "width": 576,
+      "height": 1248,
+      "bytes": 143200,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [],
+      "description": "Login screen with 2 input fields and a primary action labelled “Log in or sign up”. Light theme, 22 text elements, shown only briefly.",
+      "purpose": "Screen for entering phone number or email to log in",
+      "primaryAction": "Enter phone number or email and click Continue",
+      "capture": {
+        "atSeconds": 18.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
+      "tags": [
+        "and acknow",
+        "login",
+        "ios",
+        "travel"
+      ],
+      "elements": [
+        "nav-bar",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-30-onboarding-3",
+      "appId": "airbnb",
+      "flow": "onboarding",
+      "name": "Phone number entry",
+      "file": "ios/airbnb/versions/2026-09-30/onboarding/3.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-30/onboarding/3.png?v=tm47q4",
+      "width": 576,
+      "height": 1248,
+      "bytes": 143200,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [],
+      "description": "Login screen with 2 input fields and a primary action labelled “Log in or sign up”. Light theme, 22 text elements, shown only briefly.",
+      "purpose": "Screen for entering personal information to log in",
+      "primaryAction": "Enter phone number or email and click Continue",
+      "capture": {
+        "atSeconds": 18.8,
+        "holdSeconds": 0.2,
+        "brief": true,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
+      "tags": [
+        "and acknow",
+        "login",
+        "ios",
+        "travel"
+      ],
+      "elements": [
+        "nav-bar",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-30",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-onboarding-4",
+      "appId": "airbnb",
+      "flow": "onboarding",
+      "name": "Create account",
+      "file": "ios/airbnb/versions/2026-09-29/onboarding/4.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-29/onboarding/4.png?v=tm47ns",
       "width": 576,
       "height": 1248,
       "bytes": 196965,
@@ -275,14 +573,22 @@
       "fineType": "signup",
       "states": [],
       "description": "Sign up screen with 4 input fields. Light theme, 18 text elements.",
-      "purpose": null,
-      "primaryAction": null,
-      "capture": null,
-      "industry": "productivity",
+      "purpose": "Screen for creating a new account",
+      "primaryAction": "Enter legal name, date of birth, and email to agree and cont",
+      "capture": {
+        "atSeconds": 19,
+        "holdSeconds": 2.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
       "tags": [
         "signup",
         "ios",
-        "productivity"
+        "travel"
       ],
       "elements": [
         "nav-bar",
@@ -294,11 +600,12 @@
       "style": [
         "light"
       ],
-      "capturedAt": "2026-09-16",
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
       "hasAnalysis": true,
       "downloadable": true,
       "source": {
-        "url": "https://www.instagram.com/siren.uix/",
+        "url": null,
         "license": null,
         "licenseUrl": null,
         "attribution": "Airbnb",
@@ -306,74 +613,1581 @@
       }
     },
     {
-      "id": "whatsapp-ios-other-bumble-ios-0",
-      "appId": "whatsapp",
-      "flow": null,
-      "name": "Other",
-      "file": "ios/whatsapp/other-bumble-ios-0.png",
-      "url": "/api/inspirations/screens/ios/whatsapp/other-bumble-ios-0.png?v=tlpq9h",
-      "width": 1179,
-      "height": 2554,
-      "bytes": 58251,
+      "id": "airbnb-ios-versions-2026-09-30-onboarding-4",
+      "appId": "airbnb",
+      "flow": "onboarding",
+      "name": "Create account",
+      "file": "ios/airbnb/versions/2026-09-30/onboarding/4.png",
+      "url": "/api/inspirations/screens/ios/airbnb/versions/2026-09-30/onboarding/4.png?v=tm47q4",
+      "width": 576,
+      "height": 1248,
+      "bytes": 196965,
       "platform": "ios",
-      "screenType": "other",
-      "fineType": "other",
+      "screenType": "signup",
+      "fineType": "signup",
       "states": [],
-      "description": "",
-      "purpose": null,
-      "primaryAction": null,
-      "capture": null,
-      "industry": "saas",
+      "description": "Sign up screen with 4 input fields. Light theme, 18 text elements.",
+      "purpose": "Screen for creating a new account",
+      "primaryAction": "Enter legal name, date of birth, and email to proceed with a",
+      "capture": {
+        "atSeconds": 19,
+        "holdSeconds": 2.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "travel",
       "tags": [
-        "saas",
-        "other",
-        "ios"
+        "signup",
+        "ios",
+        "travel"
       ],
-      "elements": [],
-      "style": [],
-      "capturedAt": "2026-09-21",
-      "hasAnalysis": false,
+      "elements": [
+        "nav-bar",
+        "text-field",
+        "form",
+        "list",
+        "legal-text"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-30",
+      "hasAnalysis": true,
       "downloadable": true,
       "source": {
         "url": null,
         "license": null,
         "licenseUrl": null,
-        "attribution": "Whatsapp",
+        "attribution": "Airbnb",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-onboarding-1",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Splash screen",
+      "file": "ios/swiggy/versions/2026-10-20/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/onboarding/1.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 165942,
+      "platform": "ios",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme.",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for app to load",
+      "capture": {
+        "atSeconds": 0,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "splash",
+        "ios",
+        "food"
+      ],
+      "elements": [],
+      "style": [
+        "light",
+        "bold"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-onboarding-1",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Splash screen",
+      "file": "ios/swiggy/versions/2026-05-28/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-05-28/onboarding/1.png?v=tm475t",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 165942,
+      "platform": "ios",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme.",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for app to load",
+      "capture": {
+        "atSeconds": 0,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "splash",
+        "ios",
+        "food"
+      ],
+      "elements": [],
+      "style": [
+        "light",
+        "bold"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-05-28",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-onboarding-1",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Splash screen",
+      "file": "ios/swiggy/versions/2026-09-29/onboarding/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/onboarding/1.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 165942,
+      "platform": "ios",
+      "screenType": "splash",
+      "fineType": "splash",
+      "states": [],
+      "description": "Launch screen shown while the app starts. Light theme.",
+      "purpose": "Initial loading screen for the app",
+      "primaryAction": "Wait for app to load",
+      "capture": {
+        "atSeconds": 0,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "splash",
+        "ios",
+        "food"
+      ],
+      "elements": [],
+      "style": [
+        "light",
+        "bold"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-onboarding-2",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Phone number entry",
+      "file": "ios/swiggy/versions/2026-10-20/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/onboarding/2.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 547015,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+      "purpose": "User enters their mobile number to proceed with the app",
+      "primaryAction": "Enter mobile number",
+      "capture": {
+        "atSeconds": 1.8,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "login",
+        "keyboard",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button",
+        "legal-text"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-onboarding-2",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Phone number entry",
+      "file": "ios/swiggy/versions/2026-09-29/onboarding/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/onboarding/2.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 547015,
+      "platform": "ios",
+      "screenType": "login",
+      "fineType": "login",
+      "states": [
+        "keyboard"
+      ],
+      "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+      "purpose": "User enters their mobile number to proceed with the app",
+      "primaryAction": "Enter mobile number",
+      "capture": {
+        "atSeconds": 1.8,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "login",
+        "keyboard",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "keyboard",
+        "text-field",
+        "form",
+        "list",
+        "cta",
+        "button",
+        "legal-text"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-onboarding-3",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Location picker (logged out)",
+      "file": "ios/swiggy/versions/2026-10-20/onboarding/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/onboarding/3.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 898779,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
+      "purpose": "User selects a location to proceed with the app",
+      "primaryAction": "Select location or use current location",
+      "capture": {
+        "atSeconds": 3,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "location",
+        "address",
+        "empty-state",
+        "empty",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-onboarding-3",
+      "appId": "swiggy",
+      "flow": "onboarding",
+      "name": "Location picker (logged out)",
+      "file": "ios/swiggy/versions/2026-09-29/onboarding/3.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/onboarding/3.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 898779,
+      "platform": "ios",
+      "screenType": "empty",
+      "fineType": "empty_state",
+      "states": [
+        "empty"
+      ],
+      "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
+      "purpose": "User selects their location to proceed with the app",
+      "primaryAction": "Select location or use current location",
+      "capture": {
+        "atSeconds": 3,
+        "holdSeconds": 0.6,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "location",
+        "address",
+        "empty-state",
+        "empty",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "empty-state"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-food-1",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Welcome tip",
+      "file": "ios/swiggy/versions/2026-10-20/food/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/food/1.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1725410,
+      "platform": "ios",
+      "screenType": "onboarding",
+      "fineType": "coach_mark",
+      "states": [
+        "coach-mark"
+      ],
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "purpose": "User is prompted to explore categories and offers",
+      "primaryAction": "Continue to Food",
+      "capture": {
+        "atSeconds": 7.4,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "coach-mark",
+        "ios",
+        "onboarding"
+      ],
+      "elements": [
+        "tab-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner",
+        "bottom-sheet",
+        "coach-mark"
+      ],
+      "style": [
+        "dark",
+        "bold"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-food-1",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Welcome tip",
+      "file": "ios/swiggy/versions/2026-09-29/food/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/food/1.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1725410,
+      "platform": "ios",
+      "screenType": "onboarding",
+      "fineType": "coach_mark",
+      "states": [
+        "coach-mark"
+      ],
+      "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+      "purpose": "User is prompted to explore categories and offers",
+      "primaryAction": "Continue to Food",
+      "capture": {
+        "atSeconds": 7.4,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "delivery",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "coach-mark",
+        "ios",
+        "onboarding"
+      ],
+      "elements": [
+        "tab-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner",
+        "bottom-sheet",
+        "coach-mark"
+      ],
+      "style": [
+        "dark",
+        "bold"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-food-2",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home",
+      "file": "ios/swiggy/versions/2026-10-20/food/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/food/2.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1592774,
+      "platform": "ios",
+      "screenType": "home",
+      "fineType": "home",
+      "states": [],
+      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+      "purpose": "User views the main food categories and offers",
+      "primaryAction": "View categories and offers",
+      "capture": {
+        "atSeconds": 9.2,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "home",
+        "ios"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-food-2",
+      "appId": "swiggy",
+      "flow": "food",
+      "name": "Food home",
+      "file": "ios/swiggy/versions/2026-09-29/food/2.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/food/2.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1592774,
+      "platform": "ios",
+      "screenType": "home",
+      "fineType": "home",
+      "states": [],
+      "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+      "purpose": "User is on the main food category screen",
+      "primaryAction": "View food categories and offers",
+      "capture": {
+        "atSeconds": 9.2,
+        "holdSeconds": 1,
+        "brief": false,
+        "visits": 2,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "delivery",
+        "address",
+        "food",
+        "bolt",
+        "eatright",
+        "reorder",
+        "home",
+        "ios"
+      ],
+      "elements": [
+        "tab-bar",
+        "nav-bar",
+        "search-bar",
+        "price",
+        "list",
+        "chip",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-instamart-1",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Instamart",
+      "file": "ios/swiggy/versions/2026-10-20/instamart/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/instamart/1.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1294813,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "purpose": "User navigates to the Instamart category section",
+      "primaryAction": "Search for items in Instamart",
+      "capture": {
+        "atSeconds": 11,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "address",
+        "instamart",
+        "categories",
+        "redbull",
+        "feed",
+        "category",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-instamart-1",
+      "appId": "swiggy",
+      "flow": "instamart",
+      "name": "Instamart",
+      "file": "ios/swiggy/versions/2026-09-29/instamart/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/instamart/1.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1294813,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
+      "purpose": "User is on the Instamart category screen",
+      "primaryAction": "Search for products in Instamart",
+      "capture": {
+        "atSeconds": 11,
+        "holdSeconds": 0.8,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "address",
+        "instamart",
+        "categories",
+        "redbull",
+        "feed",
+        "category",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "carousel",
+        "page-indicator",
+        "cta",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-dineout-1",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Category listing",
+      "file": "ios/swiggy/versions/2026-10-20/dineout/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/dineout/1.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1004327,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+      "purpose": "The user is viewing a list of categories for dining options, including Food, Dineout, Scenes, and Instamart.",
+      "primaryAction": "Select a category to view its details",
+      "capture": {
+        "atSeconds": 12.4,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "offer",
+        "address",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "feed",
+        "category",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-dineout-1",
+      "appId": "swiggy",
+      "flow": "dineout",
+      "name": "Dineout category",
+      "file": "ios/swiggy/versions/2026-09-29/dineout/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/dineout/1.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1004327,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+      "purpose": "The main category for dining options in the app",
+      "primaryAction": "Select a category to view restaurants",
+      "capture": {
+        "atSeconds": 12.4,
+        "holdSeconds": 1.2,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "offer",
+        "address",
+        "dineout",
+        "bites",
+        "my corner",
+        "scenes",
+        "feed",
+        "category",
+        "ios",
+        "food"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-scenes-1",
+      "appId": "swiggy",
+      "flow": "scenes",
+      "name": "Category listing (2)",
+      "file": "ios/swiggy/versions/2026-10-20/scenes/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-10-20/scenes/1.png?v=tm46x7",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1816258,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+      "purpose": "The user is viewing a list of categories for dining options, including Dineout, Scenes, Food, and Instamart.",
+      "primaryAction": "Select a category to view its details",
+      "capture": {
+        "atSeconds": 14.2,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "address",
+        "category",
+        "ios",
+        "food",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-10-20",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
+        "permission": null
+      }
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-scenes-1",
+      "appId": "swiggy",
+      "flow": "scenes",
+      "name": "Scenes category",
+      "file": "ios/swiggy/versions/2026-09-29/scenes/1.png",
+      "url": "/api/inspirations/screens/ios/swiggy/versions/2026-09-29/scenes/1.png?v=tm47uk",
+      "width": 1170,
+      "height": 2532,
+      "bytes": 1816258,
+      "platform": "ios",
+      "screenType": "feed",
+      "fineType": "category",
+      "states": [],
+      "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
+      "purpose": "The main category for entertainment and events in the app",
+      "primaryAction": "Select a category to view events",
+      "capture": {
+        "atSeconds": 14.2,
+        "holdSeconds": 1.6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "food",
+      "tags": [
+        "search",
+        "address",
+        "category",
+        "ios",
+        "food",
+        "feed"
+      ],
+      "elements": [
+        "nav-bar",
+        "search-bar",
+        "list",
+        "chip",
+        "legal-text",
+        "banner"
+      ],
+      "style": [
+        "dark"
+      ],
+      "capturedAt": "2026-09-29",
+      "version": "2026-09-29",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": "https://www.swiggy.com",
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Swiggy",
         "permission": null
       }
     }
   ],
   "flows": [
     {
-      "id": "airbnb-ios-login",
-      "appId": "airbnb",
-      "name": "Login",
-      "category": "authentication",
+      "id": "swiggy-ios-versions-2026-10-20-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
       "platform": "ios",
       "screenIds": [
-        "airbnb-ios-login-1",
-        "airbnb-ios-login-2",
-        "airbnb-ios-login-7"
+        "swiggy-ios-versions-2026-10-20-onboarding-1",
+        "swiggy-ios-versions-2026-10-20-onboarding-2",
+        "swiggy-ios-versions-2026-10-20-onboarding-3"
       ],
-      "summary": null,
+      "parentId": null,
       "steps": [
         {
-          "screenId": "airbnb-ios-login-1",
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-1",
           "action": null
         },
         {
-          "screenId": "airbnb-ios-login-2",
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-food-1",
+        "swiggy-ios-versions-2026-10-20-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-food-1",
           "action": null
         },
         {
-          "screenId": "airbnb-ios-login-7",
+          "screenId": "swiggy-ios-versions-2026-10-20-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-instamart-1",
           "action": null
         }
       ],
-      "parentId": null
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-dineout-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-scenes-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-onboarding-2",
+        "swiggy-ios-versions-2026-10-20-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-20-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-20"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-onboarding-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-05-28"
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-onboarding",
+      "appId": "airbnb",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-29-onboarding-1",
+        "airbnb-ios-versions-2026-09-29-onboarding-2",
+        "airbnb-ios-versions-2026-09-29-onboarding-3",
+        "airbnb-ios-versions-2026-09-29-onboarding-4"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-2",
+          "action": {
+            "kind": "scroll",
+            "label": null
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-logging-in",
+      "appId": "airbnb",
+      "name": "Logging into the App",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-29-onboarding-2",
+        "airbnb-ios-versions-2026-09-29-onboarding-3",
+        "airbnb-ios-versions-2026-09-29-onboarding-4"
+      ],
+      "parentId": "airbnb-ios-versions-2026-09-29-onboarding",
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-30-onboarding",
+      "appId": "airbnb",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-30-onboarding-1",
+        "airbnb-ios-versions-2026-09-30-onboarding-2",
+        "airbnb-ios-versions-2026-09-30-onboarding-3",
+        "airbnb-ios-versions-2026-09-30-onboarding-4"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-2",
+          "action": {
+            "kind": "scroll",
+            "label": null
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-30"
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-30-logging-in",
+      "appId": "airbnb",
+      "name": "Logging into Airbnb",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-30-onboarding-2",
+        "airbnb-ios-versions-2026-09-30-onboarding-3",
+        "airbnb-ios-versions-2026-09-30-onboarding-4"
+      ],
+      "parentId": "airbnb-ios-versions-2026-09-30-onboarding",
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-30"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-onboarding-1",
+        "swiggy-ios-versions-2026-09-29-onboarding-2",
+        "swiggy-ios-versions-2026-09-29-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-food-1",
+        "swiggy-ios-versions-2026-09-29-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-instamart-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-dineout-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-scenes-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-onboarding-2",
+        "swiggy-ios-versions-2026-09-29-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-09-29-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location"
+          }
+        }
+      ],
+      "summary": null,
+      "version": "2026-09-29"
     }
   ],
   "patterns": [
+    {
+      "id": "pattern-filter-chips",
+      "slug": "filter-chips",
+      "name": "Filter chips",
+      "category": "Filters",
+      "description": "Horizontally scrolling filter chips above a result set.",
+      "tags": [
+        "chips",
+        "filter"
+      ],
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-food-1",
+        "swiggy-ios-versions-2026-09-29-food-1",
+        "swiggy-ios-versions-2026-10-20-food-2",
+        "swiggy-ios-versions-2026-09-29-food-2",
+        "swiggy-ios-versions-2026-10-20-instamart-1",
+        "swiggy-ios-versions-2026-09-29-instamart-1",
+        "swiggy-ios-versions-2026-10-20-dineout-1",
+        "swiggy-ios-versions-2026-09-29-dineout-1",
+        "swiggy-ios-versions-2026-10-20-scenes-1",
+        "swiggy-ios-versions-2026-09-29-scenes-1"
+      ]
+    },
+    {
+      "id": "pattern-feed-cards",
+      "slug": "feed-cards",
+      "name": "Feed cards",
+      "category": "Cards",
+      "description": "Content cards inside vertical feeds.",
+      "tags": [
+        "feed",
+        "post"
+      ],
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-instamart-1",
+        "swiggy-ios-versions-2026-09-29-instamart-1",
+        "swiggy-ios-versions-2026-10-20-dineout-1",
+        "swiggy-ios-versions-2026-09-29-dineout-1",
+        "swiggy-ios-versions-2026-10-20-scenes-1",
+        "swiggy-ios-versions-2026-09-29-scenes-1"
+      ]
+    },
     {
       "id": "pattern-login-forms",
       "slug": "login-forms",
@@ -385,7 +2199,12 @@
         "login"
       ],
       "screenIds": [
-        "airbnb-ios-login-2"
+        "airbnb-ios-versions-2026-09-29-onboarding-2",
+        "airbnb-ios-versions-2026-09-30-onboarding-2",
+        "airbnb-ios-versions-2026-09-29-onboarding-3",
+        "airbnb-ios-versions-2026-09-30-onboarding-3",
+        "swiggy-ios-versions-2026-10-20-onboarding-2",
+        "swiggy-ios-versions-2026-09-29-onboarding-2"
       ]
     },
     {
@@ -399,17 +2218,74 @@
         "signup"
       ],
       "screenIds": [
-        "airbnb-ios-login-7"
+        "airbnb-ios-versions-2026-09-29-onboarding-4",
+        "airbnb-ios-versions-2026-09-30-onboarding-4"
+      ]
+    },
+    {
+      "id": "pattern-bottom-sheets",
+      "slug": "bottom-sheets",
+      "name": "Bottom sheets",
+      "category": "Modals",
+      "description": "Mobile sheets sliding from the bottom edge.",
+      "tags": [
+        "sheet",
+        "mobile"
+      ],
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-food-1",
+        "swiggy-ios-versions-2026-09-29-food-1"
+      ]
+    },
+    {
+      "id": "pattern-empty-states",
+      "slug": "empty-states",
+      "name": "Empty states",
+      "category": "Empty States",
+      "description": "First-run and no-results states with a clear next step.",
+      "tags": [
+        "empty",
+        "first run"
+      ],
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-onboarding-3",
+        "swiggy-ios-versions-2026-09-29-onboarding-3"
+      ]
+    },
+    {
+      "id": "pattern-welcome-carousels",
+      "slug": "welcome-carousels",
+      "name": "Welcome carousels",
+      "category": "Onboarding",
+      "description": "Swipeable intro screens before sign-up.",
+      "tags": [
+        "carousel",
+        "intro"
+      ],
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-food-1",
+        "swiggy-ios-versions-2026-09-29-food-1"
       ]
     }
   ],
   "elementCounts": {
-    "cta": 1,
-    "button": 1,
-    "nav-bar": 1,
-    "text-field": 1,
-    "form": 1,
-    "list": 1,
-    "legal-text": 1
+    "nav-bar": 18,
+    "cta": 12,
+    "button": 12,
+    "text-field": 6,
+    "form": 6,
+    "list": 16,
+    "legal-text": 6,
+    "keyboard": 2,
+    "search-bar": 10,
+    "empty-state": 2,
+    "tab-bar": 4,
+    "price": 4,
+    "chip": 10,
+    "banner": 8,
+    "bottom-sheet": 2,
+    "coach-mark": 2,
+    "carousel": 2,
+    "page-indicator": 2
   }
 }

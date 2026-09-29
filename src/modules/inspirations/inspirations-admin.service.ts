@@ -1,13 +1,17 @@
 import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'fs';
 import { basename, extname, join, resolve, sep } from 'path';
 import {
   APPROVED_STATUS,
   buildInspirationsManifest,
+  currentVersionId,
+  dayLabel,
+  localDateString,
   FLOW_CATEGORIES,
   IMAGE_EXT,
   INDUSTRIES,
+  listAppScreenFiles,
   LOGO_EXT,
   PERMISSIONS,
   PLATFORMS,
@@ -19,6 +23,8 @@ import {
   SCREEN_TYPES,
   STYLES,
   titleCase,
+  VERSION_DIR_RE,
+  VERSIONS_DIR_NAME,
   type BuildReport,
 } from './manifest.builder';
 import { LoaderService } from './loader.service';
@@ -44,13 +50,22 @@ export type AdminScreenFile = {
   appId: string;
   file: string;
   bytes: number;
-  /** Modification time in ms — a version for the image URL, so a recapture never shows a cached frame. */
+  /** Modification time in ms — a cache-buster for the image URL, so a recapture never shows a cached frame. */
   mtime: number;
   width: number | null;
   height: number | null;
   sidecar: Record<string, unknown> | null;
   published: boolean;
   blockedReason: string | null;
+  /** Which dated capture this file belongs to, e.g. "2026-09-29". */
+  version: string;
+};
+
+export type AdminAppVersion = {
+  id: string;
+  label: string;
+  capturedAt: string;
+  isLatest: boolean;
 };
 
 @Injectable()
@@ -110,6 +125,42 @@ export class InspirationsAdminService {
     return { base, ext };
   }
 
+  /** Empty (legacy, no subfolder) or a validated `YYYY-MM-DD` version segment. */
+  private assertVersion(value: string | undefined | null): string {
+    const v = (value || '').trim();
+    if (!v) return '';
+    if (!VERSION_DIR_RE.test(v)) throw new BadRequestException('version must be in YYYY-MM-DD form');
+    return v;
+  }
+
+  /** Empty (loose file, no flow) or a validated flow folder name. */
+  private assertFlow(value: string | undefined | null): string {
+    const v = (value || '').trim().toLowerCase();
+    if (!v) return '';
+    if (!BASENAME.test(v)) throw new BadRequestException('flow must be lower-case letters, digits and hyphens');
+    return v;
+  }
+
+  /**
+   * The path segments for a screen file: `versions/<id>/` and the flow
+   * folder included when there are any. Never lets either travel as part of
+   * the file NAME — a version or a flow is always its own path segment, so
+   * the leaf name callers pass in never has to carry a `/` that the route
+   * layer would otherwise have to decode back out of a single `:file` param.
+   */
+  private screenPathParts(platform: string, appId: string, version: string, flow: string, name: string): string[] {
+    const parts = ['screens', platform, appId];
+    if (version) parts.push(VERSIONS_DIR_NAME, version);
+    if (flow) parts.push(flow);
+    parts.push(name);
+    return parts;
+  }
+
+  /** The id/URL path for a screen file — version- and flow-qualified to match the manifest builder. */
+  private qualifiedFile(version: string, flow: string, name: string): string {
+    return `${version ? `${VERSIONS_DIR_NAME}/${version}/` : ''}${flow ? `${flow}/` : ''}${name}`;
+  }
+
   /** Rebuilds a path from validated parts and refuses anything outside the store. */
   private inStore(...parts: string[]): string {
     const target = resolve(join(this.root, ...parts));
@@ -145,16 +196,29 @@ export class InspirationsAdminService {
         if (!entry.isDirectory()) continue;
         const appId = entry.name;
         const appDir = join(platformDir, appId);
-        for (const f of this.listAppImages(appDir)) {
-          const abs = join(appDir, f);
+        const source = sources[appId];
+
+        for (const entryFile of listAppScreenFiles(appDir)) {
+          const { file: f, bucketRelFile, bucketRoot } = entryFile;
+          const abs = join(bucketRoot, bucketRelFile);
           const id = screenIdFor(platform, appId, f);
+          const sidecar = readJson<Record<string, unknown> | null>(
+            join(bucketRoot, `${bucketRelFile.slice(0, bucketRelFile.length - extname(bucketRelFile).length)}.json`),
+            null,
+          );
+          // A legacy screen's own recorded capture date decides its version
+          // when it has one, mirroring the manifest builder's rule — a later
+          // ingest overwriting the app's shared source record can't
+          // retroactively relabel a screen that already carries its own date.
+          const versionId =
+            entryFile.versionId ||
+            ((sidecar as any)?.capturedAt || source?.capturedAt || localDateString()).slice(0, 10);
           let dims: { width: number; height: number } | null = null;
           try {
             dims = readDimensions(abs);
           } catch {
             dims = null;
           }
-          const source = sources[appId];
           const published = publishedIds.has(id);
           let blockedReason: string | null = null;
           if (!published) {
@@ -169,14 +233,12 @@ export class InspirationsAdminService {
             platform,
             appId,
             file: f,
+            version: versionId,
             bytes: statSync(abs).size,
             mtime: Math.floor(statSync(abs).mtimeMs),
             width: dims?.width ?? null,
             height: dims?.height ?? null,
-            sidecar: readJson<Record<string, unknown> | null>(
-              join(appDir, `${f.slice(0, f.length - extname(f).length)}.json`),
-              null,
-            ),
+            sidecar,
             published,
             blockedReason,
           });
@@ -190,7 +252,7 @@ export class InspirationsAdminService {
       : [];
 
     return {
-      apps,
+      apps: apps.map((a: any) => ({ ...a, versions: this.computeVersions(a.id, files) })),
       sources,
       flows,
       files: files.sort((a, b) => a.appId.localeCompare(b.appId) || a.file.localeCompare(b.file)),
@@ -230,10 +292,17 @@ export class InspirationsAdminService {
     fileNameRaw: string,
     body: Buffer,
     overwrite: boolean,
+    versionRaw?: string,
+    flowRaw?: string,
   ) {
     const platform = this.assertPlatform(platformRaw);
     const appId = this.assertSlug(appIdRaw, 'app');
     const { base, ext } = this.assertFileName(fileNameRaw, IMAGE_EXT);
+    // A fresh upload with no version named defaults to the app's newest
+    // existing version, or today when it has none yet — new screens land in
+    // a dated folder rather than the undated legacy bucket.
+    const version = versionRaw !== undefined ? this.assertVersion(versionRaw) : this.currentTargetVersion(appId);
+    const flow = this.assertFlow(flowRaw);
 
     if (!body || body.length === 0) throw new BadRequestException('Upload was empty');
     if (body.length > this.maxUploadBytes) {
@@ -242,10 +311,13 @@ export class InspirationsAdminService {
       );
     }
 
-    const dir = this.inStore('screens', platform, appId);
-    const target = this.inStore('screens', platform, appId, `${base}${ext}`);
+    const dirParts = ['screens', platform, appId];
+    if (version) dirParts.push(VERSIONS_DIR_NAME, version);
+    if (flow) dirParts.push(flow);
+    const dir = this.inStore(...dirParts);
+    const target = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}${ext}`));
     if (existsSync(target) && !overwrite) {
-      throw new BadRequestException(`${base}${ext} already exists for ${appId} on ${platform}`);
+      throw new BadRequestException(`${base}${ext} already exists for ${appId} on ${platform}${version ? ` (${version})` : ''}`);
     }
 
     mkdirSync(dir, { recursive: true });
@@ -267,10 +339,11 @@ export class InspirationsAdminService {
     this.ensurePublishable(appId);
 
     const report = this.rebuild();
-    this.logger.log(`Uploaded screens/${platform}/${appId}/${base}${ext} (${dims.width}x${dims.height})`);
+    const file = this.qualifiedFile(version, flow, `${base}${ext}`);
+    this.logger.log(`Uploaded screens/${platform}/${appId}/${file} (${dims.width}x${dims.height})`);
     return {
-      id: screenIdFor(platform, appId, `${base}${ext}`),
-      file: `${platform}/${appId}/${base}${ext}`,
+      id: screenIdFor(platform, appId, file),
+      file: `${platform}/${appId}/${file}`,
       width: dims.width,
       height: dims.height,
       bytes: body.length,
@@ -278,12 +351,14 @@ export class InspirationsAdminService {
     };
   }
 
-  saveScreenMeta(platformRaw: string, appIdRaw: string, fileNameRaw: string, meta: any) {
+  saveScreenMeta(platformRaw: string, appIdRaw: string, fileNameRaw: string, meta: any, versionRaw?: string, flowRaw?: string) {
     const platform = this.assertPlatform(platformRaw);
     const appId = this.assertSlug(appIdRaw, 'app');
     const { base, ext } = this.assertFileName(fileNameRaw, IMAGE_EXT);
+    const version = this.assertVersion(versionRaw);
+    const flow = this.assertFlow(flowRaw);
 
-    const image = this.inStore('screens', platform, appId, `${base}${ext}`);
+    const image = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}${ext}`));
     if (!existsSync(image)) throw new NotFoundException('That screen is not in the store');
 
     if (meta.screenType && !(SCREEN_TYPES as readonly string[]).includes(meta.screenType)) {
@@ -299,7 +374,8 @@ export class InspirationsAdminService {
 
     // Fields automatic capture wrote and the form does not edit are carried
     // over, so saving a name never wipes a description or the capture facts.
-    const existing = readJson<Record<string, unknown>>(this.inStore('screens', platform, appId, `${base}.json`), {});
+    const sidecarFile = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`));
+    const existing = readJson<Record<string, unknown>>(sidecarFile, {});
     const sidecar = {
       ...existing,
       name: typeof meta.name === 'string' && meta.name.trim() ? meta.name.trim() : titleCase(base),
@@ -313,24 +389,237 @@ export class InspirationsAdminService {
       capturedAt: typeof meta.capturedAt === 'string' && meta.capturedAt ? meta.capturedAt : (existing.capturedAt as string | undefined),
     };
 
-    this.writeJson(this.inStore('screens', platform, appId, `${base}.json`), sidecar);
-    return { id: screenIdFor(platform, appId, `${base}${ext}`), sidecar, report: this.rebuild() };
+    this.writeJson(sidecarFile, sidecar);
+    const file = this.qualifiedFile(version, flow, `${base}${ext}`);
+    return { id: screenIdFor(platform, appId, file), sidecar, report: this.rebuild() };
   }
 
-  deleteScreen(platformRaw: string, appIdRaw: string, fileNameRaw: string) {
+  deleteScreen(platformRaw: string, appIdRaw: string, fileNameRaw: string, versionRaw?: string, flowRaw?: string) {
     const platform = this.assertPlatform(platformRaw);
     const appId = this.assertSlug(appIdRaw, 'app');
     const { base, ext } = this.assertFileName(fileNameRaw, IMAGE_EXT);
+    const version = this.assertVersion(versionRaw);
+    const flow = this.assertFlow(flowRaw);
 
-    const image = this.inStore('screens', platform, appId, `${base}${ext}`);
+    const image = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}${ext}`));
     if (!existsSync(image)) throw new NotFoundException('That screen is not in the store');
 
     rmSync(image, { force: true });
-    rmSync(this.inStore('screens', platform, appId, `${base}.json`), { force: true });
-    rmSync(this.inStore('analysis', `${screenIdFor(platform, appId, `${base}${ext}`)}.json`), { force: true });
+    rmSync(this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`)), { force: true });
+    const file = this.qualifiedFile(version, flow, `${base}${ext}`);
+    rmSync(this.inStore('analysis', `${screenIdFor(platform, appId, file)}.json`), { force: true });
 
-    this.logger.log(`Deleted screens/${platform}/${appId}/${base}${ext}`);
+    this.logger.log(`Deleted screens/${platform}/${appId}/${file}`);
     return { report: this.rebuild() };
+  }
+
+  // ─── Versions ─────────────────────────────────────────────────────────────
+
+  /** The version a fresh write should land in when the caller does not name one. */
+  private currentTargetVersion(appId: string): string {
+    return this.listVersions(appId)[0]?.id || currentVersionId();
+  }
+
+  /**
+   * An app's versions, newest first — mirroring the grouping
+   * `manifest.builder.ts` computes at build time (see `versionsForApp`
+   * there) from the same files and the same "earliest capturedAt in the
+   * bucket" rule. `isLatest` is always the newest by date; renaming a
+   * version's date (see `renameVersion`) is the only way to change which
+   * one that is.
+   */
+  private computeVersions(appId: string, files: AdminScreenFile[]): AdminAppVersion[] {
+    const datesByVersion = new Map<string, string[]>();
+    for (const f of files) {
+      if (f.appId !== appId) continue;
+      if (!datesByVersion.has(f.version)) datesByVersion.set(f.version, []);
+      const capturedAt = (f.sidecar as any)?.capturedAt;
+      if (typeof capturedAt === 'string' && capturedAt) datesByVersion.get(f.version)!.push(capturedAt);
+    }
+    const entries = Array.from(datesByVersion.entries())
+      .map(([id, dates]) => ({ id, capturedAt: dates.length ? dates.slice().sort()[0] : `${id}-01` }))
+      .sort((a, b) => b.id.localeCompare(a.id));
+    const newestId = entries[0]?.id ?? null;
+    return entries.map((e) => ({
+      id: e.id,
+      label: dayLabel(e.id),
+      capturedAt: e.capturedAt,
+      isLatest: e.id === newestId,
+    }));
+  }
+
+  listVersions(appIdRaw: string): AdminAppVersion[] {
+    const appId = this.assertSlug(appIdRaw, 'app id');
+    return (this.getState().apps as any[]).find((a) => a.id === appId)?.versions ?? [];
+  }
+
+  /**
+   * Renames a dated version — its folder on every platform, its screens'
+   * analysis records, and every id in flows.json built from it (a flow's own
+   * id, its parentId, its screenIds, and its steps' screenIds all embed the
+   * version the same way a screen id does). This is the only way to change
+   * which version is "Latest" now that there is no manual pin: a version
+   * becomes newest by carrying the newest date.
+   */
+  renameVersion(appIdRaw: string, oldVersionIdRaw: string, newVersionIdRaw: string) {
+    const appId = this.assertSlug(appIdRaw, 'app id');
+    const oldVersionId = this.assertVersion(oldVersionIdRaw);
+    const newVersionId = this.assertVersion(newVersionIdRaw);
+    if (!oldVersionId || !newVersionId) throw new BadRequestException('both dates are required');
+    if (oldVersionId === newVersionId) throw new BadRequestException("that is already this version's date");
+
+    const available = this.listVersions(appId);
+    if (!available.some((v) => v.id === oldVersionId)) {
+      throw new BadRequestException(`"${oldVersionId}" is not a known version of ${appId}`);
+    }
+    if (available.some((v) => v.id === newVersionId)) {
+      throw new BadRequestException(`${appId} already has a version dated ${newVersionId}`);
+    }
+    const hasVersionFolder = PLATFORMS.some((platform) =>
+      existsSync(this.inStore('screens', platform, appId, VERSIONS_DIR_NAME, oldVersionId)),
+    );
+    if (!hasVersionFolder) {
+      throw new BadRequestException(
+        `${dayLabel(oldVersionId)} is ${appId}'s undated capture, grouped by date rather than stored in a dated folder — it can't be renamed directly.`,
+      );
+    }
+
+    for (const platform of PLATFORMS) {
+      const oldDir = this.inStore('screens', platform, appId, VERSIONS_DIR_NAME, oldVersionId);
+      if (!existsSync(oldDir)) continue;
+      const newDir = this.inStore('screens', platform, appId, VERSIONS_DIR_NAME, newVersionId);
+      renameSync(oldDir, newDir);
+
+      for (const file of this.listImagesOneLevel(newDir)) {
+        const oldId = screenIdFor(platform, appId, `${VERSIONS_DIR_NAME}/${oldVersionId}/${file}`);
+        const newId = screenIdFor(platform, appId, `${VERSIONS_DIR_NAME}/${newVersionId}/${file}`);
+        const oldAnalysis = this.inStore('analysis', `${oldId}.json`);
+        if (existsSync(oldAnalysis)) {
+          renameSync(oldAnalysis, this.inStore('analysis', `${newId}.json`));
+        }
+      }
+    }
+
+    // A screen or flow id is `<appId>-<platform>-versions-<versionId>-...`;
+    // remapping that one shared prefix per platform catches flow ids, their
+    // parentId, their screenIds, and their steps' screenIds all at once.
+    const flowsFile = join(this.root, 'flows.json');
+    const flowsData = readJson<{ version?: number; flows?: any[] }>(flowsFile, { version: 1, flows: [] });
+    const flows = flowsData.flows || [];
+    const remap = (id: string): string => {
+      for (const platform of PLATFORMS) {
+        const oldPrefix = `${appId}-${platform}-${VERSIONS_DIR_NAME}-${oldVersionId}-`;
+        if (id.startsWith(oldPrefix)) {
+          return `${appId}-${platform}-${VERSIONS_DIR_NAME}-${newVersionId}-${id.slice(oldPrefix.length)}`;
+        }
+      }
+      return id;
+    };
+    let flowsChanged = false;
+    for (const flow of flows) {
+      if (flow.appId !== appId) continue;
+      const remappedId = remap(flow.id);
+      if (remappedId !== flow.id) {
+        flow.id = remappedId;
+        flowsChanged = true;
+      }
+      if (flow.parentId) {
+        const remappedParent = remap(flow.parentId);
+        if (remappedParent !== flow.parentId) {
+          flow.parentId = remappedParent;
+          flowsChanged = true;
+        }
+      }
+      if (Array.isArray(flow.screenIds)) {
+        const remapped = flow.screenIds.map(remap);
+        if (remapped.some((id: string, i: number) => id !== flow.screenIds[i])) {
+          flow.screenIds = remapped;
+          flowsChanged = true;
+        }
+      }
+      if (Array.isArray(flow.steps)) {
+        for (const step of flow.steps) {
+          if (step?.screenId) {
+            const remapped = remap(step.screenId);
+            if (remapped !== step.screenId) {
+              step.screenId = remapped;
+              flowsChanged = true;
+            }
+          }
+        }
+      }
+    }
+    if (flowsChanged) this.writeJson(flowsFile, { version: flowsData.version || 1, flows });
+
+    this.logger.log(`Renamed ${appId}'s version ${oldVersionId} to ${newVersionId}`);
+    return { versions: this.listVersions(appId), report: this.rebuild() };
+  }
+
+  /**
+   * Every image directly in a folder, plus one level of flow subfolders —
+   * the same loose-file-or-`<flow>/<n>.png` shape every version and the
+   * legacy bucket share. Scoped to a single directory (unlike
+   * `listAppScreenFiles`, which walks every version bucket at once) so
+   * `deleteVersion` can remove exactly one version's images.
+   */
+  private listImagesOneLevel(dir: string): string[] {
+    if (!existsSync(dir)) return [];
+    const out: string[] = [];
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.isFile() && IMAGE_EXT.includes(extname(entry.name).toLowerCase())) {
+        out.push(entry.name);
+      } else if (entry.isDirectory()) {
+        for (const inner of readdirSync(join(dir, entry.name))) {
+          if (IMAGE_EXT.includes(extname(inner).toLowerCase())) out.push(`${entry.name}/${inner}`);
+        }
+      }
+    }
+    return out;
+  }
+
+  /**
+   * Removes an entire dated version: its screens and sidecars on every
+   * platform, and their analysis records — the version-scoped counterpart to
+   * `deleteApp`. Refuses an app's only version, since that would silently
+   * empty it rather than deleting it; `deleteApp` is the deliberate action
+   * for that.
+   */
+  deleteVersion(appIdRaw: string, versionIdRaw: string) {
+    const appId = this.assertSlug(appIdRaw, 'app id');
+    const versionId = this.assertVersion(versionIdRaw);
+    if (!versionId) throw new BadRequestException('version is required');
+
+    const available = this.listVersions(appId);
+    if (!available.some((v) => v.id === versionId)) {
+      throw new BadRequestException(`"${versionId}" is not a known version of ${appId}`);
+    }
+    if (available.length <= 1) {
+      throw new BadRequestException(`${appId} has only one version — delete the app if you want it gone entirely.`);
+    }
+
+    let screensRemoved = 0;
+    const analysisRemoved: string[] = [];
+    for (const platform of PLATFORMS) {
+      const dir = this.inStore('screens', platform, appId, VERSIONS_DIR_NAME, versionId);
+      if (!existsSync(dir)) continue;
+      for (const file of this.listImagesOneLevel(dir)) {
+        screensRemoved++;
+        // `file` is already relative to the version folder (possibly with its
+        // own flow segment, e.g. "onboarding/1.png") — `qualifiedFile` is for
+        // composing a single leaf name with version/flow segments known
+        // separately, which isn't the shape here, so this is built directly.
+        const screenId = screenIdFor(platform, appId, `${VERSIONS_DIR_NAME}/${versionId}/${file}`);
+        const analysis = this.inStore('analysis', `${screenId}.json`);
+        if (existsSync(analysis)) {
+          rmSync(analysis, { force: true });
+          analysisRemoved.push(screenId);
+        }
+      }
+      rmSync(dir, { recursive: true, force: true });
+    }
+
+    this.logger.log(`Deleted version ${versionId} of ${appId}: ${screensRemoved} screenshot(s)`);
+    return { removed: { screens: screensRemoved, analysis: analysisRemoved.length }, report: this.rebuild() };
   }
 
   // ─── Logos ────────────────────────────────────────────────────────────────
@@ -431,29 +720,6 @@ export class InspirationsAdminService {
   }
 
   /**
-   * Every image stored for one app, relative to its folder.
-   *
-   * Reads one level of nesting, because automatic capture files screens as
-   * `<flow>/1.png` — the folder is the flow and the number is the order it was
-   * walked. Manual uploads stay loose in the app folder. Both shapes are valid
-   * and both appear here.
-   */
-  private listAppImages(appDir: string): string[] {
-    if (!existsSync(appDir)) return [];
-    const out: string[] = [];
-    for (const entry of readdirSync(appDir, { withFileTypes: true })) {
-      if (entry.isFile() && IMAGE_EXT.includes(extname(entry.name).toLowerCase())) {
-        out.push(entry.name);
-      } else if (entry.isDirectory()) {
-        for (const inner of readdirSync(join(appDir, entry.name))) {
-          if (IMAGE_EXT.includes(extname(inner).toLowerCase())) out.push(`${entry.name}/${inner}`);
-        }
-      }
-    }
-    return out;
-  }
-
-  /**
    * Makes sure an app's screens will publish.
    *
    * sources.json is still written — it is where a screen's origin, licence and
@@ -478,7 +744,7 @@ export class InspirationsAdminService {
 
     sources[appId] = {
       sourceUrl: '',
-      capturedAt: new Date().toISOString().slice(0, 10),
+      capturedAt: localDateString(),
       capturedBy: '',
       permission: '',
       license: '',
@@ -513,9 +779,9 @@ export class InspirationsAdminService {
       const dir = this.inStore('screens', platform, id);
       if (!existsSync(dir)) continue;
 
-      for (const file of this.listAppImages(dir)) {
+      for (const entry of listAppScreenFiles(dir)) {
         screensRemoved++;
-        const screenId = screenIdFor(platform, id, file);
+        const screenId = screenIdFor(platform, id, entry.file);
         const analysis = this.inStore('analysis', `${screenId}.json`);
         if (existsSync(analysis)) {
           rmSync(analysis, { force: true });

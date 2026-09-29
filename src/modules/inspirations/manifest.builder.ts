@@ -27,6 +27,103 @@ export const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
 export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 
 /**
+ * A version is a dated capture, one calendar day, stored in its own folder
+ * under a fixed `versions/` subfolder of the app's screen directory:
+ * `screens/<platform>/<app>/versions/<YYYY-MM-DD>/…` — the exact same shape
+ * (loose files, or `<flow>/<n>.png`) a fresh ingest already writes today,
+ * just rooted one level deeper. Living inside `versions/` rather than being
+ * detected by name means a version folder can never be confused with a flow
+ * folder. Anything sitting directly in the app folder (today's loose files
+ * and flow folders, and any app that predates versioning) is the "legacy"
+ * bucket — read exactly as before, bucketed under a version id derived from
+ * the app's recorded capture date, so existing apps get a version list
+ * without moving a file.
+ */
+export const VERSIONS_DIR_NAME = 'versions';
+export const VERSION_DIR_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+/** "2026-09-29" → "29 Sep 2026". */
+export function dayLabel(versionId: string): string {
+  const [year, month, day] = versionId.split('-').map(Number);
+  if (!year || !month || !day) return versionId;
+  const date = new Date(year, month - 1, day);
+  return `${date.getDate()} ${date.toLocaleString('en-US', { month: 'short' })} ${date.getFullYear()}`;
+}
+
+/**
+ * A date's calendar day where the server actually is, as `YYYY-MM-DD`.
+ * `toISOString()` reports UTC, which is a different calendar day from local
+ * "today" for several hours around local midnight (e.g. IST, five and a
+ * half hours ahead, sees UTC still on yesterday's date until 5:30am) — every
+ * "today" this feature computes has to use this, not toISOString, or an
+ * upload made in that window is dated a day early.
+ */
+export function localDateString(date: Date = new Date()): string {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+/** Today's date as a version id, for a fresh ingest with no explicit target. */
+export function currentVersionId(): string {
+  return localDateString();
+}
+
+export type ScreenBucket = { versionId: string; root: string; qualify: boolean };
+
+/**
+ * Every version bucket in an app's screen folder: the legacy bucket (its
+ * `versionId` left blank — the caller fills in the synthetic legacy version,
+ * once it knows the app's recorded capture date) plus each dated folder
+ * under `versions/`.
+ */
+export function listAppVersionBuckets(appDir: string): ScreenBucket[] {
+  const versionsDir = join(appDir, VERSIONS_DIR_NAME);
+  const versionIds = listDirs(versionsDir).filter((d) => VERSION_DIR_RE.test(d));
+  return [
+    { versionId: '', root: appDir, qualify: false },
+    ...versionIds.map((d) => ({ versionId: d, root: join(versionsDir, d), qualify: true })),
+  ];
+}
+
+export type ScreenFileEntry = {
+  /** Version-qualified path, relative to the app folder — used for ids and URLs. */
+  file: string;
+  /** Path relative to the file's own bucket — used to read the image and its sidecar off disk. */
+  bucketRelFile: string;
+  bucketRoot: string;
+  versionId: string;
+};
+
+/**
+ * Every screen file stored for an app, across every version bucket. A file
+ * from the legacy bucket (no real version folder) comes back with
+ * `versionId: ''` — a placeholder the caller resolves once it has read that
+ * file's own sidecar, since a screen's own recorded capture date (when it has
+ * one) is what should decide its version, not the app's single mutable
+ * capture record, which a later ingest can overwrite.
+ */
+export function listAppScreenFiles(appDir: string): ScreenFileEntry[] {
+  const buckets = listAppVersionBuckets(appDir);
+  const out: ScreenFileEntry[] = [];
+  for (const bucket of buckets) {
+    // Only the legacy bucket needs the exclusion — it is the one rooted at
+    // the app folder itself, which is also where `versions/` lives.
+    const files = listScreenFiles(bucket.root, bucket.qualify ? undefined : new Set([VERSIONS_DIR_NAME]));
+    for (const bucketRelFile of files) {
+      out.push({
+        file: bucket.qualify ? `${VERSIONS_DIR_NAME}/${bucket.versionId}/${bucketRelFile}` : bucketRelFile,
+        bucketRelFile,
+        bucketRoot: bucket.root,
+        versionId: bucket.qualify ? bucket.versionId : '',
+      });
+    }
+  }
+  return out;
+}
+
+/**
  * What a screen is. Wide enough that a designer can ask for "empty states" or
  * "splash screens" across the whole library, narrow enough that every value
  * has a clear meaning. The crawler's finer vocabulary maps onto this one and
@@ -238,7 +335,7 @@ function byName(a: string, b: string): number {
  * of nesting is read — deeper folders are ignored rather than flattened, so a
  * stray directory cannot quietly inject screens.
  */
-function listScreenFiles(appDir: string): string[] {
+function listScreenFiles(appDir: string, excludeDirs?: Set<string>): string[] {
   if (!existsSync(appDir)) return [];
   const loose: string[] = [];
   const grouped: string[] = [];
@@ -246,7 +343,7 @@ function listScreenFiles(appDir: string): string[] {
   for (const entry of readdirSync(appDir, { withFileTypes: true })) {
     if (entry.isFile() && IMAGE_EXT.includes(extname(entry.name).toLowerCase())) {
       loose.push(entry.name);
-    } else if (entry.isDirectory()) {
+    } else if (entry.isDirectory() && !excludeDirs?.has(entry.name)) {
       for (const inner of listFiles(join(appDir, entry.name), IMAGE_EXT)) {
         grouped.push(`${entry.name}/${inner}`);
       }
@@ -351,15 +448,20 @@ export function buildInspirationsManifest(root: string): BuildReport {
     const platformDir = join(screensDir, platform);
     for (const appId of listDirs(platformDir)) {
       const appDir = join(platformDir, appId);
-      const images = listScreenFiles(appDir);
-      if (images.length === 0) continue;
+
+      // A `YYYY-MM` subfolder is a version; everything else directly in the
+      // app folder (today's loose files and flow folders) is the legacy
+      // bucket, read exactly as before and bucketed under a version id
+      // derived from the recorded capture date rather than a real folder.
+      const rawEntries = listAppScreenFiles(appDir);
+      if (rawEntries.length === 0) continue;
 
       const source = sources[appId];
       if (!source || source.status !== APPROVED_STATUS) {
         skipped.push({
           appId,
           platform,
-          count: images.length,
+          count: rawEntries.length,
           reason: !source
             ? 'no entry in sources.json'
             : `status "${source.status || 'unset'}" is not "${APPROVED_STATUS}"`,
@@ -369,18 +471,25 @@ export function buildInspirationsManifest(root: string): BuildReport {
 
       const app = appRecords.get(appId);
       if (!app) {
-        problems.push(`screens/${platform}/${appId}/ has ${images.length} image(s) but no "${appId}" entry in apps.json`);
+        problems.push(`screens/${platform}/${appId}/ has ${rawEntries.length} image(s) but no "${appId}" entry in apps.json`);
         continue;
       }
 
       appsSeen.add(appId);
 
-      for (const file of images) {
-        const base = basename(file, extname(file));
+      for (const entry of rawEntries) {
+        // `file` is the path this screen is addressed and served by —
+        // version-qualified for an explicit version folder, exactly today's
+        // path otherwise, so existing screens keep their id and URL
+        // unchanged. `bucketRelFile` is where it actually lives on disk,
+        // relative to its own version folder (or the app folder, for the
+        // legacy bucket).
+        const { file, bucketRelFile, bucketRoot } = entry;
+        const base = basename(bucketRelFile, extname(bucketRelFile));
         // `onboarding/1.png` → flow "onboarding". A loose file has no flow.
-        const flowFolder = file.includes('/') ? file.split('/')[0] : null;
+        const flowFolder = bucketRelFile.includes('/') ? bucketRelFile.split('/')[0] : null;
         const id = screenIdFor(platform, appId, file);
-        const abs = join(appDir, file);
+        const abs = join(bucketRoot, bucketRelFile);
 
         let dimensions: { width: number; height: number } | null = null;
         try {
@@ -396,8 +505,15 @@ export function buildInspirationsManifest(root: string): BuildReport {
 
         // The sidecar sits next to the image, inside the flow folder when there
         // is one.
-        const sidecarPath = join(appDir, `${file.slice(0, file.length - extname(file).length)}.json`);
+        const sidecarPath = join(bucketRoot, `${bucketRelFile.slice(0, bucketRelFile.length - extname(bucketRelFile).length)}.json`);
         const sidecar = readJson<any>(sidecarPath, {});
+        // A legacy screen's OWN recorded capture date decides its version
+        // when it has one — falling back to the app's single source record
+        // only when it doesn't — so a later ingest overwriting that shared
+        // record can't retroactively relabel screens that already carry
+        // their own date.
+        const versionId =
+          entry.versionId || (sidecar.capturedAt || source.capturedAt || localDateString()).slice(0, 10);
         const typeFromName = base.split('-')[0].toLowerCase();
         const screenType =
           sidecar.screenType || ((SCREEN_TYPES as readonly string[]).includes(typeFromName) ? typeFromName : 'other');
@@ -461,38 +577,39 @@ export function buildInspirationsManifest(root: string): BuildReport {
           file: `${platform}/${appId}/${file}`,
           // The image is served as immutable for a week, and a recapture
           // writes a new frame to the same path. The file's modification time
-          // in the query makes every republish a new URL, so a browser never
-          // keeps showing the frame that was there before.
-          url: `/api/inspirations/screens/${platform}/${appId}/${file}?v=${Math.floor(statSync(abs).mtimeMs / 1000).toString(36)}`,
-          width: dimensions.width,
-          height: dimensions.height,
-          bytes: statSync(abs).size,
-          platform,
-          screenType,
-          fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
-          states,
-          description: typeof sidecar.description === 'string' ? sidecar.description : '',
-          purpose: stringOrNull(sidecar.purpose),
-          primaryAction: stringOrNull(sidecar.primaryAction),
-          capture,
-          industry: app.industry,
-          tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
-          elements: uniq<string>(sidecar.elements || []),
-          style: uniq<string>((sidecar.style || []).filter((s: string) => (STYLES as readonly string[]).includes(s))),
-          capturedAt: sidecar.capturedAt || source.capturedAt || null,
-          hasAnalysis: existsSync(join(analysisDir, `${id}.json`)),
-          downloadable: source.redistribution === 'allowed',
-          source: {
-            url: source.sourceUrl || app.website || null,
-            license: source.license || null,
-            licenseUrl: source.licenseUrl || null,
-            attribution: source.attribution || app.name,
-            permission: source.permission || null,
-          },
-        });
+            // in the query makes every republish a new URL, so a browser never
+            // keeps showing the frame that was there before.
+            url: `/api/inspirations/screens/${platform}/${appId}/${file}?v=${Math.floor(statSync(abs).mtimeMs / 1000).toString(36)}`,
+            width: dimensions.width,
+            height: dimensions.height,
+            bytes: statSync(abs).size,
+            platform,
+            screenType,
+            fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
+            states,
+            description: typeof sidecar.description === 'string' ? sidecar.description : '',
+            purpose: stringOrNull(sidecar.purpose),
+            primaryAction: stringOrNull(sidecar.primaryAction),
+            capture,
+            industry: app.industry,
+            tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
+            elements: uniq<string>(sidecar.elements || []),
+            style: uniq<string>((sidecar.style || []).filter((s: string) => (STYLES as readonly string[]).includes(s))),
+            capturedAt: sidecar.capturedAt || source.capturedAt || null,
+            version: versionId,
+            hasAnalysis: existsSync(join(analysisDir, `${id}.json`)),
+            downloadable: source.redistribution === 'allowed',
+            source: {
+              url: source.sourceUrl || app.website || null,
+              license: source.license || null,
+              licenseUrl: source.licenseUrl || null,
+              attribution: source.attribution || app.name,
+              permission: source.permission || null,
+            },
+          });
+        }
       }
     }
-  }
 
   // Within one app, screens read in the order they were seen: by the moment
   // of capture when a recording supplied one, then by the flow they belong to
@@ -525,6 +642,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
   }
 
   const knownScreenIds = new Set(screens.map((s) => s.id));
+  const screenById = new Map(screens.map((s) => [s.id, s]));
   const publishedFlows = (flowsFile.flows || [])
     .map((flow) => {
       const missing = (flow.screenIds || []).filter((id: string) => !knownScreenIds.has(id));
@@ -553,6 +671,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
         summary: stringOrNull(flow.summary),
         screenIds,
         steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })),
+        // A flow's screens all come from one capture, in practice — the
+        // Screens tab's version filter needs to know which one to keep the
+        // Flows tab in step with it.
+        version: screenIds.length ? screenById.get(screenIds[0])?.version ?? null : null,
       };
     })
     // A flow of one screen is a journey of one step — a sheet opened and
@@ -572,12 +694,39 @@ export function buildInspirationsManifest(root: string): BuildReport {
     flow.parentId = parent && parentId !== flow.id && parent.appId === flow.appId ? parentId : null;
   }
 
+  /**
+   * The versions an app's screens are grouped into: one per distinct
+   * `screen.version`, dated by the earliest capture seen in it (falling back
+   * to the first of that month when no screen carries a real date), newest
+   * first. `isLatest` is always the newest by date — there is no manual pin;
+   * renaming a version's date (via the admin's rename-version action) is the
+   * only way to change which one that is.
+   */
+  function versionsForApp(appId: string, appScreens: any[]) {
+    const datesByVersion = new Map<string, string[]>();
+    for (const s of appScreens) {
+      if (!datesByVersion.has(s.version)) datesByVersion.set(s.version, []);
+      if (s.capturedAt) datesByVersion.get(s.version)!.push(s.capturedAt);
+    }
+    const entries = Array.from(datesByVersion.entries())
+      .map(([id, dates]) => ({ id, capturedAt: dates.length ? dates.slice().sort()[0] : `${id}-01` }))
+      .sort((a, b) => b.id.localeCompare(a.id)); // "YYYY-MM-DD" sorts lexically = chronologically, newest first
+    const newestId = entries[0]?.id ?? null;
+    return entries.map((e) => ({
+      id: e.id,
+      label: dayLabel(e.id),
+      capturedAt: e.capturedAt,
+      isLatest: e.id === newestId,
+    }));
+  }
+
   const apps = Array.from(appsSeen)
     .map((appId) => {
       const app = appRecords.get(appId);
       const appScreens = screensByApp.get(appId) || [];
       const source = sources[appId] || {};
       const logo = app.logo || logoFiles.get(appId) || null;
+      const versions = versionsForApp(appId, appScreens);
       return {
         id: appId,
         name: app.name || titleCase(appId),
@@ -591,6 +740,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
         flowCount: publishedFlows.filter((f) => f.appId === appId).length,
         license: source.license || null,
         attribution: source.attribution || app.name || titleCase(appId),
+        versions,
+        currentVersion: versions[0]?.id ?? null,
         ...readRating(app, problems, appId),
       };
     })

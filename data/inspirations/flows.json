@@ -2,15 +2,851 @@
   "version": 1,
   "flows": [
     {
-      "id": "airbnb-ios-login",
-      "appId": "airbnb",
-      "name": "Login",
+      "id": "swiggy-ios-versions-2026-09-21-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-21-onboarding-1",
+        "swiggy-ios-versions-2026-09-21-onboarding-2",
+        "swiggy-ios-versions-2026-09-21-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-21-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-21-food-1",
+        "swiggy-ios-versions-2026-09-21-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-21-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-21-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-instamart-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-21-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-21-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-dineout-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-21-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-21-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-scenes-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-21-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
-        "airbnb-ios-login-1",
-        "airbnb-ios-login-2",
-        "airbnb-ios-login-7"
+        "swiggy-ios-versions-2026-09-21-onboarding-2",
+        "swiggy-ios-versions-2026-09-21-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-09-21-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-21-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-onboarding-1",
+        "swiggy-ios-versions-2026-10-20-onboarding-2",
+        "swiggy-ios-versions-2026-10-20-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-food-1",
+        "swiggy-ios-versions-2026-10-20-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-instamart-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-dineout-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-scenes-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-20-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-20-onboarding-2",
+        "swiggy-ios-versions-2026-10-20-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-20-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-20-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-onboarding-1",
+        "swiggy-ios-versions-2026-09-28-onboarding-2",
+        "swiggy-ios-versions-2026-09-28-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-food-1",
+        "swiggy-ios-versions-2026-09-28-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-instamart-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-dineout-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-scenes-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-28-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-28-onboarding-2",
+        "swiggy-ios-versions-2026-09-28-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-09-28-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-28-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-onboarding-1",
+        "swiggy-ios-versions-2026-05-28-onboarding-2",
+        "swiggy-ios-versions-2026-05-28-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-food-1",
+        "swiggy-ios-versions-2026-05-28-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-instamart-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-dineout-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-scenes-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-05-28-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-05-28-onboarding-2",
+        "swiggy-ios-versions-2026-05-28-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-05-28-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-05-28-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-onboarding",
+      "appId": "airbnb",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-29-onboarding-1",
+        "airbnb-ios-versions-2026-09-29-onboarding-2",
+        "airbnb-ios-versions-2026-09-29-onboarding-3",
+        "airbnb-ios-versions-2026-09-29-onboarding-4"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-2",
+          "action": {
+            "kind": "scroll",
+            "label": null,
+            "basis": "structure"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-29-logging-in",
+      "appId": "airbnb",
+      "name": "Logging into the App",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-29-onboarding-2",
+        "airbnb-ios-versions-2026-09-29-onboarding-3",
+        "airbnb-ios-versions-2026-09-29-onboarding-4"
+      ],
+      "parentId": "airbnb-ios-versions-2026-09-29-onboarding",
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-29-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-30-onboarding",
+      "appId": "airbnb",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-30-onboarding-1",
+        "airbnb-ios-versions-2026-09-30-onboarding-2",
+        "airbnb-ios-versions-2026-09-30-onboarding-3",
+        "airbnb-ios-versions-2026-09-30-onboarding-4"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-2",
+          "action": {
+            "kind": "scroll",
+            "label": null,
+            "basis": "structure"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
+      "id": "airbnb-ios-versions-2026-09-30-logging-in",
+      "appId": "airbnb",
+      "name": "Logging into Airbnb",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "airbnb-ios-versions-2026-09-30-onboarding-2",
+        "airbnb-ios-versions-2026-09-30-onboarding-3",
+        "airbnb-ios-versions-2026-09-30-onboarding-4"
+      ],
+      "parentId": "airbnb-ios-versions-2026-09-30-onboarding",
+      "steps": [
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-3",
+          "action": {
+            "kind": "tap",
+            "label": "Log in or sign up",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "airbnb-ios-versions-2026-09-30-onboarding-4",
+          "action": {
+            "kind": "tap",
+            "label": "Legal na",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-onboarding",
+      "appId": "swiggy",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-onboarding-1",
+        "swiggy-ios-versions-2026-09-29-onboarding-2",
+        "swiggy-ios-versions-2026-09-29-onboarding-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-2",
+          "action": {
+            "kind": "open",
+            "label": "Enter your number",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-food",
+      "appId": "swiggy",
+      "name": "Food",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-food-1",
+        "swiggy-ios-versions-2026-09-29-food-2"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-food-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-food-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Welcome tip",
+            "basis": "structure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-instamart",
+      "appId": "swiggy",
+      "name": "Instamart",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-instamart-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-instamart-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-dineout",
+      "appId": "swiggy",
+      "name": "Dineout",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-dineout-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-dineout-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-scenes",
+      "appId": "swiggy",
+      "name": "Scenes",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-scenes-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-scenes-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-09-29-entering-phone-number",
+      "appId": "swiggy",
+      "name": "Entering phone number",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-09-29-onboarding-2",
+        "swiggy-ios-versions-2026-09-29-onboarding-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-09-29-onboarding",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-09-29-onboarding-3",
+          "action": {
+            "kind": "open",
+            "label": "Select your location",
+            "basis": "destination"
+          }
+        }
       ]
     }
   ]

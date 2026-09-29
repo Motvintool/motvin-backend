@@ -1,7 +1,7 @@
 import { ConfigModule } from '@nestjs/config';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { Test } from '@nestjs/testing';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from 'fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { AdminGuard } from './admin.guard';
@@ -69,7 +69,7 @@ describe('Inspirations admin API over HTTP', () => {
       payload: { name: 'Acme', industry: 'saas' },
     });
 
-    const res = await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
+    const res = await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
 
     expect(res.statusCode).toBe(201);
     const body = JSON.parse(res.payload);
@@ -93,7 +93,7 @@ describe('Inspirations admin API over HTTP', () => {
 
     for (const type of ['image/webp', 'image/jpeg', 'application/octet-stream']) {
       const name = type.split('/')[1].replace('+xml', '');
-      const res = await post(`/api/inspirations/admin/screens/web/acme/login-${name}.png`, PNG_1X1, type);
+      const res = await post(`/api/inspirations/admin/screens/web/acme/login-${name}.png?version=`, PNG_1X1, type);
       expect([200, 201]).toContain(res.statusCode);
     }
   });
@@ -106,7 +106,7 @@ describe('Inspirations admin API over HTTP', () => {
     });
 
     const res = await post(
-      '/api/inspirations/admin/screens/ios/acme/dashboard.png',
+      '/api/inspirations/admin/screens/ios/acme/dashboard.png?version=',
       Buffer.from('nope'),
       'image/png',
     );
@@ -122,12 +122,63 @@ describe('Inspirations admin API over HTTP', () => {
       url: '/api/inspirations/admin/apps/acme',
       payload: { name: 'Acme', industry: 'saas' },
     });
-    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
 
     const res = await instance.inject({ method: 'GET', url: '/api/inspirations/screens/ios/acme/dashboard.png' });
     expect(res.statusCode).toBe(200);
     expect(res.headers['content-type']).toBe('image/png');
     expect(Buffer.from(res.rawPayload).equals(PNG_1X1)).toBe(true);
+  });
+
+  it('serves a screen filed under a version, loose or inside a flow folder', async () => {
+    const instance = app.getHttpAdapter().getInstance();
+    await instance.inject({
+      method: 'PUT',
+      url: '/api/inspirations/admin/apps/acme',
+      payload: { name: 'Acme', industry: 'saas' },
+    });
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=2026-09-29', PNG_1X1, 'image/png');
+
+    const res = await instance.inject({
+      method: 'GET',
+      url: '/api/inspirations/screens/ios/acme/versions/2026-09-29/dashboard.png',
+    });
+    expect(res.statusCode).toBe(200);
+    expect(Buffer.from(res.rawPayload).equals(PNG_1X1)).toBe(true);
+  });
+
+  it('deletes and edits a screen that sits inside a flow folder — flow travels as its own query param, never a literal slash in the file name', async () => {
+    const instance = app.getHttpAdapter().getInstance();
+    await instance.inject({
+      method: 'PUT',
+      url: '/api/inspirations/admin/apps/acme',
+      payload: { name: 'Acme', industry: 'saas' },
+    });
+    // Flow folders are written directly to disk by the crawler, not through
+    // the admin upload route (which refuses a slash in the file name) — so
+    // this places one the same way a real ingest would, to exercise the
+    // meta and delete routes exactly as the Apps tab's version manager and
+    // the Screens tab call them.
+    const flowDir = join(store, 'screens', 'ios', 'acme', 'versions', '2026-09-29', 'onboarding');
+    mkdirSync(flowDir, { recursive: true });
+    writeFileSync(join(flowDir, '1.png'), PNG_1X1);
+    await instance.inject({ method: 'POST', url: '/api/inspirations/admin/rebuild' });
+
+    const metaRes = await instance.inject({
+      method: 'PUT',
+      url: '/api/inspirations/admin/screens/ios/acme/1.png/meta?version=2026-09-29&flow=onboarding',
+      payload: { name: 'Welcome' },
+    });
+    expect(metaRes.statusCode).toBe(200);
+    expect(JSON.parse(readFileSync(join(flowDir, '1.json'), 'utf-8')).name).toBe('Welcome');
+
+    const deleteRes = await instance.inject({
+      method: 'DELETE',
+      url: '/api/inspirations/admin/screens/ios/acme/1.png?version=2026-09-29&flow=onboarding',
+    });
+
+    expect(deleteRes.statusCode).toBe(200);
+    expect(existsSync(join(flowDir, '1.png'))).toBe(false);
   });
 
   it('still records the app in sources.json, so origin survives the upload', async () => {
@@ -137,7 +188,7 @@ describe('Inspirations admin API over HTTP', () => {
       url: '/api/inspirations/admin/apps/acme',
       payload: { name: 'Acme', industry: 'saas' },
     });
-    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
 
     const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
     expect(sources.acme.status).toBe('approved');
@@ -150,8 +201,8 @@ describe('Inspirations admin API over HTTP', () => {
       url: '/api/inspirations/admin/apps/acme',
       payload: { name: 'Acme', industry: 'saas' },
     });
-    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
-    await post('/api/inspirations/admin/screens/web/acme/login.png', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/web/acme/login.png?version=', PNG_1X1, 'image/png');
 
     const res = await instance.inject({ method: 'DELETE', url: '/api/inspirations/admin/apps/acme' });
 
@@ -174,7 +225,7 @@ describe('Inspirations admin API over HTTP', () => {
       url: '/api/inspirations/admin/apps/acme',
       payload: { name: 'Acme', industry: 'saas' },
     });
-    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
 
     const res = await instance.inject({ method: 'GET', url: '/api/inspirations/admin/state' });
 

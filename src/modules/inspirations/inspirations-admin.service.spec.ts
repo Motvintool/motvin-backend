@@ -57,7 +57,7 @@ describe('InspirationsAdminService', () => {
   describe('uploads', () => {
     it('stores a screenshot at screens/<platform>/<app>/<file>', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      const result = service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false);
+      const result = service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false, '');
 
       expect(existsSync(join(store, 'screens', 'ios', 'acme', 'dashboard.png'))).toBe(true);
       expect(result.id).toBe('acme-ios-dashboard');
@@ -69,30 +69,30 @@ describe('InspirationsAdminService', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
 
       expect(() =>
-        service.uploadScreen('ios', 'acme', 'dashboard.png', Buffer.from('not an image'), false),
+        service.uploadScreen('ios', 'acme', 'dashboard.png', Buffer.from('not an image'), false, ''),
       ).toThrow(/not a readable image/i);
       expect(existsSync(join(store, 'screens', 'ios', 'acme', 'dashboard.png'))).toBe(false);
     });
 
     it('refuses a second upload to the same name unless overwrite is asked for', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false);
+      service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false, '');
 
-      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false)).toThrow(
+      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, false, '')).toThrow(
         /already exists/i,
       );
-      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, true)).not.toThrow();
+      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', PNG_1X1, true, '')).not.toThrow();
     });
 
     it('refuses an unknown platform', () => {
-      expect(() => service.uploadScreen('desktop', 'acme', 'dashboard.png', PNG_1X1, false)).toThrow(
+      expect(() => service.uploadScreen('desktop', 'acme', 'dashboard.png', PNG_1X1, false, '')).toThrow(
         /platform must be one of/i,
       );
     });
 
     it('refuses path traversal in the app name and the file name', () => {
-      expect(() => service.uploadScreen('ios', '../../etc', 'dashboard.png', PNG_1X1, false)).toThrow();
-      expect(() => service.uploadScreen('ios', 'acme', '../../../evil.png', PNG_1X1, false)).toThrow();
+      expect(() => service.uploadScreen('ios', '../../etc', 'dashboard.png', PNG_1X1, false, '')).toThrow();
+      expect(() => service.uploadScreen('ios', 'acme', '../../../evil.png', PNG_1X1, false, '')).toThrow();
 
       // Nothing escaped the store.
       expect(existsSync(join(tmp, 'data', 'evil.png'))).toBe(false);
@@ -101,7 +101,7 @@ describe('InspirationsAdminService', () => {
 
     it('refuses an empty upload', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', Buffer.alloc(0), false)).toThrow(
+      expect(() => service.uploadScreen('ios', 'acme', 'dashboard.png', Buffer.alloc(0), false, '')).toThrow(
         /empty/i,
       );
     });
@@ -126,7 +126,7 @@ describe('InspirationsAdminService', () => {
   describe('the licensing gate', () => {
     beforeEach(() => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
     });
 
     it('publishes a new app without a separate approval step', () => {
@@ -151,7 +151,7 @@ describe('InspirationsAdminService', () => {
         status: 'approved',
       });
       // A later upload must not reset what someone entered deliberately.
-      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false, '');
 
       const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
       expect(sources.acme.permission).toBe('owner-granted');
@@ -226,7 +226,7 @@ describe('InspirationsAdminService', () => {
   describe('metadata and deletion', () => {
     beforeEach(() => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -300,7 +300,7 @@ describe('InspirationsAdminService', () => {
     it('reports held-back files with a reason in the admin state', () => {
       // Uploading under a slug with no apps.json record is now the main way a
       // file can fail to publish, the licence gate having been removed.
-      service.uploadScreen('ios', 'other-co', 'login.png', PNG_1X1, false);
+      service.uploadScreen('ios', 'other-co', 'login.png', PNG_1X1, false, '');
       const state = service.getState();
 
       const held = state.files.find((f) => f.appId === 'other-co');
@@ -319,8 +319,8 @@ describe('InspirationsAdminService', () => {
 
     it('removes everything stored for an app when it is deleted', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
-      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
       service.saveScreenMeta('web', 'acme', 'dashboard.png', { name: 'Revenue overview' });
       service.uploadLogo('acme', 'acme.svg', Buffer.from('<svg xmlns="http://www.w3.org/2000/svg"/>'));
       service.saveSource('acme', {
@@ -358,9 +358,9 @@ describe('InspirationsAdminService', () => {
     it('takes the flows with it and leaves other apps untouched', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       service.saveApp({ id: 'other', name: 'Other', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false);
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
-      service.uploadScreen('web', 'other', 'landing.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('web', 'other', 'landing.png', PNG_1X1, false, '');
       for (const id of ['acme', 'other']) {
         service.saveSource(id, {
           permission: 'own-work',
@@ -411,8 +411,8 @@ describe('InspirationsAdminService', () => {
 
     it('publishes a flow whose screens are all published', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false);
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -436,8 +436,8 @@ describe('InspirationsAdminService', () => {
 
     it('drops flow steps that are not published, and keeps the flow with what remains', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false);
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false);
+      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -460,6 +460,136 @@ describe('InspirationsAdminService', () => {
       // once, a sheet opened and dismissed — so the flow survives, shorter.
       expect(report.counts.flows).toBe(1);
       expect(report.warnings.join(' ')).toMatch(/acme-web-dashboard/);
+    });
+  });
+
+  describe('versions', () => {
+    it('groups legacy (unwrapped) screens into one version, labeled by the source capture date', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', {
+        permission: 'own-work',
+        capturedAt: '2025-01-15',
+        status: 'approved',
+      });
+      service.rebuild();
+
+      const versions = service.listVersions('acme');
+      expect(versions).toHaveLength(1);
+      expect(versions[0]).toMatchObject({ id: '2025-01-15', label: '15 Jan 2025', isLatest: true });
+      expect(readManifest(store).apps[0].currentVersion).toBe('2025-01-15');
+      expect(readManifest(store).screens[0].version).toBe('2025-01-15');
+    });
+
+    it('files a fresh upload with no explicit version into a dated folder under versions/, alongside the legacy one', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
+
+      // No version named — lands in a real dated folder, not the legacy bucket.
+      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
+
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-09-29', 'login.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+
+      const versions = service.listVersions('acme');
+      expect(versions.map((v) => v.id)).toEqual(['2026-09-29', '2025-01-15']);
+      expect(versions[0]).toMatchObject({ label: '29 Sep 2026', isLatest: true });
+      expect(versions[1]).toMatchObject({ isLatest: false });
+
+      const manifest = readManifest(store);
+      expect(manifest.counts.screens).toBe(2);
+      const login = manifest.screens.find((s: any) => s.id === 'acme-web-versions-2026-09-29-login');
+      expect(login.version).toBe('2026-09-29');
+      expect(login.file).toBe('web/acme/versions/2026-09-29/login.png');
+    });
+
+    it('renames a version to change which one is "Latest", moving its screens, analysis and flow ids along with it', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
+
+      // Flow-folder screens are written directly to disk by the crawler, not
+      // through the admin upload route (which refuses a slash in the file
+      // name) — this places one the same way a real ingest would.
+      const flowDir = join(store, 'screens', 'web', 'acme', 'versions', '2026-01-05', 'onboarding');
+      mkdirSync(flowDir, { recursive: true });
+      writeFileSync(join(flowDir, '1.png'), PNG_1X1);
+      service.rebuild();
+
+      mkdirSync(join(store, 'analysis'), { recursive: true });
+      writeFileSync(join(store, 'analysis', 'acme-web-versions-2026-01-05-onboarding-1.json'), '{}');
+      service.saveFlow({
+        id: 'acme-web-versions-2026-01-05-onboarding',
+        appId: 'acme',
+        name: 'Onboarding',
+        category: 'onboarding',
+        platform: 'web',
+        screenIds: ['acme-web-versions-2026-01-05-onboarding-1'],
+      });
+
+      expect(() => service.renameVersion('acme', '2099-01-01', '2030-01-01')).toThrow(/not a known version/i);
+      expect(() => service.renameVersion('acme', '2026-01-05', '2025-01-15')).toThrow(/already has a version/i);
+      // The legacy (undated) bucket isn't stored in a `versions/` folder, so
+      // it can't be renamed the same way a real dated version is.
+      expect(() => service.renameVersion('acme', '2025-01-15', '2030-01-01')).toThrow(/undated capture/i);
+
+      const result = service.renameVersion('acme', '2026-01-05', '2027-03-10');
+
+      expect(result.versions.map((v) => v.id)).toEqual(['2027-03-10', '2025-01-15']);
+      expect(result.versions[0]).toMatchObject({ isLatest: true });
+      expect(readManifest(store).apps[0].currentVersion).toBe('2027-03-10');
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2027-03-10', 'onboarding', '1.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-01-05'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-web-versions-2027-03-10-onboarding-1.json'))).toBe(true);
+
+      const flowsDoc = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8'));
+      const flow = flowsDoc.flows.find((f: any) => f.appId === 'acme');
+      expect(flow.id).toBe('acme-web-versions-2027-03-10-onboarding');
+      expect(flow.screenIds).toEqual(['acme-web-versions-2027-03-10-onboarding-1']);
+
+      // A subsequent upload with no version named lands in the renamed
+      // (now newest) version, not today's date.
+      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false);
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2027-03-10', 'settings.png'))).toBe(true);
+    });
+
+    it('gives an app with no dated folder a version list of exactly one', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', { permission: 'own-work', status: 'approved' });
+
+      expect(service.listVersions('acme')).toHaveLength(1);
+    });
+
+    it('deletes a whole version: its screens, sidecars and analysis', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
+      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
+      mkdirSync(join(store, 'analysis'), { recursive: true });
+      writeFileSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'), '{}');
+
+      const result = service.deleteVersion('acme', '2026-09-29');
+
+      expect(result.removed).toEqual({ screens: 1, analysis: 1 });
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-09-29'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'))).toBe(false);
+      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+
+      // Deleting the newest version falls back to the one that remains.
+      const versions = service.listVersions('acme');
+      expect(versions).toHaveLength(1);
+      expect(versions[0]).toMatchObject({ id: '2025-01-15', isLatest: true });
+    });
+
+    it('refuses to delete an unknown version, or an app\'s only version', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
+
+      expect(() => service.deleteVersion('acme', '2099-01-01')).toThrow(/not a known version/i);
+      expect(() => service.deleteVersion('acme', '2025-01-15')).toThrow(/only one version/i);
     });
   });
 });

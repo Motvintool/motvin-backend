@@ -205,6 +205,39 @@ export class InspirationsController {
     return this.sendFile(`screens/${platform}/${app}/${flow}/${file}`, file, download === '1', reply);
   }
 
+  /**
+   * GET /api/inspirations/screens/:platform/:app/versions/:version/:file —
+   * a loose screen inside a dated version folder.
+   */
+  @Get('screens/:platform/:app/versions/:version/:file')
+  async getVersionedScreenFile(
+    @Param('platform') platform: string,
+    @Param('app') app: string,
+    @Param('version') version: string,
+    @Param('file') file: string,
+    @Query('download') download: string,
+    @Res() reply: FastifyReply,
+  ) {
+    return this.sendFile(`screens/${platform}/${app}/versions/${version}/${file}`, file, download === '1', reply);
+  }
+
+  /**
+   * GET /api/inspirations/screens/:platform/:app/versions/:version/:flow/:file
+   * — a screen inside a flow folder inside a dated version folder.
+   */
+  @Get('screens/:platform/:app/versions/:version/:flow/:file')
+  async getVersionedFlowScreenFile(
+    @Param('platform') platform: string,
+    @Param('app') app: string,
+    @Param('version') version: string,
+    @Param('flow') flow: string,
+    @Param('file') file: string,
+    @Query('download') download: string,
+    @Res() reply: FastifyReply,
+  ) {
+    return this.sendFile(`screens/${platform}/${app}/versions/${version}/${flow}/${file}`, file, download === '1', reply);
+  }
+
   // GET /api/inspirations/logos/:file
   @Get('logos/:file')
   async getLogoFile(@Param('file') file: string, @Res() reply: FastifyReply) {
@@ -254,13 +287,15 @@ export class InspirationsController {
   }
 
   /**
-   * screens/<platform>/<app>/<file> or screens/<platform>/<app>/<flow>/<file>
-   * → the screen id the build script assigned. The flow folder, when there is
-   * one, is part of the id, exactly as manifest.builder.ts derives it.
+   * screens/<platform>/<app>/<file>, screens/<platform>/<app>/<flow>/<file>,
+   * or either shape again inside screens/<platform>/<app>/versions/<id>/… →
+   * the screen id the build script assigned. Every segment after the app
+   * becomes part of the id, exactly as manifest.builder.ts's `screenIdFor`
+   * derives it, so this needs no separate case for a version folder.
    */
   private screenIdForKey(key: string): string | null {
     const parts = key.split('/');
-    if (parts.length !== 4 && parts.length !== 5) return null;
+    if (parts.length < 4) return null;
     const [, platform, app, ...rest] = parts;
     const file = rest.join('/');
     const base = file.replace(/\.[^.]+$/, '').split('/').join('-');

@@ -46,6 +46,8 @@ export interface InspirationScreen {
   elements: string[];
   style: string[];
   capturedAt: string | null;
+  /** Which dated capture this screen belongs to, e.g. "2026-09-29". */
+  version: string;
   hasAnalysis: boolean;
   downloadable: boolean;
   source: {
@@ -55,6 +57,15 @@ export interface InspirationScreen {
     attribution: string | null;
     permission: string | null;
   };
+}
+
+export interface InspirationAppVersion {
+  id: string;
+  /** "29 Sep 2026" — precomputed so every consumer shows the same label. */
+  label: string;
+  capturedAt: string;
+  /** Whether this is the newest version by date — drives the "Latest" label. */
+  isLatest: boolean;
 }
 
 export interface InspirationApp {
@@ -72,6 +83,8 @@ export interface InspirationApp {
   attribution: string;
   rating: number | null;
   ratingCount: number | null;
+  versions: InspirationAppVersion[];
+  currentVersion: string | null;
 }
 
 export interface InspirationFlow {
@@ -87,6 +100,8 @@ export interface InspirationFlow {
   steps?: { screenId: string; action: { kind: string; label: string | null } | null }[];
   /** One sentence on what the person does across the journey, when written. */
   summary?: string | null;
+  /** Which capture this flow's screens belong to; null if it has none. */
+  version?: string | null;
 }
 
 export interface InspirationPattern {
@@ -196,8 +211,14 @@ export class LoaderService implements OnModuleInit {
         purpose: screen.purpose ?? null,
         primaryAction: screen.primaryAction ?? null,
         capture: screen.capture ?? null,
+        version: screen.version || 'legacy',
       }));
-      parsed.flows = (parsed.flows || []).map((flow) => ({ ...flow, parentId: flow.parentId ?? null }));
+      parsed.flows = (parsed.flows || []).map((flow) => ({ ...flow, parentId: flow.parentId ?? null, version: flow.version ?? null }));
+      parsed.apps = (parsed.apps || []).map((app) => ({
+        ...app,
+        versions: Array.isArray(app.versions) ? app.versions : [],
+        currentVersion: app.currentVersion ?? null,
+      }));
       parsed.taxonomy = { ...EMPTY_MANIFEST.taxonomy, ...(parsed.taxonomy || {}) };
       this.manifest = { ...EMPTY_MANIFEST, ...parsed };
       this.manifestMtime = mtime;

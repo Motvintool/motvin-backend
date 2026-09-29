@@ -1,0 +1,128 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-29-onboarding-1",
+  "screen_id": "swiggy-ios-versions-2026-09-29-onboarding-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T07:22:48.586Z",
+  "screen_type": "splash",
+  "published_as": "splash",
+  "states": [],
+  "category": "ecommerce",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "Splash screen",
+  "description": "Launch screen shown while the app starts. Light theme.",
+  "purpose": "Initial loading screen for the app",
+  "primary_action": "Wait for app to load",
+  "tags": [
+    "splash",
+    "ios"
+  ],
+  "elements": [],
+  "style": [
+    "light",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Launch screen shown while the app starts. Light theme.",
+        "0 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Onboarding”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 0:00 in the recording",
+        "Frame 4 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#ff5200",
+      "role": "background",
+      "share": 0.831
+    },
+    {
+      "hex": "#fffefe",
+      "role": "text",
+      "share": 0.109
+    },
+    {
+      "hex": "#fa8751",
+      "role": "accent",
+      "share": 0.021
+    },
+    {
+      "hex": "#fec4a8",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#fea378",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Zomato.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 4,
+    "atSeconds": 0,
+    "endSeconds": 1,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 0,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s001",
+    "depth": 0,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": [
+      {
+        "to": "s002",
+        "via": "Open Enter your number",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

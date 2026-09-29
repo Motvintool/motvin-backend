@@ -1,0 +1,157 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-dineout-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-dineout-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T07:17:37.969Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "ecommerce",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 1,
+  "name": "Category listing",
+  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+  "purpose": "The user is viewing a list of categories for dining options, including Food, Dineout, Scenes, and Instamart.",
+  "primary_action": "Select a category to view its details",
+  "tags": [
+    "search",
+    "offer",
+    "address",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “In the spotlight”",
+        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Dineout”",
+        "Reached from “Dineout home — loading”",
+        "Leads to “Category page”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:12 in the recording",
+        "Frame 67 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.626
+    },
+    {
+      "hex": "#cbc9c4",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#460710",
+      "role": "accent",
+      "share": 0.067
+    },
+    {
+      "hex": "#e4e1dd",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#931d1e",
+      "role": "surface",
+      "share": 0.033
+    }
+  ],
+  "capture": {
+    "source": "Zomato.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 67,
+    "atSeconds": 12.4,
+    "endSeconds": 13.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [
+      "Food",
+      "Dineout",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "In the spotlight",
+    "headline": "Starting At 749!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Wait 0.6s",
+        "name": "Dineout home — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Open Category page",
+        "name": "Category page"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

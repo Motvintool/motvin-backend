@@ -1,0 +1,131 @@
+{
+  "screenId": "airbnb-ios-versions-2026-09-29-onboarding-1",
+  "screen_id": "airbnb-ios-versions-2026-09-29-onboarding-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T07:33:41.675Z",
+  "screen_type": "splash",
+  "published_as": "splash",
+  "states": [],
+  "category": "travel",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "Splash screen",
+  "description": "Launch screen shown while the app starts. Light theme, 1 text element, shown only briefly.",
+  "purpose": "Initial loading screen for the app",
+  "primary_action": "Wait for app to load",
+  "tags": [
+    "splash",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Launch screen shown while the app starts. Light theme, 1 text element, shown only briefly.",
+        "1 text element recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Onboarding”",
+        "Leads to “Splash screen — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 0:01 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 8 of 108 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.668
+    },
+    {
+      "hex": "#a9aaa9",
+      "role": "surface",
+      "share": 0.246
+    },
+    {
+      "hex": "#060605",
+      "role": "text",
+      "share": 0.05
+    },
+    {
+      "hex": "#8d8d8b",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#1e1c1b",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mp4",
+    "fps": 5,
+    "frames": 108,
+    "frame": 8,
+    "atSeconds": 1.6,
+    "endSeconds": 1.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s001",
+    "depth": 0,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": [
+      {
+        "to": "s002",
+        "via": "Scroll",
+        "name": "Splash screen — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-29",
+  "capturedBy": "motvin-ios-crawler"
+}

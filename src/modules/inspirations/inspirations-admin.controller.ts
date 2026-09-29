@@ -56,12 +56,14 @@ export class InspirationsAdminController {
     @Param('app') app: string,
     @Param('file') file: string,
     @Query('overwrite') overwrite: string,
+    @Query('version') version: string,
+    @Query('flow') flow: string,
     @Req() request: FastifyRequest,
   ) {
     const body = request.body as Buffer;
     return {
       success: true,
-      data: this.admin.uploadScreen(platform, app, file, body, overwrite === '1'),
+      data: this.admin.uploadScreen(platform, app, file, body, overwrite === '1', version, flow),
     };
   }
 
@@ -70,9 +72,11 @@ export class InspirationsAdminController {
     @Param('platform') platform: string,
     @Param('app') app: string,
     @Param('file') file: string,
+    @Query('version') version: string,
+    @Query('flow') flow: string,
     @Body() meta: unknown,
   ) {
-    return { success: true, data: this.admin.saveScreenMeta(platform, app, file, meta) };
+    return { success: true, data: this.admin.saveScreenMeta(platform, app, file, meta, version, flow) };
   }
 
   @Delete('screens/:platform/:app/:file')
@@ -80,8 +84,27 @@ export class InspirationsAdminController {
     @Param('platform') platform: string,
     @Param('app') app: string,
     @Param('file') file: string,
+    @Query('version') version: string,
+    @Query('flow') flow: string,
   ) {
-    return { success: true, data: this.admin.deleteScreen(platform, app, file) };
+    return { success: true, data: this.admin.deleteScreen(platform, app, file, version, flow) };
+  }
+
+  // ─── Versions ─────────────────────────────────────────────────────────────
+
+  @Get('apps/:app/versions')
+  listVersions(@Param('app') app: string) {
+    return { success: true, data: this.admin.listVersions(app) };
+  }
+
+  @Put('apps/:app/versions/:version')
+  renameVersion(@Param('app') app: string, @Param('version') version: string, @Body() body: { versionId?: string }) {
+    return { success: true, data: this.admin.renameVersion(app, version, body?.versionId ?? '') };
+  }
+
+  @Delete('apps/:app/versions/:version')
+  deleteVersion(@Param('app') app: string, @Param('version') version: string) {
+    return { success: true, data: this.admin.deleteVersion(app, version) };
   }
 
   // ─── Logos ────────────────────────────────────────────────────────────────
