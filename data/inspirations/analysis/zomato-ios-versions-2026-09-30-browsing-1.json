@@ -1,0 +1,141 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-browsing-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-browsing-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.101Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing",
+  "flow_position": 1,
+  "name": "Restaurant listing (2)",
+  "description": "Feed screen. Dark theme, 20 text elements, shown only briefly.",
+  "purpose": "User is viewing a list of restaurants",
+  "primary_action": "View restaurant listings",
+  "tags": [
+    "booking",
+    "offer",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen. Dark theme, 20 text elements, shown only briefly.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Browsing”",
+        "Reached from “Search results · bottom sheet”",
+        "Leads to “Zomato for Enterprise (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 10:29 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 3149 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1a1e",
+      "role": "background",
+      "share": 0.822
+    },
+    {
+      "hex": "#3e3b40",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#ab9177",
+      "role": "text",
+      "share": 0.03
+    },
+    {
+      "hex": "#61574f",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#8c6e53",
+      "role": "accent",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 3149,
+    "atSeconds": 629.8,
+    "endSeconds": 630,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Best offer in last 90 days"
+  },
+  "crawler": {
+    "nodeId": "s166",
+    "depth": 166,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s165",
+        "via": "Tap “Best offer in last 90 days”",
+        "name": "Search results · bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s079",
+        "via": "Back to Zomato for Enterprise",
+        "name": "Zomato for Enterprise (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,187 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-searching-for-kuch-c-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-searching-for-kuch-c-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.065Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Searching for “Kuch c”",
+  "flow_position": 2,
+  "name": "Category",
+  "description": "Feed screen with a search bar. Dark theme, 23 text elements.",
+  "purpose": "View and select specific food categories for the user to explore",
+  "primary_action": "Select a food category to view items in that category",
+  "tags": [
+    "search",
+    "offer",
+    "view cart",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Think it, search it”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar. Dark theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Searching for “Kuch c””",
+        "Reached from “Search (5)”, “Permission prompt”, “Permission prompt (2)”, “Think it, search it” and “Domino's Pizza”",
+        "Leads to “Permission prompt”, “Permission prompt (2)”, “Think it, search it”, “Payment method — scrolled” and “Domino's Pizza (5)”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.8s at 6:36 in the recording",
+        "Frame 1998 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1f",
+      "role": "background",
+      "share": 0.642
+    },
+    {
+      "hex": "#343238",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#49484e",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#875940",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#a47f4d",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1998,
+    "atSeconds": 396,
+    "endSeconds": 399.8,
+    "holdSeconds": 3.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Think it, search it",
+    "headline": "Crunchy and crispy",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s096",
+    "depth": 96,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s095",
+        "via": "Type “Kuch”",
+        "name": "Search (5)"
+      },
+      {
+        "from": "s097",
+        "via": "Dismiss",
+        "name": "Permission prompt"
+      },
+      {
+        "from": "s098",
+        "via": "Dismiss",
+        "name": "Permission prompt (2)"
+      },
+      {
+        "from": "s099",
+        "via": "Back to Domino's Pizza home",
+        "name": "Think it, search it"
+      },
+      {
+        "from": "s115",
+        "via": "Wait 0.2s",
+        "name": "Domino's Pizza"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Tap “Search...”",
+        "name": "Permission prompt"
+      },
+      {
+        "to": "s098",
+        "via": "Open The Microphone",
+        "name": "Permission prompt (2)"
+      },
+      {
+        "to": "s099",
+        "via": "Tap “Think it, search it”",
+        "name": "Think it, search it"
+      },
+      {
+        "to": "s062",
+        "via": "Back to Payment method — scrolled",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "to": "s116",
+        "via": "Open Corporation v",
+        "name": "Domino's Pizza (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

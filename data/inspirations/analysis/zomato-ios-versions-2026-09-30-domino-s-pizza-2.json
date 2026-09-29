@@ -1,0 +1,148 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-domino-s-pizza-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-domino-s-pizza-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.033Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Domino's Pizza",
+  "flow_position": 2,
+  "name": "Search results (4)",
+  "description": "Search results screen with a search bar and prices. Dark theme, 21 text elements.",
+  "purpose": "Displaying search results for Domino's Pizza with options to add items and view related products",
+  "primary_action": "Add items to the cart",
+  "tags": [
+    "search",
+    "filter",
+    "delivery",
+    "offer",
+    "continue",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a search bar and prices. Dark theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Domino's Pizza”",
+        "Reached from “Continue”",
+        "Leads to “Search results — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:12 in the recording",
+        "Frame 366 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e21",
+      "role": "background",
+      "share": 0.397
+    },
+    {
+      "hex": "#453930",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#f65968",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#5d534d",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#bd9568",
+      "role": "text",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 366,
+    "atSeconds": 72.2,
+    "endSeconds": 73.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search",
+    "headline": "Domino's Pizza",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s034",
+    "depth": 33,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s033",
+        "via": "Tap “Domino's Pizza”",
+        "name": "Continue"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

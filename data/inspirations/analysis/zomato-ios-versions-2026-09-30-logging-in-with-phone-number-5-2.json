@@ -1,0 +1,136 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-logging-in-with-phone-number-5-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-logging-in-with-phone-number-5-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.047Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 2,
+  "name": "Other (2)",
+  "description": "Other screen. Dark theme, 2 text elements.",
+  "purpose": "User is now connected with friends",
+  "primary_action": "Continue to next step",
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 2 text elements.",
+        "2 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in with phone number”",
+        "Reached from “Phone number entry (9)”",
+        "Leads to “Search results — loading”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:51 in the recording",
+        "Frame 857 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18181d",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#fef1d3",
+      "role": "text",
+      "share": 0.044
+    },
+    {
+      "hex": "#3f3f43",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#a29888",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#5f5e62",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 857,
+    "atSeconds": 171,
+    "endSeconds": 171.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "You're now connected with"
+  },
+  "crawler": {
+    "nodeId": "s060",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s056",
+        "via": "Open Other",
+        "name": "Phone number entry (9)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

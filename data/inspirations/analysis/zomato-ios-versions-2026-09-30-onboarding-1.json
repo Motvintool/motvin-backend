@@ -1,0 +1,128 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-onboarding-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-onboarding-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.016Z",
+  "screen_type": "splash",
+  "published_as": "splash",
+  "states": [],
+  "category": "food",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "Splash screen",
+  "description": "Launch screen shown while the app starts. Light theme, 2 text elements.",
+  "purpose": "The app's splash screen displaying the Zomato logo and tagline",
+  "primary_action": "None",
+  "tags": [
+    "splash",
+    "ios"
+  ],
+  "elements": [],
+  "style": [
+    "light",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Launch screen shown while the app starts. Light theme, 2 text elements.",
+        "2 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 6 in “Onboarding”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:00 in the recording",
+        "Frame 5 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#e23845",
+      "role": "background",
+      "share": 0.946
+    },
+    {
+      "hex": "#e86973",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#f5bcc1",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#fbe8ea",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#ee8f97",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 5,
+    "atSeconds": 0,
+    "endSeconds": 1.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Zomato"
+  },
+  "crawler": {
+    "nodeId": "s001",
+    "depth": 0,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": [
+      {
+        "to": "s002",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

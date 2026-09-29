@@ -1,0 +1,146 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-paying-3-10",
+  "screen_id": "zomato-ios-versions-2026-09-30-paying-3-10",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.039Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "creation",
+  "flow_name": "Paying",
+  "flow_position": 10,
+  "name": "Create a new collection",
+  "description": "Form screen with the keyboard open. Dark theme, 35 text elements.",
+  "purpose": "Creating a new collection for restaurant and dish items",
+  "primary_action": "Create a new collection",
+  "tags": [
+    "delivery",
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Dark theme, 35 text elements.",
+        "35 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 13 in “Paying”",
+        "Reached from “Other (2)”",
+        "Leads to “Success”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.6s at 2:17 in the recording",
+        "Frame 709 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#212125",
+      "role": "background",
+      "share": 0.606
+    },
+    {
+      "hex": "#474752",
+      "role": "surface",
+      "share": 0.171
+    },
+    {
+      "hex": "#ee4f5f",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#686363",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#0d0c0f",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 709,
+    "atSeconds": 137.6,
+    "endSeconds": 142.2,
+    "holdSeconds": 4.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": null,
+    "headline": "COLLECTIONS"
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 47,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Tap “COLLECTIONS”",
+        "name": "Other (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Tap “Dining”",
+        "name": "Success"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

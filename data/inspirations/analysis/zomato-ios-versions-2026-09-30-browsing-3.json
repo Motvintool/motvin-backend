@@ -1,0 +1,164 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-browsing-3",
+  "screen_id": "zomato-ios-versions-2026-09-30-browsing-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.102Z",
+  "screen_type": "map",
+  "published_as": "map",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing",
+  "flow_position": 3,
+  "name": "Restaurant detail · bottom sheet",
+  "description": "Map bottom sheet over a dimmed screen, on top of Call now with a primary action labelled “Book now >”. Dark theme, 23 text elements.",
+  "purpose": "User is viewing details of a specific restaurant",
+  "primary_action": "View restaurant details",
+  "tags": [
+    "payment",
+    "review",
+    "offer",
+    "book a table",
+    "pay bill",
+    "map",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Offers for today, dinnerv”",
+        "Bottom sheet over a dimmed background, covering 69% of the height from 30% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Map bottom sheet over a dimmed screen, on top of Call now with a primary action labelled “Book now >”. Dark theme, 23 text elements.",
+        "Calls to action: “Book now >”",
+        "23 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Browsing”",
+        "Reached from “Call now”",
+        "Leads to “Ask anything”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 10:31 in the recording",
+        "Frame 3172 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19191d",
+      "role": "background",
+      "share": 0.572
+    },
+    {
+      "hex": "#38373d",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#3a3598",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#525051",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#252a68",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 3172,
+    "atSeconds": 631,
+    "endSeconds": 634.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.296875,
+        "w": 0.96875,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Book now >"
+    ],
+    "keyboard": false,
+    "title": "Offers for today, dinnerv",
+    "headline": "Offers for today, dinnerv",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s168",
+    "depth": 168,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s167",
+        "via": "Tap “Offers”",
+        "name": "Call now"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s169",
+        "via": "Tap “Ask anything”",
+        "name": "Ask anything"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,143 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-chatting-with-support-paying-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-chatting-with-support-paying-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.053Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Chatting with support (Paying)",
+  "flow_position": 1,
+  "name": "Checkout process",
+  "description": "Checkout screen. Dark theme, 26 text elements, shown only briefly.",
+  "purpose": "Complete the purchase of a gift card",
+  "primary_action": "Proceed to payment",
+  "tags": [
+    "payment",
+    "ontinue",
+    "pay using a",
+    "checkout",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Complete purchase”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen. Dark theme, 26 text elements, shown only briefly.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Chatting with support (Paying)”",
+        "Reached from “Payment method (6)”",
+        "Leads to “Help (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 4:29 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1348 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1c21",
+      "role": "background",
+      "share": 0.569
+    },
+    {
+      "hex": "#6f343d",
+      "role": "accent",
+      "share": 0.159
+    },
+    {
+      "hex": "#707486",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#363562",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#8b787a",
+      "role": "text",
+      "share": 0.037
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1348,
+    "atSeconds": 269.6,
+    "endSeconds": 269.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Complete purchase",
+    "headline": "THAI",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s074",
+    "depth": 74,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s071",
+        "via": "Tap “Complete purchase”",
+        "name": "Payment method (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s070",
+        "via": "Back to Help",
+        "name": "Help (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

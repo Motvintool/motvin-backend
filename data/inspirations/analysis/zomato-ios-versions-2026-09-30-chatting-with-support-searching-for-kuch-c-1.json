@@ -1,0 +1,143 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-chatting-with-support-searching-for-kuch-c-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-chatting-with-support-searching-for-kuch-c-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.066Z",
+  "screen_type": "cart",
+  "published_as": "cart",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Chatting with support (Searching for “Kuch c”)",
+  "flow_position": 1,
+  "name": "Cart (2)",
+  "description": "Cart screen. Dark theme, 23 text elements, shown only briefly.",
+  "purpose": "Displaying the user's current cart contents and offers.",
+  "primary_action": "View cart",
+  "tags": [
+    "cart",
+    "price",
+    "offer",
+    "view cart",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Cart screen. Dark theme, 23 text elements, shown only briefly.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Chatting with support (Searching for “Kuch c”)”",
+        "Reached from “Payment method — scrolled”",
+        "Leads to “Feature tip”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 6:49 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2047 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e25",
+      "role": "background",
+      "share": 0.552
+    },
+    {
+      "hex": "#3a3841",
+      "role": "surface",
+      "share": 0.362
+    },
+    {
+      "hex": "#53555b",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#f36775",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#756f6e",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2047,
+    "atSeconds": 409.4,
+    "endSeconds": 409.6,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "FINAL PRICE, BEST OFFER APPLJEU",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s100",
+    "depth": 100,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open Cart",
+        "name": "Payment method — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s101",
+        "via": "Tap “Best offer applied”",
+        "name": "Feature tip"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-opening-a-page-searching-for-kuch-c-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-opening-a-page-searching-for-kuch-c-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.070Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Opening a page (Searching for “Kuch c”)",
+  "flow_position": 2,
+  "name": "Search results (7)",
+  "description": "Feed screen with a search bar. Dark theme, 18 text elements.",
+  "purpose": "Displaying recommended food items and related options",
+  "primary_action": "View food items",
+  "tags": [
+    "search",
+    "price",
+    "offer",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Golcondas”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Opening a page (Searching for “Kuch c”)”",
+        "Reached from “Other (12)”",
+        "Leads to “Cart (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.2s at 7:02 in the recording",
+        "Frame 2120 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c21",
+      "role": "background",
+      "share": 0.685
+    },
+    {
+      "hex": "#3c393e",
+      "role": "surface",
+      "share": 0.131
+    },
+    {
+      "hex": "#595556",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#613819",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#885b2f",
+      "role": "surface",
+      "share": 0.037
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2120,
+    "atSeconds": 422,
+    "endSeconds": 424.2,
+    "holdSeconds": 2.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search in Golcondas",
+    "headline": "Dum Biryani"
+  },
+  "crawler": {
+    "nodeId": "s106",
+    "depth": 106,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s105",
+        "via": "Open Search in Golcondas",
+        "name": "Other (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s107",
+        "via": "Open Meals und",
+        "name": "Cart (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

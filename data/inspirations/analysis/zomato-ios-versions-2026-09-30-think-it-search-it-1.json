@@ -1,0 +1,143 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-think-it-search-it-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-think-it-search-it-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.066Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Think it, search it",
+  "flow_position": 1,
+  "name": "Search interface",
+  "description": "Feed screen with a search bar. Dark theme, 20 text elements.",
+  "purpose": "Displaying search results and recent searches",
+  "primary_action": "Search for food items",
+  "tags": [
+    "search",
+    "offer",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Think it, search it”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Think it, search it”",
+        "Reached from “Domino's Pizza (2)”",
+        "Leads to “Domino's Pizza (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.2s at 6:43 in the recording",
+        "Frame 2027 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e22",
+      "role": "background",
+      "share": 0.871
+    },
+    {
+      "hex": "#473c38",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#725434",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#6a6c71",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#c84251",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2027,
+    "atSeconds": 403.4,
+    "endSeconds": 405.6,
+    "holdSeconds": 2.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Think it, search it",
+    "headline": "Crunchy and crispy"
+  },
+  "crawler": {
+    "nodeId": "s099",
+    "depth": 99,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s096",
+        "via": "Tap “Think it, search it”",
+        "name": "Domino's Pizza (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Back to Domino's Pizza home",
+        "name": "Domino's Pizza (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

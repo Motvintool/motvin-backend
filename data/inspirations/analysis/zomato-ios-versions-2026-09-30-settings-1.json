@@ -1,0 +1,154 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-settings-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-settings-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.023Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Settings · modal",
+  "description": "Settings dialog over a dimmed screen, on top of Payment method. Dark theme, 17 text elements.",
+  "purpose": "Manage user preferences and settings",
+  "primary_action": "Save preferences",
+  "tags": [
+    "profile",
+    "settings",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Appearance”",
+        "Dialog over a dimmed background, covering 45% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Payment method. Dark theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Settings”",
+        "Reached from “Payment method (2)”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:25 in the recording",
+        "Frame 131 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e23",
+      "role": "background",
+      "share": 0.851
+    },
+    {
+      "hex": "#3e3d42",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#bf4250",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#f65868",
+      "role": "text",
+      "share": 0.023
+    },
+    {
+      "hex": "#243f70",
+      "role": "accent",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 131,
+    "atSeconds": 25.2,
+    "endSeconds": 26.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.390625,
+        "w": 0.84375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Appearance",
+    "headline": "Appearance"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “@ Appearance”",
+        "name": "Payment method (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

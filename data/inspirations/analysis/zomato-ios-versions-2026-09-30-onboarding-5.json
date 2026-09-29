@@ -1,0 +1,142 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-onboarding-5",
+  "screen_id": "zomato-ios-versions-2026-09-30-onboarding-5",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.019Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 5,
+  "name": "Phone number entry (4)",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 6 text elements.",
+  "purpose": "The screen where users enter their mobile number to log in or sign up",
+  "primary_action": "Enter mobile number",
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 6 text elements.",
+        "Calls to action: “Log in or sign up”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “Onboarding”",
+        "Reached from “Phone number entry (3)”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 0:04 in the recording",
+        "Frame 25 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0c0a",
+      "role": "background",
+      "share": 0.338
+    },
+    {
+      "hex": "#fcfcfd",
+      "role": "text",
+      "share": 0.318
+    },
+    {
+      "hex": "#363736",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#f05161",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#c5c4c2",
+      "role": "surface",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 25,
+    "atSeconds": 4.2,
+    "endSeconds": 5.2,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "ON EVERY MEAL"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Tap “ON EVERY MEAL”",
+        "name": "Phone number entry (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Open OTP Verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

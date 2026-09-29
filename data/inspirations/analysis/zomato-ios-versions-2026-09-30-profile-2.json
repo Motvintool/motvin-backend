@@ -1,0 +1,150 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-profile-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-profile-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.044Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 2,
+  "name": "Recommendations",
+  "description": "Profile screen. Dark theme, 9 text elements.",
+  "purpose": "Displaying recommendations from friends for dining options",
+  "primary_action": "Manage recommendations",
+  "tags": [
+    "profile",
+    "get started",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage recommendations”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Profile”",
+        "Reached from “Manage recommendations” and “Contacts permission”",
+        "Leads to “Contacts permission” and “Phone number entry (9)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:37 in the recording",
+        "Frame 790 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201d1f",
+      "role": "background",
+      "share": 0.758
+    },
+    {
+      "hex": "#413934",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#be424f",
+      "role": "accent",
+      "share": 0.028
+    },
+    {
+      "hex": "#f65969",
+      "role": "text",
+      "share": 0.027
+    },
+    {
+      "hex": "#5f514b",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 790,
+    "atSeconds": 157.2,
+    "endSeconds": 158.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Manage recommendations",
+    "headline": "Recommendations from friends",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s054",
+    "depth": 53,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s053",
+        "via": "Tap “Manage recommendations”",
+        "name": "Manage recommendations"
+      },
+      {
+        "from": "s055",
+        "via": "Dismiss",
+        "name": "Contacts permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s055",
+        "via": "Tap “are recommending”",
+        "name": "Contacts permission"
+      },
+      {
+        "to": "s056",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry (9)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

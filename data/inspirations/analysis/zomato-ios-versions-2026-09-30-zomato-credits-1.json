@@ -1,0 +1,137 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-zomato-credits-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-zomato-credits-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.053Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Zomato Credits",
+  "flow_position": 1,
+  "name": "Available balance screen",
+  "description": "Other screen. Dark theme, 6 text elements.",
+  "purpose": "Displaying the available balance for Zomato Credits",
+  "primary_action": "View available balance",
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Zomato Credits”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Zomato Credits”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:37 in the recording",
+        "Frame 1392 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18181d",
+      "role": "background",
+      "share": 0.79
+    },
+    {
+      "hex": "#f35069",
+      "role": "accent",
+      "share": 0.074
+    },
+    {
+      "hex": "#45363d",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#b83f53",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#f9f9fb",
+      "role": "text",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1392,
+    "atSeconds": 277.4,
+    "endSeconds": 278.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Zomato Credits",
+    "headline": "Zomato Credits"
+  },
+  "crawler": {
+    "nodeId": "s076",
+    "depth": 76,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Zomato Credits",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -36,14 +36,17 @@ name and the numbers are the order it was walked:
 
 ```
 screens/<platform>/<app-slug>/<flow-name>/<position>.<ext>
-screens/ios/luma/onboarding/1.png
-screens/ios/luma/completing-a-profile/1.png … /6.png
+screens/ios/luma/onboarding/1.webp
+screens/ios/luma/completing-a-profile/1.webp … /6.webp
 ```
 
 The screen id becomes `<app-slug>-<platform>-<flow-name>-<position>`, so each
-flow's `1.png` stays distinct. Ordering is numeric, so `10.png` follows `9.png`
-rather than `1.png`. A screen filed this way carries no type in its name — its
-sidecar is the source of truth, which automatic capture always writes.
+flow's `1.webp` stays distinct. Ordering is numeric, so `10.webp` follows
+`9.webp` rather than `1.webp`. A screen filed this way carries no type in its
+name — its sidecar is the source of truth, which automatic capture always
+writes. Automatic capture always writes `.webp` (quality 85) — the frame is
+captured as a PNG, then re-encoded exactly once, on the way into the store, at
+roughly a tenth the size with no visible difference.
 
 Exactly one level of nesting is read. A deeper folder is ignored, not flattened.
 

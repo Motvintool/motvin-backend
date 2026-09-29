@@ -1,0 +1,142 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-paying-3-12",
+  "screen_id": "zomato-ios-versions-2026-09-30-paying-3-12",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.041Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Paying",
+  "flow_position": 12,
+  "name": "Manage recommendations (empty)",
+  "description": "Empty state screen. Dark theme, 7 text elements, an empty state.",
+  "purpose": "Checking if there are recommendations from friends",
+  "primary_action": "Check recommendations",
+  "tags": [
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "empty-state"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage recommendations”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen. Dark theme, 7 text elements, an empty state.",
+        "7 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 13 in “Paying”",
+        "Reached from “Payment method”",
+        "Leads to “Manage recommendations”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 2:33 in the recording",
+        "Frame 784 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a191e",
+      "role": "background",
+      "share": 0.809
+    },
+    {
+      "hex": "#49351c",
+      "role": "accent",
+      "share": 0.051
+    },
+    {
+      "hex": "#3a3a3f",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#655c51",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#e5e3e5",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 784,
+    "atSeconds": 153.4,
+    "endSeconds": 157,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Manage recommendations",
+    "headline": "Nothing to recommend... yet!"
+  },
+  "crawler": {
+    "nodeId": "s052",
+    "depth": 51,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Manage recommendations",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s053",
+        "via": "Tap “Manage recommendations”",
+        "name": "Manage recommendations"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

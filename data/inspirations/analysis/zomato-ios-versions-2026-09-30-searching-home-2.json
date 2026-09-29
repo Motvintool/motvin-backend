@@ -1,0 +1,152 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-searching-home-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-searching-home-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.076Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Searching Home",
+  "flow_position": 2,
+  "name": "Search results (11)",
+  "description": "Search results screen with a row of 3 category chips. Dark theme, 28 text elements.",
+  "purpose": "Displaying search results for a query with filters and sorting options",
+  "primary_action": "Apply filters and sorting",
+  "tags": [
+    "filter",
+    "price",
+    "rating",
+    "offer",
+    "close",
+    "show results",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Zoho Corporatior”",
+        "Category strip: Sort by, Relevance, V",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a row of 3 category chips. Dark theme, 28 text elements.",
+        "28 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Searching Home”",
+        "Reached from “Search results (8)”",
+        "Leads to “Cart (8)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4s at 7:43 in the recording",
+        "Frame 2334 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211c22",
+      "role": "background",
+      "share": 0.822
+    },
+    {
+      "hex": "#40373d",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#55545b",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#6b6a72",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#1d5f43",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2334,
+    "atSeconds": 463,
+    "endSeconds": 467,
+    "holdSeconds": 4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [
+      "Sort by",
+      "Relevance",
+      "V"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Zoho Corporatior",
+    "headline": "Filters and sorting",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s119",
+    "depth": 119,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s118",
+        "via": "Tap “Deals of the Day”",
+        "name": "Search results (8)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s120",
+        "via": "Open Zoho Corporation v",
+        "name": "Cart (8)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

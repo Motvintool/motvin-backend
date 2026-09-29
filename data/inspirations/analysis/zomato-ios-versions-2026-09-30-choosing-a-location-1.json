@@ -1,0 +1,145 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-choosing-a-location-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-choosing-a-location-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.029Z",
+  "screen_type": "map",
+  "published_as": "map",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Choosing a location",
+  "flow_position": 1,
+  "name": "Location Picker (2)",
+  "description": "Map screen with a search bar. Dark theme, 26 text elements, shown only briefly.",
+  "purpose": "Choosing a delivery location via map",
+  "primary_action": "Select delivery location",
+  "tags": [
+    "search",
+    "delivery",
+    "location",
+    "address",
+    "map",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select delivery location”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Map screen with a search bar. Dark theme, 26 text elements, shown only briefly.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Choosing a location”",
+        "Reached from “Location picker”",
+        "Leads to “Location picker (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 0:56 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 281 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202027",
+      "role": "background",
+      "share": 0.679
+    },
+    {
+      "hex": "#333a4b",
+      "role": "surface",
+      "share": 0.274
+    },
+    {
+      "hex": "#525562",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#a0a1a6",
+      "role": "text",
+      "share": 0.018
+    },
+    {
+      "hex": "#71737b",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 281,
+    "atSeconds": 56.2,
+    "endSeconds": 56.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select delivery location",
+    "headline": "Rama"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Tap “- Select delivery location”",
+        "name": "Location picker"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Tap “< Select delivery location”",
+        "name": "Location picker (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

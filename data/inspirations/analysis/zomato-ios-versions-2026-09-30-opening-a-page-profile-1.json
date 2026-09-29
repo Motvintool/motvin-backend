@@ -1,0 +1,153 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-opening-a-page-profile-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-opening-a-page-profile-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.057Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Opening a page (Profile)",
+  "flow_position": 1,
+  "name": "Profile page",
+  "description": "Profile screen with 3 input fields. Dark theme, 14 text elements.",
+  "purpose": "User is viewing their personal profile details",
+  "primary_action": "Update profile",
+  "tags": [
+    "profile",
+    "update profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with 3 input fields. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening a page (Profile)”",
+        "Reached from “Profile (4)”",
+        "Leads to “Other (10)” and “Profile (4)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 5:09 in the recording",
+        "Frame 1555 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e25",
+      "role": "background",
+      "share": 0.866
+    },
+    {
+      "hex": "#403e46",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#5d5c63",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#e8e9f6",
+      "role": "text",
+      "share": 0.015
+    },
+    {
+      "hex": "#bcc1dc",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1555,
+    "atSeconds": 309.6,
+    "endSeconds": 311.2,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your Profile",
+    "headline": "Anniversary",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s084",
+    "depth": 84,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s083",
+        "via": "Open Your Profile",
+        "name": "Profile (4)"
+      },
+      {
+        "from": "s083",
+        "via": "Back to Your Profile",
+        "name": "Profile (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s085",
+        "via": "Open Other",
+        "name": "Other (10)"
+      },
+      {
+        "to": "s083",
+        "via": "Back to Profile",
+        "name": "Profile (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

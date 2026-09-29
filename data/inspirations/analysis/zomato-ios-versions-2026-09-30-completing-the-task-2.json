@@ -1,0 +1,156 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-completing-the-task-2",
+  "screen_id": "zomato-ios-versions-2026-09-30-completing-the-task-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.051Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Completing the task",
+  "flow_position": 2,
+  "name": "Gift card amount selection",
+  "description": "Success bottom sheet over a dimmed screen. Dark theme, 17 text elements, shown only briefly.",
+  "purpose": "User is selecting the amount of a gift card to purchase",
+  "primary_action": "Select gift card amount",
+  "tags": [
+    "continue",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Gift card amount”",
+        "Bottom sheet over a dimmed background, covering 34% of the height from 66% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success bottom sheet over a dimmed screen. Dark theme, 17 text elements, shown only briefly.",
+        "17 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Completing the task”",
+        "Reached from “Help”",
+        "Leads to “Help (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 4:12 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1262 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c22",
+      "role": "background",
+      "share": 0.482
+    },
+    {
+      "hex": "#d04d5a",
+      "role": "accent",
+      "share": 0.2
+    },
+    {
+      "hex": "#37323b",
+      "role": "surface",
+      "share": 0.17
+    },
+    {
+      "hex": "#9e404b",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#d87a72",
+      "role": "text",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 1262,
+    "atSeconds": 252.4,
+    "endSeconds": 252.6,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.65625,
+        "w": 1,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Gift card amount",
+    "headline": "Thank you",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s069",
+    "depth": 69,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s068",
+        "via": "Tap “Gift”",
+        "name": "Help"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s070",
+        "via": "Dismiss",
+        "name": "Help (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

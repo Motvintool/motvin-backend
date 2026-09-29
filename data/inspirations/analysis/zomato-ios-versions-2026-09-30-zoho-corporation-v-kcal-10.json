@@ -1,0 +1,154 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-zoho-corporation-v-kcal-10",
+  "screen_id": "zomato-ios-versions-2026-09-30-zoho-corporation-v-kcal-10",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.097Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Zoho Corporation v (Kcal)",
+  "flow_position": 10,
+  "name": "Snacks options (4)",
+  "description": "Search results screen with prices. Dark theme, 36 text elements.",
+  "purpose": "Displaying a selection of snacks options with details and pricing for a specific restaurant",
+  "primary_action": "Add to cart",
+  "tags": [
+    "filter",
+    "dry a",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Snacks options”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with prices. Dark theme, 36 text elements.",
+        "36 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Zoho Corporation v (Kcal)”",
+        "Reached from “Payment method — scrolled”",
+        "Leads to “Zoho Corporation v (11)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 9:26 in the recording",
+        "Frame 2835 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232229",
+      "role": "background",
+      "share": 0.704
+    },
+    {
+      "hex": "#434248",
+      "role": "surface",
+      "share": 0.138
+    },
+    {
+      "hex": "#636067",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#817c83",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#d9d6df",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2835,
+    "atSeconds": 566.4,
+    "endSeconds": 567.2,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Snacks options",
+    "headline": "Anjappar",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s157",
+    "depth": 157,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open Snacks options",
+        "name": "Payment method — scrolled"
+      },
+      {
+        "from": "s062",
+        "via": "Back to Search results",
+        "name": "Payment method — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s158",
+        "via": "Open Zoho Corporation v",
+        "name": "Zoho Corporation v (11)"
+      },
+      {
+        "to": "s158",
+        "via": "Back to Zoho Corporation v",
+        "name": "Zoho Corporation v (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

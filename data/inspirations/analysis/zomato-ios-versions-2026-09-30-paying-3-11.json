@@ -1,0 +1,153 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-paying-3-11",
+  "screen_id": "zomato-ios-versions-2026-09-30-paying-3-11",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.040Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 11,
+  "name": "Collection creation success",
+  "description": "Success screen. Dark theme, 12 text elements.",
+  "purpose": "Confirming successful creation of a new collection",
+  "primary_action": "Confirm collection creation",
+  "tags": [
+    "delivery",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Collection created successfully”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 13 in “Paying”",
+        "Reached from “Form” and “Other (3)”",
+        "Leads to “Search results — loading” and “Payment method”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2s at 2:23 in the recording",
+        "Frame 724 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a20",
+      "role": "background",
+      "share": 0.564
+    },
+    {
+      "hex": "#464c62",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#da4a4b",
+      "role": "accent",
+      "share": 0.023
+    },
+    {
+      "hex": "#ef8479",
+      "role": "text",
+      "share": 0.019
+    },
+    {
+      "hex": "#2c2f46",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 724,
+    "atSeconds": 143,
+    "endSeconds": 145,
+    "holdSeconds": 2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Collection created successfully",
+    "headline": "Dining"
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s048",
+        "via": "Tap “Dining”",
+        "name": "Form"
+      },
+      {
+        "from": "s051",
+        "via": "Back to Success",
+        "name": "Other (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s012",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

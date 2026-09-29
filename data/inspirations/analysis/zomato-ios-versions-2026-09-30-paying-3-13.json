@@ -1,0 +1,140 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-paying-3-13",
+  "screen_id": "zomato-ios-versions-2026-09-30-paying-3-13",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.044Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "food",
+  "flow": "onboarding",
+  "flow_name": "Paying",
+  "flow_position": 13,
+  "name": "Recommendations from friends",
+  "description": "Onboarding screen. Dark theme, 7 text elements, shown only briefly.",
+  "purpose": "Introducing recommendations from friends",
+  "primary_action": "Get started",
+  "tags": [
+    "get started",
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage recommendations”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen. Dark theme, 7 text elements, shown only briefly.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 13 in “Paying”",
+        "Reached from “Manage recommendations (empty)”",
+        "Leads to “Profile (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 2:37 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 785 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d1e",
+      "role": "background",
+      "share": 0.783
+    },
+    {
+      "hex": "#483f39",
+      "role": "surface",
+      "share": 0.114
+    },
+    {
+      "hex": "#ed5060",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#655c5b",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#933d44",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 785,
+    "atSeconds": 157,
+    "endSeconds": 157.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Manage recommendations",
+    "headline": "Are recommending",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s053",
+    "depth": 52,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s052",
+        "via": "Tap “Manage recommendations”",
+        "name": "Manage recommendations (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s054",
+        "via": "Tap “Manage recommendations”",
+        "name": "Profile (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,168 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-home-8",
+  "screen_id": "zomato-ios-versions-2026-09-30-home-8",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-29T18:48:45.079Z",
+  "screen_type": "cart",
+  "published_as": "cart",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Home",
+  "flow_position": 8,
+  "name": "Home (2)",
+  "description": "Cart screen with a 3-item tab bar, a search bar and a primary action labelled “Explore ›”. Dark theme, 33 text elements.",
+  "purpose": "The main screen of the app showing the home page with search bar, promotional banners, and recommended food items.",
+  "primary_action": "Search for items or restaurants",
+  "tags": [
+    "search",
+    "filter",
+    "cart",
+    "delivery",
+    "home",
+    "dining",
+    "healthy mode",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Dining, Healthy Mode",
+        "Navigation title reads “Zoho Corporation v”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Cart screen with a 3-item tab bar, a search bar and a primary action labelled “Explore ›”. Dark theme, 33 text elements.",
+        "Calls to action: “Explore ›”",
+        "33 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 13 in “Home”",
+        "Reached from “Cart (9)” and “Cart (12)”",
+        "Leads to “Search results — loading” and “Search results (11)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 7:58 in the recording",
+        "Frame 2400 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1a",
+      "role": "background",
+      "share": 0.58
+    },
+    {
+      "hex": "#423c37",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#5d5957",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#030203",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#dfb560",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 2400,
+    "atSeconds": 478.6,
+    "endSeconds": 480.2,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [
+      "Home",
+      "Dining",
+      "Healthy Mode"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Explore ›"
+    ],
+    "keyboard": false,
+    "title": "Zoho Corporation v",
+    "headline": "FREE DELIVERY"
+  },
+  "crawler": {
+    "nodeId": "s123",
+    "depth": 123,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s122",
+        "via": "Tap “Zoho Corporation v”",
+        "name": "Cart (9)"
+      },
+      {
+        "from": "s130",
+        "via": "Back to Cart",
+        "name": "Cart (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Search results — loading",
+        "name": "Search results — loading"
+      },
+      {
+        "to": "s160",
+        "via": "Tap “BurgerMan”",
+        "name": "Search results (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}
