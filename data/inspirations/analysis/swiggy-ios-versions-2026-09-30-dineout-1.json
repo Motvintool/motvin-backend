@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-09-30-dineout-1",
   "screen_id": "swiggy-ios-versions-2026-09-30-dineout-1",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.048Z",
+  "analyzedAt": "2026-09-30T17:31:23.993Z",
   "screen_type": "category",
   "published_as": "feed",
   "states": [],
@@ -10,19 +10,14 @@
   "flow": "discovery",
   "flow_name": "Dineout",
   "flow_position": 1,
-  "name": "Dineout category",
-  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
-  "purpose": "The main category for dining options",
-  "primary_action": "Select a category to view restaurants",
+  "name": "Dineout home",
+  "description": "Category screen with a row of 4 category chips, a search bar and a primary action labelled “EXPLORE NOW”. Light theme, 21 text elements, shown only briefly.",
+  "purpose": "Displaying the main interface for dining out",
+  "primary_action": "Search for restaurants",
   "tags": [
     "search",
-    "offer",
-    "address",
     "dineout",
     "bites",
-    "my corner",
-    "scenes",
-    "feed",
     "category",
     "ios"
   ],
@@ -31,6 +26,8 @@
     "search-bar",
     "list",
     "chip",
+    "cta",
+    "button",
     "banner"
   ],
   "style": [
@@ -41,8 +38,8 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “In the spotlight”",
-        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Dineout, Food, Scenes, Instamart",
         "Search bar present",
         "Light style"
       ]
@@ -50,63 +47,65 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 30 text elements.",
-        "30 text elements recognised"
+        "Category screen with a row of 4 category chips, a search bar and a primary action labelled “EXPLORE NOW”. Light theme, 21 text elements, shown only briefly.",
+        "Calls to action: “EXPLORE NOW”",
+        "21 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Dineout”",
-        "Reached from “Dineout home — loading”",
-        "Leads to “Category page”"
+        "Step 1 of 9 in “Dineout”",
+        "Reached from “Settings”",
+        "Leads to “Dineout home (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:12 in the recording",
-        "Frame 67 of 85 sampled at 5 fps",
+        "Held for 0.4s at 6:18 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1894 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafafa",
+      "hex": "#fcfcfd",
       "role": "background",
-      "share": 0.626
+      "share": 0.58
     },
     {
-      "hex": "#cbc9c4",
-      "role": "surface",
-      "share": 0.071
-    },
-    {
-      "hex": "#460710",
+      "hex": "#087770",
       "role": "accent",
-      "share": 0.067
+      "share": 0.07
     },
     {
-      "hex": "#e4e1dd",
+      "hex": "#dfe4e1",
       "role": "surface",
-      "share": 0.037
+      "share": 0.065
     },
     {
-      "hex": "#931d1e",
+      "hex": "#0b3c2c",
+      "role": "text",
+      "share": 0.039
+    },
+    {
+      "hex": "#395b49",
       "role": "surface",
-      "share": 0.033
+      "share": 0.028
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 67,
-    "atSeconds": 12.4,
-    "endSeconds": 13.6,
-    "holdSeconds": 1.2,
-    "brief": false,
+    "frames": 2950,
+    "frame": 1894,
+    "atSeconds": 378.6,
+    "endSeconds": 379,
+    "holdSeconds": 0.4,
+    "brief": true,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
@@ -115,23 +114,27 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 30,
-    "tabLabels": [],
-    "chipLabels": [
-      "Food",
+    "lineCount": 21,
+    "tabLabels": [
       "Dineout",
+      "Bites"
+    ],
+    "chipLabels": [
+      "Dineout",
+      "Food",
       "Scenes",
       "Instamart"
     ],
-    "ctas": [],
+    "ctas": [
+      "EXPLORE NOW"
+    ],
     "keyboard": false,
-    "title": "In the spotlight",
-    "headline": "Starting At 749!",
-    "tabBar": false
+    "title": "Guduvancheri",
+    "headline": "It's Dineout Time!"
   },
   "crawler": {
-    "nodeId": "s010",
-    "depth": 9,
+    "nodeId": "s105",
+    "depth": 104,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -139,16 +142,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s009",
-        "via": "Wait 0.6s",
-        "name": "Dineout home — loading"
+        "from": "s014",
+        "via": "Open Guduvancheri",
+        "name": "Settings"
       }
     ],
     "leadsTo": [
       {
-        "to": "s011",
-        "via": "Open Category page",
-        "name": "Category page"
+        "to": "s106",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Dineout home (2)"
       }
     ]
   },

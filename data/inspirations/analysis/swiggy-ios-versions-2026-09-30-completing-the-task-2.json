@@ -1,0 +1,162 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-completing-the-task-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-completing-the-task-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.022Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Completing the task",
+  "flow_position": 2,
+  "name": "Order placed (3)",
+  "description": "Success dialog over a dimmed screen, on top of Order placed with a primary action labelled “Apply Coupon” and prices. Light theme, 27 text elements, shown only briefly.",
+  "purpose": "Confirming the order details and delivery information",
+  "primary_action": "Confirm the order",
+  "tags": [
+    "delivery",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “KFC”",
+        "Dialog over a dimmed background, covering 17% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success dialog over a dimmed screen, on top of Order placed with a primary action labelled “Apply Coupon” and prices. Light theme, 27 text elements, shown only briefly.",
+        "Calls to action: “Apply Coupon”",
+        "27 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Completing the task”",
+        "Reached from “Order placed (6)”",
+        "Leads to “Order placed (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:43 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2315 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#65666b",
+      "role": "background",
+      "share": 0.806
+    },
+    {
+      "hex": "#f9f8fa",
+      "role": "text",
+      "share": 0.166
+    },
+    {
+      "hex": "#808084",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#5e4743",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#dbdbdf",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2315,
+    "atSeconds": 463,
+    "endSeconds": 463.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Apply Coupon"
+    ],
+    "keyboard": false,
+    "title": "KFC",
+    "headline": "Applied"
+  },
+  "crawler": {
+    "nodeId": "s142",
+    "depth": 141,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s141",
+        "via": "Tap “/ Applied”",
+        "name": "Order placed (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s141",
+        "via": "Dismiss",
+        "name": "Order placed (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

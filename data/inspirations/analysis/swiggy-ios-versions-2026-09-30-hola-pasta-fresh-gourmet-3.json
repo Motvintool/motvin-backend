@@ -1,0 +1,143 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-hola-pasta-fresh-gourmet-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-hola-pasta-fresh-gourmet-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.976Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Hola Pasta - Fresh Gourmet",
+  "flow_position": 3,
+  "name": "Restaurant Detail (4)",
+  "description": "Other screen with a search bar. Light theme, 24 text elements, shown only briefly.",
+  "purpose": "Displaying information about a specific restaurant, including its name, ratings, and details about the dishes available.",
+  "primary_action": "View details of the restaurant",
+  "tags": [
+    "search",
+    "rating",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hola Pasta - Fresh Gourmet”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Light theme, 24 text elements, shown only briefly.",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Hola Pasta - Fresh Gourmet”",
+        "Reached from “Checkout (2)”",
+        "Leads to “Best in Cakes & Desserts — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 5:13 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1566 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#e4e4e6",
+      "role": "background",
+      "share": 0.465
+    },
+    {
+      "hex": "#03050a",
+      "role": "accent",
+      "share": 0.177
+    },
+    {
+      "hex": "#474648",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#c0c0c3",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#a0a0a3",
+      "role": "surface",
+      "share": 0.046
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1566,
+    "atSeconds": 313.2,
+    "endSeconds": 313.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Hola Pasta - Fresh Gourmet",
+    "headline": "LeanCrust"
+  },
+  "crawler": {
+    "nodeId": "s083",
+    "depth": 82,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s082",
+        "via": "Tap “Hola Pasta - Fresh Gourmet”",
+        "name": "Checkout (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s056",
+        "via": "Back to Best in Cakes & Desserts — loading",
+        "name": "Best in Cakes & Desserts — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

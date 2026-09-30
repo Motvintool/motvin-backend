@@ -2,37 +2,35 @@
   "screenId": "swiggy-ios-versions-2026-09-30-instamart-1",
   "screen_id": "swiggy-ios-versions-2026-09-30-instamart-1",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.048Z",
-  "screen_type": "category",
+  "analyzedAt": "2026-09-30T17:31:23.941Z",
+  "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "food",
   "flow": "discovery",
   "flow_name": "Instamart",
   "flow_position": 1,
-  "name": "Instamart",
-  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
-  "purpose": "Displays the Instamart category with search and promotions",
-  "primary_action": "Search for items in Instamart category",
+  "name": "Instamart home",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar and prices. Light theme, 44 text elements.",
+  "purpose": "View and shop for groceries and food items",
+  "primary_action": "Search for items or view categories",
   "tags": [
     "search",
-    "address",
+    "delivery",
     "instamart",
     "categories",
-    "redbull",
+    "print",
     "feed",
-    "category",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
     "search-bar",
+    "price",
     "list",
     "chip",
-    "carousel",
-    "page-indicator",
-    "cta",
-    "button"
+    "banner"
   ],
   "style": [
     "light"
@@ -41,101 +39,101 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
+        "Tab bar with 3 items: Instamart, Categories, Print",
         "Category strip: Dineout, Scenes, Food, Instamart",
         "Search bar present",
-        "Paged carousel with a page indicator",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar, a paged carousel and a primary action labelled “SHOP NOW”. Light theme, 24 text elements.",
-        "Calls to action: “SHOP NOW”",
-        "24 text elements recognised"
+        "Feed screen with a 3-item tab bar, a row of 4 category chips, a search bar and prices. Light theme, 44 text elements.",
+        "44 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Instamart”",
-        "Reached from “Instamart home — loading”",
-        "Leads to “Dineout home — loading”"
+        "Step 1 of 3 in “Instamart”",
+        "Reached from “Create account (3)”, “Resh items”, “Checkout”, “Esh items”, “Instamart home — loading” and “Instamart home (3)”",
+        "Leads to “Create account (3)”, “Food home”, “Food home — loading”, “Settings”, “Instamart home (2)” and “Dineout home — scrolled — scrolled”",
+        "Returned to 6 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.8s at 0:11 in the recording",
-        "Frame 58 of 85 sampled at 5 fps",
+        "Held for 2.2s at 2:45 in the recording",
+        "Frame 838 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafbfc",
+      "hex": "#f0f3fc",
       "role": "background",
-      "share": 0.601
+      "share": 0.679
     },
     {
-      "hex": "#dfdad3",
+      "hex": "#cdd1e1",
       "role": "surface",
-      "share": 0.109
+      "share": 0.085
     },
     {
-      "hex": "#baa996",
-      "role": "surface",
-      "share": 0.101
+      "hex": "#80097d",
+      "role": "accent",
+      "share": 0.037
     },
     {
-      "hex": "#96897b",
+      "hex": "#570a53",
       "role": "text",
-      "share": 0.029
+      "share": 0.023
     },
     {
-      "hex": "#c9c5be",
+      "hex": "#bbb2c8",
       "role": "surface",
-      "share": 0.021
+      "share": 0.012
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 58,
-    "atSeconds": 11,
-    "endSeconds": 11.8,
-    "holdSeconds": 0.8,
+    "frames": 2950,
+    "frame": 838,
+    "atSeconds": 165.6,
+    "endSeconds": 167.8,
+    "holdSeconds": 2.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 6
   },
   "signals": {
-    "lineCount": 24,
-    "tabLabels": [],
+    "lineCount": 44,
+    "tabLabels": [
+      "Instamart",
+      "Categories",
+      "Print"
+    ],
     "chipLabels": [
       "Dineout",
       "Scenes",
       "Food",
       "Instamart"
     ],
-    "ctas": [
-      "SHOP NOW"
-    ],
+    "ctas": [],
     "keyboard": false,
     "title": null,
-    "headline": "Corner",
-    "tabBar": false
+    "headline": "Store"
   },
   "crawler": {
-    "nodeId": "s008",
-    "depth": 7,
+    "nodeId": "s034",
+    "depth": 33,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -143,16 +141,66 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s007",
-        "via": "Wait 0.8s",
+        "from": "s026",
+        "via": "Open Instamart home",
+        "name": "Create account (3)"
+      },
+      {
+        "from": "s051",
+        "via": "Back to Instamart home",
+        "name": "Resh items"
+      },
+      {
+        "from": "s079",
+        "via": "Switch to Instamart",
+        "name": "Checkout"
+      },
+      {
+        "from": "s104",
+        "via": "Back to Instamart home",
+        "name": "Esh items"
+      },
+      {
+        "from": "s155",
+        "via": "Wait 0.4s",
         "name": "Instamart home — loading"
+      },
+      {
+        "from": "s160",
+        "via": "Back to Instamart home",
+        "name": "Instamart home (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s009",
-        "via": "Tap “Dineout”",
-        "name": "Dineout home — loading"
+        "to": "s026",
+        "via": "Back to Create account",
+        "name": "Create account (3)"
+      },
+      {
+        "to": "s007",
+        "via": "Switch to Food",
+        "name": "Food home"
+      },
+      {
+        "to": "s025",
+        "via": "Back to Food home — loading",
+        "name": "Food home — loading"
+      },
+      {
+        "to": "s014",
+        "via": "Back to Settings",
+        "name": "Settings"
+      },
+      {
+        "to": "s156",
+        "via": "Tap “Instamart”",
+        "name": "Instamart home (2)"
+      },
+      {
+        "to": "s109",
+        "via": "Switch to Dineout",
+        "name": "Dineout home — scrolled — scrolled"
       }
     ]
   },

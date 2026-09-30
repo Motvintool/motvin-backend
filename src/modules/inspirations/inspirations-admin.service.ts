@@ -42,6 +42,8 @@ import { LoaderService } from './loader.service';
  */
 
 const SLUG = /^[a-z0-9][a-z0-9-]{0,63}$/;
+/** How many screens an app's card carousel can show — the web card caps its dots at the same number. */
+const MAX_CARD_SCREENS = 4;
 const BASENAME = /^[a-z0-9][a-z0-9-]{0,80}$/;
 
 export type AdminScreenFile = {
@@ -187,6 +189,12 @@ export class InspirationsAdminService {
     const flows = readJson<{ flows?: any[] }>(join(this.root, 'flows.json'), { flows: [] }).flows || [];
     const manifest = readJson<any>(join(this.root, 'manifest.json'), { counts: {}, screens: [] });
     const publishedIds = new Set<string>((manifest.screens || []).map((s: any) => s.id));
+    // Where each published screen sits in the manifest — the order the public
+    // app page shows them in (by capture moment, then flow and step, then
+    // name; see the builder). The admin tabs list files in that same order,
+    // so a version's screens or a card-carousel pool reads like the app page
+    // rather than like a folder walk that puts "browsing/1" before the splash.
+    const manifestOrder = new Map<string, number>((manifest.screens || []).map((s: any, i: number) => [s.id, i]));
 
     const files: AdminScreenFile[] = [];
     for (const platform of PLATFORMS) {
@@ -255,7 +263,14 @@ export class InspirationsAdminService {
       apps: apps.map((a: any) => ({ ...a, versions: this.computeVersions(a.id, files) })),
       sources,
       flows,
-      files: files.sort((a, b) => a.appId.localeCompare(b.appId) || a.file.localeCompare(b.file)),
+      files: files.sort((a, b) => {
+        if (a.appId !== b.appId) return a.appId.localeCompare(b.appId);
+        // Published screens in manifest order; files held back come after, by name.
+        const oa = manifestOrder.get(a.id) ?? Number.POSITIVE_INFINITY;
+        const ob = manifestOrder.get(b.id) ?? Number.POSITIVE_INFINITY;
+        if (oa !== ob) return oa - ob;
+        return a.file.localeCompare(b.file, undefined, { numeric: true });
+      }),
       logos,
       counts: manifest.counts || {},
       generatedAt: manifest.generatedAt || null,
@@ -700,6 +715,14 @@ export class InspirationsAdminService {
       ratingFields = { rating, ratingCount };
     }
 
+    // The screens an admin picked for the app's card carousel, in order. Left
+    // out of the request, any earlier pick stays; sent as an empty list, the
+    // card goes back to choosing automatically (see coverScreen on the web).
+    let cardFields: { cardScreens?: string[] } = {};
+    if (input.cardScreens !== undefined && input.cardScreens !== null) {
+      cardFields = { cardScreens: this.readCardScreens(id, input.cardScreens) };
+    }
+
     const record = {
       id,
       name,
@@ -708,6 +731,7 @@ export class InspirationsAdminService {
       tagline: input.tagline ? String(input.tagline).trim() : '',
       ...(input.logo ? { logo: String(input.logo) } : {}),
       ...ratingFields,
+      ...cardFields,
     };
 
     const index = apps.findIndex((a) => a.id === id);
@@ -717,6 +741,39 @@ export class InspirationsAdminService {
     this.writeJson(file, { version: data.version || 1, apps });
     this.ensurePublishable(id);
     return { app: record, report: this.rebuild() };
+  }
+
+  /**
+   * Validates the ids picked for an app's card carousel: strings, no
+   * repeats, at most MAX_CARD_SCREENS, and every one a screen actually stored
+   * for this app — a card pointing at another app's screen, or at one that
+   * was deleted, would be a silent blank in the gallery.
+   */
+  private readCardScreens(appId: string, raw: unknown): string[] {
+    if (!Array.isArray(raw) || raw.some((v) => typeof v !== 'string')) {
+      throw new BadRequestException('cardScreens must be a list of screen ids');
+    }
+    const ids = Array.from(new Set((raw as string[]).map((v) => v.trim()).filter(Boolean)));
+    if (ids.length > MAX_CARD_SCREENS) {
+      throw new BadRequestException(`cardScreens may hold at most ${MAX_CARD_SCREENS} screens`);
+    }
+    const stored = this.storedScreenIds(appId);
+    const unknown = ids.filter((sid) => !stored.has(sid));
+    if (unknown.length) {
+      throw new BadRequestException(`cardScreens: not stored for "${appId}": ${unknown.join(', ')}`);
+    }
+    return ids;
+  }
+
+  /** Every screen id currently on disk for an app, across platforms and versions. */
+  private storedScreenIds(appId: string): Set<string> {
+    const ids = new Set<string>();
+    for (const platform of PLATFORMS) {
+      const dir = join(this.root, 'screens', platform, appId);
+      if (!existsSync(dir)) continue;
+      for (const entry of listAppScreenFiles(dir)) ids.add(screenIdFor(platform, appId, entry.file));
+    }
+    return ids;
   }
 
   /**

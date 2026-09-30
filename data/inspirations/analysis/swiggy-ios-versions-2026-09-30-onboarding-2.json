@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-09-30-onboarding-2",
   "screen_id": "swiggy-ios-versions-2026-09-30-onboarding-2",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.043Z",
+  "analyzedAt": "2026-09-30T17:31:23.920Z",
   "screen_type": "login",
   "published_as": "login",
   "states": [
@@ -13,9 +13,9 @@
   "flow_name": "Onboarding",
   "flow_position": 2,
   "name": "Phone number entry",
-  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-  "purpose": "User enters their mobile number to proceed with the app",
-  "primary_action": "Enter mobile number",
+  "description": "Login screen with the keyboard open. Light theme, 26 text elements.",
+  "purpose": "The user is entering their mobile number to proceed with the app",
+  "primary_action": "Enter the mobile number",
   "tags": [
     "login",
     "keyboard",
@@ -25,10 +25,7 @@
     "nav-bar",
     "keyboard",
     "text-field",
-    "form",
     "list",
-    "cta",
-    "button",
     "legal-text"
   ],
   "style": [
@@ -47,79 +44,77 @@
     {
       "title": "Content",
       "points": [
-        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
-        "Calls to action: “Continue”",
-        "28 text elements recognised",
+        "Login screen with the keyboard open. Light theme, 26 text elements.",
+        "26 text elements recognised",
         "State: keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 3 in “Onboarding”",
+        "Step 2 of 4 in “Onboarding”",
         "Reached from “Splash screen”",
-        "Leads to “Location picker (logged out)”"
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:01 in the recording",
-        "Frame 13 of 85 sampled at 5 fps",
+        "Held for 2.2s at 0:01 in the recording",
+        "Frame 17 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f7f7",
+      "hex": "#f8f6f7",
       "role": "background",
-      "share": 0.56
+      "share": 0.556
     },
     {
-      "hex": "#fe5302",
+      "hex": "#fe5304",
       "role": "accent",
-      "share": 0.173
+      "share": 0.191
     },
     {
-      "hex": "#e1e2e3",
+      "hex": "#e3e3e5",
       "role": "surface",
-      "share": 0.167
+      "share": 0.132
     },
     {
-      "hex": "#fb7d40",
+      "hex": "#fc7d42",
       "role": "surface",
       "share": 0.027
     },
     {
-      "hex": "#c5c5c5",
+      "hex": "#f7c2a8",
       "role": "surface",
-      "share": 0.022
+      "share": 0.019
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 13,
-    "atSeconds": 1.8,
-    "endSeconds": 3,
-    "holdSeconds": 1.2,
+    "frames": 2950,
+    "frame": 17,
+    "atSeconds": 1.4,
+    "endSeconds": 3.6,
+    "holdSeconds": 2.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
-    "lineCount": 28,
+    "lineCount": 26,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [
-      "Continue"
-    ],
+    "ctas": [],
     "keyboard": true,
     "title": "Enter your number",
     "headline": "Enter your number"
@@ -142,8 +137,8 @@
     "leadsTo": [
       {
         "to": "s003",
-        "via": "Open Select your location",
-        "name": "Location picker (logged out)"
+        "via": "Open We are validating the OTP",
+        "name": "OTP verification"
       }
     ]
   },

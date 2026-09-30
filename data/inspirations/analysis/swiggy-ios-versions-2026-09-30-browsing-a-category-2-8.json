@@ -1,0 +1,161 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-8",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-8",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.969Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "food",
+  "flow": "onboarding",
+  "flow_name": "Browsing a category",
+  "flow_position": 8,
+  "name": "Promotional offer",
+  "description": "Coach mark dialog over a dimmed screen with a primary action labelled “Add to cart”. Light theme, 33 text elements.",
+  "purpose": "Displaying a promotional offer for Swiggy One benefits",
+  "primary_action": "View promotional offer",
+  "tags": [
+    "cart",
+    "skip for now",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "coach-mark"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Theobroma”",
+        "Dialog over a dimmed background, covering 39% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark dialog over a dimmed screen with a primary action labelled “Add to cart”. Light theme, 33 text elements.",
+        "Calls to action: “Add to cart”",
+        "33 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 13 in “Browsing a category”",
+        "Reached from “Theobroma”",
+        "Leads to “Order placed (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.2s at 4:33 in the recording",
+        "Frame 1384 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#64666b",
+      "role": "background",
+      "share": 0.564
+    },
+    {
+      "hex": "#fdfbfb",
+      "role": "text",
+      "share": 0.271
+    },
+    {
+      "hex": "#ebdcd7",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#ff5103",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#11131a",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1384,
+    "atSeconds": 273.8,
+    "endSeconds": 277,
+    "holdSeconds": 3.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Add to cart"
+    ],
+    "keyboard": false,
+    "title": "Theobroma",
+    "headline": "Join Swiggy One at just F1 for",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s072",
+    "depth": 71,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s071",
+        "via": "Tap “- Theobroma”",
+        "name": "Theobroma"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s073",
+        "via": "Dismiss",
+        "name": "Order placed (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

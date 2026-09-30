@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-filling-in-a-form-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-filling-in-a-form-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.017Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "creation",
+  "flow_name": "Filling in a form",
+  "flow_position": 1,
+  "name": "Form screen",
+  "description": "Form screen with the keyboard open. Light theme, 52 text elements.",
+  "purpose": "Filling out a form for event booking",
+  "primary_action": "Fill out event booking form",
+  "tags": [
+    "search",
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Light theme, 52 text elements.",
+        "52 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Filling in a form”",
+        "Reached from “Food home (2)”",
+        "Leads to “Food home (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:30 in the recording",
+        "Frame 2259 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#4c494c",
+      "role": "background",
+      "share": 0.269
+    },
+    {
+      "hex": "#b8b7ba",
+      "role": "surface",
+      "share": 0.193
+    },
+    {
+      "hex": "#dad9dc",
+      "role": "surface",
+      "share": 0.16
+    },
+    {
+      "hex": "#fcfbfc",
+      "role": "text",
+      "share": 0.159
+    },
+    {
+      "hex": "#210b12",
+      "role": "accent",
+      "share": 0.113
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2259,
+    "atSeconds": 450.8,
+    "endSeconds": 452,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 52,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": null,
+    "headline": "Popular Brands"
+  },
+  "crawler": {
+    "nodeId": "s135",
+    "depth": 134,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s134",
+        "via": "Tap “Popular Brands”",
+        "name": "Food home (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s134",
+        "via": "Type “Bolt”",
+        "name": "Food home (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

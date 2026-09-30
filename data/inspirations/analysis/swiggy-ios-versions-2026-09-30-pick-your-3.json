@@ -1,0 +1,152 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-pick-your-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-pick-your-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.030Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Pick Your",
+  "flow_position": 3,
+  "name": "Meals category",
+  "description": "Feed screen with a 4-item tab bar, a row of 3 category chips and prices. Light theme, 27 text elements, shown only briefly.",
+  "purpose": "View available meals and their details",
+  "primary_action": "Browse meals",
+  "tags": [
+    "meals",
+    "cakes",
+    "rolls",
+    "dosa",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Nse Banta Hain”",
+        "Category strip: HIGH, LOW, PROTEIN",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar, a row of 3 category chips and prices. Light theme, 27 text elements, shown only briefly.",
+        "27 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Pick Your”",
+        "Reached from “Order placed (9)”",
+        "Leads to “Checkout (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 8:22 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2510 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f5f7",
+      "role": "background",
+      "share": 0.273
+    },
+    {
+      "hex": "#feb902",
+      "role": "accent",
+      "share": 0.19
+    },
+    {
+      "hex": "#230a50",
+      "role": "text",
+      "share": 0.139
+    },
+    {
+      "hex": "#d9d7d4",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#c0bebf",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2510,
+    "atSeconds": 502,
+    "endSeconds": 502.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [
+      "HIGH",
+      "LOW",
+      "PROTEIN"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Nse Banta Hain",
+    "headline": "FITPASS",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s154",
+    "depth": 153,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s153",
+        "via": "Open Nse Banta Hain",
+        "name": "Order placed (9)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s151",
+        "via": "Switch to Food",
+        "name": "Checkout (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

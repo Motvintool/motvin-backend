@@ -1,0 +1,144 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-searching-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-searching-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.939Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Searching",
+  "flow_position": 3,
+  "name": "Train search",
+  "description": "Sign up screen with a search bar. Light theme, 38 text elements, shown only briefly.",
+  "purpose": "Search for popular trains to unlock exclusive benefits",
+  "primary_action": "Enter train name",
+  "tags": [
+    "search",
+    "payment",
+    "rewards",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search by train”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a search bar. Light theme, 38 text elements, shown only briefly.",
+        "38 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Searching”",
+        "Reached from “Search by train number/name”",
+        "Leads to “Create account (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 2:29 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 746 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f1f2",
+      "role": "background",
+      "share": 0.804
+    },
+    {
+      "hex": "#d4d1d3",
+      "role": "surface",
+      "share": 0.117
+    },
+    {
+      "hex": "#1c4399",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#9fabc9",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#bdb8bb",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 746,
+    "atSeconds": 149.2,
+    "endSeconds": 149.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search by train",
+    "headline": "Ne (Join now"
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Tap “• Search by Train”",
+        "name": "Search by train number/name"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Back to Create account",
+        "name": "Create account (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -2,32 +2,26 @@
   "screenId": "swiggy-ios-versions-2026-09-30-onboarding-3",
   "screen_id": "swiggy-ios-versions-2026-09-30-onboarding-3",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.044Z",
-  "screen_type": "empty_state",
-  "published_as": "empty",
-  "states": [
-    "empty"
-  ],
+  "analyzedAt": "2026-09-30T17:31:23.922Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
   "category": "food",
-  "flow": "discovery",
+  "flow": "authentication",
   "flow_name": "Onboarding",
   "flow_position": 3,
-  "name": "Location picker (logged out)",
-  "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-  "purpose": "User selects a location to find food options",
-  "primary_action": "Select location or use current location",
+  "name": "OTP verification",
+  "description": "Verification code screen. Light theme, 11 text elements, shown only briefly.",
+  "purpose": "The user is receiving and entering a verification code sent via SMS",
+  "primary_action": "Enter the verification code",
   "tags": [
-    "search",
-    "location",
-    "address",
-    "empty-state",
-    "empty",
+    "get via sms",
+    "get via call",
+    "otp",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "search-bar",
-    "empty-state"
+    "nav-bar"
   ],
   "style": [
     "light"
@@ -37,109 +31,108 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Select your location”",
-        "Search bar present",
+        "Navigation title reads “We are validating the OTP”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
-        "6 text elements recognised",
-        "State: empty"
+        "Verification code screen. Light theme, 11 text elements, shown only briefly.",
+        "11 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 3 in “Onboarding”",
+        "Step 3 of 4 in “Onboarding”",
         "Reached from “Phone number entry”",
-        "Leads to “Food home — loading”",
-        "Returned to 2 times in the recording"
+        "Leads to “Address form”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 0:03 in the recording",
-        "Frame 24 of 85 sampled at 5 fps",
+        "Held for 0.4s at 0:08 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 43 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f2f2f6",
+      "hex": "#fefdfe",
       "role": "background",
-      "share": 0.944
+      "share": 0.629
     },
     {
-      "hex": "#d0d2da",
-      "role": "surface",
-      "share": 0.043
-    },
-    {
-      "hex": "#bcbec5",
-      "role": "surface",
-      "share": 0.004
-    },
-    {
-      "hex": "#e27073",
+      "hex": "#fe5305",
       "role": "accent",
-      "share": 0.003
+      "share": 0.215
     },
     {
-      "hex": "#9fa3af",
+      "hex": "#fd8349",
       "role": "surface",
-      "share": 0.002
+      "share": 0.042
+    },
+    {
+      "hex": "#cdd3d0",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#fbc8b1",
+      "role": "surface",
+      "share": 0.029
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 24,
-    "atSeconds": 3,
-    "endSeconds": 3.4,
-    "holdSeconds": 0.6,
-    "brief": false,
+    "frames": 2950,
+    "frame": 43,
+    "atSeconds": 8.4,
+    "endSeconds": 8.8,
+    "holdSeconds": 0.4,
+    "brief": true,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
-    "lineCount": 6,
+    "lineCount": 11,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Select your location",
-    "headline": "Please log in to see"
+    "title": "We are validating the OTP",
+    "headline": "We are validating the OTP",
+    "tabBar": false
   },
   "crawler": {
     "nodeId": "s003",
     "depth": 2,
     "path": [],
     "visits": 1,
-    "blocked": false,
-    "blockedReason": null,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
     "actions": [],
     "reachedFrom": [
       {
         "from": "s002",
-        "via": "Open Select your location",
+        "via": "Open We are validating the OTP",
         "name": "Phone number entry"
       }
     ],
     "leadsTo": [
       {
         "to": "s004",
-        "via": "Open Food home — loading",
-        "name": "Food home — loading"
+        "via": "Open Select your location",
+        "name": "Address form"
       }
     ]
   },

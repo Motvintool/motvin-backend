@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-opening-a-page-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-opening-a-page-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.023Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Opening a page",
+  "flow_position": 1,
+  "name": "Phone number entry (3)",
+  "description": "Login screen with the keyboard open. Light theme, 32 text elements.",
+  "purpose": "Entering the receiver's phone number for the order",
+  "primary_action": "Enter the receiver's phone number",
+  "tags": [
+    "address",
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Yes, add receiver's details”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Light theme, 32 text elements.",
+        "32 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Opening a page”",
+        "Reached from “Phone number entry (5)”",
+        "Leads to “Phone number entry (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 7:49 in the recording",
+        "Frame 2386 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf7f6",
+      "role": "background",
+      "share": 0.466
+    },
+    {
+      "hex": "#dfdde0",
+      "role": "surface",
+      "share": 0.268
+    },
+    {
+      "hex": "#ababaf",
+      "role": "surface",
+      "share": 0.114
+    },
+    {
+      "hex": "#020409",
+      "role": "accent",
+      "share": 0.062
+    },
+    {
+      "hex": "#c4c4c8",
+      "role": "surface",
+      "share": 0.051
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2386,
+    "atSeconds": 469.6,
+    "endSeconds": 477.4,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Yes, add receiver's details",
+    "headline": "No, it's for me"
+  },
+  "crawler": {
+    "nodeId": "s143",
+    "depth": 142,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Type “Surendar”",
+        "name": "Phone number entry (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s144",
+        "via": "Tap “Surendar”",
+        "name": "Phone number entry (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

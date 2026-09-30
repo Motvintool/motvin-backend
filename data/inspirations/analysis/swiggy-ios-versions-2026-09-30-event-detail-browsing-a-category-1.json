@@ -1,0 +1,150 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-event-detail-browsing-a-category-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-event-detail-browsing-a-category-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.006Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Event detail (Browsing a category)",
+  "flow_position": 1,
+  "name": "Event detail (2)",
+  "description": "Other screen. Dark theme, 10 text elements.",
+  "purpose": "Viewing details of a specific event",
+  "primary_action": "View event details",
+  "tags": [
+    "booking",
+    "book tickets",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Event detail (Browsing a category)”",
+        "Reached from “Guduvancheri (2)” and “Lunch Wit”",
+        "Leads to “Other (7)” and “Guduvancheri (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2s at 7:02 in the recording",
+        "Frame 2119 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100e10",
+      "role": "background",
+      "share": 0.349
+    },
+    {
+      "hex": "#403328",
+      "role": "surface",
+      "share": 0.278
+    },
+    {
+      "hex": "#6e4a2b",
+      "role": "accent",
+      "share": 0.054
+    },
+    {
+      "hex": "#9c8f88",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#ded6cf",
+      "role": "text",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2119,
+    "atSeconds": 422,
+    "endSeconds": 424,
+    "holdSeconds": 2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "WITH",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s123",
+    "depth": 122,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s122",
+        "via": "Tap “WITH”",
+        "name": "Guduvancheri (2)"
+      },
+      {
+        "from": "s128",
+        "via": "Back to Other",
+        "name": "Lunch Wit"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s124",
+        "via": "Open Other",
+        "name": "Other (7)"
+      },
+      {
+        "to": "s122",
+        "via": "Back to Guduvancheri",
+        "name": "Guduvancheri (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,205 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-creating-an-account-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-creating-an-account-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.925Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 1,
+  "name": "Create account",
+  "description": "Sign up screen with 1 input field. Light theme, 31 text elements.",
+  "purpose": "User is creating a new account for the app.",
+  "primary_action": "Enter account details",
+  "tags": [
+    "payment",
+    "discount",
+    "rewards",
+    "address",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Surendar V”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 1 input field. Light theme, 31 text elements.",
+        "31 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Creating an account”",
+        "Reached from “Food home”, “Create account (2)”, “One LITE”, “Settings”, “Location picker”, “Swiggy Money” and “Other (2)”",
+        "Leads to “Other”, “One LITE”, “Settings”, “Location picker”, “Swiggy Money”, “Other (2)” and “Food home — loading”",
+        "Returned to 15 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.8s at 0:19 in the recording",
+        "Frame 112 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf8f7",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#e0dcdb",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#cbc4c5",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#f8a29c",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#8f8785",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 112,
+    "atSeconds": 19.8,
+    "endSeconds": 22.6,
+    "holdSeconds": 2.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 15
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Surendar V",
+    "headline": "One (Join now"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open Surendar V",
+        "name": "Food home"
+      },
+      {
+        "from": "s012",
+        "via": "Back to Create account",
+        "name": "Create account (2)"
+      },
+      {
+        "from": "s013",
+        "via": "Back to Create account",
+        "name": "One LITE"
+      },
+      {
+        "from": "s014",
+        "via": "Back to Create account",
+        "name": "Settings"
+      },
+      {
+        "from": "s017",
+        "via": "Back to Create account",
+        "name": "Location picker"
+      },
+      {
+        "from": "s022",
+        "via": "Back to Create account",
+        "name": "Swiggy Money"
+      },
+      {
+        "from": "s024",
+        "via": "Back to Create account",
+        "name": "Other (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Open Other",
+        "name": "Other"
+      },
+      {
+        "to": "s013",
+        "via": "Open One LITE",
+        "name": "One LITE"
+      },
+      {
+        "to": "s014",
+        "via": "Open Settings",
+        "name": "Settings"
+      },
+      {
+        "to": "s017",
+        "via": "Open Search an area or address",
+        "name": "Location picker"
+      },
+      {
+        "to": "s022",
+        "via": "Tap “Swiggy”",
+        "name": "Swiggy Money"
+      },
+      {
+        "to": "s024",
+        "via": "Open Other",
+        "name": "Other (2)"
+      },
+      {
+        "to": "s025",
+        "via": "Open Food home — loading",
+        "name": "Food home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

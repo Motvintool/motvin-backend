@@ -1,0 +1,160 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-3-4",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-3-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.015Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing a category",
+  "flow_position": 4,
+  "name": "Category Listing (6)",
+  "description": "Feed screen with a 3-item tab bar, a row of 4 category chips, a primary action labelled “ORDER NOW” and prices. Light theme, 39 text elements, shown only briefly.",
+  "purpose": "Displaying a list of categories for browsing food options",
+  "primary_action": "Browse categories",
+  "tags": [
+    "delivery",
+    "offer",
+    "pastas",
+    "bakery",
+    "chinese",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar, a row of 4 category chips, a primary action labelled “ORDER NOW” and prices. Light theme, 39 text elements, shown only briefly.",
+        "Calls to action: “ORDER NOW”",
+        "39 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Browsing a category”",
+        "Reached from “Guduvancheri (4)”",
+        "Leads to “Checkout”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:24 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2221 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#037f31",
+      "role": "background",
+      "share": 0.336
+    },
+    {
+      "hex": "#f9f8fa",
+      "role": "text",
+      "share": 0.227
+    },
+    {
+      "hex": "#d0d7d3",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#299650",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#68b484",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2221,
+    "atSeconds": 444.2,
+    "endSeconds": 444.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 39,
+    "tabLabels": [],
+    "chipLabels": [
+      "Scenes",
+      "Dineout",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "Delights",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s133",
+    "depth": 132,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s130",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Guduvancheri (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s079",
+        "via": "Switch to Food",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

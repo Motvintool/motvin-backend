@@ -1,0 +1,142 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-11",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-11",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.971Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Browsing a category",
+  "flow_position": 11,
+  "name": "Phone number entry (2)",
+  "description": "Login screen with 1 input field. Light theme, 24 text elements, shown only briefly.",
+  "purpose": "Entering the phone number for an order for someone else",
+  "primary_action": "Enter phone number",
+  "tags": [
+    "delivery",
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Theobroma”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Light theme, 24 text elements, shown only briefly.",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 13 in “Browsing a category”",
+        "Reached from “Order placed (3)”",
+        "Leads to “Phone number entry (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 4:45 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1428 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf9f9",
+      "role": "background",
+      "share": 0.39
+    },
+    {
+      "hex": "#7f8084",
+      "role": "surface",
+      "share": 0.361
+    },
+    {
+      "hex": "#e1dfe1",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#17191b",
+      "role": "text",
+      "share": 0.075
+    },
+    {
+      "hex": "#46484c",
+      "role": "surface",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1428,
+    "atSeconds": 285.6,
+    "endSeconds": 285.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Theobroma",
+    "headline": "Are you ordering for someone else?"
+  },
+  "crawler": {
+    "nodeId": "s075",
+    "depth": 74,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s074",
+        "via": "Tap “Theobroma”",
+        "name": "Order placed (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s076",
+        "via": "Tap “Phone number”",
+        "name": "Phone number entry (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

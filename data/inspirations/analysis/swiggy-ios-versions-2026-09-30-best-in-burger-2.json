@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-best-in-burger-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-best-in-burger-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.019Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Best in Burger",
+  "flow_position": 2,
+  "name": "Restaurant Detail (8)",
+  "description": "Feed screen with a search bar and a paged carousel. Light theme, 18 text elements, shown only briefly.",
+  "purpose": "Displaying the details of a KFC restaurant with its ratings, promotions, and available dishes",
+  "primary_action": "View details of the restaurant",
+  "tags": [
+    "search",
+    "rating",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar and a paged carousel. Light theme, 18 text elements, shown only briefly.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Best in Burger”",
+        "Reached from “Best in Burger”",
+        "Leads to “KFC dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:36 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2280 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#8e8d90",
+      "role": "background",
+      "share": 0.273
+    },
+    {
+      "hex": "#03050b",
+      "role": "text",
+      "share": 0.192
+    },
+    {
+      "hex": "#f9f9fb",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#645f63",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#430302",
+      "role": "accent",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2280,
+    "atSeconds": 456,
+    "endSeconds": 456.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Ratings 4.C"
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s136",
+        "via": "Tap “Ratings 4.”",
+        "name": "Best in Burger"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s138",
+        "via": "Tap “KFC”",
+        "name": "KFC dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

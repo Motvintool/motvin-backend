@@ -1,0 +1,147 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-event-detail-browsing-a-category-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-event-detail-browsing-a-category-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.009Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Event detail (Browsing a category)",
+  "flow_position": 3,
+  "name": "Event detail (4)",
+  "description": "Detail screen with a row of 3 category chips. Dark theme, 29 text elements, shown only briefly.",
+  "purpose": "Viewing details of a specific event",
+  "primary_action": "View event details",
+  "tags": [
+    "book tic",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Lunch Wit”",
+        "Category strip: SAILOR, Sat, SL",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a row of 3 category chips. Dark theme, 29 text elements, shown only briefly.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Event detail (Browsing a category)”",
+        "Reached from “Detail”",
+        "Leads to “Other (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:15 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2175 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0f12",
+      "role": "background",
+      "share": 0.436
+    },
+    {
+      "hex": "#39322b",
+      "role": "surface",
+      "share": 0.224
+    },
+    {
+      "hex": "#6a4227",
+      "role": "accent",
+      "share": 0.071
+    },
+    {
+      "hex": "#92857e",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#4b5152",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2175,
+    "atSeconds": 435,
+    "endSeconds": 435.2,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [
+      "SAILOR",
+      "Sat",
+      "SL"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Lunch Wit",
+    "headline": "WITH",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s128",
+    "depth": 127,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Open Lunch Wit",
+        "name": "Detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s123",
+        "via": "Back to Other",
+        "name": "Other (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

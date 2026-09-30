@@ -1,0 +1,155 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-searching-for-events-in-your-city-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-searching-for-events-in-your-city-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.014Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "search",
+  "flow_name": "Searching for “events in your city”",
+  "flow_position": 2,
+  "name": "Search screen (2)",
+  "description": "Search screen with a row of 3 category chips, a search bar and the keyboard open. Dark theme, 39 text elements, shown only briefly.",
+  "purpose": "Searching for events in the city",
+  "primary_action": "Search for events",
+  "tags": [
+    "search",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Cheri”",
+        "Category strip: THIS, TODAY'S, WEEKEND",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a row of 3 category chips, a search bar and the keyboard open. Dark theme, 39 text elements, shown only briefly.",
+        "39 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Searching for “events in your city””",
+        "Reached from “Search (6)”",
+        "Leads to “Guduvancheri (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:23 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2216 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#06080f",
+      "role": "background",
+      "share": 0.583
+    },
+    {
+      "hex": "#242529",
+      "role": "surface",
+      "share": 0.13
+    },
+    {
+      "hex": "#3f3e40",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#5e5d5f",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#e4c742",
+      "role": "accent",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2216,
+    "atSeconds": 443.2,
+    "endSeconds": 443.4,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 39,
+    "tabLabels": [],
+    "chipLabels": [
+      "THIS",
+      "TODAY'S",
+      "WEEKEND"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Cheri",
+    "headline": "TODAY'S"
+  },
+  "crawler": {
+    "nodeId": "s132",
+    "depth": 131,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Type “events in your city”",
+        "name": "Search (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s130",
+        "via": "Type “Scenes”",
+        "name": "Guduvancheri (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

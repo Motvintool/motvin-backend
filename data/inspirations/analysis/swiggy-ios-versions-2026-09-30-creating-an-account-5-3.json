@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-creating-an-account-5-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-creating-an-account-5-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.944Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 3,
+  "name": "Account details (2)",
+  "description": "Sign up screen with 1 input field. Light theme, 23 text elements, shown only briefly.",
+  "purpose": "Viewing account information and associated benefits",
+  "primary_action": "View account details",
+  "tags": [
+    "payment",
+    "discount",
+    "rewards",
+    "address",
+    "favourites",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Urendar V”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 1 input field. Light theme, 23 text elements, shown only briefly.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Creating an account”",
+        "Reached from “Other (3)”",
+        "Leads to “Create account (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 2:51 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 858 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f3f4",
+      "role": "background",
+      "share": 0.78
+    },
+    {
+      "hex": "#d2d9e2",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#ac978f",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#c4bdbd",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#f29995",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 858,
+    "atSeconds": 171.6,
+    "endSeconds": 171.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Urendar V",
+    "headline": "Account Statement",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 36,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Open Urendar V",
+        "name": "Other (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Back to Create account",
+        "name": "Create account (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

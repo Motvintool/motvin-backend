@@ -1,0 +1,165 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-hola-pasta-fresh-gourmet-4",
+  "screen_id": "swiggy-ios-versions-2026-09-30-hola-pasta-fresh-gourmet-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.977Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Hola Pasta - Fresh Gourmet",
+  "flow_position": 4,
+  "name": "Group order cart",
+  "description": "Other screen with a search bar. Light theme, 26 text elements.",
+  "purpose": "This screen is for the cart of a group order, where the user can view and manage items added to the group order.",
+  "primary_action": "View items in the group order cart",
+  "tags": [
+    "search",
+    "rating",
+    "o ltems",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hola Pasta - Fresh Gourmet”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Light theme, 26 text elements.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Hola Pasta - Fresh Gourmet”",
+        "Reached from “Best in Cakes & Desserts — loading”, “Checkout (3)” and “New Quick home”",
+        "Leads to “Checkout (3)”, “New Quick home” and “Specials”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.6s at 5:14 in the recording",
+        "Frame 1593 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.446
+    },
+    {
+      "hex": "#05080e",
+      "role": "text",
+      "share": 0.173
+    },
+    {
+      "hex": "#dddfe0",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#c4c4c6",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#37b183",
+      "role": "accent",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1593,
+    "atSeconds": 314.2,
+    "endSeconds": 318.8,
+    "holdSeconds": 4.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Hola Pasta - Fresh Gourmet",
+    "headline": "LeanCrust",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s084",
+    "depth": 83,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s056",
+        "via": "Wait 1.2s",
+        "name": "Best in Cakes & Desserts — loading"
+      },
+      {
+        "from": "s085",
+        "via": "Back to Hola Pasta - Fresh Gourmet",
+        "name": "Checkout (3)"
+      },
+      {
+        "from": "s086",
+        "via": "Back to Hola Pasta - Fresh Gourmet",
+        "name": "New Quick home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s085",
+        "via": "Open Your Group Order",
+        "name": "Checkout (3)"
+      },
+      {
+        "to": "s086",
+        "via": "Tap “Hola Pasta - Fresh Gourmet”",
+        "name": "New Quick home"
+      },
+      {
+        "to": "s087",
+        "via": "Tap “LeanCrust”",
+        "name": "Specials"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

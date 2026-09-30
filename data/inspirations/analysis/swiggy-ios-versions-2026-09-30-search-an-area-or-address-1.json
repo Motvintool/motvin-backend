@@ -1,0 +1,150 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-search-an-area-or-address-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-search-an-area-or-address-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.988Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Search an area or address",
+  "flow_position": 1,
+  "name": "Add address",
+  "description": "Feed screen with a search bar. Light theme, 32 text elements, shown only briefly.",
+  "purpose": "Adding a delivery address for the order",
+  "primary_action": "Add address to proceed",
+  "tags": [
+    "search",
+    "cart",
+    "delivery",
+    "location",
+    "address",
+    "add addre",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search an area or address”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar. Light theme, 32 text elements, shown only briefly.",
+        "32 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Search an area or address”",
+        "Reached from “Location picker (2)”",
+        "Leads to “Cart”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 6:11 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 1857 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f4f3f7",
+      "role": "background",
+      "share": 0.748
+    },
+    {
+      "hex": "#d4d5db",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#0952fc",
+      "role": "accent",
+      "share": 0.029
+    },
+    {
+      "hex": "#b9c1c0",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#3c77f9",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1857,
+    "atSeconds": 371.4,
+    "endSeconds": 371.6,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search an area or address",
+    "headline": "Googleoho Corporation",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s100",
+    "depth": 99,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s097",
+        "via": "Tap “Search an area or address”",
+        "name": "Location picker (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Back to Cart",
+        "name": "Cart"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

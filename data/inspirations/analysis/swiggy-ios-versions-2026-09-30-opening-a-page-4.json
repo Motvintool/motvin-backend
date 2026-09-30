@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-opening-a-page-4",
+  "screen_id": "swiggy-ios-versions-2026-09-30-opening-a-page-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.026Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Opening a page",
+  "flow_position": 4,
+  "name": "Order placed (5)",
+  "description": "Success screen. Light theme, 26 text elements, shown only briefly.",
+  "purpose": "Confirming the order details and delivery information",
+  "primary_action": "Confirm the order",
+  "tags": [
+    "delivery",
+    "location",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “AddItems”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen. Light theme, 26 text elements, shown only briefly.",
+        "26 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Opening a page”",
+        "Reached from “Order placed (7)”",
+        "Leads to “Best in Burger (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.2s at 7:59 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2398 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f6f8",
+      "role": "background",
+      "share": 0.678
+    },
+    {
+      "hex": "#d7dcdc",
+      "role": "surface",
+      "share": 0.144
+    },
+    {
+      "hex": "#fe5104",
+      "role": "accent",
+      "share": 0.03
+    },
+    {
+      "hex": "#04050c",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#f9c9b8",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2398,
+    "atSeconds": 479.6,
+    "endSeconds": 479.8,
+    "holdSeconds": 0.2,
+    "brief": true,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "AddItems",
+    "headline": "AddItems"
+  },
+  "crawler": {
+    "nodeId": "s146",
+    "depth": 145,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s145",
+        "via": "Open AddItems",
+        "name": "Order placed (7)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s140",
+        "via": "Back to Best in Burger",
+        "name": "Best in Burger (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

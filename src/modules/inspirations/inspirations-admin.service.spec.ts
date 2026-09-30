@@ -317,6 +317,61 @@ describe('InspirationsAdminService', () => {
       );
     });
 
+    it('lists an app\'s files in the order the public app page shows them, not folder order', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      // On disk "browsing/" sorts before "onboarding/"; the flow recorded first
+      // is the onboarding one, so the app page (and now the admin) opens on it.
+      service.uploadScreen('ios', 'acme', '1.png', PNG_1X1, false, '', 'browsing');
+      service.uploadScreen('ios', 'acme', '1.png', PNG_1X1, false, '', 'onboarding');
+      service.uploadScreen('ios', 'acme', '2.png', PNG_1X1, false, '', 'onboarding');
+      service.saveFlow({ id: 'acme-ios-onboarding', appId: 'acme', name: 'Onboarding', category: 'onboarding', platform: 'ios', screenIds: ['acme-ios-onboarding-1', 'acme-ios-onboarding-2'] });
+      service.saveFlow({ id: 'acme-ios-browsing', appId: 'acme', name: 'Browsing', category: 'discovery', platform: 'ios', screenIds: ['acme-ios-browsing-1'] });
+
+      const publicOrder = readManifest(store).screens.map((s: any) => s.id);
+      expect(publicOrder).toEqual(['acme-ios-onboarding-1', 'acme-ios-onboarding-2', 'acme-ios-browsing-1']);
+      expect(service.getState().files.map((f) => f.id)).toEqual(publicOrder);
+    });
+
+    it('keeps the screens picked for the card carousel, in order, and publishes them on the app', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'splash.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'acme', 'home.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'acme', 'cart.png', PNG_1X1, false, '');
+
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: ['acme-ios-home', 'acme-ios-cart'] });
+      expect(readManifest(store).apps[0].cardScreens).toEqual(['acme-ios-home', 'acme-ios-cart']);
+
+      // A save that says nothing about the card leaves the pick alone.
+      service.saveApp({ id: 'acme', name: 'Acme Inc', industry: 'saas' });
+      expect(readManifest(store).apps[0].cardScreens).toEqual(['acme-ios-home', 'acme-ios-cart']);
+
+      // An empty list hands the choice back to the card.
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: [] });
+      expect(readManifest(store).apps[0].cardScreens).toEqual([]);
+    });
+
+    it('refuses card screens that are not stored for the app, or more than four', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.saveApp({ id: 'other', name: 'Other', industry: 'saas' });
+      for (const name of ['a', 'b', 'c', 'd', 'e']) service.uploadScreen('ios', 'acme', `${name}.png`, PNG_1X1, false, '');
+      service.uploadScreen('ios', 'other', 'home.png', PNG_1X1, false, '');
+
+      expect(() => service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: ['other-ios-home'] })).toThrow(
+        /not stored for "acme"/,
+      );
+      expect(() =>
+        service.saveApp({
+          id: 'acme',
+          name: 'Acme',
+          industry: 'saas',
+          cardScreens: ['acme-ios-a', 'acme-ios-b', 'acme-ios-c', 'acme-ios-d', 'acme-ios-e'],
+        }),
+      ).toThrow(/at most 4/);
+      expect(() => service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: 'acme-ios-a' })).toThrow(
+        /list of screen ids/,
+      );
+    });
+
     it('removes everything stored for an app when it is deleted', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');

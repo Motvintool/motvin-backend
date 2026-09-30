@@ -1,34 +1,28 @@
 {
-  "name": "Location picker (logged out)",
-  "screenType": "empty",
-  "fineType": "empty_state",
-  "states": [
-    "empty"
-  ],
-  "description": "Empty state screen with a search bar. Light theme, 6 text elements, an empty state.",
+  "name": "OTP verification",
+  "screenType": "login",
+  "fineType": "otp",
+  "states": [],
+  "description": "Verification code screen. Light theme, 11 text elements, shown only briefly.",
   "tags": [
-    "search",
-    "location",
-    "address",
-    "empty-state",
-    "empty",
+    "get via sms",
+    "get via call",
+    "otp",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "search-bar",
-    "empty-state"
+    "nav-bar"
   ],
   "style": [
     "light"
   ],
   "capturedAt": "2026-09-30",
   "capture": {
-    "atSeconds": 3,
-    "holdSeconds": 0.6,
-    "brief": false,
-    "visits": 2
+    "atSeconds": 8.4,
+    "holdSeconds": 0.4,
+    "brief": true,
+    "visits": 1
   },
-  "purpose": "User selects a location to find food options",
-  "primaryAction": "Select location or use current location"
+  "purpose": "The user is receiving and entering a verification code sent via SMS",
+  "primaryAction": "Enter the verification code"
 }

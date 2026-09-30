@@ -1,0 +1,228 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-food-4",
+  "screen_id": "swiggy-ios-versions-2026-09-30-food-4",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.973Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Food",
+  "flow_position": 4,
+  "name": "Restaurant Detail · Food",
+  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
+  "purpose": "User is viewing details of a specific restaurant in the app.",
+  "primary_action": "View restaurant information",
+  "tags": [
+    "search",
+    "checkout",
+    "delivery",
+    "offer",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "33 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 7 in “Food”",
+        "Reached from “Checkout”, “Order placed (4)”, “View full menu”, “Pastas”, “Checkout (6)” and “Phone number entry (2)”",
+        "Leads to “Other (4)”, “Hola Pasta - Fresh Gourmet”, “Instamart home”, “Food home — loading”, “Instamart home — loading”, “Phone number entry · New Quick” and “Phone number entry (2)”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.2s at 4:54 in the recording",
+        "Frame 1481 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.258
+    },
+    {
+      "hex": "#037a2e",
+      "role": "accent",
+      "share": 0.19
+    },
+    {
+      "hex": "#043014",
+      "role": "text",
+      "share": 0.135
+    },
+    {
+      "hex": "#d6dad5",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#28954e",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1481,
+    "atSeconds": 294.2,
+    "endSeconds": 296.4,
+    "holdSeconds": 2.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [
+      "Scenes",
+      "Dineout",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "Delights"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Wait 2s",
+        "name": "Checkout"
+      },
+      {
+        "from": "s077",
+        "via": "Back to Checkout",
+        "name": "Order placed (4)"
+      },
+      {
+        "from": "s088",
+        "via": "Back to Checkout",
+        "name": "View full menu"
+      },
+      {
+        "from": "s133",
+        "via": "Switch to Food",
+        "name": "Pastas"
+      },
+      {
+        "from": "s151",
+        "via": "Back to Checkout",
+        "name": "Checkout (6)"
+      },
+      {
+        "from": "s078",
+        "via": "Wait 2s",
+        "name": "Checkout"
+      },
+      {
+        "from": "s018",
+        "via": "Back to Checkout",
+        "name": "Phone number entry (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s069",
+        "via": "Back to Other",
+        "name": "Other (4)"
+      },
+      {
+        "to": "s081",
+        "via": "Open Hola Pasta - Fresh Gourmet",
+        "name": "Hola Pasta - Fresh Gourmet"
+      },
+      {
+        "to": "s034",
+        "via": "Switch to Instamart",
+        "name": "Instamart home"
+      },
+      {
+        "to": "s005",
+        "via": "Back to Food home — loading",
+        "name": "Food home — loading"
+      },
+      {
+        "to": "s155",
+        "via": "Switch to Instamart",
+        "name": "Instamart home — loading"
+      },
+      {
+        "to": "s020",
+        "via": "Switch to New Quick",
+        "name": "Phone number entry · New Quick"
+      },
+      {
+        "to": "s018",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

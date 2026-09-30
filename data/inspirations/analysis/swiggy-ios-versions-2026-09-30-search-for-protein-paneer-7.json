@@ -1,0 +1,157 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-search-for-protein-paneer-7",
+  "screen_id": "swiggy-ios-versions-2026-09-30-search-for-protein-paneer-7",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.986Z",
+  "screen_type": "cart",
+  "published_as": "cart",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Search for 'Protein Paneer'",
+  "flow_position": 7,
+  "name": "Cart",
+  "description": "Cart screen with a primary action labelled “Apply Coupon” and prices. Light theme, 35 text elements.",
+  "purpose": "Viewing the contents of the shopping cart with items and savings details",
+  "primary_action": "Add to cart",
+  "tags": [
+    "cart",
+    "location",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Cart”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Cart screen with a primary action labelled “Apply Coupon” and prices. Light theme, 35 text elements.",
+        "Calls to action: “Apply Coupon”",
+        "35 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 8 in “Search for 'Protein Paneer'”",
+        "Reached from “Cart · modal” and “Add addre”",
+        "Leads to “Location picker (2)” and “Cart (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.2s at 6:02 in the recording",
+        "Frame 1828 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f9fc",
+      "role": "background",
+      "share": 0.776
+    },
+    {
+      "hex": "#d2dadc",
+      "role": "surface",
+      "share": 0.103
+    },
+    {
+      "hex": "#1a60fe",
+      "role": "accent",
+      "share": 0.046
+    },
+    {
+      "hex": "#c5c0c2",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#07090e",
+      "role": "text",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1828,
+    "atSeconds": 362.6,
+    "endSeconds": 365.8,
+    "holdSeconds": 3.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Apply Coupon"
+    ],
+    "keyboard": false,
+    "title": "Your Cart",
+    "headline": "Get any 1 item from 71 STORE"
+  },
+  "crawler": {
+    "nodeId": "s096",
+    "depth": 95,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s095",
+        "via": "Dismiss",
+        "name": "Cart · modal"
+      },
+      {
+        "from": "s100",
+        "via": "Back to Cart",
+        "name": "Add addre"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Open Search an area or address",
+        "name": "Location picker (2)"
+      },
+      {
+        "to": "s101",
+        "via": "Tap “< Your Cart”",
+        "name": "Cart (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

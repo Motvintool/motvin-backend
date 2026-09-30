@@ -85,6 +85,8 @@ export interface InspirationApp {
   ratingCount: number | null;
   versions: InspirationAppVersion[];
   currentVersion: string | null;
+  /** Screen ids the admin picked for the app card's carousel, in order; empty when the card chooses for itself. */
+  cardScreens: string[];
 }
 
 export interface InspirationFlow {
@@ -218,6 +220,7 @@ export class LoaderService implements OnModuleInit {
         ...app,
         versions: Array.isArray(app.versions) ? app.versions : [],
         currentVersion: app.currentVersion ?? null,
+        cardScreens: Array.isArray(app.cardScreens) ? app.cardScreens : [],
       }));
       parsed.taxonomy = { ...EMPTY_MANIFEST.taxonomy, ...(parsed.taxonomy || {}) };
       this.manifest = { ...EMPTY_MANIFEST, ...parsed };

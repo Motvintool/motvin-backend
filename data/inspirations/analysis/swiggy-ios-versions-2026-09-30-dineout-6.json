@@ -1,0 +1,155 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-dineout-6",
+  "screen_id": "swiggy-ios-versions-2026-09-30-dineout-6",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.004Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 6,
+  "name": "Dineout home (4)",
+  "description": "Feed screen with a 6-item tab bar, a search bar and prices. Light theme, 22 text elements.",
+  "purpose": "The main screen of the Dineout app showing the user's current location and various promotions, with a focus on local restaurants and deals, but with the screen scrolled down to reveal more content.",
+  "primary_action": "View promotions and local restaurants",
+  "tags": [
+    "search",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, TOP SPOTS, PAY DAY",
+        "Navigation title reads “Search for Localities”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 6-item tab bar, a search bar and prices. Light theme, 22 text elements.",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Dineout”",
+        "Reached from “Dineout home — scrolled — scrolled”",
+        "Leads to “Dineout home — scrolled — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.8s at 6:50 in the recording",
+        "Frame 2066 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfb",
+      "role": "background",
+      "share": 0.5
+    },
+    {
+      "hex": "#dad7d7",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#1a1111",
+      "role": "text",
+      "share": 0.061
+    },
+    {
+      "hex": "#31393b",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#023122",
+      "role": "accent",
+      "share": 0.036
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2066,
+    "atSeconds": 410.6,
+    "endSeconds": 413.4,
+    "holdSeconds": 2.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "TOP SPOTS",
+      "PAY DAY"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search for Localities",
+    "headline": "Walk-in restaurants nearby"
+  },
+  "crawler": {
+    "nodeId": "s120",
+    "depth": 119,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s109",
+        "via": "Tap “Dineout”",
+        "name": "Dineout home — scrolled — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s109",
+        "via": "Back to Dineout home — scrolled — scrolled",
+        "name": "Dineout home — scrolled — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

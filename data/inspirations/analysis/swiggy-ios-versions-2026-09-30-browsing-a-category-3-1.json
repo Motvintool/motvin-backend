@@ -1,0 +1,160 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-3-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-3-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.006Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing a category",
+  "flow_position": 1,
+  "name": "Category Listing (4)",
+  "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 16 text elements.",
+  "purpose": "Displaying a list of categories for browsing food options",
+  "primary_action": "Browse categories",
+  "tags": [
+    "search",
+    "booking",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 4 category chips and a search bar. Dark theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Browsing a category”",
+        "Reached from “Guduvancheri” and “Other (6)”",
+        "Leads to “Other (6)” and “Guduvancheri (3)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 7:00 in the recording",
+        "Frame 2106 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0e12",
+      "role": "background",
+      "share": 0.364
+    },
+    {
+      "hex": "#292526",
+      "role": "surface",
+      "share": 0.162
+    },
+    {
+      "hex": "#553d28",
+      "role": "surface",
+      "share": 0.15
+    },
+    {
+      "hex": "#085c40",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#7d5637",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2106,
+    "atSeconds": 420.6,
+    "endSeconds": 421.4,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [
+      "Scenes",
+      "Dineout",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "WITH"
+  },
+  "crawler": {
+    "nodeId": "s122",
+    "depth": 121,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s121",
+        "via": "Tap “Guduvancheri >”",
+        "name": "Guduvancheri"
+      },
+      {
+        "from": "s123",
+        "via": "Back to Guduvancheri",
+        "name": "Other (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s123",
+        "via": "Tap “WITH”",
+        "name": "Other (6)"
+      },
+      {
+        "to": "s129",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Guduvancheri (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

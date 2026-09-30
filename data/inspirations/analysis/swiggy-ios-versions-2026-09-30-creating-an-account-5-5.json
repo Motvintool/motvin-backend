@@ -1,0 +1,145 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-creating-an-account-5-5",
+  "screen_id": "swiggy-ios-versions-2026-09-30-creating-an-account-5-5",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.945Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Creating an account",
+  "flow_position": 5,
+  "name": "Partner rewards (2)",
+  "description": "Detail screen with a row of 3 category chips. Light theme, 16 text elements.",
+  "purpose": "Viewing partner rewards and benefits",
+  "primary_action": "View partner rewards",
+  "tags": [
+    "delivery",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Marriott Bonvoy”",
+        "Category strip: MARRIOTT, Swiggy, BONVOY",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a row of 3 category chips. Light theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “Creating an account”",
+        "Reached from “Marriott Bonvoy — loading”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.6s at 2:57 in the recording",
+        "Frame 917 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.533
+    },
+    {
+      "hex": "#e3dedf",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#0c090a",
+      "role": "text",
+      "share": 0.08
+    },
+    {
+      "hex": "#262728",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#808285",
+      "role": "surface",
+      "share": 0.044
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 917,
+    "atSeconds": 177,
+    "endSeconds": 183.6,
+    "holdSeconds": 6.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [
+      "MARRIOTT",
+      "Swiggy",
+      "BONVOY"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Marriott Bonvoy",
+    "headline": "Bonvoy Points with Swiggy"
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Wait 0.4s",
+        "name": "Marriott Bonvoy — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s042",
+        "via": "Open Sign in to your account",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

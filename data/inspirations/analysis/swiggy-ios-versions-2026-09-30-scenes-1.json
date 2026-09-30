@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-09-30-scenes-1",
   "screen_id": "swiggy-ios-versions-2026-09-30-scenes-1",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.049Z",
+  "analyzedAt": "2026-09-30T17:31:24.005Z",
   "screen_type": "category",
   "published_as": "feed",
   "states": [],
@@ -10,13 +10,13 @@
   "flow": "discovery",
   "flow_name": "Scenes",
   "flow_position": 1,
-  "name": "Scenes category",
-  "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
-  "purpose": "The main category for entertainment and events",
-  "primary_action": "Select a category to view events",
+  "name": "Scenes",
+  "description": "Category screen with a row of 4 category chips and a search bar. Dark theme, 16 text elements.",
+  "purpose": "Displaying promotional content for a specific event or occasion.",
+  "primary_action": "Navigating to a specific scene or event",
   "tags": [
     "search",
-    "address",
+    "booking",
     "category",
     "ios"
   ],
@@ -25,7 +25,6 @@
     "search-bar",
     "list",
     "chip",
-    "legal-text",
     "banner"
   ],
   "style": [
@@ -36,7 +35,8 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
         "Search bar present",
         "Dark style"
       ]
@@ -44,62 +44,62 @@
     {
       "title": "Content",
       "points": [
-        "Category screen with a row of 4 category chips and a search bar. Dark theme, 14 text elements.",
-        "14 text elements recognised"
+        "Category screen with a row of 4 category chips and a search bar. Dark theme, 16 text elements.",
+        "16 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Scenes”",
-        "Reached from “Dineout”",
-        "Leads to “Food home”"
+        "Step 1 of 2 in “Scenes”",
+        "Reached from “Dineout home — scrolled — scrolled”",
+        "Leads to “Guduvancheri (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.6s at 0:14 in the recording",
-        "Frame 78 of 85 sampled at 5 fps",
+        "Held for 1.2s at 6:58 in the recording",
+        "Frame 2099 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#150f0f",
+      "hex": "#110d0e",
       "role": "background",
-      "share": 0.61
+      "share": 0.55
     },
     {
-      "hex": "#552414",
+      "hex": "#2f2524",
+      "role": "surface",
+      "share": 0.102
+    },
+    {
+      "hex": "#5a2313",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#853e22",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#085d3e",
       "role": "accent",
-      "share": 0.097
-    },
-    {
-      "hex": "#8e4623",
-      "role": "surface",
-      "share": 0.044
-    },
-    {
-      "hex": "#313435",
-      "role": "surface",
-      "share": 0.023
-    },
-    {
-      "hex": "#485155",
-      "role": "surface",
-      "share": 0.018
+      "share": 0.038
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 78,
-    "atSeconds": 14.2,
-    "endSeconds": 15.8,
-    "holdSeconds": 1.6,
+    "frames": 2950,
+    "frame": 2099,
+    "atSeconds": 418.8,
+    "endSeconds": 420,
+    "holdSeconds": 1.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -109,22 +109,22 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 14,
+    "lineCount": 16,
     "tabLabels": [],
     "chipLabels": [
-      "Dineout",
       "Scenes",
+      "Dineout",
       "Food",
       "Instamart"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": null,
+    "title": "Guduvancheri",
     "headline": "DANDIYA"
   },
   "crawler": {
-    "nodeId": "s011",
-    "depth": 10,
+    "nodeId": "s121",
+    "depth": 120,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -132,16 +132,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s010",
-        "via": "Open Category page",
-        "name": "Dineout"
+        "from": "s109",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Dineout home — scrolled — scrolled"
       }
     ],
     "leadsTo": [
       {
-        "to": "s006",
-        "via": "Back to Food home",
-        "name": "Food home"
+        "to": "s122",
+        "via": "Tap “Guduvancheri >”",
+        "name": "Guduvancheri (2)"
       }
     ]
   },

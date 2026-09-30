@@ -1,0 +1,161 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-completing-the-task-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-completing-the-task-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:24.021Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Completing the task",
+  "flow_position": 1,
+  "name": "Order placed (2)",
+  "description": "Success screen with a primary action labelled “Apply Coupon” and prices. Light theme, 27 text elements.",
+  "purpose": "Confirming the order details and delivery information",
+  "primary_action": "Confirm the order",
+  "tags": [
+    "delivery",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “KFC”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen with a primary action labelled “Apply Coupon” and prices. Light theme, 27 text elements.",
+        "Calls to action: “Apply Coupon”",
+        "27 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Completing the task”",
+        "Reached from “Order placed” and “KFC”",
+        "Leads to “KFC” and “Phone number entry (5)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:41 in the recording",
+        "Frame 2314 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fa",
+      "role": "background",
+      "share": 0.809
+    },
+    {
+      "hex": "#dbdeda",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#fe5204",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#fe905c",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#cdc2c3",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 2314,
+    "atSeconds": 461.8,
+    "endSeconds": 463,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Apply Coupon"
+    ],
+    "keyboard": false,
+    "title": "KFC",
+    "headline": "On Cooking requests"
+  },
+  "crawler": {
+    "nodeId": "s141",
+    "depth": 140,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s070",
+        "via": "Tap “order?”",
+        "name": "Order placed"
+      },
+      {
+        "from": "s142",
+        "via": "Dismiss",
+        "name": "KFC"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s142",
+        "via": "Tap “/ Applied”",
+        "name": "KFC"
+      },
+      {
+        "to": "s076",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

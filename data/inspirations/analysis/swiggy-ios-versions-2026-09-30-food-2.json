@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-09-30-food-2",
   "screen_id": "swiggy-ios-versions-2026-09-30-food-2",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.047Z",
+  "analyzedAt": "2026-09-30T17:31:23.924Z",
   "screen_type": "home",
   "published_as": "home",
   "states": [],
@@ -11,17 +11,17 @@
   "flow_name": "Food",
   "flow_position": 2,
   "name": "Food home",
-  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
-  "purpose": "Shows the main food categories and promotions",
-  "primary_action": "View food categories and promotions",
+  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 39 text elements.",
+  "purpose": "The user is viewing the main food categories and promotions",
+  "primary_action": "Browse food categories",
   "tags": [
     "search",
     "delivery",
-    "address",
+    "offer",
     "food",
     "bolt",
+    "gourmet",
     "eatright",
-    "reorder",
     "home",
     "ios"
   ],
@@ -43,9 +43,9 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Search for 'EatRight'”",
-        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
         "Search bar present",
         "Light style"
       ]
@@ -53,83 +53,83 @@
     {
       "title": "Content",
       "points": [
-        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 39 text elements.",
         "Calls to action: “ORDER NOW”",
-        "30 text elements recognised"
+        "39 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 2 in “Food”",
-        "Reached from “Welcome tip” and “Category page”",
-        "Leads to “Instamart home — loading”",
-        "Returned to 2 times in the recording"
+        "Step 2 of 7 in “Food”",
+        "Reached from “Welcome tip”, “Food home — loading”, “Instamart home” and “Pick Your”",
+        "Leads to “Create account”, “Create account (3)”, “ALL form” and “Sort By”",
+        "Returned to 4 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1s at 0:09 in the recording",
-        "Frame 50 of 85 sampled at 5 fps",
+        "Held for 2.8s at 0:16 in the recording",
+        "Frame 97 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fcfcfc",
+      "hex": "#fbfbfb",
       "role": "background",
-      "share": 0.237
+      "share": 0.229
     },
     {
-      "hex": "#020a2b",
-      "role": "text",
-      "share": 0.193
-    },
-    {
-      "hex": "#601234",
-      "role": "surface",
-      "share": 0.024
-    },
-    {
-      "hex": "#5b6588",
-      "role": "surface",
-      "share": 0.023
-    },
-    {
-      "hex": "#f9d901",
+      "hex": "#037b2f",
       "role": "accent",
-      "share": 0.023
+      "share": 0.219
+    },
+    {
+      "hex": "#043014",
+      "role": "text",
+      "share": 0.134
+    },
+    {
+      "hex": "#d1d8d4",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#28944d",
+      "role": "surface",
+      "share": 0.025
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 50,
-    "atSeconds": 9.2,
-    "endSeconds": 10.2,
-    "holdSeconds": 1,
+    "frames": 2950,
+    "frame": 97,
+    "atSeconds": 16.8,
+    "endSeconds": 19.6,
+    "holdSeconds": 2.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 4
   },
   "signals": {
-    "lineCount": 30,
+    "lineCount": 39,
     "tabLabels": [
       "Food",
       "Bolt",
-      "EatRight",
-      "Reorder"
+      "Gourmet",
+      "EatRight"
     ],
     "chipLabels": [
-      "Dineout",
       "Scenes",
+      "Dineout",
       "Food",
       "Instamart"
     ],
@@ -137,12 +137,12 @@
       "ORDER NOW"
     ],
     "keyboard": false,
-    "title": "Search for 'EatRight'",
-    "headline": "Bolt S | Food In 15 Mins!"
+    "title": "Guduvancheri",
+    "headline": "PARRDAY"
   },
   "crawler": {
-    "nodeId": "s006",
-    "depth": 5,
+    "nodeId": "s007",
+    "depth": 6,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -150,21 +150,46 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s005",
+        "from": "s006",
         "via": "Dismiss",
         "name": "Welcome tip"
       },
       {
-        "from": "s011",
+        "from": "s025",
+        "via": "Wait 1.6s",
+        "name": "Food home — loading"
+      },
+      {
+        "from": "s034",
+        "via": "Switch to Food",
+        "name": "Instamart home"
+      },
+      {
+        "from": "s054",
         "via": "Back to Food home",
-        "name": "Category page"
+        "name": "Pick Your"
       }
     ],
     "leadsTo": [
       {
-        "to": "s007",
-        "via": "Tap “Dineout”",
-        "name": "Instamart home — loading"
+        "to": "s008",
+        "via": "Open Surendar V",
+        "name": "Create account"
+      },
+      {
+        "to": "s026",
+        "via": "Open Surendar V",
+        "name": "Create account (3)"
+      },
+      {
+        "to": "s052",
+        "via": "Type “PAY”",
+        "name": "ALL form"
+      },
+      {
+        "to": "s055",
+        "via": "Tap “:: ALL”",
+        "name": "Sort By"
       }
     ]
   },

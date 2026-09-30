@@ -1,0 +1,148 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-profile-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-profile-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.987Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 2,
+  "name": "Profile (2)",
+  "description": "Profile screen with a primary action labelled “Save address as *”. Light theme, 20 text elements.",
+  "purpose": "Accessing profile details and location information",
+  "primary_action": "Add address to proceed",
+  "tags": [
+    "photo",
+    "delivery",
+    "location",
+    "address",
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Receiver Details”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a primary action labelled “Save address as *”. Light theme, 20 text elements.",
+        "Calls to action: “Save address as *”",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Profile”",
+        "Reached from “Profile”",
+        "Leads to “Location picker (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.2s at 6:08 in the recording",
+        "Frame 1852 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f8fa",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#dcdee3",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#c3c3c8",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#a5a6ab",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#202228",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1852,
+    "atSeconds": 368.4,
+    "endSeconds": 370.6,
+    "holdSeconds": 2.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save address as *"
+    ],
+    "keyboard": false,
+    "title": "Receiver Details",
+    "headline": "Use my account details"
+  },
+  "crawler": {
+    "nodeId": "s099",
+    "depth": 98,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s098",
+        "via": "Tap “Receiver Details”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Back to Location picker",
+        "name": "Location picker (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

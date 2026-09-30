@@ -1,0 +1,155 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.955Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Browsing a category",
+  "flow_position": 1,
+  "name": "Category Listing",
+  "description": "Category screen with a row of 3 category chips, a primary action labelled “ORDER NOW” and prices. Light theme, 45 text elements.",
+  "purpose": "The user is browsing through a list of food categories and offers.",
+  "primary_action": "Select a category or offer",
+  "tags": [
+    "delivery",
+    "offer",
+    "sort by",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ALL”",
+        "Category strip: Golcondas, Burger King, Theobroma",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips, a primary action labelled “ORDER NOW” and prices. Light theme, 45 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "45 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 13 in “Browsing a category”",
+        "Reached from “Food home”",
+        "Leads to “Best in Cakes & Desserts — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 3:56 in the recording",
+        "Frame 1185 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.488
+    },
+    {
+      "hex": "#ddd8db",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#7937c3",
+      "role": "accent",
+      "share": 0.071
+    },
+    {
+      "hex": "#9b69ce",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#616166",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1185,
+    "atSeconds": 236.4,
+    "endSeconds": 237.2,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [],
+    "chipLabels": [
+      "Golcondas",
+      "Burger King",
+      "Theobroma"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "ALL",
+    "headline": "Expiring soon!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s055",
+    "depth": 54,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Tap “:: ALL”",
+        "name": "Food home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s056",
+        "via": "Open Best in Cakes & Desserts — loading",
+        "name": "Best in Cakes & Desserts — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

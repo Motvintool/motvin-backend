@@ -727,6 +727,16 @@ export function buildInspirationsManifest(root: string): BuildReport {
       const source = sources[appId] || {};
       const logo = app.logo || logoFiles.get(appId) || null;
       const versions = versionsForApp(appId, appScreens);
+      // The admin's pick for the card carousel, kept in order but limited to
+      // screens that actually published — a deleted or held-back screen is
+      // dropped with a warning rather than shown as a blank.
+      const appScreenIds = new Set<string>(appScreens.map((s) => s.id));
+      const wantedCard: string[] = Array.isArray(app.cardScreens) ? app.cardScreens.filter((v: unknown) => typeof v === 'string') : [];
+      const cardScreens = wantedCard.filter((sid) => appScreenIds.has(sid));
+      if (cardScreens.length < wantedCard.length) {
+        const dropped = wantedCard.filter((sid) => !appScreenIds.has(sid));
+        warnings.push(`app "${appId}" card drops ${dropped.length} screen id(s) not stored or not approved: ${dropped.join(', ')}`);
+      }
       return {
         id: appId,
         name: app.name || titleCase(appId),
@@ -742,6 +752,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
         attribution: source.attribution || app.name || titleCase(appId),
         versions,
         currentVersion: versions[0]?.id ?? null,
+        cardScreens,
         ...readRating(app, problems, appId),
       };
     })

@@ -1,0 +1,142 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-10",
+  "screen_id": "swiggy-ios-versions-2026-09-30-browsing-a-category-2-10",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.970Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Browsing a category",
+  "flow_position": 10,
+  "name": "Order confirmation (3)",
+  "description": "Success screen with prices. Light theme, 43 text elements.",
+  "purpose": "Confirming the addition of an order item with a discount and free delivery benefits",
+  "primary_action": "Confirm order",
+  "tags": [
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen with prices. Light theme, 43 text elements.",
+        "43 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 13 in “Browsing a category”",
+        "Reached from “Order placed (2)”",
+        "Leads to “Phone number entry (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 4:45 in the recording",
+        "Frame 1427 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.813
+    },
+    {
+      "hex": "#e7dedb",
+      "role": "surface",
+      "share": 0.092
+    },
+    {
+      "hex": "#ff905e",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#bdbcbc",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#fdaf8a",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1427,
+    "atSeconds": 285,
+    "endSeconds": 285.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 43,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Cappuccino"
+  },
+  "crawler": {
+    "nodeId": "s074",
+    "depth": 73,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s073",
+        "via": "Tap “• Cappuccino”",
+        "name": "Order placed (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s075",
+        "via": "Tap “Theobroma”",
+        "name": "Phone number entry (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-new-quick-1",
+  "screen_id": "swiggy-ios-versions-2026-09-30-new-quick-1",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.934Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "New Quick",
+  "flow_position": 1,
+  "name": "Phone number entry · New Quick",
+  "description": "Login screen with a 4-item tab bar. Light theme, 19 text elements.",
+  "purpose": "Enter phone number for address verification",
+  "primary_action": "Enter phone number",
+  "tags": [
+    "message",
+    "address",
+    "new quick",
+    "note",
+    "save to files",
+    "view more",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: New Quick, Note, Save to Files, View More",
+        "Navigation title reads “Other”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a 4-item tab bar. Light theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “New Quick”",
+        "Reached from “Phone number entry (3)” and “Checkout”",
+        "Leads to “Phone number entry (2)” and “Location picker (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7s at 1:09 in the recording",
+        "Frame 381 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f5f6",
+      "role": "background",
+      "share": 0.831
+    },
+    {
+      "hex": "#d8d7d8",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#bebbbc",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#a7a5a5",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#97eaa4",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 381,
+    "atSeconds": 69.6,
+    "endSeconds": 76.6,
+    "holdSeconds": 7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "New Quick",
+      "Note",
+      "Save to Files",
+      "View More"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Other",
+    "headline": "Other"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Tap “• Other”",
+        "name": "Phone number entry (3)"
+      },
+      {
+        "from": "s079",
+        "via": "Switch to New Quick",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Tap “DELETE SHARE”",
+        "name": "Phone number entry (2)"
+      },
+      {
+        "to": "s097",
+        "via": "Back to Location picker",
+        "name": "Location picker (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

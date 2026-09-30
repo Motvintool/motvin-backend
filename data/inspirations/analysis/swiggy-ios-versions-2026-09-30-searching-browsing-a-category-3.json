@@ -1,0 +1,150 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-searching-browsing-a-category-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-searching-browsing-a-category-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.961Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "food",
+  "flow": "onboarding",
+  "flow_name": "Searching (Browsing a category)",
+  "flow_position": 3,
+  "name": "Permission prompt (2)",
+  "description": "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 18 text elements.",
+  "purpose": "Requesting permission to access speech recognition for voice search",
+  "primary_action": "Allow or Disallow access",
+  "tags": [
+    "search",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Theobroma”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 18 text elements.",
+        "Calls to action: “Allow”",
+        "18 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Searching (Browsing a category)”",
+        "Reached from “Permission prompt”",
+        "Leads to “Permission prompt (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 4:17 in the recording",
+        "Frame 1289 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7c7f",
+      "role": "background",
+      "share": 0.402
+    },
+    {
+      "hex": "#413a37",
+      "role": "surface",
+      "share": 0.394
+    },
+    {
+      "hex": "#625f5e",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#165a41",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#36241d",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 1289,
+    "atSeconds": 257.2,
+    "endSeconds": 258,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Search in Theobroma",
+    "headline": "\"Swiggy\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s063",
+    "depth": 62,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Tap “‹ Search in Theobroma”",
+        "name": "Permission prompt"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s064",
+        "via": "Tap “‹ Search in Theobroma”",
+        "name": "Permission prompt (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

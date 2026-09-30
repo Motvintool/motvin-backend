@@ -1,0 +1,154 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-creating-an-account-2-3",
+  "screen_id": "swiggy-ios-versions-2026-09-30-creating-an-account-2-3",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T17:31:23.933Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 3,
+  "name": "Delete address confirmation",
+  "description": "Login dialog over a dimmed screen, on top of Phone number entry. Light theme, 14 text elements.",
+  "purpose": "Confirm deletion of an address",
+  "primary_action": "Delete address",
+  "tags": [
+    "address",
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Other”",
+        "Dialog over a dimmed background, covering 17% of the height from 41% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Phone number entry. Light theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Creating an account”",
+        "Reached from “Phone number entry (2)”",
+        "Leads to “Phone number entry · New Quick”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 1:08 in the recording",
+        "Frame 347 of 2950 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c9c6c9",
+      "role": "background",
+      "share": 0.882
+    },
+    {
+      "hex": "#edeaec",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#b0a9ab",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#cda493",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#908e92",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 5,
+    "frames": 2950,
+    "frame": 347,
+    "atSeconds": 68.6,
+    "endSeconds": 69.6,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.40625,
+        "w": 0.8125,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Other",
+    "headline": "Other"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 18,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Tap “& Other”",
+        "name": "Phone number entry (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Tap “• Other”",
+        "name": "Phone number entry · New Quick"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

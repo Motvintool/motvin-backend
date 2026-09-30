@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-09-30-food-1",
   "screen_id": "swiggy-ios-versions-2026-09-30-food-1",
   "analyzer": "ollama/qwen3-vl:2b",
-  "analyzedAt": "2026-09-30T09:43:16.046Z",
+  "analyzedAt": "2026-09-30T17:31:23.923Z",
   "screen_type": "coach_mark",
   "published_as": "onboarding",
   "states": [
@@ -13,20 +13,21 @@
   "flow_name": "Food",
   "flow_position": 1,
   "name": "Welcome tip",
-  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
-  "purpose": "Provides a brief introduction to the app's features",
-  "primary_action": "Continue to Food section",
+  "description": "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 34 text elements.",
+  "purpose": "The user is being presented with a welcome tip and food categories",
+  "primary_action": "Browse food categories",
   "tags": [
     "delivery",
     "food",
     "bolt",
+    "gourmet",
     "eatright",
-    "reorder",
     "coach-mark",
     "ios"
   ],
   "elements": [
     "tab-bar",
+    "nav-bar",
     "price",
     "list",
     "chip",
@@ -44,9 +45,9 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
-        "Navigation title reads “Fresh, hot & crisp”",
-        "Category strip: Scenes, Food, Instamart, Dineout",
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Veg”",
+        "Category strip: Dineout, Scenes, Food, Instamart",
         "Bottom sheet over a dimmed background, covering 50% of the height from 48% down",
         "Dark, Bold style"
       ]
@@ -54,16 +55,16 @@
     {
       "title": "Content",
       "points": [
-        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 28 text elements.",
+        "Coach mark bottom sheet over a dimmed screen with a 4-item tab bar, a row of 4 category chips, a primary action labelled “Continue to Food” and prices. Dark theme, 34 text elements.",
         "Calls to action: “Continue to Food”, “ORDER NOW”",
-        "28 text elements recognised",
+        "34 text elements recognised",
         "State: coach-mark"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Food”",
+        "Step 1 of 7 in “Food”",
         "Reached from “Food home — loading”",
         "Leads to “Food home”"
       ]
@@ -71,47 +72,47 @@
     {
       "title": "Capture",
       "points": [
-        "Held for 1.6s at 0:07 in the recording",
-        "Frame 43 of 85 sampled at 5 fps",
+        "Held for 2.2s at 0:14 in the recording",
+        "Frame 82 of 2950 sampled at 5 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#1e0e07",
+      "hex": "#1b1107",
       "role": "background",
-      "share": 0.544
+      "share": 0.537
     },
     {
-      "hex": "#8e8d8d",
+      "hex": "#655f5f",
       "role": "surface",
-      "share": 0.076
+      "share": 0.098
     },
     {
-      "hex": "#372c25",
+      "hex": "#352d22",
+      "role": "accent",
+      "share": 0.081
+    },
+    {
+      "hex": "#7c7c7e",
       "role": "surface",
-      "share": 0.056
+      "share": 0.061
     },
     {
-      "hex": "#f6f6f6",
+      "hex": "#f7f5f8",
       "role": "text",
-      "share": 0.052
-    },
-    {
-      "hex": "#d8d9d9",
-      "role": "surface",
-      "share": 0.034
+      "share": 0.056
     }
   ],
   "capture": {
-    "source": "Zomato.mp4",
+    "source": "swiggy.mov",
     "fps": 5,
-    "frames": 85,
-    "frame": 43,
-    "atSeconds": 7.4,
-    "endSeconds": 9,
-    "holdSeconds": 1.6,
+    "frames": 2950,
+    "frame": 82,
+    "atSeconds": 14.4,
+    "endSeconds": 16.6,
+    "holdSeconds": 2.2,
     "brief": false,
     "kind": "overlay",
     "overlay": {
@@ -130,30 +131,30 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 28,
+    "lineCount": 34,
     "tabLabels": [
       "Food",
       "Bolt",
-      "EatRight",
-      "Reorder"
+      "Gourmet",
+      "EatRight"
     ],
     "chipLabels": [
+      "Dineout",
       "Scenes",
       "Food",
-      "Instamart",
-      "Dineout"
+      "Instamart"
     ],
     "ctas": [
       "Continue to Food",
       "ORDER NOW"
     ],
     "keyboard": false,
-    "title": "Fresh, hot & crisp",
-    "headline": "OLo OFF"
+    "title": "Veg",
+    "headline": "Or pickup where you've left off"
   },
   "crawler": {
-    "nodeId": "s005",
-    "depth": 4,
+    "nodeId": "s006",
+    "depth": 5,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -161,14 +162,14 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s004",
-        "via": "Wait 1.8s",
+        "from": "s005",
+        "via": "Wait 1s",
         "name": "Food home — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s006",
+        "to": "s007",
         "via": "Dismiss",
         "name": "Food home"
       }
