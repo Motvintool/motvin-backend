@@ -1,0 +1,173 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-food-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-food-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T09:43:16.047Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "food",
+  "flow": "discovery",
+  "flow_name": "Food",
+  "flow_position": 2,
+  "name": "Food home",
+  "description": "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+  "purpose": "Shows the main food categories and promotions",
+  "primary_action": "View food categories and promotions",
+  "tags": [
+    "search",
+    "delivery",
+    "address",
+    "food",
+    "bolt",
+    "eatright",
+    "reorder",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, EatRight, Reorder",
+        "Navigation title reads “Search for 'EatRight'”",
+        "Category strip: Dineout, Scenes, Food, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 30 text elements.",
+        "Calls to action: “ORDER NOW”",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Food”",
+        "Reached from “Welcome tip” and “Category page”",
+        "Leads to “Instamart home — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1s at 0:09 in the recording",
+        "Frame 50 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfcfc",
+      "role": "background",
+      "share": 0.237
+    },
+    {
+      "hex": "#020a2b",
+      "role": "text",
+      "share": 0.193
+    },
+    {
+      "hex": "#601234",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#5b6588",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#f9d901",
+      "role": "accent",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "Zomato.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 50,
+    "atSeconds": 9.2,
+    "endSeconds": 10.2,
+    "holdSeconds": 1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "EatRight",
+      "Reorder"
+    ],
+    "chipLabels": [
+      "Dineout",
+      "Scenes",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [
+      "ORDER NOW"
+    ],
+    "keyboard": false,
+    "title": "Search for 'EatRight'",
+    "headline": "Bolt S | Food In 15 Mins!"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Dismiss",
+        "name": "Welcome tip"
+      },
+      {
+        "from": "s011",
+        "via": "Back to Food home",
+        "name": "Category page"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “Dineout”",
+        "name": "Instamart home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

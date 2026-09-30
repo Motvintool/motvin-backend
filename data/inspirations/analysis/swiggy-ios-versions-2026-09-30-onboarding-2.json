@@ -1,0 +1,152 @@
+{
+  "screenId": "swiggy-ios-versions-2026-09-30-onboarding-2",
+  "screen_id": "swiggy-ios-versions-2026-09-30-onboarding-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-09-30T09:43:16.043Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "purpose": "User enters their mobile number to proceed with the app",
+  "primary_action": "Enter mobile number",
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your number”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+        "Calls to action: “Continue”",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Onboarding”",
+        "Reached from “Splash screen”",
+        "Leads to “Location picker (logged out)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:01 in the recording",
+        "Frame 13 of 85 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f7f7",
+      "role": "background",
+      "share": 0.56
+    },
+    {
+      "hex": "#fe5302",
+      "role": "accent",
+      "share": 0.173
+    },
+    {
+      "hex": "#e1e2e3",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#fb7d40",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#c5c5c5",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Zomato.mp4",
+    "fps": 5,
+    "frames": 85,
+    "frame": 13,
+    "atSeconds": 1.8,
+    "endSeconds": 3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "title": "Enter your number",
+    "headline": "Enter your number"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Enter your number",
+        "name": "Splash screen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Select your location",
+        "name": "Location picker (logged out)"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}
