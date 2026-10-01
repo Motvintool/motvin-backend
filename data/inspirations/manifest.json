@@ -1,15 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T08:08:18.945Z",
+  "generatedAt": "2026-10-01T14:09:30.588Z",
   "counts": {
-    "apps": 2,
-    "screens": 264,
-    "flows": 139,
+    "apps": 3,
+    "screens": 266,
+    "flows": 141,
     "patterns": 12,
-    "ui-elements": 1060
+    "ui-elements": 1069
   },
   "taxonomy": {
     "platforms": [
+      "web",
       "ios"
     ],
     "screenTypes": [
@@ -231,7 +232,7 @@
         "ios"
       ],
       "website": null,
-      "tagline": null,
+      "tagline": "Delivering food, faster than ever.",
       "logo": "/api/inspirations/logos/swiggy.png",
       "screenCount": 124,
       "flowCount": 54,
@@ -249,9 +250,153 @@
       "cardScreens": [],
       "rating": null,
       "ratingCount": null
+    },
+    {
+      "id": "linedin",
+      "name": "Linedin",
+      "slug": "linedin",
+      "industry": "productivity",
+      "platforms": [
+        "web"
+      ],
+      "website": null,
+      "tagline": null,
+      "logo": null,
+      "screenCount": 2,
+      "flowCount": 2,
+      "license": null,
+      "attribution": "Linedin",
+      "versions": [
+        {
+          "id": "2026-10-01",
+          "label": "1 Oct 2026",
+          "capturedAt": "2026-10-01",
+          "isLatest": true
+        }
+      ],
+      "currentVersion": "2026-10-01",
+      "cardScreens": [],
+      "rating": null,
+      "ratingCount": null
     }
   ],
   "screens": [
+    {
+      "id": "linedin-web-versions-2026-10-01-premium-1",
+      "appId": "linedin",
+      "flow": "premium",
+      "name": "Search results",
+      "file": "web/linedin/versions/2026-10-01/premium/1.webp",
+      "url": "/api/inspirations/screens/web/linedin/versions/2026-10-01/premium/1.webp?v=tm8fbt",
+      "width": 3456,
+      "height": 1820,
+      "bytes": 215400,
+      "platform": "web",
+      "screenType": "search",
+      "fineType": "search_results",
+      "states": [],
+      "description": "Search results screen with a search bar, 1 input field and a primary action labelled “Send”. Light theme, 59 text elements.",
+      "purpose": null,
+      "primaryAction": null,
+      "capture": {
+        "atSeconds": 0,
+        "holdSeconds": 6,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "profile",
+        "photo",
+        "video",
+        "premium",
+        "search-results",
+        "web",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "text-field",
+        "search-bar",
+        "list",
+        "cta",
+        "button",
+        "banner"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-10-01",
+      "version": "2026-10-01",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Linedin",
+        "permission": null
+      }
+    },
+    {
+      "id": "linedin-web-versions-2026-10-01-games-1",
+      "appId": "linedin",
+      "flow": "games",
+      "name": "Settings",
+      "file": "web/linedin/versions/2026-10-01/games/1.webp",
+      "url": "/api/inspirations/screens/web/linedin/versions/2026-10-01/games/1.webp?v=tm8fbt",
+      "width": 3456,
+      "height": 1820,
+      "bytes": 81216,
+      "platform": "web",
+      "screenType": "settings",
+      "fineType": "settings",
+      "states": [],
+      "description": "Settings screen. Light theme, 33 text elements.",
+      "purpose": null,
+      "primaryAction": null,
+      "capture": {
+        "atSeconds": 6,
+        "holdSeconds": 18.3,
+        "brief": false,
+        "visits": 1,
+        "overlayOf": null,
+        "loadingOf": null,
+        "scrolledFrom": null
+      },
+      "industry": "productivity",
+      "tags": [
+        "search",
+        "profile",
+        "settings",
+        "notification",
+        "games",
+        "web",
+        "productivity"
+      ],
+      "elements": [
+        "nav-bar",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "capturedAt": "2026-10-01",
+      "version": "2026-10-01",
+      "hasAnalysis": true,
+      "downloadable": true,
+      "source": {
+        "url": null,
+        "license": null,
+        "licenseUrl": null,
+        "attribution": "Linedin",
+        "permission": null
+      }
+    },
     {
       "id": "swiggy-ios-versions-2026-10-01-onboarding-1",
       "appId": "swiggy",
@@ -20045,6 +20190,44 @@
       ],
       "summary": null,
       "version": "2026-10-01"
+    },
+    {
+      "id": "linedin-web-versions-2026-10-01-premium",
+      "appId": "linedin",
+      "name": "Premium",
+      "category": "discovery",
+      "platform": "web",
+      "screenIds": [
+        "linedin-web-versions-2026-10-01-premium-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "linedin-web-versions-2026-10-01-premium-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-01"
+    },
+    {
+      "id": "linedin-web-versions-2026-10-01-games",
+      "appId": "linedin",
+      "name": "Games",
+      "category": "discovery",
+      "platform": "web",
+      "screenIds": [
+        "linedin-web-versions-2026-10-01-games-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "linedin-web-versions-2026-10-01-games-1",
+          "action": null
+        }
+      ],
+      "summary": null,
+      "version": "2026-10-01"
     }
   ],
   "patterns": [
@@ -20059,6 +20242,7 @@
         "list"
       ],
       "screenIds": [
+        "linedin-web-versions-2026-10-01-premium-1",
         "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
         "swiggy-ios-versions-2026-10-01-searching-1",
         "swiggy-ios-versions-2026-10-01-searching-for-dishes-restaurants-1",
@@ -20285,6 +20469,7 @@
         "toggles"
       ],
       "screenIds": [
+        "linedin-web-versions-2026-10-01-games-1",
         "swiggy-ios-versions-2026-10-01-settings-1",
         "swiggy-ios-versions-2026-10-01-settings-2",
         "swiggy-ios-versions-2026-10-01-settings-3",
@@ -20409,21 +20594,21 @@
     }
   ],
   "elementCounts": {
-    "nav-bar": 243,
+    "nav-bar": 245,
+    "text-field": 35,
+    "search-bar": 101,
+    "list": 216,
+    "cta": 65,
+    "button": 65,
+    "banner": 122,
     "keyboard": 19,
-    "text-field": 34,
     "form": 9,
-    "list": 214,
-    "cta": 64,
-    "button": 64,
     "legal-text": 8,
     "tab-bar": 35,
     "price": 47,
     "chip": 36,
-    "banner": 121,
     "bottom-sheet": 9,
     "coach-mark": 4,
-    "search-bar": 100,
     "empty-state": 5,
     "modal": 14,
     "carousel": 11,
