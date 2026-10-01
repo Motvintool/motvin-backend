@@ -1,0 +1,142 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-choosing-a-location-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-choosing-a-location-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:32:51.797Z",
+  "screen_type": "map",
+  "published_as": "map",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Choosing a location",
+  "flow_position": 1,
+  "name": "Location picker (3)",
+  "description": "Map screen with a search bar. Light theme, 11 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "location",
+    "address",
+    "map",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select your location”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Map screen with a search bar. Light theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Choosing a location”",
+        "Reached from “Location picker (2)”",
+        "Leads to “Loading state (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.8s at 1:21 in the recording",
+        "Frame 824 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f2f2f6",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#d3d2d3",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#bdbdbe",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#9d9da0",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#5b5a5c",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 824,
+    "atSeconds": 81.7,
+    "endSeconds": 82.5,
+    "holdSeconds": 0.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select your location",
+    "headline": "Use Current Location"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Open Select your location",
+        "name": "Location picker (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Scroll",
+        "name": "Loading state (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

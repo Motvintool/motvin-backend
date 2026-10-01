@@ -1,0 +1,160 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-searching-3-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-searching-3-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:32:54.650Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Searching",
+  "flow_position": 1,
+  "name": "Search (2)",
+  "description": "Search screen with a row of 7 category chips, a search bar, the keyboard open and prices. Light theme, 43 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "delivery",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "price",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search for dishes & restaurants”",
+        "Category strip: Veg, Get A, Delightful, M, Delights, Deals, Free Treat",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a row of 7 category chips, a search bar, the keyboard open and prices. Light theme, 43 text elements.",
+        "43 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Searching”",
+        "Reached from “Food home (2)”",
+        "Leads to “Food home (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.7s at 3:47 in the recording",
+        "Frame 2290 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#142014",
+      "role": "background",
+      "share": 0.219
+    },
+    {
+      "hex": "#dadadc",
+      "role": "surface",
+      "share": 0.189
+    },
+    {
+      "hex": "#b7b7ba",
+      "role": "surface",
+      "share": 0.182
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "text",
+      "share": 0.182
+    },
+    {
+      "hex": "#494749",
+      "role": "surface",
+      "share": 0.151
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 2290,
+    "atSeconds": 227.4,
+    "endSeconds": 229.1,
+    "holdSeconds": 1.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 43,
+    "tabLabels": [],
+    "chipLabels": [
+      "Veg",
+      "Get A",
+      "Delightful",
+      "M",
+      "Delights",
+      "Deals",
+      "Free Treat"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search for dishes & restaurants",
+    "headline": "Delights"
+  },
+  "crawler": {
+    "nodeId": "s062",
+    "depth": 61,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Type “dishes & restaurants”",
+        "name": "Food home (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Type “Pizza”",
+        "name": "Food home (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

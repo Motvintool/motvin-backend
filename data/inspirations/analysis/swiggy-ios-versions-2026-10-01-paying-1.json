@@ -1,0 +1,141 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-paying-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-paying-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:32:50.466Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 1,
+  "name": "Payment method",
+  "description": "Payment screen. Light theme, 17 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "wallet",
+    "netbanking",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Pay by any”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Light theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Paying”",
+        "Reached from “Listing”",
+        "Leads to “Payment method (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2s at 0:25 in the recording",
+        "Frame 276 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8fa",
+      "role": "background",
+      "share": 0.918
+    },
+    {
+      "hex": "#dcdcdc",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#c1c0c5",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#fcceb7",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#a1a1a3",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 276,
+    "atSeconds": 25.7,
+    "endSeconds": 27.7,
+    "holdSeconds": 2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Pay by any",
+    "headline": "Amazon Pay Later",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s013",
+    "depth": 12,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Open Pay by any",
+        "name": "Listing"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s014",
+        "via": "Tap “Payment Options”",
+        "name": "Payment method (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

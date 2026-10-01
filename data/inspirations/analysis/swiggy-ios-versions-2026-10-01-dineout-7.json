@@ -1,0 +1,155 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-dineout-7",
+  "screen_id": "swiggy-ios-versions-2026-10-01-dineout-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:04.583Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 7,
+  "name": "Loading state (9)",
+  "description": "Loading state with a 6-item tab bar. Dark theme, 7 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "home",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, OP SPOT, AY DA",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 6-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 13 in “Dineout”",
+        "Reached from “Dineout home — scrolled”",
+        "Leads to “Dineout home (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:55 in the recording",
+        "Frame 5360 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090409",
+      "role": "background",
+      "share": 0.732
+    },
+    {
+      "hex": "#2a2028",
+      "role": "surface",
+      "share": 0.192
+    },
+    {
+      "hex": "#390316",
+      "role": "accent",
+      "share": 0.049
+    },
+    {
+      "hex": "#434344",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#5c6a56",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 5360,
+    "atSeconds": 535.2,
+    "endSeconds": 536.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "OP SPOT",
+      "AY DA"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "3 LUMA LOUNCE"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 159,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s113",
+        "via": "Tap “Dineout”",
+        "name": "Dineout home — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Wait 0.9s",
+        "name": "Dineout home (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

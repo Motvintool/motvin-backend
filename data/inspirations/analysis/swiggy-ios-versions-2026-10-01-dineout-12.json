@@ -1,0 +1,158 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-dineout-12",
+  "screen_id": "swiggy-ios-versions-2026-10-01-dineout-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:05.194Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 12,
+  "name": "My Corner (empty)",
+  "description": "Empty state screen with a 6-item tab bar. Light theme, 15 text elements, an empty state.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "offer",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "banner",
+    "empty-state"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, OP SPOT, AY DA",
+        "Navigation title reads “My Corner”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a 6-item tab bar. Light theme, 15 text elements, an empty state.",
+        "15 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 13 in “Dineout”",
+        "Reached from “Loading state (10)”",
+        "Leads to “My Corner (empty) (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.9s at 8:59 in the recording",
+        "Frame 5424 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafc",
+      "role": "background",
+      "share": 0.651
+    },
+    {
+      "hex": "#251d1a",
+      "role": "text",
+      "share": 0.086
+    },
+    {
+      "hex": "#dddbdc",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#554d44",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#bfbcba",
+      "role": "surface",
+      "share": 0.047
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 5424,
+    "atSeconds": 539.6,
+    "endSeconds": 542.5,
+    "holdSeconds": 2.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "OP SPOT",
+      "AY DA"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "My Corner",
+    "headline": "Tipsy Dive"
+  },
+  "crawler": {
+    "nodeId": "s165",
+    "depth": 164,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s164",
+        "via": "Wait 0.5s",
+        "name": "Loading state (10)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s166",
+        "via": "Tap “My Corner”",
+        "name": "My Corner (empty) (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-adding-a-delivery-address-food-3",
+  "screen_id": "swiggy-ios-versions-2026-10-01-adding-a-delivery-address-food-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:06.222Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Adding a delivery address (Food)",
+  "flow_position": 3,
+  "name": "Loading state (11)",
+  "description": "Loading state with a row of 4 category chips. Light theme, 8 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "view full menu",
+    "review order",
+    "category",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Dineout, Food, Scenes, Instamart",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 4 category chips. Light theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Adding a delivery address (Food)”",
+        "Reached from “Location picker (6)”",
+        "Leads to “Item detail · Food”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:38 in the recording",
+        "Frame 5795 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f7fa",
+      "role": "background",
+      "share": 0.916
+    },
+    {
+      "hex": "#dbdcde",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#46b78c",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#c6c1c0",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#1fa874",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 5795,
+    "atSeconds": 578.1,
+    "endSeconds": 579.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [
+      "Dineout",
+      "Food",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "Dineout",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s174",
+    "depth": 173,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s173",
+        "via": "Tap “Guduvancheri”",
+        "name": "Location picker (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s171",
+        "via": "Wait 1.5s",
+        "name": "Item detail · Food"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

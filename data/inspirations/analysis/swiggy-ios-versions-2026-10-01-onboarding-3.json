@@ -1,0 +1,151 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-onboarding-3",
+  "screen_id": "swiggy-ios-versions-2026-10-01-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:32:49.457Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Phone number entry (2)",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 26 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your number”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 26 text elements.",
+        "Calls to action: “Continue”",
+        "26 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Onboarding”",
+        "Reached from “Phone number entry”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.6s at 0:02 in the recording",
+        "Frame 36 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f8f9",
+      "role": "background",
+      "share": 0.49
+    },
+    {
+      "hex": "#fe5405",
+      "role": "accent",
+      "share": 0.176
+    },
+    {
+      "hex": "#e6e3e3",
+      "role": "surface",
+      "share": 0.158
+    },
+    {
+      "hex": "#f9a782",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#fc7d42",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 36,
+    "atSeconds": 2.1,
+    "endSeconds": 3.7,
+    "holdSeconds": 1.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "title": "Enter your number",
+    "headline": "Enter your number"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Enter your number”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Open Enter verification code",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

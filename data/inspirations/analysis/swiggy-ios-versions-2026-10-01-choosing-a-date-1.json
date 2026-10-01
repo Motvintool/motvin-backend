@@ -1,0 +1,148 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-choosing-a-date-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-choosing-a-date-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:00.394Z",
+  "screen_type": "calendar",
+  "published_as": "calendar",
+  "states": [],
+  "category": "productivity",
+  "flow": "creation",
+  "flow_name": "Choosing a date",
+  "flow_position": 1,
+  "name": "Calendar",
+  "description": "Calendar screen with a paged carousel. Light theme, 18 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "rating",
+    "booking",
+    "offer",
+    "book a table",
+    "pay bill now",
+    "calendar",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar screen with a paged carousel. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Choosing a date”",
+        "Reached from “View”",
+        "Leads to “Book table”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.9s at 6:33 in the recording",
+        "Frame 3965 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f9f9",
+      "role": "background",
+      "share": 0.416
+    },
+    {
+      "hex": "#d0d9d7",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#1c0c04",
+      "role": "text",
+      "share": 0.03
+    },
+    {
+      "hex": "#33363b",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#ff4e01",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 3965,
+    "atSeconds": 393.7,
+    "endSeconds": 396.6,
+    "holdSeconds": 2.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Offers for you",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s117",
+    "depth": 116,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s115",
+        "via": "Open Calendar",
+        "name": "View"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s118",
+        "via": "Open Book table",
+        "name": "Book table"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

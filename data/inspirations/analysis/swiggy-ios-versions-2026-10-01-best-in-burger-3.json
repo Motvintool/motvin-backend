@@ -1,0 +1,158 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-best-in-burger-3",
+  "screen_id": "swiggy-ios-versions-2026-10-01-best-in-burger-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:02.742Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Best in Burger",
+  "flow_position": 3,
+  "name": "Best in Burger (2)",
+  "description": "Feed screen with a search bar, a paged carousel and prices. Light theme, 30 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "rating",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "carousel",
+    "page-indicator",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Best in Burger”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a search bar, a paged carousel and prices. Light theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Best in Burger”",
+        "Reached from “Listing (5)” and “Order placed (6)”",
+        "Leads to “Order placed — loading” and “Food home (4)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:37 in the recording",
+        "Frame 4593 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.459
+    },
+    {
+      "hex": "#05070e",
+      "role": "text",
+      "share": 0.137
+    },
+    {
+      "hex": "#dce0de",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#24a977",
+      "role": "accent",
+      "share": 0.042
+    },
+    {
+      "hex": "#47494f",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 4593,
+    "atSeconds": 457.9,
+    "endSeconds": 459.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Best in Burger",
+    "headline": "Bolt5 15 Mins X"
+  },
+  "crawler": {
+    "nodeId": "s141",
+    "depth": 140,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s140",
+        "via": "Tap “Best in Burger”",
+        "name": "Listing (5)"
+      },
+      {
+        "from": "s144",
+        "via": "Back to Best in Burger",
+        "name": "Order placed (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s076",
+        "via": "Back to Order placed — loading",
+        "name": "Order placed — loading"
+      },
+      {
+        "to": "s136",
+        "via": "Back to Food home",
+        "name": "Food home (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

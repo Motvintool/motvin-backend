@@ -1,0 +1,155 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-search-here-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-search-here-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:33:01.991Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Search here",
+  "flow_position": 1,
+  "name": "Loading state (6)",
+  "description": "Loading state with a row of 4 category chips and a search bar. Dark theme, 13 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "category",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search here”",
+        "Category strip: THIS, NEXT, TODAY'S, WEEKEND",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 4 category chips and a search bar. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Search here”",
+        "Reached from “Guduvancheri (4)”",
+        "Leads to “Search (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.5s at 7:21 in the recording",
+        "Frame 4421 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#05080e",
+      "role": "background",
+      "share": 0.892
+    },
+    {
+      "hex": "#26262d",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#353c45",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#811048",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#501434",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 4421,
+    "atSeconds": 441.7,
+    "endSeconds": 442.2,
+    "holdSeconds": 0.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [
+      "THIS",
+      "NEXT",
+      "TODAY'S",
+      "WEEKEND"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search here",
+    "headline": "TODAY'S"
+  },
+  "crawler": {
+    "nodeId": "s133",
+    "depth": 132,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s132",
+        "via": "Tap “Search”",
+        "name": "Guduvancheri (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s134",
+        "via": "Wait 0.5s",
+        "name": "Search (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

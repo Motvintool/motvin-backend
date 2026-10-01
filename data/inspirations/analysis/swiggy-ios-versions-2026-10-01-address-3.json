@@ -1,0 +1,186 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-address-3",
+  "screen_id": "swiggy-ios-versions-2026-10-01-address-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T03:32:52.531Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Address",
+  "flow_position": 3,
+  "name": "Create account (4)",
+  "description": "Sign up screen with 1 input field. Light theme, 29 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "discount",
+    "rewards",
+    "address",
+    "favourites",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Surendar V”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 1 input field. Light theme, 29 text elements.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Address”",
+        "Reached from “Food home (2)”, “Account”, “Search by train number/name”, “OTP verification (3)” and “Other (2)”",
+        "Leads to “Account”, “Search”, “OTP verification — loading”, “OTP verification (4)” and “My Account”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 2:10 in the recording",
+        "Frame 1306 of 5899 sampled at 10 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf8f7",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#dfdbda",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#cac3c3",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#288a4c",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#8a8382",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 10,
+    "frames": 5899,
+    "frame": 1306,
+    "atSeconds": 130.5,
+    "endSeconds": 134.1,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Surendar V",
+    "headline": "One (Join now",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s039",
+    "depth": 38,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Open Surendar V",
+        "name": "Food home (2)"
+      },
+      {
+        "from": "s040",
+        "via": "Back to Create account",
+        "name": "Account"
+      },
+      {
+        "from": "s043",
+        "via": "Back to Create account",
+        "name": "Search by train number/name"
+      },
+      {
+        "from": "s045",
+        "via": "Back to Create account",
+        "name": "OTP verification (3)"
+      },
+      {
+        "from": "s050",
+        "via": "Back to Create account",
+        "name": "Other (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s040",
+        "via": "Open Account",
+        "name": "Account"
+      },
+      {
+        "to": "s042",
+        "via": "Open Search",
+        "name": "Search"
+      },
+      {
+        "to": "s044",
+        "via": "Open OTP verification — loading",
+        "name": "OTP verification — loading"
+      },
+      {
+        "to": "s046",
+        "via": "Tap “Student Rewards”",
+        "name": "OTP verification (4)"
+      },
+      {
+        "to": "s051",
+        "via": "Tap “Account Statement”",
+        "name": "My Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}
