@@ -1,0 +1,182 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-instamart-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-instamart-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:45.697Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Instamart",
+  "flow_position": 1,
+  "name": "Instamart home",
+  "description": "Feed screen with a 3-item tab bar and a search bar. Light theme, 41 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "delivery",
+    "instamart",
+    "categories",
+    "print",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Instamart, Categories, Print",
+        "Navigation title reads “Search for 'Organic Curd'”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a search bar. Light theme, 41 text elements.",
+        "41 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Instamart”",
+        "Reached from “Category page”, “My Account (2)”, “Checkout”, “Noice Binge-worthy Deals (2)” and “Instamart home (3)”",
+        "Leads to “Food home”, “Instamart home (2)” and “Dineout home — scrolled”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 2:46 in the recording",
+        "Frame 747 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f1f3fd",
+      "role": "background",
+      "share": 0.677
+    },
+    {
+      "hex": "#cdd1e2",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#80097e",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#570a53",
+      "role": "text",
+      "share": 0.023
+    },
+    {
+      "hex": "#bbb2c9",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 747,
+    "atSeconds": 166.5,
+    "endSeconds": 167.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [
+      "Instamart",
+      "Categories",
+      "Print"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search for 'Organic Curd'",
+    "headline": "Store"
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Wait 0.6s",
+        "name": "Category page"
+      },
+      {
+        "from": "s044",
+        "via": "Wait 4.2s",
+        "name": "My Account (2)"
+      },
+      {
+        "from": "s073",
+        "via": "Switch to Instamart",
+        "name": "Checkout"
+      },
+      {
+        "from": "s081",
+        "via": "Back to Instamart home",
+        "name": "Noice Binge-worthy Deals (2)"
+      },
+      {
+        "from": "s123",
+        "via": "Back to Instamart home",
+        "name": "Instamart home (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Switch to Food",
+        "name": "Food home"
+      },
+      {
+        "to": "s122",
+        "via": "Open Categories",
+        "name": "Instamart home (2)"
+      },
+      {
+        "to": "s093",
+        "via": "Switch to Dineout",
+        "name": "Dineout home — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

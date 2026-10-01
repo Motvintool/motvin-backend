@@ -1,0 +1,161 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-placing-an-order-browsing-a-category-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-placing-an-order-browsing-a-category-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:52.728Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Placing an order (Browsing a category)",
+  "flow_position": 1,
+  "name": "Detail (2)",
+  "description": "Detail screen with a row of 5 category chips and prices. Dark theme, 28 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "proceed",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Lunch With Strangers - Chennai”",
+        "Category strip: Sat, Sun, Sat, Sun, Sat",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a row of 5 category chips and prices. Dark theme, 28 text elements.",
+        "28 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Placing an order (Browsing a category)”",
+        "Reached from “Detail” and “Checkout (4)”",
+        "Leads to “Checkout (4)” and “Other (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:08 in the recording",
+        "Frame 1431 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0d13",
+      "role": "background",
+      "share": 0.815
+    },
+    {
+      "hex": "#232d2e",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#42464b",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#592819",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#20ac77",
+      "role": "accent",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1431,
+    "atSeconds": 428.1,
+    "endSeconds": 429.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [
+      "Sat",
+      "Sun",
+      "Sat",
+      "Sun",
+      "Sat"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Lunch With Strangers - Chennai",
+    "headline": "Early Bird Male Pass",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s104",
+    "depth": 103,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s103",
+        "via": "Tap “Lunch With Strangers - Chennai”",
+        "name": "Detail"
+      },
+      {
+        "from": "s105",
+        "via": "Back to Detail",
+        "name": "Checkout (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s105",
+        "via": "Tap “Lunch With Strangers - Chennai”",
+        "name": "Checkout (4)"
+      },
+      {
+        "to": "s102",
+        "via": "Back to Other",
+        "name": "Other (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,174 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-dineout-9",
+  "screen_id": "swiggy-ios-versions-2026-10-01-dineout-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:55.595Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 9,
+  "name": "My Corner (empty) (2)",
+  "description": "Empty state screen with a 6-item tab bar. Light theme, 15 text elements, an empty state.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "offer",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "banner",
+    "empty-state"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, OP SPOT, AY DA",
+        "Navigation title reads “My Corner”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a 6-item tab bar. Light theme, 15 text elements, an empty state.",
+        "15 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 9 in “Dineout”",
+        "Reached from “My Corner (empty)”, “Guduvancheri v” and “GIRF Special”",
+        "Leads to “Guduvancheri v” and “Dineout home — scrolled”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 9:02 in the recording",
+        "Frame 1817 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafc",
+      "role": "background",
+      "share": 0.65
+    },
+    {
+      "hex": "#dbd9dc",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#1a120c",
+      "role": "accent",
+      "share": 0.047
+    },
+    {
+      "hex": "#bcb9ba",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#5b524b",
+      "role": "surface",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1817,
+    "atSeconds": 542.7,
+    "endSeconds": 545.4,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "OP SPOT",
+      "AY DA"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "My Corner",
+    "headline": "Tipsy Dive"
+  },
+  "crawler": {
+    "nodeId": "s129",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s128",
+        "via": "Tap “My Corner”",
+        "name": "My Corner (empty)"
+      },
+      {
+        "from": "s130",
+        "via": "Back to My Corner (empty)",
+        "name": "Guduvancheri v"
+      },
+      {
+        "from": "s131",
+        "via": "Back to My Corner (empty)",
+        "name": "GIRF Special"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s130",
+        "via": "Open Guduvancheri v",
+        "name": "Guduvancheri v"
+      },
+      {
+        "to": "s093",
+        "via": "Back to Dineout home — scrolled",
+        "name": "Dineout home — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

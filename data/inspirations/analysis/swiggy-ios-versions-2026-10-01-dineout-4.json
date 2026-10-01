@@ -1,0 +1,202 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-dineout-4",
+  "screen_id": "swiggy-ios-versions-2026-10-01-dineout-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:51.390Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [
+    "scrolled"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Dineout",
+  "flow_position": 4,
+  "name": "Dineout home — scrolled",
+  "description": "Feed screen, scrolled further down from Dineout home with a 6-item tab bar, a row of 4 category chips and a search bar. Dark theme, 26 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "payment",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "feed",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, TOP SPOTS, PAY DAY",
+        "Navigation title reads “On every bill payment”",
+        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen, scrolled further down from Dineout home with a 6-item tab bar, a row of 4 category chips and a search bar. Dark theme, 26 text elements.",
+        "26 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 9 in “Dineout”",
+        "Reached from “Dineout home (3)”, “Search (5)”, “Dineout home (4)”, “Instamart home” and “My Corner (empty) (2)”",
+        "Leads to “Search (5)”, “Dineout home (4)”, “Guduvancheri” and “Guduvancheri (4)”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:21 in the recording",
+        "Frame 1281 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11100f",
+      "role": "background",
+      "share": 0.525
+    },
+    {
+      "hex": "#29302b",
+      "role": "surface",
+      "share": 0.172
+    },
+    {
+      "hex": "#fbfafa",
+      "role": "text",
+      "share": 0.129
+    },
+    {
+      "hex": "#484b49",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#8ea09a",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1281,
+    "atSeconds": 381.3,
+    "endSeconds": 384.6,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "TOP SPOTS",
+      "PAY DAY"
+    ],
+    "chipLabels": [
+      "Food",
+      "Dineout",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "On every bill payment",
+    "headline": "(GIRF"
+  },
+  "crawler": {
+    "nodeId": "s093",
+    "depth": 92,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s092",
+        "via": "Scroll",
+        "name": "Dineout home (3)"
+      },
+      {
+        "from": "s094",
+        "via": "Type “Malls & landmarks”",
+        "name": "Search (5)"
+      },
+      {
+        "from": "s099",
+        "via": "Back to Dineout home — scrolled",
+        "name": "Dineout home (4)"
+      },
+      {
+        "from": "s041",
+        "via": "Switch to Dineout",
+        "name": "Instamart home"
+      },
+      {
+        "from": "s129",
+        "via": "Back to Dineout home — scrolled",
+        "name": "My Corner (empty) (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s094",
+        "via": "Type “restaurants, localities, cuisines”",
+        "name": "Search (5)"
+      },
+      {
+        "to": "s099",
+        "via": "Tap “Dineout”",
+        "name": "Dineout home (4)"
+      },
+      {
+        "to": "s100",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Guduvancheri"
+      },
+      {
+        "to": "s107",
+        "via": "Back to Guduvancheri",
+        "name": "Guduvancheri (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

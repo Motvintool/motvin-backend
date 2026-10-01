@@ -1,0 +1,165 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-browsing-a-category-3",
+  "screen_id": "swiggy-ios-versions-2026-10-01-browsing-a-category-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:53.061Z",
+  "screen_type": "calendar",
+  "published_as": "calendar",
+  "states": [],
+  "category": "productivity",
+  "flow": "creation",
+  "flow_name": "Browsing a category",
+  "flow_position": 3,
+  "name": "Guduvancheri (4)",
+  "description": "Calendar screen with a row of 4 category chips and a search bar. Dark theme, 33 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "booking",
+    "calendar",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar screen with a row of 4 category chips and a search bar. Dark theme, 33 text elements.",
+        "33 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Browsing a category”",
+        "Reached from “Guduvancheri (3)”, “Search (6)” and “Dineout home — scrolled”",
+        "Leads to “Search (6)” and “Checkout”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:20 in the recording",
+        "Frame 1869 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080c0f",
+      "role": "background",
+      "share": 0.237
+    },
+    {
+      "hex": "#292024",
+      "role": "surface",
+      "share": 0.203
+    },
+    {
+      "hex": "#f9d64c",
+      "role": "text",
+      "share": 0.117
+    },
+    {
+      "hex": "#085e3e",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#d9aa50",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1869,
+    "atSeconds": 440.7,
+    "endSeconds": 441.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [
+      "Scenes",
+      "Dineout",
+      "Food",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "RAAS RATRI"
+  },
+  "crawler": {
+    "nodeId": "s107",
+    "depth": 106,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s106",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Guduvancheri (3)"
+      },
+      {
+        "from": "s108",
+        "via": "Type “16 mins”",
+        "name": "Search (6)"
+      },
+      {
+        "from": "s093",
+        "via": "Back to Guduvancheri",
+        "name": "Dineout home — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s108",
+        "via": "Type “events in your city”",
+        "name": "Search (6)"
+      },
+      {
+        "to": "s073",
+        "via": "Back to Checkout",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

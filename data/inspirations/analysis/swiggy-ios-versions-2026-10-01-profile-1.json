@@ -1,0 +1,144 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-profile-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:45.905Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 1,
+  "name": "My Account",
+  "description": "Profile screen with a row of 7 category chips. Light theme, 29 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "rewards",
+    "address",
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My Account”",
+        "Category strip: My, Saved, Payment, Swiggy, Modes, Money, Address",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a row of 7 category chips. Light theme, 29 text elements.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Profile”",
+        "Leads to “My Account (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:52 in the recording",
+        "Frame 576 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfc",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#dddddf",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#bfc0c4",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#a7a8ab",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#909398",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 576,
+    "atSeconds": 172.5,
+    "endSeconds": 173.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [
+      "My",
+      "Saved",
+      "Payment",
+      "Swiggy",
+      "Modes",
+      "Money",
+      "Address"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "My Account",
+    "headline": "Account Statement"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Scroll",
+        "name": "My Account (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-allowing-a-permission-2",
+  "screen_id": "swiggy-ios-versions-2026-10-01-allowing-a-permission-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:48.061Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Allowing a permission",
+  "flow_position": 2,
+  "name": "Permission prompt (2)",
+  "description": "Permission dialog over a dimmed screen, on top of Search in Theobroma with a search bar and a primary action labelled “Allow”. Dark theme, 19 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Improve its speech recognition”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 14% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Search in Theobroma with a search bar and a primary action labelled “Allow”. Dark theme, 19 text elements.",
+        "Calls to action: “Allow”",
+        "19 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Allowing a permission”",
+        "Reached from “Search in Theobroma (2)”",
+        "Leads to “Permission prompt (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:17 in the recording",
+        "Frame 859 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7c7f",
+      "role": "background",
+      "share": 0.402
+    },
+    {
+      "hex": "#413a37",
+      "role": "surface",
+      "share": 0.393
+    },
+    {
+      "hex": "#625f5e",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#165a41",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#36241d",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 859,
+    "atSeconds": 257.1,
+    "endSeconds": 258,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.5625,
+        "w": 0.4375,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Improve its speech recognition",
+    "headline": "\"Swiggy\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s063",
+    "depth": 62,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open Improve its speech recognition",
+        "name": "Search in Theobroma (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s064",
+        "via": "Tap “‹ Search in Theobroma”",
+        "name": "Permission prompt (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}

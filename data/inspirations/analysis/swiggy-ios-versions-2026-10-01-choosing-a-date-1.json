@@ -1,0 +1,156 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-01-choosing-a-date-1",
+  "screen_id": "swiggy-ios-versions-2026-10-01-choosing-a-date-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T07:22:51.629Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Choosing a date",
+  "flow_position": 1,
+  "name": "View",
+  "description": "Feed screen with a 3-item tab bar and a search bar. Light theme, 23 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "view",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search 'Chinese' or 'Cafe'”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a search bar. Light theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Choosing a date”",
+        "Reached from “Search (5)” and “Book a table”",
+        "Leads to “Calendar” and “Search (5)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 6:27 in the recording",
+        "Frame 1297 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfbfb",
+      "role": "background",
+      "share": 0.597
+    },
+    {
+      "hex": "#e1dbd9",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#342a2b",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#5d5655",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#c1c0c3",
+      "role": "surface",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1297,
+    "atSeconds": 387.3,
+    "endSeconds": 389.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search 'Chinese' or 'Cafe'",
+    "headline": "Ask anything",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s095",
+    "depth": 94,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s094",
+        "via": "Type “restaurants, localities, cuisines”",
+        "name": "Search (5)"
+      },
+      {
+        "from": "s098",
+        "via": "Back to View home",
+        "name": "Book a table"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Open Calendar",
+        "name": "Calendar"
+      },
+      {
+        "to": "s094",
+        "via": "Type “restaurants, localities, cuisines”",
+        "name": "Search (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-01",
+  "capturedBy": "motvin-ios-crawler"
+}
