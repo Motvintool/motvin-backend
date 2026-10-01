@@ -2,24 +2,28 @@
   "name": "OTP verification (2)",
   "screenType": "login",
   "fineType": "otp",
-  "states": [],
-  "description": "Verification code screen. Light theme, 11 text elements.",
+  "states": [
+    "keyboard"
+  ],
+  "description": "Verification code screen with the keyboard open. Light theme, 24 text elements.",
   "tags": [
-    "get via sms",
-    "get via call",
     "otp",
+    "keyboard",
     "ios"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
   ],
   "style": [
     "light"
   ],
   "capturedAt": "2026-10-01",
   "capture": {
-    "atSeconds": 8.4,
-    "holdSeconds": 0.6,
+    "atSeconds": 4.8,
+    "holdSeconds": 0.3,
     "brief": false,
     "visits": 1
   }

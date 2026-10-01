@@ -2,31 +2,29 @@
   "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
   "screen_id": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:43.632Z",
-  "screen_type": "signup",
-  "published_as": "signup",
+  "analyzedAt": "2026-10-01T08:01:36.499Z",
+  "screen_type": "other",
+  "published_as": "other",
   "states": [],
   "category": "productivity",
-  "flow": "authentication",
+  "flow": "discovery",
   "flow_name": "Creating an account",
   "flow_position": 2,
-  "name": "Create account (2)",
-  "description": "Sign up screen with 1 input field. Light theme, 32 text elements.",
+  "name": "Location picker (2)",
+  "description": "Other screen with a search bar. Light theme, 12 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "payment",
-    "discount",
-    "rewards",
+    "search",
+    "delivery",
+    "location",
     "address",
-    "signup",
+    "other",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "text-field",
-    "list",
-    "banner"
+    "search-bar"
   ],
   "style": [
     "light"
@@ -36,94 +34,125 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Surendar V”",
+        "Navigation title reads “Search an area or address”",
+        "Search bar present",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Sign up screen with 1 input field. Light theme, 32 text elements.",
-        "32 text elements recognised"
+        "Other screen with a search bar. Light theme, 12 text elements.",
+        "12 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 13 in “Creating an account”"
+        "Step 2 of 3 in “Creating an account”",
+        "Reached from “Location picker” and “Location picker (4)”",
+        "Leads to “Create account (2)”",
+        "Returned to 5 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3s at 1:25 in the recording",
-        "Frame 294 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 3.9s at 1:01 in the recording",
+        "Frame 218 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fcf8f7",
+      "hex": "#f7f7fb",
       "role": "background",
-      "share": 0.883
+      "share": 0.808
     },
     {
-      "hex": "#e0dcdb",
+      "hex": "#d9dee5",
       "role": "surface",
-      "share": 0.083
+      "share": 0.081
     },
     {
-      "hex": "#c9c4c4",
-      "role": "surface",
-      "share": 0.02
-    },
-    {
-      "hex": "#f8a29c",
+      "hex": "#fe550a",
       "role": "accent",
-      "share": 0.006
+      "share": 0.034
     },
     {
-      "hex": "#8f8785",
+      "hex": "#636469",
       "role": "text",
-      "share": 0.004
+      "share": 0.021
+    },
+    {
+      "hex": "#fd7d42",
+      "role": "surface",
+      "share": 0.019
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 294,
-    "atSeconds": 85.5,
-    "endSeconds": 88.5,
-    "holdSeconds": 3,
+    "frame": 218,
+    "atSeconds": 61.8,
+    "endSeconds": 65.7,
+    "holdSeconds": 3.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 5
   },
   "signals": {
-    "lineCount": 32,
+    "lineCount": 12,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Surendar V",
-    "headline": "One (Join now"
+    "title": "Search an area or address",
+    "headline": "Google"
   },
   "crawler": {
-    "nodeId": "s019",
-    "depth": 18,
+    "nodeId": "s022",
+    "depth": 21,
     "path": [],
     "visits": 1,
-    "blocked": true,
-    "blockedReason": "account creation screen — crawler does not register accounts",
+    "blocked": false,
+    "blockedReason": null,
     "actions": [],
-    "reachedFrom": [],
-    "leadsTo": []
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Tap “Search an area or address”",
+        "name": "Location picker"
+      },
+      {
+        "from": "s021",
+        "via": "Back to Location picker",
+        "name": "Location picker"
+      },
+      {
+        "from": "s127",
+        "via": "Tap “GST Food Street”",
+        "name": "Location picker (4)"
+      },
+      {
+        "from": "s127",
+        "via": "Tap “GST Food Street”",
+        "name": "Location picker (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Back to Create account",
+        "name": "Create account (2)"
+      }
+    ]
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

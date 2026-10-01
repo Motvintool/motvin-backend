@@ -3218,7 +3218,8 @@
         "swiggy-ios-versions-2026-10-01-onboarding-2",
         "swiggy-ios-versions-2026-10-01-onboarding-3",
         "swiggy-ios-versions-2026-10-01-onboarding-4",
-        "swiggy-ios-versions-2026-10-01-onboarding-5"
+        "swiggy-ios-versions-2026-10-01-onboarding-5",
+        "swiggy-ios-versions-2026-10-01-onboarding-6"
       ],
       "parentId": null,
       "steps": [
@@ -3236,19 +3237,15 @@
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-onboarding-4",
-          "action": {
-            "kind": "open",
-            "label": "Enter verification code",
-            "basis": "destination"
-          }
+          "action": null
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-onboarding-5",
-          "action": {
-            "kind": "tap",
-            "label": "Get via SMS",
-            "basis": "match"
-          }
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-onboarding-6",
+          "action": null
         }
       ]
     },
@@ -3306,12 +3303,13 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-creating-an-account",
       "appId": "swiggy",
-      "name": "Creating an account",
+      "name": "Account creation - signup",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-food-2",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-1"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2"
       ],
       "parentId": null,
       "steps": [
@@ -3322,21 +3320,24 @@
         {
           "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
           "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+          "action": null
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-settings",
       "appId": "swiggy",
-      "name": "Settings",
+      "name": "Settings - account",
       "category": "settings",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-settings-1",
         "swiggy-ios-versions-2026-10-01-settings-2",
         "swiggy-ios-versions-2026-10-01-settings-3",
-        "swiggy-ios-versions-2026-10-01-settings-4",
-        "swiggy-ios-versions-2026-10-01-settings-5"
+        "swiggy-ios-versions-2026-10-01-settings-4"
       ],
       "parentId": null,
       "steps": [
@@ -3355,35 +3356,21 @@
         {
           "screenId": "swiggy-ios-versions-2026-10-01-settings-4",
           "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-settings-5",
-          "action": null
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
       "appId": "swiggy",
-      "name": "Creating an account",
+      "name": "Account creation - phone number login",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-settings-1",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
         "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
         "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-3",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-4",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-5",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-6",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-7",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-8",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-9",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-10",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-11",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-12",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-13"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2-3"
       ],
       "parentId": null,
       "steps": [
@@ -3392,7 +3379,7 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
           "action": {
             "kind": "back",
             "label": "Create account",
@@ -3405,54 +3392,36 @@
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "Search an area or address",
+            "basis": "press"
+          }
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-3",
           "action": null
-        },
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-01-new-quick",
+      "appId": "swiggy",
+      "name": "New Quick",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-new-quick-1",
+        "swiggy-ios-versions-2026-10-01-new-quick-2"
+      ],
+      "parentId": null,
+      "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-4",
+          "screenId": "swiggy-ios-versions-2026-10-01-new-quick-1",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-5",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-6",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-7",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-8",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-9",
-          "action": {
-            "kind": "tap",
-            "label": "Add Balance",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-10",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-11",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-12",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-13",
+          "screenId": "swiggy-ios-versions-2026-10-01-new-quick-2",
           "action": null
         }
       ]
@@ -3493,15 +3462,72 @@
       ]
     },
     {
+      "id": "swiggy-ios-versions-2026-10-01-creating-an-account-3",
+      "appId": "swiggy",
+      "name": "Account creation - email login",
+      "category": "authentication",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-instamart-1",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-1",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-2",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-3",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-4",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-5"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-instamart-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-1",
+          "action": {
+            "kind": "open",
+            "label": "Urendar V",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-2",
+          "action": {
+            "kind": "open",
+            "label": "Other",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-3",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-4",
+          "action": {
+            "kind": "tap",
+            "label": "MARRIOTT",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-5",
+          "action": {
+            "kind": "open",
+            "label": "Sign in to your account",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
       "id": "swiggy-ios-versions-2026-10-01-profile",
       "appId": "swiggy",
-      "name": "Profile",
+      "name": "Profile - account",
       "category": "settings",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-profile-1",
-        "swiggy-ios-versions-2026-10-01-profile-2",
-        "swiggy-ios-versions-2026-10-01-profile-3"
+        "swiggy-ios-versions-2026-10-01-profile-2"
       ],
       "parentId": null,
       "steps": [
@@ -3511,14 +3537,6 @@
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-profile-2",
-          "action": {
-            "kind": "scroll",
-            "label": null,
-            "basis": "structure"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-profile-3",
           "action": null
         }
       ]
@@ -3629,13 +3647,14 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-entering-phone-number",
       "appId": "swiggy",
-      "name": "Entering phone number",
+      "name": "Account creation - phone number",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-onboarding-3",
         "swiggy-ios-versions-2026-10-01-onboarding-4",
-        "swiggy-ios-versions-2026-10-01-onboarding-5"
+        "swiggy-ios-versions-2026-10-01-onboarding-5",
+        "swiggy-ios-versions-2026-10-01-onboarding-6"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-onboarding",
       "steps": [
@@ -3645,63 +3664,74 @@
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-onboarding-4",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-onboarding-5",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-onboarding-6",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-01-payment-options",
+      "appId": "swiggy",
+      "name": "Payment options",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-payment-options-1",
+        "swiggy-ios-versions-2026-10-01-payment-options-2",
+        "swiggy-ios-versions-2026-10-01-payment-options-3"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-01-creating-an-account",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-payment-options-1",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-payment-options-2",
           "action": {
             "kind": "open",
-            "label": "Enter verification code",
+            "label": "Payment Options",
             "basis": "destination"
           }
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-onboarding-5",
+          "screenId": "swiggy-ios-versions-2026-10-01-payment-options-3",
           "action": {
             "kind": "tap",
-            "label": "Get via SMS",
+            "label": "- Payment Options",
             "basis": "match"
           }
         }
       ]
     },
     {
-      "id": "swiggy-ios-versions-2026-10-01-paying",
-      "appId": "swiggy",
-      "name": "Paying",
-      "category": "checkout",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-versions-2026-10-01-paying-1",
-        "swiggy-ios-versions-2026-10-01-paying-2"
-      ],
-      "parentId": "swiggy-ios-versions-2026-10-01-creating-an-account",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-paying-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-paying-2",
-          "action": null
-        }
-      ]
-    },
-    {
       "id": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings",
       "appId": "swiggy",
-      "name": "Unlimited Benefits and Savings",
+      "name": "Account creation - benefits",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-creating-an-account-1",
-        "swiggy-ios-versions-2026-10-01-paying-1",
-        "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-1"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+        "swiggy-ios-versions-2026-10-01-payment-options-1",
+        "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-1",
+        "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-2",
+        "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-3"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-creating-an-account",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-paying-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-payment-options-1",
           "action": {
             "kind": "open",
             "label": "Unlimited Benefits and Savings",
@@ -3711,23 +3741,31 @@
         {
           "screenId": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-1",
           "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-3",
+          "action": null
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number",
       "appId": "swiggy",
-      "name": "Logging in with phone number",
+      "name": "Account creation - phone number login",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
         "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-1"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-creating-an-account",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
           "action": null
         },
         {
@@ -3743,12 +3781,13 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-opening-you-have-not-hidden-any",
       "appId": "swiggy",
-      "name": "Opening You have not hidden any",
+      "name": "Empty state",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-settings-1",
-        "swiggy-ios-versions-2026-10-01-opening-you-have-not-hidden-any-1"
+        "swiggy-ios-versions-2026-10-01-opening-you-have-not-hidden-any-1",
+        "swiggy-ios-versions-2026-10-01-opening-you-have-not-hidden-any-2"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-settings",
       "steps": [
@@ -3763,49 +3802,61 @@
             "label": "You have not hidden any",
             "basis": "destination"
           }
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-opening-you-have-not-hidden-any-2",
+          "action": null
         }
       ]
     },
     {
-      "id": "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account",
+      "id": "swiggy-ios-versions-2026-10-01-searching-new-quick",
       "appId": "swiggy",
-      "name": "Logging in with phone number (Creating an account)",
-      "category": "authentication",
+      "name": "Location picker",
+      "category": "search",
       "platform": "ios",
       "screenIds": [
+        "swiggy-ios-versions-2026-10-01-new-quick-1",
         "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
-        "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-1",
-        "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-2",
-        "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-3"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2"
       ],
-      "parentId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+      "parentId": "swiggy-ios-versions-2026-10-01-new-quick",
       "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-new-quick-1",
+          "action": null
+        },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-1",
-          "action": null
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
+          "action": {
+            "kind": "tap",
+            "label": "Search an area or address",
+            "basis": "press"
+          }
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-logging-in-with-phone-number-creating-an-account-3",
-          "action": null
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+          "action": {
+            "kind": "back",
+            "label": "Create account",
+            "basis": "structure"
+          }
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-searching",
       "appId": "swiggy",
-      "name": "Searching",
+      "name": "Search",
       "category": "search",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-settings-3",
+        "swiggy-ios-versions-2026-10-01-settings-2",
         "swiggy-ios-versions-2026-10-01-searching-1",
         "swiggy-ios-versions-2026-10-01-searching-2",
         "swiggy-ios-versions-2026-10-01-searching-3",
@@ -3816,7 +3867,7 @@
       "parentId": "swiggy-ios-versions-2026-10-01-settings",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-settings-3",
+          "screenId": "swiggy-ios-versions-2026-10-01-settings-2",
           "action": null
         },
         {
@@ -3858,91 +3909,25 @@
       ]
     },
     {
-      "id": "swiggy-ios-versions-2026-10-01-product-detail",
-      "appId": "swiggy",
-      "name": "Product detail",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-versions-2026-10-01-instamart-1",
-        "swiggy-ios-versions-2026-10-01-product-detail-1"
-      ],
-      "parentId": "swiggy-ios-versions-2026-10-01-instamart",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-instamart-1",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-product-detail-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "swiggy-ios-versions-2026-10-01-partner-rewards",
-      "appId": "swiggy",
-      "name": "Partner Rewards",
-      "category": "discovery",
-      "platform": "ios",
-      "screenIds": [
-        "swiggy-ios-versions-2026-10-01-profile-2",
-        "swiggy-ios-versions-2026-10-01-partner-rewards-1",
-        "swiggy-ios-versions-2026-10-01-partner-rewards-2",
-        "swiggy-ios-versions-2026-10-01-partner-rewards-3"
-      ],
-      "parentId": "swiggy-ios-versions-2026-10-01-profile",
-      "steps": [
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-profile-2",
-          "action": null
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-partner-rewards-1",
-          "action": {
-            "kind": "wait",
-            "label": "4.2s",
-            "basis": "structure"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-partner-rewards-2",
-          "action": {
-            "kind": "tap",
-            "label": "MARRIOTT",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-partner-rewards-3",
-          "action": {
-            "kind": "open",
-            "label": "Sign in to your account",
-            "basis": "destination"
-          }
-        }
-      ]
-    },
-    {
       "id": "swiggy-ios-versions-2026-10-01-logging-in-with-email",
       "appId": "swiggy",
-      "name": "Logging in with email",
+      "name": "Email login",
       "category": "authentication",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-settings-4",
-        "swiggy-ios-versions-2026-10-01-partner-rewards-3",
-        "swiggy-ios-versions-2026-10-01-logging-in-with-email-1",
-        "swiggy-ios-versions-2026-10-01-partner-rewards-1"
+        "swiggy-ios-versions-2026-10-01-settings-3",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-5",
+        "swiggy-ios-versions-2026-10-01-creating-an-account-3-3",
+        "swiggy-ios-versions-2026-10-01-logging-in-with-email-1"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-settings",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-settings-4",
+          "screenId": "swiggy-ios-versions-2026-10-01-settings-3",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-partner-rewards-3",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-5",
           "action": {
             "kind": "back",
             "label": "Sign in with email",
@@ -3950,76 +3935,75 @@
           }
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-logging-in-with-email-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-3-3",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-partner-rewards-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-logging-in-with-email-1",
           "action": null
         }
       ]
     },
     {
-      "id": "swiggy-ios-versions-2026-10-01-share-your-name-surendar-v-detail",
+      "id": "swiggy-ios-versions-2026-10-01-help-support",
       "appId": "swiggy",
-      "name": "Share your name \"Surendar V\" detail",
+      "name": "Help & support",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-profile-2",
-        "swiggy-ios-versions-2026-10-01-share-your-name-surendar-v-detail-1",
-        "swiggy-ios-versions-2026-10-01-share-your-name-surendar-v-detail-2"
+        "swiggy-ios-versions-2026-10-01-profile-1",
+        "swiggy-ios-versions-2026-10-01-help-support-1"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-profile",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-profile-2",
+          "screenId": "swiggy-ios-versions-2026-10-01-profile-1",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-share-your-name-surendar-v-detail-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-help-support-1",
           "action": {
-            "kind": "wait",
-            "label": "4.2s",
-            "basis": "structure"
+            "kind": "tap",
+            "label": "Help",
+            "basis": "match"
           }
-        },
-        {
-          "screenId": "swiggy-ios-versions-2026-10-01-share-your-name-surendar-v-detail-2",
-          "action": null
         }
       ]
     },
     {
-      "id": "swiggy-ios-versions-2026-10-01-searching-food",
+      "id": "swiggy-ios-versions-2026-10-01-searching-for-dishes-restaurants",
       "appId": "swiggy",
-      "name": "Searching Food",
+      "name": "Home - search",
       "category": "search",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-food-3",
-        "swiggy-ios-versions-2026-10-01-searching-food-1"
+        "swiggy-ios-versions-2026-10-01-food-2",
+        "swiggy-ios-versions-2026-10-01-searching-for-dishes-restaurants-1"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-food-3",
+          "screenId": "swiggy-ios-versions-2026-10-01-food-2",
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-searching-food-1",
-          "action": null
+          "screenId": "swiggy-ios-versions-2026-10-01-searching-for-dishes-restaurants-1",
+          "action": {
+            "kind": "type",
+            "label": "dishes & restaurants",
+            "basis": "match"
+          }
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-browsing-a-category-food",
       "appId": "swiggy",
-      "name": "Browsing a category (Food)",
+      "name": "Ordering - cappuccino",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-food-3",
+        "swiggy-ios-versions-2026-10-01-food-2",
         "swiggy-ios-versions-2026-10-01-browsing-a-category-food-1",
         "swiggy-ios-versions-2026-10-01-browsing-a-category-food-2",
         "swiggy-ios-versions-2026-10-01-browsing-a-category-food-3",
@@ -4034,12 +4018,16 @@
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-food-3",
+          "screenId": "swiggy-ios-versions-2026-10-01-food-2",
           "action": null
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-browsing-a-category-food-1",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": ":: ALL",
+            "basis": "match"
+          }
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-browsing-a-category-food-2",
@@ -4110,18 +4098,18 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-completing-an-order",
       "appId": "swiggy",
-      "name": "Completing an order",
+      "name": "Order confirmation",
       "category": "checkout",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-food-4",
+        "swiggy-ios-versions-2026-10-01-food-3",
         "swiggy-ios-versions-2026-10-01-browsing-a-category-food-5",
         "swiggy-ios-versions-2026-10-01-browsing-a-category-food-10"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-food-4",
+          "screenId": "swiggy-ios-versions-2026-10-01-food-3",
           "action": null
         },
         {
@@ -4141,21 +4129,19 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet",
       "appId": "swiggy",
-      "name": "Hola Pasta - Fresh Gourmet",
+      "name": "Hola pasta - fresh Gourmet",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-food-4",
+        "swiggy-ios-versions-2026-10-01-food-3",
         "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-1",
         "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-2",
-        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-3",
-        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-4",
-        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-5"
+        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-3"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-food-4",
+          "screenId": "swiggy-ios-versions-2026-10-01-food-3",
           "action": null
         },
         {
@@ -4173,25 +4159,48 @@
         {
           "screenId": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-3",
           "action": null
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-new-quick",
+      "appId": "swiggy",
+      "name": "Hola pasta - fresh Gourmet",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-new-quick-2",
+        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-3",
+        "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-new-quick-1"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-01-new-quick",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-new-quick-2",
+          "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-4",
+          "screenId": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-3",
           "action": {
-            "kind": "tap",
+            "kind": "back",
             "label": "Hola Pasta - Fresh Gourmet",
-            "basis": "match"
+            "basis": "structure"
           }
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-5",
-          "action": null
+          "screenId": "swiggy-ios-versions-2026-10-01-hola-pasta-fresh-gourmet-new-quick-1",
+          "action": {
+            "kind": "tap",
+            "label": "LeanCrust",
+            "basis": "match"
+          }
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-noice-binge-worthy-deals",
       "appId": "swiggy",
-      "name": "Noice Binge-worthy Deals",
+      "name": "Home - noice binge-worthy Deals",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4276,11 +4285,11 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-search-an-area-or-address",
       "appId": "swiggy",
-      "name": "Search an area or address",
+      "name": "Location picker",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "swiggy-ios-versions-2026-10-01-profile-3",
+        "swiggy-ios-versions-2026-10-01-profile-2",
         "swiggy-ios-versions-2026-10-01-noice-binge-worthy-deals-8",
         "swiggy-ios-versions-2026-10-01-noice-binge-worthy-deals-7",
         "swiggy-ios-versions-2026-10-01-search-an-area-or-address-1",
@@ -4289,7 +4298,7 @@
       "parentId": "swiggy-ios-versions-2026-10-01-profile",
       "steps": [
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-profile-3",
+          "screenId": "swiggy-ios-versions-2026-10-01-profile-2",
           "action": null
         },
         {
@@ -4329,7 +4338,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-searching-for-restaurants-localities-cuisines",
       "appId": "swiggy",
-      "name": "Searching for “restaurants, localities, cuisines”",
+      "name": "Search restaurants",
       "category": "search",
       "platform": "ios",
       "screenIds": [
@@ -4355,7 +4364,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-browsing-a-category",
       "appId": "swiggy",
-      "name": "Browsing a category",
+      "name": "Browsing guduvancheri",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4399,7 +4408,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-filling-in-a-form",
       "appId": "swiggy",
-      "name": "Filling in a form",
+      "name": "Form - popular brands",
       "category": "creation",
       "platform": "ios",
       "screenIds": [
@@ -4465,7 +4474,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-restaurant-detail",
       "appId": "swiggy",
-      "name": "Restaurant detail",
+      "name": "Order confirmation",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4509,7 +4518,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-noice-binge-worthy-deals-2",
       "appId": "swiggy",
-      "name": "Noice Binge-worthy Deals",
+      "name": "Home - Swiggy",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4531,7 +4540,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-browsing-a-category-instamart",
       "appId": "swiggy",
-      "name": "Browsing a category (Instamart)",
+      "name": "Home - noice binge-worthy Deals",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4557,7 +4566,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-browsing-a-category-dineout",
       "appId": "swiggy",
-      "name": "Browsing a category (Dineout)",
+      "name": "Home - my corner",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4579,7 +4588,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-choosing-a-date-dineout",
       "appId": "swiggy",
-      "name": "Choosing a date (Dineout)",
+      "name": "Guduvancheri calendar",
       "category": "creation",
       "platform": "ios",
       "screenIds": [
@@ -4601,14 +4610,14 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-adding-a-delivery-address",
       "appId": "swiggy",
-      "name": "Adding a delivery address",
+      "name": "Adding delivery Address",
       "category": "creation",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-food-7",
         "swiggy-ios-versions-2026-10-01-adding-a-delivery-address-1",
         "swiggy-ios-versions-2026-10-01-adding-a-delivery-address-2",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-1"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2-2"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
@@ -4625,7 +4634,7 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
           "action": {
             "kind": "tap",
             "label": "GST Food Street",
@@ -4637,13 +4646,13 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-search-an-area-or-address-food",
       "appId": "swiggy",
-      "name": "Search an area or address (Food)",
+      "name": "Search an Area or Address",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
         "swiggy-ios-versions-2026-10-01-food-7",
         "swiggy-ios-versions-2026-10-01-adding-a-delivery-address-2",
-        "swiggy-ios-versions-2026-10-01-creating-an-account-2-1"
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2-2"
       ],
       "parentId": "swiggy-ios-versions-2026-10-01-food",
       "steps": [
@@ -4656,7 +4665,7 @@
           "action": null
         },
         {
-          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-2",
           "action": {
             "kind": "tap",
             "label": "GST Food Street",
@@ -4666,9 +4675,87 @@
       ]
     },
     {
+      "id": "swiggy-ios-versions-2026-10-01-paying",
+      "appId": "swiggy",
+      "name": "New quick - payment",
+      "category": "checkout",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+        "swiggy-ios-versions-2026-10-01-paying-1"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-01-searching-new-quick",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-paying-1",
+          "action": {
+            "kind": "tap",
+            "label": "Payment",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-01-refund-status",
+      "appId": "swiggy",
+      "name": "New quick - refund status",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+        "swiggy-ios-versions-2026-10-01-refund-status-1"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-01-searching-new-quick",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-refund-status-1",
+          "action": {
+            "kind": "open",
+            "label": "Refund Status",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiggy-ios-versions-2026-10-01-swiggy-money",
+      "appId": "swiggy",
+      "name": "New quick - Swiggy money",
+      "category": "discovery",
+      "platform": "ios",
+      "screenIds": [
+        "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+        "swiggy-ios-versions-2026-10-01-swiggy-money-1"
+      ],
+      "parentId": "swiggy-ios-versions-2026-10-01-searching-new-quick",
+      "steps": [
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2",
+          "action": null
+        },
+        {
+          "screenId": "swiggy-ios-versions-2026-10-01-swiggy-money-1",
+          "action": {
+            "kind": "tap",
+            "label": "Swiggy",
+            "basis": "match"
+          }
+        }
+      ]
+    },
+    {
       "id": "swiggy-ios-versions-2026-10-01-searching-in-theobroma",
       "appId": "swiggy",
-      "name": "Searching in theobroma",
+      "name": "Food - searching Theobroma",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4694,7 +4781,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-allowing-a-permission",
       "appId": "swiggy",
-      "name": "Allowing a permission",
+      "name": "Food - permission prompt",
       "category": "onboarding",
       "platform": "ios",
       "screenIds": [
@@ -4727,18 +4814,14 @@
         },
         {
           "screenId": "swiggy-ios-versions-2026-10-01-allowing-a-permission-4",
-          "action": {
-            "kind": "tap",
-            "label": "‹ Search in Theobroma",
-            "basis": "match"
-          }
+          "action": null
         }
       ]
     },
     {
       "id": "swiggy-ios-versions-2026-10-01-searching-in-theobroma-2",
       "appId": "swiggy",
-      "name": "Searching in theobroma",
+      "name": "Food - searching Theobroma",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4764,7 +4847,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-searching-browsing-a-category-food",
       "appId": "swiggy",
-      "name": "Searching (Browsing a category (Food))",
+      "name": "Food - searching cappuccino",
       "category": "search",
       "platform": "ios",
       "screenIds": [
@@ -4834,7 +4917,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-choosing-a-date",
       "appId": "swiggy",
-      "name": "Choosing a date",
+      "name": "Dineout - Booking a Table",
       "category": "creation",
       "platform": "ios",
       "screenIds": [
@@ -4878,7 +4961,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-search-chinese-or-cafe",
       "appId": "swiggy",
-      "name": "Search 'Chinese' or 'Cafe'",
+      "name": "Dineout - searching chinese/cafe",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4961,7 +5044,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-event-detail",
       "appId": "swiggy",
-      "name": "Event detail",
+      "name": "Scenes - event detail",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
@@ -4987,7 +5070,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-searching-for-events-in-your-city",
       "appId": "swiggy",
-      "name": "Searching for “events in your city”",
+      "name": "Scenes - searching events",
       "category": "search",
       "platform": "ios",
       "screenIds": [
@@ -5067,7 +5150,7 @@
     {
       "id": "swiggy-ios-versions-2026-10-01-completing-the-task",
       "appId": "swiggy",
-      "name": "Completing the task",
+      "name": "Instamart - noice binge-worthy Deals - daawat",
       "category": "checkout",
       "platform": "ios",
       "screenIds": [

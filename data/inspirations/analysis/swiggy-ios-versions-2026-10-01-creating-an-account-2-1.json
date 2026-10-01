@@ -2,24 +2,22 @@
   "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
   "screen_id": "swiggy-ios-versions-2026-10-01-creating-an-account-2-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:43.225Z",
-  "screen_type": "other",
-  "published_as": "other",
+  "analyzedAt": "2026-10-01T08:01:36.410Z",
+  "screen_type": "search",
+  "published_as": "search",
   "states": [],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "search",
   "flow_name": "Creating an account",
   "flow_position": 1,
   "name": "Location picker",
-  "description": "Other screen with a search bar. Light theme, 12 text elements.",
+  "description": "Search screen with a search bar. Light theme, 7 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
     "search",
-    "delivery",
     "location",
     "address",
-    "other",
     "ios"
   ],
   "elements": [
@@ -42,73 +40,72 @@
     {
       "title": "Content",
       "points": [
-        "Other screen with a search bar. Light theme, 12 text elements.",
-        "12 text elements recognised"
+        "Search screen with a search bar. Light theme, 7 text elements.",
+        "7 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 13 in “Creating an account”",
-        "Reached from “Loading state” and “Location picker (4)”",
-        "Leads to “Loading state” and “Create account”",
-        "Returned to 5 times in the recording"
+        "Step 1 of 3 in “Creating an account”",
+        "Leads to “Location picker (2)”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.9s at 1:01 in the recording",
-        "Frame 218 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 1:00 in the recording",
+        "Frame 205 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f7fb",
+      "hex": "#f8f8fb",
       "role": "background",
-      "share": 0.808
+      "share": 0.894
     },
     {
-      "hex": "#d9dee5",
+      "hex": "#d9dee7",
       "role": "surface",
-      "share": 0.081
+      "share": 0.062
     },
     {
-      "hex": "#fe550a",
-      "role": "accent",
-      "share": 0.034
-    },
-    {
-      "hex": "#636469",
+      "hex": "#626468",
       "role": "text",
-      "share": 0.021
+      "share": 0.022
     },
     {
-      "hex": "#fd7d42",
+      "hex": "#c2c2c5",
       "role": "surface",
-      "share": 0.019
+      "share": 0.008
+    },
+    {
+      "hex": "#f7ad93",
+      "role": "accent",
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 218,
-    "atSeconds": 61.8,
-    "endSeconds": 65.7,
-    "holdSeconds": 3.9,
+    "frame": 205,
+    "atSeconds": 60.9,
+    "endSeconds": 61.8,
+    "holdSeconds": 0.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 5
+    "visits": 2
   },
   "signals": {
-    "lineCount": 12,
+    "lineCount": 7,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -117,40 +114,24 @@
     "headline": "Google"
   },
   "crawler": {
-    "nodeId": "s015",
-    "depth": 14,
+    "nodeId": "s021",
+    "depth": 20,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s018",
-        "via": "Wait 3s",
-        "name": "Loading state"
-      },
-      {
-        "from": "s133",
-        "via": "Tap “GST Food Street”",
-        "name": "Location picker (4)"
-      },
-      {
-        "from": "s133",
-        "via": "Tap “GST Food Street”",
-        "name": "Location picker (4)"
-      }
-    ],
+    "reachedFrom": [],
     "leadsTo": [
       {
-        "to": "s018",
-        "via": "Open Select your location",
-        "name": "Loading state"
+        "to": "s022",
+        "via": "Tap “Search an area or address”",
+        "name": "Location picker (2)"
       },
       {
-        "to": "s008",
-        "via": "Back to Create account",
-        "name": "Create account"
+        "to": "s022",
+        "via": "Back to Location picker",
+        "name": "Location picker (2)"
       }
     ]
   },

@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
   "screen_id": "swiggy-ios-versions-2026-10-01-creating-an-account-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:42.576Z",
+  "analyzedAt": "2026-10-01T08:01:35.310Z",
   "screen_type": "signup",
   "published_as": "signup",
   "states": [],
@@ -11,7 +11,7 @@
   "flow_name": "Creating an account",
   "flow_position": 1,
   "name": "Create account",
-  "description": "Sign up screen with 1 input field. Light theme, 31 text elements.",
+  "description": "Sign up screen with 1 input field. Light theme, 29 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
@@ -19,14 +19,14 @@
     "discount",
     "rewards",
     "address",
+    "favourites",
     "signup",
     "ios"
   ],
   "elements": [
     "nav-bar",
     "text-field",
-    "list",
-    "banner"
+    "list"
   ],
   "style": [
     "light"
@@ -43,24 +43,21 @@
     {
       "title": "Content",
       "points": [
-        "Sign up screen with 1 input field. Light theme, 31 text elements.",
-        "31 text elements recognised"
+        "Sign up screen with 1 input field. Light theme, 29 text elements.",
+        "29 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Creating an account”",
-        "Reached from “One LITE”, “Phone number entry (2)”, “Settings”, “Location picker”, “Payment method (2)” and “Refund Status”",
-        "Leads to “Listing”, “Phone number entry (2)”, “Settings”, “Payment method (2)”, “Refund Status”, “Swiggy Money (2)” and “Food home — loading”",
-        "Returned to 14 times in the recording"
+        "Step 1 of 2 in “Creating an account”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 5.7s at 0:21 in the recording",
-        "Frame 195 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 0.3s at 0:20 in the recording",
+        "Frame 67 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -69,22 +66,22 @@
     {
       "hex": "#fcf8f7",
       "role": "background",
-      "share": 0.883
+      "share": 0.894
     },
     {
-      "hex": "#e0dcdb",
+      "hex": "#e1dcdb",
       "role": "surface",
-      "share": 0.083
+      "share": 0.072
     },
     {
-      "hex": "#c7c4c4",
+      "hex": "#c9c5c5",
       "role": "surface",
       "share": 0.019
     },
     {
-      "hex": "#fab5b0",
+      "hex": "#f9b3ae",
       "role": "surface",
-      "share": 0.006
+      "share": 0.005
     },
     {
       "hex": "#8f8785",
@@ -96,104 +93,38 @@
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 195,
-    "atSeconds": 21.3,
-    "endSeconds": 22.5,
-    "holdSeconds": 5.7,
+    "frame": 67,
+    "atSeconds": 20.1,
+    "endSeconds": 20.4,
+    "holdSeconds": 0.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 14
+    "visits": 1
   },
   "signals": {
-    "lineCount": 31,
+    "lineCount": 29,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
     "title": "Surendar V",
-    "headline": "One (Join now"
+    "headline": "Account Statement",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s008",
-    "depth": 7,
+    "nodeId": "s009",
+    "depth": 8,
     "path": [],
     "visits": 1,
     "blocked": true,
     "blockedReason": "account creation screen — crawler does not register accounts",
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s011",
-        "via": "Back to Create account",
-        "name": "One LITE"
-      },
-      {
-        "from": "s012",
-        "via": "Back to Create account",
-        "name": "Phone number entry (2)"
-      },
-      {
-        "from": "s013",
-        "via": "Back to Create account",
-        "name": "Settings"
-      },
-      {
-        "from": "s015",
-        "via": "Back to Create account",
-        "name": "Location picker"
-      },
-      {
-        "from": "s020",
-        "via": "Back to Create account",
-        "name": "Payment method (2)"
-      },
-      {
-        "from": "s022",
-        "via": "Back to Create account",
-        "name": "Refund Status"
-      }
-    ],
-    "leadsTo": [
-      {
-        "to": "s009",
-        "via": "Open Unlimited Benefits and Savings",
-        "name": "Listing"
-      },
-      {
-        "to": "s012",
-        "via": "Tap “thunderbirds0202@gmail.com”",
-        "name": "Phone number entry (2)"
-      },
-      {
-        "to": "s013",
-        "via": "Open Settings",
-        "name": "Settings"
-      },
-      {
-        "to": "s020",
-        "via": "Tap “Payment”",
-        "name": "Payment method (2)"
-      },
-      {
-        "to": "s022",
-        "via": "Open Refund Status",
-        "name": "Refund Status"
-      },
-      {
-        "to": "s025",
-        "via": "Tap “Swiggy”",
-        "name": "Swiggy Money (2)"
-      },
-      {
-        "to": "s031",
-        "via": "Open Food home — loading",
-        "name": "Food home — loading"
-      }
-    ]
+    "reachedFrom": [],
+    "leadsTo": []
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

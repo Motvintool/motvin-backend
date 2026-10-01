@@ -2,26 +2,30 @@
   "screenId": "swiggy-ios-versions-2026-10-01-creating-an-account-2-3",
   "screen_id": "swiggy-ios-versions-2026-10-01-creating-an-account-2-3",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:43.728Z",
-  "screen_type": "payment",
-  "published_as": "checkout",
-  "states": [],
+  "analyzedAt": "2026-10-01T08:01:36.620Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
   "category": "productivity",
-  "flow": "checkout",
+  "flow": "authentication",
   "flow_name": "Creating an account",
   "flow_position": 3,
-  "name": "Payment method (2)",
-  "description": "Payment screen. Light theme, 21 text elements.",
+  "name": "Phone number entry · modal",
+  "description": "Login dialog over a dimmed screen. Light theme, 14 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "payment",
-    "wallet",
+    "address",
+    "login",
+    "modal",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "list"
+    "list",
+    "modal"
   ],
   "style": [
     "light"
@@ -31,57 +35,57 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Payment Modes”",
+        "Navigation title reads “Other”",
+        "Dialog over a dimmed background, covering 17% of the height from 41% down",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Payment screen. Light theme, 21 text elements.",
-        "21 text elements recognised"
+        "Login dialog over a dimmed screen. Light theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: modal"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 13 in “Creating an account”",
-        "Reached from “Create account”",
-        "Leads to “Create account”"
+        "Step 3 of 3 in “Creating an account”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3s at 1:28 in the recording",
-        "Frame 304 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 1:08 in the recording",
+        "Frame 231 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f6f9",
+      "hex": "#c9c6c9",
       "role": "background",
-      "share": 0.908
+      "share": 0.882
     },
     {
-      "hex": "#e6d7d3",
+      "hex": "#edeaec",
       "role": "surface",
-      "share": 0.057
+      "share": 0.08
     },
     {
-      "hex": "#c3c2c6",
+      "hex": "#b0a9ab",
       "role": "surface",
-      "share": 0.026
+      "share": 0.028
     },
     {
-      "hex": "#aaa5a6",
+      "hex": "#cda493",
       "role": "surface",
-      "share": 0.005
+      "share": 0.006
     },
     {
-      "hex": "#f9c4af",
+      "hex": "#908e92",
       "role": "surface",
       "share": 0.002
     }
@@ -90,49 +94,46 @@
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 304,
-    "atSeconds": 88.5,
-    "endSeconds": 91.5,
-    "holdSeconds": 3,
+    "frame": 231,
+    "atSeconds": 68.7,
+    "endSeconds": 69.6,
+    "holdSeconds": 0.9,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.40625,
+        "w": 0.8125,
+        "h": 0.171875
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 21,
+    "lineCount": 14,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Payment Modes",
-    "headline": "Swiggy UPI"
+    "title": "Other",
+    "headline": "Other"
   },
   "crawler": {
-    "nodeId": "s020",
-    "depth": 19,
+    "nodeId": "s023",
+    "depth": 22,
     "path": [],
     "visits": 1,
     "blocked": true,
-    "blockedReason": "payment entry — crawler does not enter payment details",
+    "blockedReason": "authentication screen — crawler does not sign in",
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s008",
-        "via": "Tap “Payment”",
-        "name": "Create account"
-      }
-    ],
-    "leadsTo": [
-      {
-        "to": "s008",
-        "via": "Back to Create account",
-        "name": "Create account"
-      }
-    ]
+    "reachedFrom": [],
+    "leadsTo": []
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

@@ -2,29 +2,26 @@
   "screenId": "swiggy-ios-versions-2026-10-01-paying-1",
   "screen_id": "swiggy-ios-versions-2026-10-01-paying-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:42.673Z",
-  "screen_type": "feed",
-  "published_as": "feed",
+  "analyzedAt": "2026-10-01T08:01:36.810Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
   "states": [],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "checkout",
   "flow_name": "Paying",
   "flow_position": 1,
-  "name": "Listing",
-  "description": "Feed screen with prices. Light theme, 18 text elements.",
+  "name": "Payment method (2)",
+  "description": "Payment screen. Light theme, 21 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "offer",
-    "discount",
-    "feed",
+    "payment",
+    "wallet",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "price",
-    "list",
-    "banner"
+    "list"
   ],
   "style": [
     "light"
@@ -34,107 +31,108 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Unlimited Benefits and Savings”",
+        "Navigation title reads “Payment Modes”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with prices. Light theme, 18 text elements.",
-        "18 text elements recognised"
+        "Payment screen. Light theme, 21 text elements.",
+        "21 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Paying”",
-        "Reached from “Create account” and “Payment method”",
-        "Returned to 2 times in the recording"
+        "Step 1 of 1 in “Paying”",
+        "Reached from “Create account (2)”",
+        "Leads to “Create account (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.7s at 0:22 in the recording",
-        "Frame 84 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 3s at 1:28 in the recording",
+        "Frame 304 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fbfafb",
+      "hex": "#f7f6f9",
       "role": "background",
-      "share": 0.629
+      "share": 0.908
     },
     {
-      "hex": "#ec585c",
+      "hex": "#e6d7d3",
       "role": "surface",
-      "share": 0.114
+      "share": 0.057
     },
     {
-      "hex": "#de487d",
-      "role": "text",
-      "share": 0.059
-    },
-    {
-      "hex": "#e3dddc",
+      "hex": "#c3c2c6",
       "role": "surface",
-      "share": 0.042
+      "share": 0.026
     },
     {
-      "hex": "#fe5206",
-      "role": "accent",
-      "share": 0.037
+      "hex": "#aaa5a6",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#f9c4af",
+      "role": "surface",
+      "share": 0.002
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 84,
-    "atSeconds": 22.8,
-    "endSeconds": 25.5,
-    "holdSeconds": 2.7,
+    "frame": 304,
+    "atSeconds": 88.5,
+    "endSeconds": 91.5,
+    "holdSeconds": 3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
-    "lineCount": 18,
+    "lineCount": 21,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Unlimited Benefits and Savings",
-    "headline": "Food"
+    "title": "Payment Modes",
+    "headline": "Swiggy UPI"
   },
   "crawler": {
-    "nodeId": "s009",
-    "depth": 8,
+    "nodeId": "s025",
+    "depth": 24,
     "path": [],
     "visits": 1,
-    "blocked": false,
-    "blockedReason": null,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s008",
-        "via": "Open Unlimited Benefits and Savings",
-        "name": "Create account"
-      },
-      {
         "from": "s010",
-        "via": "Back to Listing",
-        "name": "Payment method"
+        "via": "Tap “Payment”",
+        "name": "Create account (2)"
       }
     ],
-    "leadsTo": []
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Back to Create account",
+        "name": "Create account (2)"
+      }
+    ]
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

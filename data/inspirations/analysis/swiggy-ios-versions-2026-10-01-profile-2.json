@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-10-01-profile-2",
   "screen_id": "swiggy-ios-versions-2026-10-01-profile-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:45.997Z",
+  "analyzedAt": "2026-10-01T08:01:42.783Z",
   "screen_type": "profile",
   "published_as": "profile",
   "states": [],
@@ -10,18 +10,24 @@
   "flow": "settings",
   "flow_name": "Profile",
   "flow_position": 2,
-  "name": "My Account (2)",
-  "description": "Profile screen. Light theme, 24 text elements.",
+  "name": "Profile",
+  "description": "Profile screen with a primary action labelled “Save address as *”. Light theme, 20 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "rewards",
+    "photo",
+    "delivery",
+    "location",
+    "address",
     "profile",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "list"
+    "list",
+    "cta",
+    "button",
+    "banner"
   ],
   "style": [
     "light"
@@ -31,90 +37,92 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “My Account”",
+        "Navigation title reads “Receiver Details”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Profile screen. Light theme, 24 text elements.",
-        "24 text elements recognised"
+        "Profile screen with a primary action labelled “Save address as *”. Light theme, 20 text elements.",
+        "Calls to action: “Save address as *”",
+        "20 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 3 in “Profile”",
-        "Reached from “My Account”, “Partner Rewards”, “Help & Support” and “Settings · bottom sheet”",
-        "Leads to “Partner Rewards”, “Share your name \"Surendar V\"”, “Settings · bottom sheet” and “Instamart home”",
-        "Returned to 4 times in the recording"
+        "Step 2 of 2 in “Profile”",
+        "Reached from “Location picker (3)”",
+        "Leads to “Location picker (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 4.2s at 2:53 in the recording",
-        "Frame 695 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 2.1s at 6:08 in the recording",
+        "Frame 1234 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fcfcfd",
+      "hex": "#f9f8fa",
       "role": "background",
-      "share": 0.892
+      "share": 0.876
     },
     {
-      "hex": "#dddde0",
+      "hex": "#dcdee3",
       "role": "surface",
-      "share": 0.08
+      "share": 0.053
     },
     {
-      "hex": "#bfbfc3",
+      "hex": "#c3c3c8",
       "role": "surface",
-      "share": 0.024
+      "share": 0.046
     },
     {
-      "hex": "#a7a7aa",
+      "hex": "#a5a6ab",
       "role": "surface",
-      "share": 0.003
+      "share": 0.006
     },
     {
-      "hex": "#84868b",
+      "hex": "#202228",
       "role": "text",
-      "share": 0
+      "share": 0.006
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 695,
-    "atSeconds": 173.1,
-    "endSeconds": 174,
-    "holdSeconds": 4.2,
+    "frame": 1234,
+    "atSeconds": 368.4,
+    "endSeconds": 370.5,
+    "holdSeconds": 2.1,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 4
+    "visits": 1
   },
   "signals": {
-    "lineCount": 24,
+    "lineCount": 20,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Save address as *"
+    ],
     "keyboard": false,
-    "title": "My Account",
-    "headline": "Account Statement"
+    "title": "Receiver Details",
+    "headline": "Use my account details"
   },
   "crawler": {
-    "nodeId": "s044",
-    "depth": 43,
+    "nodeId": "s081",
+    "depth": 80,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -122,46 +130,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s043",
-        "via": "Scroll",
-        "name": "My Account"
-      },
-      {
-        "from": "s045",
-        "via": "Back to My Account",
-        "name": "Partner Rewards"
-      },
-      {
-        "from": "s052",
-        "via": "Back to My Account",
-        "name": "Help & Support"
-      },
-      {
-        "from": "s053",
-        "via": "Dismiss",
-        "name": "Settings · bottom sheet"
+        "from": "s080",
+        "via": "Open Receiver Details",
+        "name": "Location picker (3)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s045",
-        "via": "Wait 4.2s",
-        "name": "Partner Rewards"
-      },
-      {
-        "to": "s051",
-        "via": "Wait 4.2s",
-        "name": "Share your name \"Surendar V\""
-      },
-      {
-        "to": "s053",
-        "via": "Wait 4.2s",
-        "name": "Settings · bottom sheet"
-      },
-      {
-        "to": "s041",
-        "via": "Wait 4.2s",
-        "name": "Instamart home"
+        "to": "s080",
+        "via": "Back to Location picker",
+        "name": "Location picker (3)"
       }
     ]
   },

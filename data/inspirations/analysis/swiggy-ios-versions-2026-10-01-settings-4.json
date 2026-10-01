@@ -2,29 +2,31 @@
   "screenId": "swiggy-ios-versions-2026-10-01-settings-4",
   "screen_id": "swiggy-ios-versions-2026-10-01-settings-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:46.406Z",
+  "analyzedAt": "2026-10-01T08:01:38.775Z",
   "screen_type": "settings",
   "published_as": "settings",
-  "states": [],
+  "states": [
+    "bottom-sheet"
+  ],
   "category": "productivity",
   "flow": "settings",
   "flow_name": "Settings",
   "flow_position": 4,
-  "name": "Settings (2)",
-  "description": "Settings screen. Light theme, 20 text elements.",
+  "name": "Settings · bottom sheet",
+  "description": "Settings bottom sheet. Light theme, 22 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
+    "profile",
     "settings",
-    "offer",
-    "confirm my",
-    "reject all",
+    "rewards",
+    "bottom-sheet",
     "ios"
   ],
   "elements": [
     "nav-bar",
     "list",
-    "banner"
+    "bottom-sheet"
   ],
   "style": [
     "light"
@@ -34,109 +36,105 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Your Privacy”",
+        "Navigation title reads “You haven't Swiggy'd yet”",
+        "Bottom sheet, covering 16% of the height from 78% down",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Settings screen. Light theme, 20 text elements.",
-        "20 text elements recognised"
+        "Settings bottom sheet. Light theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: bottom-sheet"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 5 in “Settings”",
-        "Reached from “Sign in with email”",
-        "Leads to “Sign in with email”"
+        "Step 4 of 4 in “Settings”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.4s at 3:15 in the recording",
-        "Frame 658 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 1.2s at 3:39 in the recording",
+        "Frame 736 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#faf9fb",
+      "hex": "#fcfcfd",
       "role": "background",
-      "share": 0.686
+      "share": 0.847
     },
     {
-      "hex": "#dddbdd",
+      "hex": "#dedde0",
       "role": "surface",
-      "share": 0.239
+      "share": 0.082
     },
     {
-      "hex": "#c0bec0",
+      "hex": "#bfbfc3",
       "role": "surface",
-      "share": 0.027
+      "share": 0.029
     },
     {
-      "hex": "#454346",
-      "role": "surface",
-      "share": 0.021
-    },
-    {
-      "hex": "#211e21",
+      "hex": "#303239",
       "role": "text",
-      "share": 0.016
+      "share": 0.025
+    },
+    {
+      "hex": "#44464c",
+      "role": "surface",
+      "share": 0.01
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 658,
-    "atSeconds": 195.3,
-    "endSeconds": 197.7,
-    "holdSeconds": 2.4,
+    "frame": 736,
+    "atSeconds": 219.9,
+    "endSeconds": 221.1,
+    "holdSeconds": 1.2,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.625,
+        "y": 0.78125,
+        "w": 0.28125,
+        "h": 0.15625
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 20,
+    "lineCount": 22,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Your Privacy",
-    "headline": "Advertising Cookies",
-    "tabBar": false
+    "title": "You haven't Swiggy'd yet",
+    "headline": "Account Statement"
   },
   "crawler": {
-    "nodeId": "s048",
-    "depth": 47,
+    "nodeId": "s046",
+    "depth": 45,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s047",
-        "via": "Open Your Privacy",
-        "name": "Sign in with email"
-      }
-    ],
-    "leadsTo": [
-      {
-        "to": "s047",
-        "via": "Back to Sign in with email",
-        "name": "Sign in with email"
-      }
-    ]
+    "reachedFrom": [],
+    "leadsTo": []
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

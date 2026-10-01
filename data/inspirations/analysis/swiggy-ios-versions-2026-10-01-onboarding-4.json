@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-10-01-onboarding-4",
   "screen_id": "swiggy-ios-versions-2026-10-01-onboarding-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:42.135Z",
+  "analyzedAt": "2026-10-01T08:01:34.775Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [
@@ -52,9 +52,8 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 5 in “Onboarding”",
-        "Reached from “Phone number entry”",
-        "Leads to “OTP verification (2)”"
+        "Step 4 of 6 in “Onboarding”",
+        "Leads to “OTP verification (3)”"
       ]
     },
     {
@@ -126,18 +125,12 @@
     "blocked": true,
     "blockedReason": "access control detected in screen text (\\bverification code\\b)",
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s003",
-        "via": "Open Enter verification code",
-        "name": "Phone number entry"
-      }
-    ],
+    "reachedFrom": [],
     "leadsTo": [
       {
-        "to": "s005",
+        "to": "s006",
         "via": "Tap “Get via SMS”",
-        "name": "OTP verification (2)"
+        "name": "OTP verification (3)"
       }
     ]
   },

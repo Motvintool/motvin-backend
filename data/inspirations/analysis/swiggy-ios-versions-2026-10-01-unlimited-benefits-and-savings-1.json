@@ -2,30 +2,28 @@
   "screenId": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-1",
   "screen_id": "swiggy-ios-versions-2026-10-01-unlimited-benefits-and-savings-1",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:42.868Z",
-  "screen_type": "category",
+  "analyzedAt": "2026-10-01T08:01:35.776Z",
+  "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Unlimited Benefits and Savings",
   "flow_position": 1,
-  "name": "One LITE",
-  "description": "Category screen with a row of 3 category chips and a primary action labelled “Apply Coupon”. Light theme, 13 text elements.",
+  "name": "Listing (2)",
+  "description": "Feed screen with prices. Light theme, 18 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
     "offer",
-    "category",
+    "discount",
+    "feed",
     "ios"
   ],
   "elements": [
     "nav-bar",
+    "price",
     "list",
-    "chip",
-    "cta",
-    "button",
-    "legal-text",
     "banner"
   ],
   "style": [
@@ -36,31 +34,28 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “One LITE”",
-        "Category strip: One BLCK, one LITE, one",
+        "Navigation title reads “Unlimited Benefits and Savings”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Category screen with a row of 3 category chips and a primary action labelled “Apply Coupon”. Light theme, 13 text elements.",
-        "Calls to action: “Apply Coupon”",
-        "13 text elements recognised"
+        "Feed screen with prices. Light theme, 18 text elements.",
+        "18 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Unlimited Benefits and Savings”",
-        "Leads to “Create account”"
+        "Step 1 of 3 in “Unlimited Benefits and Savings”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 0:32 in the recording",
-        "Frame 114 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 0.3s at 0:30 in the recording",
+        "Frame 100 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -69,37 +64,37 @@
     {
       "hex": "#fbfafb",
       "role": "background",
-      "share": 0.453
+      "share": 0.629
     },
     {
-      "hex": "#904071",
-      "role": "accent",
-      "share": 0.131
-    },
-    {
-      "hex": "#e2e0e2",
+      "hex": "#ec585c",
       "role": "surface",
-      "share": 0.096
+      "share": 0.114
     },
     {
-      "hex": "#442544",
+      "hex": "#de487d",
       "role": "text",
-      "share": 0.091
+      "share": 0.059
     },
     {
-      "hex": "#d05c69",
+      "hex": "#e3dddc",
       "role": "surface",
-      "share": 0.062
+      "share": 0.042
+    },
+    {
+      "hex": "#fe5206",
+      "role": "accent",
+      "share": 0.037
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 114,
-    "atSeconds": 32.7,
-    "endSeconds": 34.5,
-    "holdSeconds": 1.8,
+    "frame": 100,
+    "atSeconds": 30,
+    "endSeconds": 30.3,
+    "holdSeconds": 0.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -109,36 +104,24 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 13,
+    "lineCount": 18,
     "tabLabels": [],
-    "chipLabels": [
-      "One BLCK",
-      "one LITE",
-      "one"
-    ],
-    "ctas": [
-      "Apply Coupon"
-    ],
+    "chipLabels": [],
+    "ctas": [],
     "keyboard": false,
-    "title": "One LITE",
-    "headline": "Have a Coupon Code?"
+    "title": "Unlimited Benefits and Savings",
+    "headline": "Food"
   },
   "crawler": {
-    "nodeId": "s011",
-    "depth": 10,
+    "nodeId": "s014",
+    "depth": 13,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
     "reachedFrom": [],
-    "leadsTo": [
-      {
-        "to": "s008",
-        "via": "Back to Create account",
-        "name": "Create account"
-      }
-    ]
+    "leadsTo": []
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"

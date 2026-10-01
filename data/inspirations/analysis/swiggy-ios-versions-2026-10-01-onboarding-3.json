@@ -2,7 +2,7 @@
   "screenId": "swiggy-ios-versions-2026-10-01-onboarding-3",
   "screen_id": "swiggy-ios-versions-2026-10-01-onboarding-3",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T07:22:42.042Z",
+  "analyzedAt": "2026-10-01T08:01:34.680Z",
   "screen_type": "login",
   "published_as": "login",
   "states": [
@@ -13,7 +13,7 @@
   "flow_name": "Onboarding",
   "flow_position": 3,
   "name": "Phone number entry",
-  "description": "Login screen with the keyboard open. Light theme, 26 text elements.",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
@@ -25,7 +25,10 @@
     "nav-bar",
     "keyboard",
     "text-field",
+    "form",
     "list",
+    "cta",
+    "button",
     "legal-text"
   ],
   "style": [
@@ -44,62 +47,62 @@
     {
       "title": "Content",
       "points": [
-        "Login screen with the keyboard open. Light theme, 26 text elements.",
-        "26 text elements recognised",
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+        "Calls to action: “Continue”",
+        "28 text elements recognised",
         "State: keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 5 in “Onboarding”",
-        "Leads to “OTP verification”"
+        "Step 3 of 6 in “Onboarding”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:02 in the recording",
-        "Frame 11 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 0.3s at 0:02 in the recording",
+        "Frame 9 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f7f7f8",
+      "hex": "#f7f6f7",
       "role": "background",
-      "share": 0.554
+      "share": 0.577
     },
     {
-      "hex": "#fe5304",
+      "hex": "#fe5405",
       "role": "accent",
-      "share": 0.191
+      "share": 0.176
     },
     {
-      "hex": "#e3e3e5",
+      "hex": "#e3e2e5",
       "role": "surface",
-      "share": 0.131
+      "share": 0.148
     },
     {
-      "hex": "#f7a27b",
-      "role": "surface",
-      "share": 0.034
-    },
-    {
-      "hex": "#fc7d42",
+      "hex": "#fc7d41",
       "role": "surface",
       "share": 0.027
+    },
+    {
+      "hex": "#c6c5c6",
+      "role": "surface",
+      "share": 0.021
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 11,
-    "atSeconds": 2.4,
-    "endSeconds": 3.6,
-    "holdSeconds": 1.2,
+    "frame": 9,
+    "atSeconds": 2.7,
+    "endSeconds": 3,
+    "holdSeconds": 0.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -109,10 +112,12 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 26,
+    "lineCount": 28,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Continue"
+    ],
     "keyboard": true,
     "title": "Enter your number",
     "headline": "Enter your number"
@@ -126,13 +131,7 @@
     "blockedReason": "authentication screen — crawler does not sign in",
     "actions": [],
     "reachedFrom": [],
-    "leadsTo": [
-      {
-        "to": "s004",
-        "via": "Open Enter verification code",
-        "name": "OTP verification"
-      }
-    ]
+    "leadsTo": []
   },
   "capturedAt": "2026-10-01",
   "capturedBy": "motvin-ios-crawler"
