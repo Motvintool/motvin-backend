@@ -44,10 +44,11 @@ export class InspirationsController {
     private readonly loader: LoaderService,
   ) {}
 
-  // GET /api/inspirations/meta — counts + taxonomy, for tabs and filters
+  // GET /api/inspirations/meta — counts + taxonomy, for tabs and filters.
+  // `?platform=web` (or a comma list) narrows both to what exists there.
   @Get('meta')
-  async getMeta() {
-    return { success: true, data: await this.service.getCounts() };
+  async getMeta(@Query('platform') platform?: string) {
+    return { success: true, data: await this.service.getCounts(splitList(platform)) };
   }
 
   // GET /api/inspirations/screens

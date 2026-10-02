@@ -1,0 +1,160 @@
+{
+  "screenId": "linedin-web-versions-2026-10-02-onboarding-1",
+  "screen_id": "linedin-web-versions-2026-10-02-onboarding-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T18:38:08.635Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "Search results",
+  "description": "Search results screen with a search bar, 1 input field, a primary action labelled “Send” and prices. Light theme, 66 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "photo",
+    "video",
+    "premium",
+    "aramco",
+    "search-results",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "price",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Start a Bosi”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a search bar, 1 input field, a primary action labelled “Send” and prices. Light theme, 66 text elements.",
+        "Calls to action: “Send”",
+        "66 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 8 in “Onboarding”",
+        "Reached from “Profile”",
+        "Leads to “Profile” and “Search results · toast”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:00 in the recording",
+        "Frame 4 of 70 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f7f3",
+      "role": "background",
+      "share": 0.82
+    },
+    {
+      "hex": "#d5d6d5",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#48454e",
+      "role": "text",
+      "share": 0.021
+    },
+    {
+      "hex": "#747471",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#8e9088",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "LinkedIn.mov",
+    "fps": 3.3333333333333335,
+    "frames": 70,
+    "frame": 4,
+    "atSeconds": 0,
+    "endSeconds": 1.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 66,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send"
+    ],
+    "keyboard": false,
+    "title": "Start a Bosi",
+    "headline": "Surendar VO",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s001",
+    "depth": 0,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Back to Search results",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s002",
+        "via": "Tap “surendar VO”",
+        "name": "Profile"
+      },
+      {
+        "to": "s003",
+        "via": "Tap “surendar VO”",
+        "name": "Search results · toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

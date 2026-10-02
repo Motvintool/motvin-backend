@@ -96,11 +96,58 @@ export class InspirationsService {
 
   constructor(private readonly loader: LoaderService) {}
 
-  async getCounts() {
+  /**
+   * Counts and the taxonomy present in the store — for the whole library, or,
+   * given `platforms`, for just what exists on those platforms. A visitor
+   * browsing Web should be offered Web's own screen types, categories, UI
+   * elements and flow categories, not the union of every platform's, so each
+   * list is narrowed to values some screen (or flow) on the chosen platforms
+   * actually carries. The manifest's own ordering is kept.
+   *
+   * Patterns are not platform-scoped anywhere in the UI (their page lists
+   * every pattern), so their count stays the library's, which keeps a tab's
+   * number equal to what the page behind it shows.
+   */
+  async getCounts(platforms?: string[]) {
     const manifest = await this.loader.getManifest();
+    if (!platforms?.length) {
+      return {
+        counts: manifest.counts,
+        taxonomy: manifest.taxonomy,
+        generatedAt: manifest.generatedAt,
+      };
+    }
+
+    const on = new Set(platforms);
+    const screens = (await this.loader.getScreens()).filter((s) => on.has(s.platform));
+    const flows = (await this.loader.getFlows()).filter((f) => on.has(f.platform));
+    const apps = (await this.loader.getApps()).filter((a) => a.platforms.some((p) => on.has(p)));
+
+    const screenTypes = new Set(screens.map((s) => s.screenType));
+    const industries = new Set(screens.map((s) => s.industry));
+    const states = new Set(screens.flatMap((s) => s.states));
+    const styles = new Set(screens.flatMap((s) => s.style));
+    const elementCounts = new Map<string, number>();
+    for (const s of screens) for (const e of s.elements) elementCounts.set(e, (elementCounts.get(e) ?? 0) + 1);
+
     return {
-      counts: manifest.counts,
-      taxonomy: manifest.taxonomy,
+      counts: {
+        ...manifest.counts,
+        apps: apps.length,
+        screens: screens.length,
+        flows: flows.length,
+        'ui-elements': Array.from(elementCounts.values()).reduce((n, c) => n + c, 0),
+      },
+      taxonomy: {
+        // Which platforms exist stays global: it is the switch itself.
+        platforms: manifest.taxonomy.platforms,
+        screenTypes: manifest.taxonomy.screenTypes.filter((t) => screenTypes.has(t)),
+        states: manifest.taxonomy.states.filter((v) => states.has(v)),
+        industries: manifest.taxonomy.industries.filter((i) => industries.has(i)),
+        styles: manifest.taxonomy.styles.filter((v) => styles.has(v)),
+        elements: Array.from(elementCounts.keys()).sort(),
+        flowCategories: Array.from(new Set(flows.map((f) => f.category).filter(Boolean))).sort(),
+      },
       generatedAt: manifest.generatedAt,
     };
   }

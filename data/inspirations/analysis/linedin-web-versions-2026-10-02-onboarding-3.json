@@ -1,0 +1,168 @@
+{
+  "screenId": "linedin-web-versions-2026-10-02-onboarding-3",
+  "screen_id": "linedin-web-versions-2026-10-02-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T18:38:08.967Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Search results · toast",
+  "description": "Search results toast over a dimmed screen, on top of Search results with a search bar, 1 input field and a primary action labelled “Send”. Light theme, 68 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "photo",
+    "video",
+    "premium",
+    "aramco",
+    "search-results",
+    "toast",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Surendar, grow your career by following”",
+        "Search bar present",
+        "Toast over a dimmed background, covering 6% of the height from 94% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results toast over a dimmed screen, on top of Search results with a search bar, 1 input field and a primary action labelled “Send”. Light theme, 68 text elements.",
+        "Calls to action: “Send”",
+        "68 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 8 in “Onboarding”",
+        "Reached from “Search results”",
+        "Leads to “Search results (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:05 in the recording",
+        "Frame 19 of 70 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#626361",
+      "role": "background",
+      "share": 0.826
+    },
+    {
+      "hex": "#2a2a29",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#f9fafa",
+      "role": "text",
+      "share": 0.042
+    },
+    {
+      "hex": "#4a4945",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#d8dfe7",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "LinkedIn.mov",
+    "fps": 3.3333333333333335,
+    "frames": 70,
+    "frame": 19,
+    "atSeconds": 5.1,
+    "endSeconds": 6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.9375,
+        "w": 1,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 68,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send"
+    ],
+    "keyboard": false,
+    "title": "Surendar, grow your career by following",
+    "headline": "Surendar VO",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Tap “surendar VO”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Type “Figma O”",
+        "name": "Search results (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

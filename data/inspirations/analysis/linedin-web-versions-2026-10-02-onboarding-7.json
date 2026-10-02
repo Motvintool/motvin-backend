@@ -1,0 +1,146 @@
+{
+  "screenId": "linedin-web-versions-2026-10-02-onboarding-7",
+  "screen_id": "linedin-web-versions-2026-10-02-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-01T18:38:09.640Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Profile language",
+  "description": "Profile screen. Light theme, 42 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "career goals",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile language”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Light theme, 42 text elements.",
+        "42 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 8 in “Onboarding”",
+        "Reached from “Settings” and “Profile (2)”",
+        "Leads to “Profile (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:15 in the recording",
+        "Frame 56 of 70 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f7",
+      "role": "background",
+      "share": 0.748
+    },
+    {
+      "hex": "#dbdddc",
+      "role": "surface",
+      "share": 0.14
+    },
+    {
+      "hex": "#bbbcbd",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#f1d49e",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#f4c25f",
+      "role": "accent",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "LinkedIn.mov",
+    "fps": 3.3333333333333335,
+    "frames": 70,
+    "frame": 56,
+    "atSeconds": 15.6,
+    "endSeconds": 17.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Profile language",
+    "headline": "SIREN.UIX",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Tap “@SIREN.UIX”",
+        "name": "Settings"
+      },
+      {
+        "from": "s008",
+        "via": "Back to Profile language",
+        "name": "Profile (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Open Edit intro",
+        "name": "Profile (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}
