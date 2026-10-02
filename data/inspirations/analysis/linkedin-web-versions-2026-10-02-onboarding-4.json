@@ -1,17 +1,17 @@
 {
-  "screenId": "linedin-web-versions-2026-10-02-onboarding-4",
-  "screen_id": "linedin-web-versions-2026-10-02-onboarding-4",
+  "screenId": "linkedin-web-versions-2026-10-02-onboarding-4",
+  "screen_id": "linkedin-web-versions-2026-10-02-onboarding-4",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T18:38:09.129Z",
+  "analyzedAt": "2026-10-02T11:33:58.304Z",
   "screen_type": "search_results",
   "published_as": "search",
   "states": [],
-  "category": "productivity",
+  "category": "saas",
   "flow": "search",
   "flow_name": "Onboarding",
   "flow_position": 4,
-  "name": "Search results (2)",
-  "description": "Search results screen with a search bar, 1 input field and a primary action labelled “Send”. Light theme, 69 text elements.",
+  "name": "Search results",
+  "description": "Search results screen with a search bar and 1 input field. Light theme, 53 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
@@ -20,7 +20,7 @@
     "photo",
     "video",
     "premium",
-    "aramco",
+    "messaging",
     "search-results",
     "web"
   ],
@@ -28,9 +28,7 @@
     "nav-bar",
     "text-field",
     "search-bar",
-    "list",
-    "cta",
-    "button"
+    "list"
   ],
   "style": [
     "light"
@@ -40,7 +38,7 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Linkedin News”",
+        "Navigation title reads “Start a post”",
         "Search bar present",
         "Light style"
       ]
@@ -48,62 +46,62 @@
     {
       "title": "Content",
       "points": [
-        "Search results screen with a search bar, 1 input field and a primary action labelled “Send”. Light theme, 69 text elements.",
-        "Calls to action: “Send”",
-        "69 text elements recognised"
+        "Search results screen with a search bar and 1 input field. Light theme, 53 text elements.",
+        "53 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 8 in “Onboarding”",
-        "Reached from “Search results · toast”"
+        "Step 4 of 5 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Settings”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.6s at 0:06 in the recording",
-        "Frame 31 of 70 sampled at 3.3333333333333335 fps",
+        "Held for 3.9s at 0:17 in the recording",
+        "Frame 71 of 84 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f6f7f3",
+      "hex": "#f7f7f5",
       "role": "background",
-      "share": 0.792
+      "share": 0.788
     },
     {
-      "hex": "#d5d6d3",
+      "hex": "#d7d1c7",
       "role": "surface",
-      "share": 0.077
+      "share": 0.137
     },
     {
-      "hex": "#4b464f",
+      "hex": "#c0b6a5",
       "role": "surface",
-      "share": 0.024
+      "share": 0.056
     },
     {
-      "hex": "#000100",
-      "role": "accent",
-      "share": 0.017
-    },
-    {
-      "hex": "#777774",
+      "hex": "#9d968e",
       "role": "surface",
-      "share": 0.016
+      "share": 0.005
+    },
+    {
+      "hex": "#847b69",
+      "role": "text",
+      "share": 0.004
     }
   ],
   "capture": {
-    "source": "LinkedIn.mov",
+    "source": "recording live.mp4",
     "fps": 3.3333333333333335,
-    "frames": 70,
-    "frame": 31,
-    "atSeconds": 6,
-    "endSeconds": 9.6,
-    "holdSeconds": 3.6,
+    "frames": 84,
+    "frame": 71,
+    "atSeconds": 17.7,
+    "endSeconds": 21.6,
+    "holdSeconds": 3.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -113,15 +111,13 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 69,
+    "lineCount": 53,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [
-      "Send"
-    ],
+    "ctas": [],
     "keyboard": false,
-    "title": "Linkedin News",
-    "headline": "Video",
+    "title": "Start a post",
+    "headline": "Surendar VO",
     "tabBar": false
   },
   "crawler": {
@@ -135,11 +131,17 @@
     "reachedFrom": [
       {
         "from": "s003",
-        "via": "Type “Figma O”",
-        "name": "Search results · toast"
+        "via": "Open Start a post",
+        "name": "Sign in with email"
       }
     ],
-    "leadsTo": []
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Open Export",
+        "name": "Settings"
+      }
+    ]
   },
   "capturedAt": "2026-10-02",
   "capturedBy": "motvin-ios-crawler"

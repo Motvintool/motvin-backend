@@ -5174,102 +5174,84 @@
       ]
     },
     {
-      "id": "linedin-web-versions-2026-10-01-premium",
-      "appId": "linedin",
-      "name": "Premium",
-      "category": "discovery",
-      "platform": "web",
-      "screenIds": [
-        "linedin-web-versions-2026-10-01-premium-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "linedin-web-versions-2026-10-01-premium-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "linedin-web-versions-2026-10-01-games",
-      "appId": "linedin",
-      "name": "Games",
-      "category": "discovery",
-      "platform": "web",
-      "screenIds": [
-        "linedin-web-versions-2026-10-01-games-1"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "linedin-web-versions-2026-10-01-games-1",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "linedin-web-versions-2026-10-02-onboarding",
-      "appId": "linedin",
+      "id": "linkedin-web-versions-2026-10-02-onboarding",
+      "appId": "linkedin",
       "name": "Onboarding",
       "category": "onboarding",
       "platform": "web",
       "screenIds": [
-        "linedin-web-versions-2026-10-02-onboarding-1",
-        "linedin-web-versions-2026-10-02-onboarding-2",
-        "linedin-web-versions-2026-10-02-onboarding-3",
-        "linedin-web-versions-2026-10-02-onboarding-4",
-        "linedin-web-versions-2026-10-02-onboarding-5",
-        "linedin-web-versions-2026-10-02-onboarding-6",
-        "linedin-web-versions-2026-10-02-onboarding-7",
-        "linedin-web-versions-2026-10-02-onboarding-8"
+        "linkedin-web-versions-2026-10-02-onboarding-1",
+        "linkedin-web-versions-2026-10-02-onboarding-2",
+        "linkedin-web-versions-2026-10-02-onboarding-3",
+        "linkedin-web-versions-2026-10-02-onboarding-4",
+        "linkedin-web-versions-2026-10-02-onboarding-5"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-1",
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-1",
           "action": null
         },
         {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-2",
-          "action": {
-            "kind": "tap",
-            "label": "surendar VO",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-3",
-          "action": null
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-4",
-          "action": {
-            "kind": "type",
-            "label": "Figma O",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-5",
-          "action": null
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-6",
-          "action": null
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-7",
-          "action": {
-            "kind": "tap",
-            "label": "@SIREN.UIX",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "linedin-web-versions-2026-10-02-onboarding-8",
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-2",
           "action": {
             "kind": "open",
-            "label": "Edit intro",
+            "label": "Surendar V",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-3",
+          "action": null
+        },
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-4",
+          "action": {
+            "kind": "open",
+            "label": "Start a post",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-5",
+          "action": {
+            "kind": "open",
+            "label": "Export",
+            "basis": "destination"
+          }
+        }
+      ]
+    },
+    {
+      "id": "linkedin-web-versions-2026-10-02-logging-in-with-email",
+      "appId": "linkedin",
+      "name": "Logging in with Email",
+      "category": "authentication",
+      "platform": "web",
+      "screenIds": [
+        "linkedin-web-versions-2026-10-02-onboarding-3",
+        "linkedin-web-versions-2026-10-02-onboarding-4",
+        "linkedin-web-versions-2026-10-02-onboarding-5"
+      ],
+      "parentId": "linkedin-web-versions-2026-10-02-onboarding",
+      "steps": [
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-3",
+          "action": null
+        },
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-4",
+          "action": {
+            "kind": "open",
+            "label": "Start a post",
+            "basis": "destination"
+          }
+        },
+        {
+          "screenId": "linkedin-web-versions-2026-10-02-onboarding-5",
+          "action": {
+            "kind": "open",
+            "label": "Export",
             "basis": "destination"
           }
         }

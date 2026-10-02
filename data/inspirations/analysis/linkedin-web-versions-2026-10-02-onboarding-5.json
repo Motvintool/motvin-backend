@@ -1,30 +1,29 @@
 {
-  "screenId": "linedin-web-versions-2026-10-01-games-1",
-  "screen_id": "linedin-web-versions-2026-10-01-games-1",
+  "screenId": "linkedin-web-versions-2026-10-02-onboarding-5",
+  "screen_id": "linkedin-web-versions-2026-10-02-onboarding-5",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-01T14:09:29.288Z",
+  "analyzedAt": "2026-10-02T11:33:58.464Z",
   "screen_type": "settings",
   "published_as": "settings",
   "states": [],
-  "category": "productivity",
+  "category": "saas",
   "flow": "settings",
-  "flow_name": "Games",
-  "flow_position": 1,
+  "flow_name": "Onboarding",
+  "flow_position": 5,
   "name": "Settings",
-  "description": "Settings screen. Light theme, 33 text elements.",
+  "description": "Settings screen with a row of 3 category chips. Light theme, 44 text elements.",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "search",
-    "profile",
+    "messaging",
     "settings",
-    "notification",
-    "games",
     "web"
   ],
   "elements": [
     "nav-bar",
-    "list"
+    "list",
+    "chip",
+    "legal-text"
   ],
   "style": [
     "light"
@@ -34,68 +33,69 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Sign in & security”",
+        "Navigation title reads “Export”",
+        "Category strip: J Export, SMFG, Grihashakti",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Settings screen. Light theme, 33 text elements.",
-        "33 text elements recognised"
+        "Settings screen with a row of 3 category chips. Light theme, 44 text elements.",
+        "44 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 1 in “Games”",
+        "Step 5 of 5 in “Onboarding”",
         "Reached from “Search results”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 18.3s at 0:06 in the recording",
-        "Frame 80 of 81 sampled at 3.3333333333333335 fps",
+        "Held for 3.6s at 0:21 in the recording",
+        "Frame 83 of 84 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f9f9f7",
+      "hex": "#f9f8f7",
       "role": "background",
-      "share": 0.946
+      "share": 0.906
     },
     {
-      "hex": "#d8dad9",
+      "hex": "#dadbd9",
       "role": "surface",
-      "share": 0.041
+      "share": 0.074
     },
     {
-      "hex": "#c0c0c0",
+      "hex": "#b6bcc1",
       "role": "surface",
-      "share": 0.009
+      "share": 0.01
     },
     {
-      "hex": "#9cada2",
+      "hex": "#ead2a5",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a29d9a",
       "role": "surface",
       "share": 0.002
-    },
-    {
-      "hex": "#accbe9",
-      "role": "surface",
-      "share": 0.001
     }
   ],
   "capture": {
-    "source": "LinedIn.mov",
+    "source": "recording live.mp4",
     "fps": 3.3333333333333335,
-    "frames": 81,
-    "frame": 80,
-    "atSeconds": 6,
-    "endSeconds": 24.3,
-    "holdSeconds": 18.3,
+    "frames": 84,
+    "frame": 83,
+    "atSeconds": 21.6,
+    "endSeconds": 25.2,
+    "holdSeconds": 3.6,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -105,19 +105,22 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 33,
-    "tabLabels": [
-      "Games"
+    "lineCount": 44,
+    "tabLabels": [],
+    "chipLabels": [
+      "J Export",
+      "SMFG",
+      "Grihashakti"
     ],
-    "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Sign in & security",
-    "headline": "Notifications"
+    "title": "Export",
+    "headline": "1 Impressions",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s002",
-    "depth": 1,
+    "nodeId": "s005",
+    "depth": 4,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -125,13 +128,13 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s001",
-        "via": "Open Sign in & security",
+        "from": "s004",
+        "via": "Open Export",
         "name": "Search results"
       }
     ],
     "leadsTo": []
   },
-  "capturedAt": "2026-10-01",
+  "capturedAt": "2026-10-02",
   "capturedBy": "motvin-ios-crawler"
 }
