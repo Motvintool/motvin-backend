@@ -1,0 +1,157 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-settings-4",
+  "screen_id": "linkedin-web-versions-2026-10-03-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:23.187Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 4,
+  "name": "Settings (7)",
+  "description": "Settings screen with a search bar and a paged carousel. Light theme, 79 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "settings",
+    "photo",
+    "video",
+    "premium",
+    "see",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “News”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a search bar and a paged carousel. Light theme, 79 text elements.",
+        "79 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 18 in “Settings”",
+        "Reached from “Profile (2)”",
+        "Leads to “Profile (2)” and “Settings · Help Center”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:25 in the recording",
+        "Frame 1294 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f6f5",
+      "role": "background",
+      "share": 0.694
+    },
+    {
+      "hex": "#d1d3d7",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#958fee",
+      "role": "accent",
+      "share": 0.044
+    },
+    {
+      "hex": "#beadf6",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#1c1e21",
+      "role": "text",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 1294,
+    "atSeconds": 385.2,
+    "endSeconds": 388.5,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 79,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "News",
+    "headline": "S conversations to join this",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s033",
+        "via": "Back to Settings",
+        "name": "Profile (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s033",
+        "via": "Open Other ways we can help",
+        "name": "Profile (2)"
+      },
+      {
+        "to": "s034",
+        "via": "Tap “Account”",
+        "name": "Settings · Help Center"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

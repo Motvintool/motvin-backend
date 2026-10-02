@@ -1,0 +1,143 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-opening-settings-2-1",
+  "screen_id": "linkedin-web-versions-2026-10-03-opening-settings-2-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:24.394Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Opening settings",
+  "flow_position": 1,
+  "name": "Settings (10)",
+  "description": "Settings screen with 1 input field. Light theme, 33 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "safety center",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “(Verify for free”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 1 input field. Light theme, 33 text elements.",
+        "33 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening settings”",
+        "Reached from “Notifications”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 17.4s at 7:09 in the recording",
+        "Frame 1487 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f6f3",
+      "role": "background",
+      "share": 0.934
+    },
+    {
+      "hex": "#d8d7d6",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#b3b0af",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#9e8a85",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#7b4b56",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 1487,
+    "atSeconds": 429,
+    "endSeconds": 446.4,
+    "holdSeconds": 17.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "(Verify for free",
+    "headline": "Posted Jobs",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s039",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s038",
+        "via": "Open (Verify for free",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s040",
+        "via": "Open Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

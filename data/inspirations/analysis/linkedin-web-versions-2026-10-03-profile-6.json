@@ -1,0 +1,187 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-profile-6",
+  "screen_id": "linkedin-web-versions-2026-10-03-profile-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:28.268Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 6,
+  "name": "Profile (8)",
+  "description": "Profile screen with a row of 3 category chips. Light theme, 42 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "view",
+    "profile",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Featured”",
+        "Category strip: Add a post, who's, Link",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a row of 3 category chips. Light theme, 42 text elements.",
+        "42 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 8 in “Profile”",
+        "Reached from “Settings (14)”, “Add a post”, “Profile (10)”, “Profile (11)” and “Profile (12)”",
+        "Leads to “Profile (9)”, “Profile (11)”, “Profile (12)” and “American Express (empty)”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 9:53 in the recording",
+        "Frame 1998 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f6",
+      "role": "background",
+      "share": 0.714
+    },
+    {
+      "hex": "#d0d2d5",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#4879ee",
+      "role": "accent",
+      "share": 0.058
+    },
+    {
+      "hex": "#cf617d",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#a6bdf1",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 1998,
+    "atSeconds": 593.4,
+    "endSeconds": 599.7,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [],
+    "chipLabels": [
+      "Add a post",
+      "who's",
+      "Link"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Featured",
+    "headline": "Instagram",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s063",
+    "depth": 63,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Tap “+ Featured”",
+        "name": "Settings (14)"
+      },
+      {
+        "from": "s065",
+        "via": "Back to Profile",
+        "name": "Add a post"
+      },
+      {
+        "from": "s066",
+        "via": "Back to Profile",
+        "name": "Profile (10)"
+      },
+      {
+        "from": "s067",
+        "via": "Dismiss",
+        "name": "Profile (11)"
+      },
+      {
+        "from": "s068",
+        "via": "Dismiss",
+        "name": "Profile (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s064",
+        "via": "Tap “Instagram”",
+        "name": "Profile (9)"
+      },
+      {
+        "to": "s064",
+        "via": "Back to Profile",
+        "name": "Profile (9)"
+      },
+      {
+        "to": "s067",
+        "via": "Tap “Instagram”",
+        "name": "Profile (11)"
+      },
+      {
+        "to": "s068",
+        "via": "Tap “Instagram”",
+        "name": "Profile (12)"
+      },
+      {
+        "to": "s069",
+        "via": "Tap “Instagram”",
+        "name": "American Express (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

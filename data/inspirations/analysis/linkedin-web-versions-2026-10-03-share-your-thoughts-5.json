@@ -1,0 +1,183 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-share-your-thoughts-5",
+  "screen_id": "linkedin-web-versions-2026-10-03-share-your-thoughts-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:30.588Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Share your thoughts",
+  "flow_position": 5,
+  "name": "Search results (7)",
+  "description": "Search results bottom sheet, on top of Share your thoughts with a search bar and 1 input field. Dark theme, 75 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "premium",
+    "figma",
+    "different",
+    "search-results",
+    "bottom-sheet",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “'Super Intelligence (SI)'”",
+        "Search bar present",
+        "Bottom sheet, covering 59% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results bottom sheet, on top of Share your thoughts with a search bar and 1 input field. Dark theme, 75 text elements.",
+        "75 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 7 in “Share your thoughts”",
+        "Reached from “Share your thoughts”",
+        "Leads to “Permission prompt” and “Same prompts? sheet”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 11:11 in the recording",
+        "Frame 2259 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#444443",
+      "role": "background",
+      "share": 0.763
+    },
+    {
+      "hex": "#15130f",
+      "role": "surface",
+      "share": 0.147
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.049
+    },
+    {
+      "hex": "#2d2b28",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#686868",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 2259,
+    "atSeconds": 671.7,
+    "endSeconds": 678,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.21875,
+        "y": 0.375,
+        "w": 0.5625,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 75,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "'Super Intelligence (SI)'",
+    "headline": "'Super Intelligence (SI)'",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s077",
+    "depth": 77,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s074",
+        "via": "Type “Select occasion”",
+        "name": "Share your thoughts"
+      },
+      {
+        "from": "s074",
+        "via": "Type “Select occasion”",
+        "name": "Share your thoughts"
+      },
+      {
+        "from": "s074",
+        "via": "Type “Select occasion”",
+        "name": "Share your thoughts"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s078",
+        "via": "Tap “Same prompts?”",
+        "name": "Permission prompt"
+      },
+      {
+        "to": "s079",
+        "via": "Tap “SI?”",
+        "name": "Same prompts? sheet"
+      },
+      {
+        "to": "s078",
+        "via": "Back to Permission prompt",
+        "name": "Permission prompt"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

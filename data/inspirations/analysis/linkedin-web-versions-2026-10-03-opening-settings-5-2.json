@@ -1,0 +1,165 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-opening-settings-5-2",
+  "screen_id": "linkedin-web-versions-2026-10-03-opening-settings-5-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:34.387Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Opening settings",
+  "flow_position": 2,
+  "name": "Settings · modal",
+  "description": "Settings dialog over a dimmed screen, on top of Settings with a paged carousel and a primary action labelled “Next”. Light theme, 32 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messaging",
+    "settings",
+    "modal",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "legal-text",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hiring”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 80% of the height from 16% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings with a paged carousel and a primary action labelled “Next”. Light theme, 32 text elements.",
+        "Calls to action: “Next”",
+        "32 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening settings”",
+        "Reached from “Settings (20)”",
+        "Leads to “Settings (19)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 14:28 in the recording",
+        "Frame 2899 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#6c6b69",
+      "role": "background",
+      "share": 0.592
+    },
+    {
+      "hex": "#f8f8f6",
+      "role": "text",
+      "share": 0.278
+    },
+    {
+      "hex": "#868684",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#4b4f54",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#1d324f",
+      "role": "accent",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 2899,
+    "atSeconds": 868.2,
+    "endSeconds": 870,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.15625,
+        "w": 0.375,
+        "h": 0.796875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "title": "Hiring",
+    "headline": "Hiring",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s101",
+    "depth": 101,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s100",
+        "via": "Tap “hiring”",
+        "name": "Settings (20)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s099",
+        "via": "Dismiss",
+        "name": "Settings (19)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

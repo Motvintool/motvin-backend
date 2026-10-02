@@ -1,0 +1,150 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-jobs-15",
+  "screen_id": "linkedin-web-versions-2026-10-03-jobs-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:37.590Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Jobs",
+  "flow_position": 15,
+  "name": "Manage invitations (error)",
+  "description": "Error screen with a row of 3 category chips. Light theme, 45 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "ignore",
+    "accept",
+    "error",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage invitations”",
+        "Category strip: Received, Sent, See",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen with a row of 3 category chips. Light theme, 45 text elements.",
+        "45 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 23 in “Jobs”",
+        "Reached from “Settings (27)”",
+        "Leads to “Search results (15)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 11.4s at 16:02 in the recording",
+        "Frame 3233 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f7",
+      "role": "background",
+      "share": 0.833
+    },
+    {
+      "hex": "#d4d7db",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#4678c3",
+      "role": "accent",
+      "share": 0.021
+    },
+    {
+      "hex": "#bbbcbf",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#7f8e90",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 3233,
+    "atSeconds": 962.4,
+    "endSeconds": 973.8,
+    "holdSeconds": 11.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [],
+    "chipLabels": [
+      "Received",
+      "Sent",
+      "See"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Manage invitations",
+    "headline": "Hiring",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s120",
+    "depth": 120,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s119",
+        "via": "Tap “hiring”",
+        "name": "Settings (27)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s121",
+        "via": "Tap “Linked in”",
+        "name": "Search results (15)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

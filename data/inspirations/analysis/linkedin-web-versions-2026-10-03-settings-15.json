@@ -1,0 +1,157 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-settings-15",
+  "screen_id": "linkedin-web-versions-2026-10-03-settings-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:38.578Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "toast"
+  ],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 15,
+  "name": "Settings · toast",
+  "description": "Settings toast over a dimmed screen, on top of Settings. Dark theme, 46 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "messaging",
+    "settings",
+    "toast",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “UI/UX Product Designer”",
+        "Toast over a dimmed background, covering 13% of the height from 83% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings toast over a dimmed screen, on top of Settings. Dark theme, 46 text elements.",
+        "46 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 18 in “Settings”",
+        "Reached from “Settings (28)”",
+        "Leads to “Settings (29)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 16:51 in the recording",
+        "Frame 3372 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#454645",
+      "role": "background",
+      "share": 0.931
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.045
+    },
+    {
+      "hex": "#2b262f",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#a9a9a9",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#6e6f6e",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 3372,
+    "atSeconds": 1011,
+    "endSeconds": 1011.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.828125,
+        "w": 0.375,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 46,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "UI/UX Product Designer",
+    "headline": "Preferences",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s126",
+    "depth": 126,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s125",
+        "via": "Tap “:= Preferences”",
+        "name": "Settings (28)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s127",
+        "via": "Tap “Preferences”",
+        "name": "Settings (29)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-settings-1",
+  "screen_id": "linkedin-web-versions-2026-10-03-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:22.016Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Settings (2)",
+  "description": "Settings screen. Light theme, 23 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "notification",
+    "agree and save",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 18 in “Settings”",
+        "Reached from “Profile language” and “Settings (4)”",
+        "Leads to “Settings (3)” and “Settings (5)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 13.2s at 1:43 in the recording",
+        "Frame 388 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafaf9",
+      "role": "background",
+      "share": 0.923
+    },
+    {
+      "hex": "#d7d9d9",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#acb2ad",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#bec5cc",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#8d8e8d",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 388,
+    "atSeconds": 103.5,
+    "endSeconds": 116.7,
+    "holdSeconds": 13.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Settings",
+    "headline": "Account preferences",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s024",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s023",
+        "via": "Open Settings",
+        "name": "Profile language"
+      },
+      {
+        "from": "s027",
+        "via": "Back to Settings",
+        "name": "Settings (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s025",
+        "via": "Tap “Settings”",
+        "name": "Settings (3)"
+      },
+      {
+        "to": "s028",
+        "via": "Tap “Settings”",
+        "name": "Settings (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

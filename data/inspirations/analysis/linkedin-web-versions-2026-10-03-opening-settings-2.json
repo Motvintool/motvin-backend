@@ -1,0 +1,142 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-opening-settings-2",
+  "screen_id": "linkedin-web-versions-2026-10-03-opening-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:22.484Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Opening settings",
+  "flow_position": 2,
+  "name": "Settings (4)",
+  "description": "Settings screen with 1 input field. Light theme, 26 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messaging",
+    "settings",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage synced sources”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 1 input field. Light theme, 26 text elements.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening settings”",
+        "Reached from “Search results (4)”",
+        "Leads to “Settings (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 46.5s at 2:07 in the recording",
+        "Frame 579 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f6f3",
+      "role": "background",
+      "share": 0.941
+    },
+    {
+      "hex": "#d3d5d7",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#bec0be",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#b1c6eb",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#b0a79e",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 579,
+    "atSeconds": 127.5,
+    "endSeconds": 174,
+    "holdSeconds": 46.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Manage synced sources",
+    "headline": "Google",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Open Manage synced sources",
+        "name": "Search results (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Back to Settings",
+        "name": "Settings (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

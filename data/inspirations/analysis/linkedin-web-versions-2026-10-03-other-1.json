@@ -1,0 +1,149 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-other-1",
+  "screen_id": "linkedin-web-versions-2026-10-03-other-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:22.902Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "scrolled"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Other",
+  "flow_position": 1,
+  "name": "Settings — scrolled",
+  "description": "Other screen, scrolled further down from Settings with a primary action labelled “Next”. Light theme, 20 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "premium",
+    "other",
+    "scrolled",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Premium is my launchpad-amplifying”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen, scrolled further down from Settings with a primary action labelled “Next”. Light theme, 20 text elements.",
+        "Calls to action: “Next”",
+        "20 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Other”",
+        "Reached from “Settings (6)”",
+        "Leads to “Sign in with email (13)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 9.3s at 3:48 in the recording",
+        "Frame 791 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f8f6",
+      "role": "background",
+      "share": 0.921
+    },
+    {
+      "hex": "#dedede",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#c6c7c9",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#a8a7a6",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#8e8475",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 791,
+    "atSeconds": 228.3,
+    "endSeconds": 237.6,
+    "holdSeconds": 9.3,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "title": "\"Premium is my launchpad-amplifying",
+    "headline": "Unlocking unexpected opportunities.\""
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Scroll",
+        "name": "Settings (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Open Settings",
+        "name": "Sign in with email (13)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

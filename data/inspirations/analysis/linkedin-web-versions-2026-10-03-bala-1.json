@@ -1,0 +1,161 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-bala-1",
+  "screen_id": "linkedin-web-versions-2026-10-03-bala-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:33.464Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Bala",
+  "flow_position": 1,
+  "name": "Bala home",
+  "description": "Feed screen. Light theme, 28 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "bala",
+    "messaging",
+    "feed",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Events”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen. Light theme, 28 text elements.",
+        "28 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Bala”",
+        "Reached from “Messaging” and “REGISTER NOW home”",
+        "Leads to “SHOP sheet”, “Settings (19)” and “Profile (13)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 14:13 in the recording",
+        "Frame 2853 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafaf9",
+      "role": "background",
+      "share": 0.814
+    },
+    {
+      "hex": "#dddfe2",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#312455",
+      "role": "accent",
+      "share": 0.023
+    },
+    {
+      "hex": "#c0c3c5",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#625575",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 2853,
+    "atSeconds": 853.5,
+    "endSeconds": 856.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [
+      "Bala",
+      "Messaging"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Events",
+    "headline": "Show all"
+  },
+  "crawler": {
+    "nodeId": "s095",
+    "depth": 95,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s094",
+        "via": "Tap “Events”",
+        "name": "Messaging"
+      },
+      {
+        "from": "s098",
+        "via": "Back to Bala home",
+        "name": "REGISTER NOW home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s096",
+        "via": "Tap “Show all”",
+        "name": "SHOP sheet"
+      },
+      {
+        "to": "s099",
+        "via": "Open Linked in",
+        "name": "Settings (19)"
+      },
+      {
+        "to": "s122",
+        "via": "Back to Profile",
+        "name": "Profile (13)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

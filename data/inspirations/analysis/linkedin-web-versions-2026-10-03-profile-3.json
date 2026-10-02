@@ -1,0 +1,232 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-profile-3",
+  "screen_id": "linkedin-web-versions-2026-10-03-profile-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:24.542Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 3,
+  "name": "Profile language (2)",
+  "description": "Profile screen. Light theme, 38 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "premium",
+    "view",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile language”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Light theme, 38 text elements.",
+        "38 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 8 in “Profile”",
+        "Reached from “Loading state”, “Career goals home (2)”, “Profile (4)”, “Subscription plans · career goals”, “Profile”, “Settings (11)”, “Sign in” and “Settings (12)”",
+        "Leads to “Profile (3)”, “Subscription plans · career goals”, “Sign in”, “Settings (12)” and “Subscription plans”",
+        "Returned to 10 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 7:31 in the recording",
+        "Frame 1518 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f9f8",
+      "role": "background",
+      "share": 0.717
+    },
+    {
+      "hex": "#dcdedf",
+      "role": "surface",
+      "share": 0.134
+    },
+    {
+      "hex": "#c4c6c8",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#4173c2",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#ecd9a6",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 1518,
+    "atSeconds": 451.2,
+    "endSeconds": 455.7,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 10
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Profile language",
+    "headline": "Hiring",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 41,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Wait 4.8s",
+        "name": "Loading state"
+      },
+      {
+        "from": "s047",
+        "via": "Back to Profile language",
+        "name": "Career goals home (2)"
+      },
+      {
+        "from": "s043",
+        "via": "Back to Profile language",
+        "name": "Profile (4)"
+      },
+      {
+        "from": "s049",
+        "via": "Dismiss",
+        "name": "Subscription plans · career goals"
+      },
+      {
+        "from": "s022",
+        "via": "Back to Profile language",
+        "name": "Profile"
+      },
+      {
+        "from": "s022",
+        "via": "Back to Profile language",
+        "name": "Profile"
+      },
+      {
+        "from": "s049",
+        "via": "Dismiss",
+        "name": "Subscription plans · career goals"
+      },
+      {
+        "from": "s052",
+        "via": "Back to Profile language",
+        "name": "Settings (11)"
+      },
+      {
+        "from": "s053",
+        "via": "Back to Profile language",
+        "name": "Sign in"
+      },
+      {
+        "from": "s054",
+        "via": "Dismiss",
+        "name": "Settings (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s042",
+        "via": "Tap “hiring”",
+        "name": "Profile (3)"
+      },
+      {
+        "to": "s042",
+        "via": "Back to Profile",
+        "name": "Profile (3)"
+      },
+      {
+        "to": "s049",
+        "via": "Tap “hiring”",
+        "name": "Subscription plans · career goals"
+      },
+      {
+        "to": "s042",
+        "via": "Back to Profile",
+        "name": "Profile (3)"
+      },
+      {
+        "to": "s042",
+        "via": "Back to Profile",
+        "name": "Profile (3)"
+      },
+      {
+        "to": "s049",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans · career goals"
+      },
+      {
+        "to": "s042",
+        "via": "Back to Profile",
+        "name": "Profile (3)"
+      },
+      {
+        "to": "s053",
+        "via": "Open Public profile settings",
+        "name": "Sign in"
+      },
+      {
+        "to": "s054",
+        "via": "Tap “hiring”",
+        "name": "Settings (12)"
+      },
+      {
+        "to": "s055",
+        "via": "Tap “College of Engineering an...”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

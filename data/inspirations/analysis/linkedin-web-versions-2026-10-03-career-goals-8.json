@@ -1,0 +1,174 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-career-goals-8",
+  "screen_id": "linkedin-web-versions-2026-10-03-career-goals-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:25.949Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "saas",
+  "flow": "checkout",
+  "flow_name": "Career goals",
+  "flow_position": 8,
+  "name": "Subscription plans · career goals",
+  "description": "Paywall bottom sheet over a dimmed screen, on top of Profile language with a 3-item tab bar. Dark theme, 43 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "premium",
+    "career goals",
+    "someor",
+    "messaging",
+    "paywall",
+    "bottom-sheet",
+    "web"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: career goals, Someor, Messaging",
+        "Navigation title reads “Suggested for you”",
+        "Bottom sheet over a dimmed background, covering 33% of the height from 63% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall bottom sheet over a dimmed screen, on top of Profile language with a 3-item tab bar. Dark theme, 43 text elements.",
+        "43 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 11 in “Career goals”",
+        "Reached from “Profile language (2)”",
+        "Leads to “Profile language (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:01 in the recording",
+        "Frame 1606 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#444544",
+      "role": "background",
+      "share": 0.796
+    },
+    {
+      "hex": "#fbfbfa",
+      "role": "text",
+      "share": 0.093
+    },
+    {
+      "hex": "#1b2129",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#d7d6d5",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#656565",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 1606,
+    "atSeconds": 481.2,
+    "endSeconds": 482.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.625,
+        "w": 0.375,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 43,
+    "tabLabels": [
+      "career goals",
+      "Someor",
+      "Messaging"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Suggested for you",
+    "headline": "Hiring"
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 49,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s041",
+        "via": "Tap “hiring”",
+        "name": "Profile language (2)"
+      },
+      {
+        "from": "s041",
+        "via": "Back to Subscription plans",
+        "name": "Profile language (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Dismiss",
+        "name": "Profile language (2)"
+      },
+      {
+        "to": "s041",
+        "via": "Dismiss",
+        "name": "Profile language (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}

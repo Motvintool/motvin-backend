@@ -1,0 +1,135 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-03-logging-in-1",
+  "screen_id": "linkedin-web-versions-2026-10-03-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-02T16:44:33.005Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Sign in (2)",
+  "description": "Login screen. Light theme, 45 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "messaging",
+    "login",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Linked in”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 45 text elements.",
+        "45 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Logging in”",
+        "Reached from “Search results (9)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 13:51 in the recording",
+        "Frame 2784 of 3945 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f6",
+      "role": "background",
+      "share": 0.867
+    },
+    {
+      "hex": "#ced2d7",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#4577c3",
+      "role": "accent",
+      "share": 0.02
+    },
+    {
+      "hex": "#7e8d98",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#876c60",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3945,
+    "frame": 2784,
+    "atSeconds": 831.9,
+    "endSeconds": 835.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Linked in",
+    "headline": "Hiring",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s092",
+    "depth": 92,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s091",
+        "via": "Open Linked in",
+        "name": "Search results (9)"
+      }
+    ],
+    "leadsTo": []
+  },
+  "capturedAt": "2026-10-02",
+  "capturedBy": "motvin-ios-crawler"
+}
