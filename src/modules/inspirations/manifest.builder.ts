@@ -522,13 +522,6 @@ export function buildInspirationsManifest(root: string): BuildReport {
           problems.push(`${platform}/${appId}/${base}.json has unknown screenType "${sidecar.screenType}"`);
           continue;
         }
-        // A third-party sign-in page (Google, Apple, Facebook) is not the app's
-        // design. The capture pipeline leaves these out of the store; one that
-        // arrived another way is held back here and named in the report.
-        if (sidecar.fineType === 'external_auth') {
-          warnings.push(`${platform}/${appId}/${file} is a third-party sign-in page — not published`);
-          continue;
-        }
         const badStyles = (sidecar.style || []).filter((s: string) => !(STYLES as readonly string[]).includes(s));
         if (badStyles.length) {
           warnings.push(`${platform}/${appId}/${base}.json has unknown style(s): ${badStyles.join(', ')}`);

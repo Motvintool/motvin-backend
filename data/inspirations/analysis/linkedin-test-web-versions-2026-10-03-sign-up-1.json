@@ -1,0 +1,151 @@
+{
+  "screenId": "linkedin-test-web-versions-2026-10-03-sign-up-1",
+  "screen_id": "linkedin-test-web-versions-2026-10-03-sign-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T07:20:39.791Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Sign Up",
+  "flow_position": 1,
+  "name": "Sign Up home",
+  "description": "Home screen with a 4-item tab bar and a primary action labelled “Get Started”. Light theme, 6 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "sign up",
+    "learning",
+    "talent",
+    "members",
+    "home",
+    "web"
+  ],
+  "elements": [
+    "tab-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Sign Up, Learning, Talent, Members",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar and a primary action labelled “Get Started”. Light theme, 6 text elements.",
+        "Calls to action: “Get Started”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Sign Up”",
+        "Reached from “Daily games”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:11 in the recording",
+        "Frame 46 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f3f6f7",
+      "role": "background",
+      "share": 0.669
+    },
+    {
+      "hex": "#cad0d5",
+      "role": "surface",
+      "share": 0.224
+    },
+    {
+      "hex": "#aeb0b1",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#899396",
+      "role": "text",
+      "share": 0.027
+    },
+    {
+      "hex": "#e2beae",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "linkedIn-test.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 46,
+    "atSeconds": 11.7,
+    "endSeconds": 14.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Sign Up",
+      "Learning",
+      "Talent",
+      "Members"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Get Started"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Linkedln"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Sign Up home",
+        "name": "Daily games"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s001",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

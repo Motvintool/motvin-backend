@@ -1,0 +1,151 @@
+{
+  "screenId": "linkedin-test-web-versions-2026-10-03-logging-in-with-email-2-2",
+  "screen_id": "linkedin-test-web-versions-2026-10-03-logging-in-with-email-2-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T07:20:40.115Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "Sign in with email — scrolled",
+  "description": "Login screen, scrolled further down from Sign in with email with 2 input fields and a primary action labelled “Sign in with Apple”. Light theme, 15 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "scrolled",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Sign in with email with 2 input fields and a primary action labelled “Sign in with Apple”. Light theme, 15 text elements.",
+        "Calls to action: “Sign in with Apple”, “Sign in”",
+        "15 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Logging in with email”",
+        "Reached from “Sign in with email (2)”",
+        "Leads to “Sign in with email (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.2s at 0:27 in the recording",
+        "Frame 113 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#dbdee3",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#3e73c5",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#a7bee2",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#bfcbc4",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn-test.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 113,
+    "atSeconds": 27,
+    "endSeconds": 34.2,
+    "holdSeconds": 7.2,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in with Apple",
+      "Sign in"
+    ],
+    "keyboard": false,
+    "title": "Sign in",
+    "headline": "Email or phone"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Scroll",
+        "name": "Sign in with email (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Scroll",
+        "name": "Sign in with email (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}
