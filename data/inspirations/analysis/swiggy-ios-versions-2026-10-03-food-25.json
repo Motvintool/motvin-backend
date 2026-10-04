@@ -1,0 +1,158 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-food-25",
+  "screen_id": "swiggy-ios-versions-2026-10-03-food-25",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:33.097Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Food",
+  "flow_position": 25,
+  "name": "Checkout (14)",
+  "description": "Checkout screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 40 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "price",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Powered by”",
+        "Category strip: LOW, HIGH, ADDED, CAI, SUGAR, PROTEIN",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a 4-item tab bar, a row of 6 category chips and prices. Light theme, 40 text elements.",
+        "40 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 32 in “Food”",
+        "Reached from “Checkout (13)”",
+        "Leads to “Pick Your”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:09 in the recording",
+        "Frame 1634 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fa",
+      "role": "background",
+      "share": 0.4
+    },
+    {
+      "hex": "#230a51",
+      "role": "text",
+      "share": 0.17
+    },
+    {
+      "hex": "#e4e0d8",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#8e0101",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#c8c2bf",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1634,
+    "atSeconds": 489,
+    "endSeconds": 490.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 40,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [
+      "LOW",
+      "HIGH",
+      "ADDED",
+      "CAI",
+      "SUGAR",
+      "PROTEIN"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Powered by",
+    "headline": "FITPASS"
+  },
+  "crawler": {
+    "nodeId": "s233",
+    "depth": 232,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s232",
+        "via": "Tap “Restaurants to explore”",
+        "name": "Checkout (13)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s234",
+        "via": "Tap “Checkout”",
+        "name": "Pick Your"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

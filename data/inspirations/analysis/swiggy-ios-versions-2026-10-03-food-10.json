@@ -1,0 +1,167 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-food-10",
+  "screen_id": "swiggy-ios-versions-2026-10-03-food-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:21.354Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Food",
+  "flow_position": 10,
+  "name": "Loading state",
+  "description": "Loading state with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 19 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "checkout",
+    "offer",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 32 in “Food”",
+        "Reached from “Order placed (5)”",
+        "Leads to “Checkout”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:52 in the recording",
+        "Frame 977 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fb",
+      "role": "background",
+      "share": 0.902
+    },
+    {
+      "hex": "#e0dbdb",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#fbd9b7",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#4db991",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#c5c3c4",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 977,
+    "atSeconds": 292.2,
+    "endSeconds": 293.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [
+      "Food",
+      "Dineout",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "4 BOLT"
+  },
+  "crawler": {
+    "nodeId": "s129",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s128",
+        "via": "Open Guduvancheri",
+        "name": "Order placed (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s130",
+        "via": "Wait 1.2s",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,150 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-food-23",
+  "screen_id": "swiggy-ios-versions-2026-10-03-food-23",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:32.825Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Food",
+  "flow_position": 23,
+  "name": "Checkout (12)",
+  "description": "Checkout screen with a 4-item tab bar. Dark theme, 25 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "checkout",
+    "premium",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Exquisite Taste, Exceptional Value”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a 4-item tab bar. Dark theme, 25 text elements.",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 32 in “Food”",
+        "Reached from “Checkout — loading”",
+        "Leads to “Checkout (13)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:04 in the recording",
+        "Frame 1618 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c1717",
+      "role": "background",
+      "share": 0.671
+    },
+    {
+      "hex": "#20322d",
+      "role": "surface",
+      "share": 0.155
+    },
+    {
+      "hex": "#454741",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#b5c186",
+      "role": "text",
+      "share": 0.022
+    },
+    {
+      "hex": "#b58510",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1618,
+    "atSeconds": 484.5,
+    "endSeconds": 485.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Exquisite Taste, Exceptional Value",
+    "headline": "'gourmet"
+  },
+  "crawler": {
+    "nodeId": "s231",
+    "depth": 230,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s230",
+        "via": "Wait 0.6s",
+        "name": "Checkout — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s232",
+        "via": "Tap “'gourmet.”",
+        "name": "Checkout (13)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

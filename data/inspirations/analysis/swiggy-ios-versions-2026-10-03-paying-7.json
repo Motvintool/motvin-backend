@@ -1,0 +1,140 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-paying-7",
+  "screen_id": "swiggy-ios-versions-2026-10-03-paying-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:11.387Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Paying",
+  "flow_position": 7,
+  "name": "Phone number entry (3)",
+  "description": "Login screen with 2 input fields. Light theme, 10 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Edit Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields. Light theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 10 in “Paying”",
+        "Reached from “Create account (5)”",
+        "Leads to “Create account (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:39 in the recording",
+        "Frame 138 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.958
+    },
+    {
+      "hex": "#e1dede",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#c2c1c3",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#a9a8aa",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#fbc6ac",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 138,
+    "atSeconds": 39,
+    "endSeconds": 41.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Edit Account",
+    "headline": "Thunderbirds0202@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Tap “thunderbirds0202@gmail.com”",
+        "name": "Create account (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Back to Create account",
+        "name": "Create account (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,146 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-best-in-burger-9",
+  "screen_id": "swiggy-ios-versions-2026-10-03-best-in-burger-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:32.382Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Best in Burger",
+  "flow_position": 9,
+  "name": "Phone number entry (10)",
+  "description": "Login screen with the keyboard open. Light theme, 32 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Yes, add receiver's details”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Light theme, 32 text elements.",
+        "32 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 11 in “Best in Burger”",
+        "Reached from “Phone number entry (9)”",
+        "Leads to “Order placed (11)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.5s at 7:49 in the recording",
+        "Frame 1590 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf7f6",
+      "role": "background",
+      "share": 0.466
+    },
+    {
+      "hex": "#dfdde0",
+      "role": "surface",
+      "share": 0.268
+    },
+    {
+      "hex": "#ababaf",
+      "role": "surface",
+      "share": 0.114
+    },
+    {
+      "hex": "#020409",
+      "role": "accent",
+      "share": 0.062
+    },
+    {
+      "hex": "#c4c4c8",
+      "role": "surface",
+      "share": 0.051
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1590,
+    "atSeconds": 469.8,
+    "endSeconds": 477.3,
+    "holdSeconds": 7.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Yes, add receiver's details",
+    "headline": "No, it's for me"
+  },
+  "crawler": {
+    "nodeId": "s226",
+    "depth": 225,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s225",
+        "via": "Type “Surendar”",
+        "name": "Phone number entry (9)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s227",
+        "via": "Open KFC",
+        "name": "Order placed (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

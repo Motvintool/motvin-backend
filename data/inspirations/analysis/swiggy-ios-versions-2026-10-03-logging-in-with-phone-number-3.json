@@ -1,0 +1,142 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-logging-in-with-phone-number-3",
+  "screen_id": "swiggy-ios-versions-2026-10-03-logging-in-with-phone-number-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:13.142Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 3,
+  "name": "Location picker (3)",
+  "description": "Other screen with a search bar. Light theme, 11 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "location",
+    "address",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select your location”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Light theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 13 in “Logging in with phone number”",
+        "Reached from “Phone number entry — loading”",
+        "Leads to “Phone number entry (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:22 in the recording",
+        "Frame 281 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f1f1f5",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#d3d3d4",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#b3b3b6",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#777779",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#9f9ea2",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 281,
+    "atSeconds": 82.8,
+    "endSeconds": 84.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select your location",
+    "headline": "QWERT"
+  },
+  "crawler": {
+    "nodeId": "s044",
+    "depth": 43,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s043",
+        "via": "Wait 0.6s",
+        "name": "Phone number entry — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s045",
+        "via": "Wait 1.8s",
+        "name": "Phone number entry (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,141 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-paying-1",
+  "screen_id": "swiggy-ios-versions-2026-10-03-paying-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:10.790Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 1,
+  "name": "Payment method",
+  "description": "Payment screen. Light theme, 18 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "wallet",
+    "netbanking",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payment Options”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 10 in “Paying”",
+        "Reached from “Payment method — loading”",
+        "Leads to “Listing (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:27 in the recording",
+        "Frame 97 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f8fa",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#dedcdb",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#c0bfc4",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#fcd2bd",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#a7aaa5",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 97,
+    "atSeconds": 27.9,
+    "endSeconds": 29.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Payment Options",
+    "headline": "WhatsApp",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Wait 0.9s",
+        "name": "Payment method — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Back to Listing",
+        "name": "Listing (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

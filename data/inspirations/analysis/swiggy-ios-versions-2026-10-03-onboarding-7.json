@@ -1,0 +1,140 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-onboarding-7",
+  "screen_id": "swiggy-ios-versions-2026-10-03-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:09.972Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "OTP verification (3)",
+  "description": "Verification code screen. Light theme, 11 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "get via sms",
+    "get via call",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “We are validating the OTP”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 9 in “Onboarding”",
+        "Reached from “OTP verification (2)”",
+        "Leads to “Address form (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:08 in the recording",
+        "Frame 29 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.629
+    },
+    {
+      "hex": "#fe5305",
+      "role": "accent",
+      "share": 0.215
+    },
+    {
+      "hex": "#fd8349",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#cdd3d0",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#fbc8b1",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 29,
+    "atSeconds": 8.4,
+    "endSeconds": 9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "We are validating the OTP",
+    "headline": "We are validating the OTP",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Tap “Get via SMS”",
+        "name": "OTP verification (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Open Select your location",
+        "name": "Address form (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

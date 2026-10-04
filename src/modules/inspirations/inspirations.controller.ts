@@ -164,11 +164,12 @@ export class InspirationsController {
     @Query('mode') mode?: string,
     @Query('limit') limit = 50,
     @Query('offset') offset = 0,
+    @Query('appId') appId?: string,
   ) {
     const safeLimit = Math.min(Number(limit) || 50, 200);
     const safeOffset = Number(offset) || 0;
     const data = mode === 'text'
-      ? await this.service.searchScreenshotText(q, safeLimit, safeOffset)
+      ? await this.service.searchScreenshotText(q, safeLimit, safeOffset, appId || undefined)
       : await this.service.search(q, safeLimit, safeOffset);
     return { success: true, data };
   }

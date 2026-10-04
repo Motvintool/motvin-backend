@@ -1,0 +1,176 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-dineout-21",
+  "screen_id": "swiggy-ios-versions-2026-10-03-dineout-21",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:35.994Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Dineout",
+  "flow_position": 21,
+  "name": "Payment method (4)",
+  "description": "Payment toast, on top of Dineout home with a 6-item tab bar, a row of 4 category chips and a search bar. Dark theme, 27 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "payment",
+    "dineout",
+    "bites",
+    "my corner",
+    "scenes",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Dineout, Bites, My corner, Scenes, TOP SPOTS, PAY DAY",
+        "Navigation title reads “Guduvancheri”",
+        "Category strip: Food, Dineout, Scenes, Instamart",
+        "Search bar present",
+        "Toast, covering 2% of the height from 17% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment toast, on top of Dineout home with a 6-item tab bar, a row of 4 category chips and a search bar. Dark theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 22 in “Dineout”",
+        "Reached from “Dineout home (10)”",
+        "Leads to “Dineout home (11)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:15 in the recording",
+        "Frame 1855 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11100f",
+      "role": "background",
+      "share": 0.525
+    },
+    {
+      "hex": "#282f2a",
+      "role": "surface",
+      "share": 0.165
+    },
+    {
+      "hex": "#fbfafa",
+      "role": "text",
+      "share": 0.129
+    },
+    {
+      "hex": "#454646",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#8ea09a",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1855,
+    "atSeconds": 555.3,
+    "endSeconds": 556.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.125,
+        "y": 0.171875,
+        "w": 0.78125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [
+      "Dineout",
+      "Bites",
+      "My corner",
+      "Scenes",
+      "TOP SPOTS",
+      "PAY DAY"
+    ],
+    "chipLabels": [
+      "Food",
+      "Dineout",
+      "Scenes",
+      "Instamart"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Guduvancheri",
+    "headline": "(GIRF"
+  },
+  "crawler": {
+    "nodeId": "s259",
+    "depth": 258,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s258",
+        "via": "Tap “on every bill payment”",
+        "name": "Dineout home (10)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s260",
+        "via": "Dismiss",
+        "name": "Dineout home (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

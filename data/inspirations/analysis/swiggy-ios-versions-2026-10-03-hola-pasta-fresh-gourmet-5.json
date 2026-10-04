@@ -1,0 +1,138 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-hola-pasta-fresh-gourmet-5",
+  "screen_id": "swiggy-ios-versions-2026-10-03-hola-pasta-fresh-gourmet-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:22.796Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Hola Pasta - Fresh Gourmet",
+  "flow_position": 5,
+  "name": "Checkout (9)",
+  "description": "Checkout screen. Light theme, 10 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "discount",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Group Order”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen. Light theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 10 in “Hola Pasta - Fresh Gourmet”",
+        "Reached from “Hola Pasta - Fresh Gourmet (2)”",
+        "Leads to “Hola Pasta - Fresh Gourmet (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:19 in the recording",
+        "Frame 1072 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f3f7",
+      "role": "background",
+      "share": 0.895
+    },
+    {
+      "hex": "#d7d6dc",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#bcbcc1",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#fcc6aa",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#c8b9f4",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1072,
+    "atSeconds": 319.5,
+    "endSeconds": 321.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your Group Order",
+    "headline": "My items"
+  },
+  "crawler": {
+    "nodeId": "s143",
+    "depth": 142,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s142",
+        "via": "Open Your Group Order",
+        "name": "Hola Pasta - Fresh Gourmet (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s144",
+        "via": "Back to Hola Pasta - Fresh Gourmet",
+        "name": "Hola Pasta - Fresh Gourmet (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

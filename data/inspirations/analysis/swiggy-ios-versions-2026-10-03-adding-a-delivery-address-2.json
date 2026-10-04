@@ -1,0 +1,153 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-adding-a-delivery-address-2",
+  "screen_id": "swiggy-ios-versions-2026-10-03-adding-a-delivery-address-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:36.799Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [],
+  "category": "productivity",
+  "flow": "creation",
+  "flow_name": "Adding a delivery address",
+  "flow_position": 2,
+  "name": "Address form (5)",
+  "description": "Form screen with a row of 5 category chips, a search bar and 2 input fields. Light theme, 20 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "location",
+    "address",
+    "form",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select your location”",
+        "Category strip: Use Current, Request, Add New, Address, Address",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with a row of 5 category chips, a search bar and 2 input fields. Light theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Adding a delivery address”",
+        "Reached from “Address form (4)”",
+        "Leads to “Address form (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 9:27 in the recording",
+        "Frame 1900 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f4f4f7",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#d6d7d8",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#1f2228",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#05070d",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#bfc2c1",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1900,
+    "atSeconds": 567.9,
+    "endSeconds": 570.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [
+      "Use Current",
+      "Request",
+      "Add New",
+      "Address",
+      "Address"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select your location",
+    "headline": "Edit"
+  },
+  "crawler": {
+    "nodeId": "s266",
+    "depth": 265,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s265",
+        "via": "Wait 1.8s",
+        "name": "Address form (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s267",
+        "via": "Tap “₩ Delete”",
+        "name": "Address form (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

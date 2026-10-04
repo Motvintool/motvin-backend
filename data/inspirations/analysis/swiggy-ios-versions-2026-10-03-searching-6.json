@@ -1,0 +1,145 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-searching-6",
+  "screen_id": "swiggy-ios-versions-2026-10-03-searching-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:15.632Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Searching",
+  "flow_position": 6,
+  "name": "OTP verification (5)",
+  "description": "Verification code screen with prices. Light theme, 14 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "rewards",
+    "address",
+    "how it works",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "legal-text",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Student Rewards”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with prices. Light theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Searching”",
+        "Reached from “Create account (21)”",
+        "Leads to “Create account (22)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:39 in the recording",
+        "Frame 534 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f4f7",
+      "role": "background",
+      "share": 0.591
+    },
+    {
+      "hex": "#66265d",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#973567",
+      "role": "accent",
+      "share": 0.066
+    },
+    {
+      "hex": "#250f28",
+      "role": "text",
+      "share": 0.063
+    },
+    {
+      "hex": "#d3d2da",
+      "role": "surface",
+      "share": 0.042
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 534,
+    "atSeconds": 159,
+    "endSeconds": 160.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Student Rewards",
+    "headline": "Get OTP",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s073",
+    "depth": 72,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s072",
+        "via": "Tap “Student Rewards”",
+        "name": "Create account (21)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s074",
+        "via": "Back to Create account",
+        "name": "Create account (22)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,138 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-settings-4",
+  "screen_id": "swiggy-ios-versions-2026-10-03-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:14.476Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 4,
+  "name": "Account (2)",
+  "description": "Settings screen. Light theme, 12 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 10 in “Settings”",
+        "Reached from “Account”",
+        "Leads to “Account (3)”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:16 in the recording",
+        "Frame 456 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf9f9",
+      "role": "background",
+      "share": 0.808
+    },
+    {
+      "hex": "#ebdcd2",
+      "role": "surface",
+      "share": 0.146
+    },
+    {
+      "hex": "#c5c2c2",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#aaa6a4",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#e7b494",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 456,
+    "atSeconds": 136.2,
+    "endSeconds": 137.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Account",
+    "headline": "Statements"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Wait 1.5s",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Wait 0.9s",
+        "name": "Account (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

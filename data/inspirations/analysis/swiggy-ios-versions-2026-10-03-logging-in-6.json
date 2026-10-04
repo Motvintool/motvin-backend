@@ -1,0 +1,154 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-logging-in-6",
+  "screen_id": "swiggy-ios-versions-2026-10-03-logging-in-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-03T13:09:12.765Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 6,
+  "name": "Phone number entry · toast",
+  "description": "Login toast, on top of Phone number entry. Light theme, 14 text elements.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Other”",
+        "Toast, covering 2% of the height from 98% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast, on top of Phone number entry. Light theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 6 in “Logging in”",
+        "Reached from “Phone number entry (5)”",
+        "Leads to “Phone number entry · New Quick”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 1:10 in the recording",
+        "Frame 246 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f4f7",
+      "role": "background",
+      "share": 0.968
+    },
+    {
+      "hex": "#e9d6d0",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#dedde1",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#c0bec1",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#a3a1a4",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 246,
+    "atSeconds": 70.5,
+    "endSeconds": 74.1,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.984375,
+        "w": 0.0625,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Other",
+    "headline": "Other"
+  },
+  "crawler": {
+    "nodeId": "s039",
+    "depth": 38,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s038",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s040",
+        "via": "Tap “& Other”",
+        "name": "Phone number entry · New Quick"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

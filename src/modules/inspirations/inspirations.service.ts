@@ -1,5 +1,7 @@
-import { Injectable } from '@nestjs/common';
-import { createWorker } from 'tesseract.js';
+import { Injectable, OnModuleDestroy } from '@nestjs/common';
+import { promises as fs } from 'fs';
+import { dirname, join } from 'path';
+import { createScheduler, createWorker, Scheduler } from 'tesseract.js';
 import {
   InspirationApp,
   InspirationFlow,
@@ -90,11 +92,53 @@ const STOP = new Set([
   'screens', 'page', 'pages', 'example', 'examples', 'inspiration',
 ]);
 
+const OCR_WORKERS = 4;
+const OCR_CACHE_FILE = join(process.cwd(), 'data', 'inspirations', 'ocr-cache.json');
+
 @Injectable()
-export class InspirationsService {
+export class InspirationsService implements OnModuleDestroy {
   private readonly screenshotText = new Map<string, Promise<RecognizedScreenshot>>();
+  private ocrScheduler: Promise<Scheduler> | null = null;
+  private ocrCache: Promise<Record<string, RecognizedScreenshot>> | null = null;
+  private ocrSaveTimer: NodeJS.Timeout | null = null;
 
   constructor(private readonly loader: LoaderService) {}
+
+  async onModuleDestroy() {
+    if (this.ocrSaveTimer) clearTimeout(this.ocrSaveTimer);
+    await (await this.ocrScheduler)?.terminate();
+  }
+
+  // One pool for the process: starting a worker loads the language model, which
+  // cost more than recognising the screenshot itself when done per image.
+  private scheduler(): Promise<Scheduler> {
+    this.ocrScheduler ??= (async () => {
+      const scheduler = createScheduler();
+      const workers = await Promise.all(Array.from({ length: OCR_WORKERS }, () => createWorker('eng')));
+      workers.forEach((worker) => scheduler.addWorker(worker));
+      return scheduler;
+    })();
+    return this.ocrScheduler;
+  }
+
+  // Recognised text survives restarts, so a screenshot is only ever read once.
+  private loadOcrCache(): Promise<Record<string, RecognizedScreenshot>> {
+    this.ocrCache ??= fs.readFile(OCR_CACHE_FILE, 'utf8').then((raw) => JSON.parse(raw)).catch(() => ({}));
+    return this.ocrCache;
+  }
+
+  private scheduleOcrSave() {
+    if (this.ocrSaveTimer) return;
+    this.ocrSaveTimer = setTimeout(async () => {
+      this.ocrSaveTimer = null;
+      try {
+        await fs.mkdir(dirname(OCR_CACHE_FILE), { recursive: true });
+        await fs.writeFile(OCR_CACHE_FILE, JSON.stringify(await this.loadOcrCache()));
+      } catch {
+        // The cache is an optimisation; a failed write only costs a re-read.
+      }
+    }, 2000);
+  }
 
   /**
    * Counts and the taxonomy present in the store — for the whole library, or,
@@ -358,8 +402,9 @@ export class InspirationsService {
   }
 
   /** OCR-backed search is opt-in: the regular search remains metadata-only. */
-  async searchScreenshotText(q: string, limit = 50, offset = 0) {
-    const [screens, manifest] = await Promise.all([this.loader.getScreens(), this.loader.getManifest()]);
+  async searchScreenshotText(q: string, limit = 50, offset = 0, appId?: string) {
+    const [allScreens, manifest] = await Promise.all([this.loader.getScreens(), this.loader.getManifest()]);
+    const screens = appId ? allScreens.filter((screen) => screen.appId === appId) : allScreens;
     const intent = this.interpret(q, manifest);
     const query = q.trim().toLocaleLowerCase();
     const queryTerms = query.split(/\s+/).filter(Boolean);
@@ -369,15 +414,16 @@ export class InspirationsService {
 
     const matchedScreens: InspirationScreen[] = [];
     const textHighlights: Record<string, TextHighlight[]> = {};
-    for (const screen of screens) {
-      const recognized = await this.textInScreenshot(screen);
+    const recognizedAll = await Promise.all(screens.map((screen) => this.textInScreenshot(screen)));
+    screens.forEach((screen, index) => {
+      const recognized = recognizedAll[index];
       if (recognized.text.includes(query)) {
         matchedScreens.push(screen);
         textHighlights[screen.id] = recognized.words
           .filter(({ text }) => queryTerms.some((term) => text.includes(term)))
           .map(({ text: _text, ...highlight }) => highlight);
       }
-    }
+    });
 
     return {
       intent,
@@ -397,20 +443,21 @@ export class InspirationsService {
     const cached = this.screenshotText.get(screen.id);
     if (cached) return cached;
 
-    const extraction = (async () => {
+    const extraction = (async (): Promise<RecognizedScreenshot> => {
+      const cache = await this.loadOcrCache();
+      if (cache[screen.id]) return cache[screen.id];
       const file = await this.loader.resolveServableFile(`screens/${screen.file}`);
       if (!file) return { text: '', words: [] };
       try {
-        const worker = await createWorker('eng');
-        try {
-          const { data } = await worker.recognize(file, {}, { text: true, tsv: true });
-          return {
-            text: data.text.toLocaleLowerCase(),
-            words: this.ocrWords(data.tsv ?? '', screen),
-          };
-        } finally {
-          await worker.terminate();
-        }
+        const scheduler = await this.scheduler();
+        const { data } = await scheduler.addJob('recognize', file, {}, { text: true, tsv: true });
+        const recognized = {
+          text: data.text.toLocaleLowerCase(),
+          words: this.ocrWords(data.tsv ?? '', screen),
+        };
+        cache[screen.id] = recognized;
+        this.scheduleOcrSave();
+        return recognized;
       } catch {
         return { text: '', words: [] };
       }
