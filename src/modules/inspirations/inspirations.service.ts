@@ -1,6 +1,4 @@
 import { Injectable, OnModuleDestroy } from '@nestjs/common';
-import { promises as fs } from 'fs';
-import { dirname, join } from 'path';
 import { createScheduler, createWorker, Scheduler } from 'tesseract.js';
 import {
   InspirationApp,
@@ -93,19 +91,14 @@ const STOP = new Set([
 ]);
 
 const OCR_WORKERS = 4;
-const OCR_CACHE_FILE = join(process.cwd(), 'data', 'inspirations', 'ocr-cache.json');
-
 @Injectable()
 export class InspirationsService implements OnModuleDestroy {
   private readonly screenshotText = new Map<string, Promise<RecognizedScreenshot>>();
   private ocrScheduler: Promise<Scheduler> | null = null;
-  private ocrCache: Promise<Record<string, RecognizedScreenshot>> | null = null;
-  private ocrSaveTimer: NodeJS.Timeout | null = null;
 
   constructor(private readonly loader: LoaderService) {}
 
   async onModuleDestroy() {
-    if (this.ocrSaveTimer) clearTimeout(this.ocrSaveTimer);
     await (await this.ocrScheduler)?.terminate();
   }
 
@@ -119,25 +112,6 @@ export class InspirationsService implements OnModuleDestroy {
       return scheduler;
     })();
     return this.ocrScheduler;
-  }
-
-  // Recognised text survives restarts, so a screenshot is only ever read once.
-  private loadOcrCache(): Promise<Record<string, RecognizedScreenshot>> {
-    this.ocrCache ??= fs.readFile(OCR_CACHE_FILE, 'utf8').then((raw) => JSON.parse(raw)).catch(() => ({}));
-    return this.ocrCache;
-  }
-
-  private scheduleOcrSave() {
-    if (this.ocrSaveTimer) return;
-    this.ocrSaveTimer = setTimeout(async () => {
-      this.ocrSaveTimer = null;
-      try {
-        await fs.mkdir(dirname(OCR_CACHE_FILE), { recursive: true });
-        await fs.writeFile(OCR_CACHE_FILE, JSON.stringify(await this.loadOcrCache()));
-      } catch {
-        // The cache is an optimisation; a failed write only costs a re-read.
-      }
-    }, 2000);
   }
 
   /**
@@ -412,23 +386,27 @@ export class InspirationsService implements OnModuleDestroy {
       return { intent, apps: [], screens: [], flows: [], patterns: [], total: 0, screenTotal: 0 };
     }
 
-    const matchedScreens: InspirationScreen[] = [];
+    // The text was read when the screen was ingested and lives in its analysis
+    // record, so finding matches is only a string comparison.
+    const texts = await Promise.all(screens.map((screen) => this.screenText(screen)));
+    const matchedScreens = screens.filter((_, index) => texts[index].includes(query));
+
+    // Word boxes are only worth working out for the page about to be shown.
+    const page = matchedScreens.slice(offset, offset + limit);
     const textHighlights: Record<string, TextHighlight[]> = {};
-    const recognizedAll = await Promise.all(screens.map((screen) => this.textInScreenshot(screen)));
-    screens.forEach((screen, index) => {
-      const recognized = recognizedAll[index];
-      if (recognized.text.includes(query)) {
-        matchedScreens.push(screen);
-        textHighlights[screen.id] = recognized.words
+    await Promise.all(
+      page.map(async (screen) => {
+        const { words } = await this.textInScreenshot(screen);
+        textHighlights[screen.id] = words
           .filter(({ text }) => queryTerms.some((term) => text.includes(term)))
           .map(({ text: _text, ...highlight }) => highlight);
-      }
-    });
+      }),
+    );
 
     return {
       intent,
       apps: [],
-      screens: matchedScreens.slice(offset, offset + limit),
+      screens: page,
       flows: [],
       patterns: [],
       total: matchedScreens.length,
@@ -439,25 +417,29 @@ export class InspirationsService implements OnModuleDestroy {
 
   // ─── internals ────────────────────────────────────────────────────────────
 
+  /** The words on a screen: from its analysis record, else read from the image. */
+  private async screenText(screen: InspirationScreen): Promise<string> {
+    const analysis = await this.loader.getAnalysis(screen.id);
+    if (typeof analysis?.text === 'string') return analysis.text.toLocaleLowerCase();
+    return (await this.textInScreenshot(screen)).text;
+  }
+
+  // Reads the image itself — only for word positions, and for screens whose
+  // analysis record carries no text (added by hand, or before it was saved).
   private textInScreenshot(screen: InspirationScreen): Promise<RecognizedScreenshot> {
     const cached = this.screenshotText.get(screen.id);
     if (cached) return cached;
 
     const extraction = (async (): Promise<RecognizedScreenshot> => {
-      const cache = await this.loadOcrCache();
-      if (cache[screen.id]) return cache[screen.id];
       const file = await this.loader.resolveServableFile(`screens/${screen.file}`);
       if (!file) return { text: '', words: [] };
       try {
         const scheduler = await this.scheduler();
         const { data } = await scheduler.addJob('recognize', file, {}, { text: true, tsv: true });
-        const recognized = {
+        return {
           text: data.text.toLocaleLowerCase(),
           words: this.ocrWords(data.tsv ?? '', screen),
         };
-        cache[screen.id] = recognized;
-        this.scheduleOcrSave();
-        return recognized;
       } catch {
         return { text: '', words: [] };
       }
