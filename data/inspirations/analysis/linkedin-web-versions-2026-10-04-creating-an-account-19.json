@@ -1,0 +1,145 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-04-creating-an-account-19",
+  "screen_id": "linkedin-web-versions-2026-10-04-creating-an-account-19",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-04T07:28:57.212Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 19,
+  "name": "Sign in with email (15)",
+  "description": "Login screen with 1 input field and a primary action labelled “Sign in”. Light theme, 12 text elements.",
+  "text": "Welcome back\nsurendar V\ns*****@gmail.com\nPassword\nForgot password?\nSign in\nor\nSign in with Apple\nЗу continuing, you agree to Linkedln's User Agreement, Privacy\nolicy, and Cookie Policy\nor\nSign in using another account\nLinkedln Corporation © 2026\nUser Agreement Privacy Policy Community Guidelines Cookie Policy Copyright Policy Send Feedback Language",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Sign in”. Light theme, 12 text elements.",
+        "Calls to action: “Sign in”, “Sign in with Apple”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 24 in “Creating an account”",
+        "Reached from “Sign in with email (14)”",
+        "Leads to “Sign in with email (16)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:56 in the recording",
+        "Frame 190 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.963
+    },
+    {
+      "hex": "#d6dbe1",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#3e72c5",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#a4bde3",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#969695",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 190,
+    "atSeconds": 56.4,
+    "endSeconds": 57.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Sign in with Apple"
+    ],
+    "keyboard": false,
+    "title": "Welcome back",
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s023",
+    "depth": 24,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s022",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email (14)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Tap “Sign in”",
+        "name": "Sign in with email (16)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-04",
+  "capturedBy": "motvin-ios-crawler"
+}

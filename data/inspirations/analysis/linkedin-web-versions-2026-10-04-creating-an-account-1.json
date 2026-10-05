@@ -1,0 +1,150 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-04-creating-an-account-1",
+  "screen_id": "linkedin-web-versions-2026-10-04-creating-an-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-04T07:28:54.605Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 1,
+  "name": "Create account",
+  "description": "Sign up screen with a search bar, 1 input field and a primary action labelled “Sign Up”. Light theme, 42 text elements.",
+  "text": "Linked in\nJoin now\nSign in\nTop Content\nPeople\nJobs\nGames\nLearning\n-\nMTOSA\n0 0 ÷\nAdI=\nLinked in\nGeneral\nBrowse Linkedln\nBusiness Solutions\nDirectories\nMembers\nSign Up\nLearning\nTalent\nHelp Center\nMarketing\nJobs\nJobs\nGames\nCompanies\nAbout\nSales\nMobile\nLearning\nFeatured\nPress\nServices\nBlog\nLearning\nCareers\nProducts\nPosts\nTop Companies\nDevelopers\nArticles\nTop Startups\nSchools\nTop Colleges\nNews\nNewsletters\nServices\nProducts\nPeople Search\nAbout Accessibility User Agreement Privacy Policy Cookie Policy Copyright Policy Brand Policy Guest controls Community Guidelines\nLinked in Linkedln Corporation © 2026\nLanguage y",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "language y",
+    "signup",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Linked in”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a search bar, 1 input field and a primary action labelled “Sign Up”. Light theme, 42 text elements.",
+        "Calls to action: “Sign Up”",
+        "42 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 24 in “Creating an account”",
+        "Reached from “Sign Up home”",
+        "Leads to “Sign in with email (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:14 in the recording",
+        "Frame 52 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f5f2",
+      "role": "background",
+      "share": 0.841
+    },
+    {
+      "hex": "#d3d5d7",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#bbbab8",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#a7a4a4",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#e6c1b2",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 52,
+    "atSeconds": 14.4,
+    "endSeconds": 15.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign Up"
+    ],
+    "keyboard": false,
+    "title": "Linked in",
+    "headline": "Top Companies",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Tap “Linked in”",
+        "name": "Sign Up home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Wait 1.5s",
+        "name": "Sign in with email (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,155 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-04-creating-an-account-16",
+  "screen_id": "linkedin-web-versions-2026-10-04-creating-an-account-16",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-04T07:28:56.765Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 16,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field and a primary action labelled “Continue as surendarv”. Light theme, 13 text elements.",
+  "text": "Linked in\nJoin Linkedln now - it's free!\nEmail or phone number\nPassword\nShow\nKeep me logged in\nBy clicking Agree & Join or Continue, you agree to the\nLinkedin User Agreement, Privacy Policy, and Cookie Policy.\nAgree & Join\nor\nContinue as surendarv\nsurendarv638@gmail.com\nAlready on Linkedln? Sign in\nLooking to create a page for a business? Get help\nUser Agreement Privacy Policy Cookie Policy Copyright Policy Brand Policy Guest Controls\nLinked in © 2026\nAccessibility\nCommunity Guidelines\nLanguage v",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "accessibility",
+    "language v",
+    "login",
+    "loading",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Agree & Join”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field and a primary action labelled “Continue as surendarv”. Light theme, 13 text elements.",
+        "Calls to action: “Continue as surendarv”",
+        "13 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 24 in “Creating an account”",
+        "Reached from “Sign in with email · bottom sheet”",
+        "Leads to “Sign in with email (13)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:50 in the recording",
+        "Frame 177 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f5f3",
+      "role": "background",
+      "share": 0.958
+    },
+    {
+      "hex": "#d0d3d6",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#5080ca",
+      "role": "accent",
+      "share": 0.007
+    },
+    {
+      "hex": "#96b2dd",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#b9b8b6",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 177,
+    "atSeconds": 50.1,
+    "endSeconds": 53.4,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue as surendarv"
+    ],
+    "keyboard": false,
+    "title": "Agree & Join",
+    "headline": "Agree & Join",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Open Agree & Join",
+        "name": "Sign in with email · bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Wait 3.3s",
+        "name": "Sign in with email (13)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-04",
+  "capturedBy": "motvin-ios-crawler"
+}

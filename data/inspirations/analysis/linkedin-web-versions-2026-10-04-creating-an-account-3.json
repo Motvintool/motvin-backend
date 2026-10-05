@@ -1,0 +1,149 @@
+{
+  "screenId": "linkedin-web-versions-2026-10-04-creating-an-account-3",
+  "screen_id": "linkedin-web-versions-2026-10-04-creating-an-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-04T07:28:54.925Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 3,
+  "name": "Sign in with email (3)",
+  "description": "Login screen with 1 input field and a primary action labelled “Sign in”. Light theme, 15 text elements.",
+  "text": "Linked in\nWelcome back\nsurendar V\n...\ns*****@gmail.com\nPassword\nForgot password?\nSign in\nor\nContinue as surendarv\nsurendarv638@gmail.com\nSign in with Apple\nBy continuing, you agree to Linkedln's User Agreement, Privacy\nPolicy, and Cookie Policy.\nor\nSign in using another account\nLinkedln Corporation © 2026\nUser Agreement Privacy Policy Community Guidelines Cookie Policy Copyright Policy Send Feedback Language →",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "web"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Sign in”. Light theme, 15 text elements.",
+        "Calls to action: “Sign in”, “Continue as surendarv”, “Sign in with Apple”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 24 in “Creating an account”",
+        "Reached from “Sign in with email (2)”",
+        "Leads to “Sign in with email (4)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:21 in the recording",
+        "Frame 81 of 251 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.944
+    },
+    {
+      "hex": "#d3dbe6",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#396fc4",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#b8b9b9",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#857a72",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "linkedIn.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 251,
+    "frame": 81,
+    "atSeconds": 21.6,
+    "endSeconds": 24.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Continue as surendarv",
+      "Sign in with Apple"
+    ],
+    "keyboard": false,
+    "title": "Welcome back",
+    "headline": "Policy, and Cookie Policy"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Tap “Sign in with email”",
+        "name": "Sign in with email (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Wait 3s",
+        "name": "Sign in with email (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-04",
+  "capturedBy": "motvin-ios-crawler"
+}
