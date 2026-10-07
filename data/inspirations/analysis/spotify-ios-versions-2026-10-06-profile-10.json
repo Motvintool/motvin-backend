@@ -1,0 +1,138 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-profile-10",
+  "screen_id": "spotify-ios-versions-2026-10-06-profile-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:53.849Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 10,
+  "name": "Profile (31)",
+  "description": "Profile screen. Dark theme, 11 text elements.",
+  "text": "9:41(\nArpit Bala live streams\nSwipe up to see more\nArpit Bala live streams\nSTRE\nFollowing\n...\n3K followers\nSiRF\nall forone livestream\nAZAAK\n22 Aug 2024 • 58 min",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Arpit Bala live streams”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 23 in “Profile”",
+        "Reached from “Profile (30)”",
+        "Leads to “Loading state (9)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:05 in the recording",
+        "Frame 1221 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060507",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#252528",
+      "role": "surface",
+      "share": 0.1
+    },
+    {
+      "hex": "#373d42",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#515052",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#a7a6a7",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1221,
+    "atSeconds": 365.7,
+    "endSeconds": 366.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Arpit Bala live streams",
+    "headline": "Swipe up to see more"
+  },
+  "crawler": {
+    "nodeId": "s140",
+    "depth": 139,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s139",
+        "via": "Tap “Arpit Bala live streams”",
+        "name": "Profile (30)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s141",
+        "via": "Wait 0.9s",
+        "name": "Loading state (9)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

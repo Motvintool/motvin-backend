@@ -1,0 +1,149 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-3",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:12.435Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 3,
+  "name": "Phone number entry (7)",
+  "description": "Login screen with a primary action labelled “Continue with phone number”. Dark theme, 13 text elements.",
+  "text": "9:41C\nooll\n<\nLog in\nEmail\nContinue\nOr log in with\n•\nContinue with phone number\nG\nContinue with Google\nf\nContinue with Facebook\nContinue with Apple\nDon't have an account?\nSign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "sign up",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with phone number”. Dark theme, 13 text elements.",
+        "Calls to action: “Continue with phone number”, “Continue with Google”, “Continue with Facebook”, “Continue with Apple”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 16 in “Opening a page (Home)”",
+        "Reached from “Create account (11)”",
+        "Leads to “Phone number entry (8)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 12:30 in the recording",
+        "Frame 2504 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.884
+    },
+    {
+      "hex": "#3a383c",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#1fd561",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#555256",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#1e8343",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2504,
+    "atSeconds": 750.3,
+    "endSeconds": 751.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with phone number",
+      "Continue with Google",
+      "Continue with Facebook",
+      "Continue with Apple"
+    ],
+    "keyboard": false,
+    "title": "Log in",
+    "headline": "Or log in with",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s325",
+    "depth": 324,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s324",
+        "via": "Back to Phone number entry",
+        "name": "Create account (11)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s326",
+        "via": "Type “mot”",
+        "name": "Phone number entry (8)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

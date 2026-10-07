@@ -1,0 +1,138 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-3-4",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-3-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:10.559Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 4,
+  "name": "Third-party sign-in",
+  "description": "A third-party sign-in page, not the app's own design. Light theme, 5 text elements.",
+  "text": "9:41C\n1 Spotify\ngoogle.com\nGoogle\n404. That's an error.\nThe requested URL was not found on this server.\nThat's all we know.\n• • • •",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Light theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Opening a page (Home)”",
+        "Reached from “Google sign-in”",
+        "Leads to “Third-party sign-in (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 11:38 in the recording",
+        "Frame 2335 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.732
+    },
+    {
+      "hex": "#35383b",
+      "role": "text",
+      "share": 0.145
+    },
+    {
+      "hex": "#616367",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#dfe0e3",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#bdbec0",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2335,
+    "atSeconds": 698.7,
+    "endSeconds": 700.8,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "That's all we know"
+  },
+  "crawler": {
+    "nodeId": "s304",
+    "depth": 303,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s303",
+        "via": "Wait 0.6s",
+        "name": "Google sign-in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s305",
+        "via": "Tap “Google”",
+        "name": "Third-party sign-in (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

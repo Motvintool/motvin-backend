@@ -1,0 +1,145 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-2",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:12.354Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 2,
+  "name": "Create account (11)",
+  "description": "Sign up screen with a primary action labelled “Sign up for free”. Dark theme, 6 text elements.",
+  "text": "9:41 C\nX\nAdd account\nMillions of songs.\nFree on Spotify.\nSign up for free\nLog in\nWhile you are signed in, anyone else using this device will be\nable to access your account, unless you have a PIN",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Sign up for free”. Dark theme, 6 text elements.",
+        "Calls to action: “Sign up for free”, “Log in”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 16 in “Opening a page (Home)”",
+        "Reached from “Loading state (16)”",
+        "Leads to “Phone number entry (7)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 12:25 in the recording",
+        "Frame 2731 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151217",
+      "role": "background",
+      "share": 0.851
+    },
+    {
+      "hex": "#2c3a34",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#20da63",
+      "role": "accent",
+      "share": 0.032
+    },
+    {
+      "hex": "#908e91",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#555256",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2731,
+    "atSeconds": 745.8,
+    "endSeconds": 749.7,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up for free",
+      "Log in"
+    ],
+    "keyboard": false,
+    "title": "Add account",
+    "headline": "Free on Spotify"
+  },
+  "crawler": {
+    "nodeId": "s324",
+    "depth": 323,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s323",
+        "via": "Wait 3.6s",
+        "name": "Loading state (16)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s325",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

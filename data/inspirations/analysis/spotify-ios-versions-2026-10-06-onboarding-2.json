@@ -1,0 +1,145 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-2",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:39.240Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “Sign up for free”. Dark theme, 3 text elements.",
+  "text": "9:41C\n•| =\nMillions of songs.\nFree on Spotify.\nSign up for free\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "log in",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Millions of songs”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Sign up for free”. Dark theme, 3 text elements.",
+        "Calls to action: “Sign up for free”",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 44 in “Onboarding”",
+        "Reached from “Splash screen”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:01 in the recording",
+        "Frame 23 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151217",
+      "role": "background",
+      "share": 0.899
+    },
+    {
+      "hex": "#1fcd5d",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#4a484c",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#838184",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#1f8846",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 23,
+    "atSeconds": 1.5,
+    "endSeconds": 2.1,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up for free"
+    ],
+    "keyboard": false,
+    "title": "Millions of songs",
+    "headline": "Free on Spotify",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Millions of songs",
+        "name": "Splash screen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Sign In",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,154 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-20",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-20",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:40.805Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 20,
+  "name": "Create account (9)",
+  "description": "Sign up screen with the keyboard open and a primary action labelled “done”. Dark theme, 36 text elements.",
+  "text": "9:41(\n\"ll\nCreate account\nWhat's your name?\nSurendary\nThis appears on your Spotify profile.\nSpotify is a personalised service.\nBy tapping \"Create account\", you agree to the Spotify Terms of Use.\nTerms of Use\nBy tapping \"Create account\", you confirm that you have read how we\nprocess your personal data in our Privacy Policy.\nPrivacy Policy\nI would prefer not to receive marketing emails from Spotify.\nShare my registration data with Spotify's content providers for\nmarketing purposes.\nt\nW\ne\nU\na\ny\nh\nf\nd\nK\nS\ng\na\nb\nZ\nX\nn\nm\nC\nV\ndone\n123\nspace",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "signup",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with the keyboard open and a primary action labelled “done”. Dark theme, 36 text elements.",
+        "Calls to action: “done”",
+        "36 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 44 in “Onboarding”",
+        "Reached from “Loading state (2)”",
+        "Leads to “Create account · toast”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:59 in the recording",
+        "Frame 207 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18151a",
+      "role": "background",
+      "share": 0.503
+    },
+    {
+      "hex": "#343335",
+      "role": "surface",
+      "share": 0.289
+    },
+    {
+      "hex": "#535556",
+      "role": "surface",
+      "share": 0.119
+    },
+    {
+      "hex": "#7b7f7e",
+      "role": "text",
+      "share": 0.072
+    },
+    {
+      "hex": "#0f85fe",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 207,
+    "atSeconds": 59.1,
+    "endSeconds": 59.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "done"
+    ],
+    "keyboard": true,
+    "title": "Create account",
+    "headline": "Surendary"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Wait 2.7s",
+        "name": "Loading state (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Back to Create account",
+        "name": "Create account · toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

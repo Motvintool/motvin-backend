@@ -1,0 +1,147 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-11",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:40.055Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 11,
+  "name": "Phone number entry (5)",
+  "description": "Login screen with a primary action labelled “Continue with phone number”. Dark theme, 11 text elements.",
+  "text": "9:41(\nooll\n<\nCreate new account\nEmail\nsurendarv.uxui@gmail.com\nContinue\nOr sign up with\nContinue with phone number\nG\nContinue with Google\nContinue with Apple\nAlready have an account?\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "log in",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create new account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with phone number”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue with phone number”, “Continue with Google”, “Continue with Apple”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 44 in “Onboarding”",
+        "Reached from “Sign in with email (2)”",
+        "Leads to “Create account — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:27 in the recording",
+        "Frame 100 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.879
+    },
+    {
+      "hex": "#4d4b4f",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#1fd460",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#343135",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#1e8243",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 100,
+    "atSeconds": 27.9,
+    "endSeconds": 30.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with phone number",
+      "Continue with Google",
+      "Continue with Apple"
+    ],
+    "keyboard": false,
+    "title": "Create new account",
+    "headline": "Surendarv.uxui@gmail.com",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Back to Phone number entry",
+        "name": "Sign in with email (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Open Create a password",
+        "name": "Create account — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-34",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-34",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:42.370Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Onboarding",
+  "flow_position": 34,
+  "name": "Settings · toast",
+  "description": "Settings toast over a dimmed screen, on top of Loading state with a primary action labelled “Turn on push notifications.”. Dark theme, 7 text elements.",
+  "text": "9:41€\nSPOTIFY\nTurn on push notifications.\nGet updates about new music, special offers, events\nand more.\nTurn on notifications\nNot now\nManage your notification categories in Settings at any time.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "offer",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "banner",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Turn on push notifications”",
+        "Toast over a dimmed background, covering 3% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings toast over a dimmed screen, on top of Loading state with a primary action labelled “Turn on push notifications.”. Dark theme, 7 text elements.",
+        "Calls to action: “Turn on push notifications.”, “Turn on notifications”",
+        "7 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 34 of 44 in “Onboarding”",
+        "Reached from “Other — loading”",
+        "Leads to “Other (10)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 1:43 in the recording",
+        "Frame 357 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#010102",
+      "role": "background",
+      "share": 0.853
+    },
+    {
+      "hex": "#262527",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "text",
+      "share": 0.032
+    },
+    {
+      "hex": "#454446",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#616061",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 357,
+    "atSeconds": 103.8,
+    "endSeconds": 107.4,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.40625,
+        "y": 0.484375,
+        "w": 0.1875,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Turn on push notifications.",
+      "Turn on notifications"
+    ],
+    "keyboard": false,
+    "title": "Turn on push notifications",
+    "headline": "And more"
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 36,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Wait 3.9s",
+        "name": "Other — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s038",
+        "via": "Open Other",
+        "name": "Other (10)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

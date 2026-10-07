@@ -1,0 +1,162 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-shuffle-1",
+  "screen_id": "spotify-ios-versions-2026-10-06-shuffle-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:45.532Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Shuffle",
+  "flow_position": 1,
+  "name": "Ravichander Mix dialog · Shuffle",
+  "description": "Dialog over a dimmed screen, on top of Aniruch toast with a 3-item tab bar. Dark theme, 18 text elements.",
+  "text": "9:41C\nAniruch\nRavichander Mix\nQueue\nPlaying Anirudh Ravichander Mix\nANIRUDH\n... Aathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dadlani, Yugab...\nANTRUDH\nAathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dadlani, Yu...\nPavazha Malli - From \"Think Indie\"\nE Sai Abhyankkar, Shruti Haasan, Vivek\nRaga of Revenge\nAnirudh Ravichander\nOthaiyadi Pathayila\nDhibu Ninan Thomas, Anirudh Ravichan...\nKANAA\nRaavana Mavandaa\nTimer\nShuffle\nRepeat",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "shuffle",
+    "repeat",
+    "timer",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Shuffle, Repeat, Timer",
+        "Navigation title reads “Ravichander Mix”",
+        "Dialog over a dimmed background, covering 55% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Aniruch toast with a 3-item tab bar. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 10 in “Shuffle”",
+        "Reached from “Aniruch toast”",
+        "Leads to “Shuffle home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 3:02 in the recording",
+        "Frame 624 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272427",
+      "role": "background",
+      "share": 0.651
+    },
+    {
+      "hex": "#3f4043",
+      "role": "surface",
+      "share": 0.298
+    },
+    {
+      "hex": "#645f60",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#0a090a",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#807a73",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 624,
+    "atSeconds": 182.4,
+    "endSeconds": 187.5,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.046875,
+        "w": 0.90625,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Shuffle",
+      "Repeat",
+      "Timer"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Ravichander Mix",
+    "headline": "Ravichander Mix"
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 66,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Switch to Shuffle",
+        "name": "Aniruch toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Back to Shuffle home",
+        "name": "Shuffle home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

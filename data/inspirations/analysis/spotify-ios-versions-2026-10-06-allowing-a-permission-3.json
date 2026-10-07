@@ -1,0 +1,163 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-allowing-a-permission-3",
+  "screen_id": "spotify-ios-versions-2026-10-06-allowing-a-permission-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:47.808Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Allowing a permission",
+  "flow_position": 3,
+  "name": "Location permission",
+  "description": "Permission dialog over a dimmed screen, on top of Start a Jam home (empty) with a primary action labelled “Allow”. Dark theme, 32 text elements.",
+  "text": "9:41(\n•oll\nIlI,\nAllow \"Spotify\" to find devices\non local networks?\nThis lets you listen on different\ndevices. Spotify will also get access\nC\nto local audio files.\nmmachathram\nAirtel_sure_2514\n•Tiruvallur\n\"Android\"\n•Veppampi\nAd\nand more than 1 device\n..-Anai\nlam\nChennai\nInternational\n•Sriperumbudur\nAirport (MAA)\nNo\n_Padappai-\nZoho-Handhelds-TLS\nMore than 1 device\nWalajaba\nNagar\nPalar\"\nInformation from networks can be used to\ndetermine your location and create a profile of\nyou.\nDon't Allow\nAllow\n*\nStart a Jam\nBluetooth & Airplay",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "location",
+    "start a jam",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Veppampi”",
+        "Dialog over a dimmed background, covering 45% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Start a Jam home (empty) with a primary action labelled “Allow”. Dark theme, 32 text elements.",
+        "Calls to action: “Allow”",
+        "32 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Allowing a permission”",
+        "Reached from “Start a Jam home (empty)”",
+        "Leads to “Start a Jam home (empty) (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:13 in the recording",
+        "Frame 847 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1d",
+      "role": "background",
+      "share": 0.71
+    },
+    {
+      "hex": "#343f41",
+      "role": "surface",
+      "share": 0.159
+    },
+    {
+      "hex": "#223657",
+      "role": "accent",
+      "share": 0.092
+    },
+    {
+      "hex": "#585659",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#030304",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 847,
+    "atSeconds": 253.5,
+    "endSeconds": 254.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.375,
+        "w": 0.71875,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Veppampi",
+    "headline": "Veppampi",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s086",
+    "depth": 85,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s085",
+        "via": "Open Veppampi",
+        "name": "Start a Jam home (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s087",
+        "via": "Dismiss",
+        "name": "Start a Jam home (empty) (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

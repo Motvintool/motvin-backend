@@ -1,0 +1,144 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-16",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-16",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:13.695Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 16,
+  "name": "OTP verification (6)",
+  "description": "Verification code screen with a primary action labelled “Log in”. Dark theme, 13 text elements.",
+  "text": "9:41€\n•l\n<\nEnter the code we emailed you\nSent to m********|@g***I.com. You may need to\ncheck your spam folder. Open email app.\n6\n2\n3\n6\n1\nO\nLog in\nC Resend code\nLog in with a password",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Log in”. Dark theme, 13 text elements.",
+        "Calls to action: “Log in”, “Log in with a password”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 16 in “Opening a page (Home)”",
+        "Reached from “OTP verification (5)”",
+        "Leads to “Home home (88)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 13:12 in the recording",
+        "Frame 2641 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#302d32",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#1eb253",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#4f4d51",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#6e6c6f",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2641,
+    "atSeconds": 792,
+    "endSeconds": 792.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in",
+      "Log in with a password"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Check your spam folder. Open email app"
+  },
+  "crawler": {
+    "nodeId": "s338",
+    "depth": 337,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s337",
+        "via": "Tap “Enter the code we emailed you”",
+        "name": "OTP verification (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s339",
+        "via": "Open To get you started",
+        "name": "Home home (88)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

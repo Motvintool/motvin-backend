@@ -1,0 +1,159 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-allow-tracking-for-more-2",
+  "screen_id": "spotify-ios-versions-2026-10-06-allow-tracking-for-more-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:43.785Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Allow tracking for more",
+  "flow_position": 2,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Allow tracking for more with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+  "text": "9:41€\n|\nAllow \"Spotify\" to track your\nactivity across other companies'\napps and websites?\nYour data will be used to deliver\npersonalised ads or content to you.\nAsk App Not to Track\nAllow\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "next",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Activity across other companies'”",
+        "Dialog over a dimmed background, covering 31% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Allow tracking for more with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+        "Calls to action: “Allow”",
+        "7 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Allow tracking for more”",
+        "Reached from “Allow tracking for more”",
+        "Leads to “Home home (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:13 in the recording",
+        "Frame 447 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080507",
+      "role": "background",
+      "share": 0.605
+    },
+    {
+      "hex": "#2d2221",
+      "role": "surface",
+      "share": 0.275
+    },
+    {
+      "hex": "#4d4646",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#5a3727",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#116830",
+      "role": "accent",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 447,
+    "atSeconds": 133.5,
+    "endSeconds": 134.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.375,
+        "w": 0.59375,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Activity across other companies'",
+    "headline": "Activity across other companies'",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s052",
+    "depth": 51,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s051",
+        "via": "Open Activity across other companies'",
+        "name": "Allow tracking for more"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s053",
+        "via": "Back to Home home",
+        "name": "Home home (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

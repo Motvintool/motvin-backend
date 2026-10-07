@@ -1,0 +1,155 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-7",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:39.676Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Phone number entry (2)",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue with phone number”. Dark theme, 34 text elements.",
+  "text": "9:41(\n•ll\nLog in\nEmail\nmotvintool@gm\nContinue\nOr log in with\nContinue with phone number\nG\nContinue with Google\nf\nContinue with Facebook\npassword for spotify.com - Passwords\nmotvintool@gmail.com\nt\nW\nU\na\ne\nr\nO\nh\nd\na\nS\ng\nb\nZ\nX\nn\nm\nC\nV\n123\nspace\nnext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue with phone number”. Dark theme, 34 text elements.",
+        "Calls to action: “Continue with phone number”, “Continue with Google”, “Continue with Facebook”, “next”",
+        "34 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 44 in “Onboarding”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry (3)”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 0:19 in the recording",
+        "Frame 2532 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18151a",
+      "role": "background",
+      "share": 0.507
+    },
+    {
+      "hex": "#373438",
+      "role": "surface",
+      "share": 0.22
+    },
+    {
+      "hex": "#555356",
+      "role": "surface",
+      "share": 0.156
+    },
+    {
+      "hex": "#817f82",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#1fd561",
+      "role": "accent",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2532,
+    "atSeconds": 19.8,
+    "endSeconds": 21.6,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with phone number",
+      "Continue with Google",
+      "Continue with Facebook",
+      "next"
+    ],
+    "keyboard": true,
+    "title": "Log in",
+    "headline": "Motvintool@gm"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Tap “Log in”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Tap “Log in”",
+        "name": "Phone number entry (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

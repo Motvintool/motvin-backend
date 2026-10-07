@@ -1,0 +1,143 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-14",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:40.301Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 14,
+  "name": "Create account (5)",
+  "description": "Sign up screen with a primary action labelled “Next”. Dark theme, 5 text elements.",
+  "text": "9:41 C\n<\nCreate account\nCreate a password\nUse at least 10 characters.\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create a password”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Next”. Dark theme, 5 text elements.",
+        "Calls to action: “Next”",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 44 in “Onboarding”",
+        "Reached from “Create account (4)”",
+        "Leads to “Create account · bottom sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:40 in the recording",
+        "Frame 142 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131313",
+      "role": "background",
+      "share": 0.952
+    },
+    {
+      "hex": "#2d302e",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#4a4a4a",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#1ed25f",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#6f6f6f",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 142,
+    "atSeconds": 40.8,
+    "endSeconds": 42.9,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "title": "Create a password",
+    "headline": "Use at least 10 characters"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “Create account”",
+        "name": "Create account (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Tap “Create account”",
+        "name": "Create account · bottom sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

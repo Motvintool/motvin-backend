@@ -1,0 +1,154 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-6",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:39.577Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue with phone number”. Dark theme, 34 text elements.",
+  "text": "9:41(\n•ll\nLog in\nEmail\nsurendarv.uxui@g\nContinue\nOr log in with\nContinue with phone number\nG\nContinue with Google\nf\nContinue with Facebook\npassword for spotify.com - Passwords\nmotvintool@gmail.com\nt\nW\nU\na\ne\nr\nO\nh\nd\na\nS\ng\nb\nZ\nX\nn\nm\nC\nV\n123\nspace\nnext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue with phone number”. Dark theme, 34 text elements.",
+        "Calls to action: “Continue with phone number”, “Continue with Google”, “Continue with Facebook”, “next”",
+        "34 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 44 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Phone number entry (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.8s at 0:08 in the recording",
+        "Frame 64 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18151a",
+      "role": "background",
+      "share": 0.507
+    },
+    {
+      "hex": "#373438",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#555356",
+      "role": "surface",
+      "share": 0.155
+    },
+    {
+      "hex": "#817f82",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#1fd561",
+      "role": "accent",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 64,
+    "atSeconds": 8.7,
+    "endSeconds": 19.5,
+    "holdSeconds": 10.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with phone number",
+      "Continue with Google",
+      "Continue with Facebook",
+      "next"
+    ],
+    "keyboard": true,
+    "title": "Log in",
+    "headline": "Surendarv.uxui@g"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Wait 2.4s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “Log in”",
+        "name": "Phone number entry (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

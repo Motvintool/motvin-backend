@@ -1,0 +1,157 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-profile-4",
+  "screen_id": "spotify-ios-versions-2026-10-06-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:50.706Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 4,
+  "name": "Profile (13)",
+  "description": "Profile toast over a dimmed screen. Dark theme, 16 text elements.",
+  "text": "9:41€\nM\nAll\nFollowing\nPodcasts\nMusic\nVideos you might like\n49:17\nSiRF\nbade dino baad paise maangne\nCAZAAK\nArpit Bala live streams\nShare\nAdd to playlist\nAdd to Your Episodes\nAdd to Queue\nMark as finished\nDownload\nNot interested",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "download",
+    "profile",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Share”",
+        "Toast over a dimmed background, covering 5% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile toast over a dimmed screen. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 23 in “Profile”",
+        "Reached from “Profile (12)”",
+        "Leads to “Profile (14)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:03 in the recording",
+        "Frame 1011 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202023",
+      "role": "background",
+      "share": 0.738
+    },
+    {
+      "hex": "#070709",
+      "role": "surface",
+      "share": 0.188
+    },
+    {
+      "hex": "#424146",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#5f5961",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#78727a",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1011,
+    "atSeconds": 303,
+    "endSeconds": 303.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.5,
+        "w": 0.625,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Share",
+    "headline": "CAZAAK",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s111",
+    "depth": 110,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s110",
+        "via": "Tap “CAZAAK”",
+        "name": "Profile (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s112",
+        "via": "Dismiss",
+        "name": "Profile (14)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

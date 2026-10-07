@@ -1,0 +1,146 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-18",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-18",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:40.637Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 18,
+  "name": "Create account (8)",
+  "description": "Sign up screen with a primary action labelled “Next”. Dark theme, 8 text elements.",
+  "text": "9:41(\n<\nCreate account\nWhat's your gender?\nMale\nNext\nDone\nFemale\nMale\nNon-binary\nOther\nPrefer not to say",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Next”. Dark theme, 8 text elements.",
+        "Calls to action: “Next”, “Done”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 44 in “Onboarding”",
+        "Reached from “Create account (7)”",
+        "Leads to “Loading state (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:53 in the recording",
+        "Frame 185 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.642
+    },
+    {
+      "hex": "#343135",
+      "role": "surface",
+      "share": 0.323
+    },
+    {
+      "hex": "#535054",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#20d460",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#757376",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 185,
+    "atSeconds": 53.4,
+    "endSeconds": 55.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next",
+      "Done"
+    ],
+    "keyboard": false,
+    "title": "Create account",
+    "headline": "Male",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Back to Create account",
+        "name": "Create account (7)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Tap “Create account”",
+        "name": "Loading state (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

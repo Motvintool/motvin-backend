@@ -1,0 +1,141 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-settings-1",
+  "screen_id": "spotify-ios-versions-2026-10-06-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:04.040Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Settings (4)",
+  "description": "Settings screen. Dark theme, 12 text elements.",
+  "text": "9:41(\n•Il\nM\nMotvintool\nM\n+\nView profile\nRecents\nYour Updates\nEp\nSettings and privacy\n1:0\nEp\nMo1\nHo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "ho",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “View profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 8 in “Settings”",
+        "Reached from “Profile (54)”",
+        "Leads to “Settings (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:34 in the recording",
+        "Frame 1917 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211e22",
+      "role": "background",
+      "share": 0.895
+    },
+    {
+      "hex": "#060507",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#4c474b",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#6d6b6e",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#189860",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1917,
+    "atSeconds": 574.8,
+    "endSeconds": 575.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "View profile",
+    "headline": "Settings and privacy",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s234",
+    "depth": 233,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s233",
+        "via": "Open View profile",
+        "name": "Profile (54)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s235",
+        "via": "Wait 0.6s",
+        "name": "Settings (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

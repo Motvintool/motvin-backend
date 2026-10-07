@@ -1,0 +1,153 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-2-2",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-2-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:05.975Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 2,
+  "name": "Bottom sheet",
+  "description": "Bottom sheet, on top of Profile — scrolled. Dark theme, 4 text elements.",
+  "text": "9:41€\noll\nSpotify®\nYou are being redirected to\nhttps://www.spotify.com\n•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You are being redirected to”",
+        "Bottom sheet, covering 17% of the height from 66% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Profile — scrolled. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening a page (Home)”",
+        "Reached from “Profile — scrolled”",
+        "Leads to “Account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 10:05 in the recording",
+        "Frame 2157 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141216",
+      "role": "background",
+      "share": 0.949
+    },
+    {
+      "hex": "#3b383c",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#545255",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#6e6b6f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#8a888b",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2157,
+    "atSeconds": 605.7,
+    "endSeconds": 607.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.65625,
+        "w": 0.75,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "You are being redirected to",
+    "headline": "Spotify®"
+  },
+  "crawler": {
+    "nodeId": "s253",
+    "depth": 252,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s252",
+        "via": "Open You are being redirected to",
+        "name": "Profile — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s254",
+        "via": "Open Account",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-profile-21",
+  "screen_id": "spotify-ios-versions-2026-10-06-profile-21",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:56.136Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 21,
+  "name": "Loading state (12)",
+  "description": "Loading state. Dark theme, 13 text elements.",
+  "text": "9:41C\nM\nPodcasts\nAll\nMusic\nFollowing\nVideos you might like\n49:17\nSleep timer\n5 minutes\n10 minutes\n15 minutes\n30 minutes\n45 minutes\n1 hour\nEnd of track",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "end of track",
+    "profile",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Videos you might like”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 23 in “Profile”",
+        "Reached from “Profile (45)”",
+        "Leads to “Profile (46)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 6:53 in the recording",
+        "Frame 1386 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1c20",
+      "role": "background",
+      "share": 0.618
+    },
+    {
+      "hex": "#050507",
+      "role": "surface",
+      "share": 0.348
+    },
+    {
+      "hex": "#3f3c40",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#525053",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#6a676b",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1386,
+    "atSeconds": 413.7,
+    "endSeconds": 416.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Videos you might like",
+    "headline": "Sleep timer",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s161",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s160",
+        "via": "Tap “Videos you might like”",
+        "name": "Profile (45)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s162",
+        "via": "Wait 2.4s",
+        "name": "Profile (46)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

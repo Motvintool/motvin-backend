@@ -1,0 +1,164 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-15",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:40.378Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 15,
+  "name": "Create account · bottom sheet",
+  "description": "Sign up bottom sheet over a dimmed screen, on top of Create account with a primary action labelled “Next”. Dark theme, 22 text elements.",
+  "text": "9:41(\nCreate account\nWhat's your date of birth?\n6 October 2016\nNext\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nSave\nNot Now\nDone\n2013\nJuly\n2014\n4\nAugust\nSeptember\n5\n2015\nOctober\n2016\n6\n7\nNovember\n2017\n2018\n8\nDecember\n2019\n9\nJanuary",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "november",
+    "signup",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “October”",
+        "Bottom sheet over a dimmed background, covering 19% of the height from 78% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up bottom sheet over a dimmed screen, on top of Create account with a primary action labelled “Next”. Dark theme, 22 text elements.",
+        "Calls to action: “Next”, “Save Password?”, “Save”, “Done”",
+        "22 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 44 in “Onboarding”",
+        "Reached from “Create account (5)”",
+        "Leads to “Create account — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:44 in the recording",
+        "Frame 150 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0e10",
+      "role": "background",
+      "share": 0.573
+    },
+    {
+      "hex": "#323034",
+      "role": "surface",
+      "share": 0.39
+    },
+    {
+      "hex": "#545455",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#11672f",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#666568",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 150,
+    "atSeconds": 44.1,
+    "endSeconds": 45.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.78125,
+        "w": 0.8125,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next",
+      "Save Password?",
+      "Save",
+      "Done"
+    ],
+    "keyboard": false,
+    "title": "October",
+    "headline": "Securely store your password so it's",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Tap “Create account”",
+        "name": "Create account (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Tap “Create account”",
+        "name": "Create account — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-allowing-a-permission-1",
+  "screen_id": "spotify-ios-versions-2026-10-06-allowing-a-permission-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:47.610Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Allowing a permission",
+  "flow_position": 1,
+  "name": "Permission prompt",
+  "description": "Permission screen with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+  "text": "9:41C\n|\nAllow Spotify to access your local network\n• Why do you need this?\nTo find and play on your Wi-Fi devices\nYou're in control\nChange permissions at any time in Settings\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+        "Calls to action: “Continue”",
+        "6 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Allowing a permission”",
+        "Reached from “Home home (16)”",
+        "Leads to “Start a Jam home (empty)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:11 in the recording",
+        "Frame 840 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#010102",
+      "role": "background",
+      "share": 0.605
+    },
+    {
+      "hex": "#def4d0",
+      "role": "text",
+      "share": 0.201
+    },
+    {
+      "hex": "#232728",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#a6bdae",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#434647",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 840,
+    "atSeconds": 251.4,
+    "endSeconds": 252.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Why do you need this?"
+  },
+  "crawler": {
+    "nodeId": "s084",
+    "depth": 83,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s083",
+        "via": "Open Permission prompt",
+        "name": "Home home (16)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s085",
+        "via": "Open Start a Jam home (empty)",
+        "name": "Start a Jam home (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

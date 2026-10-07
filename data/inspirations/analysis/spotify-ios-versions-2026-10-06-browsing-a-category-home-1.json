@@ -1,0 +1,147 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-browsing-a-category-home-1",
+  "screen_id": "spotify-ios-versions-2026-10-06-browsing-a-category-home-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:59.379Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Browsing a category (Home)",
+  "flow_position": 1,
+  "name": "Category page",
+  "description": "Category screen with a row of 4 category chips. Dark theme, 18 text elements.",
+  "text": "9:41€\nodll\nopen.spotify.com\nMessages\nAirDrop\nMail\nNotes\nCopy\nAdd to New\nOpen in\nAsk ChatGPT\nQuick Note\nChrome\nLoader\nR&Download\nOpen in Chrome\nYouTube PiP\nSiriGPT\nDownload File\nExpand URL\nOO Add to Reading List",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: Messages, AirDrop, Mail, Notes",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 4 category chips. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Browsing a category (Home)”",
+        "Reached from “Home home (41)”",
+        "Leads to “Home home (42)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:00 in the recording",
+        "Frame 1602 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#4a484c",
+      "role": "background",
+      "share": 0.403
+    },
+    {
+      "hex": "#262626",
+      "role": "surface",
+      "share": 0.378
+    },
+    {
+      "hex": "#040303",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#6b696d",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#4a1633",
+      "role": "accent",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1602,
+    "atSeconds": 480,
+    "endSeconds": 480.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [
+      "Messages",
+      "AirDrop",
+      "Mail",
+      "Notes"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Open in Chrome"
+  },
+  "crawler": {
+    "nodeId": "s190",
+    "depth": 189,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s189",
+        "via": "Open Category page",
+        "name": "Home home (41)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s191",
+        "via": "Back to Home home",
+        "name": "Home home (42)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,157 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-profile-5",
+  "screen_id": "spotify-ios-versions-2026-10-06-profile-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:52.541Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 5,
+  "name": "Profile (21)",
+  "description": "Profile dialog over a dimmed screen, on top of Profile. Dark theme, 19 text elements.",
+  "text": "9:41 C\n•0\nSiRF\nArpit Bala live streams\nAZAAK\nArpit Bala\n* 4.8 (507)\nFollowing\n...\nEpisodes\nMore like this\nAbout\nNewest • All Episodes\nall for one livestream\nArpit Bala live streams\nSiRF\nCAZAAK\nArpit Bala\nShare\nRemove from Your Library\nlol Show Spotify Code\nRate podcast",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "rate podcast",
+    "profile",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “SiRF”",
+        "Dialog over a dimmed background, covering 16% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile dialog over a dimmed screen, on top of Profile. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 23 in “Profile”",
+        "Reached from “Profile (20)”",
+        "Leads to “Loading state (8)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:40 in the recording",
+        "Frame 1143 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1b24",
+      "role": "background",
+      "share": 0.796
+    },
+    {
+      "hex": "#060507",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#3c3b42",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#565666",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#7b727d",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1143,
+    "atSeconds": 340.8,
+    "endSeconds": 343.2,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.875,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "SiRF",
+    "headline": "AZAAK",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s128",
+    "depth": 127,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s127",
+        "via": "Tap “SiRF”",
+        "name": "Profile (20)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s129",
+        "via": "Tap “Arpit Bala live streams”",
+        "name": "Loading state (8)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

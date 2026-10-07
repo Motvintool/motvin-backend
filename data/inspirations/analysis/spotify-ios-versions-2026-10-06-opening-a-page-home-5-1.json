@@ -1,0 +1,144 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-1",
+  "screen_id": "spotify-ios-versions-2026-10-06-opening-a-page-home-5-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:24:12.279Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening a page (Home)",
+  "flow_position": 1,
+  "name": "Loading state (16)",
+  "description": "Loading state. Dark theme, 6 text elements.",
+  "text": "•1l =\n9:41C\nWho's listening?\nGet personalised recommendations, playlists\nand more.\nSurendar V\n+\nAdd account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 16 in “Opening a page (Home)”",
+        "Reached from “Settings (27)”",
+        "Leads to “Create account (11)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 12:21 in the recording",
+        "Frame 2484 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.943
+    },
+    {
+      "hex": "#363236",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5a5157",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#7b797c",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#f278a6",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2484,
+    "atSeconds": 741.9,
+    "endSeconds": 745.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "And more"
+  },
+  "crawler": {
+    "nodeId": "s323",
+    "depth": 322,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s322",
+        "via": "Open Loading state",
+        "name": "Settings (27)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s324",
+        "via": "Wait 3.6s",
+        "name": "Create account (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}

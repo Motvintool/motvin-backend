@@ -1,0 +1,146 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-06-onboarding-3",
+  "screen_id": "spotify-ios-versions-2026-10-06-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-06T10:23:39.318Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with 3 input fields and a primary action labelled “Sign In”. Dark theme, 11 text elements.",
+  "text": "9:41 C\nC\n.ll\nX\nSign In\nChoose how you'd like to sign in to your\n\"Spotify\" account.\nmotvintool@gmail.com\nPassword\nsurendarv.uxui@gmai.com\nPassword\nsurendarv638@gmail.com\nPassword\nUse Selected Password\nMore Options",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "more options",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign In”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields and a primary action labelled “Sign In”. Dark theme, 11 text elements.",
+        "Calls to action: “Sign In”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 44 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “Create account (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:02 in the recording",
+        "Frame 12 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131214",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#2a2f32",
+      "role": "surface",
+      "share": 0.178
+    },
+    {
+      "hex": "#515252",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#0489fb",
+      "role": "accent",
+      "share": 0.029
+    },
+    {
+      "hex": "#42a7fc",
+      "role": "text",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "spotify.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 12,
+    "atSeconds": 2.4,
+    "endSeconds": 3.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign In"
+    ],
+    "keyboard": false,
+    "title": "Sign In",
+    "headline": "Motvintool@gmail.com",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Sign In",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Back to Create account",
+        "name": "Create account (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-06",
+  "capturedBy": "motvin-ios-crawler"
+}
