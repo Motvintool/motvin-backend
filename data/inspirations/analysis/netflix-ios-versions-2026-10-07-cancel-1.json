@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-cancel-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-cancel-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:37.880Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Cancel",
+  "flow_position": 1,
+  "name": "Other (2)",
+  "description": "Other screen with a paged carousel and a primary action labelled “Save”. Dark theme, 10 text elements.",
+  "text": "9:41C\nodll\nCancel\nManage game handle\nThis unique name is how your gameplay will appear\nto others across Netflix games.\nYou can change your game handle anytime.\nGame handle\nSurendarV\n9/16\nSave\nLearn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a paged carousel and a primary action labelled “Save”. Dark theme, 10 text elements.",
+        "Calls to action: “Save”",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Cancel”",
+        "Reached from “Profile · toast”",
+        "Leads to “Edit Profile (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:42 in the recording",
+        "Frame 346 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262327",
+      "role": "background",
+      "share": 0.727
+    },
+    {
+      "hex": "#454047",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#030204",
+      "role": "accent",
+      "share": 0.057
+    },
+    {
+      "hex": "#817f82",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#605b62",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 346,
+    "atSeconds": 102.6,
+    "endSeconds": 104.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Manage game handle"
+  },
+  "crawler": {
+    "nodeId": "s033",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s032",
+        "via": "Open Other",
+        "name": "Profile · toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s034",
+        "via": "Back to Edit Profile",
+        "name": "Edit Profile (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

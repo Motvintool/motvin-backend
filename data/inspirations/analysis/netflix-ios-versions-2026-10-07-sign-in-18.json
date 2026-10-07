@@ -1,0 +1,146 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-sign-in-18",
+  "screen_id": "netflix-ios-versions-2026-10-07-sign-in-18",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:53.004Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Sign In",
+  "flow_position": 18,
+  "name": "OTP verification (13)",
+  "description": "Verification code screen with the keyboard open. Dark theme, 28 text elements.",
+  "text": "9:41C\n•1l\nNETFLIX\n<\nEnter the code we sent to\nyour email\nChange\nsurendarv638@gmail.com\n8\n6\nThis code will expire in 15 minutes.\nDid not get a code? Resend code.\nGet Help v\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your email”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 19 in “Sign In”",
+        "Reached from “OTP verification (12)”",
+        "Leads to “OTP verification (14)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 8:13 in the recording",
+        "Frame 1655 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211214",
+      "role": "background",
+      "share": 0.655
+    },
+    {
+      "hex": "#3e363a",
+      "role": "surface",
+      "share": 0.233
+    },
+    {
+      "hex": "#481b1d",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#63585a",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#807375",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1655,
+    "atSeconds": 493.2,
+    "endSeconds": 496.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Your email",
+    "headline": "Your email"
+  },
+  "crawler": {
+    "nodeId": "s176",
+    "depth": 175,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s175",
+        "via": "Tap “surendarv638@gmail.com”",
+        "name": "OTP verification (12)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s177",
+        "via": "Tap “surendarv638@gmail.com”",
+        "name": "OTP verification (14)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

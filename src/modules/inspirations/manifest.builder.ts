@@ -150,7 +150,15 @@ export const SCREEN_STATES = [
 export const INDUSTRIES = [
   'saas', 'fintech', 'healthcare', 'ecommerce', 'education', 'travel',
   'productivity', 'ai', 'social', 'finance', 'food', 'entertainment', 'lifestyle',
+  // Not a category anyone chose: an app whose category could not be worked out
+  // (no clear store listing, and the model was unsure). It is stored so the app
+  // can still be published, flagged in the admin, and kept out of the public
+  // category filter until somebody sets a real one.
+  'unsorted',
 ] as const;
+
+/** The categories a person (or a classifier) can actually pick — everything but `unsorted`. */
+export const PICKABLE_INDUSTRIES = INDUSTRIES.filter((i) => i !== 'unsorted');
 
 export const STYLES = [
   'minimal', 'editorial', 'bold', 'dark', 'light', 'playful', 'corporate',
@@ -805,7 +813,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       platforms: PLATFORMS.filter((p) => screens.some((s) => s.platform === p)),
       screenTypes: SCREEN_TYPES.filter((t) => screens.some((s) => s.screenType === t)),
       states: SCREEN_STATES.filter((v) => screens.some((s) => s.states.includes(v))),
-      industries: INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
+      industries: PICKABLE_INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
       styles: STYLES.filter((v) => screens.some((s) => s.style.includes(v))),
       elements: Object.keys(elementCounts).sort(),
       flowCategories: Array.from(new Set(publishedFlows.map((f) => f.category).filter(Boolean))).sort(),
@@ -814,7 +822,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       platforms: PLATFORMS,
       screenTypes: SCREEN_TYPES,
       states: SCREEN_STATES,
-      industries: INDUSTRIES,
+      industries: PICKABLE_INDUSTRIES,
       styles: STYLES,
       flowCategories: FLOW_CATEGORIES,
       permissions: PERMISSIONS,

@@ -1,0 +1,165 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-homes-nearby-3-12",
+  "screen_id": "airbnb-ios-versions-2026-10-07-homes-nearby-3-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:46.870Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Homes nearby",
+  "flow_position": 12,
+  "name": "AIX sheet",
+  "description": "Bottom sheet, on top of Clear all home with a row of 3 category chips and a search bar. Light theme, 13 text elements.",
+  "text": "9:411\n•0\nServices\nHomes\nExperiences\nWhere?\nQ\nSearch destinations\nRecent searches\nAIX\nMumbai\n6 - 15 Oct\nWhen\nAdd service\nWhat\nQ Search\nClear all",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "clear all",
+    "q search",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “AIX”",
+        "Category strip: Services, Homes, Experiences",
+        "Search bar present",
+        "Bottom sheet, covering 55% of the height from 38% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Clear all home with a row of 3 category chips and a search bar. Light theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 20 in “Homes nearby”",
+        "Reached from “Clear all (6)”",
+        "Leads to “Search (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 5:51 in the recording",
+        "Frame 1192 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f5f7",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#d5d3d1",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#e84376",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#b3b1ae",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#eeb1bd",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1192,
+    "atSeconds": 351.6,
+    "endSeconds": 357.9,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.375,
+        "w": 0.84375,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [
+      "Services",
+      "Homes",
+      "Experiences"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "AIX",
+    "headline": "Where?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s106",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s105",
+        "via": "Wait 1.5s",
+        "name": "Clear all (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s107",
+        "via": "Back to Search",
+        "name": "Search (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

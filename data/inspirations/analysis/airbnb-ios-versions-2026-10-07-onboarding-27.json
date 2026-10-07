@@ -1,0 +1,150 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-onboarding-27",
+  "screen_id": "airbnb-ios-versions-2026-10-07-onboarding-27",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:38.252Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 27,
+  "name": "Notifications permission",
+  "description": "Permission screen with a primary action labelled “Allow”. Dark theme, 12 text elements.",
+  "text": "9:41 (\n\"Airbnb\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nIurn on notincations\nDon't miss important messages like check-in\ndetails and account activity.\nGet travel deals, personalised\nrecommendations and more.\nYes, notify me",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "banner",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow”. Dark theme, 12 text elements.",
+        "Calls to action: “Allow”",
+        "12 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 28 in “Onboarding”",
+        "Reached from “Calendar”",
+        "Leads to “Start your search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:56 in the recording",
+        "Frame 389 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#504e51",
+      "role": "background",
+      "share": 0.516
+    },
+    {
+      "hex": "#838184",
+      "role": "surface",
+      "share": 0.304
+    },
+    {
+      "hex": "#323033",
+      "role": "surface",
+      "share": 0.126
+    },
+    {
+      "hex": "#0f0d10",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#686669",
+      "role": "surface",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 389,
+    "atSeconds": 116.4,
+    "endSeconds": 117,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Notifications",
+    "headline": "\"Airbnb\" Would Like to Send You"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s027",
+        "via": "Open Notifications",
+        "name": "Calendar"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Open Start your search",
+        "name": "Start your search"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

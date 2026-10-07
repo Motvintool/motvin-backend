@@ -1,0 +1,145 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-homes-nearby-2-28",
+  "screen_id": "airbnb-ios-versions-2026-10-07-homes-nearby-2-28",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:44.104Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Homes nearby",
+  "flow_position": 28,
+  "name": "Checkout (15)",
+  "description": "Checkout screen with prices. Light theme, 22 text elements.",
+  "text": "9:411\nConfirm and pay\nX\nThis reservation is non-refundable. Full policy.\nMessage to the host\n>\nOkay\nCoupons\n22,000.00 coupon applied\nPrice details\n·29,216.00\n9 nights x 73,246.22\n-·1,150.28\nWeekly stay discount\n$1,403.28\nTaxes\n-22,000.00\nCoupon\n$27,469.00\nTotal INR\nPrice breakdown\nO Only 5 hours left to book your dates\nYou'll be directed to Razorpay to complete payment.\nContinue to payment\nBy selecting the button, l agree to the booking terms.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "payment",
+    "price",
+    "discount",
+    "checkout",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm and pay”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with prices. Light theme, 22 text elements.",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 28 of 33 in “Homes nearby”",
+        "Reached from “OTP verification (5)”",
+        "Leads to “Reply to the host's message (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:40 in the recording",
+        "Frame 940 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.808
+    },
+    {
+      "hex": "#dddede",
+      "role": "surface",
+      "share": 0.098
+    },
+    {
+      "hex": "#c7c6c8",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#f2587c",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#ee345f",
+      "role": "accent",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 940,
+    "atSeconds": 280.8,
+    "endSeconds": 282.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Confirm and pay",
+    "headline": "Total INR"
+  },
+  "crawler": {
+    "nodeId": "s081",
+    "depth": 85,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s080",
+        "via": "Back to Checkout",
+        "name": "OTP verification (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s082",
+        "via": "Back to Reply to the host's message",
+        "name": "Reply to the host's message (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

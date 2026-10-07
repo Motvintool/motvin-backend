@@ -1,0 +1,160 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-onboarding-24",
+  "screen_id": "airbnb-ios-versions-2026-10-07-onboarding-24",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:37.982Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 24,
+  "name": "Need it dialog",
+  "description": "Dialog over a dimmed screen, on top of Everyone belongs here with a primary action labelled “Save Password?”. Light theme, 10 text elements.",
+  "text": "9:41(\nall\nEveryone belongs here\nWhen you join Airbnb, we ask you to agree to our\nCommunity Commitment:\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nNot Now\nSave\nAgree and continue\nDecline",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "decline",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Need it”",
+        "Dialog over a dimmed background, covering 30% of the height from 34% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Everyone belongs here with a primary action labelled “Save Password?”. Light theme, 10 text elements.",
+        "Calls to action: “Save Password?”, “Save”",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 28 in “Onboarding”",
+        "Reached from “Everyone belongs here”",
+        "Leads to “Everyone belongs here (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:45 in the recording",
+        "Frame 354 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cecccf",
+      "role": "background",
+      "share": 0.624
+    },
+    {
+      "hex": "#ebeaec",
+      "role": "surface",
+      "share": 0.172
+    },
+    {
+      "hex": "#030304",
+      "role": "text",
+      "share": 0.06
+    },
+    {
+      "hex": "#b1aeb1",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#c12447",
+      "role": "accent",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 354,
+    "atSeconds": 105.6,
+    "endSeconds": 106.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.34375,
+        "w": 0.8125,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save"
+    ],
+    "keyboard": false,
+    "title": "Need it",
+    "headline": "Everyone belongs here",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Tap “Everyone belongs here”",
+        "name": "Everyone belongs here"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Dismiss",
+        "name": "Everyone belongs here (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

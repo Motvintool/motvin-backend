@@ -1,0 +1,159 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-opening-surendar-2-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-opening-surendar-2-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:48.124Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening Surendar ×",
+  "flow_position": 3,
+  "name": "Surendar dialog",
+  "description": "Dialog over a dimmed screen, on top of Surendar with a primary action labelled “Continue Watching”. Dark theme, 20 text elements.",
+  "text": "9:41C\n•0\nSurendar -\nDownloads\n10\nRomancnakam\nSee what you can download\nRecently added\n2h 19m\nContinue Watching\nWOMAN\nYARD\nRomänchakam\nUSIAAI\nBHAGAT\nSINGH\nRomänchakam\nA Moralnfo\nRomãnchakam\nX\nWaiting for connectivity.\nCancel Download",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Surendar”",
+        "Dialog over a dimmed background, covering 25% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Surendar with a primary action labelled “Continue Watching”. Dark theme, 20 text elements.",
+        "Calls to action: “Continue Watching”",
+        "20 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 7 in “Opening Surendar ×”",
+        "Reached from “Surendar”",
+        "Leads to “Surendar ×”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:40 in the recording",
+        "Frame 1135 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f21",
+      "role": "background",
+      "share": 0.949
+    },
+    {
+      "hex": "#403e41",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#5a585b",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#7e7c7e",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#979597",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1135,
+    "atSeconds": 340.2,
+    "endSeconds": 340.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue Watching"
+    ],
+    "keyboard": false,
+    "title": "Surendar",
+    "headline": "Romänchakam"
+  },
+  "crawler": {
+    "nodeId": "s124",
+    "depth": 123,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s123",
+        "via": "Tap “Surendar -”",
+        "name": "Surendar"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s125",
+        "via": "Back to Surendar ×",
+        "name": "Surendar ×"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

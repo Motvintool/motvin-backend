@@ -1,0 +1,139 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-onboarding-7",
+  "screen_id": "airbnb-ios-versions-2026-10-07-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:36.391Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "OTP verification",
+  "description": "Verification code screen. Light theme, 8 text elements.",
+  "text": "9:41€\n•| ?\nConfirm it's you\nWe sent a code to motvintool@gmail.com.\n-\n-\n-\n-\n-\nDidn't get it? Send a new code",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm it's you”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 28 in “Onboarding”",
+        "Reached from “Phone number entry · scrolled”",
+        "Leads to “OTP verification (2)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 18.6s at 0:20 in the recording",
+        "Frame 129 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#040305",
+      "role": "text",
+      "share": 0.061
+    },
+    {
+      "hex": "#dbdadb",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#8d8c8c",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#aaa8aa",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 129,
+    "atSeconds": 20.4,
+    "endSeconds": 39,
+    "holdSeconds": 18.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Confirm it's you",
+    "headline": "We sent a code to motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open Confirm it's you",
+        "name": "Phone number entry · scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Tap “Confirm it's you”",
+        "name": "OTP verification (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

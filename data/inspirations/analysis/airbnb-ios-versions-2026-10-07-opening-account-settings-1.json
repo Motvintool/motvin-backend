@@ -1,0 +1,150 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-opening-account-settings-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-opening-account-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:56.648Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening Account settings",
+  "flow_position": 1,
+  "name": "Account settings (empty)",
+  "description": "Empty state screen. Light theme, 18 text elements, an empty state.",
+  "text": "9:411\nAccount settings\n_ Personal information\n>\n• Login & security\n>\nPrivacy\n>\nNotifications\n>\nPayments\nTaxes\n>\nLanguages & translation\nNew\nBooking permissions\nTravel for work\nNow you can book for others X\nGet started by setting up your\nbooking permissions.\nVersion 26.40 (204951)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "payment",
+    "notification",
+    "login",
+    "booking",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "empty-state"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen. Light theme, 18 text elements, an empty state.",
+        "18 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Opening Account settings”",
+        "Reached from “Settings (2)”",
+        "Leads to “Account settings · toast”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:55 in the recording",
+        "Frame 1988 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.871
+    },
+    {
+      "hex": "#dddbdd",
+      "role": "surface",
+      "share": 0.103
+    },
+    {
+      "hex": "#c0bec0",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#a1a0a3",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#848b92",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1988,
+    "atSeconds": 595.2,
+    "endSeconds": 596.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Account settings",
+    "headline": "Login & security"
+  },
+  "crawler": {
+    "nodeId": "s207",
+    "depth": 212,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s206",
+        "via": "Wait 1.8s",
+        "name": "Settings (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s208",
+        "via": "Tap “Account settings”",
+        "name": "Account settings · toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

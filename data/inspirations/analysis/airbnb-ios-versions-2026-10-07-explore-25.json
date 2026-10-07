@@ -1,0 +1,163 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-explore-25",
+  "screen_id": "airbnb-ios-versions-2026-10-07-explore-25",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:51.639Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Explore",
+  "flow_position": 25,
+  "name": "Explore sheet",
+  "description": "Bottom sheet, on top of Loading state with a 5-item tab bar. Light theme.",
+  "text": "9:414\nQ\nExplore\nWishlists\nMessages\nTrips\nProfile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "explore",
+    "wishlists",
+    "trips",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
+        "Navigation title reads “Explore”",
+        "Bottom sheet, covering 45% of the height from 55% down",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Loading state with a 5-item tab bar. Light theme.",
+        "0 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 49 in “Explore”",
+        "Reached from “Explore sheet — loading”",
+        "Leads to “Loading state · Explore”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:39 in the recording",
+        "Frame 1533 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfe",
+      "role": "background",
+      "share": 0.839
+    },
+    {
+      "hex": "#cee9f1",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#e5f3cd",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#b5c0c6",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#f7d4dd",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1533,
+    "atSeconds": 459.6,
+    "endSeconds": 460.2,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.546875,
+        "w": 0.9375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 0,
+    "tabLabels": [
+      "Explore",
+      "Wishlists",
+      "Trips",
+      "Messages",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Explore",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s151",
+    "depth": 156,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s150",
+        "via": "Wait 1.2s",
+        "name": "Explore sheet — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s152",
+        "via": "Open Loading state",
+        "name": "Loading state · Explore"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

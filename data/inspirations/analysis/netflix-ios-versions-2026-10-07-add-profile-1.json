@@ -1,0 +1,146 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-add-profile-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-add-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:36.454Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Add Profile",
+  "flow_position": 1,
+  "name": "Add Profile",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 7 text elements.",
+  "text": "9:41 €\nCancel\nAdd Profile\nSave\nProfile name\nChildren's Profile\nMade for children 12 and under, but parents have\nall the control.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add Profile”",
+        "Category strip: Cancel, Add Profile, Save",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Add Profile”",
+        "Reached from “Profile”",
+        "Leads to “Add Profile (2)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:09 in the recording",
+        "Frame 234 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.871
+    },
+    {
+      "hex": "#050305",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#48494d",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#323033",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#358bee",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 234,
+    "atSeconds": 69,
+    "endSeconds": 70.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [
+      "Cancel",
+      "Add Profile",
+      "Save"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Add Profile",
+    "headline": "Profile name"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 18,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Open Add Profile",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Wait 1.5s",
+        "name": "Add Profile (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

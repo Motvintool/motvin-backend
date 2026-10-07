@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-viewing-restrictions-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-viewing-restrictions-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:38.075Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Viewing Restrictions",
+  "flow_position": 1,
+  "name": "Loading state (2)",
+  "description": "Loading state. Dark theme, 7 text elements.",
+  "text": "9:41€\n<\nViewing Restrictions\nMaturity Rating\n>\nA and below\nBlock Titles\nNo titles blocked",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "rating",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Viewing Restrictions”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Viewing Restrictions”",
+        "Reached from “Edit Profile (5)”",
+        "Leads to “Edit Profile (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:45 in the recording",
+        "Frame 354 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.886
+    },
+    {
+      "hex": "#060305",
+      "role": "accent",
+      "share": 0.065
+    },
+    {
+      "hex": "#3b393c",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#59575a",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#6f6d6f",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 354,
+    "atSeconds": 105.6,
+    "endSeconds": 106.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Viewing Restrictions",
+    "headline": "Maturity Rating"
+  },
+  "crawler": {
+    "nodeId": "s035",
+    "depth": 34,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s034",
+        "via": "Tap “Viewing Restrictions”",
+        "name": "Edit Profile (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s036",
+        "via": "Wait 0.9s",
+        "name": "Edit Profile (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

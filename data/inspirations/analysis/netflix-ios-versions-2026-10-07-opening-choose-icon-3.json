@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-opening-choose-icon-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-opening-choose-icon-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:36.844Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening Choose Icon",
+  "flow_position": 3,
+  "name": "Add Profile (3)",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 8 text elements.",
+  "text": "9:41 €\nodll\nCancel\nAdd Profile\nSave\nProfile name\nMotvin\nChildren's Profile\nMade for children 12 and under, but parents have\nall the control.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add Profile”",
+        "Category strip: Cancel, Add Profile, Save",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Opening Choose Icon”",
+        "Reached from “Choose Icon”",
+        "Leads to “Add Profile toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:22 in the recording",
+        "Frame 281 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a171a",
+      "role": "background",
+      "share": 0.873
+    },
+    {
+      "hex": "#050305",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#474546",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#696360",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#392c29",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 281,
+    "atSeconds": 82.5,
+    "endSeconds": 84.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [
+      "Cancel",
+      "Add Profile",
+      "Save"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Add Profile",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s023",
+    "depth": 22,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s022",
+        "via": "Open Add Profile",
+        "name": "Choose Icon"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Tap “Add Profile”",
+        "name": "Add Profile toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-onboarding-10",
+  "screen_id": "netflix-ios-versions-2026-10-07-onboarding-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:35.606Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 10,
+  "name": "Phone number entry (5)",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 13 text elements.",
+  "text": "9:41C\nNETFLIX\n<\nNew to Netflix? Enter your email\naddress to get started or check your\nmobile number and try again.\nEnter your info to sign in\nEmail or mobile number\n+91\n6382102514\nContinue\nGet Help V\nThis page is protected by Google reCAPTCHA to ensure\nyou're not a bot.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 13 text elements.",
+        "Calls to action: “Continue”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 16 in “Onboarding”",
+        "Reached from “Other”",
+        "Leads to “OTP verification (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:49 in the recording",
+        "Frame 167 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0607",
+      "role": "background",
+      "share": 0.622
+    },
+    {
+      "hex": "#3d171a",
+      "role": "surface",
+      "share": 0.215
+    },
+    {
+      "hex": "#2d4f7f",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#223459",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#710c11",
+      "role": "accent",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 167,
+    "atSeconds": 49.2,
+    "endSeconds": 50.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Back to Phone number entry",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Tap “Continue”",
+        "name": "OTP verification (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,162 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-reading-a-feature-tip-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-reading-a-feature-tip-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:50.285Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Reading a feature tip",
+  "flow_position": 1,
+  "name": "Feature tip",
+  "description": "Coach mark dialog over a dimmed screen with a primary action labelled “Save your favourites in”. Light theme, 5 text elements.",
+  "text": "9:414\n•l g\nWishlists\nSave your favourites in\none place\nTap the heart icon as you browse to save stays\nand experiences to a wishlist.\nGot it",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "got it",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal",
+    "coach-mark"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Wishlists”",
+        "Dialog over a dimmed background, covering 63% of the height from 0% down",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark dialog over a dimmed screen with a primary action labelled “Save your favourites in”. Light theme, 5 text elements.",
+        "Calls to action: “Save your favourites in”",
+        "5 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Reading a feature tip”",
+        "Reached from “Explore home — loading”",
+        "Leads to “Explore home (14)”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:16 in the recording",
+        "Frame 1458 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f2ed",
+      "role": "background",
+      "share": 0.418
+    },
+    {
+      "hex": "#9c999b",
+      "role": "surface",
+      "share": 0.313
+    },
+    {
+      "hex": "#d5cfca",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#544f4e",
+      "role": "text",
+      "share": 0.046
+    },
+    {
+      "hex": "#7f7976",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1458,
+    "atSeconds": 436.5,
+    "endSeconds": 437.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save your favourites in"
+    ],
+    "keyboard": false,
+    "title": "Wishlists",
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s138",
+    "depth": 143,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s137",
+        "via": "Wait 1.2s",
+        "name": "Explore home — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s139",
+        "via": "Dismiss",
+        "name": "Explore home (14)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

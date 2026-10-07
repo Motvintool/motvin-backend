@@ -1,0 +1,164 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-homes-nearby-2",
+  "screen_id": "airbnb-ios-versions-2026-10-07-homes-nearby-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:40.956Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Homes nearby",
+  "flow_position": 2,
+  "name": "Homes nearby dialog",
+  "description": "Dialog over a dimmed screen with a row of 3 category chips and prices. Light theme, 33 text elements.",
+  "text": "9:414\nHomes nearby\n6-15 Oct (‡) • 2 guests\n)\nAllows pets\nWifi\nWashing machine\nKitchen\n1+k\n$30 164\nSriperumbudur\n·28,066\n1\nЗ1Л10 Л\n·12,820\nDorunnalathur\n·38,471\nŠ§Пİ\n48\n226,782\nnaluo\nFAAAAr\n·32,385\n179B\n{30,444\nSLD\n254,510\nSingaperumal\nKoil\nтА• чАР\n729,234 3\nX\nNow you'll see one price for your\ntrip, all fees included.\nGot it",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "price",
+    "got it",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Homes nearby”",
+        "Category strip: Allows pets, Wifi, Kitchen",
+        "Dialog over a dimmed background, covering 48% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a row of 3 category chips and prices. Light theme, 33 text elements.",
+        "33 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Homes nearby”",
+        "Reached from “Got it”",
+        "Leads to “Homes nearby”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 3:04 in the recording",
+        "Frame 622 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#8d908c",
+      "role": "background",
+      "share": 0.491
+    },
+    {
+      "hex": "#f6f3ed",
+      "role": "surface",
+      "share": 0.364
+    },
+    {
+      "hex": "#5b595a",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#d8d5d0",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#1d1b1e",
+      "role": "text",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 622,
+    "atSeconds": 184.5,
+    "endSeconds": 186.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.484375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [
+      "Allows pets",
+      "Wifi",
+      "Kitchen"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Homes nearby",
+    "headline": "Singaperumal",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s052",
+    "depth": 56,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s051",
+        "via": "Tap “Homes nearby”",
+        "name": "Got it"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s053",
+        "via": "Dismiss",
+        "name": "Homes nearby"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,150 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-chatting-with-support-2",
+  "screen_id": "airbnb-ios-versions-2026-10-07-chatting-with-support-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:52.676Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Chatting with support",
+  "flow_position": 2,
+  "name": "Search (3)",
+  "description": "Search screen with a search bar and the keyboard open. Light theme, 28 text elements.",
+  "text": "•ll S\n9:411\nQ Search archived messages\nCancel\nArchived\nYou don't have any archived messages\nWhen you archive a message, it will appear here.\nShow all messages\ni\nW\ne\nt\nU\nO\nh\nk\nd\na\ng\nS\nb\nX\nm\nZ\nC\nV\nn\n123\nspace\ngo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search archived messages”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Light theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Chatting with support”",
+        "Reached from “Search — loading”",
+        "Leads to “Other (6)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:12 in the recording",
+        "Frame 1645 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.643
+    },
+    {
+      "hex": "#d8d8de",
+      "role": "surface",
+      "share": 0.305
+    },
+    {
+      "hex": "#b8bbc2",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#9a9ea9",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#047afe",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1645,
+    "atSeconds": 492.6,
+    "endSeconds": 493.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search archived messages",
+    "headline": "You don't have any archived messages"
+  },
+  "crawler": {
+    "nodeId": "s164",
+    "depth": 169,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s163",
+        "via": "Wait 1.5s",
+        "name": "Search — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s165",
+        "via": "Back to Other",
+        "name": "Other (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

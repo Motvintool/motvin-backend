@@ -1,0 +1,140 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-sign-in-19",
+  "screen_id": "netflix-ios-versions-2026-10-07-sign-in-19",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:53.103Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Sign In",
+  "flow_position": 19,
+  "name": "OTP verification (14)",
+  "description": "Verification code screen. Dark theme, 13 text elements.",
+  "text": "9:41C\nNETFLIX\n<\nEnter the code we sent to\nyour email\nChange\nsurendarv638@gmail.com\n8\n6\n3\n2\nThis code will expire in 15 minutes.\nDid not get a code? Resend code.\nGet Help v",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your email”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 19 in “Sign In”",
+        "Reached from “OTP verification (13)”",
+        "Leads to “Profile (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:17 in the recording",
+        "Frame 1663 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0607",
+      "role": "background",
+      "share": 0.658
+    },
+    {
+      "hex": "#37191b",
+      "role": "accent",
+      "share": 0.261
+    },
+    {
+      "hex": "#514143",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#746466",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#998c8d",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1663,
+    "atSeconds": 497.1,
+    "endSeconds": 499.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your email",
+    "headline": "Your email"
+  },
+  "crawler": {
+    "nodeId": "s177",
+    "depth": 176,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s176",
+        "via": "Tap “surendarv638@gmail.com”",
+        "name": "OTP verification (13)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s178",
+        "via": "Back to Profile",
+        "name": "Profile (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

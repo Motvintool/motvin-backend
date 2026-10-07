@@ -1,0 +1,139 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-profile-lock-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-profile-lock-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:38.254Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Profile Lock",
+  "flow_position": 1,
+  "name": "Profile Lock",
+  "description": "Other screen. Dark theme, 6 text elements.",
+  "text": "9:41 €\n<\nProfile Lock\nCreate a profile lock\nMake this profile private by adding a 4-digit PIN that\nis needed to access it.\nCreate a Profile Lock",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile Lock”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Profile Lock”",
+        "Reached from “Edit Profile (6)”",
+        "Leads to “Edit Profile (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:48 in the recording",
+        "Frame 363 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.821
+    },
+    {
+      "hex": "#3e3c3f",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#050305",
+      "role": "accent",
+      "share": 0.057
+    },
+    {
+      "hex": "#6d6b6e",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#dbdadb",
+      "role": "text",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 363,
+    "atSeconds": 108,
+    "endSeconds": 109.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Profile Lock",
+    "headline": "Create a profile lock"
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 36,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Tap “Profile Lock”",
+        "name": "Edit Profile (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s038",
+        "via": "Back to Edit Profile",
+        "name": "Edit Profile (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

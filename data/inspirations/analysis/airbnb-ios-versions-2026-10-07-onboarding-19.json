@@ -1,0 +1,145 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-onboarding-19",
+  "screen_id": "airbnb-ios-versions-2026-10-07-onboarding-19",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:37.508Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 19,
+  "name": "Create account (9)",
+  "description": "Sign up screen with 3 input fields. Light theme, 20 text elements.",
+  "text": "9:41€\nLet's create your account\nvurcrinui\nLast name\nMake sure it matches the name on your government ID. If you go by\nanother name, you can add a preferred first name.\nDate of birth\nSelect a date\n05/10/2000\nPassword\nPassword\nShow\n• Password strength: good\nBy selecting Agree and continue, l agree to Airbnb's Terms of\nService, Payments Terms of Service and Nondiscrimination Policy,\nand acknowledge the Privacy Policy.\nAgree and continue\nAirbnb will send you promotions such as deals and marketing\nnotifications. You can opt out at any time via account\nsettings or within marketing emails.\nI don't want to receive Airbnb promotions.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "legal-text",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Let's create your account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 3 input fields. Light theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 28 in “Onboarding”",
+        "Reached from “Create account (8)”",
+        "Leads to “Create account (10)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 1:27 in the recording",
+        "Frame 297 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfbfb",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#d9dcde",
+      "role": "surface",
+      "share": 0.124
+    },
+    {
+      "hex": "#040404",
+      "role": "text",
+      "share": 0.063
+    },
+    {
+      "hex": "#282828",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#8e8e8e",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 297,
+    "atSeconds": 87,
+    "endSeconds": 89.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Let's create your account",
+    "headline": "Date of birth"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 21,
+    "path": [],
+    "visits": 3,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Tap “Let's create your account”",
+        "name": "Create account (8)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Type “Legal name”",
+        "name": "Create account (10)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

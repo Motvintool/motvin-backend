@@ -1,0 +1,154 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-profile-5",
+  "screen_id": "netflix-ios-versions-2026-10-07-profile-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:37.782Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 5,
+  "name": "Profile · toast",
+  "description": "Profile toast, on top of Edit Profile. Dark theme, 15 text elements.",
+  "text": "9:41C\nEdit Profile\nProfile name\nSurendar\nGame handle\nSurendarV\nViewing Restrictions\nNo restrictions\nProfile Lock\nAdd a 4-digit PIN to this profile\nDisplay Language\n*A\nEnglish\nAudio & Subtitles\nEnglisk\nAutoplay Next Episode\nAutoplay Previews",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Autoplay Previews”",
+        "Toast, covering 5% of the height from 91% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile toast, on top of Edit Profile. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 12 in “Profile”",
+        "Reached from “Edit Profile (4)”",
+        "Leads to “Other (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 1:39 in the recording",
+        "Frame 340 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201d21",
+      "role": "background",
+      "share": 0.779
+    },
+    {
+      "hex": "#3d3b3f",
+      "role": "surface",
+      "share": 0.106
+    },
+    {
+      "hex": "#050306",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#59565a",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#ffffff",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 340,
+    "atSeconds": 99,
+    "endSeconds": 102.3,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.90625,
+        "w": 0.875,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Autoplay Previews",
+    "headline": "Display Language"
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 31,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s031",
+        "via": "Tap “Autoplay Previews”",
+        "name": "Edit Profile (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s033",
+        "via": "Open Other",
+        "name": "Other (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

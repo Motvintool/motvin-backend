@@ -1,0 +1,144 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-checking-notifications-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-checking-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:57.262Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Checking notifications",
+  "flow_position": 1,
+  "name": "Notifications",
+  "description": "Notifications screen. Light theme, 19 text elements.",
+  "text": "•ll S\n9:411\nNotifications\nOffers and updates\nAccount\nTravel tips and offers\nInspire your next trip with personalised\nrecommendations and special offers.\nEdit\nInspiration and offers\nOn: Push\nEdit\nTrip planning\nOn: Push\nAirbnb updates\nStay up to date on the latest news from Airbnb, and let\nus know how we can improve.\nEdit\nNews and programmes\nOn: Push\nEdit\nFeedback\nOn: Push\nTravel reaulations\nEdit",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "offer",
+    "feedback",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen. Light theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Checking notifications”",
+        "Reached from “Account settings (3)”",
+        "Leads to “Notifications (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:12 in the recording",
+        "Frame 2047 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.886
+    },
+    {
+      "hex": "#e0dfe0",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#c4c3c5",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#a19fa1",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#7e7c7e",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2047,
+    "atSeconds": 612.6,
+    "endSeconds": 614.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Notifications",
+    "headline": "Airbnb updates",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s214",
+    "depth": 219,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s213",
+        "via": "Tap “Notifications”",
+        "name": "Account settings (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s215",
+        "via": "Wait 1.8s",
+        "name": "Notifications (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

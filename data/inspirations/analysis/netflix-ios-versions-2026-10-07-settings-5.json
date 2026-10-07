@@ -1,0 +1,142 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-settings-5",
+  "screen_id": "netflix-ios-versions-2026-10-07-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:49.743Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 5,
+  "name": "App Settings",
+  "description": "Settings screen with 1 input field. Dark theme, 17 text elements.",
+  "text": "9:41€\nApp Settings\nVideo Playback\nMobile Data Usage\nAutomatic\nDownloads\nWi-Fi Only\nSmart Downloads\n>\nDownload Next Episode\nVideo Quality\nStandard\nDelete All Downloads\niPhone\nNetflix\nUsed\n• Free\nAbout\nInternet speed test",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "video",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “App Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 1 input field. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 16 in “Settings”",
+        "Reached from “Settings (3)”",
+        "Leads to “Mobile Data Usage”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 6:18 in the recording",
+        "Frame 1299 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.862
+    },
+    {
+      "hex": "#3a393c",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#585659",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#6f6d70",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1299,
+    "atSeconds": 378.3,
+    "endSeconds": 379.8,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "App Settings",
+    "headline": "Video Playback"
+  },
+  "crawler": {
+    "nodeId": "s139",
+    "depth": 138,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s138",
+        "via": "Tap “App Settings”",
+        "name": "Settings (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s140",
+        "via": "Wait 4.5s",
+        "name": "Mobile Data Usage"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

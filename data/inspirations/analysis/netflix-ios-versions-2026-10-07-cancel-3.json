@@ -1,0 +1,148 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-cancel-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-cancel-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:46.426Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Cancel",
+  "flow_position": 3,
+  "name": "Search (2)",
+  "description": "Search screen with a search bar and the keyboard open. Dark theme, 37 text elements.",
+  "text": "9:41 (\nO\nSearch\nbeas\nCancel\nMovies & TV\nTOP\nBABY DO\n10\nDIE DO\nBUST\nBELOW\nRecently added\nBreaking\nBad\nBEOOTH\nBANGLA\nBARAMULLA\n\"beas\"\nBeas\nbeast\nW\nt\ne\ny\nO\nh\nk\nf\nJ\ng\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Dark theme, 37 text elements.",
+        "37 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Cancel”",
+        "Reached from “Search”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 5:10 in the recording",
+        "Frame 1038 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222223",
+      "role": "background",
+      "share": 0.275
+    },
+    {
+      "hex": "#060506",
+      "role": "surface",
+      "share": 0.256
+    },
+    {
+      "hex": "#3f3c3e",
+      "role": "surface",
+      "share": 0.183
+    },
+    {
+      "hex": "#625e5f",
+      "role": "surface",
+      "share": 0.069
+    },
+    {
+      "hex": "#797b7c",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1038,
+    "atSeconds": 310.5,
+    "endSeconds": 311.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search",
+    "headline": "BARAMULLA"
+  },
+  "crawler": {
+    "nodeId": "s111",
+    "depth": 110,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s110",
+        "via": "Type “beas”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s112",
+        "via": "Type “Top Results”",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

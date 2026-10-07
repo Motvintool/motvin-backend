@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-sign-in-7",
+  "screen_id": "netflix-ios-versions-2026-10-07-sign-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:51.892Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Sign In",
+  "flow_position": 7,
+  "name": "Phone number entry (10)",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 13 text elements.",
+  "text": "9:41C\n•ll\nNETFLIX\n<\nEnter your info to sign in\nEmail or mobile number\nsurendarv638@gmail.com\nContinue\nGet Help ^\nForgot email c\nLearn more ak\nFace ID\nA to ensure\nThis page is prote\nyou're not a bot.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Forgot email c”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 13 text elements.",
+        "Calls to action: “Continue”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 19 in “Sign In”",
+        "Reached from “Phone number entry (9)”",
+        "Leads to “Phone number entry (11)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:13 in the recording",
+        "Frame 1447 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0606",
+      "role": "background",
+      "share": 0.613
+    },
+    {
+      "hex": "#351d1f",
+      "role": "surface",
+      "share": 0.275
+    },
+    {
+      "hex": "#c90a13",
+      "role": "accent",
+      "share": 0.047
+    },
+    {
+      "hex": "#4b4041",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#6b6163",
+      "role": "text",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1447,
+    "atSeconds": 433.8,
+    "endSeconds": 434.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": "Forgot email c",
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s164",
+    "depth": 163,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s163",
+        "via": "Tap “imber?”",
+        "name": "Phone number entry (9)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s165",
+        "via": "Tap “Face ID”",
+        "name": "Phone number entry (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

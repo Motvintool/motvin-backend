@@ -1,0 +1,140 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-sign-in-14",
+  "screen_id": "netflix-ios-versions-2026-10-07-sign-in-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:52.600Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Sign In",
+  "flow_position": 14,
+  "name": "OTP verification (11)",
+  "description": "Verification code screen. Dark theme, 13 text elements.",
+  "text": "9:41C\nNETFLIX\n<\nEnter the code we sent to\nyour email\nChange\nsurendarv638@gmail.com\n1\n9\n6\n5\nThis code will expire in 15 minutes.\nDid not get a code? Resend code.\nGet Help v",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your email”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 19 in “Sign In”",
+        "Reached from “OTP verification (10)”",
+        "Leads to “Phone number entry — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 7:41 in the recording",
+        "Frame 1544 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100608",
+      "role": "background",
+      "share": 0.696
+    },
+    {
+      "hex": "#3a1a1c",
+      "role": "accent",
+      "share": 0.225
+    },
+    {
+      "hex": "#524143",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#746466",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#998c8d",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1544,
+    "atSeconds": 461.1,
+    "endSeconds": 463.5,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your email",
+    "headline": "Your email"
+  },
+  "crawler": {
+    "nodeId": "s171",
+    "depth": 170,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s170",
+        "via": "Tap “Passwords”",
+        "name": "OTP verification (10)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s172",
+        "via": "Scroll",
+        "name": "Phone number entry — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

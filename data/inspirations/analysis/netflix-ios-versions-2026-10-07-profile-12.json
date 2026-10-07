@@ -1,0 +1,139 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-profile-12",
+  "screen_id": "netflix-ios-versions-2026-10-07-profile-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:49.549Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 12,
+  "name": "Edit Profile (11)",
+  "description": "Profile screen. Dark theme, 15 text elements.",
+  "text": "9:41(\nEdit Profile\nProfile name\nRakeshh\nGame handle\nCreate your game handle\nViewing Restrictions\nNo restrictions\nProfile Lock\nAdd a 4-digit PIN to this profile\nDisplay Language\n*A\nEnglish\nAudio & Subtitles\nEnglish\nAutoplay Next Episode\nAutoplay Previews",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Edit Profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 12 in “Profile”",
+        "Reached from “Loading state (4)”",
+        "Leads to “Settings (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:13 in the recording",
+        "Frame 1251 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d20",
+      "role": "background",
+      "share": 0.768
+    },
+    {
+      "hex": "#3c3a3e",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#060406",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#565357",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#ce0c19",
+      "role": "accent",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1251,
+    "atSeconds": 373.8,
+    "endSeconds": 375.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Edit Profile",
+    "headline": "Display Language"
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s136",
+        "via": "Wait 2.7s",
+        "name": "Loading state (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s138",
+        "via": "Back to Settings",
+        "name": "Settings (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

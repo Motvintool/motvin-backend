@@ -152,9 +152,10 @@ export class InspirationsController {
   }
 
   // GET /api/inspirations/elements
+  // `?platform=ios` (or a comma list) counts only the screens on those platforms.
   @Get('elements')
-  async getElements() {
-    return { success: true, data: await this.service.getElements() };
+  async getElements(@Query('platform') platform?: string) {
+    return { success: true, data: await this.service.getElements(splitList(platform)) };
   }
 
   // GET /api/inspirations/search?q=

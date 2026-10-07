@@ -1,0 +1,154 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-paying-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-paying-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:57.614Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Paying",
+  "flow_position": 1,
+  "name": "Payment method · bottom sheet",
+  "description": "Payment bottom sheet, on top of Payment method. Light theme, 12 text elements.",
+  "text": "9:411\nPayment methods\nAdd a payment method using our secure\npayment system, then start planning your next\ntrip.\nO\nMake all payments through Airbnb\nAlways pay and communicate through\nAirbnb to ensure you're protected under\nour Terms of Service, Payments Terms of\nService, cancellation and other\nsafeguards.\nLearn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Make all payments through Airbnb”",
+        "Bottom sheet, covering 58% of the height from 34% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment bottom sheet, on top of Payment method. Light theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Paying”",
+        "Reached from “Payment method”",
+        "Leads to “Account settings (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 10:19 in the recording",
+        "Frame 2067 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.863
+    },
+    {
+      "hex": "#dad8da",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#c3bec1",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#a5a4a6",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#fab9d0",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2067,
+    "atSeconds": 619.5,
+    "endSeconds": 620.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.34375,
+        "w": 0.84375,
+        "h": 0.578125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Make all payments through Airbnb",
+    "headline": "Make all payments through Airbnb"
+  },
+  "crawler": {
+    "nodeId": "s218",
+    "depth": 223,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s217",
+        "via": "Open Make all payments through Airbnb",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s219",
+        "via": "Back to Account settings",
+        "name": "Account settings (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

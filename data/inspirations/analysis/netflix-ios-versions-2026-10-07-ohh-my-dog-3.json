@@ -1,0 +1,143 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-ohh-my-dog-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-ohh-my-dog-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:39.639Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Ohh My Dog",
+  "flow_position": 3,
+  "name": "Empty state",
+  "description": "Empty state screen. Dark theme, 6 text elements, an empty state.",
+  "text": "9:41C\nX\nNo Devices Found\nMake sure your smart TV, streaming device, and iPhone\nor iPad are all on the same WiFi network. If you need\nhelp, please visit our Netflix Help Center.\nGo to Help Center",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen. Dark theme, 6 text elements, an empty state.",
+        "6 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Ohh My Dog”",
+        "Reached from “Location permission”",
+        "Leads to “Ohh My Dog (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:14 in the recording",
+        "Frame 450 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e2a2a",
+      "role": "background",
+      "share": 0.578
+    },
+    {
+      "hex": "#0b0908",
+      "role": "surface",
+      "share": 0.255
+    },
+    {
+      "hex": "#484649",
+      "role": "surface",
+      "share": 0.117
+    },
+    {
+      "hex": "#737173",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#9e9d9f",
+      "role": "text",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 450,
+    "atSeconds": 134.1,
+    "endSeconds": 135.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s050",
+    "depth": 49,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s049",
+        "via": "Dismiss",
+        "name": "Location permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s051",
+        "via": "Open Ohh My Dog",
+        "name": "Ohh My Dog (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

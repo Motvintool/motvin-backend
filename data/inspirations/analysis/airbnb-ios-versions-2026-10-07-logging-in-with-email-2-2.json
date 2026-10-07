@@ -1,0 +1,139 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-2",
+  "screen_id": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:58.779Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "OTP verification (6)",
+  "description": "Verification code screen. Light theme, 6 text elements.",
+  "text": "9:41 1\nConfirm it's you\nWe sent a code to m***|@gmail.com.\n-\n-\n-\nDidn't get it? Send a new code\nTry another way",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm it's you”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 8 in “Logging in with email”",
+        "Reached from “Sign in with email (2)”",
+        "Leads to “OTP verification · modal”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 11:08 in the recording",
+        "Frame 2244 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#040305",
+      "role": "text",
+      "share": 0.061
+    },
+    {
+      "hex": "#d9d8da",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#8d8c8c",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#aaa8aa",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2244,
+    "atSeconds": 668.4,
+    "endSeconds": 673.5,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Confirm it's you",
+    "headline": "We sent a code to m***|@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s231",
+    "depth": 236,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s230",
+        "via": "Back to OTP verification",
+        "name": "Sign in with email (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s232",
+        "via": "Tap “Confirm it's you”",
+        "name": "OTP verification · modal"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

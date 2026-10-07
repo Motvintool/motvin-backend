@@ -1,0 +1,142 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-homes-nearby-3-4",
+  "screen_id": "airbnb-ios-versions-2026-10-07-homes-nearby-3-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:46.060Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Homes nearby",
+  "flow_position": 4,
+  "name": "Search results (2)",
+  "description": "Search results screen. Light theme, 21 text elements.",
+  "text": "•| 9\n9:414\nFilters\nMaximum\nMinimum\n·8600\nR130000+\nRooms and beds\nAny\n+\nBedrooms\nAny\n+\nBeds\nAny\n+\nBathrooms\nAmenities\nAir conditioning\nFree parking\nR Pool\nTV\nIron\nClear all\nShow 226 places",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "clear all",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Filters”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen. Light theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 20 in “Homes nearby”",
+        "Reached from “Search results — scrolled”",
+        "Leads to “Search results (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:25 in the recording",
+        "Frame 1086 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.811
+    },
+    {
+      "hex": "#ded9db",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.046
+    },
+    {
+      "hex": "#1b191c",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#ef93b3",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1086,
+    "atSeconds": 325.2,
+    "endSeconds": 326.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Filters",
+    "headline": "Amenities",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s098",
+    "depth": 102,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s097",
+        "via": "Tap “Filters”",
+        "name": "Search results — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s099",
+        "via": "Wait 0.9s",
+        "name": "Search results (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

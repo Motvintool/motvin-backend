@@ -1,0 +1,150 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-onboarding-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:34.908Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+  "text": "9:41C\n•ll\nNETFLIX\n<\nEnter your info to sign in\nEmail or mobile number\nContinue\nGet Help V\nThis page is protected by Google reCAPTCHA to ensure\nyou're not a bot.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue”",
+        "8 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 16 in “Onboarding”",
+        "Reached from “Tho toast”",
+        "Leads to “Phone number entry”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 0:09 in the recording",
+        "Frame 35 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100709",
+      "role": "background",
+      "share": 0.727
+    },
+    {
+      "hex": "#3c1a1c",
+      "role": "surface",
+      "share": 0.185
+    },
+    {
+      "hex": "#d90917",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#9c0b15",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#513d3f",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 35,
+    "atSeconds": 9.3,
+    "endSeconds": 11.1,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Open Loading state",
+        "name": "Tho toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Wait 3.6s",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

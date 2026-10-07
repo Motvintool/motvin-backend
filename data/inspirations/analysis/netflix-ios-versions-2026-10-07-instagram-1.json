@@ -1,0 +1,148 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-instagram-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-instagram-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:40.101Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Instagram",
+  "flow_position": 1,
+  "name": "Instagram home",
+  "description": "Home screen with a 6-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41C\nl ą\nOhh My Dog\nnetflix.com\nO®\nCopy link\nWhatsApp\nMore\nInstagram\nStories\nOptions",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "instagram",
+    "stories",
+    "whatsapp",
+    "copy link",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Instagram, Stories, WhatsApp, Copy link, Options, More",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 6-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Instagram”",
+        "Reached from “IKKA sheet”",
+        "Leads to “Ohh My Dog (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:28 in the recording",
+        "Frame 496 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#120f10",
+      "role": "background",
+      "share": 0.789
+    },
+    {
+      "hex": "#342e27",
+      "role": "surface",
+      "share": 0.129
+    },
+    {
+      "hex": "#545050",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#7af790",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 496,
+    "atSeconds": 148.2,
+    "endSeconds": 149.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Instagram",
+      "Stories",
+      "WhatsApp",
+      "Copy link",
+      "Options",
+      "More"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Ohh My Dog"
+  },
+  "crawler": {
+    "nodeId": "s054",
+    "depth": 53,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s053",
+        "via": "Tap “Share”",
+        "name": "IKKA sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s055",
+        "via": "Tap “Ohh My Dog”",
+        "name": "Ohh My Dog (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

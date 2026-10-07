@@ -1,0 +1,161 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-onboarding-7",
+  "screen_id": "netflix-ios-versions-2026-10-07-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:35.313Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Phone number entry (3)",
+  "description": "Login bottom sheet, on top of Phone number entry with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "text": "9:41C\nNETFLIX\n<\nNew to Netflix? Enter your email\naddress to get started or check your\nmobile number and try again.\nEnter your info to sign in\nEmail or mobile number\nContinue\nGet Help v\nThis page is protected by Google reCAPTCHA to ensure\nyou're not a bot.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get Help v”",
+        "Bottom sheet, covering 42% of the height from 41% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet, on top of Phone number entry with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue”",
+        "11 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 16 in “Onboarding”",
+        "Reached from “Phone number entry · modal”",
+        "Leads to “Phone number entry (4)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:24 in the recording",
+        "Frame 86 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0608",
+      "role": "background",
+      "share": 0.628
+    },
+    {
+      "hex": "#3a1a1c",
+      "role": "surface",
+      "share": 0.177
+    },
+    {
+      "hex": "#213d6a",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#3d5c87",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#de0917",
+      "role": "accent",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 86,
+    "atSeconds": 24,
+    "endSeconds": 26.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.40625,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": "Get Help v",
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Tap “Enter your info to sign in”",
+        "name": "Phone number entry · modal"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Tap “Enter your info to sign in”",
+        "name": "Phone number entry (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

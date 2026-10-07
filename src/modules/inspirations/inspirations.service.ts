@@ -129,9 +129,12 @@ export class InspirationsService implements OnModuleDestroy {
   async getCounts(platforms?: string[]) {
     const manifest = await this.loader.getManifest();
     if (!platforms?.length) {
+      const allScreens = await this.loader.getScreens();
+      const allFlows = await this.loader.getFlows();
       return {
         counts: manifest.counts,
         taxonomy: manifest.taxonomy,
+        usage: this.usageOf(allScreens, allFlows),
         generatedAt: manifest.generatedAt,
       };
     }
@@ -166,7 +169,29 @@ export class InspirationsService implements OnModuleDestroy {
         elements: Array.from(elementCounts.keys()).sort(),
         flowCategories: Array.from(new Set(flows.map((f) => f.category).filter(Boolean))).sort(),
       },
+      usage: this.usageOf(screens, flows),
       generatedAt: manifest.generatedAt,
+    };
+  }
+
+  /**
+   * How much of the library each taxonomy value holds — screens per screen type,
+   * per UI element and per category, flows per flow category. The taxonomy lists
+   * themselves stay in a fixed order (they back filters); this is what lets the
+   * Explore page lead with what the library actually has most of, instead of
+   * whichever five values come first alphabetically.
+   */
+  private usageOf(screens: InspirationScreen[], flows: { category?: string }[]) {
+    const tally = (values: Iterable<string | undefined | null>) => {
+      const out: Record<string, number> = {};
+      for (const v of values) if (v) out[v] = (out[v] ?? 0) + 1;
+      return out;
+    };
+    return {
+      screenTypes: tally(screens.map((s) => s.screenType)),
+      elements: tally(screens.flatMap((s) => s.elements)),
+      industries: tally(screens.map((s) => s.industry)),
+      flowCategories: tally(flows.map((f) => f.category)),
     };
   }
 
@@ -282,7 +307,20 @@ export class InspirationsService implements OnModuleDestroy {
     return { pattern, screens: await this.resolveScreens(pattern.screenIds) };
   }
 
-  async getElements() {
+  async getElements(platforms?: string[]) {
+    // Unscoped, the manifest already holds the library-wide counts. Scoped, count the
+    // screens on those platforms — the same numbers the Explore lists use.
+    if (platforms?.length) {
+      const on = new Set(platforms);
+      const counts: Record<string, number> = {};
+      for (const s of await this.loader.getScreens()) {
+        if (!on.has(s.platform)) continue;
+        for (const e of s.elements) counts[e] = (counts[e] ?? 0) + 1;
+      }
+      return Object.entries(counts)
+        .map(([kind, count]) => ({ kind, count }))
+        .sort((a, b) => b.count - a.count || a.kind.localeCompare(b.kind));
+    }
     const manifest = await this.loader.getManifest();
     return Object.entries(manifest.elementCounts)
       .map(([kind, count]) => ({ kind, count }))

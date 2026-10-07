@@ -1,0 +1,157 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-settings-12",
+  "screen_id": "airbnb-ios-versions-2026-10-07-settings-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:58.606Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 12,
+  "name": "Settings · modal",
+  "description": "Settings dialog over a dimmed screen, on top of Settings. Light theme, 14 text elements.",
+  "text": "9:414\n•il\nProfile\nBecome a host\nIt's easy to start hosting and earn\nextra income.\nAccount settings\n? Gethelp\n>\n• View profile\nPrivacy\n>\n&r Refer a host\nFind a co-host\nLegal\nLog out\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "cancel",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile”",
+        "Dialog over a dimmed background, covering 14% of the height from 5% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings. Light theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 12 in “Settings”",
+        "Reached from “Settings (5)”",
+        "Leads to “Sign in with email (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:59 in the recording",
+        "Frame 2202 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cecccf",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#fcfcfd",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#acaaad",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#938d8e",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#c9e2fd",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2202,
+    "atSeconds": 659.1,
+    "endSeconds": 660.9,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.046875,
+        "w": 0.9375,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Profile",
+    "headline": "Gethelp",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s229",
+    "depth": 234,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s228",
+        "via": "Tap “Profile”",
+        "name": "Settings (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s230",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,159 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-opening-surendar-2-6",
+  "screen_id": "netflix-ios-versions-2026-10-07-opening-surendar-2-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:48.426Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening Surendar ×",
+  "flow_position": 6,
+  "name": "Remove dialog",
+  "description": "Dialog over a dimmed screen, on top of Surendar with a primary action labelled “Continue Watching?”. Dark theme, 19 text elements.",
+  "text": "9:41\nSurendar -\nDownloads\nShows and movies that you download\nappear here.\nContinue Watching\nWOMAN\nTAYARD\nRo\nRemove from row\nRemove this title from\nContinue Watching?\nRemove\nCancel\nRo.\nMore Info\nDownload\nNot for me\nllike it\nLove this!\nX Remove from row",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Remove”",
+        "Dialog over a dimmed background, covering 16% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Surendar with a primary action labelled “Continue Watching?”. Dark theme, 19 text elements.",
+        "Calls to action: “Continue Watching?”",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 7 in “Opening Surendar ×”",
+        "Reached from “Surendar (2)”",
+        "Leads to “Surendar (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:45 in the recording",
+        "Frame 1155 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161316",
+      "role": "background",
+      "share": 0.899
+    },
+    {
+      "hex": "#322e31",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#575556",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#444244",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#6d6a6b",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1155,
+    "atSeconds": 345.9,
+    "endSeconds": 346.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.40625,
+        "w": 0.6875,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue Watching?"
+    ],
+    "keyboard": false,
+    "title": "Remove",
+    "headline": "Remove"
+  },
+  "crawler": {
+    "nodeId": "s127",
+    "depth": 126,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Open Remove",
+        "name": "Surendar (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s128",
+        "via": "Dismiss",
+        "name": "Surendar (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

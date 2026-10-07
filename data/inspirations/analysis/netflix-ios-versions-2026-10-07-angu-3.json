@@ -1,0 +1,145 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-angu-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-angu-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:37.248Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Angu",
+  "flow_position": 3,
+  "name": "Profile (3)",
+  "description": "Profile screen with a 3-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41C\nNETFLIX\n#Love\nWatch in Tamil, Hindi, Telugu, Malayalam, Kannada, English\nEdit Profiles\nRakeshh\nSurendarV\nMalini\nMotvin\nDone\nAngu",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "angu",
+    "motvin",
+    "done",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Angu, Motvin, Done",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a 3-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Angu”",
+        "Reached from “Profile (2)”",
+        "Leads to “Edit Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 1:31 in the recording",
+        "Frame 313 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e0608",
+      "role": "background",
+      "share": 0.59
+    },
+    {
+      "hex": "#372426",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#6b0a0c",
+      "role": "accent",
+      "share": 0.09
+    },
+    {
+      "hex": "#534446",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#941f1d",
+      "role": "surface",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 313,
+    "atSeconds": 91.5,
+    "endSeconds": 94.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Angu",
+      "Motvin",
+      "Done"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Love"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Tap “#Love”",
+        "name": "Profile (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Open Edit Profile",
+        "name": "Edit Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

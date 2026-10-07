@@ -1,0 +1,145 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-8",
+  "screen_id": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:59.257Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 8,
+  "name": "Sign in",
+  "description": "Login screen with a primary action labelled “Log in faster next time”. Light theme, 4 text elements.",
+  "text": "9:41 4\nLog in faster next time\nUse your face, fingerprint or passcode. Just like\nunlocking your device. Learn more\nContinue\nNot now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "not now",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in faster next time”. Light theme, 4 text elements.",
+        "Calls to action: “Log in faster next time”, “Continue”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 8 in “Logging in with email”",
+        "Reached from “Enter your password (3)”",
+        "Leads to “Explore home (25)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 11:39 in the recording",
+        "Frame 2342 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#9b999c",
+      "role": "background",
+      "share": 0.502
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "surface",
+      "share": 0.363
+    },
+    {
+      "hex": "#dbdadb",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#232124",
+      "role": "text",
+      "share": 0.039
+    },
+    {
+      "hex": "#b8b8ba",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2342,
+    "atSeconds": 699.9,
+    "endSeconds": 702.9,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in faster next time",
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": null,
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s237",
+    "depth": 242,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s236",
+        "via": "Open Sign in",
+        "name": "Enter your password (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s238",
+        "via": "Back to Explore home",
+        "name": "Explore home (25)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

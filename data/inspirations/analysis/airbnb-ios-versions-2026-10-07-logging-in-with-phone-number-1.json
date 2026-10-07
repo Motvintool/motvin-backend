@@ -1,0 +1,144 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-logging-in-with-phone-number-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-logging-in-with-phone-number-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:56.830Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 1,
+  "name": "Phone number entry (4)",
+  "description": "Login screen with 2 input fields. Light theme, 21 text elements.",
+  "text": "9:41 4\n•l 8\nPersonal info\nEdit\nLegal name\nSurendar V\nAdd\nPreferred first name\nNot provided\nAdd\nPhone number\nNot provided\nEdit\nEmail\nm***|@gmail.com\nAdd\nResidential address\nNot provided\nAdd\nPostal address\nNot provided\nEmergency contact\nAdd\nNot provided\nStart\nIdentity verification",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "not provided",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Personal info”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields. Light theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Logging in with phone number”",
+        "Reached from “Account settings · toast”",
+        "Leads to “Account settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 9:59 in the recording",
+        "Frame 2003 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#dcdbdc",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#abaaac",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#c6c5c7",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#5c5a5d",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2003,
+    "atSeconds": 599.1,
+    "endSeconds": 601.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Personal info",
+    "headline": "Not provided",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s209",
+    "depth": 214,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s208",
+        "via": "Open Personal info",
+        "name": "Account settings · toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s210",
+        "via": "Back to Account settings",
+        "name": "Account settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

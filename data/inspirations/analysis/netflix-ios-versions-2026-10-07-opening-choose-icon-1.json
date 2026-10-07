@@ -1,0 +1,152 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-opening-choose-icon-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-opening-choose-icon-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:36.632Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening Choose Icon",
+  "flow_position": 1,
+  "name": "Choose Icon sheet",
+  "description": "Bottom sheet, on top of Add Profile. Dark theme, 1 text element.",
+  "text": "9:41C\nChoose Icon",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose Icon”",
+        "Bottom sheet, covering 47% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Add Profile. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Opening Choose Icon”",
+        "Reached from “Add Profile (2)”",
+        "Leads to “Choose Icon”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:19 in the recording",
+        "Frame 265 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.927
+    },
+    {
+      "hex": "#050305",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a5a4a6",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 265,
+    "atSeconds": 79.2,
+    "endSeconds": 79.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.125,
+        "y": 0.4375,
+        "w": 0.8125,
+        "h": 0.46875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Choose Icon",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Open Choose Icon",
+        "name": "Add Profile (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Tap “Choose Icon”",
+        "name": "Choose Icon"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

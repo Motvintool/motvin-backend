@@ -1,0 +1,164 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-chatting-with-support-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-chatting-with-support-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:52.589Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Chatting with support",
+  "flow_position": 1,
+  "name": "Support chat · modal",
+  "description": "Messages dialog over a dimmed screen, on top of Support chat with a row of 3 category chips. Light theme, 10 text elements.",
+  "text": "9:411\noil\nQ\nMessages\nAll\nTravelling\nSupport\nYou don't have any messages\nWhen you receive a new message, it will\nappear here.\nMessaging settings\nArchived\nGive feedback",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "give feedback",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Messages”",
+        "Category strip: All, Travelling, Support",
+        "Dialog over a dimmed background, covering 25% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Support chat with a row of 3 category chips. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 6 in “Chatting with support”",
+        "Reached from “Support chat (5)”",
+        "Leads to “Search — loading”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:07 in the recording",
+        "Frame 1630 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#9a989b",
+      "role": "background",
+      "share": 0.702
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "text",
+      "share": 0.217
+    },
+    {
+      "hex": "#807e81",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#dfdddf",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#bab9bb",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1630,
+    "atSeconds": 487.5,
+    "endSeconds": 489.3,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [
+      "All",
+      "Travelling",
+      "Support"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Messages",
+    "headline": "You don't have any messages",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s161",
+    "depth": 166,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s160",
+        "via": "Tap “Messages”",
+        "name": "Support chat (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s162",
+        "via": "Open Search — loading",
+        "name": "Search — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

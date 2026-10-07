@@ -1,0 +1,141 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-onboarding-16",
+  "screen_id": "netflix-ios-versions-2026-10-07-onboarding-16",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:36.214Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 16,
+  "name": "OTP verification (6)",
+  "description": "Verification code screen. Dark theme, 12 text elements.",
+  "text": "9:41C\n•ll\nNETFLIX\n<\nCheck your text messages\nand enter the code\n+916382102514\nChange\n8\n3\n1\nThis code will expire in 15 minutes.\nDid not get a code? Resend code.\nGet Help v",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your text messages”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 16 in “Onboarding”",
+        "Reached from “OTP verification (5)”",
+        "Leads to “Profile”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:03 in the recording",
+        "Frame 216 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100608",
+      "role": "background",
+      "share": 0.689
+    },
+    {
+      "hex": "#3a1a1d",
+      "role": "accent",
+      "share": 0.225
+    },
+    {
+      "hex": "#514143",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#736263",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#97898b",
+      "role": "text",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 216,
+    "atSeconds": 63,
+    "endSeconds": 65.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Check your text messages",
+    "headline": "Check your text messages"
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Tap “Check your text messages”",
+        "name": "OTP verification (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Open Profile",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

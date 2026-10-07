@@ -1,0 +1,144 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-angu-5",
+  "screen_id": "netflix-ios-versions-2026-10-07-angu-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:53.205Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Angu",
+  "flow_position": 5,
+  "name": "Profile (5)",
+  "description": "Profile screen with a 3-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41(\nC\nDEAD\nBURN\nComing on 16 October\nChoose your profile\nRakeshh\nSurendar\nMalini\nMotvin\nEdit\nAngu",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "angu",
+    "motvin",
+    "edit",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Angu, Motvin, Edit",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a 3-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Angu”",
+        "Reached from “OTP verification (14)”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:20 in the recording",
+        "Frame 1674 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#190907",
+      "role": "background",
+      "share": 0.42
+    },
+    {
+      "hex": "#37292d",
+      "role": "surface",
+      "share": 0.196
+    },
+    {
+      "hex": "#602003",
+      "role": "surface",
+      "share": 0.133
+    },
+    {
+      "hex": "#973e03",
+      "role": "accent",
+      "share": 0.044
+    },
+    {
+      "hex": "#55474a",
+      "role": "surface",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1674,
+    "atSeconds": 500.4,
+    "endSeconds": 502.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Angu",
+      "Motvin",
+      "Edit"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "BURN"
+  },
+  "crawler": {
+    "nodeId": "s178",
+    "depth": 177,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s177",
+        "via": "Back to Profile",
+        "name": "OTP verification (14)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s179",
+        "via": "Back to Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

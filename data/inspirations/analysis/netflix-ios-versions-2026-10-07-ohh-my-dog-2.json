@@ -1,0 +1,161 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-ohh-my-dog-2",
+  "screen_id": "netflix-ios-versions-2026-10-07-ohh-my-dog-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:39.525Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Ohh My Dog",
+  "flow_position": 2,
+  "name": "Location permission",
+  "description": "Permission dialog over a dimmed screen with a primary action labelled “Allow”. Dark theme, 34 text elements.",
+  "text": "9:41(\n.oll\nAllow \"Netflix\" to find devices\non local networks?\nThis will let you easily send what\nyou're watching on your iPhone or\niPad to your smart TV or streaming\ndevices for bigger screen enjoyment.\nmmachathram\nAirtel_sure_2514\nTiruvallur\n\"Android\"\nVeppamp:\nand more than 1 device\n..-anal\nlam\nChennai\nInternational\noSriperumbudur\nAirport (MAA)\nPadappai\nZoho-Guest\nMore than 1 device\nWalajabad\nai Nagar\nPalar\nInformation from networks can be used to\ndetermine your location and create a profile of\nyou.\nMal\npne\nd\nO\nDon't Allow\nAllow\nvee",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "location",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow \"Netflix\" to find devices”",
+        "Dialog over a dimmed background, covering 69% of the height from 14% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen with a primary action labelled “Allow”. Dark theme, 34 text elements.",
+        "Calls to action: “Allow”",
+        "34 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Ohh My Dog”",
+        "Reached from “Ohh My Dog”",
+        "Leads to “Empty state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:13 in the recording",
+        "Frame 445 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191b",
+      "role": "background",
+      "share": 0.577
+    },
+    {
+      "hex": "#343e3f",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#030203",
+      "role": "surface",
+      "share": 0.132
+    },
+    {
+      "hex": "#243757",
+      "role": "accent",
+      "share": 0.099
+    },
+    {
+      "hex": "#55555b",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 445,
+    "atSeconds": 133.2,
+    "endSeconds": 133.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.140625,
+        "w": 0.71875,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "Allow \"Netflix\" to find devices",
+    "headline": "This will let you easily send what"
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s048",
+        "via": "Open Allow \"Netflix\" to find devices",
+        "name": "Ohh My Dog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s050",
+        "via": "Dismiss",
+        "name": "Empty state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

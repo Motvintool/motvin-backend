@@ -1,0 +1,157 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-schedule-your-photo-shoot-6",
+  "screen_id": "airbnb-ios-versions-2026-10-07-schedule-your-photo-shoot-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:48.766Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Schedule your photo shoot",
+  "flow_position": 6,
+  "name": "Explore 1 hair service dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state. Light theme, 15 text elements.",
+  "text": "9:414\n•0!\nServices in Mumbai\nAnytime • Hair\nTime of day v\nHair\nV\nExplore 1 hair service\nSachin's Headoffice unisex salon\nBlow-drys, haircut and more\nX\nType of service\n{ Chefs\nV8 Make-up\nHair\nÔ Photography\nTraining\nClear all\nShow 2 results",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "clear all",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Explore 1 hair service”",
+        "Dialog over a dimmed background, covering 41% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state. Light theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Schedule your photo shoot”",
+        "Reached from “Loading state (3)”",
+        "Leads to “Services in Mumbai”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 6:42 in the recording",
+        "Frame 1347 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#959495",
+      "role": "background",
+      "share": 0.416
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "surface",
+      "share": 0.327
+    },
+    {
+      "hex": "#74706f",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#2d2929",
+      "role": "text",
+      "share": 0.054
+    },
+    {
+      "hex": "#554d4a",
+      "role": "surface",
+      "share": 0.049
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1347,
+    "atSeconds": 402,
+    "endSeconds": 404.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Explore 1 hair service",
+    "headline": "Type of service",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s123",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s122",
+        "via": "Wait 1.8s",
+        "name": "Loading state (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s124",
+        "via": "Tap “Services in Mumbai”",
+        "name": "Services in Mumbai"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

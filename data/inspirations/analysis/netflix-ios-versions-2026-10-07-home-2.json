@@ -1,0 +1,178 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-home-2",
+  "screen_id": "netflix-ios-versions-2026-10-07-home-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:39.119Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Home",
+  "flow_position": 2,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Home home with a 4-item tab bar, a row of 4 category chips and a primary action labelled “Allow”. Dark theme, 20 text elements.",
+  "text": "9:41(\n•odl\nNHome\nNew & Hot\nMovies\nShows\nCategories\n\"Netflix\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\n#3 in Movies Today\n+ My List\nPlay Movie\nContinue Watching for Surendar\nTOP\n10\nWOMAN\nTHYARD\nMy Netflix\nHome\nSearch\nClips\nUSLAAD\nBHAGAT\nSINGE",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "home",
+    "clips",
+    "search",
+    "my netflix",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Clips, Search, My Netflix",
+        "Navigation title reads “\"Netflix\" Would Like to Send You”",
+        "Category strip: New & Hot, Movies, Shows, Categories",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Home home with a 4-item tab bar, a row of 4 category chips and a primary action labelled “Allow”. Dark theme, 20 text elements.",
+        "Calls to action: “Allow”",
+        "20 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 43 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Home home (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:01 in the recording",
+        "Frame 407 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232424",
+      "role": "background",
+      "share": 0.549
+    },
+    {
+      "hex": "#43403f",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#656f74",
+      "role": "surface",
+      "share": 0.135
+    },
+    {
+      "hex": "#08080a",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#595755",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 407,
+    "atSeconds": 121.5,
+    "endSeconds": 122.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.390625,
+        "w": 0.65625,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "Home",
+      "Clips",
+      "Search",
+      "My Netflix"
+    ],
+    "chipLabels": [
+      "New & Hot",
+      "Movies",
+      "Shows",
+      "Categories"
+    ],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "\"Netflix\" Would Like to Send You",
+    "headline": "\"Netflix\" Would Like to Send You"
+  },
+  "crawler": {
+    "nodeId": "s046",
+    "depth": 45,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s045",
+        "via": "Open \"Netflix\" Would Like to Send You",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s047",
+        "via": "Dismiss",
+        "name": "Home home (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

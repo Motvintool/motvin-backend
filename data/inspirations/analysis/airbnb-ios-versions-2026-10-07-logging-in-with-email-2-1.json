@@ -1,0 +1,138 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-logging-in-with-email-2-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:58.698Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 1,
+  "name": "Sign in with email (2)",
+  "description": "Login screen. Light theme, 8 text elements.",
+  "text": "9:414\nX\nS\nWelcome back, Surendar\nm***@gmail.com\nWe may email or text you a code to log you in.\n•\n•\nNot you?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back, Surendar”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 8 in “Logging in with email”",
+        "Reached from “Settings · modal”",
+        "Leads to “OTP verification (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 11:03 in the recording",
+        "Frame 2225 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdff",
+      "role": "background",
+      "share": 0.808
+    },
+    {
+      "hex": "#040305",
+      "role": "text",
+      "share": 0.06
+    },
+    {
+      "hex": "#e5d8dc",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#ee2352",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#8c8b8c",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2225,
+    "atSeconds": 663,
+    "endSeconds": 667.8,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Welcome back, Surendar",
+    "headline": "Welcome back, Surendar"
+  },
+  "crawler": {
+    "nodeId": "s230",
+    "depth": 235,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s229",
+        "via": "Back to Sign in with email",
+        "name": "Settings · modal"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s231",
+        "via": "Back to OTP verification",
+        "name": "OTP verification (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

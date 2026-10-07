@@ -1,0 +1,146 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-profile-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-profile-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:37.583Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 3,
+  "name": "Edit Profile (3)",
+  "description": "Profile screen with the keyboard open. Dark theme, 31 text elements.",
+  "text": "9:41C\nEdit Profile\nProfile name\nSurendar\nGame handle\nSurendarV\nViewing Restrictions\nNo restrictions\nDrofile lncb\n\"Surendar\"\nSure do\nSure did\ni\nW\nt\ne\nO\nk\nf\nh\nd\na\ng\nJ\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Edit Profile”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with the keyboard open. Dark theme, 31 text elements.",
+        "31 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 12 in “Profile”",
+        "Reached from “Edit Profile (2)”",
+        "Leads to “Edit Profile (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:37 in the recording",
+        "Frame 327 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e21",
+      "role": "background",
+      "share": 0.696
+    },
+    {
+      "hex": "#3e3c40",
+      "role": "surface",
+      "share": 0.145
+    },
+    {
+      "hex": "#070405",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#5d5b5f",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#01cff9",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 327,
+    "atSeconds": 97.5,
+    "endSeconds": 98.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Edit Profile",
+    "headline": "Viewing Restrictions"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Tap “Edit Profile”",
+        "name": "Edit Profile (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Back to Edit Profile",
+        "name": "Edit Profile (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

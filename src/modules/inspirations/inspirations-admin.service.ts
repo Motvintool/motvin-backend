@@ -723,10 +723,16 @@ export class InspirationsAdminService {
       cardFields = { cardScreens: this.readCardScreens(id, input.cardScreens) };
     }
 
+    // Who set the category. A change made here is a person's call; an unchanged
+    // one keeps whatever source it already had (the crawler records `store`/`ai`).
+    const previous = apps.find((a) => a.id === id);
+    const industrySource = previous && previous.industry === input.industry ? previous.industrySource : 'manual';
+
     const record = {
       id,
       name,
       industry: input.industry,
+      ...(industrySource ? { industrySource } : {}),
       website: input.website ? String(input.website).trim() : '',
       tagline: input.tagline ? String(input.tagline).trim() : '',
       ...(input.logo ? { logo: String(input.logo) } : {}),

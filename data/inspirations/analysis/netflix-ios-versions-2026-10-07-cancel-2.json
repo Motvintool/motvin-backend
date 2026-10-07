@@ -1,0 +1,149 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-cancel-2",
+  "screen_id": "netflix-ios-versions-2026-10-07-cancel-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:46.310Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Cancel",
+  "flow_position": 2,
+  "name": "Search",
+  "description": "Search screen with a search bar and the keyboard open. Dark theme, 42 text elements.",
+  "text": "9:41(\n•ll\nSearch\nSearch shows, movies, games...\nQ\nCancel\nRecommended Shows & Movies\nпНИМА\nOhh My Dog\nRecently added\n10\nRomänchakal\nRomãnchakam\nRecently added\nWWE Money in\nONE\nthe Bank\nBANK\nLive\nSunday\nNevep Have.\nNever Have I Ever\nJVeR\ni\nW\ne\nt\ny\nO\nk\nd\nf\nh\na\ng\nJ\nS\nb\nZ\nm\nC\nV\nn\n123\nA",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Dark theme, 42 text elements.",
+        "42 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Cancel”",
+        "Reached from “Search — loading”",
+        "Leads to “Search (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 5:04 in the recording",
+        "Frame 1032 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.377
+    },
+    {
+      "hex": "#242122",
+      "role": "surface",
+      "share": 0.32
+    },
+    {
+      "hex": "#413c3d",
+      "role": "surface",
+      "share": 0.141
+    },
+    {
+      "hex": "#5e595b",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#0d519f",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1032,
+    "atSeconds": 304.5,
+    "endSeconds": 309.9,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search",
+    "headline": "Recommended Shows & Movies"
+  },
+  "crawler": {
+    "nodeId": "s110",
+    "depth": 109,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s109",
+        "via": "Wait 1.2s",
+        "name": "Search — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s111",
+        "via": "Type “beas”",
+        "name": "Search (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

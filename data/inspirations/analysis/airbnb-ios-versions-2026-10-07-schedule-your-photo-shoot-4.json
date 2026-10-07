@@ -1,0 +1,157 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-schedule-your-photo-shoot-4",
+  "screen_id": "airbnb-ios-versions-2026-10-07-schedule-your-photo-shoot-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:48.551Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Schedule your photo shoot",
+  "flow_position": 4,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Time of day V. Light theme, 17 text elements.",
+  "text": "9:414\nServices in Mumbai\nAnytime. Photography\nTime of day v\nPhotography\nV\nExplore 21 photography services\n1804\nTHE RSGTICOCENL LUME\nMumbai Photo Session Cinematic Portraits\nIn home• Photography\nX\nType of service\n§ Hair\nMake-up\nw Chefs\n• Photography\nTraining\nClear all\nShow 1 result",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "clear all",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Explore 21 photography services”",
+        "Dialog over a dimmed background, covering 39% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Time of day V. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 9 in “Schedule your photo shoot”",
+        "Reached from “Time of day V (2)”",
+        "Leads to “Loading state (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 6:33 in the recording",
+        "Frame 1327 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#949294",
+      "role": "background",
+      "share": 0.429
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "text",
+      "share": 0.329
+    },
+    {
+      "hex": "#777472",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#2e2727",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#564e4c",
+      "role": "surface",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1327,
+    "atSeconds": 393.9,
+    "endSeconds": 398.4,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Explore 21 photography services",
+    "headline": "THE RSGTICOCENL LUME",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s121",
+    "depth": 126,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s120",
+        "via": "Tap “Explore 21 photography services”",
+        "name": "Time of day V (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s122",
+        "via": "Tap “Time of day v”",
+        "name": "Loading state (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

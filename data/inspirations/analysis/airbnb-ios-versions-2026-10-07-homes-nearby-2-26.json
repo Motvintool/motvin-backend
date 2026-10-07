@@ -1,0 +1,143 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-homes-nearby-2-26",
+  "screen_id": "airbnb-ios-versions-2026-10-07-homes-nearby-2-26",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:43.932Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Homes nearby",
+  "flow_position": 26,
+  "name": "OTP verification (4)",
+  "description": "Verification code screen with 1 input field. Light theme, 8 text elements.",
+  "text": "9:411\nYou're almost done\nAdd your phone number to continue. We'll use it\nto send you trip updates and notifications.\nCountry/Region\nIndia (+91)\nPhone number\nWe'll text you a code to verify your number. Standard message and\ndata rates apply.\nnfirm",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "notification",
+    "nfirm",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You're almost done”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with 1 input field. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 33 in “Homes nearby”",
+        "Reached from “Checkout (14)”",
+        "Leads to “OTP verification (5)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 4:33 in the recording",
+        "Frame 924 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.942
+    },
+    {
+      "hex": "#e3e2e4",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#979698",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#b9b8b9",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#c9c7c9",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 924,
+    "atSeconds": 273.3,
+    "endSeconds": 277.5,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "You're almost done",
+    "headline": "Country/Region",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 83,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Open You're almost done",
+        "name": "Checkout (14)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s080",
+        "via": "Tap “You're almost done”",
+        "name": "OTP verification (5)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

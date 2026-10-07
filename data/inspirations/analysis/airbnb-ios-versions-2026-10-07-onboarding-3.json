@@ -1,0 +1,153 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-onboarding-3",
+  "screen_id": "airbnb-ios-versions-2026-10-07-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:36.033Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+  "text": "9:41(\nLog in or sign up\nPhone number or email\nContinue\nWe'll send a confirmation code by text or email. Message and data\nrates apply. Privacy Policy.\nor\nmobile\n+916382102514\ni\nW\ne\nt\nU\nh\nd\na\ng\nS\nb\nZ\nX\nC\nV\nn\nm\n123\nspace\nreturn",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in or sign up”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 28 text elements.",
+        "Calls to action: “Continue”",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 28 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Phone number entry (3)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:05 in the recording",
+        "Frame 20 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f7f9",
+      "role": "background",
+      "share": 0.574
+    },
+    {
+      "hex": "#d6d7dd",
+      "role": "surface",
+      "share": 0.233
+    },
+    {
+      "hex": "#040305",
+      "role": "text",
+      "share": 0.06
+    },
+    {
+      "hex": "#b3b5be",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#e92257",
+      "role": "accent",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 20,
+    "atSeconds": 5.7,
+    "endSeconds": 6.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "title": "Log in or sign up",
+    "headline": "Phone number or email"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Type “Log in or sign up”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Tap “Log in or sign up”",
+        "name": "Phone number entry (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

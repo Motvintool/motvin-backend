@@ -54,6 +54,39 @@ describe('InspirationsAdminService', () => {
     rmSync(tmp, { recursive: true, force: true });
   });
 
+  describe('app category', () => {
+    const apps = () => JSON.parse(readFileSync(join(store, 'apps.json'), 'utf-8')).apps;
+
+    it('keeps an app whose category could not be worked out, and never offers it as a choice', () => {
+      service.saveApp({ id: 'gap', name: 'Gap', industry: 'unsorted' });
+      service.uploadScreen('ios', 'gap', 'home.png', PNG_1X1, false, '');
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'home.png', PNG_1X1, false, '');
+
+      const manifest = readManifest(store);
+      expect(manifest.apps.find((a: any) => a.id === 'gap').industry).toBe('unsorted');
+      // Public filter and admin vocabulary list real categories only.
+      expect(manifest.taxonomy.industries).toEqual(['saas']);
+      expect(manifest.vocabulary.industries).not.toContain('unsorted');
+    });
+
+    it('records a category chosen here as manual, and keeps the source when it does not change', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      expect(apps()[0].industrySource).toBe('manual');
+
+      // An earlier run (crawler) recorded the store as the source; saving other fields keeps it.
+      const file = join(store, 'apps.json');
+      const doc = JSON.parse(readFileSync(file, 'utf-8'));
+      doc.apps[0].industrySource = 'store';
+      writeFileSync(file, JSON.stringify(doc));
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', tagline: 'New tagline' });
+      expect(apps()[0].industrySource).toBe('store');
+
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'travel' });
+      expect(apps()[0].industrySource).toBe('manual');
+    });
+  });
+
   describe('uploads', () => {
     it('stores a screenshot at screens/<platform>/<app>/<file>', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });

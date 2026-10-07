@@ -1,0 +1,138 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-smart-downloads-1",
+  "screen_id": "netflix-ios-versions-2026-10-07-smart-downloads-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:49.997Z",
+  "screen_type": "player",
+  "published_as": "player",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Smart Downloads",
+  "flow_position": 1,
+  "name": "Smart Downloads",
+  "description": "Player screen. Dark theme, 11 text elements.",
+  "text": "9:41 €\n•ll\n<\nSmart Downloads\nDownloading only happens when you're connected to\nWi-Fi.\nDownload Next Episode\nWe will grab the next episode of a show you\nhave downloaded and delete the ones you\nhave already watched.\nDownloads for You\nWe will find shows and movies we think you\nwill like and save them on your device.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "player",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Smart Downloads”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Player screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Smart Downloads”",
+        "Reached from “App Settings (2)”",
+        "Leads to “App Settings (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:22 in the recording",
+        "Frame 1277 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#323134",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#67666a",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#4e4d4f",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1277,
+    "atSeconds": 382.5,
+    "endSeconds": 383.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Smart Downloads",
+    "headline": "Download Next Episode"
+  },
+  "crawler": {
+    "nodeId": "s142",
+    "depth": 141,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s141",
+        "via": "Tap “Smart Downloads”",
+        "name": "App Settings (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s143",
+        "via": "Wait 0.9s",
+        "name": "App Settings (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-chatting-with-support-2-1",
+  "screen_id": "airbnb-ios-versions-2026-10-07-chatting-with-support-2-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:53.187Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Chatting with support",
+  "flow_position": 1,
+  "name": "Support chat (9)",
+  "description": "Messages screen with a row of 3 category chips and the keyboard open. Light theme, 30 text elements.",
+  "text": "9:411\nQ bearch all messages\nCancel\nTravelling\nAll\nSupport\nYou don't have any messages\nWhen you receive a new message, it will\nappear here.\ni\nW\ne\nt\nU\nO\nh\nk\nd\na\ng\nS\nb\nX\nm\nZ\nC\nV\nn\n123\nspace\ngo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Q bearch all messages”",
+        "Category strip: Travelling, All, Support",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a row of 3 category chips and the keyboard open. Light theme, 30 text elements.",
+        "30 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Chatting with support”",
+        "Reached from “Support chat (8)”",
+        "Leads to “Support chat (10)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:25 in the recording",
+        "Frame 1688 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.646
+    },
+    {
+      "hex": "#d8d9de",
+      "role": "surface",
+      "share": 0.297
+    },
+    {
+      "hex": "#babdc5",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#9c9ea7",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#047afe",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1688,
+    "atSeconds": 505.8,
+    "endSeconds": 506.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [
+      "Travelling",
+      "All",
+      "Support"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Q bearch all messages",
+    "headline": "You don't have any messages"
+  },
+  "crawler": {
+    "nodeId": "s170",
+    "depth": 175,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s169",
+        "via": "Type “Q bearch all messages”",
+        "name": "Support chat (8)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s171",
+        "via": "Type “Messages”",
+        "name": "Support chat (10)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

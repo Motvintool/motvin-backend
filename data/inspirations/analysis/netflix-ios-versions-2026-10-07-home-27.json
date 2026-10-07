@@ -1,0 +1,169 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-home-27",
+  "screen_id": "netflix-ios-versions-2026-10-07-home-27",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:45.354Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 27,
+  "name": "My List sheet",
+  "description": "Bottom sheet, on top of Home home with a 4-item tab bar and a row of 3 category chips. Dark theme, 14 text elements.",
+  "text": "9:41(\nNHome\nMovies\nNew & Hot\nShows\n65\nCHRMYDOF\n#3 in Movies Today\n+ My List\nPlay Movie\nContinue Watching for Surendar\nTOP\n10\nWOMAN\nTAYARD\nMy Netflix\nHome\nClips\nSearch\nUSLAAD\nBHAGAT\nSINGE",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "clips",
+    "search",
+    "my netflix",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Clips, Search, My Netflix",
+        "Navigation title reads “My List”",
+        "Category strip: Movies, New & Hot, Shows",
+        "Bottom sheet, covering 31% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Home home with a 4-item tab bar and a row of 3 category chips. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 43 in “Home”",
+        "Reached from “Home home (25)”",
+        "Leads to “My List sheet (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 4:31 in the recording",
+        "Frame 913 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#475553",
+      "role": "background",
+      "share": 0.177
+    },
+    {
+      "hex": "#121415",
+      "role": "surface",
+      "share": 0.17
+    },
+    {
+      "hex": "#2c3534",
+      "role": "surface",
+      "share": 0.155
+    },
+    {
+      "hex": "#bbd1d8",
+      "role": "text",
+      "share": 0.074
+    },
+    {
+      "hex": "#a5b4b8",
+      "role": "surface",
+      "share": 0.072
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 913,
+    "atSeconds": 271.5,
+    "endSeconds": 274.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.5625,
+        "y": 0.546875,
+        "w": 0.3125,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [
+      "Home",
+      "Clips",
+      "Search",
+      "My Netflix"
+    ],
+    "chipLabels": [
+      "Movies",
+      "New & Hot",
+      "Shows"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "My List",
+    "headline": "CHRMYDOF"
+  },
+  "crawler": {
+    "nodeId": "s101",
+    "depth": 100,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s100",
+        "via": "Tap “+ My List”",
+        "name": "Home home (25)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s102",
+        "via": "Dismiss",
+        "name": "My List sheet (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

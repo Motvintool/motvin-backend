@@ -1,0 +1,156 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-home-3",
+  "screen_id": "netflix-ios-versions-2026-10-07-home-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:39.243Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 3,
+  "name": "Home home (2)",
+  "description": "Feed screen with a 4-item tab bar and a row of 4 category chips. Dark theme, 15 text elements.",
+  "text": "9:41(\n•Il\nNHome\nShows\nNew & Hot\nCategories\nMovies\n65\nОHR MYDOF\n#3 in Movies Today\n+ My List\nPlay Movie\nContinue Watching for Surendar\nTOP\n10\nWOMAN\nAYARD\nMy Netflix\nHome\nClips\nSearch\nUSLAAD\nBHAGAT\nSINGH",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "clips",
+    "search",
+    "my netflix",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Clips, Search, My Netflix",
+        "Navigation title reads “Categories”",
+        "Category strip: Shows, New & Hot, Categories, Movies",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar and a row of 4 category chips. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 43 in “Home”",
+        "Reached from “Notifications permission”",
+        "Leads to “Ohh My Dog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:02 in the recording",
+        "Frame 413 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#475653",
+      "role": "background",
+      "share": 0.184
+    },
+    {
+      "hex": "#131515",
+      "role": "surface",
+      "share": 0.173
+    },
+    {
+      "hex": "#2c3332",
+      "role": "surface",
+      "share": 0.157
+    },
+    {
+      "hex": "#bfd9e2",
+      "role": "text",
+      "share": 0.117
+    },
+    {
+      "hex": "#6d7775",
+      "role": "surface",
+      "share": 0.047
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 413,
+    "atSeconds": 122.4,
+    "endSeconds": 124.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Home",
+      "Clips",
+      "Search",
+      "My Netflix"
+    ],
+    "chipLabels": [
+      "Shows",
+      "New & Hot",
+      "Categories",
+      "Movies"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Categories",
+    "headline": "HR MYDOF"
+  },
+  "crawler": {
+    "nodeId": "s047",
+    "depth": 46,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s046",
+        "via": "Dismiss",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s048",
+        "via": "Open Ohh My Dog",
+        "name": "Ohh My Dog"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

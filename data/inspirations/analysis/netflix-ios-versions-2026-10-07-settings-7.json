@@ -1,0 +1,141 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-settings-7",
+  "screen_id": "netflix-ios-versions-2026-10-07-settings-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:50.082Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 7,
+  "name": "App Settings (3)",
+  "description": "Settings screen with 1 input field. Dark theme, 17 text elements.",
+  "text": "9:41€\noll\nApp Settings\nVideo Playback\nMobile Data Usage\nAutomatic\nDownloads\nWi-Fi Only\nSmart Downloads\n>\nDownload Next Episode\nVideo Quality\nStandard\nDelete All Downloads\niPhone\nUsed\nNetflix\n• Free\nAbout\nInternet speed test",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "video",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “App Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 1 input field. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 16 in “Settings”",
+        "Reached from “Smart Downloads”",
+        "Leads to “Video Quality”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:23 in the recording",
+        "Frame 1280 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.862
+    },
+    {
+      "hex": "#39373a",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#535154",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#6b696c",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1280,
+    "atSeconds": 383.7,
+    "endSeconds": 384.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "App Settings",
+    "headline": "Video Playback"
+  },
+  "crawler": {
+    "nodeId": "s143",
+    "depth": 142,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s142",
+        "via": "Wait 0.9s",
+        "name": "Smart Downloads"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s144",
+        "via": "Tap “Video Quality”",
+        "name": "Video Quality"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

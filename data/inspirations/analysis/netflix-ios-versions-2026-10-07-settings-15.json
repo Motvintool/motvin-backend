@@ -1,0 +1,155 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-settings-15",
+  "screen_id": "netflix-ios-versions-2026-10-07-settings-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:08:50.984Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 15,
+  "name": "Settings · modal",
+  "description": "Settings dialog over a dimmed screen, on top of Settings. Dark theme, 15 text elements.",
+  "text": "9:41€\nO'\nX\nProfiles\nSurendar\nCi SurendarV\nSign Out\nSigning out of this app means you'll\nalso sign out of all other Netflix apps\non this device.\nSign Out\nCancel\nApp Settings\n>\nAccount\nHelp\nSign Out\nVersion: 26.0.0 (6142) 5.0.1-001",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign Out”",
+        "Dialog over a dimmed background, covering 19% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 16 in “Settings”",
+        "Reached from “Settings (8)”",
+        "Leads to “Settings (9)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 6:51 in the recording",
+        "Frame 1386 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191619",
+      "role": "background",
+      "share": 0.879
+    },
+    {
+      "hex": "#3a3437",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#545053",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#671216",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#6b6769",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1386,
+    "atSeconds": 411.9,
+    "endSeconds": 416.1,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.390625,
+        "w": 0.59375,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Sign Out",
+    "headline": "Surendar"
+  },
+  "crawler": {
+    "nodeId": "s156",
+    "depth": 155,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s155",
+        "via": "Tap “Surendar”",
+        "name": "Settings (8)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s157",
+        "via": "Dismiss",
+        "name": "Settings (9)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

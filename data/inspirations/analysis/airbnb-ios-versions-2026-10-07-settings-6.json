@@ -1,0 +1,144 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-07-settings-6",
+  "screen_id": "airbnb-ios-versions-2026-10-07-settings-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-07T13:31:57.446Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 6,
+  "name": "Account settings (4)",
+  "description": "Settings screen. Light theme, 19 text elements.",
+  "text": "9:41 4\nAccount settings\n• Personal information\n>\n• Login & security\n>\nPrivacy\n>\nNotifications\n>\nPayments\nTaxes\n>\nLanguages & translation\nNew\nBooking permissions\n>\nTravel for work\nAccessibility\n>\nVersion 26.40 (204951)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "payment",
+    "notification",
+    "login",
+    "booking",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 12 in “Settings”",
+        "Reached from “Notifications (2)”",
+        "Leads to “Payment method”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 10:15 in the recording",
+        "Frame 2152 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#dbd9db",
+      "role": "surface",
+      "share": 0.069
+    },
+    {
+      "hex": "#a2a1a3",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#c0bfc1",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#8e8d8e",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 2152,
+    "atSeconds": 615.6,
+    "endSeconds": 616.5,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Account settings",
+    "headline": "Login & security"
+  },
+  "crawler": {
+    "nodeId": "s216",
+    "depth": 221,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s215",
+        "via": "Wait 0.9s",
+        "name": "Notifications (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s217",
+        "via": "Tap “Payments”",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}
