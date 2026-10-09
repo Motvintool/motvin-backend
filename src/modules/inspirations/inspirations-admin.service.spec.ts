@@ -87,6 +87,56 @@ describe('InspirationsAdminService', () => {
     });
   });
 
+  describe('app platforms', () => {
+    const apps = () => JSON.parse(readFileSync(join(store, 'apps.json'), 'utf-8')).apps;
+
+    it('stores the platforms chosen for an app, in library order, and keeps them when a later save omits them', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['web', 'ios'] });
+      expect(apps()[0].platforms).toEqual(['ios', 'web']);
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', tagline: 'x' });
+      expect(apps()[0].platforms).toEqual(['ios', 'web']);
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: [] });
+      expect(apps()[0].platforms).toEqual([]);
+    });
+
+    it('refuses a platform the library does not cover', () => {
+      expect(() => service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['android'] })).toThrow(/platforms must be/);
+      expect(() => service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: 'ios' })).toThrow(/platforms must be/);
+    });
+
+    it('moves an app between platforms when its declared platform is not the folder its screens were filed under', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('web', 'acme', 'home.png', PNG_1X1, false, '');
+      expect(readManifest(store).screens[0].platform).toBe('web');
+
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['webapp'] });
+      const manifest = readManifest(store);
+      expect(manifest.screens[0].platform).toBe('webapp');
+      expect(manifest.screens[0].tags).toContain('webapp');
+      expect(manifest.screens[0].tags).not.toContain('web');
+      expect(manifest.apps.find((a: any) => a.id === 'acme').platforms).toEqual(['webapp']);
+      expect(manifest.taxonomy.platforms).toEqual(['webapp']);
+      // The file did not move, so its address and id are unchanged.
+      expect(manifest.screens[0].url).toContain('/screens/web/acme/');
+    });
+
+    it('keeps a screen on a declared platform of its own kind, and falls back to the first declared one otherwise', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'webapp'] });
+      service.uploadScreen('web', 'acme', 'home.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      const platforms = Object.fromEntries(readManifest(store).screens.map((s: any) => [s.file.split('/')[0], s.platform]));
+      // The website's screen is a browser screen, so it goes to the declared browser platform; the iOS one stays.
+      expect(platforms).toEqual({ web: 'webapp', ios: 'ios' });
+    });
+
+    it('lists a declared platform on the app even before it has screens there', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'webapp'] });
+      service.uploadScreen('ios', 'acme', 'home.png', PNG_1X1, false, '');
+      const manifest = readManifest(store);
+      expect(manifest.apps.find((a: any) => a.id === 'acme').platforms).toEqual(['ios', 'webapp']);
+    });
+  });
+
   describe('uploads', () => {
     it('stores a screenshot at screens/<platform>/<app>/<file>', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });

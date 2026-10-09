@@ -22,7 +22,7 @@ import {
 } from 'fs';
 import { basename, extname, join } from 'path';
 
-export const PLATFORMS = ['web', 'ios', 'android'] as const;
+export const PLATFORMS = ['ios', 'webapp', 'web'] as const;
 export const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
 export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 
@@ -636,6 +636,28 @@ export function buildInspirationsManifest(root: string): BuildReport {
     return a.file.localeCompare(b.file, undefined, { numeric: true });
   });
 
+  // Where an app lives is the admin's call when they have made one (apps.json `platforms`): its screens are
+  // listed on those platforms whichever folder they were captured into, so choosing "Web Apps" for an app whose
+  // screens were filed under `web/` moves it out of Webs without moving a file or changing a screen id.
+  // Browser platforms stand in for each other and mobile for mobile, so a re-pick never sends a website's
+  // screens to iOS. An app with nothing declared keeps the platform of each folder.
+  const declaredPlatforms = (appId: string): string[] => {
+    const declared = appRecords.get(appId)?.platforms;
+    return Array.isArray(declared) ? PLATFORMS.filter((p) => declared.includes(p)) : [];
+  };
+  const familyOf = (platform: string) => (platform === 'ios' ? 'mobile' : 'browser');
+  const effectivePlatform = (appId: string, own: string): string => {
+    const declared = declaredPlatforms(appId);
+    if (!declared.length || declared.includes(own)) return own;
+    return declared.find((p) => familyOf(p) === familyOf(own)) ?? declared[0];
+  };
+  for (const screen of screens) {
+    const platform = effectivePlatform(screen.appId, screen.platform);
+    if (platform === screen.platform) continue;
+    screen.tags = uniq<string>((screen.tags || []).map((tag: string) => (tag === screen.platform ? platform : tag)));
+    screen.platform = platform;
+  }
+
   const screensByApp = new Map<string, any[]>();
   for (const screen of screens) {
     if (!screensByApp.has(screen.appId)) screensByApp.set(screen.appId, []);
@@ -669,6 +691,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
         }));
       return {
         ...flow,
+        platform: effectivePlatform(flow.appId, flow.platform),
         summary: stringOrNull(flow.summary),
         screenIds,
         steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })),
@@ -743,7 +766,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
         name: app.name || titleCase(appId),
         slug: appId,
         industry: app.industry,
-        platforms: uniq<string>(appScreens.map((s) => s.platform)),
+        // Where the app lives: what the admin declared, plus anywhere it has published screens.
+        platforms: PLATFORMS.filter(
+          (p) => (Array.isArray(app.platforms) && app.platforms.includes(p)) || appScreens.some((s) => s.platform === p),
+        ),
         website: app.website || null,
         tagline: app.tagline || null,
         logo: logo ? `/api/inspirations/logos/${logo}` : null,

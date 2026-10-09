@@ -723,6 +723,17 @@ export class InspirationsAdminService {
       cardFields = { cardScreens: this.readCardScreens(id, input.cardScreens) };
     }
 
+    // Where the app lives: iOS, Web Apps, Webs. Left out of the request, an earlier pick stays; sent as an
+    // empty list it is cleared (the screens an app has still say where it is).
+    let platformFields: { platforms?: string[] } = {};
+    if (input.platforms !== undefined && input.platforms !== null) {
+      const known = PLATFORMS as readonly string[];
+      if (!Array.isArray(input.platforms) || input.platforms.some((v: unknown) => typeof v !== 'string' || !known.includes(v))) {
+        throw new BadRequestException(`platforms must be a list of ${PLATFORMS.join(', ')}`);
+      }
+      platformFields = { platforms: PLATFORMS.filter((p) => (input.platforms as string[]).includes(p)) };
+    }
+
     // Who set the category. A change made here is a person's call; an unchanged
     // one keeps whatever source it already had (the crawler records `store`/`ai`).
     const previous = apps.find((a) => a.id === id);
@@ -738,6 +749,7 @@ export class InspirationsAdminService {
       ...(input.logo ? { logo: String(input.logo) } : {}),
       ...ratingFields,
       ...cardFields,
+      ...platformFields,
     };
 
     const index = apps.findIndex((a) => a.id === id);

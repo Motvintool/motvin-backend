@@ -79,7 +79,7 @@ const SYNONYMS: Record<string, string[]> = {
   player: ['player'], video: ['player'], music: ['player'], podcast: ['player'],
   form: ['form'], input: ['form'], fields: ['form'],
   keyboard: ['keyboard'], scrolled: ['scrolled'],
-  mobile: ['ios', 'android'], iphone: ['ios'], desktop: ['web'], website: ['web'],
+  mobile: ['ios'], iphone: ['ios'], desktop: ['web'], website: ['web'], webapp: ['webapp'],
   clean: ['minimal'], simple: ['minimal'], black: ['dark'], white: ['light'],
   enterprise: ['corporate'], professional: ['corporate'],
 };

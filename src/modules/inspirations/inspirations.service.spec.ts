@@ -78,7 +78,7 @@ describe('InspirationsService.getCounts', () => {
   });
 
   it('for a platform with nothing stored is empty, and still lists the platforms that exist', async () => {
-    const meta = await service.getCounts(['android']);
+    const meta = await service.getCounts(['webapp']);
     expect(meta.counts.screens).toBe(0);
     expect(meta.counts.apps).toBe(0);
     expect(meta.taxonomy.screenTypes).toEqual([]);
