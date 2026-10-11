@@ -334,13 +334,16 @@ describe('InspirationsAdminService', () => {
       expect(screen.tags).toEqual(expect.arrayContaining(['kpi', 'saas', 'dashboard', 'web']));
     });
 
-    it('refuses an unknown screen type or style', () => {
+    it('accepts a new screen type, style or state, but only in filter-safe form', () => {
       expect(() =>
-        service.saveScreenMeta('web', 'acme', 'dashboard.png', { screenType: 'nonsense' as never }),
+        service.saveScreenMeta('web', 'acme', 'dashboard.png', { screenType: 'paywall' as never, style: ['neon'] as never, states: ['offline'] as never }),
+      ).not.toThrow();
+      expect(() =>
+        service.saveScreenMeta('web', 'acme', 'dashboard.png', { screenType: 'Pay wall!' as never }),
       ).toThrow(/screenType/i);
       expect(() =>
-        service.saveScreenMeta('web', 'acme', 'dashboard.png', { style: ['neon'] as never }),
-      ).toThrow(/unknown style/i);
+        service.saveScreenMeta('web', 'acme', 'dashboard.png', { style: ['neon glow'] as never }),
+      ).toThrow(/style/i);
     });
 
     it('lets patterns match from the components recorded on a screen', () => {

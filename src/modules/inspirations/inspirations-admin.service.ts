@@ -276,10 +276,12 @@ export class InspirationsAdminService {
       generatedAt: manifest.generatedAt || null,
       vocabulary: {
         platforms: PLATFORMS,
-        screenTypes: SCREEN_TYPES,
-        states: SCREEN_STATES,
+        // The built-in values first, then any new ones the library already uses, so the admin's pickers offer
+        // everything a screen can be filed under.
+        screenTypes: Array.from(new Set([...SCREEN_TYPES, ...(manifest.taxonomy?.screenTypes ?? [])])),
+        states: Array.from(new Set([...SCREEN_STATES, ...(manifest.taxonomy?.states ?? [])])),
         industries: INDUSTRIES,
-        styles: STYLES,
+        styles: Array.from(new Set([...STYLES, ...(manifest.taxonomy?.styles ?? [])])),
         // Presets first, then anything this library has actually used, so the
         // category box suggests real history rather than only the defaults.
         flowCategories: Array.from(
@@ -291,8 +293,12 @@ export class InspirationsAdminService {
     };
   }
 
+  /** When the manifest was last rebuilt (ms), so the folder watcher can skip changes a rebuild already covered. */
+  lastRebuildAt = 0;
+
   rebuild(): BuildReport {
     const report = buildInspirationsManifest(this.root);
+    this.lastRebuildAt = Date.now();
     // The public API caches the manifest; without this it would keep serving
     // the previous one, and a screen that was just approved would 404.
     this.loader.invalidate();
@@ -376,16 +382,21 @@ export class InspirationsAdminService {
     const image = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}${ext}`));
     if (!existsSync(image)) throw new NotFoundException('That screen is not in the store');
 
-    if (meta.screenType && !(SCREEN_TYPES as readonly string[]).includes(meta.screenType)) {
-      throw new BadRequestException(`screenType must be one of ${SCREEN_TYPES.join(', ')}`);
+    // Types, styles and states outside the built-in lists are new values, not errors — the library grows its
+    // own vocabulary, and the filters pick a new value up on the next manifest build. They only have to be
+    // filter-safe: lower-case letters, digits and hyphens.
+    const TAXONOMY_VALUE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+    const screenType = typeof meta.screenType === 'string' ? meta.screenType.trim().toLowerCase() : '';
+    if (screenType && !TAXONOMY_VALUE.test(screenType)) {
+      throw new BadRequestException('screenType must be lower-case letters, digits and hyphens');
     }
-    const styles: string[] = Array.isArray(meta.style) ? meta.style : [];
-    const badStyle = styles.find((s) => !(STYLES as readonly string[]).includes(s));
-    if (badStyle) throw new BadRequestException(`unknown style "${badStyle}"`);
+    const styles: string[] = Array.isArray(meta.style) ? meta.style.map((s: unknown) => String(s).trim().toLowerCase()) : [];
+    const badStyle = styles.find((s) => !TAXONOMY_VALUE.test(s));
+    if (badStyle) throw new BadRequestException(`style "${badStyle}" must be lower-case letters, digits and hyphens`);
 
-    const states: string[] = Array.isArray(meta.states) ? meta.states.map(String) : [];
-    const badState = states.find((v) => !(SCREEN_STATES as readonly string[]).includes(v));
-    if (badState) throw new BadRequestException(`unknown state "${badState}"`);
+    const states: string[] = Array.isArray(meta.states) ? meta.states.map((v: unknown) => String(v).trim().toLowerCase()) : [];
+    const badState = states.find((v) => !TAXONOMY_VALUE.test(v));
+    if (badState) throw new BadRequestException(`state "${badState}" must be lower-case letters, digits and hyphens`);
 
     // Fields automatic capture wrote and the form does not edit are carried
     // over, so saving a name never wipes a description or the capture facts.
@@ -394,7 +405,7 @@ export class InspirationsAdminService {
     const sidecar = {
       ...existing,
       name: typeof meta.name === 'string' && meta.name.trim() ? meta.name.trim() : titleCase(base),
-      screenType: meta.screenType || undefined,
+      screenType: screenType || undefined,
       states,
       description:
         typeof meta.description === 'string' ? meta.description.trim().slice(0, 600) : (existing.description as string | undefined) ?? '',

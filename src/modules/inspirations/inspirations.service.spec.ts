@@ -1,5 +1,5 @@
 import { ConfigService } from '@nestjs/config';
-import { mkdirSync, mkdtempSync, rmSync } from 'fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { InspirationsAdminService } from './inspirations-admin.service';
@@ -90,5 +90,129 @@ describe('InspirationsService.getCounts', () => {
     const meta = await service.getCounts(['ios', 'web']);
     expect(meta.counts.screens).toBe(4);
     expect(meta.taxonomy.industries.sort()).toEqual(['food', 'productivity']);
+  });
+});
+
+describe('new taxonomy values, end to end', () => {
+  let tmp: string;
+  let admin: InspirationsAdminService;
+  let service: InspirationsService;
+
+  beforeEach(() => {
+    tmp = mkdtempSync(join(tmpdir(), 'ins-new-type-'));
+    const dataRoot = join(tmp, 'data');
+    mkdirSync(join(dataRoot, 'inspirations'), { recursive: true });
+    const config = { get: (key: string) => (key === 'dataRoot' ? dataRoot : undefined) } as unknown as ConfigService;
+    const loader = new LoaderService(config);
+    admin = new InspirationsAdminService(config, loader);
+    service = new InspirationsService(loader);
+
+    admin.saveApp({ id: 'mobi', name: 'Mobi', industry: 'food' });
+    admin.uploadScreen('ios', 'mobi', 'home.png', PNG_1X1, false, '');
+    admin.uploadScreen('ios', 'mobi', 'offer.png', PNG_1X1, false, '');
+    admin.saveScreenMeta('ios', 'mobi', 'home.png', { screenType: 'home', name: 'Mobi home' });
+    // "paywall", "neon" and "offline" are not in the built-in lists.
+    admin.saveScreenMeta('ios', 'mobi', 'offer.png', { screenType: 'paywall' as never, style: ['neon'] as never, states: ['offline'] as never, name: 'Mobi offer' });
+  });
+
+  afterEach(() => rmSync(tmp, { recursive: true, force: true }));
+
+  it('keeps the screen and offers the new values in the filters', async () => {
+    const meta = await service.getCounts();
+    expect(meta.counts.screens).toBe(2);
+    expect(meta.taxonomy.screenTypes).toEqual(['home', 'paywall']);
+    expect(meta.taxonomy.styles).toContain('neon');
+    expect(meta.taxonomy.states).toContain('offline');
+  });
+
+  it('search counts and filters by a new value like any other', async () => {
+    const all = await service.search('mobi');
+    expect(all.facets?.screenTypes).toEqual({ home: 1, paywall: 1 });
+    const narrowed = await service.search('mobi', 50, 0, { screenType: ['paywall'] });
+    expect(narrowed.screens.map((s) => s.screenType)).toEqual(['paywall']);
+    // A dimension's own counts ignore its own filter, so the other values stay pickable.
+    expect(narrowed.facets?.screenTypes).toEqual({ home: 1, paywall: 1 });
+    expect(narrowed.facets?.styles).toEqual({ neon: 1 });
+  });
+});
+
+describe('search: what a query names becomes a visible filter', () => {
+  let tmp: string;
+  let service: InspirationsService;
+
+  beforeEach(() => {
+    tmp = mkdtempSync(join(tmpdir(), 'ins-literal-'));
+    const dataRoot = join(tmp, 'data');
+    mkdirSync(join(dataRoot, 'inspirations'), { recursive: true });
+    const config = { get: (key: string) => (key === 'dataRoot' ? dataRoot : undefined) } as unknown as ConfigService;
+    const loader = new LoaderService(config);
+    const admin = new InspirationsAdminService(config, loader);
+    service = new InspirationsService(loader);
+    admin.saveApp({ id: 'mobi', name: 'Mobi', industry: 'food' });
+    for (const f of ['signin.png', 'otp.png', 'settings.png']) admin.uploadScreen('ios', 'mobi', f, PNG_1X1, false, '');
+    admin.saveScreenMeta('ios', 'mobi', 'signin.png', { screenType: 'login', name: 'Sign in' });
+    admin.saveScreenMeta('ios', 'mobi', 'otp.png', { screenType: 'login', name: 'Enter code' });
+    // Mentions logging in, but is a settings screen.
+    admin.saveScreenMeta('ios', 'mobi', 'settings.png', { screenType: 'settings', name: 'Login and security' });
+  });
+
+  afterEach(() => rmSync(tmp, { recursive: true, force: true }));
+
+  it('reads "login" as the Login screen type', async () => {
+    const result = await service.search('login');
+    expect(result.intent.screenTypes).toEqual(['login']);
+    expect(result.screens.map((s) => s.screenType).sort()).toEqual(['login', 'login']);
+  });
+
+  it('as the same query plus that filter, read literally, gives the same screens', async () => {
+    const interpreted = await service.search('login');
+    const explicit = await service.search('login', 50, 0, { screenType: ['login'] }, true);
+    expect(explicit.screens.map((s) => s.id).sort()).toEqual(interpreted.screens.map((s) => s.id).sort());
+  });
+
+  it('with that filter cleared, finds every screen that mentions the word', async () => {
+    const literal = await service.search('login', 50, 0, {}, true);
+    expect(literal.intent.screenTypes).toEqual([]);
+    expect(literal.screens.map((s) => s.screenType).sort()).toEqual(['login', 'login', 'settings']);
+    expect(literal.facets?.screenTypes).toEqual({ login: 2, settings: 1 });
+  });
+});
+
+describe('screenshot text: saved word positions', () => {
+  let tmp: string;
+  let loader: LoaderService;
+  let service: InspirationsService;
+
+  beforeEach(() => {
+    tmp = mkdtempSync(join(tmpdir(), 'ins-words-'));
+    const dataRoot = join(tmp, 'data');
+    mkdirSync(join(dataRoot, 'inspirations'), { recursive: true });
+    const config = { get: (key: string) => (key === 'dataRoot' ? dataRoot : undefined) } as unknown as ConfigService;
+    loader = new LoaderService(config);
+    const admin = new InspirationsAdminService(config, loader);
+    service = new InspirationsService(loader);
+    admin.saveApp({ id: 'mobi', name: 'Mobi', industry: 'food' });
+    admin.uploadScreen('ios', 'mobi', 'home.png', PNG_1X1, false, '');
+  });
+
+  afterEach(() => rmSync(tmp, { recursive: true, force: true }));
+
+  it('are read back instead of reading the image again', async () => {
+    const box = { text: 'password', left: 10, top: 40, width: 20, height: 3 };
+    await loader.saveWords('mobi-ios-home', [box], 'enter your password');
+    expect(await loader.getWords('mobi-ios-home')).toMatchObject({ screenId: 'mobi-ios-home', words: [box] });
+
+    // The 1×1 test image has no readable text, so a match and its highlight can only come from the saved record.
+    const result = await service.searchScreenshotText('password');
+    expect(result.screens.map((s) => s.id)).toEqual(['mobi-ios-home']);
+    expect(result.textHighlights['mobi-ios-home']).toEqual([{ left: 10, top: 40, width: 20, height: 3 }]);
+  });
+
+  it('ignores a record saved in an older shape', async () => {
+    await loader.saveWords('mobi-ios-home', [], 'x');
+    const file = join(tmp, 'data', 'inspirations', 'words', 'mobi-ios-home.json');
+    const record = JSON.parse(readFileSync(file, 'utf8'));
+    writeFileSync(file, JSON.stringify({ ...record, version: 0 }));
+    expect(await loader.getWords('mobi-ios-home')).toBeNull();
   });
 });

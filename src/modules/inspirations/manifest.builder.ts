@@ -410,6 +410,24 @@ export function titleCase(slug: string): string {
   return slug.split(/[-_]/).map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w)).join(' ');
 }
 
+/**
+ * A taxonomy value as written in a sidecar, made URL- and filter-safe: lower case, words joined by "-".
+ * Values outside the built-in vocabulary are kept (with a warning) so a new screen type, state or style shows
+ * up in the filters as soon as a screen carries it — nothing is dropped for being new.
+ */
+function slugValue(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const slug = value.trim().toLowerCase().replace(/[\s_]+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '');
+  return slug || null;
+}
+
+/** The vocabulary's own order first, then any extra values the store holds, A–Z. */
+function presentInOrder(vocabulary: readonly string[], present: Set<string>): string[] {
+  const known = vocabulary.filter((v) => present.has(v));
+  const extra = Array.from(present).filter((v) => !vocabulary.includes(v)).sort();
+  return [...known, ...extra];
+}
+
 function uniq<T>(list: T[]): T[] {
   return Array.from(new Set(list.filter(Boolean)));
 }
@@ -523,25 +541,27 @@ export function buildInspirationsManifest(root: string): BuildReport {
         const versionId =
           entry.versionId || (sidecar.capturedAt || source.capturedAt || localDateString()).slice(0, 10);
         const typeFromName = base.split('-')[0].toLowerCase();
+        // The sidecar's type wins, whatever it is: a type outside the vocabulary is a new kind of screen, not a
+        // mistake to drop the screen over. A filename only counts when it starts with a known type.
+        const sidecarType = slugValue(sidecar.screenType);
         const screenType =
-          sidecar.screenType || ((SCREEN_TYPES as readonly string[]).includes(typeFromName) ? typeFromName : 'other');
-
-        if (sidecar.screenType && !(SCREEN_TYPES as readonly string[]).includes(sidecar.screenType)) {
-          problems.push(`${platform}/${appId}/${base}.json has unknown screenType "${sidecar.screenType}"`);
-          continue;
+          sidecarType || ((SCREEN_TYPES as readonly string[]).includes(typeFromName) ? typeFromName : 'other');
+        if (sidecarType && !(SCREEN_TYPES as readonly string[]).includes(sidecarType)) {
+          warnings.push(`${platform}/${appId}/${base}.json uses a new screenType "${sidecarType}" — added to the filters`);
         }
-        const badStyles = (sidecar.style || []).filter((s: string) => !(STYLES as readonly string[]).includes(s));
-        if (badStyles.length) {
-          warnings.push(`${platform}/${appId}/${base}.json has unknown style(s): ${badStyles.join(', ')}`);
+        const styles: string[] = uniq<string>(
+          (Array.isArray(sidecar.style) ? sidecar.style : []).map(slugValue).filter((v: string | null): v is string => Boolean(v)),
+        );
+        const newStyles = styles.filter((s) => !(STYLES as readonly string[]).includes(s));
+        if (newStyles.length) {
+          warnings.push(`${platform}/${appId}/${base}.json uses new style(s): ${newStyles.join(', ')} — added to the filters`);
         }
         const states: string[] = uniq<string>(
-          (Array.isArray(sidecar.states) ? sidecar.states : []).filter((v: string) =>
-            (SCREEN_STATES as readonly string[]).includes(v),
-          ),
+          (Array.isArray(sidecar.states) ? sidecar.states : []).map(slugValue).filter((v: string | null): v is string => Boolean(v)),
         );
-        const badStates = (sidecar.states || []).filter((v: string) => !(SCREEN_STATES as readonly string[]).includes(v));
-        if (badStates.length) {
-          warnings.push(`${platform}/${appId}/${base}.json has unknown state(s): ${badStates.join(', ')}`);
+        const newStates = states.filter((v) => !(SCREEN_STATES as readonly string[]).includes(v));
+        if (newStates.length) {
+          warnings.push(`${platform}/${appId}/${base}.json uses new state(s): ${newStates.join(', ')} — added to the filters`);
         }
         // Facts about the moment of capture, when automatic capture recorded
         // them. Only the ones the gallery can use travel into the manifest.
@@ -595,7 +615,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
             industry: app.industry,
             tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
             elements: uniq<string>(sidecar.elements || []),
-            style: uniq<string>((sidecar.style || []).filter((s: string) => (STYLES as readonly string[]).includes(s))),
+            style: styles,
             capturedAt: sidecar.capturedAt || source.capturedAt || null,
             version: versionId,
             hasAnalysis: existsSync(join(analysisDir, `${id}.json`)),
@@ -837,10 +857,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
     // validation and for the admin tooling.
     taxonomy: {
       platforms: PLATFORMS.filter((p) => screens.some((s) => s.platform === p)),
-      screenTypes: SCREEN_TYPES.filter((t) => screens.some((s) => s.screenType === t)),
-      states: SCREEN_STATES.filter((v) => screens.some((s) => s.states.includes(v))),
+      screenTypes: presentInOrder(SCREEN_TYPES, new Set(screens.map((s) => s.screenType))),
+      states: presentInOrder(SCREEN_STATES, new Set(screens.flatMap((s) => s.states))),
       industries: PICKABLE_INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
-      styles: STYLES.filter((v) => screens.some((s) => s.style.includes(v))),
+      styles: presentInOrder(STYLES, new Set(screens.flatMap((s) => s.style))),
       elements: Object.keys(elementCounts).sort(),
       flowCategories: Array.from(new Set(publishedFlows.map((f) => f.category).filter(Boolean))).sort(),
     },

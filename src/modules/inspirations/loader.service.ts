@@ -1,6 +1,6 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { readFile, stat } from 'fs/promises';
+import { mkdir, readFile, rename, stat, writeFile } from 'fs/promises';
 import { join, resolve, sep } from 'path';
 
 /**
@@ -337,4 +337,53 @@ export class LoaderService implements OnModuleInit {
       return null;
     }
   }
+
+  // ─── Word positions ─────────────────────────────────────────────────────
+
+  /**
+   * Where the words OCR found on a screen, with their boxes, are kept: data/inspirations/words/<screen id>.json.
+   * Separate from the analyzer's records (those describe the screen and feed the manifest build); these only
+   * serve the screenshot-text highlights, so a search never has to read an image again.
+   */
+  private wordsFile(screenId: string): string | null {
+    const safeId = screenId.replace(/[^a-zA-Z0-9._-]/g, '');
+    return safeId === screenId ? join(this.root, 'words', `${safeId}.json`) : null;
+  }
+
+  async getWords(screenId: string): Promise<StoredWords | null> {
+    const file = this.wordsFile(screenId);
+    if (!file) return null;
+    try {
+      const record = JSON.parse(await readFile(file, 'utf-8'));
+      return record && record.version === WORDS_VERSION && Array.isArray(record.words) ? record : null;
+    } catch {
+      return null;
+    }
+  }
+
+  async saveWords(screenId: string, words: StoredWords['words'], text: string): Promise<void> {
+    const file = this.wordsFile(screenId);
+    if (!file) return;
+    const record: StoredWords = { version: WORDS_VERSION, screenId, text, words, savedAt: new Date().toISOString() };
+    try {
+      await mkdir(join(this.root, 'words'), { recursive: true });
+      // Write then rename, so a reader never sees half a file.
+      await writeFile(`${file}.tmp`, JSON.stringify(record));
+      await rename(`${file}.tmp`, file);
+    } catch (error) {
+      this.logger.warn(`Word positions for ${screenId} could not be saved: ${(error as Error).message}`);
+    }
+  }
+}
+
+/** Bump when the stored shape changes, so old records are read again from the image. */
+export const WORDS_VERSION = 1;
+
+/** One screen's recognised words, each box in percent of the screenshot. */
+export interface StoredWords {
+  version: number;
+  screenId: string;
+  text: string;
+  words: Array<{ text: string; left: number; top: number; width: number; height: number }>;
+  savedAt: string;
 }

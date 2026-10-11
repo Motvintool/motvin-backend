@@ -166,12 +166,28 @@ export class InspirationsController {
     @Query('limit') limit = 50,
     @Query('offset') offset = 0,
     @Query('appId') appId?: string,
+    @Query('platform') platform?: string,
+    @Query('type') type?: string,
+    @Query('state') state?: string,
+    @Query('industry') industry?: string,
+    @Query('style') style?: string,
+    @Query('element') element?: string,
+    @Query('app') app?: string,
+    @Query('literal') literal?: string,
   ) {
     const safeLimit = Math.min(Number(limit) || 50, 200);
     const safeOffset = Number(offset) || 0;
     const data = mode === 'text'
       ? await this.service.searchScreenshotText(q, safeLimit, safeOffset, appId || undefined)
-      : await this.service.search(q, safeLimit, safeOffset);
+      : await this.service.search(q, safeLimit, safeOffset, {
+          platform: splitList(platform),
+          screenType: splitList(type),
+          state: splitList(state),
+          industry: splitList(industry),
+          style: splitList(style),
+          element: splitList(element),
+          apps: splitList(app),
+        }, literal === '1' || literal === 'true');
     return { success: true, data };
   }
 

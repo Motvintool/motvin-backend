@@ -1,4 +1,4 @@
-import { Injectable, OnModuleDestroy } from '@nestjs/common';
+import { Injectable, Logger, OnApplicationBootstrap, OnModuleDestroy } from '@nestjs/common';
 import { createScheduler, createWorker, Scheduler } from 'tesseract.js';
 import {
   InspirationApp,
@@ -26,6 +26,20 @@ export interface ScreenQuery {
   limit?: number;
   offset?: number;
   sort?: 'newest' | 'oldest' | 'app' | 'curated';
+}
+
+/** A vocabulary with nothing in it: every query word is then free text. */
+const LITERAL_TAXONOMY = { platforms: [], screenTypes: [], industries: [], styles: [], states: [] };
+
+/** Narrowing for search results: the screen-list dimensions plus a set of apps. */
+export interface SearchFilters {
+  platform?: string[];
+  screenType?: string[];
+  state?: string[];
+  industry?: string[];
+  style?: string[];
+  element?: string[];
+  apps?: string[];
 }
 
 export interface Page<T> {
@@ -92,14 +106,59 @@ const STOP = new Set([
 
 const OCR_WORKERS = 4;
 @Injectable()
-export class InspirationsService implements OnModuleDestroy {
+export class InspirationsService implements OnModuleDestroy, OnApplicationBootstrap {
+  private readonly logger = new Logger(InspirationsService.name);
   private readonly screenshotText = new Map<string, Promise<RecognizedScreenshot>>();
   private ocrScheduler: Promise<Scheduler> | null = null;
+  private backfill: Promise<void> | null = null;
+  private stopping = false;
 
   constructor(private readonly loader: LoaderService) {}
 
+  /**
+   * After start-up, fill in the word positions of any screen that has none saved yet, one at a time in the
+   * background — so the screenshot-text highlights are ready before anyone searches. Off in tests and when
+   * INSPIRATIONS_WORDS_BACKFILL=off.
+   */
+  onApplicationBootstrap() {
+    if (process.env.NODE_ENV === 'test' || process.env.INSPIRATIONS_WORDS_BACKFILL === 'off') return;
+    setTimeout(() => void this.backfillWords(), 3000).unref?.();
+  }
+
   async onModuleDestroy() {
+    this.stopping = true;
     await (await this.ocrScheduler)?.terminate();
+  }
+
+  /**
+   * Saves word positions for every screen that lacks them, a few at a time (one per OCR worker). Safe to call any
+   * time: only one run happens at once, and screens already done are skipped.
+   */
+  backfillWords(): Promise<void> {
+    this.backfill ??= (async () => {
+      try {
+        const screens = await this.loader.getScreens();
+        const missing: InspirationScreen[] = [];
+        for (const screen of screens) if (!(await this.loader.getWords(screen.id))) missing.push(screen);
+        if (!missing.length) return;
+        this.logger.log(`Saving word positions for ${missing.length} screen(s) in the background`);
+        let done = 0;
+        for (let i = 0; i < missing.length; i += OCR_WORKERS) {
+          if (this.stopping) return;
+          const batch = missing.slice(i, i + OCR_WORKERS);
+          await Promise.all(batch.map((screen) => this.textInScreenshot(screen)));
+          const before = done;
+          done += batch.length;
+          if (Math.floor(done / 100) > Math.floor(before / 100)) this.logger.log(`Word positions: ${done}/${missing.length}`);
+        }
+        this.logger.log(`Word positions saved for ${done} screen(s)`);
+      } catch (error) {
+        this.logger.warn(`Word-position backfill stopped: ${(error as Error).message}`);
+      } finally {
+        this.backfill = null;
+      }
+    })();
+    return this.backfill;
   }
 
   // One pool for the process: starting a worker loads the language model, which
@@ -195,16 +254,21 @@ export class InspirationsService implements OnModuleDestroy {
     };
   }
 
-  async getScreens(query: ScreenQuery): Promise<Page<InspirationScreen>> {
-    let screens = await this.loader.getScreens();
+  /** The screen-list filters (platform, type, state, industry, style, element, apps), shared with search. */
+  private filterScreens(screens: InspirationScreen[], query: SearchFilters): InspirationScreen[] {
+    let out = screens;
+    if (query.apps?.length) out = out.filter((s) => query.apps.includes(s.appId));
+    if (query.platform?.length) out = out.filter((s) => query.platform.includes(s.platform));
+    if (query.screenType?.length) out = out.filter((s) => query.screenType.includes(s.screenType));
+    if (query.state?.length) out = out.filter((s) => query.state.some((v) => s.states.includes(v)));
+    if (query.industry?.length) out = out.filter((s) => query.industry.includes(s.industry));
+    if (query.style?.length) out = out.filter((s) => query.style.some((v) => s.style.includes(v)));
+    if (query.element?.length) out = out.filter((s) => query.element.some((v) => s.elements.includes(v)));
+    return out;
+  }
 
-    if (query.app) screens = screens.filter((s) => s.appId === query.app);
-    if (query.platform?.length) screens = screens.filter((s) => query.platform.includes(s.platform));
-    if (query.screenType?.length) screens = screens.filter((s) => query.screenType.includes(s.screenType));
-    if (query.state?.length) screens = screens.filter((s) => query.state.some((v) => s.states.includes(v)));
-    if (query.industry?.length) screens = screens.filter((s) => query.industry.includes(s.industry));
-    if (query.style?.length) screens = screens.filter((s) => query.style.some((v) => s.style.includes(v)));
-    if (query.element?.length) screens = screens.filter((s) => query.element.some((v) => s.elements.includes(v)));
+  async getScreens(query: ScreenQuery): Promise<Page<InspirationScreen>> {
+    let screens = this.filterScreens(await this.loader.getScreens(), { ...query, apps: query.app ? [query.app] : undefined });
 
     if (query.q?.trim()) {
       const apps = await this.loader.getApps();
@@ -371,20 +435,48 @@ export class InspirationsService implements OnModuleDestroy {
     return { basis: 'metadata', items };
   }
 
-  async search(q: string, limit = 50, offset = 0) {
-    const [screens, apps, flows, patterns] = await Promise.all([
+  /**
+   * `literal` reads every word as plain text: nothing is taken to mean a screen type, category, style or state.
+   * The search page uses it once it has turned what a query names into visible filters, so the words don't keep
+   * narrowing the results behind those filters' backs.
+   */
+  async search(q: string, limit = 50, offset = 0, filters: SearchFilters = {}, literal = false) {
+    const [allScreens, allApps, allFlows, patterns] = await Promise.all([
       this.loader.getScreens(),
       this.loader.getApps(),
       this.loader.getFlows(),
       this.loader.getPatterns(),
     ]);
 
-    const intent = this.interpret(q, await this.loader.getManifest());
+    const intent = this.interpret(q, literal ? { taxonomy: LITERAL_TAXONOMY } : await this.loader.getManifest());
     if (!intent.terms.length) {
       return { intent, apps: [], screens: [], flows: [], patterns: [], total: 0 };
     }
 
-    const rankedScreens = this.rankScreens(screens, q, apps);
+    // Rank every screen first, so how the query is read doesn't depend on which screens the filters leave in;
+    // then the filters narrow the ranked list. Filters also narrow apps (platform, industry, app set) and flows
+    // (platform, app set).
+    const rankedAll = this.rankScreens(allScreens, q, allApps, literal);
+    const apps = allApps.filter(
+      (a) =>
+        (!filters.apps?.length || filters.apps.includes(a.id)) &&
+        (!filters.platform?.length || filters.platform.some((p) => a.platforms.includes(p))) &&
+        (!filters.industry?.length || filters.industry.includes(a.industry)),
+    );
+    const flows = allFlows.filter(
+      (f) => (!filters.apps?.length || filters.apps.includes(f.appId)) && (!filters.platform?.length || filters.platform.includes(f.platform)),
+    );
+
+    const rankedScreens = this.filterScreens(rankedAll, filters);
+    // Counts per filter value among the matches, each dimension counted with every *other* filter applied — so
+    // a pill lists every value the results hold (new ones included) and how many screens picking it would show.
+    const facets = {
+      screenTypes: this.tally(this.filterScreens(rankedAll, { ...filters, screenType: undefined }).map((s) => [s.screenType])),
+      states: this.tally(this.filterScreens(rankedAll, { ...filters, state: undefined }).map((s) => s.states)),
+      industries: this.tally(this.filterScreens(rankedAll, { ...filters, industry: undefined }).map((s) => [s.industry])),
+      styles: this.tally(this.filterScreens(rankedAll, { ...filters, style: undefined }).map((s) => s.style)),
+      elements: this.tally(this.filterScreens(rankedAll, { ...filters, element: undefined }).map((s) => s.elements)),
+    };
     const matchedApps = apps.filter((a) => {
       if (intent.industries.length && !intent.industries.includes(a.industry)) return false;
       const hay = `${a.name} ${a.tagline || ''}`.toLowerCase();
@@ -410,7 +502,15 @@ export class InspirationsService implements OnModuleDestroy {
       total:
         matchedApps.length + rankedScreens.length + matchedFlows.length + matchedPatterns.length,
       screenTotal: rankedScreens.length,
+      facets,
     };
+  }
+
+  /** How many screens carry each value, counting a screen once per value. */
+  private tally(valuesPerScreen: (string[] | undefined)[]): Record<string, number> {
+    const out: Record<string, number> = {};
+    for (const values of valuesPerScreen) for (const v of new Set(values ?? [])) if (v) out[v] = (out[v] ?? 0) + 1;
+    return out;
   }
 
   /** OCR-backed search is opt-in: the regular search remains metadata-only. */
@@ -462,13 +562,26 @@ export class InspirationsService implements OnModuleDestroy {
     return (await this.textInScreenshot(screen)).text;
   }
 
-  // Reads the image itself — only for word positions, and for screens whose
-  // analysis record carries no text (added by hand, or before it was saved).
+  // The words on a screen with their positions: saved once (data/inspirations/words), so the image is only read
+  // the first time — for word positions, and for screens whose analysis record carries no text.
   private textInScreenshot(screen: InspirationScreen): Promise<RecognizedScreenshot> {
     const cached = this.screenshotText.get(screen.id);
     if (cached) return cached;
 
     const extraction = (async (): Promise<RecognizedScreenshot> => {
+      const stored = await this.loader.getWords(screen.id);
+      if (stored) return { text: stored.text, words: stored.words };
+      const recognized = await this.recognize(screen);
+      // An empty result from a failed read isn't saved, so the screen is tried again next time.
+      if (recognized.text || recognized.words.length) await this.loader.saveWords(screen.id, recognized.words, recognized.text);
+      return recognized;
+    })();
+    this.screenshotText.set(screen.id, extraction);
+    return extraction;
+  }
+
+  private recognize(screen: InspirationScreen): Promise<RecognizedScreenshot> {
+    return (async (): Promise<RecognizedScreenshot> => {
       const file = await this.loader.resolveServableFile(`screens/${screen.file}`);
       if (!file) return { text: '', words: [] };
       try {
@@ -482,8 +595,6 @@ export class InspirationsService implements OnModuleDestroy {
         return { text: '', words: [] };
       }
     })();
-    this.screenshotText.set(screen.id, extraction);
-    return extraction;
   }
 
   private ocrWords(tsv: string, screen: InspirationScreen): RecognizedScreenshot['words'] {
@@ -544,9 +655,9 @@ export class InspirationsService implements OnModuleDestroy {
     return intent;
   }
 
-  private rankScreens(screens: InspirationScreen[], q: string, apps: InspirationApp[]) {
+  private rankScreens(screens: InspirationScreen[], q: string, apps: InspirationApp[], literal = false) {
     const appNames = new Map(apps.map((a) => [a.id, a.name.toLowerCase()]));
-    const taxonomy = {
+    const taxonomy = literal ? LITERAL_TAXONOMY : {
       platforms: Array.from(new Set(screens.map((s) => s.platform))),
       screenTypes: Array.from(new Set(screens.map((s) => s.screenType))),
       industries: Array.from(new Set(screens.map((s) => s.industry))),
