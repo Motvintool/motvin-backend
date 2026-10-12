@@ -1,0 +1,143 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-onboarding-166",
+  "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-166",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-11T18:23:14.246Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 166,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “SUBMIT”. Dark theme, 7 text elements.",
+  "text": "9:41(\nDuolingo for Schools\nJoin a Classroom\nEnter the code shared by your teacher! This lets your teacher\nsee your progress, send assignments, and control your\naccount on Duolingo.\n000000\nSUBMIT",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Duolingo for Schools”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “SUBMIT”. Dark theme, 7 text elements.",
+        "Calls to action: “SUBMIT”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 166 of 187 in “Onboarding”",
+        "Reached from “Settings (6)”",
+        "Leads to “Settings (7)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:05 in the recording",
+        "Frame 1619 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#152128",
+      "role": "background",
+      "share": 0.925
+    },
+    {
+      "hex": "#3c4851",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#5c656b",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#6c6621",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#ab981d",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1619,
+    "atSeconds": 485.1,
+    "endSeconds": 486,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "SUBMIT"
+    ],
+    "keyboard": false,
+    "title": "Duolingo for Schools",
+    "headline": "Account on Duolingo"
+  },
+  "crawler": {
+    "nodeId": "s177",
+    "depth": 176,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s176",
+        "via": "Tap “ACCOUNT”",
+        "name": "Settings (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s178",
+        "via": "Wait 0.9s",
+        "name": "Settings (7)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

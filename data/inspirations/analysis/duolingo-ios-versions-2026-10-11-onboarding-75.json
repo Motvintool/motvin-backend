@@ -1,0 +1,166 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-onboarding-75",
+  "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-75",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-11T18:23:06.046Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 75,
+  "name": "Phone number entry · bottom sheet",
+  "description": "Login bottom sheet, on top of Phone number entry with a row of 7 category chips. Dark theme, 63 text elements.",
+  "text": "9:41(\n•0ll\nV\nST\nJC\nMA\nPS\nDM\nB\nJC\nB\nTG\nFB\nRF\nAF\nJJ\nDS\nS\nA\nM\nS\nA\nOF\nD\nGJ\nA\nSS\nTH\nG\nA\nJ\nS\nA\nSK\nV\nAP\nGV\nT\nMF\nC\nV\nJT\nC\nA\nYS\nS\nGA\nM\nS\nJ\nK\nC\nBP\n+441\nYou have 503 contacts.\nContact information includes names, emails, photos,\nphone numbers, addresses and more.\nHow do you want to\nshare contacts?\nSelecting contacts lets you pick\nthe ones you want to add right\nnow. You can always add more\nlater. Allowing full access will add\nall vour contacts.\nSelect Contacts\nShare All 503 Contacts",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "address",
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The ones you want to add right”",
+        "Category strip: TG, FB, RF, AF, JJ, DS, S",
+        "Bottom sheet, covering 38% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet, on top of Phone number entry with a row of 7 category chips. Dark theme, 63 text elements.",
+        "63 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 75 of 187 in “Onboarding”",
+        "Reached from “Phone number entry”",
+        "Leads to “Contacts permission (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 4:18 in the recording",
+        "Frame 869 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242227",
+      "role": "background",
+      "share": 0.47
+    },
+    {
+      "hex": "#070508",
+      "role": "surface",
+      "share": 0.375
+    },
+    {
+      "hex": "#514d5b",
+      "role": "surface",
+      "share": 0.103
+    },
+    {
+      "hex": "#706b7d",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#3a3643",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 869,
+    "atSeconds": 258.9,
+    "endSeconds": 261,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.5625,
+        "w": 0.84375,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 63,
+    "tabLabels": [],
+    "chipLabels": [
+      "TG",
+      "FB",
+      "RF",
+      "AF",
+      "JJ",
+      "DS",
+      "S"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "The ones you want to add right",
+    "headline": "The ones you want to add right"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Wait 0.6s",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s080",
+        "via": "Back to Contacts permission",
+        "name": "Contacts permission (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}
