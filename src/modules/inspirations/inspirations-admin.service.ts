@@ -22,12 +22,36 @@ import {
   SCREEN_STATES,
   SCREEN_TYPES,
   STYLES,
+  MAX_FRESH_DAYS,
+  readLibrarySettings,
   titleCase,
   VERSION_DIR_RE,
   VERSIONS_DIR_NAME,
   type BuildReport,
 } from './manifest.builder';
 import { LoaderService } from './loader.service';
+
+/** The few image calls the tone check needs (see `tagScreenTone`). */
+type ImageOps = {
+  metadata(): Promise<{ width?: number; height?: number }>;
+  extract(region: { left: number; top: number; width: number; height: number }): ImageOps;
+  resize(width: number, height: number, options?: { fit?: string }): ImageOps;
+  removeAlpha(): ImageOps;
+  toColourspace(space: string): ImageOps;
+  raw(): ImageOps;
+  toBuffer(): Promise<Buffer>;
+};
+// sharp's types sit behind its package "exports", which this project's module resolution does not read.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const sharp: (input: string) => ImageOps = require('sharp');
+
+/**
+ * How bright (0–1, perceived) the bottom of a screenshot can be and still
+ * read as a dark screen — where the gallery's hover footer sits over it.
+ * Measured on screens the recorder tagged: its dark ones all fall below
+ * 0.43 there, its light ones at or above it.
+ */
+const DARK_BELOW = 0.42;
 
 /**
  * Every write into data/inspirations goes through here.
@@ -273,6 +297,7 @@ export class InspirationsAdminService {
       }),
       logos,
       counts: manifest.counts || {},
+      settings: readLibrarySettings(this.root),
       generatedAt: manifest.generatedAt || null,
       vocabulary: {
         platforms: PLATFORMS,
@@ -305,6 +330,33 @@ export class InspirationsAdminService {
     return report;
   }
 
+  // ─── Settings ─────────────────────────────────────────────────────────────
+
+  /**
+   * Saves the library's general settings — for now how long the "Latest"
+   * and "Updated" app tags last — and rebuilds, so the public pages pick them
+   * up. Only the fields sent change; the rest keep their saved values.
+   */
+  saveSettings(input: unknown) {
+    const body = (input && typeof input === 'object' ? input : {}) as { freshness?: Record<string, unknown> };
+    const current = readLibrarySettings(this.root);
+    const days = (key: 'newDays' | 'updatedDays', label: string) => {
+      const value = body.freshness?.[key];
+      if (value === undefined) return current.freshness[key];
+      const n = Number(value);
+      if (!Number.isInteger(n) || n < 0 || n > MAX_FRESH_DAYS) {
+        throw new BadRequestException(`${label} must be a whole number of days from 0 to ${MAX_FRESH_DAYS}`);
+      }
+      return n;
+    };
+    const settings = {
+      ...current,
+      freshness: { newDays: days('newDays', '"Latest"'), updatedDays: days('updatedDays', '"Updated"') },
+    };
+    this.writeJson(join(this.root, 'settings.json'), settings);
+    return { settings, report: this.rebuild() };
+  }
+
   // ─── Screens ──────────────────────────────────────────────────────────────
 
   uploadScreen(
@@ -315,10 +367,26 @@ export class InspirationsAdminService {
     overwrite: boolean,
     versionRaw?: string,
     flowRaw?: string,
+    /**
+     * Filed as this screen type (lower-case letters, digits and hyphens), and
+     * appended to the end of this flow of the same app (its recorded steps
+     * kept) — what the admin's "Add screens" picks, so a screenshot added by
+     * hand isn't left as an "Other" screen in no flow.
+     */
+    options: { screenType?: string; addToFlow?: string } = {},
   ) {
     const platform = this.assertPlatform(platformRaw);
     const appId = this.assertSlug(appIdRaw, 'app');
     const { base, ext } = this.assertFileName(fileNameRaw, IMAGE_EXT);
+    const screenType = options.screenType?.trim().toLowerCase() || '';
+    if (screenType && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(screenType)) {
+      throw new BadRequestException('screenType must be lower-case letters, digits and hyphens');
+    }
+    const addToFlow = options.addToFlow?.trim() ? this.assertSlug(options.addToFlow.trim(), 'flow id') : '';
+    const flowsFile = join(this.root, 'flows.json');
+    const flowsData = addToFlow ? readJson<{ version?: number; flows?: any[] }>(flowsFile, { version: 1, flows: [] }) : null;
+    const joining = flowsData?.flows?.find((f) => f.id === addToFlow && f.appId === appIdRaw) ?? null;
+    if (addToFlow && !joining) throw new NotFoundException(`${addToFlow} is not a flow of ${appIdRaw}`);
     // A fresh upload with no version named defaults to the app's newest
     // existing version, or today when it has none yet — new screens land in
     // a dated folder rather than the undated legacy bucket.
@@ -359,11 +427,27 @@ export class InspirationsAdminService {
 
     this.ensurePublishable(appId);
 
-    const report = this.rebuild();
     const file = this.qualifiedFile(version, flow, `${base}${ext}`);
+    const id = screenIdFor(platform, appId, file);
+    if (screenType) {
+      const sidecarFile = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`));
+      this.writeJson(sidecarFile, { ...readJson<Record<string, unknown>>(sidecarFile, {}), screenType });
+    }
+    if (joining && flowsData && !joining.screenIds.includes(id)) {
+      joining.screenIds = [...joining.screenIds, id];
+      if (Array.isArray(joining.steps)) joining.steps = [...joining.steps, { screenId: id, action: null }];
+      this.writeJson(flowsFile, { version: flowsData.version || 1, flows: flowsData.flows });
+    }
+
+    const report = this.rebuild();
     this.logger.log(`Uploaded screens/${platform}/${appId}/${file} (${dims.width}x${dims.height})`);
+    // Dark or light, told from its pixels, once the upload has answered (not under test, where the
+    // throwaway store is gone by the time it would finish; tests call it directly).
+    if (process.env.NODE_ENV !== 'test') {
+      void this.tagScreenTone(platform, appId, `${base}${ext}`, version, flow);
+    }
     return {
-      id: screenIdFor(platform, appId, file),
+      id,
       file: `${platform}/${appId}/${file}`,
       width: dims.width,
       height: dims.height,
@@ -418,6 +502,78 @@ export class InspirationsAdminService {
     this.writeJson(sidecarFile, sidecar);
     const file = this.qualifiedFile(version, flow, `${base}${ext}`);
     return { id: screenIdFor(platform, appId, file), sidecar, report: this.rebuild() };
+  }
+
+  /**
+   * Tags a screen `dark` or `light` from its own pixels when it has neither —
+   * as the recorder does for the screens it captures, but a screenshot added
+   * by hand arrives with no style at all, and the gallery's hover footer then
+   * stays light over a black screen. Judged on the bottom part of the image,
+   * where that footer sits. Rebuilds the library when it tags one; never
+   * throws (a screen it can't read is simply left as it was).
+   */
+  async tagScreenTone(platform: string, appId: string, fileName: string, version: string, flow: string): Promise<'dark' | 'light' | null> {
+    const { base } = this.assertFileName(fileName, IMAGE_EXT);
+    const image = this.inStore(...this.screenPathParts(platform, appId, version, flow, fileName));
+    const sidecarFile = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`));
+    const toned = () => {
+      const style = readJson<Record<string, unknown>>(sidecarFile, {}).style;
+      return Array.isArray(style) && style.some((s) => s === 'dark' || s === 'light');
+    };
+    try {
+      if (toned()) return null;
+      const { width = 0, height = 0 } = await sharp(image).metadata();
+      if (!width || !height) return null;
+      const top = Math.round(height * 0.6);
+      const pixels = await sharp(image)
+        .extract({ left: 0, top, width, height: height - top })
+        .resize(24, 24, { fit: 'fill' })
+        .removeAlpha()
+        .toColourspace('srgb')
+        .raw()
+        .toBuffer();
+      let sum = 0;
+      for (let i = 0; i + 2 < pixels.length; i += 3) sum += 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
+      const brightness = sum / (pixels.length / 3) / 255;
+      const tone = brightness < DARK_BELOW ? 'dark' : 'light';
+      // Gone meanwhile (deleted), or tagged meanwhile (saved by hand): leave it.
+      if (!existsSync(image) || toned()) return null;
+      const existing = readJson<Record<string, unknown>>(sidecarFile, {});
+      const style = Array.isArray(existing.style) ? existing.style.map(String) : [];
+      this.writeJson(sidecarFile, { ...existing, style: [...style, tone] });
+      this.rebuild();
+      this.logger.log(`Tagged ${platform}/${appId}/${this.qualifiedFile(version, flow, fileName)} as ${tone} (brightness ${brightness.toFixed(2)})`);
+      return tone;
+    } catch (error) {
+      this.logger.warn(`Could not tell whether ${fileName} is dark or light: ${(error as Error).message}`);
+      return null;
+    }
+  }
+
+  /**
+   * The order a version's screens show in, set by hand in the admin: each
+   * listed screen's sidecar gets its position as `order`, and the library is
+   * rebuilt once (not once a screen). Every entry is checked before anything
+   * is written, so a bad one changes nothing. Screens the list leaves out
+   * keep their automatic place, after the ordered ones.
+   */
+  saveVersionOrder(appIdRaw: string, versionRaw: string, screens: unknown) {
+    const appId = this.assertSlug(appIdRaw, 'app');
+    const version = this.assertVersion(versionRaw);
+    if (!version) throw new BadRequestException('A version is required');
+    if (!Array.isArray(screens) || screens.length === 0) throw new BadRequestException('screens must be a non-empty list');
+    const sidecars = screens.map((entry: any) => {
+      const platform = this.assertPlatform(String(entry?.platform ?? ''));
+      const { base, ext } = this.assertFileName(String(entry?.file ?? ''), IMAGE_EXT);
+      const flow = this.assertFlow(entry?.flow);
+      const image = this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}${ext}`));
+      if (!existsSync(image)) throw new NotFoundException(`${base}${ext} is not in this version`);
+      return this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`));
+    });
+    sidecars.forEach((sidecarFile, order) => {
+      this.writeJson(sidecarFile, { ...readJson<Record<string, unknown>>(sidecarFile, {}), order });
+    });
+    return { report: this.rebuild() };
   }
 
   deleteScreen(platformRaw: string, appIdRaw: string, fileNameRaw: string, versionRaw?: string, flowRaw?: string) {

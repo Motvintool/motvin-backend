@@ -43,6 +43,12 @@ export class InspirationsAdminController {
     return { success: true, data: this.admin.getState() };
   }
 
+  /** Saves general settings: body `{ freshness?: { newDays?, updatedDays? } }`. */
+  @Put('settings')
+  saveSettings(@Body() body: unknown) {
+    return { success: true, data: this.admin.saveSettings(body) };
+  }
+
   @Post('rebuild')
   rebuild() {
     return { success: true, data: this.admin.rebuild() };
@@ -58,12 +64,14 @@ export class InspirationsAdminController {
     @Query('overwrite') overwrite: string,
     @Query('version') version: string,
     @Query('flow') flow: string,
+    @Query('type') screenType: string,
+    @Query('addToFlow') addToFlow: string,
     @Req() request: FastifyRequest,
   ) {
     const body = request.body as Buffer;
     return {
       success: true,
-      data: this.admin.uploadScreen(platform, app, file, body, overwrite === '1', version, flow),
+      data: this.admin.uploadScreen(platform, app, file, body, overwrite === '1', version, flow, { screenType, addToFlow }),
     };
   }
 
@@ -100,6 +108,12 @@ export class InspirationsAdminController {
   @Put('apps/:app/versions/:version')
   renameVersion(@Param('app') app: string, @Param('version') version: string, @Body() body: { versionId?: string }) {
     return { success: true, data: this.admin.renameVersion(app, version, body?.versionId ?? '') };
+  }
+
+  /** Sets the order a version's screens show in: body `{ screens: [{ platform, file, flow? }] }`, first to last. */
+  @Put('apps/:app/versions/:version/order')
+  saveVersionOrder(@Param('app') app: string, @Param('version') version: string, @Body() body: { screens?: unknown }) {
+    return { success: true, data: this.admin.saveVersionOrder(app, version, body?.screens) };
   }
 
   @Delete('apps/:app/versions/:version')

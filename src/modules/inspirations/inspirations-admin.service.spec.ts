@@ -54,6 +54,22 @@ describe('InspirationsAdminService', () => {
     rmSync(tmp, { recursive: true, force: true });
   });
 
+  describe('settings', () => {
+    it('defaults the app tag durations, saves new ones and publishes them with the library', () => {
+      expect(service.getState().settings).toEqual({ freshness: { newDays: 14, updatedDays: 14 } });
+      service.saveSettings({ freshness: { newDays: 30 } });
+      expect(service.getState().settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 } });
+      expect(readManifest(store).settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 } });
+    });
+
+    it('refuses durations that are not whole days in range', () => {
+      expect(() => service.saveSettings({ freshness: { newDays: 2.5 } })).toThrow();
+      expect(() => service.saveSettings({ freshness: { updatedDays: -1 } })).toThrow();
+      expect(() => service.saveSettings({ freshness: { updatedDays: 400 } })).toThrow();
+      expect(existsSync(join(store, 'settings.json'))).toBe(false);
+    });
+  });
+
   describe('app category', () => {
     const apps = () => JSON.parse(readFileSync(join(store, 'apps.json'), 'utf-8')).apps;
 
@@ -416,6 +432,80 @@ describe('InspirationsAdminService', () => {
       const publicOrder = readManifest(store).screens.map((s: any) => s.id);
       expect(publicOrder).toEqual(['acme-ios-onboarding-1', 'acme-ios-onboarding-2', 'acme-ios-browsing-1']);
       expect(service.getState().files.map((f) => f.id)).toEqual(publicOrder);
+    });
+
+    it('shows a version\'s screens in the order set by hand, and keeps it when a screen\'s details are saved', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      for (const name of ['a.png', 'b.png', 'c.png']) service.uploadScreen('ios', 'acme', name, PNG_1X1, false, '2026-01-01');
+      const ids = () => readManifest(store).screens.map((s: any) => s.id);
+      const before = ids();
+
+      service.saveVersionOrder('acme', '2026-01-01', [
+        { platform: 'ios', file: 'c.png' },
+        { platform: 'ios', file: 'a.png' },
+        { platform: 'ios', file: 'b.png' },
+      ]);
+      const reordered = [before[2], before[0], before[1]];
+      expect(ids()).toEqual(reordered);
+      expect(service.getState().files.map((f) => f.id)).toEqual(reordered);
+
+      // Editing a screen's name afterwards does not lose its place.
+      service.saveScreenMeta('ios', 'acme', 'a.png', { name: 'Renamed' }, '2026-01-01');
+      expect(ids()).toEqual(reordered);
+    });
+
+    it('tags a screen added without a style as dark or light from its own pixels, and leaves a tagged one alone', async () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      const sharp = require('sharp');
+      const solid = (r: number, g: number, b: number) =>
+        sharp({ create: { width: 20, height: 40, channels: 3, background: { r, g, b } } }).png().toBuffer();
+      service.uploadScreen('ios', 'acme', 'night.png', await solid(10, 10, 12), false, '2026-01-01');
+      service.uploadScreen('ios', 'acme', 'day.png', await solid(250, 250, 250), false, '2026-01-01');
+      expect(await service.tagScreenTone('ios', 'acme', 'night.png', '2026-01-01', '')).toBe('dark');
+      expect(await service.tagScreenTone('ios', 'acme', 'day.png', '2026-01-01', '')).toBe('light');
+      const style = (id: string) => readManifest(store).screens.find((s: any) => s.id === id).style;
+      expect(style('acme-ios-versions-2026-01-01-night')).toContain('dark');
+      expect(style('acme-ios-versions-2026-01-01-day')).toContain('light');
+      // Already tagged: not judged again.
+      expect(await service.tagScreenTone('ios', 'acme', 'night.png', '2026-01-01', '')).toBeNull();
+    });
+
+    it('files an added screen under the chosen type and appends it to the chosen flow, keeping its steps', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', '1.png', PNG_1X1, false, '2026-01-01', 'onboarding');
+      service.saveFlow({ id: 'acme-ios-onboarding', appId: 'acme', name: 'Onboarding', category: 'onboarding', platform: 'ios', screenIds: ['acme-ios-versions-2026-01-01-onboarding-1'] });
+      // A recorded step (with its tap) the append must not lose.
+      const flowsFile = join(store, 'flows.json');
+      const doc = JSON.parse(readFileSync(flowsFile, 'utf-8'));
+      doc.flows[0].steps = [{ screenId: 'acme-ios-versions-2026-01-01-onboarding-1', action: { kind: 'tap', label: 'Next' } }];
+      writeFileSync(flowsFile, JSON.stringify(doc));
+
+      const { id } = service.uploadScreen('ios', 'acme', 'image.png', PNG_1X1, false, '2026-01-01', '', {
+        screenType: 'splash',
+        addToFlow: 'acme-ios-onboarding',
+      });
+      const manifest = readManifest(store);
+      expect(manifest.screens.find((s: any) => s.id === id).screenType).toBe('splash');
+      const flow = JSON.parse(readFileSync(flowsFile, 'utf-8')).flows[0];
+      expect(flow.screenIds).toEqual(['acme-ios-versions-2026-01-01-onboarding-1', id]);
+      expect(flow.steps[0].action.label).toBe('Next');
+      expect(flow.steps[1]).toEqual({ screenId: id, action: null });
+
+      expect(() => service.uploadScreen('ios', 'acme', 'x.png', PNG_1X1, false, '2026-01-01', '', { addToFlow: 'nope' })).toThrow();
+      expect(() => service.uploadScreen('ios', 'acme', 'y.png', PNG_1X1, false, '2026-01-01', '', { screenType: 'Bad Type' })).toThrow();
+    });
+
+    it('refuses an order naming a screen that is not in the version, and writes nothing', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'a.png', PNG_1X1, false, '2026-01-01');
+      expect(() =>
+        service.saveVersionOrder('acme', '2026-01-01', [
+          { platform: 'ios', file: 'a.png' },
+          { platform: 'ios', file: 'missing.png' },
+        ]),
+      ).toThrow();
+      expect(existsSync(join(store, 'screens', 'ios', 'acme', 'versions', '2026-01-01', 'a.json'))).toBe(false);
+      expect(() => service.saveVersionOrder('acme', '2026-01-01', [])).toThrow();
     });
 
     it('keeps the screens picked for the card carousel, in order, and publishes them on the app', () => {

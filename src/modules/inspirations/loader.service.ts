@@ -134,6 +134,8 @@ export interface InspirationsManifest {
   flows: InspirationFlow[];
   patterns: InspirationPattern[];
   elementCounts: Record<string, number>;
+  /** General settings from `settings.json`; missing in a manifest built before they existed. */
+  settings?: { freshness: { newDays: number; updatedDays: number } };
 }
 
 const EMPTY_MANIFEST: InspirationsManifest = {

@@ -1,0 +1,146 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-home-36",
+  "screen_id": "luma-ios-versions-2026-10-19-home-36",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-19T12:17:35.603Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 36,
+  "name": "Messages (2)",
+  "description": "Messages screen with a 3-item tab bar. Dark theme, 12 text elements.",
+  "text": "9:41€\n+\nQ\nChat\nSee you tomorrow\nfor the opening\nPOPUP STORE\nBAKERY\nCan't wait!!\nIt's Quiet Here\nStart a chat with your friends or others in\nyour event.\nStart Chat\nDiscover\nChat\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "home",
+    "discover",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a 3-item tab bar. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 69 in “Home”",
+        "Reached from “Messages — loading”",
+        "Leads to “Start Chat”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:57 in the recording",
+        "Frame 1191 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#211f22",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#413f41",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#5d5a5b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#bebebe",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1191,
+    "atSeconds": 357,
+    "endSeconds": 357.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "It's Quiet Here"
+  },
+  "crawler": {
+    "nodeId": "s130",
+    "depth": 129,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s129",
+        "via": "Wait 1.2s",
+        "name": "Messages — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s131",
+        "via": "Type “for the opening e”",
+        "name": "Start Chat"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

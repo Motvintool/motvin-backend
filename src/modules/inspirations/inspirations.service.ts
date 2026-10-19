@@ -7,6 +7,7 @@ import {
   InspirationScreen,
   LoaderService,
 } from './loader.service';
+import { DEFAULT_SETTINGS } from './manifest.builder';
 
 /**
  * Query layer over the manifest. Everything here reads stored records — there
@@ -194,6 +195,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
         counts: manifest.counts,
         taxonomy: manifest.taxonomy,
         usage: this.usageOf(allScreens, allFlows),
+        settings: manifest.settings ?? DEFAULT_SETTINGS,
         generatedAt: manifest.generatedAt,
       };
     }
@@ -229,6 +231,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
         flowCategories: Array.from(new Set(flows.map((f) => f.category).filter(Boolean))).sort(),
       },
       usage: this.usageOf(screens, flows),
+      settings: manifest.settings ?? DEFAULT_SETTINGS,
       generatedAt: manifest.generatedAt,
     };
   }

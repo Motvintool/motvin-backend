@@ -1,0 +1,147 @@
+{
+  "screenId": "notion-ios-versions-2026-10-19-onboarding-8",
+  "screen_id": "notion-ios-versions-2026-10-19-onboarding-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-19T12:03:55.398Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 8,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Dark theme, 32 text elements.",
+  "text": "9:41 C\nall\nMicrosoft\nPasskey\nSSO\nEmail\nX\nEmail\nmotvintool@gmail.com\nUse an organization email to easily collaborate with\nteammates\nVerification code\nEnter code\nWe sent a code to your inbox\ni\nW\nt\ne\ny\nO\nh\nk\nf\nd\ng\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\nA",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Dark theme, 32 text elements.",
+        "32 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 74 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “OTP verification (2)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.9s at 0:25 in the recording",
+        "Frame 106 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d20",
+      "role": "background",
+      "share": 0.788
+    },
+    {
+      "hex": "#3b3c41",
+      "role": "surface",
+      "share": 0.12
+    },
+    {
+      "hex": "#5d5b5e",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#062a50",
+      "role": "accent",
+      "share": 0.013
+    },
+    {
+      "hex": "#1e456f",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 106,
+    "atSeconds": 25.2,
+    "endSeconds": 32.1,
+    "holdSeconds": 6.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 32,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": null,
+    "headline": "Email"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Wait 1.5s",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Tap “Email”",
+        "name": "OTP verification (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

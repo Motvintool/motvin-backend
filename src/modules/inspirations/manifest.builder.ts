@@ -297,6 +297,36 @@ function readAvifDimensions(buf: Buffer) {
   return { width: buf.readUInt32BE(ispe + 8), height: buf.readUInt32BE(ispe + 12) };
 }
 
+// ─── Library settings ───────────────────────────────────────────────────────
+
+/** General settings for the whole library, kept in `settings.json` and published with the manifest. */
+export interface LibrarySettings {
+  /** How many days an app card shows "Latest" after its first version, and "Updated" after a newer one. */
+  freshness: { newDays: number; updatedDays: number };
+}
+
+export const DEFAULT_SETTINGS: LibrarySettings = { freshness: { newDays: 14, updatedDays: 14 } };
+
+/** Longest a tag can last, in days. */
+export const MAX_FRESH_DAYS = 365;
+
+function freshDays(value: unknown, fallback: number): number {
+  const n = Number(value);
+  return Number.isInteger(n) && n >= 0 && n <= MAX_FRESH_DAYS ? n : fallback;
+}
+
+/** The store's settings, with defaults for anything missing or out of range. */
+export function readLibrarySettings(root: string): LibrarySettings {
+  const file = readJson<Partial<{ freshness: Record<string, unknown> }>>(join(root, 'settings.json'), {});
+  const fresh = file.freshness ?? {};
+  return {
+    freshness: {
+      newDays: freshDays(fresh.newDays, DEFAULT_SETTINGS.freshness.newDays),
+      updatedDays: freshDays(fresh.updatedDays, DEFAULT_SETTINGS.freshness.updatedDays),
+    },
+  };
+}
+
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
 export function readJson<T>(file: string, fallback: T): T {
@@ -612,6 +642,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
             purpose: stringOrNull(sidecar.purpose),
             primaryAction: stringOrNull(sidecar.primaryAction),
             capture,
+            // Its place among its version's screens when an admin has set the order by hand (see sort below).
+            order: numberOrNull(sidecar.order),
             industry: app.industry,
             tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
             elements: uniq<string>(sidecar.elements || []),
@@ -632,9 +664,12 @@ export function buildInspirationsManifest(root: string): BuildReport {
       }
     }
 
-  // Within one app, screens read in the order they were seen: by the moment
-  // of capture when a recording supplied one, then by the flow they belong to
-  // in the order flows were recorded and their position in it, then by name.
+  // Within one app, screens read in the order an admin set by hand, when
+  // they have (a version's screens all carry an `order`; any without one
+  // follow the ordered ones); otherwise in the order they were seen: by the
+  // moment of capture when a recording supplied one, then by the flow they
+  // belong to in the order flows were recorded and their position in it,
+  // then by name.
   // Without this a folder walk puts "browsing/1" before "onboarding/1" and an
   // app page opens on the middle of the journey instead of its splash.
   const flowOrder = new Map<string, number>();
@@ -647,6 +682,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
   screens.forEach((screen, index) => appOrder.set(screen.appId, Math.min(appOrder.get(screen.appId) ?? index, index)));
   screens.sort((a, b) => {
     if (a.appId !== b.appId) return (appOrder.get(a.appId) ?? 0) - (appOrder.get(b.appId) ?? 0);
+    const oa: number | null = a.order ?? null;
+    const ob: number | null = b.order ?? null;
+    if (oa !== null && ob !== null && oa !== ob) return oa - ob;
+    if ((oa === null) !== (ob === null)) return oa === null ? 1 : -1;
     const ta = a.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
     const tb = b.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
     if (ta !== tb) return ta - tb;
@@ -874,6 +913,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       permissions: PERMISSIONS,
       reviewStatuses: REVIEW_STATUSES,
     },
+    settings: readLibrarySettings(root),
     apps,
     screens,
     flows: publishedFlows,

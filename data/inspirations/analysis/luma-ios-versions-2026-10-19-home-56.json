@@ -1,0 +1,147 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-home-56",
+  "screen_id": "luma-ios-versions-2026-10-19-home-56",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-19T12:17:37.759Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 56,
+  "name": "Home home (17)",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 4 text elements.",
+  "text": "9:41 (\nC\n<\nBlocked Calendars\nNo Blocked Calendars\nYou haven't blocked any calendars.\nHome\nDiscover\nChat",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "calendar",
+    "home",
+    "discover",
+    "chat",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Blocked Calendars”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 4 text elements.",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 56 of 69 in “Home”",
+        "Reached from “Contacts Syncing (2)”",
+        "Leads to “Contacts Syncing (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:44 in the recording",
+        "Frame 1349 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.92
+    },
+    {
+      "hex": "#1f1d20",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#3e3c3f",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#5b5a5c",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#838183",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1349,
+    "atSeconds": 404.4,
+    "endSeconds": 405,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Blocked Calendars",
+    "headline": "No Blocked Calendars"
+  },
+  "crawler": {
+    "nodeId": "s156",
+    "depth": 156,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s155",
+        "via": "Back to Home home",
+        "name": "Contacts Syncing (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s157",
+        "via": "Back to Contacts Syncing",
+        "name": "Contacts Syncing (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

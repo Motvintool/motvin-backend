@@ -1,0 +1,142 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-subscribing-2-1",
+  "screen_id": "luma-ios-versions-2026-10-19-subscribing-2-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-19T12:17:27.192Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "checkout",
+  "flow_name": "Subscribing",
+  "flow_position": 1,
+  "name": "Subscription plans (10)",
+  "description": "Paywall screen with prices. Dark theme, 24 text elements.",
+  "text": "9:41 C\nX\nSelect Tickets\nBook Bestie Pair of Tickets\n+\n$40.00\nIncludes admission for you + 1 guest for $40. Please\nprovide your guest's name and email during\nregistration.\nEarly-Bird Tickets\n+\n$20.00\nUnlimited events for $19/mo - cheaper than a ticket\n@readingrhythms.co/passport\n2 Left\nStandard Tickets\n+\n$25.00\nUnlimited events for $19/mo - cheaper than a ticket\n@readingrhythms.co/passport\nLast Chance Tickets\n+\n$30.00\nUnlimited events for $19/mo - cheaper than a ticket\n@readingrhythms.co/passport\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "next",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select Tickets”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with prices. Dark theme, 24 text elements.",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Subscribing”",
+        "Reached from “And s home”",
+        "Leads to “Subscription plans (11)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 3:12 in the recording",
+        "Frame 647 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3b3c3e",
+      "role": "background",
+      "share": 0.79
+    },
+    {
+      "hex": "#595a5c",
+      "role": "surface",
+      "share": 0.138
+    },
+    {
+      "hex": "#1a1b1d",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#737375",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#87888b",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 647,
+    "atSeconds": 192.6,
+    "endSeconds": 194.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select Tickets",
+    "headline": "Early-Bird Tickets",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s057",
+    "depth": 56,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s056",
+        "via": "Tap “cket”",
+        "name": "And s home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s058",
+        "via": "Tap “Select Tickets”",
+        "name": "Subscription plans (11)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}
