@@ -800,10 +800,18 @@ describe('InspirationsAdminService', () => {
       service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
       mkdirSync(join(store, 'analysis'), { recursive: true });
       writeFileSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'), '{}');
+      const otherFlow = { id: 'acme-web-onboarding', appId: 'acme', name: 'Onboarding', screenIds: ['acme-web-dashboard'] };
+      writeFileSync(
+        join(store, 'flows.json'),
+        JSON.stringify({ version: 1, flows: [{ id: 'acme-web-versions-2026-09-29-login', appId: 'acme', name: 'Logging in', screenIds: ['acme-web-versions-2026-09-29-login'] }, otherFlow] }),
+      );
 
       const result = service.deleteVersion('acme', '2026-09-29');
 
-      expect(result.removed).toEqual({ screens: 1, analysis: 1 });
+      expect(result.removed).toEqual({ screens: 1, analysis: 1, flows: 1 });
+      // The version's flows go with it; other versions' flows stay.
+      const flowsLeft = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows;
+      expect(flowsLeft.map((flow: { id: string }) => flow.id)).toEqual(['acme-web-onboarding']);
       expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-09-29'))).toBe(false);
       expect(existsSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'))).toBe(false);
       expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);

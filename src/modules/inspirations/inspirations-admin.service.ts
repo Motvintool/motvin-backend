@@ -796,12 +796,26 @@ export class InspirationsAdminService {
           rmSync(analysis, { force: true });
           analysisRemoved.push(screenId);
         }
+        // The text read off the screen goes with it.
+        const words = this.inStore('words', `${screenId}.json`);
+        if (existsSync(words)) rmSync(words, { force: true });
       }
       rmSync(dir, { recursive: true, force: true });
     }
 
-    this.logger.log(`Deleted version ${versionId} of ${appId}: ${screensRemoved} screenshot(s)`);
-    return { removed: { screens: screensRemoved, analysis: analysisRemoved.length }, report: this.rebuild() };
+    // The version's flows go too: a flow id is `<appId>-<platform>-versions-
+    // <versionId>-…`, so every flow of this version shares that prefix. Left
+    // behind, they would point at screens that no longer exist.
+    const flowsFile = join(this.root, 'flows.json');
+    const flowsData = readJson<{ version?: number; flows?: any[] }>(flowsFile, { version: 1, flows: [] });
+    const prefixes = PLATFORMS.map((platform) => `${appId}-${platform}-${VERSIONS_DIR_NAME}-${versionId}-`);
+    const ofVersion = (id: unknown) => typeof id === 'string' && prefixes.some((prefix) => id.startsWith(prefix));
+    const keptFlows = (flowsData.flows || []).filter((flow) => !(flow.appId === appId && ofVersion(flow.id)));
+    const flowsRemoved = (flowsData.flows || []).length - keptFlows.length;
+    if (flowsRemoved) this.writeJson(flowsFile, { version: flowsData.version || 1, flows: keptFlows });
+
+    this.logger.log(`Deleted version ${versionId} of ${appId}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)`);
+    return { removed: { screens: screensRemoved, analysis: analysisRemoved.length, flows: flowsRemoved }, report: this.rebuild() };
   }
 
   // ─── Logos ────────────────────────────────────────────────────────────────

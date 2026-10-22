@@ -1,0 +1,144 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-23-onboarding-8",
+  "screen_id": "claude-webapp-versions-2026-10-23-onboarding-8",
+  "analyzer": "ollama/qwen3-vl:8b",
+  "analyzedAt": "2026-10-22T13:13:35.436Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 8,
+  "name": "Email verification code entry",
+  "description": "Verification code screen. Light theme, 17 text elements.",
+  "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nTo continue, click the link sent to\nmotvintool@gmail.com\nEnter verification code\nResend email\nUse a different email\n• Download desktop app\nCookie settings\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
+  "purpose": "User enters email verification code",
+  "primary_action": "Enter verification code",
+  "tags": [
+    "settings",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Question what's next”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 15 in “Onboarding”",
+        "Reached from “Sign-in options (2)”",
+        "Leads to “OTP verification (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 0:16 in the recording",
+        "Frame 69 of 593 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafbf9",
+      "role": "background",
+      "share": 0.575
+    },
+    {
+      "hex": "#aab9b4",
+      "role": "surface",
+      "share": 0.222
+    },
+    {
+      "hex": "#343430",
+      "role": "text",
+      "share": 0.058
+    },
+    {
+      "hex": "#d5dad7",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#949a91",
+      "role": "surface",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "Claude test.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 593,
+    "frame": 69,
+    "atSeconds": 16.2,
+    "endSeconds": 21,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Question what's next",
+    "headline": "Question what's next"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Back to OTP verification",
+        "name": "Sign-in options (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Back to OTP verification",
+        "name": "OTP verification (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-22",
+  "capturedBy": "motvin-ios-crawler"
+}
