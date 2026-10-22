@@ -1,0 +1,145 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-22-onboarding-2",
+  "screen_id": "claude-webapp-versions-2026-10-22-onboarding-2",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-10-22T08:16:15.779Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign in with email (2)",
+  "description": "Login screen with a primary action labelled “Continue with email”. Light theme, 13 text elements.",
+  "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nG Continue with Google\n Continue with Apple\nOR\nmotvintool@gmail\nContinue with email\nCookie settings\n• Download desktop app\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
+  "purpose": "User attempts to sign in using an email address",
+  "primary_action": "Enter email",
+  "tags": [
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Question what's next”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with email”. Light theme, 13 text elements.",
+        "Calls to action: “Continue with email”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 133 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign-in options”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 0:06 in the recording",
+        "Frame 32 of 2360 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcf9",
+      "role": "background",
+      "share": 0.558
+    },
+    {
+      "hex": "#a9b9b4",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#343531",
+      "role": "text",
+      "share": 0.062
+    },
+    {
+      "hex": "#d3d6d2",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#969b91",
+      "role": "surface",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "Claude.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2360,
+    "frame": 32,
+    "atSeconds": 6.3,
+    "endSeconds": 9.9,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with email"
+    ],
+    "keyboard": false,
+    "title": "Question what's next",
+    "headline": "Question what's next"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Tap “Question what's next”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Tap “Question what's next”",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-22",
+  "capturedBy": "motvin-ios-crawler"
+}

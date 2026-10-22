@@ -1,0 +1,161 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-22-onboarding-84",
+  "screen_id": "claude-webapp-versions-2026-10-22-onboarding-84",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-10-22T08:16:15.832Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 84,
+  "name": "Untitled dialog",
+  "description": "Dialog over a dimmed screen, on top of Artifacts with a row of 4 category chips. Light theme, 37 text elements.",
+  "text": "• Claude\n+\nArtifacts\nNew\nProjects\nQ\nAll\nYours\nShared with you\nGroupby v\n909 +\n8b Artifacts\nCustomize\nMake something new\nPinned\n• Work\nMotvin Work\nSlides New\nDocs\nNew\nDesign\nNew\nD Welcome\nQ 4b\nRecents\nUntitled\nDelete Untitled?\nCustomize Claude for you\nTry\nThis permanently removes the artifact. It can't be\nUntitled\nundone.\nUntitled\nCancel\nUntitled\nGreeting\nUntitled\n& • Edited now\nMotvin • Free\nM",
+  "purpose": "A modal dialog for deleting an artifact.",
+  "primary_action": "Confirm the deletion of the 'Untitled' artifact.",
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Untitled”",
+        "Category strip: Q, All, Yours, Groupby v",
+        "Dialog over a dimmed background, covering 19% of the height from 39% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Artifacts with a row of 4 category chips. Light theme, 37 text elements.",
+        "37 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 84 of 133 in “Onboarding”",
+        "Reached from “Artifacts (15)”",
+        "Leads to “Customize”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:19 in the recording",
+        "Frame 1470 of 2360 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#a1a09f",
+      "role": "background",
+      "share": 0.936
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.032
+    },
+    {
+      "hex": "#c6c7c6",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#868685",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#e5dedd",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Claude.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2360,
+    "frame": 1470,
+    "atSeconds": 439.2,
+    "endSeconds": 441.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.390625,
+        "w": 0.25,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [
+      "Q",
+      "All",
+      "Yours",
+      "Groupby v"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Untitled",
+    "headline": "Work"
+  },
+  "crawler": {
+    "nodeId": "s084",
+    "depth": 83,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s083",
+        "via": "Tap “& Pin”",
+        "name": "Artifacts (15)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s085",
+        "via": "Tap “Artifacts”",
+        "name": "Customize"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-22",
+  "capturedBy": "motvin-ios-crawler"
+}

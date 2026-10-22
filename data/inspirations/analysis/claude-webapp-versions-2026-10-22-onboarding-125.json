@@ -1,0 +1,157 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-22-onboarding-125",
+  "screen_id": "claude-webapp-versions-2026-10-22-onboarding-125",
+  "analyzer": "ollama/qwen3-vl:2b",
+  "analyzedAt": "2026-10-22T08:16:15.859Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 125,
+  "name": "Subscription plans (3)",
+  "description": "Paywall screen with a search bar, a paged carousel and a primary action labelled “signup flow”. Light theme, 58 text elements.",
+  "text": "• Claude\nQ Search\nX\nSearch\n+New\nSettings\n+ Add v\n5 Projects\nClaude Code\n03 General\n& Artifacts\nClaude understands your codebase and helps\n8\nAccount\nE Customize\nyou build, debug, and ship faster. Upgrade\nPrivacy\nyour plan to get started.\nPinned\nBilling\n•••\n5 Motvin Work\nCapabilities\nUpgrade to Max or Pro 2\n> Fix the auth bug in\nsignup flow\nD Welcome\nMemory\n_ Reflect\nRecents\nShow all →\n(* Time and focus\nUntitled\n‹)> Claude Code\nGeneral\n@ Try\nUntitled\n+\nCustomize\nUntitled\nClassify session states\nE Skills\nAllow Claude to automatically classify sessions as blocked, ready for review, or done. Classifying sessions\nGreeting\ncounts towards your plan usage. Applies to new sessions.\n6 Connectors\n@ Try\n& Plugins\nSwitch models when a message is flagged\nWhen safeguards flag a message, automatically switch to a different model to keep chatting. When off,\nyour session will pause instead. Applies to cloud sessions.\n~ Try\n+\nCode appearance\nClaude Light\nClaude Dark\nV\nfunction greet (name: string) {\n1 function greet(name: string) {\nShow all →\n2 -\n2 -\nreturn \"Hello, \" + name;\n\"tname\nreturn \"Hello,\nreturn \"Hello, ${name}!';\nreturn \"Hello, ${name}!;\n2+\n2 +\nPlugin Management\nProductivity\n[ Try +\n§ Try\n+\n3 Manage tasks, plan your day, and build up\nCreate, customize, and manage plugins\nMotvin • Free\nM\ntailored to vour organization's tools and.\nmemorv of important context about vour.",
+  "purpose": "View and upgrade to a higher-tier plan for Claude.",
+  "primary_action": "Upgrade to Max or Pro",
+  "tags": [
+    "search",
+    "settings",
+    "chat",
+    "message",
+    "review",
+    "signup",
+    "productivity",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a search bar, a paged carousel and a primary action labelled “signup flow”. Light theme, 58 text elements.",
+        "Calls to action: “signup flow”",
+        "58 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 125 of 133 in “Onboarding”",
+        "Reached from “Settings · bottom sheet”",
+        "Leads to “Discover (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 9:26 in the recording",
+        "Frame 1895 of 2360 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafaf9",
+      "role": "background",
+      "share": 0.527
+    },
+    {
+      "hex": "#a1a09f",
+      "role": "surface",
+      "share": 0.376
+    },
+    {
+      "hex": "#dfe0de",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#858782",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#35342b",
+      "role": "text",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Claude.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2360,
+    "frame": 1895,
+    "atSeconds": 566.7,
+    "endSeconds": 568.8,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 58,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "signup flow"
+    ],
+    "keyboard": false,
+    "title": "Search",
+    "headline": "Upgrade to Max or Pro 2",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s126",
+    "depth": 125,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s125",
+        "via": "Dismiss",
+        "name": "Settings · bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s127",
+        "via": "Open Discover",
+        "name": "Discover (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-22",
+  "capturedBy": "motvin-ios-crawler"
+}
