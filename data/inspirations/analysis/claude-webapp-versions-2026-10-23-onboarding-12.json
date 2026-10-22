@@ -1,8 +1,8 @@
 {
   "screenId": "claude-webapp-versions-2026-10-23-onboarding-12",
   "screen_id": "claude-webapp-versions-2026-10-23-onboarding-12",
-  "analyzer": "ollama/qwen3-vl:8b",
-  "analyzedAt": "2026-10-22T13:13:35.439Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-22T18:51:45.684Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [],
@@ -10,11 +10,11 @@
   "flow": "authentication",
   "flow_name": "Onboarding",
   "flow_position": 12,
-  "name": "Email verification error",
+  "name": "Email verification (3)",
   "description": "Verification code screen. Light theme, 23 text elements.",
   "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nTo continue, click the link sent to\nmotvintool@gmail.com\nNot seeing the email in your inbox? Try sending again.\nWrong email? Change email address\nIf the link shows a verification code instead of signing you\nin, enter it here.\n876576\nELLA IE\nThere was an error verifying your code. If the\nproblem persists contact support for assistance.\nVerify email address\nCookie settings\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\n Download desktop app\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
-  "purpose": "User attempts to verify email address after entering a code, encountering an error.",
-  "primary_action": "Verify email address",
+  "purpose": "Display error when verification code fails to validate",
+  "primary_action": "Enter verification code",
   "tags": [
     "settings",
     "address",
@@ -140,6 +140,6 @@
       }
     ]
   },
-  "capturedAt": "2026-10-22",
+  "capturedAt": "2026-10-23",
   "capturedBy": "motvin-ios-crawler"
 }

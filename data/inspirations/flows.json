@@ -26852,9 +26852,9 @@
       ]
     },
     {
-      "id": "claude-webapp-versions-2026-10-23-signing-in-with-email",
+      "id": "claude-webapp-versions-2026-10-23-logging-in-with-email",
       "appId": "claude",
-      "name": "Signing in with email",
+      "name": "Logging in with email",
       "category": "authentication",
       "platform": "webapp",
       "screenIds": [
@@ -27039,27 +27039,49 @@
       ]
     },
     {
-      "id": "claude-webapp-versions-2026-10-23-opening-greeting-options",
+      "id": "claude-webapp-versions-2026-10-23-opening-chat-options",
       "appId": "claude",
       "name": "Opening chat options",
       "category": "discovery",
       "platform": "webapp",
       "screenIds": [
         "claude-webapp-versions-2026-10-23-chats-13",
-        "claude-webapp-versions-2026-10-23-opening-greeting-options-1",
-        "claude-webapp-versions-2026-10-23-opening-greeting-options-2"
+        "claude-webapp-versions-2026-10-23-opening-chat-options-1",
+        "claude-webapp-versions-2026-10-23-opening-chat-options-2"
       ],
-      "parentId": "claude-webapp-versions-2026-10-23-chats"
+      "parentId": "claude-webapp-versions-2026-10-23-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-23-chats-13",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-23-opening-chat-options-1",
+          "action": {
+            "kind": "tap",
+            "label": "Hello",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-23-opening-chat-options-2",
+          "action": {
+            "kind": "dismiss",
+            "label": "Hello toast",
+            "basis": "structure"
+          }
+        }
+      ]
     },
     {
-      "id": "claude-webapp-versions-2026-10-23-opening-plugin-settings",
+      "id": "claude-webapp-versions-2026-10-23-using-plugins",
       "appId": "claude",
-      "name": "Opening plugin settings",
+      "name": "Using plugins",
       "category": "discovery",
       "platform": "webapp",
       "screenIds": [
         "claude-webapp-versions-2026-10-23-chats-14",
-        "claude-webapp-versions-2026-10-23-opening-plugin-settings-1"
+        "claude-webapp-versions-2026-10-23-using-plugins-1"
       ],
       "parentId": "claude-webapp-versions-2026-10-23-chats",
       "steps": [
@@ -27068,7 +27090,7 @@
           "action": null
         },
         {
-          "screenId": "claude-webapp-versions-2026-10-23-opening-plugin-settings-1",
+          "screenId": "claude-webapp-versions-2026-10-23-using-plugins-1",
           "action": {
             "kind": "wait",
             "label": "2.4s",
