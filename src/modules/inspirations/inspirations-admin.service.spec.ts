@@ -320,6 +320,19 @@ describe('InspirationsAdminService', () => {
       service.saveSource('acme', { status: 'rejected' });
       expect(readManifest(store).counts.screens).toBe(0);
     });
+
+    it('takes a deleted screen out of the flows it was a step of', () => {
+      writeFileSync(
+        join(store, 'flows.json'),
+        JSON.stringify({ version: 1, flows: [{ id: 'acme-web-tour', appId: 'acme', name: 'Tour', category: 'discovery', platform: 'web', screenIds: ['acme-web-dashboard', 'acme-web-other'], steps: [{ screenId: 'acme-web-dashboard' }, { screenId: 'acme-web-other' }] }] }),
+      );
+
+      service.deleteScreen('web', 'acme', 'dashboard.png');
+
+      const flow = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows[0];
+      expect(flow.screenIds).toEqual(['acme-web-other']);
+      expect(flow.steps).toEqual([{ screenId: 'acme-web-other' }]);
+    });
   });
 
   describe('metadata and deletion', () => {
@@ -690,7 +703,8 @@ describe('InspirationsAdminService', () => {
       // A journey of one remaining step is still a journey — a section seen
       // once, a sheet opened and dismissed — so the flow survives, shorter.
       expect(report.counts.flows).toBe(1);
-      expect(report.warnings.join(' ')).toMatch(/acme-web-dashboard/);
+      // Deleting the screen took it out of the flow, so the flow keeps the rest.
+      expect(JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows[0].screenIds).toEqual(['acme-web-login']);
     });
   });
 

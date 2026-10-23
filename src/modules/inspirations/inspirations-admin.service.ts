@@ -589,9 +589,25 @@ export class InspirationsAdminService {
     rmSync(image, { force: true });
     rmSync(this.inStore(...this.screenPathParts(platform, appId, version, flow, `${base}.json`)), { force: true });
     const file = this.qualifiedFile(version, flow, `${base}${ext}`);
-    rmSync(this.inStore('analysis', `${screenIdFor(platform, appId, file)}.json`), { force: true });
+    const screenId = screenIdFor(platform, appId, file);
+    rmSync(this.inStore('analysis', `${screenId}.json`), { force: true });
+    rmSync(this.inStore('words', `${screenId}.json`), { force: true });
 
-    this.logger.log(`Deleted screens/${platform}/${appId}/${file}`);
+    // The screen leaves every flow it was a step of: a flow pointing at a
+    // screen that no longer exists would show a gap where it was.
+    const flowsFile = join(this.root, 'flows.json');
+    const flowsData = readJson<{ version?: number; flows?: any[] }>(flowsFile, { version: 1, flows: [] });
+    let flowsChanged = 0;
+    for (const entry of flowsData.flows || []) {
+      if (entry.appId !== appId) continue;
+      const before = (entry.screenIds ?? []).length + (entry.steps ?? []).length;
+      if (Array.isArray(entry.screenIds)) entry.screenIds = entry.screenIds.filter((id: string) => id !== screenId);
+      if (Array.isArray(entry.steps)) entry.steps = entry.steps.filter((step: { screenId?: string }) => step?.screenId !== screenId);
+      if ((entry.screenIds ?? []).length + (entry.steps ?? []).length !== before) flowsChanged++;
+    }
+    if (flowsChanged) this.writeJson(flowsFile, { version: flowsData.version || 1, flows: flowsData.flows });
+
+    this.logger.log(`Deleted screens/${platform}/${appId}/${file}${flowsChanged ? ` (taken out of ${flowsChanged} flow(s))` : ''}`);
     return { report: this.rebuild() };
   }
 
@@ -1043,6 +1059,8 @@ export class InspirationsAdminService {
           rmSync(analysis, { force: true });
           analysisRemoved.push(screenId);
         }
+        // The text read off the screen goes with it.
+        rmSync(this.inStore('words', `${screenId}.json`), { force: true });
       }
       // Takes the images and their sidecars with it.
       rmSync(dir, { recursive: true, force: true });

@@ -1,0 +1,144 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-23-onboarding-7",
+  "screen_id": "claude-webapp-versions-2026-10-23-onboarding-7",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-23T05:13:37.352Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Sign-in options",
+  "description": "Login screen. Light theme, 16 text elements.",
+  "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nG Continue with Google\né Continue with Apple\nOR\nmotvintool@gmail.com\nCookie settings\n• Download desktop app\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
+  "purpose": "Allow users to sign in using various methods",
+  "primary_action": "Select sign-in method",
+  "tags": [
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Question what's next”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 15 in “Onboarding”",
+        "Reached from “Sign in with email (4)”",
+        "Leads to “OTP verification (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:15 in the recording",
+        "Frame 53 of 593 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcf9",
+      "role": "background",
+      "share": 0.557
+    },
+    {
+      "hex": "#a9b8b3",
+      "role": "surface",
+      "share": 0.228
+    },
+    {
+      "hex": "#363733",
+      "role": "text",
+      "share": 0.053
+    },
+    {
+      "hex": "#d7dbd7",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#989991",
+      "role": "surface",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Claude test.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 593,
+    "frame": 53,
+    "atSeconds": 15.3,
+    "endSeconds": 16.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Question what's next",
+    "headline": "Question what's next"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Tap “Question what's next”",
+        "name": "Sign in with email (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Back to OTP verification",
+        "name": "OTP verification (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-23",
+  "capturedBy": "motvin-ios-crawler"
+}
