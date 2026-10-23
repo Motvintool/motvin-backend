@@ -2,7 +2,7 @@
   "screenId": "claude-webapp-versions-2026-10-23-onboarding-8",
   "screen_id": "claude-webapp-versions-2026-10-23-onboarding-8",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.355Z",
+  "analyzedAt": "2026-10-23T12:49:05.896Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [],
@@ -13,8 +13,8 @@
   "name": "Email verification prompt",
   "description": "Verification code screen. Light theme, 17 text elements.",
   "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nTo continue, click the link sent to\nmotvintool@gmail.com\nEnter verification code\nResend email\nUse a different email\n• Download desktop app\nCookie settings\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
-  "purpose": "Prompt the user to verify their email by clicking a link",
-  "primary_action": "Click the verification link",
+  "purpose": "To prompt the user to verify their email address via a link.",
+  "primary_action": "Click the verification link in email",
   "tags": [
     "settings",
     "otp",
@@ -47,8 +47,8 @@
       "title": "Navigation",
       "points": [
         "Step 8 of 15 in “Onboarding”",
-        "Reached from “Sign-in options (2)”",
-        "Leads to “OTP verification (3)”"
+        "Reached from “Sign-in options”",
+        "Leads to “OTP verification”"
       ]
     },
     {
@@ -128,14 +128,14 @@
       {
         "from": "s007",
         "via": "Back to OTP verification",
-        "name": "Sign-in options (2)"
+        "name": "Sign-in options"
       }
     ],
     "leadsTo": [
       {
         "to": "s009",
         "via": "Back to OTP verification",
-        "name": "OTP verification (3)"
+        "name": "OTP verification"
       }
     ]
   },

@@ -2,25 +2,26 @@
   "screenId": "claude-webapp-versions-2026-10-23-home-2",
   "screen_id": "claude-webapp-versions-2026-10-23-home-2",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.383Z",
-  "screen_type": "other",
-  "published_as": "other",
+  "analyzedAt": "2026-10-23T12:49:05.903Z",
+  "screen_type": "search",
+  "published_as": "search",
   "states": [],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "search",
   "flow_name": "Home",
   "flow_position": 2,
-  "name": "Home screen",
-  "description": "Other screen with a sidebar. Light theme, 9 text elements.",
-  "text": "• Claude\n+New\nFree plan • Upgrade\n5 Projects\n& Artifacts\nCustomize\nQ °6\nRecents\nCustomize Claude for you\nTry\nGreeting\n* Good morning, Motvin\nHey\n+\nProject v\nSonnet 5.5 Medium\nManual\nMotvin • Free",
-  "purpose": "Display greeting and input field for user interaction",
+  "name": "Incognito mode",
+  "description": "Search screen with a search bar. Light theme, 9 text elements.",
+  "text": "m Incognito\nYou're incognito\nHow can I help you today?\n+\nSonnet 5.5 Medium\nManual\nProject v\nIncognito sessions stay out of your history and search, and aren't used to train Claude.\nLearn more",
+  "purpose": "To provide a private chat session that doesn't affect the user's history.",
   "primary_action": "Enter query",
   "tags": [
-    "other",
+    "search",
     "webapp"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "search-bar"
   ],
   "style": [
     "light"
@@ -30,31 +31,31 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Good morning, Motvin”",
+        "Navigation title reads “Incognito”",
+        "Search bar present",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen with a sidebar. Light theme, 9 text elements.",
+        "Search screen with a search bar. Light theme, 9 text elements.",
         "9 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 3 in “Home”",
-        "Reached from “Search”",
-        "Leads to “Subscription plans”",
-        "Returned to 2 times in the recording"
+        "Step 2 of 2 in “Home”",
+        "Reached from “You're here!”",
+        "Leads to “Good morning, Motvin”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 6.3s at 1:11 in the recording",
-        "Frame 302 of 593 sampled at 3.3333333333333335 fps",
+        "Held for 3s at 1:08 in the recording",
+        "Frame 236 of 593 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -63,39 +64,44 @@
     {
       "hex": "#fbfbf9",
       "role": "background",
-      "share": 0.981
+      "share": 0.858
     },
     {
-      "hex": "#dedcda",
+      "hex": "#5e5f5d",
       "role": "surface",
-      "share": 0.012
+      "share": 0.058
     },
     {
-      "hex": "#c7c6c2",
+      "hex": "#080908",
+      "role": "text",
+      "share": 0.047
+    },
+    {
+      "hex": "#1f201e",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#d0cecb",
       "role": "surface",
       "share": 0.006
-    },
-    {
-      "hex": "#dba58c",
-      "role": "accent",
-      "share": 0
     }
   ],
   "capture": {
     "source": "Claude test.mp4",
     "fps": 3.3333333333333335,
     "frames": 593,
-    "frame": 302,
-    "atSeconds": 71.1,
-    "endSeconds": 73.2,
-    "holdSeconds": 6.3,
+    "frame": 236,
+    "atSeconds": 68.1,
+    "endSeconds": 71.1,
+    "holdSeconds": 3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 2
+    "visits": 1
   },
   "signals": {
     "lineCount": 9,
@@ -104,21 +110,15 @@
     "ctas": [],
     "keyboard": false,
     "layout": "desktop",
-    "navLabels": [
-      "Claude",
-      "New",
-      "Projects",
-      "Artifacts",
-      "Customize"
-    ],
+    "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Good morning, Motvin",
-    "headline": "Good morning, Motvin"
+    "title": "Incognito",
+    "headline": "You're incognito"
   },
   "crawler": {
-    "nodeId": "s020",
-    "depth": 19,
+    "nodeId": "s019",
+    "depth": 18,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -126,16 +126,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s019",
-        "via": "Open Good morning, Motvin",
-        "name": "Search"
+        "from": "s018",
+        "via": "Open Incognito",
+        "name": "You're here!"
       }
     ],
     "leadsTo": [
       {
-        "to": "s021",
-        "via": "Open Plans that grow with you",
-        "name": "Subscription plans"
+        "to": "s020",
+        "via": "Open Good morning, Motvin",
+        "name": "Good morning, Motvin"
       }
     ]
   },

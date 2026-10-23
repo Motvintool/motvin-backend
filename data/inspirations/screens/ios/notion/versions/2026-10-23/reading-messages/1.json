@@ -1,29 +1,35 @@
 {
-  "name": "Inbox (6)",
-  "screenType": "messages",
-  "fineType": "messages",
-  "states": [],
-  "description": "Messages screen. Dark theme, 5 text elements.",
+  "name": "Settings",
+  "screenType": "settings",
+  "fineType": "settings",
+  "states": [
+    "scrolled"
+  ],
+  "description": "Settings screen, scrolled further down from Settings — scrolled. Dark theme, 22 text elements.",
   "tags": [
-    "filter",
-    "ask al",
-    "messages",
+    "settings",
+    "scrolled",
     "ios"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "card",
+    "toggle",
+    "button",
+    "text-field",
+    "legal-text"
   ],
   "style": [
-    "dark",
-    "minimal"
+    "dark"
   ],
   "capturedAt": "2026-10-23",
   "capture": {
-    "atSeconds": 426.6,
-    "holdSeconds": 0.9,
+    "atSeconds": 423.3,
+    "holdSeconds": 3,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "scrolledFrom": null
   },
-  "purpose": "To inform the user that they are up to date with notifications.",
-  "primaryAction": "View notifications"
+  "purpose": "To configure workspace and privacy settings",
+  "primaryAction": "Toggle view history"
 }

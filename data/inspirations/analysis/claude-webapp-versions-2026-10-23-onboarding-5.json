@@ -2,7 +2,7 @@
   "screenId": "claude-webapp-versions-2026-10-23-onboarding-5",
   "screen_id": "claude-webapp-versions-2026-10-23-onboarding-5",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.347Z",
+  "analyzedAt": "2026-10-23T12:49:05.894Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [],
@@ -10,10 +10,10 @@
   "flow": "authentication",
   "flow_name": "Onboarding",
   "flow_position": 5,
-  "name": "Verification prompt",
+  "name": "Verification code entry",
   "description": "Verification code screen. Light theme, 17 text elements.",
   "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nTo continue, click the link sent to\nmotvintool@gmail.com\nEnter verification code\nResend email\nUse a different email\n• Download desktop app\nCookie settings\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
-  "purpose": "Prompt user to verify their email address",
+  "purpose": "Allow the user to verify their email by entering a code",
   "primary_action": "Enter verification code",
   "tags": [
     "settings",
@@ -47,8 +47,8 @@
       "title": "Navigation",
       "points": [
         "Step 5 of 15 in “Onboarding”",
-        "Reached from “Sign in with email (3)”",
-        "Leads to “Sign in with email (4)”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
         "Returned to 5 times in the recording"
       ]
     },
@@ -129,14 +129,14 @@
       {
         "from": "s004",
         "via": "Tap “Question what's next”",
-        "name": "Sign in with email (3)"
+        "name": "Sign in with email"
       }
     ],
     "leadsTo": [
       {
         "to": "s006",
         "via": "Back to Sign in with email",
-        "name": "Sign in with email (4)"
+        "name": "Sign in with email"
       }
     ]
   },

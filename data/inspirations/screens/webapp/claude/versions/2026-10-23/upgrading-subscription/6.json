@@ -1,6 +1,6 @@
 {
   "name": "Add custom connector",
-  "screenType": "pricing",
+  "screenType": "form",
   "fineType": "paywall",
   "states": [],
   "description": "Paywall screen with a sidebar, 1 input field and a primary action labelled “Continue”. Light theme, 25 text elements.",
@@ -10,11 +10,11 @@
     "webapp"
   ],
   "elements": [
-    "nav-bar",
+    "modal",
+    "form",
     "text-field",
-    "list",
-    "cta",
-    "button"
+    "button",
+    "legal-text"
   ],
   "style": [
     "light"
@@ -26,6 +26,6 @@
     "brief": false,
     "visits": 1
   },
-  "purpose": "To allow the user to connect external tools by entering connector details",
-  "primaryAction": "Enter connector information"
+  "purpose": "To allow the user to add a custom connector by entering a name and URL",
+  "primaryAction": "Enter connector details"
 }

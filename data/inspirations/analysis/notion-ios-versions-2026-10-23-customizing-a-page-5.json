@@ -2,27 +2,36 @@
   "screenId": "notion-ios-versions-2026-10-23-customizing-a-page-5",
   "screen_id": "notion-ios-versions-2026-10-23-customizing-a-page-5",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T07:08:48.145Z",
-  "screen_type": "other",
-  "published_as": "other",
-  "states": [],
+  "analyzedAt": "2026-10-23T11:05:42.131Z",
+  "screen_type": "coach_mark",
+  "published_as": "modal",
+  "states": [
+    "coach-mark"
+  ],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "onboarding",
   "flow_name": "Customizing a page",
-  "flow_position": 5,
-  "name": "Home screen (5)",
-  "description": "Other screen. Dark theme, 13 text elements.",
-  "text": "9:41 €\n• Home\nM\nRecents v\nWelcome to Notion!\nHello thread\nMeeting @Today\nFavourites v\nWelcome to Notion!\nPrivate v\n...\nMeeting @Today\nWelcome to Notion!\nTo Do List\nAsk Al",
-  "purpose": "To provide access to recent, favorite, and private pages",
-  "primary_action": "Select a page",
+  "flow_position": 7,
+  "name": "Actions menu",
+  "description": "Payment screen, scrolled further down from Category page. Dark theme, 17 text elements.",
+  "text": "9:41 €\n•••\nWelcome to Notion!\nCreate an account with Notion\nTap anywhere and just start typing. It's\nthat simple.\nHighlight text and use the menu above\nyour keyboard to change the style.\nTap the + icon above your keyboard to\nadd content: headings, to-dos, and\nmore.\nCollapse your keyboard, then tap and\nhold this line to move content.\nTap the home icon at the bottom left to\nsee your pages. (We've installed a To\nDo List for you - go check it out!)\nClick on the\nNotion Al face in the\nbottom right of your screen or click here\nto see what Agent can do\nKeep exploring!\nYou've just learned the basics. But there's\nch\ned\nAsk Al\nIle and irmeng\npagt\nusing the compose icon in the bottom right",
+  "purpose": "To provide a list of actions available for the current page.",
+  "primary_action": "Select an action",
   "tags": [
+    "ch",
     "ask al",
-    "other",
+    "ed",
+    "coach-mark",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
-    "list"
+    "list",
+    "carousel",
+    "page-indicator",
+    "toast",
+    "coach-mark"
   ],
   "style": [
     "dark"
@@ -31,81 +40,97 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Recents”",
+        "Tab bar with 3 items: ch, Ask Al, ed",
+        "Navigation title reads “That simple”",
+        "Paged carousel with a page indicator",
+        "Toast, covering 3% of the height from 13% down",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 13 text elements.",
-        "13 text elements recognised"
+        "Coach mark toast, on top of Create account with a 3-item tab bar and a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: coach-mark"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 46 in “Customizing a page”",
-        "Reached from “Category page — scrolled”",
-        "Leads to “Search results (4)”"
+        "Step 7 of 9 in “Ch”",
+        "Reached from “Create account (10)”",
+        "Leads to “Category page (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 7.5s at 4:44 in the recording",
-        "Frame 971 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 4:30 in the recording",
+        "Frame 903 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#232123",
+      "hex": "#1f1d20",
       "role": "background",
-      "share": 0.922
+      "share": 0.731
     },
     {
-      "hex": "#434143",
+      "hex": "#3e3c3f",
       "role": "surface",
-      "share": 0.048
+      "share": 0.201
     },
     {
-      "hex": "#5a585a",
+      "hex": "#5a595c",
       "role": "surface",
-      "share": 0.022
+      "share": 0.029
     },
     {
-      "hex": "#6b562a",
+      "hex": "#737173",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#7a5d23",
       "role": "accent",
-      "share": 0.003
-    },
-    {
-      "hex": "#abaaab",
-      "role": "text",
-      "share": 0.002
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 971,
-    "atSeconds": 284.1,
-    "endSeconds": 291.6,
-    "holdSeconds": 7.5,
+    "frame": 903,
+    "atSeconds": 270.3,
+    "endSeconds": 271.2,
+    "holdSeconds": 0.9,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.25,
+        "y": 0.125,
+        "w": 0.46875,
+        "h": 0.03125
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 13,
-    "tabLabels": [],
+    "lineCount": 20,
+    "tabLabels": [
+      "ch",
+      "Ask Al",
+      "ed"
+    ],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
@@ -113,13 +138,12 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Recents",
-    "headline": "Meeting @Today",
-    "tabBar": false
+    "title": "That simple",
+    "headline": "Welcome to Notion!"
   },
   "crawler": {
-    "nodeId": "s094",
-    "depth": 93,
+    "nodeId": "s089",
+    "depth": 88,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -127,16 +151,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s093",
-        "via": "Open Recents",
-        "name": "Category page — scrolled"
+        "from": "s088",
+        "via": "Back to Feature tip",
+        "name": "Create account (10)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s095",
-        "via": "Tap “Meeting @Today”",
-        "name": "Search results (4)"
+        "to": "s090",
+        "via": "Back to Category page",
+        "name": "Category page (3)"
       }
     ]
   },

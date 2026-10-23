@@ -2,30 +2,25 @@
   "screenId": "claude-webapp-versions-2026-10-23-home-1",
   "screen_id": "claude-webapp-versions-2026-10-23-home-1",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.373Z",
-  "screen_type": "bottom_sheet",
-  "published_as": "modal",
-  "states": [
-    "bottom-sheet"
-  ],
+  "analyzedAt": "2026-10-23T12:49:05.904Z",
+  "screen_type": "other",
+  "published_as": "messages",
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Home",
   "flow_position": 1,
-  "name": "Home screen · bottom sheet",
-  "description": "Bottom sheet, on top of Loading state with a sidebar. Light theme, 17 text elements.",
-  "text": "• Claude\n+New\nFree plan • Upgrade\n5 Projects\n& Artifacts\nCustomize\nQ °b\nRecents\nCustomize Claude for you\nTry\nGreeting\nYou're here!\nHow can I help you today?\n+\nProject v\nSonnet 5.5 Medium\nManual\nCookie settings\nWe use cookies to deliver and improve our services,\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nAccept all cookies\nReject all cookies\nMotvin • Free",
-  "purpose": "Welcome screen with input field for user queries",
-  "primary_action": "Enter query",
+  "name": "Chat interface",
+  "description": "Other screen with a sidebar. Light theme, 9 text elements.",
+  "text": "• Claude\n+New\nFree plan • Upgrade\n5 Projects\n& Artifacts\nCustomize\nQ °6\nRecents\nCustomize Claude for you\nTry\nGreeting\n* Good morning, Motvin\nHey\n+\nProject v\nSonnet 5.5 Medium\nManual\nMotvin • Free",
+  "purpose": "To allow the user to interact with the AI assistant.",
+  "primary_action": "Send message",
   "tags": [
-    "settings",
-    "bottom-sheet",
+    "other",
     "webapp"
   ],
   "elements": [
-    "nav-bar",
-    "list",
-    "bottom-sheet"
+    "nav-bar"
   ],
   "style": [
     "light"
@@ -35,90 +30,75 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “You're here!”",
-        "Bottom sheet, covering 59% of the height from 39% down",
+        "Navigation title reads “Good morning, Motvin”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Bottom sheet, on top of Loading state with a sidebar. Light theme, 17 text elements.",
-        "17 text elements recognised",
-        "State: bottom-sheet"
+        "Other screen with a sidebar. Light theme, 9 text elements.",
+        "9 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 3 in “Home”",
-        "Reached from “Loading state”",
-        "Leads to “Settings”"
+        "Step 1 of 2 in “Home”",
+        "Reached from “Search”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 4.5s at 0:55 in the recording",
-        "Frame 198 of 593 sampled at 3.3333333333333335 fps",
+        "Held for 6.3s at 1:11 in the recording",
+        "Frame 302 of 593 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafbf8",
+      "hex": "#fbfbf9",
       "role": "background",
-      "share": 0.909
+      "share": 0.981
     },
     {
-      "hex": "#363733",
-      "role": "text",
-      "share": 0.042
-    },
-    {
-      "hex": "#535451",
+      "hex": "#dedcda",
       "role": "surface",
-      "share": 0.011
+      "share": 0.012
     },
     {
-      "hex": "#dedddc",
+      "hex": "#c7c6c2",
       "role": "surface",
-      "share": 0.011
+      "share": 0.006
     },
     {
-      "hex": "#bfc0be",
-      "role": "surface",
-      "share": 0.01
+      "hex": "#dba58c",
+      "role": "accent",
+      "share": 0
     }
   ],
   "capture": {
     "source": "Claude test.mp4",
     "fps": 3.3333333333333335,
     "frames": 593,
-    "frame": 198,
-    "atSeconds": 55.2,
-    "endSeconds": 59.7,
-    "holdSeconds": 4.5,
+    "frame": 302,
+    "atSeconds": 71.1,
+    "endSeconds": 73.2,
+    "holdSeconds": 6.3,
     "brief": false,
-    "kind": "overlay",
-    "overlay": {
-      "kind": "bottom_sheet",
-      "dimmed": false,
-      "box": {
-        "x": 0.03125,
-        "y": 0.390625,
-        "w": 0.6875,
-        "h": 0.59375
-      }
-    },
+    "kind": "screen",
+    "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
-    "lineCount": 17,
+    "lineCount": 9,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -133,12 +113,12 @@
     ],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "You're here!",
-    "headline": "You're here!"
+    "title": "Good morning, Motvin",
+    "headline": "Good morning, Motvin"
   },
   "crawler": {
-    "nodeId": "s016",
-    "depth": 15,
+    "nodeId": "s020",
+    "depth": 19,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -146,16 +126,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s015",
-        "via": "Wait 0.9s",
-        "name": "Loading state"
+        "from": "s019",
+        "via": "Open Good morning, Motvin",
+        "name": "Search"
       }
     ],
     "leadsTo": [
       {
-        "to": "s017",
-        "via": "Tap “Manual”",
-        "name": "Settings"
+        "to": "s021",
+        "via": "Open Plans that grow with you",
+        "name": "Subscription plans"
       }
     ]
   },

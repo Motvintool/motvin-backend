@@ -2,9 +2,9 @@
   "screenId": "claude-webapp-versions-2026-10-23-upgrading-subscription-4",
   "screen_id": "claude-webapp-versions-2026-10-23-upgrading-subscription-4",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.397Z",
+  "analyzedAt": "2026-10-23T12:49:05.911Z",
   "screen_type": "paywall",
-  "published_as": "pricing",
+  "published_as": "modal",
   "states": [],
   "category": "productivity",
   "flow": "checkout",
@@ -13,7 +13,7 @@
   "name": "Upgrade prompt",
   "description": "Paywall screen with a sidebar. Light theme, 20 text elements.",
   "text": "• Claude\nGreeting v\nShare\n+\nNew\nProjects\nHello\n8t Artifacts\nE Customize\nGood morning! How can I help you today?\nQ ib\nRecents\nCustomize Claude for you\nTry\nUse Opus 5.5 with Claude Pro\nGreeting\nGreeting\n• Higher usage limits\nAccess to more Claude models\n<> Claude Code directly in your codebase\n*= Power through tasks with Cowork\nMonthly\nYearly • Save 17%\nUpgrade to Pro\nSee all plans . Not now\nPrices and plans are subject to change at Anthropic's discretion.\nReply\nM Motvin • Free v\nManual\nClaude is Al and can make mistakes.\nSonnet 5.5 Medium",
-  "purpose": "To prompt the user to upgrade to a paid plan with additional features",
+  "purpose": "To prompt the user to upgrade to a paid plan with benefits",
   "primary_action": "Upgrade to Pro",
   "tags": [
     "price",
@@ -48,8 +48,8 @@
       "title": "Navigation",
       "points": [
         "Step 4 of 6 in “Upgrading subscription”",
-        "Reached from “Greeting (7)”",
-        "Leads to “Subscription plans (4)”"
+        "Reached from “Greeting”",
+        "Leads to “Subscription plans”"
       ]
     },
     {
@@ -135,14 +135,14 @@
       {
         "from": "s030",
         "via": "Tap “Greeting”",
-        "name": "Greeting (7)"
+        "name": "Greeting"
       }
     ],
     "leadsTo": [
       {
         "to": "s032",
         "via": "Tap “Monthly”",
-        "name": "Subscription plans (4)"
+        "name": "Subscription plans"
       }
     ]
   },

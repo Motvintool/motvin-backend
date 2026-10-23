@@ -1,28 +1,34 @@
 {
-  "name": "Home screen (5)",
-  "screenType": "other",
-  "fineType": "other",
-  "states": [],
-  "description": "Other screen. Dark theme, 13 text elements.",
+  "name": "Actions menu",
+  "screenType": "modal",
+  "fineType": "payment",
+  "states": [
+    "scrolled"
+  ],
+  "description": "Payment screen, scrolled further down from Category page. Dark theme, 17 text elements.",
   "tags": [
-    "ask al",
-    "other",
+    "payment",
+    "scrolled",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "list"
+    "list",
+    "toggle",
+    "button",
+    "badge"
   ],
   "style": [
     "dark"
   ],
   "capturedAt": "2026-10-23",
   "capture": {
-    "atSeconds": 284.1,
-    "holdSeconds": 7.5,
+    "atSeconds": 273.9,
+    "holdSeconds": 9.9,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "scrolledFrom": null
   },
-  "purpose": "To provide access to recent, favorite, and private pages",
-  "primaryAction": "Select a page"
+  "purpose": "To provide a list of actions available for the current page.",
+  "primaryAction": "Select an action"
 }

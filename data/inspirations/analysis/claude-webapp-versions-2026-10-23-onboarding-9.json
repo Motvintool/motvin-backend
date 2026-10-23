@@ -2,7 +2,7 @@
   "screenId": "claude-webapp-versions-2026-10-23-onboarding-9",
   "screen_id": "claude-webapp-versions-2026-10-23-onboarding-9",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.357Z",
+  "analyzedAt": "2026-10-23T12:49:05.897Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [],
@@ -13,7 +13,7 @@
   "name": "Verification code entry",
   "description": "Verification code screen. Light theme, 20 text elements.",
   "text": "Claude\nQuestion what's next\nYour thinking partner for big ambitions\nTo continue, click the link sent to\nmotvintool@gmail.com\nNot seeing the email in your inbox? Try sending again.\nWrong email? Change email address\nIf the link shows a verification code instead of signing you\nin, enter it here.\nEnter verification code\nVerify email address\nCookie settings\nWe use cookies to deliver and improve our services,\n Download desktop app\nanalyze site usage, and if you agree, to customize or\npersonalize your experience and market our services\nto you. You can read our Cookie Policy here.\nCustomize cookie settings\nReject all cookies\nAccept all cookies",
-  "purpose": "Allow the user to enter a verification code if the link didn't work",
+  "purpose": "To allow the user to enter a verification code if the email link doesn't work.",
   "primary_action": "Enter verification code",
   "tags": [
     "settings",
@@ -48,8 +48,8 @@
       "title": "Navigation",
       "points": [
         "Step 9 of 15 in “Onboarding”",
-        "Reached from “OTP verification (2)”",
-        "Leads to “OTP verification (4)”"
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
       ]
     },
     {
@@ -129,14 +129,14 @@
       {
         "from": "s008",
         "via": "Back to OTP verification",
-        "name": "OTP verification (2)"
+        "name": "OTP verification"
       }
     ],
     "leadsTo": [
       {
         "to": "s010",
         "via": "Back to OTP verification",
-        "name": "OTP verification (4)"
+        "name": "OTP verification"
       }
     ]
   },

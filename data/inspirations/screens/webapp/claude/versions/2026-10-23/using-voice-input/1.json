@@ -1,6 +1,6 @@
 {
-  "name": "Chat interface (3)",
-  "screenType": "other",
+  "name": "Chat with voice input",
+  "screenType": "messages",
   "fineType": "other",
   "states": [],
   "description": "Other screen with a sidebar. Light theme, 11 text elements.",
@@ -9,7 +9,11 @@
     "webapp"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "text-field",
+    "button",
+    "badge",
+    "legal-text"
   ],
   "style": [
     "light"
@@ -22,6 +26,6 @@
     "visits": 2,
     "loadingOf": null
   },
-  "purpose": "To display a conversation with Claude and allow user input",
-  "primaryAction": "Send a message"
+  "purpose": "To allow the user to interact with Claude using voice input in a chat interface.",
+  "primaryAction": "Send a voice message"
 }

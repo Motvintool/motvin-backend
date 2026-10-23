@@ -1,6 +1,6 @@
 {
-  "name": "Voice input",
-  "screenType": "other",
+  "name": "Chat with voice input",
+  "screenType": "messages",
   "fineType": "other",
   "states": [],
   "description": "Other screen with a sidebar. Light theme, 12 text elements.",
@@ -9,7 +9,10 @@
     "webapp"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "text-field",
+    "button",
+    "legal-text"
   ],
   "style": [
     "light"
@@ -21,6 +24,6 @@
     "brief": false,
     "visits": 1
   },
-  "purpose": "To allow the user to input a message using voice while the app listens",
-  "primaryAction": "Listen for voice input"
+  "purpose": "To show the user the ongoing voice input process in a chat with Claude.",
+  "primaryAction": "Listen to the voice input"
 }

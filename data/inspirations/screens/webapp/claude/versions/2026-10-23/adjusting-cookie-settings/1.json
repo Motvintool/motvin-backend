@@ -1,29 +1,32 @@
 {
-  "name": "Cookie settings",
-  "screenType": "settings",
-  "fineType": "settings",
-  "states": [],
-  "description": "Settings screen with a sidebar and a primary action labelled “Save preferences”. Light theme, 32 text elements.",
+  "name": "Cookie settings · bottom sheet",
+  "screenType": "modal",
+  "fineType": "bottom_sheet",
+  "states": [
+    "bottom-sheet"
+  ],
+  "description": "Bottom sheet, on top of Loading state with a sidebar. Light theme, 17 text elements.",
   "tags": [
     "settings",
+    "bottom-sheet",
     "webapp"
   ],
   "elements": [
-    "nav-bar",
-    "list",
-    "cta",
-    "button"
+    "modal",
+    "button",
+    "legal-text"
   ],
   "style": [
     "light"
   ],
   "capturedAt": "2026-10-23",
   "capture": {
-    "atSeconds": 59.7,
-    "holdSeconds": 3.3,
+    "atSeconds": 55.2,
+    "holdSeconds": 4.5,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "overlayOf": null
   },
-  "purpose": "To allow users to manage their cookie preferences",
-  "primaryAction": "Save preferences"
+  "purpose": "To inform the user about cookie usage and obtain consent.",
+  "primaryAction": "Accept all cookies"
 }

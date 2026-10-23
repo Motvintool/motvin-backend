@@ -2,27 +2,32 @@
   "screenId": "notion-ios-versions-2026-10-23-sharing-a-page-2",
   "screen_id": "notion-ios-versions-2026-10-23-sharing-a-page-2",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T07:08:48.132Z",
+  "analyzedAt": "2026-10-23T11:05:42.161Z",
   "screen_type": "signup",
   "published_as": "signup",
   "states": [],
   "category": "productivity",
   "flow": "authentication",
   "flow_name": "Sharing a page",
-  "flow_position": 2,
-  "name": "Publish to web",
-  "description": "Sign up screen. Dark theme, 27 text elements.",
-  "text": "9:41(\n\"ll\nShare settings\nDone\nPublish\nShare\nPublish to web\nCreate a website with Notion ?\n•l S\n9:41\nNotion!\nWelc\nGet Notion free\nQ\n•..\nWelcome to Noti...\nCreate an account with-\nNotion\nTap anywhere and just start\ntyping. It's that simple.\nHighlight text and use the\nmenu above your keyboard\nto change the style.\nTap the + icon above your\nkeyboard to add content:\nheadings, to-dos, and more.\nCollapse your keyboard, then\ntap and hold this line to\nPublish\nWhen published to web, anyone with the\nlink can view this page's content and see\ncontributor names.",
-  "purpose": "To publish a Notion page to the web and share it publicly",
-  "primary_action": "Publish",
+  "flow_position": 1,
+  "name": "Share settings",
+  "description": "Other screen. Dark theme, 14 text elements.",
+  "text": "9:41 €\n•••\nWelcome to Notion!\nCreate an account with Notion\nTap anywhere and just start typing. It's\nthat simple.\nHighlight text and use the menu above\nyour keyboard to change the style.\nTap the + icon above your keyboard to\nadd content: headings, to-dos, and\nmore.\nCollapse your keyboard, then tap and\nhold this line to move content.\nTap the home icon at the bottom left to\nsee your pages. (We've installed a To\nDo List for you - go check it out!)\nClick on the\nNotion Al face in the\nbottom right of your screen or click here\nto see what Agent can do\nKeep exploring!\nYou've just learned the basics. But there's\nch\ned\nAsk Al\nIle and irmeng\npagt\nusing the compose icon in the bottom right",
+  "purpose": "To configure sharing options for a page.",
+  "primary_action": "Click the Share link button",
   "tags": [
-    "settings",
+    "ch",
+    "ask al",
+    "ed",
     "signup",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
-    "list"
+    "list",
+    "carousel",
+    "page-indicator"
   ],
   "style": [
     "dark"
@@ -31,81 +36,87 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Share settings”",
+        "Tab bar with 3 items: ch, Ask Al, ed",
+        "Navigation title reads “That simple”",
+        "Paged carousel with a page indicator",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Sign up screen. Dark theme, 27 text elements.",
-        "27 text elements recognised"
+        "Sign up screen with a 3-item tab bar and a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 4 in “Sharing a page”",
-        "Reached from “Share settings”",
-        "Leads to “Create account (4)”"
+        "Step 1 of 9 in “Ch”",
+        "Reached from “Recents”",
+        "Leads to “Share settings”",
+        "Returned to 7 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.1s at 3:57 in the recording",
-        "Frame 797 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 3.3s at 3:51 in the recording",
+        "Frame 782 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#222023",
+      "hex": "#1f1d1f",
       "role": "background",
-      "share": 0.856
+      "share": 0.73
     },
     {
-      "hex": "#413f40",
+      "hex": "#3e3c3f",
       "role": "surface",
-      "share": 0.066
+      "share": 0.201
     },
     {
-      "hex": "#277bd0",
+      "hex": "#5a595c",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#737173",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#7a5d23",
       "role": "accent",
-      "share": 0.047
-    },
-    {
-      "hex": "#676667",
-      "role": "surface",
-      "share": 0.017
-    },
-    {
-      "hex": "#595044",
-      "role": "surface",
-      "share": 0.007
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 797,
-    "atSeconds": 237.3,
-    "endSeconds": 239.4,
-    "holdSeconds": 2.1,
+    "frame": 782,
+    "atSeconds": 231.6,
+    "endSeconds": 234.9,
+    "holdSeconds": 3.3,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 7
   },
   "signals": {
-    "lineCount": 27,
-    "tabLabels": [],
+    "lineCount": 20,
+    "tabLabels": [
+      "ch",
+      "Ask Al",
+      "ed"
+    ],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
@@ -113,12 +124,12 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Share settings",
-    "headline": "Welcome to Noti"
+    "title": "That simple",
+    "headline": "Welcome to Notion!"
   },
   "crawler": {
-    "nodeId": "s073",
-    "depth": 72,
+    "nodeId": "s071",
+    "depth": 70,
     "path": [],
     "visits": 1,
     "blocked": true,
@@ -126,16 +137,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s072",
-        "via": "Wait 2.1s",
-        "name": "Share settings"
+        "from": "s070",
+        "via": "Tap “Welcome to Notion!”",
+        "name": "Recents"
       }
     ],
     "leadsTo": [
       {
-        "to": "s074",
-        "via": "Wait 2.1s",
-        "name": "Create account (4)"
+        "to": "s072",
+        "via": "Open Share settings",
+        "name": "Share settings"
       }
     ]
   },

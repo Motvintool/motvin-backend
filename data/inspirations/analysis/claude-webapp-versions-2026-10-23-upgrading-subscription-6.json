@@ -2,9 +2,9 @@
   "screenId": "claude-webapp-versions-2026-10-23-upgrading-subscription-6",
   "screen_id": "claude-webapp-versions-2026-10-23-upgrading-subscription-6",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-23T05:13:37.406Z",
+  "analyzedAt": "2026-10-23T12:49:05.915Z",
   "screen_type": "paywall",
-  "published_as": "pricing",
+  "published_as": "form",
   "states": [],
   "category": "productivity",
   "flow": "checkout",
@@ -13,8 +13,8 @@
   "name": "Add custom connector",
   "description": "Paywall screen with a sidebar, 1 input field and a primary action labelled “Continue”. Light theme, 25 text elements.",
   "text": "• Claude\nGreeting V\nShare\n+\nNew\nProjects\nHello\n8 Artifacts\nCustomize\nGood morning! How can I help you today?\nQ ib\nRecents\nCustomize Claude for you\nAdd custom connector\nTry\nGreeting\nConnect Claude to your data and tools. Learn more about connectors or\nget started with pre-built ones.\nGreeting\nName\nShown in the connectors list.\nMCP server URL\nThe HTTPS address where the server accepts MCP requests, for example\nhttps://mcp.example.com/mcp.\nOnly use connectors from developers you trust. Anthropic does not\ncontrol which tools developers make available and cannot verify that they\nwill work as intended or that they won't change.\nBuilding an MCP server? Report issues and subscribe to updates here\nCancel\nContinue\nReply\nMotvin • Free\nM\n+ 0\nClaude is Al and can make mistakes.\nSonnet 5.5 Medium\nManual",
-  "purpose": "To allow the user to connect external tools by entering connector details",
-  "primary_action": "Enter connector information",
+  "purpose": "To allow the user to add a custom connector by entering a name and URL",
+  "primary_action": "Enter connector details",
   "tags": [
     "address",
     "paywall",
@@ -51,8 +51,8 @@
       "title": "Navigation",
       "points": [
         "Step 6 of 6 in “Upgrading subscription”",
-        "Reached from “Greeting (11)”",
-        "Leads to “Greeting (12)”"
+        "Reached from “Greeting”",
+        "Leads to “Greeting”"
       ]
     },
     {
@@ -141,14 +141,14 @@
       {
         "from": "s037",
         "via": "Tap “Greeting”",
-        "name": "Greeting (11)"
+        "name": "Greeting"
       }
     ],
     "leadsTo": [
       {
         "to": "s039",
         "via": "Back to Greeting",
-        "name": "Greeting (12)"
+        "name": "Greeting"
       }
     ]
   },

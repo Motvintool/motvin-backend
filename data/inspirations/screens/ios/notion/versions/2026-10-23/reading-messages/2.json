@@ -1,29 +1,32 @@
 {
-  "name": "Inbox (7)",
-  "screenType": "search",
-  "fineType": "search_results",
+  "name": "Inbox",
+  "screenType": "notifications",
+  "fineType": "messages",
   "states": [],
-  "description": "Search results screen. Dark theme, 13 text elements.",
+  "description": "Messages screen. Dark theme, 5 text elements.",
   "tags": [
     "filter",
-    "settings",
     "ask al",
-    "search-results",
+    "messages",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "list"
+    "button",
+    "search-bar",
+    "cta"
   ],
   "style": [
-    "dark"
+    "dark",
+    "minimal"
   ],
   "capturedAt": "2026-10-23",
   "capture": {
-    "atSeconds": 427.8,
-    "holdSeconds": 0.3,
+    "atSeconds": 426.6,
+    "holdSeconds": 0.9,
     "brief": false,
     "visits": 1
   },
-  "purpose": "To view notifications and updates in the workspace"
+  "purpose": "To display the user's inbox with notifications and activity",
+  "primaryAction": "Change filter"
 }
