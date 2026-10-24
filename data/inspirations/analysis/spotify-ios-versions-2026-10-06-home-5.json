@@ -1,20 +1,20 @@
 {
   "screenId": "spotify-ios-versions-2026-10-06-home-5",
   "screen_id": "spotify-ios-versions-2026-10-06-home-5",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-06T10:23:44.267Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:49:43.811Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Home",
-  "flow_position": 5,
-  "name": "Home home (5)",
-  "description": "Feed screen with a 5-item tab bar. Dark theme, 29 text elements.",
-  "text": "9:41\no0ll\nPodcasts\nAll\nMusic\njump into a session pasea on your tastes\nStart listening\nANIRUDHI\nAathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dadlani, and Yu...\nPavazha Malli - From \"Think Indie\"\nSai Abhyankkar, Shruti Haasan, and Vivek\nRecommended Stations\nRADIO\nRADIO\nVivek\nAnirud\nSai Abhyankkar\nSai Abhyankkar, Sid\nAnirudh Ravichander, Sai\nAnirudh\nAbhyank\nSriram, G. V. Prakash, Viv...\nAbhyankkar, Sid Sriram, I...\nMore like\nAnirudh Ravichander\nSAABHYANKKAR'S\nKudimes\nnencime\nAdipo\nNowlamil\n+\nQ\nIID\nCreate\nYour Library\nPremium\nSearch\nHome",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 6,
+  "name": "Home feed",
+  "description": "Feed screen with a 5-item tab bar. Dark theme, 26 text elements.",
+  "text": "9:41\nAll\nMusic\nPodcasts\nVazhithunaiye (From\nAura 10/10 (From\nKALYAN\n\"Meesaya Murukku 2\")\n\"Dragon\")\nARJN, K\nLeon James, Sid Sriram,...\nHiphop Tamizha, Thamiz...\nRising tracks we think you'll like\nTrending songs for you\nRadhimaa - From \"Think Indie\"\nSai Abhyankkar, Nargis Teji, Asma Teji, Vivek,...\nSammi Meri Waarr\nMuskan Chandalia, NZEEEE, Gagan, and Perf...\nMuthumani (From \"Dorothy\")\nllaiyaraaja, Shweta Mohan\nMore like\nSai Abhyankkar\nPARIMR\nDC\nSingle\nAlbum\nSingle\nOriginal M\nQ\n11D\ne Sour\nYour Library\nPremium\nSearch\nCreate\nHome",
+  "purpose": "To display personalized music recommendations and trending tracks to the user.",
+  "primary_action": "Browse recommended tracks",
   "tags": [
     "home",
     "search",
@@ -37,69 +37,69 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Home, Search, Your Library, Premium, Create",
-        "Navigation title reads “Start listening”",
+        "Navigation title reads “Trending songs for you”",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar. Dark theme, 29 text elements.",
-        "29 text elements recognised"
+        "Feed screen with a 5-item tab bar. Dark theme, 26 text elements.",
+        "26 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 181 in “Home”",
-        "Reached from “Home home (4)”",
-        "Leads to “Home home (6)”"
+        "Step 6 of 181 in “Home”",
+        "Reached from “Home home (5)”",
+        "Leads to “Other (12)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.9s at 2:23 in the recording",
-        "Frame 479 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 3.9s at 2:26 in the recording",
+        "Frame 500 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#191519",
+      "hex": "#181418",
       "role": "background",
-      "share": 0.606
+      "share": 0.641
     },
     {
-      "hex": "#362e33",
+      "hex": "#363033",
       "role": "surface",
-      "share": 0.104
+      "share": 0.089
     },
     {
-      "hex": "#dba6fc",
+      "hex": "#4b494c",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#faf9fa",
       "role": "text",
-      "share": 0.04
+      "share": 0.021
     },
     {
-      "hex": "#4c474d",
-      "role": "surface",
-      "share": 0.036
-    },
-    {
-      "hex": "#b88bd6",
+      "hex": "#552817",
       "role": "accent",
-      "share": 0.014
+      "share": 0.013
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 479,
-    "atSeconds": 143.1,
-    "endSeconds": 144,
-    "holdSeconds": 0.9,
+    "frame": 500,
+    "atSeconds": 146.4,
+    "endSeconds": 150.3,
+    "holdSeconds": 3.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -109,7 +109,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 29,
+    "lineCount": 26,
     "tabLabels": [
       "Home",
       "Search",
@@ -120,12 +120,12 @@
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Start listening",
-    "headline": "Vivek"
+    "title": "Trending songs for you",
+    "headline": "Sai Abhyankkar"
   },
   "crawler": {
-    "nodeId": "s056",
-    "depth": 55,
+    "nodeId": "s057",
+    "depth": 56,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -133,16 +133,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s055",
-        "via": "Tap “Vivek”",
-        "name": "Home home (4)"
+        "from": "s056",
+        "via": "Tap “Sai Abhyankkar”",
+        "name": "Home home (5)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s057",
-        "via": "Tap “Sai Abhyankkar”",
-        "name": "Home home (6)"
+        "to": "s058",
+        "via": "Open Other",
+        "name": "Other (12)"
       }
     ]
   },

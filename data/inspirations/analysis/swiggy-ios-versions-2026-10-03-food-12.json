@@ -1,20 +1,20 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-12",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-12",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:21.556Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.285Z",
   "screen_type": "checkout",
   "published_as": "checkout",
   "states": [],
   "category": "productivity",
   "flow": "checkout",
   "flow_name": "Food",
-  "flow_position": 12,
-  "name": "Checkout (2)",
-  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
-  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\noe : { y &\n- << =\nfood instamart dineout scenes\ncamplin fmp 1s ~lat veg\n-\nos all ® gourmet & offers 4 bolt\ndelightful get a veg m\ndeals free treat delights z20(\na & tt * a =\nf-5 pn\n) (£8 cee\n5 n mn\nmin rs. 100 off fast delivery\nfv} - ny,\ncrs od a nl a : jag 3 j © £\netal re a)\ng | hae 3 z 2 or be 77 2 «ry 4\n-- 5 theobroma checkout\nview full menu 2 items * 176\n© an 1 @\nfood bolt ( met eatright",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 13,
+  "name": "Checkout summary",
+  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
+  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\n- << =\n\nfood instamart dineout scenes\n\nca vvmln mr dim! veg\nos all ® gourmet & offers 4 bolt\npa.\n) 2 y /\ndelightful |  geta veg m\ndeals free treat delights z20(\noly & hn 3 rs,\nie he\n) (es cee\nan [1111] a —\nmin rs. 100 off fast delivery\n£94 a i<,\nent via fai\nde ne 5s |\nli y\n-- a theobroma checkout\nview full menu 2 items * 176\n® an @\nfood bolt gourmet eatright",
+  "purpose": "To display the current cart and allow the user to proceed to checkout.",
+  "primary_action": "Proceed to checkout",
   "tags": [
     "search",
     "checkout",
@@ -54,24 +54,25 @@
     {
       "title": "Content",
       "points": [
-        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
+        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
         "Calls to action: “ORDER NOW”",
-        "32 text elements recognised"
+        "33 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 12 of 32 in “Food”",
-        "Reached from “Checkout”",
-        "Leads to “Checkout (3)”"
+        "Step 13 of 32 in “Food”",
+        "Reached from “Checkout (2)”",
+        "Leads to “Order placed (6)”",
+        "Returned to 12 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 4:54 in the recording",
-        "Frame 985 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 3.3s at 4:55 in the recording",
+        "Frame 1019 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -80,7 +81,7 @@
     {
       "hex": "#fbfafb",
       "role": "background",
-      "share": 0.26
+      "share": 0.259
     },
     {
       "hex": "#037b2f",
@@ -93,9 +94,9 @@
       "share": 0.134
     },
     {
-      "hex": "#d6dad5",
+      "hex": "#d5dad4",
       "role": "surface",
-      "share": 0.045
+      "share": 0.044
     },
     {
       "hex": "#28954e",
@@ -107,20 +108,20 @@
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 985,
-    "atSeconds": 294.6,
-    "endSeconds": 295.8,
-    "holdSeconds": 1.2,
+    "frame": 1019,
+    "atSeconds": 295.8,
+    "endSeconds": 296.4,
+    "holdSeconds": 3.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 12
   },
   "signals": {
-    "lineCount": 32,
+    "lineCount": 33,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -141,8 +142,8 @@
     "headline": "Delights"
   },
   "crawler": {
-    "nodeId": "s131",
-    "depth": 130,
+    "nodeId": "s132",
+    "depth": 131,
     "path": [],
     "visits": 1,
     "blocked": true,
@@ -150,16 +151,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s130",
-        "via": "Wait 0.6s",
-        "name": "Checkout"
+        "from": "s131",
+        "via": "Tap “Guduvancheri ›”",
+        "name": "Checkout (2)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s132",
-        "via": "Tap “Guduvancheri ›”",
-        "name": "Checkout (3)"
+        "to": "s133",
+        "via": "Back to Order placed",
+        "name": "Order placed (6)"
       }
     ]
   },

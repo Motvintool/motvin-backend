@@ -1,0 +1,155 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-onboarding-69",
+  "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-69",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.602Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "form",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 69,
+  "name": "Create a password",
+  "description": "Bottom sheet over a dimmed screen with 1 input field. Dark theme, 5 text elements.",
+  "text": "9:41C\nC\n•ll\nCreate a password\nPassword\nCREATE PROFILE\nBy signing in to Duolingo, you agree to our Terms and\nPrivacy Policy.",
+  "purpose": "To let the user create a password during account setup.",
+  "primary_action": "Enter password",
+  "tags": [
+    "profile",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "legal-text",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create a password”",
+        "Bottom sheet over a dimmed background, covering 27% of the height from 72% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen with 1 input field. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 69 of 187 in “Onboarding”",
+        "Reached from “Address form (3)”",
+        "Leads to “Create a password sheet (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 3:59 in the recording",
+        "Frame 806 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#142126",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#364548",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#576165",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#90c83f",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#1f5d7a",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 806,
+    "atSeconds": 239.7,
+    "endSeconds": 242.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.71875,
+        "w": 0.90625,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Create a password",
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s073",
+    "depth": 72,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s072",
+        "via": "Open Create a password",
+        "name": "Address form (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s074",
+        "via": "Dismiss",
+        "name": "Create a password sheet (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,156 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-home-54",
+  "screen_id": "luma-ios-versions-2026-10-19-home-54",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.838Z",
+  "screen_type": "calendar",
+  "published_as": "permission",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "creation",
+  "flow_name": "Home",
+  "flow_position": 54,
+  "name": "Permissions",
+  "description": "Calendar screen with a 3-item tab bar and a primary action labelled “Allow Camera Access”. Dark theme, 17 text elements.",
+  "text": "9:41(\n•ll\n<\nPermissions\nContacts Syncing\nInvite your contacts to events and see which of your\nfriends is going to an event.\nLocation Access\nView events near you and get better location\nsuggestions when creating events.\nAllow Camera Access\nCheck in guests or take photos for your events, avatar\nand chats.\nBlocked Users\n>\nBlocked Calendars\nBlocked users and calendars can't contact you or invite\nyou to events.\nReview Invites\nDiscover\nHome\nChat",
+  "purpose": "To allow the user to manage app permissions for contacts, location, and camera.",
+  "primary_action": "Toggle permission settings",
+  "tags": [
+    "chat",
+    "review",
+    "calendar",
+    "photo",
+    "location",
+    "home",
+    "discover",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Contacts Syncing”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar screen with a 3-item tab bar and a primary action labelled “Allow Camera Access”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow Camera Access”",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 54 of 69 in “Home”",
+        "Reached from “Settings (7)”",
+        "Leads to “Contacts Syncing — loading”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:40 in the recording",
+        "Frame 1339 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050406",
+      "role": "background",
+      "share": 0.686
+    },
+    {
+      "hex": "#222224",
+      "role": "surface",
+      "share": 0.239
+    },
+    {
+      "hex": "#454546",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#5d5e5f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#b3beb7",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1339,
+    "atSeconds": 400.2,
+    "endSeconds": 402,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Camera Access"
+    ],
+    "keyboard": false,
+    "title": "Contacts Syncing",
+    "headline": "Blocked Users"
+  },
+  "crawler": {
+    "nodeId": "s153",
+    "depth": 153,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s152",
+        "via": "Open Contacts Syncing",
+        "name": "Settings (7)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s154",
+        "via": "Tap “Contacts Syncing”",
+        "name": "Contacts Syncing — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

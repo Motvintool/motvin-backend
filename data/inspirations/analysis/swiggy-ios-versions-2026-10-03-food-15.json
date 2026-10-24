@@ -1,20 +1,20 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-15",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-15",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:22.133Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.286Z",
   "screen_type": "checkout",
-  "published_as": "checkout",
+  "published_as": "home",
   "states": [],
   "category": "productivity",
   "flow": "checkout",
   "flow_name": "Food",
-  "flow_position": 15,
-  "name": "Checkout (5)",
-  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
-  "text": "9414 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\n: 44 : . &\n<< =\nfood instamart dineout scenes\nos all ® gourmet & offers 4 bolt\ndelightful |  geta veg m\ndeals free treat delights z20(\n) (ey coe\n2 a mn\nmin rs. 100 off fast delivery\n£95 om qo\n2 oviaen bosal\nplt ipe 2 : \\\n\\ maree sl\ni { 2 74\n& 5 theobroma checkout\nview full menu 2 items * 176\n® an @\nfood bolt gourme tright",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 16,
+  "name": "Home",
+  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
+  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\n- << =\n\nfood instamart dineout scenes\n\nca vvmln mr dim! veg\nos all ® gourmet & offers 4 bolt\npa.\n) 2 y /\ndelightful |  geta veg m\ndeals free treat delights z20(\noly & hn 3 rs,\nie he\n) (es cee\nan [1111] a —\nmin rs. 100 off fast delivery\n£94 a i<,\nent via fai\nde ne 5s |\nli y\n-- a theobroma checkout\nview full menu 2 items * 176\n® an @\nfood bolt gourmet eatright",
+  "purpose": "To browse food items and place an order from a restaurant.",
+  "primary_action": "Search for a food item",
   "tags": [
     "search",
     "checkout",
@@ -54,24 +54,24 @@
     {
       "title": "Content",
       "points": [
-        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
+        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
         "Calls to action: “ORDER NOW”",
-        "32 text elements recognised"
+        "33 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 15 of 32 in “Food”",
-        "Reached from “Checkout (4)”",
-        "Leads to “Checkout (6)”"
+        "Step 16 of 32 in “Food”",
+        "Reached from “Checkout (5)”",
+        "Leads to “Hola Pasta - Fresh Gourmet”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 5:01 in the recording",
-        "Frame 1007 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 3.3s at 5:02 in the recording",
+        "Frame 1019 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -80,12 +80,12 @@
     {
       "hex": "#fbfafb",
       "role": "background",
-      "share": 0.257
+      "share": 0.259
     },
     {
       "hex": "#037b2f",
       "role": "accent",
-      "share": 0.22
+      "share": 0.194
     },
     {
       "hex": "#043014",
@@ -93,24 +93,24 @@
       "share": 0.134
     },
     {
-      "hex": "#d6dad5",
+      "hex": "#d5dad4",
       "role": "surface",
-      "share": 0.045
+      "share": 0.044
     },
     {
-      "hex": "#26944f",
+      "hex": "#28954e",
       "role": "surface",
-      "share": 0.024
+      "share": 0.027
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 1007,
-    "atSeconds": 301.8,
-    "endSeconds": 302.4,
-    "holdSeconds": 0.6,
+    "frame": 1019,
+    "atSeconds": 302.7,
+    "endSeconds": 306,
+    "holdSeconds": 3.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -120,7 +120,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 32,
+    "lineCount": 33,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -138,11 +138,11 @@
     ],
     "keyboard": false,
     "title": "Guduvancheri",
-    "headline": "PAYRDAY"
+    "headline": "Delights"
   },
   "crawler": {
-    "nodeId": "s136",
-    "depth": 135,
+    "nodeId": "s137",
+    "depth": 136,
     "path": [],
     "visits": 1,
     "blocked": true,
@@ -150,16 +150,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s135",
-        "via": "Tap “OFF”",
-        "name": "Checkout (4)"
+        "from": "s136",
+        "via": "Back to Checkout",
+        "name": "Checkout (5)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s137",
-        "via": "Back to Checkout",
-        "name": "Checkout (6)"
+        "to": "s138",
+        "via": "Open Hola Pasta - Fresh Gourmet",
+        "name": "Hola Pasta - Fresh Gourmet"
       }
     ]
   },

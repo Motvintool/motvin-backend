@@ -1,30 +1,34 @@
 {
-  "name": "Address selection",
-  "screenType": "login",
+  "name": "Welcome login",
+  "screenType": "onboarding",
   "fineType": "login",
   "states": [],
-  "description": "Login screen with a paged carousel. Dark theme, 15 text elements.",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 8 text elements.",
   "tags": [
-    "address",
-    "login",
-    "ios"
+    "phone-login",
+    "social-login",
+    "welcome"
   ],
   "elements": [
-    "nav-bar",
-    "list",
     "carousel",
-    "page-indicator"
+    "button",
+    "text-field",
+    "page-indicator",
+    "legal-text"
   ],
   "style": [
-    "dark"
+    "light"
   ],
   "capturedAt": "2026-09-30",
   "capture": {
-    "atSeconds": 50.4,
-    "holdSeconds": 2.8,
+    "atSeconds": 1.2,
+    "holdSeconds": 1.6,
     "brief": false,
-    "visits": 6
+    "visits": 1
   },
-  "purpose": "Selecting a delivery address for Domino's Pizza",
-  "primaryAction": "Select an address"
+  "purpose": "Prompt the user to log in or sign up with a mobile number",
+  "primaryAction": "Enter mobile number",
+  "extraTypes": [
+    "login"
+  ]
 }

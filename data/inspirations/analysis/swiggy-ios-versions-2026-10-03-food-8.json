@@ -1,20 +1,20 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-8",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-8",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:18.382Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.295Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
-  "flow_position": 8,
-  "name": "Food home (6)",
+  "flow_position": 9,
+  "name": "Food home",
   "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 40 text elements.",
-  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\noa eo ©\n: << =\nfood instamart dineout scenes\ncom tn £m er tet de cf veg\nos all ® gourmet & offers 4 bolt\nor hy, te\n/ e. ae we; 5\nj\ndelightful =|  geta veg m\ndeals free treat delights z20(\nof 3 & tn a rn\nie a\n) (eb cee\n4 n mn\nmin rs. 100 off fast delivery\npny . -9\n72 3a 5 are ¥i bb) a\now, : plt fe : y: \\\nre la ; w te op s |. § 32\n* ra, id fk 2 “2\nle 30% off —\nget1 upto 375 at ¥119 ad\ndesi wok theobroma wefit - protein... c\n® an @\nfood 30 gourme eatright",
-  "purpose": null,
-  "primary_action": null,
+  "text": "9414 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\noa eo ©\nvd -\nfood instamart dineout scenes\nos all ® gourmet & offers 4 bolt\n~~\n>\ndelightful get a veg m\ndeals free treat delights z20(\n> ce & tin a» ren\nfe a\n) (e89, cape\n: wl! a\nmin rs. 100 off fast delivery\n\nwit 8 : ia 4 poo 4 3 a v a\nage lth re oll ol vin sa\n(et sgr pee | § | rfa\n$i rd 5 tr pe tow h\n\nitems = items\n70% off\nat 349 ad upto 140 at 369 )\ntheobroma burger king golcondas\n& an @\nfood o gourme eatright",
+  "purpose": "To browse food options and promotions in the user's area.",
+  "primary_action": "Search for a dish or restaurant",
   "tags": [
     "search",
     "delivery",
@@ -62,16 +62,16 @@
     {
       "title": "Navigation",
       "points": [
-        "Step 8 of 32 in “Food”",
-        "Reached from “Search (2)”",
-        "Leads to “Food home (7)”"
+        "Step 9 of 32 in “Food”",
+        "Reached from “Food home (6)”",
+        "Leads to “Sort By”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.7s at 3:49 in the recording",
-        "Frame 773 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 2.4s at 3:53 in the recording",
+        "Frame 785 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -80,12 +80,12 @@
     {
       "hex": "#fcfbfc",
       "role": "background",
-      "share": 0.225
+      "share": 0.23
     },
     {
       "hex": "#037b2f",
       "role": "accent",
-      "share": 0.194
+      "share": 0.193
     },
     {
       "hex": "#043014",
@@ -93,24 +93,24 @@
       "share": 0.135
     },
     {
-      "hex": "#cad5d0",
+      "hex": "#d2d9d5",
       "role": "surface",
-      "share": 0.041
+      "share": 0.042
     },
     {
-      "hex": "#28954d",
+      "hex": "#27954f",
       "role": "surface",
-      "share": 0.026
+      "share": 0.024
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 773,
-    "atSeconds": 229.5,
-    "endSeconds": 232.2,
-    "holdSeconds": 2.7,
+    "frame": 785,
+    "atSeconds": 233.4,
+    "endSeconds": 235.8,
+    "holdSeconds": 2.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -141,8 +141,8 @@
     "headline": "Delights"
   },
   "crawler": {
-    "nodeId": "s101",
-    "depth": 100,
+    "nodeId": "s102",
+    "depth": 101,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -150,16 +150,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s100",
-        "via": "Type “EatRight”",
-        "name": "Search (2)"
+        "from": "s101",
+        "via": "Back to Food home",
+        "name": "Food home (6)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s102",
-        "via": "Back to Food home",
-        "name": "Food home (7)"
+        "to": "s103",
+        "via": "Tap “:: ALL”",
+        "name": "Sort By"
       }
     ]
   },

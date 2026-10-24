@@ -1,0 +1,147 @@
+{
+  "screenId": "zomato-ios-versions-2026-09-30-logging-in-with-phone-number-8-1",
+  "screen_id": "zomato-ios-versions-2026-09-30-logging-in-with-phone-number-8-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:23:39.528Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 1,
+  "name": "Location selection",
+  "description": "Login screen with a search bar and a paged carousel. Dark theme, 25 text elements.",
+  "text": "94149 all © a\nvv select a location\n® use current location >\nzoho corporation, srm nagar, chennai, tamil\nnadu, india\n+ add address >\n(a) home\n42km house no. 138, k k thazhai, thirukkalachery,\nchennai, tamil nadu, india\nphone number: +91-6382102514\nng);\n(© zoho corporation\n74m plot no 140 and 151, estancia it park, vallancheri,\nguduvanchery, chennai\n(© raju residency park\n237m chennai theni hwy, pandian nagar,\nguduvancheri, tamil nadu\n(© zoho corporation\n276 m  potheri, srm nagar\n(© estancia apartments\n529m potheri, srm nagar, kattankulathur",
+  "purpose": "To let the user select or add a delivery location.",
+  "primary_action": "Select a location",
+  "tags": [
+    "search",
+    "location",
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select a location”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar and a paged carousel. Dark theme, 25 text elements.",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Logging in with phone number”",
+        "Reached from “Search results · Hopme”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.4s at 10:44 in the recording",
+        "Frame 3237 of 3283 sampled at 5 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1e25",
+      "role": "background",
+      "share": 0.849
+    },
+    {
+      "hex": "#3d3c44",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#58575d",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#707074",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#acacae",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "zomato.mov",
+    "fps": 5,
+    "frames": 3283,
+    "frame": 3237,
+    "atSeconds": 644.2,
+    "endSeconds": 647.6,
+    "holdSeconds": 3.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select a location",
+    "headline": "Zoho Corporation"
+  },
+  "crawler": {
+    "nodeId": "s171",
+    "depth": 171,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s163",
+        "via": "Open Select a location",
+        "name": "Search results · Hopme"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s172",
+        "via": "Tap “Select a location”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-09-30",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,35 +1,33 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-27",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-27",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:36.383Z",
-  "screen_type": "feed",
-  "published_as": "feed",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.299Z",
+  "screen_type": "category",
+  "published_as": "home",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
-  "flow_position": 27,
-  "name": "Food home (10)",
-  "description": "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 17 text elements.",
-  "text": "shy 4 all © @\nguduvancheri > =)\nmaraimalai nagar, tamil nadu, india —\n\nfood instamart dineout scenes\n\nq, search for ‘sweets’ $ oh\n\n22 all ® gourmet & offers 4 bolt\nbe 3 > ~\n\n©\n= group order: hola pasta -... review order\nview full menu\n4\n® a = @\nfood bolt gourmet eatright",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 2,
+  "name": "Home screen",
+  "description": "Feed screen with a 5-item tab bar, a row of 3 category chips and prices. Light theme, 50 text elements.",
+  "text": "9414 all ¥ @a\n2s all >» el a,\nitems 30% off buy1\nat 149 ad upto 375 get1\nhola pasta - fr... theobroma desi wok c\n©4.3:35-45mins  4.4+15-20 mins €) 4.2:30-35mins\npastas bakery chinese c\nbecause you viewed hola pasta - fresh gourme...\n> tr\nbd ewe. qo\nborg 7\n\" pos 3) )) |) \\ .\n(ts tey ag\nbt ea\n)) : 15 ; 3 2 7 mt vy x p\nitems items . items\nat ¥149 at 389 ad atx\nleancrust pizza-... mojo pizza - 2x... kouzir\n© 4.8 + 20-30 mins © 4.6 + 20-30 mins o38.\npizzas, italian, desserts pizzas, italian, fast fo... dessert:\naxpiring soon! &d\nwhat's on your mind?\nspecials burgers pizzas cakes fried r",
+  "purpose": "To browse and discover food items and restaurants on the app.",
+  "primary_action": "Browse food items and restaurants.",
   "tags": [
-    "search",
-    "review",
     "offer",
-    "food",
-    "bolt",
-    "gourmet",
-    "eatright",
+    "specials",
+    "burgers",
+    "pizzas",
+    "cakes",
     "feed",
+    "category",
     "ios"
   ],
   "elements": [
-    "tab-bar",
     "nav-bar",
-    "search-bar",
+    "price",
     "list",
     "chip",
     "banner"
@@ -41,72 +39,70 @@
     {
       "title": "Layout",
       "points": [
-        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
-        "Navigation title reads “Guduvancheri”",
-        "Category strip: Food, Dineout, Scenes, Instamart",
-        "Search bar present",
+        "No tab bar",
+        "Category strip: Chinese, Pastas, Bakery",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 17 text elements.",
-        "17 text elements recognised"
+        "Feed screen with a 5-item tab bar, a row of 3 category chips and prices. Light theme, 50 text elements.",
+        "50 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 27 of 32 in “Food”",
-        "Reached from “Guduvancheri (7)”",
-        "Leads to “Loading state (2)”"
+        "Step 2 of 2 in “Hola Pasta - Fresh Gourmet (New Quick)”",
+        "Reached from “Hola Pasta - Fresh Gourmet (4)”",
+        "Leads to “Item detail”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.5s at 9:21 in the recording",
-        "Frame 1876 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 2.1s at 5:31 in the recording",
+        "Frame 1111 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f9f8fa",
+      "hex": "#fafafb",
       "role": "background",
-      "share": 0.896
+      "share": 0.379
     },
     {
-      "hex": "#dddcdc",
+      "hex": "#dedde0",
       "role": "surface",
-      "share": 0.041
+      "share": 0.093
     },
     {
-      "hex": "#fbdabe",
-      "role": "surface",
-      "share": 0.008
-    },
-    {
-      "hex": "#c5c2c2",
-      "role": "surface",
-      "share": 0.007
-    },
-    {
-      "hex": "#31af80",
+      "hex": "#7b3ac4",
       "role": "accent",
-      "share": 0.006
+      "share": 0.083
+    },
+    {
+      "hex": "#c4c3c7",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#ab81d8",
+      "role": "surface",
+      "share": 0.031
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 1876,
-    "atSeconds": 561.6,
-    "endSeconds": 563.1,
-    "holdSeconds": 1.5,
+    "frame": 1111,
+    "atSeconds": 331.5,
+    "endSeconds": 333.6,
+    "holdSeconds": 2.1,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -116,27 +112,22 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 17,
-    "tabLabels": [
-      "Food",
-      "Bolt",
-      "Gourmet",
-      "EatRight"
-    ],
+    "lineCount": 50,
+    "tabLabels": [],
     "chipLabels": [
-      "Food",
-      "Dineout",
-      "Scenes",
-      "Instamart"
+      "Chinese",
+      "Pastas",
+      "Bakery"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Guduvancheri",
-    "headline": "4 BOLT"
+    "title": null,
+    "headline": "LeanCrust",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s262",
-    "depth": 261,
+    "nodeId": "s151",
+    "depth": 150,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -144,16 +135,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s261",
-        "via": "Back to Food home",
-        "name": "Guduvancheri (7)"
+        "from": "s150",
+        "via": "Tap “LeanCrust”",
+        "name": "Hola Pasta - Fresh Gourmet (4)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s263",
-        "via": "Tap “Guduvancheri >”",
-        "name": "Loading state (2)"
+        "to": "s152",
+        "via": "Switch to Food",
+        "name": "Item detail"
       }
     ]
   },

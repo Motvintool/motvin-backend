@@ -1,29 +1,30 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-16",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-16",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:22.258Z",
-  "screen_type": "checkout",
-  "published_as": "checkout",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.286Z",
+  "screen_type": "product_detail",
+  "published_as": "product",
   "states": [],
   "category": "productivity",
-  "flow": "checkout",
+  "flow": "discovery",
   "flow_name": "Food",
-  "flow_position": 16,
-  "name": "Checkout (6)",
-  "description": "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
-  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\n- << =\n\nfood instamart dineout scenes\n\nca vvmln mr dim! veg\nos all ® gourmet & offers 4 bolt\npa.\n) 2 y /\ndelightful |  geta veg m\ndeals free treat delights z20(\noly & hn 3 rs,\nie he\n) (es cee\nan [1111] a —\nmin rs. 100 off fast delivery\n£94 a i<,\nent via fai\nde ne 5s |\nli y\n-- a theobroma checkout\nview full menu 2 items * 176\n® an @\nfood bolt gourmet eatright",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 17,
+  "name": "Product detail",
+  "description": "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
+  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\ndy ( bh &\n<< ld\nfood instamart dineout scenes\na8 all ® gourmet & offers 4 bolt\npb ay\n| / ii so 7\n|\ndelightful get a veg m\ndeals free treat delights z20(\ni 8 & &»\na pe 11 ls ically\n. \\,_- j\nmin rs. 100 off fast delivery\n(/ ape co)\nrse are ali “deol 4\nlt fe 7, \\\n— nn = ee j ) ~ ia : *\nid 5 a top\nfood bolt gourmet eatrig",
+  "purpose": "To view details of a specific food item and add it to the cart.",
+  "primary_action": "Add to cart",
   "tags": [
     "search",
-    "checkout",
+    "review",
     "delivery",
     "offer",
     "food",
     "bolt",
     "gourmet",
     "eatright",
+    "product-detail",
     "ios"
   ],
   "elements": [
@@ -54,24 +55,24 @@
     {
       "title": "Content",
       "points": [
-        "Checkout screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 33 text elements.",
+        "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
         "Calls to action: “ORDER NOW”",
-        "33 text elements recognised"
+        "32 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 16 of 32 in “Food”",
-        "Reached from “Checkout (5)”",
-        "Leads to “Hola Pasta - Fresh Gourmet”"
+        "Step 17 of 32 in “Food”",
+        "Reached from “Specials”",
+        "Leads to “Instamart home (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.3s at 5:02 in the recording",
-        "Frame 1019 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 3s at 5:34 in the recording",
+        "Frame 1123 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -80,25 +81,25 @@
     {
       "hex": "#fbfafb",
       "role": "background",
-      "share": 0.259
+      "share": 0.25
     },
     {
-      "hex": "#037b2f",
+      "hex": "#037a2e",
       "role": "accent",
-      "share": 0.194
+      "share": 0.191
     },
     {
       "hex": "#043014",
       "role": "text",
-      "share": 0.134
+      "share": 0.135
     },
     {
-      "hex": "#d5dad4",
+      "hex": "#2f9553",
       "role": "surface",
-      "share": 0.044
+      "share": 0.035
     },
     {
-      "hex": "#28954e",
+      "hex": "#c6d8ce",
       "role": "surface",
       "share": 0.027
     }
@@ -107,10 +108,10 @@
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 1019,
-    "atSeconds": 302.7,
-    "endSeconds": 306,
-    "holdSeconds": 3.3,
+    "frame": 1123,
+    "atSeconds": 334.2,
+    "endSeconds": 337.2,
+    "holdSeconds": 3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -120,7 +121,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 33,
+    "lineCount": 32,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -141,25 +142,25 @@
     "headline": "Delights"
   },
   "crawler": {
-    "nodeId": "s137",
-    "depth": 136,
+    "nodeId": "s152",
+    "depth": 151,
     "path": [],
     "visits": 1,
-    "blocked": true,
-    "blockedReason": "checkout step — crawler does not place orders",
+    "blocked": false,
+    "blockedReason": null,
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s136",
-        "via": "Back to Checkout",
-        "name": "Checkout (5)"
+        "from": "s151",
+        "via": "Switch to Food",
+        "name": "Specials"
       }
     ],
     "leadsTo": [
       {
-        "to": "s138",
-        "via": "Open Hola Pasta - Fresh Gourmet",
-        "name": "Hola Pasta - Fresh Gourmet"
+        "to": "s153",
+        "via": "Switch to Instamart",
+        "name": "Instamart home (3)"
       }
     ]
   },

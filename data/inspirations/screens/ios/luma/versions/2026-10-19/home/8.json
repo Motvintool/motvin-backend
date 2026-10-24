@@ -1,31 +1,34 @@
 {
-  "name": "Subscription plans (3)",
-  "screenType": "pricing",
-  "fineType": "paywall",
-  "states": [],
-  "description": "Paywall screen with a 3-item tab bar. Dark theme, 13 text elements.",
+  "name": "Home",
+  "screenType": "home",
+  "fineType": "dialog",
+  "states": [
+    "modal"
+  ],
+  "description": "Dialog over a dimmed screen, on top of Messages with a 4-item tab bar. Dark theme, 35 text elements.",
   "tags": [
-    "map",
-    "home",
-    "discover",
-    "chat",
-    "paywall",
-    "ios"
+    "recommendations",
+    "location"
   ],
   "elements": [
-    "tab-bar",
     "nav-bar",
-    "list"
+    "list",
+    "card",
+    "tab-bar"
   ],
   "style": [
     "dark"
   ],
   "capturedAt": "2026-10-19",
   "capture": {
-    "atSeconds": 131.7,
-    "holdSeconds": 4.2,
+    "atSeconds": 363.9,
+    "holdSeconds": 4.5,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "overlayOf": null
   },
-  "order": 23
+  "order": 103,
+  "extraTypes": [],
+  "purpose": "To display a personalized feed of upcoming events and encourage event creation.",
+  "primaryAction": "Browse events"
 }

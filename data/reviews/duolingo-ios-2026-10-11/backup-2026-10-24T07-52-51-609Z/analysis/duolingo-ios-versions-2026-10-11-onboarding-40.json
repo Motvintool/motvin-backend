@@ -1,0 +1,153 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-onboarding-40",
+  "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-40",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.591Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "detail",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 40,
+  "name": "Word learning exercise",
+  "description": "Bottom sheet over a dimmed screen. Dark theme, 8 text elements.",
+  "text": "duolingo\n9:41(\nX\nNEW WORD\nSelect the correct image\ncafé\neclair\ntea\ncoffee\ncroissant\nCHECK",
+  "purpose": "To teach the user a new word by having them select the correct image.",
+  "primary_action": "Select the correct image",
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Coffee”",
+        "Bottom sheet over a dimmed background, covering 53% of the height from 45% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 40 of 187 in “Onboarding”",
+        "Reached from “Dialog (2)”",
+        "Leads to “Select the correct image”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.8s at 1:54 in the recording",
+        "Frame 417 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#152126",
+      "role": "background",
+      "share": 0.809
+    },
+    {
+      "hex": "#37444c",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#64645f",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#f0ab5f",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#5a5f25",
+      "role": "accent",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 417,
+    "atSeconds": 114.6,
+    "endSeconds": 125.4,
+    "holdSeconds": 10.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.453125,
+        "w": 0.90625,
+        "h": 0.53125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Coffee",
+    "headline": "Select the correct image"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s041",
+        "via": "Open Coffee",
+        "name": "Dialog (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Dismiss",
+        "name": "Select the correct image"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,156 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-onboarding-15",
+  "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-15",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.577Z",
+  "screen_type": "search",
+  "published_as": "form",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "search",
+  "flow_name": "Onboarding",
+  "flow_position": 15,
+  "name": "Source selection",
+  "description": "Search toast with a search bar. Dark theme, 9 text elements.",
+  "text": "9:41(\nC\n•0\nHow did you hear\nabout Duolingo?\nYouTube\nBrawl Stars\nAirtel\nFriends/family\nGoogle Search\nFacebook/Instagram\nTikTok\nCONTINUE",
+  "purpose": "To collect how the user heard about Duolingo during onboarding.",
+  "primary_action": "Select a source and continue",
+  "tags": [
+    "search",
+    "continue",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "search-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “How did you hear”",
+        "Search bar present",
+        "Toast, covering 6% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search toast with a search bar. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 187 in “Onboarding”",
+        "Reached from “CONTINUE search (2)”",
+        "Leads to “Apps and websites?”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:43 in the recording",
+        "Frame 146 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#17232b",
+      "role": "background",
+      "share": 0.848
+    },
+    {
+      "hex": "#36444e",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#5c666c",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#596c34",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#1f5571",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 146,
+    "atSeconds": 43.5,
+    "endSeconds": 44.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.9375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "How did you hear",
+    "headline": "Friends/family",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Back to CONTINUE search",
+        "name": "CONTINUE search (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Open Apps and websites?",
+        "name": "Apps and websites?"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

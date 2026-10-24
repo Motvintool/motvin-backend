@@ -1,0 +1,164 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-home-49",
+  "screen_id": "luma-ios-versions-2026-10-19-home-49",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.837Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "lifestyle",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 49,
+  "name": "Payment history empty",
+  "description": "Empty state bottom sheet, on top of Payment method with a 3-item tab bar. Dark theme, 5 text elements, an empty state.",
+  "text": "9:41€\n<\nQ\nPayment History\nNo Payments\nYou have not made any payments.\nHome\nDiscover\nChat",
+  "purpose": "To inform the user that they have no payment history.",
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "home",
+    "discover",
+    "chat",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet",
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “No Payments”",
+        "Bottom sheet, covering 50% of the height from 42% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state bottom sheet, on top of Payment method with a 3-item tab bar. Dark theme, 5 text elements, an empty state.",
+        "5 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 49 of 69 in “Home”",
+        "Reached from “Payment method (2)”",
+        "Leads to “Payment method (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:33 in the recording",
+        "Frame 1312 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.924
+    },
+    {
+      "hex": "#1e1c1f",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#3c3a3d",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#5a595b",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#838183",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1312,
+    "atSeconds": 393,
+    "endSeconds": 393.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.421875,
+        "w": 0.875,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "No Payments",
+    "headline": "No Payments"
+  },
+  "crawler": {
+    "nodeId": "s148",
+    "depth": 148,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s147",
+        "via": "Back to No Payments (empty)",
+        "name": "Payment method (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s149",
+        "via": "Dismiss",
+        "name": "Payment method (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

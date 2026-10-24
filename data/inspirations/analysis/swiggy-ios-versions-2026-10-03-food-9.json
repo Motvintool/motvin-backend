@@ -1,41 +1,42 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-9",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-9",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:18.510Z",
-  "screen_type": "feed",
-  "published_as": "feed",
-  "states": [],
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.284Z",
+  "screen_type": "checkout",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "checkout",
   "flow_name": "Food",
-  "flow_position": 9,
-  "name": "Food home (7)",
-  "description": "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 40 text elements.",
-  "text": "9414 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\noa eo ©\nvd -\nfood instamart dineout scenes\nos all ® gourmet & offers 4 bolt\n~~\n>\ndelightful get a veg m\ndeals free treat delights z20(\n> ce & tin a» ren\nfe a\n) (e89, cape\n: wl! a\nmin rs. 100 off fast delivery\n\nwit 8 : ia 4 poo 4 3 a v a\nage lth re oll ol vin sa\n(et sgr pee | § | rfa\n$i rd 5 tr pe tow h\n\nitems = items\n70% off\nat 349 ad upto 140 at 369 )\ntheobroma burger king golcondas\n& an @\nfood o gourme eatright",
-  "purpose": null,
+  "flow_position": 10,
+  "name": "Loading state",
+  "description": "Loading state with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 19 text elements.",
+  "text": "shy 4 all  @\nguduvancheri > =)\nmaraimalai nagar, tamil nadu, india -\n\nfood instamart dineout scenes\n\nq search for ‘biryani’ $ oh\n22 all gourmet & offers 4 bolt\nee\nes theobroma checkout x\nview full menu 2 items * 3176\n4 ) >\n® a = @\nfood bolt gourmet eatright %",
+  "purpose": "To show the app loading the food items for the selected category.",
   "primary_action": null,
   "tags": [
     "search",
-    "delivery",
+    "checkout",
     "offer",
     "food",
     "bolt",
     "gourmet",
     "eatright",
-    "feed",
+    "loading",
     "ios"
   ],
   "elements": [
     "tab-bar",
     "nav-bar",
     "search-bar",
-    "price",
     "list",
     "chip",
-    "cta",
-    "button",
-    "banner"
+    "banner",
+    "skeleton",
+    "progress"
   ],
   "style": [
     "light"
@@ -46,7 +47,7 @@
       "points": [
         "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
         "Navigation title reads “Guduvancheri”",
-        "Category strip: Scenes, Dineout, Food, Instamart",
+        "Category strip: Food, Dineout, Scenes, Instamart",
         "Search bar present",
         "Light style"
       ]
@@ -54,73 +55,74 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 40 text elements.",
-        "Calls to action: “ORDER NOW”",
-        "40 text elements recognised"
+        "Loading state with a 4-item tab bar, a row of 4 category chips and a search bar. Light theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: loading"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 9 of 32 in “Food”",
-        "Reached from “Food home (6)”",
-        "Leads to “Sort By”"
+        "Step 10 of 32 in “Food”",
+        "Reached from “Order placed (5)”",
+        "Leads to “Checkout”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.4s at 3:53 in the recording",
-        "Frame 785 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 1.2s at 4:52 in the recording",
+        "Frame 977 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fcfbfc",
+      "hex": "#faf9fb",
       "role": "background",
-      "share": 0.23
+      "share": 0.902
     },
     {
-      "hex": "#037b2f",
+      "hex": "#e0dbdb",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#fbd9b7",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#4db991",
       "role": "accent",
-      "share": 0.193
+      "share": 0.006
     },
     {
-      "hex": "#043014",
-      "role": "text",
-      "share": 0.135
-    },
-    {
-      "hex": "#d2d9d5",
+      "hex": "#c5c3c4",
       "role": "surface",
-      "share": 0.042
-    },
-    {
-      "hex": "#27954f",
-      "role": "surface",
-      "share": 0.024
+      "share": 0.006
     }
   ],
   "capture": {
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 785,
-    "atSeconds": 233.4,
-    "endSeconds": 235.8,
-    "holdSeconds": 2.4,
+    "frame": 977,
+    "atSeconds": 292.2,
+    "endSeconds": 293.4,
+    "holdSeconds": 1.2,
     "brief": false,
-    "kind": "screen",
+    "kind": "loading",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
-    "lineCount": 40,
+    "lineCount": 19,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -128,38 +130,36 @@
       "EatRight"
     ],
     "chipLabels": [
-      "Scenes",
-      "Dineout",
       "Food",
+      "Dineout",
+      "Scenes",
       "Instamart"
     ],
-    "ctas": [
-      "ORDER NOW"
-    ],
+    "ctas": [],
     "keyboard": false,
     "title": "Guduvancheri",
-    "headline": "Delights"
+    "headline": "4 BOLT"
   },
   "crawler": {
-    "nodeId": "s102",
-    "depth": 101,
+    "nodeId": "s129",
+    "depth": 128,
     "path": [],
     "visits": 1,
-    "blocked": false,
-    "blockedReason": null,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s101",
-        "via": "Back to Food home",
-        "name": "Food home (6)"
+        "from": "s128",
+        "via": "Open Guduvancheri",
+        "name": "Order placed (5)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s103",
-        "via": "Tap “:: ALL”",
-        "name": "Sort By"
+        "to": "s130",
+        "via": "Wait 1.2s",
+        "name": "Checkout"
       }
     ]
   },

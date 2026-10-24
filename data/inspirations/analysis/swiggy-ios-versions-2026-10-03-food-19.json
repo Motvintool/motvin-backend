@@ -1,20 +1,20 @@
 {
   "screenId": "swiggy-ios-versions-2026-10-03-food-19",
   "screen_id": "swiggy-ios-versions-2026-10-03-food-19",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-03T13:09:31.083Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.289Z",
   "screen_type": "product_detail",
-  "published_as": "product",
+  "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Food",
-  "flow_position": 19,
-  "name": "Item detail (3)",
-  "description": "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 31 text elements.",
-  "text": "94149 ll ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\nas oo ©\n\nfood instamart dineout scenes\n\ncanmrmh fr ciara ate! veg\na8 all ® gourmet & offers 4 bolt\ndelightful get a veg m\ndeals free treat delights z20(\n2 fi, (a a»\n) e&y, cee\nte wl!\" a\nmin rs. 100 off fast delivery\na, p ural 7) pa sele, y\nopie 28, \\\n= rae c57 > fra?\n8 | ; rs\ns vii ° hola pasta -...\n» view full menu\n~ +\n© a @\nfood bolt gourmet eatrig \"",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 26,
+  "name": "Food home",
+  "description": "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
+  "text": "94149 ll ¥ ae\nguduvancheri > —\nmaraimalai nagar, tamil nadu, india -\n\nha / 5 &\nrr y—4 -\n\nfood instamart dineout scenes\n\ncamrrh far 'swaante' veg\n=\nos all ® gourmet & offers 4 bolt\nol gi,\not |\ndelightful |  geta veg m\ndeals free treat delights z20(\n2 fon, a» \"\nj- 25 8 -\n| &8 coe\n5 \\ \\{i\nmin rs. 100 off fast delivery\nfe, ho oncal ty fo 2 oe! a\nca ae aneer 3 5 aw >\na ed to “ 22\n) fike 1 2 7 or £7 7\n¥ j\nss group ord hola pasta -...\n=” view full menu\n@ : £2 :\nao @\nfood bolt gourmet eatright tig",
+  "purpose": "To browse available food options and offers in the user's area.",
+  "primary_action": "Search for items or browse categories.",
   "tags": [
     "search",
     "review",
@@ -55,33 +55,33 @@
     {
       "title": "Content",
       "points": [
-        "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 31 text elements.",
+        "Product detail screen with a 4-item tab bar, a row of 4 category chips, a search bar, a primary action labelled “ORDER NOW” and prices. Light theme, 32 text elements.",
         "Calls to action: “ORDER NOW”",
-        "31 text elements recognised"
+        "32 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 19 of 32 in “Food”",
-        "Reached from “Item detail (2)”",
-        "Leads to “Food home — loading”"
+        "Step 26 of 32 in “Food”",
+        "Reached from “Order placed (12)”",
+        "Leads to “Instamart home (5)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 7:26 in the recording",
-        "Frame 1491 of 1967 sampled at 3.3333333333333335 fps",
+        "Held for 1.8s at 8:23 in the recording",
+        "Frame 1683 of 1967 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fbfafb",
+      "hex": "#fafafb",
       "role": "background",
-      "share": 0.252
+      "share": 0.253
     },
     {
       "hex": "#037b2f",
@@ -91,10 +91,10 @@
     {
       "hex": "#043014",
       "role": "text",
-      "share": 0.134
+      "share": 0.135
     },
     {
-      "hex": "#c6d8ce",
+      "hex": "#c5d8ce",
       "role": "surface",
       "share": 0.027
     },
@@ -108,10 +108,10 @@
     "source": "swiggy.mov",
     "fps": 3.3333333333333335,
     "frames": 1967,
-    "frame": 1491,
-    "atSeconds": 446.4,
-    "endSeconds": 447.6,
-    "holdSeconds": 1.2,
+    "frame": 1683,
+    "atSeconds": 503.4,
+    "endSeconds": 505.2,
+    "holdSeconds": 1.8,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -121,7 +121,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 31,
+    "lineCount": 32,
     "tabLabels": [
       "Food",
       "Bolt",
@@ -142,8 +142,8 @@
     "headline": "Delights"
   },
   "crawler": {
-    "nodeId": "s213",
-    "depth": 212,
+    "nodeId": "s236",
+    "depth": 235,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -151,16 +151,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s212",
+        "from": "s235",
         "via": "Back to Item detail",
-        "name": "Item detail (2)"
+        "name": "Order placed (12)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s214",
-        "via": "Tap “Food”",
-        "name": "Food home — loading"
+        "to": "s237",
+        "via": "Switch to Instamart",
+        "name": "Instamart home (5)"
       }
     ]
   },

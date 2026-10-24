@@ -883,9 +883,14 @@ export function buildInspirationsManifest(root: string): BuildReport {
       const matched = screens.filter((screen) => {
         if (m.platforms && !m.platforms.includes(screen.platform)) return false;
         if (m.screenTypes && !m.screenTypes.some((t: string) => (screen.screenTypes ?? [screen.screenType]).includes(t))) return false;
+        // Only the screen's main type — a detail screen that is also a little onboarding is not a welcome screen.
+        if (m.mainTypes && !m.mainTypes.includes(screen.screenType)) return false;
         if (m.industries && !m.industries.includes(screen.industry)) return false;
         if (m.elements && !m.elements.some((e: string) => screen.elements.includes(e))) return false;
         if (m.tags && !m.tags.some((t: string) => screen.tags.includes(t))) return false;
+        // What rules a screen out: a bottom sheet is not a centered dialog, a loading spinner not a progress ring.
+        if (m.withoutElements && m.withoutElements.some((e: string) => screen.elements.includes(e))) return false;
+        if (m.withoutTypes && m.withoutTypes.some((t: string) => (screen.screenTypes ?? [screen.screenType]).includes(t))) return false;
         return true;
       });
       return {
@@ -915,7 +920,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
       screens: screens.length,
       flows: publishedFlows.length,
       patterns: patterns.length,
-      'ui-elements': Object.values(elementCounts).reduce((n, c) => n + c, 0),
+      // Screens that show at least one element, each once.
+      'ui-elements': screens.filter((s) => s.elements.length > 0).length,
     },
     // What the store actually holds, so filters never offer a value with
     // nothing behind it. `vocabulary` keeps the full accepted sets for

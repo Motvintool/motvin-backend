@@ -1,28 +1,32 @@
 {
   "screenId": "airbnb-ios-versions-2026-10-07-profile-2",
   "screen_id": "airbnb-ios-versions-2026-10-07-profile-2",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-07T13:31:48.035Z",
-  "screen_type": "profile",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:58:56.344Z",
+  "screen_type": "feed",
   "published_as": "profile",
   "states": [],
   "category": "productivity",
-  "flow": "settings",
+  "flow": "discovery",
   "flow_name": "Profile",
-  "flow_position": 2,
-  "name": "Profile (2)",
-  "description": "Profile screen. Light theme, 15 text elements.",
-  "text": "9:41 4\nX\n1 of 1\nSocial Media Dp Express shoot\n74,000 / guest • 45 mins\nA quick (30min) photoshoot for Social Media\nProfile Pictures, Your profile picture is doing\nmore work than you think. It's the first thing\nanyone decides you on, before your bio, before\nyour job, before anything you actually say.\nI'm a professional photographer and filmmaker\nwith 11 years of experience shooting for brands,\neditorials, and international clients. In this\nsession, I bring that same eye to something a\nlot more personal: making you look like most\nnatural version of yourself.",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 38,
+  "name": "Profile overview",
+  "description": "Feed screen with a 5-item tab bar. Light theme, 12 text elements.",
+  "text": "9:414\nProfile\nS\nSurendar\nGuest\nNEW\nNEW\nPast trips\nConnections\nBecome a host\nIt's easy to start hosting and earn\nextra income.\n502\nAccount settinas\nWishlists\nTrips\nMessages\nProfile\nExplore",
+  "purpose": "To view and manage personal account information and activity.",
+  "primary_action": "View profile details",
   "tags": [
     "profile",
-    "photo",
+    "explore",
+    "wishlists",
+    "trips",
+    "messages",
+    "feed",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "list"
+    "tab-bar",
+    "nav-bar"
   ],
   "style": [
     "light"
@@ -31,70 +35,70 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Social Media Dp Express shoot”",
+        "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
+        "Navigation title reads “Profile”",
         "Light style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Profile screen. Light theme, 15 text elements.",
-        "15 text elements recognised"
+        "Feed screen with a 5-item tab bar. Light theme, 12 text elements.",
+        "12 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 2 of 21 in “Profile”",
-        "Reached from “Profile”",
-        "Leads to “Schedule your photo shoot (2)”"
+        "Step 38 of 49 in “Explore”",
+        "Reached from “Explore home — loading”",
+        "Leads to “Profile (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 6:19 in the recording",
-        "Frame 1269 of 2389 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 8:33 in the recording",
+        "Frame 1713 of 2389 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#f3f2f4",
+      "hex": "#fcfbfd",
       "role": "background",
-      "share": 0.691
+      "share": 0.909
     },
     {
-      "hex": "#362022",
+      "hex": "#dcd8d9",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#bfb9b8",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#9f9a9b",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#cd9e83",
       "role": "accent",
-      "share": 0.094
-    },
-    {
-      "hex": "#d2cccf",
-      "role": "surface",
-      "share": 0.076
-    },
-    {
-      "hex": "#ab969b",
-      "role": "surface",
-      "share": 0.039
-    },
-    {
-      "hex": "#c47486",
-      "role": "surface",
-      "share": 0.029
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "Airbnb.mov",
     "fps": 3.3333333333333335,
     "frames": 2389,
-    "frame": 1269,
-    "atSeconds": 379.8,
-    "endSeconds": 381,
-    "holdSeconds": 1.2,
+    "frame": 1713,
+    "atSeconds": 513.3,
+    "endSeconds": 514.2,
+    "holdSeconds": 0.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -104,17 +108,23 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 15,
-    "tabLabels": [],
+    "lineCount": 12,
+    "tabLabels": [
+      "Explore",
+      "Wishlists",
+      "Trips",
+      "Messages",
+      "Profile"
+    ],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Social Media Dp Express shoot",
-    "headline": "Social Media Dp Express shoot"
+    "title": "Profile",
+    "headline": "Surendar"
   },
   "crawler": {
-    "nodeId": "s117",
-    "depth": 122,
+    "nodeId": "s174",
+    "depth": 179,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -122,16 +132,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s116",
-        "via": "Tap “Social Media Dp Express shoot”",
-        "name": "Profile"
+        "from": "s173",
+        "via": "Wait 1.2s",
+        "name": "Explore home — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s118",
-        "via": "Back to Schedule your photo shoot",
-        "name": "Schedule your photo shoot (2)"
+        "to": "s175",
+        "via": "Tap “Profile”",
+        "name": "Profile (3)"
       }
     ]
   },

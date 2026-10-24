@@ -205,6 +205,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     const flows = (await this.loader.getFlows()).filter((f) => on.has(f.platform));
     const apps = (await this.loader.getApps()).filter((a) => a.platforms.some((p) => on.has(p)));
 
+    const screenIds = new Set(screens.map((s) => s.id));
     const screenTypes = new Set(screens.flatMap((s) => s.screenTypes ?? [s.screenType]));
     const industries = new Set(screens.map((s) => s.industry));
     const states = new Set(screens.flatMap((s) => s.states));
@@ -218,7 +219,10 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
         apps: apps.length,
         screens: screens.length,
         flows: flows.length,
-        'ui-elements': Array.from(elementCounts.values()).reduce((n, c) => n + c, 0),
+        // Screens that show at least one element — each screen once, as the UI Elements page lists them.
+        'ui-elements': screens.filter((s) => s.elements.length > 0).length,
+        // Patterns with at least one screen on these platforms.
+        patterns: (manifest.patterns ?? []).filter((p) => (p.screenIds ?? []).some((id) => screenIds.has(id))).length,
       },
       taxonomy: {
         // Which platforms exist stays global: it is the switch itself.

@@ -1,0 +1,149 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-home-3",
+  "screen_id": "luma-ios-versions-2026-10-19-home-3",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.832Z",
+  "screen_type": "paywall",
+  "published_as": "detail",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "checkout",
+  "flow_name": "Home",
+  "flow_position": 3,
+  "name": "Family detail",
+  "description": "Paywall screen with a 3-item tab bar. Dark theme, 13 text elements.",
+  "text": "9:41\nC\n•ll\n<\nQ\n...\nFamily\n743 Events 1.5K Subscribers\nFrom pregnancy to college applications, find a moms'\nwalk, summer camp, or tutoring group and meet other\nfamilies.\nSubscribed V\nNearby Events\nThere are no events nearby. You can explore all\nevents on the map.\nOpen Map\nDiscover\nHome\nChat",
+  "purpose": "To view details about a family community after subscribing",
+  "primary_action": "View subscribed status",
+  "tags": [
+    "map",
+    "home",
+    "discover",
+    "chat",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Nearby Events”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a 3-item tab bar. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 69 in “Home”",
+        "Reached from “Subscription plans”",
+        "Leads to “Home home — loading”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 1:56 in the recording",
+        "Frame 452 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020203",
+      "role": "background",
+      "share": 0.708
+    },
+    {
+      "hex": "#252326",
+      "role": "surface",
+      "share": 0.225
+    },
+    {
+      "hex": "#434044",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#5d585f",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#a3a1a4",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 452,
+    "atSeconds": 116.4,
+    "endSeconds": 117.9,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Nearby Events",
+    "headline": "Family"
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Tap “Family”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Open Home home — loading",
+        "name": "Home home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

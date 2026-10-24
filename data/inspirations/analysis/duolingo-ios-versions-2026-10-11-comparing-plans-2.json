@@ -1,0 +1,156 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-comparing-plans-2",
+  "screen_id": "duolingo-ios-versions-2026-10-11-comparing-plans-2",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.572Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Comparing plans",
+  "flow_position": 136,
+  "name": "Subscription options",
+  "description": "Toast over a dimmed screen, on top of Subscription plans. Dark theme, 12 text elements.",
+  "text": "9:41C\nC\n•oll\nSubscription\nCOMPARE PLANS\nRECOMMENDED\nIndividual\nLearn without distractions\n~ Unlimited energy\nNo ads\nTRY 1 MONTH FOR FO\nFamily\nLearn with friends for less\nProfile\nSubscription\n& o|",
+  "purpose": "To display subscription options and allow users to select a plan",
+  "primary_action": "Select a subscription plan",
+  "tags": [
+    "profile",
+    "subscription",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "banner",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subscription”",
+        "Toast over a dimmed background, covering 5% of the height from 5% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Subscription plans. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 136 of 187 in “Onboarding”",
+        "Reached from “Subscription plans · modal”",
+        "Leads to “Subscription plans (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:13 in the recording",
+        "Frame 1447 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111b26",
+      "role": "background",
+      "share": 0.718
+    },
+    {
+      "hex": "#1d2a59",
+      "role": "accent",
+      "share": 0.131
+    },
+    {
+      "hex": "#495670",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#363f3f",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#979298",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1447,
+    "atSeconds": 433.8,
+    "endSeconds": 434.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.046875,
+        "w": 0.875,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Subscription",
+    "headline": "Family"
+  },
+  "crawler": {
+    "nodeId": "s146",
+    "depth": 145,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s145",
+        "via": "Tap “Subscription”",
+        "name": "Subscription plans · modal"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s147",
+        "via": "Dismiss",
+        "name": "Subscription plans (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,156 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-settings-1",
+  "screen_id": "duolingo-ios-versions-2026-10-11-settings-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.572Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Settings",
+  "flow_position": 134,
+  "name": "Feed options",
+  "description": "Dialog over a dimmed screen, on top of Feed. Dark theme, 15 text elements.",
+  "text": "9:41(\nFeed\n+\n+\nStart Friend Streaks to send and\nreceive daily gifts!\nchandra sekhar\nC\n3 days\nx50\nReached a x50 combo!\n92\nLiked by Gowri and others\nSirona and Juwayriy...\nProfile\nSubscription",
+  "purpose": "To present the user with options related to their profile and subscription from the feed",
+  "primary_action": "Select a profile or subscription option",
+  "tags": [
+    "profile",
+    "subscription",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Feed”",
+        "Dialog over a dimmed background, covering 22% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Feed. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 134 of 187 in “Onboarding”",
+        "Reached from “Feed (4)”",
+        "Leads to “Subscription plans · modal”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 7:06 in the recording",
+        "Frame 1431 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11191e",
+      "role": "background",
+      "share": 0.875
+    },
+    {
+      "hex": "#2c3235",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#595d64",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#3d464f",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#8a601e",
+      "role": "accent",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1431,
+    "atSeconds": 426,
+    "endSeconds": 429.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.046875,
+        "w": 0.90625,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Feed",
+    "headline": "Sirona and Juwayriy"
+  },
+  "crawler": {
+    "nodeId": "s144",
+    "depth": 143,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s143",
+        "via": "Tap “Feed”",
+        "name": "Feed (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s145",
+        "via": "Tap “Subscription”",
+        "name": "Subscription plans · modal"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

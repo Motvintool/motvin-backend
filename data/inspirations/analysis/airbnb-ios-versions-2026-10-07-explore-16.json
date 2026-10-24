@@ -1,20 +1,20 @@
 {
   "screenId": "airbnb-ios-versions-2026-10-07-explore-16",
   "screen_id": "airbnb-ios-versions-2026-10-07-explore-16",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-07T13:31:49.277Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:58:56.340Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Explore",
-  "flow_position": 16,
-  "name": "Explore home (7)",
-  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
-  "text": "9:41 4\n•ill\nQ Start your search\nAll\nExperiences\nTail Homes\nServi\nContinue searching for\nphotographers in Mumbai\nRecently viewed\n→\nCandolim\nGoa\nNorth Goa\n1bed. *4.9\n1 bed • * 5.0\n1bed *4.91\nGuest favourite homes in Puducherry\n→\nIndian guests often rate these homes highly\nGuest favourite\nGuest favourite\nRoom in Puducherrv\nShared room in Puducherrv\nR\nExplore\nProfile\nWishlists\nMessages\nTrips",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 27,
+  "name": "Explore home",
+  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 25 text elements.",
+  "text": "9:411\nQ Start your search\nAll\ntrl Homes\nExperiences\nServi\nContinue searching for\nphotographers in Mumbai\nServices in Mumbai\nChefs\nTraining\nPhotography\nMake-u\nPhotography\n→\nPRESEN:\nINVEST\nSUMN\nMumbai Photo Session\nCommercial portraits and\nE\nCinematic Portraits\nproducts by Saumya\nS\nFrom 24,000 / guest * 5.0\nFrom 25,000 / guest\nExplore\nProfile\nMessages\nWishlists\nTrips",
+  "purpose": "To browse and discover local services and experiences in Mumbai.",
+  "primary_action": "Search for services or experiences.",
   "tags": [
     "search",
     "photo",
@@ -40,8 +40,8 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
-        "Navigation title reads “Tail Homes”",
-        "Category strip: All, Experiences, Tail Homes, Servi",
+        "Navigation title reads “Trl Homes”",
+        "Category strip: All, trl Homes, Experiences, Servi",
         "Search bar present",
         "Light style"
       ]
@@ -49,23 +49,23 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
-        "20 text elements recognised"
+        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 25 text elements.",
+        "25 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 16 of 49 in “Explore”",
-        "Reached from “Services in Mumbai (2)”",
-        "Leads to “Tail Homes toast (4)”"
+        "Step 27 of 49 in “Explore”",
+        "Reached from “Loading state · Explore”",
+        "Leads to “Map”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 6:54 in the recording",
-        "Frame 1385 of 2389 sampled at 3.3333333333333335 fps",
+        "Held for 5.4s at 7:43 in the recording",
+        "Frame 1561 of 2389 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -74,37 +74,37 @@
     {
       "hex": "#faf9fa",
       "role": "background",
-      "share": 0.563
+      "share": 0.657
     },
     {
-      "hex": "#dddad6",
+      "hex": "#dadadb",
       "role": "surface",
-      "share": 0.198
+      "share": 0.171
     },
     {
-      "hex": "#c1bbb3",
+      "hex": "#bdb9b8",
       "role": "surface",
-      "share": 0.043
+      "share": 0.018
     },
     {
-      "hex": "#b09e8b",
+      "hex": "#1d254f",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#9d9898",
       "role": "surface",
-      "share": 0.025
-    },
-    {
-      "hex": "#90836e",
-      "role": "text",
-      "share": 0.016
+      "share": 0.014
     }
   ],
   "capture": {
     "source": "Airbnb.mov",
     "fps": 3.3333333333333335,
     "frames": 2389,
-    "frame": 1385,
-    "atSeconds": 414.6,
-    "endSeconds": 415.8,
-    "holdSeconds": 1.2,
+    "frame": 1561,
+    "atSeconds": 463.2,
+    "endSeconds": 468.6,
+    "holdSeconds": 5.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -114,7 +114,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 20,
+    "lineCount": 25,
     "tabLabels": [
       "Explore",
       "Wishlists",
@@ -124,18 +124,18 @@
     ],
     "chipLabels": [
       "All",
+      "trl Homes",
       "Experiences",
-      "Tail Homes",
       "Servi"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Tail Homes",
-    "headline": "Recently viewed"
+    "title": "Trl Homes",
+    "headline": "Photography"
   },
   "crawler": {
-    "nodeId": "s128",
-    "depth": 133,
+    "nodeId": "s153",
+    "depth": 158,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -143,16 +143,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s127",
-        "via": "Back to Explore home",
-        "name": "Services in Mumbai (2)"
+        "from": "s152",
+        "via": "Wait 2.7s",
+        "name": "Loading state · Explore"
       }
     ],
     "leadsTo": [
       {
-        "to": "s129",
-        "via": "Tap “Tail Homes”",
-        "name": "Tail Homes toast (4)"
+        "to": "s154",
+        "via": "Back to Map",
+        "name": "Map"
       }
     ]
   },

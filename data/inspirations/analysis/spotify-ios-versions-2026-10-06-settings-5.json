@@ -1,28 +1,32 @@
 {
   "screenId": "spotify-ios-versions-2026-10-06-settings-5",
   "screen_id": "spotify-ios-versions-2026-10-06-settings-5",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-06T10:24:06.149Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:49:43.783Z",
   "screen_type": "settings",
   "published_as": "settings",
   "states": [],
   "category": "productivity",
   "flow": "settings",
   "flow_name": "Settings",
-  "flow_position": 5,
-  "name": "Account (2)",
-  "description": "Settings screen. Dark theme, 16 text elements.",
-  "text": "9:41\nodll\nX\nSpotify\nAccount\nHome>\n• In-app teatures ›\nChange my plan\nAsk\nYou're engaging with an Al-powered tool.\nManage your account\n8\nYour profile, payment and more.\nYour Updates\nFor: Mobile and tablet\nWith Your Updates, you'll know the latest on\nyour Spotify activity. Get notifications about\nWe and our partners use cookies to personalize your\nexperience, to show you ads based on your interests,\nand for measurement and analytics purposes. By using\nour website and services, you agree to our use of\ncookies as described in our Cookie Policy:",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 134,
+  "name": "Settings",
+  "description": "Settings screen with a 5-item tab bar. Dark theme, 29 text elements.",
+  "text": "9:41(\n•ll\n<\nQ\nSettings\nData Saver mode\nPrivate session\nAutomatic\nOff\nAccount\nUsername • Premium plans\nContent and display\nCanvas • Languages for music\nPrivacy and social\nPrivate session • Public playlists\nPlayback\n>\nGapless playback • Autoplay\nNotifications\nPush • Email\nApps and devices\nGoogle Maps • Import from other apps\nData-saving and offline\nData Saver mode • Downloads over cellular\nMedia quality\n>\nWi-Fi streaming quality • Audio download quality\nMotvintool's Jam\nARMROOR\nAathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dac\n+\n11D\nYour Library\nHome\nCreate\nSearch\nPremium",
+  "purpose": "To configure the app's account, privacy, playback, and media settings.",
+  "primary_action": "Toggle private session",
   "tags": [
-    "profile",
-    "payment",
-    "notification",
     "settings",
+    "map",
+    "notification",
+    "premium",
+    "home",
+    "search",
+    "your library",
     "ios"
   ],
   "elements": [
+    "tab-bar",
     "nav-bar",
     "list"
   ],
@@ -33,70 +37,70 @@
     {
       "title": "Layout",
       "points": [
-        "No tab bar",
-        "Navigation title reads “Account”",
+        "Tab bar with 5 items: Home, Search, Your Library, Premium, Create",
+        "Navigation title reads “Settings”",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Settings screen. Dark theme, 16 text elements.",
-        "16 text elements recognised"
+        "Settings screen with a 5-item tab bar. Dark theme, 29 text elements.",
+        "29 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 8 in “Settings”",
-        "Reached from “Account”",
-        "Leads to “Profile (58)”"
+        "Step 134 of 181 in “Home”",
+        "Reached from “Settings (12)”",
+        "Leads to “Settings — scrolled”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.5s at 10:08 in the recording",
-        "Frame 2033 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 1.2s at 10:31 in the recording",
+        "Frame 2108 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#121115",
+      "hex": "#1b151a",
       "role": "background",
-      "share": 0.471
+      "share": 0.8
     },
     {
-      "hex": "#2c2d31",
+      "hex": "#373134",
       "role": "surface",
-      "share": 0.245
+      "share": 0.113
     },
     {
-      "hex": "#d0cfd1",
+      "hex": "#561811",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#494647",
       "role": "surface",
-      "share": 0.095
+      "share": 0.021
     },
     {
-      "hex": "#f2f1f3",
-      "role": "text",
-      "share": 0.092
-    },
-    {
-      "hex": "#4b4a4d",
+      "hex": "#70322c",
       "role": "surface",
-      "share": 0.034
+      "share": 0.018
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 2033,
-    "atSeconds": 608.7,
-    "endSeconds": 610.2,
-    "holdSeconds": 1.5,
+    "frame": 2108,
+    "atSeconds": 631.5,
+    "endSeconds": 632.7,
+    "holdSeconds": 1.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -106,17 +110,23 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 16,
-    "tabLabels": [],
+    "lineCount": 29,
+    "tabLabels": [
+      "Home",
+      "Search",
+      "Your Library",
+      "Premium",
+      "Create"
+    ],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "Account",
-    "headline": "Your Updates"
+    "title": "Settings",
+    "headline": "Playback"
   },
   "crawler": {
-    "nodeId": "s255",
-    "depth": 254,
+    "nodeId": "s267",
+    "depth": 266,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -124,16 +134,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s254",
-        "via": "Tap “Account”",
-        "name": "Account"
+        "from": "s266",
+        "via": "Back to Settings",
+        "name": "Settings (12)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s256",
-        "via": "Back to Profile",
-        "name": "Profile (58)"
+        "to": "s268",
+        "via": "Scroll",
+        "name": "Settings — scrolled"
       }
     ]
   },

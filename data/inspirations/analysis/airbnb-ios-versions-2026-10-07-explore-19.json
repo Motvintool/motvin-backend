@@ -1,20 +1,20 @@
 {
   "screenId": "airbnb-ios-versions-2026-10-07-explore-19",
   "screen_id": "airbnb-ios-versions-2026-10-07-explore-19",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-07T13:31:49.668Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:58:56.347Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Explore",
-  "flow_position": 19,
-  "name": "Explore home (9)",
-  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
-  "text": "9:41 4\n•all\nQ Start your search\nAll\nExperiences\nTail Homes\nServi\nContinue searching for\nphotographers in Mumbai\nRecently viewed\n→\nCandolim\nGoa\nNorth Goa\n1 bed • *4.9\n1 bed • * 5.0\n1bed *4.91\nGuest favourite homes in Puducherry\n→\nIndian guests often rate these homes highly\nGuest favourite\nGuest favourite\nRoom in Puducherrv\nShared room in Puducherrv\nR\nExplore\nProfile\nWishlists\nMessages\nTrips",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 47,
+  "name": "Explore feed",
+  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 25 text elements.",
+  "text": "9:411\n•1l\nQ Start your search\nAll\ntrl Homes\nExperiences\nServi\nContinue searching for\nphotographers in Mumbai\nServices in Mumbai\nChefs\nTraining\nPhotography\nMake-u\nPhotography\n→\nPRESEN:\nINVEST\nSUMN\nMumbai Photo Session\nCommercial portraits and\nE\nCinematic Portraits\nproducts by Saumya\nS\nFrom 24,000 / guest * 5.0\nFrom 25,000 / guest\nExplore\nProfile\nMessages\nWishlists\nTrips",
+  "purpose": "To browse available services and experiences in a location.",
+  "primary_action": "Browse service listings.",
   "tags": [
     "search",
     "photo",
@@ -40,8 +40,8 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
-        "Navigation title reads “Tail Homes”",
-        "Category strip: All, Experiences, Tail Homes, Servi",
+        "Navigation title reads “Trl Homes”",
+        "Category strip: All, trl Homes, Experiences, Servi",
         "Search bar present",
         "Light style"
       ]
@@ -49,23 +49,23 @@
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
-        "20 text elements recognised"
+        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 25 text elements.",
+        "25 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 19 of 49 in “Explore”",
-        "Reached from “Explore home (8)”",
-        "Leads to “Explore home (10)”"
+        "Step 47 of 49 in “Explore”",
+        "Reached from “Settings (4)”",
+        "Leads to “Settings (5)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 7:00 in the recording",
-        "Frame 1403 of 2389 sampled at 3.3333333333333335 fps",
+        "Held for 7.2s at 10:48 in the recording",
+        "Frame 2185 of 2389 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -74,37 +74,37 @@
     {
       "hex": "#faf9fa",
       "role": "background",
-      "share": 0.561
+      "share": 0.657
     },
     {
-      "hex": "#dddad6",
+      "hex": "#dadadb",
       "role": "surface",
-      "share": 0.199
+      "share": 0.171
     },
     {
-      "hex": "#c1bbb3",
+      "hex": "#bdb9b8",
       "role": "surface",
-      "share": 0.043
+      "share": 0.018
     },
     {
-      "hex": "#b09e8b",
+      "hex": "#1d254f",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#9d9898",
       "role": "surface",
-      "share": 0.025
-    },
-    {
-      "hex": "#8e816f",
-      "role": "text",
-      "share": 0.016
+      "share": 0.014
     }
   ],
   "capture": {
     "source": "Airbnb.mov",
     "fps": 3.3333333333333335,
     "frames": 2389,
-    "frame": 1403,
-    "atSeconds": 420.6,
-    "endSeconds": 421.2,
-    "holdSeconds": 0.6,
+    "frame": 2185,
+    "atSeconds": 648.6,
+    "endSeconds": 655.8,
+    "holdSeconds": 7.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -114,7 +114,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 20,
+    "lineCount": 25,
     "tabLabels": [
       "Explore",
       "Wishlists",
@@ -124,18 +124,18 @@
     ],
     "chipLabels": [
       "All",
+      "trl Homes",
       "Experiences",
-      "Tail Homes",
       "Servi"
     ],
     "ctas": [],
     "keyboard": false,
-    "title": "Tail Homes",
-    "headline": "Recently viewed"
+    "title": "Trl Homes",
+    "headline": "Photography"
   },
   "crawler": {
-    "nodeId": "s131",
-    "depth": 136,
+    "nodeId": "s227",
+    "depth": 232,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -143,16 +143,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s130",
+        "from": "s226",
         "via": "Back to Explore home",
-        "name": "Explore home (8)"
+        "name": "Settings (4)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s132",
-        "via": "Open Trl Homes",
-        "name": "Explore home (10)"
+        "to": "s228",
+        "via": "Back to Settings",
+        "name": "Settings (5)"
       }
     ]
   },

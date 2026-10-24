@@ -1,20 +1,20 @@
 {
   "screenId": "spotify-ios-versions-2026-10-06-home-4",
   "screen_id": "spotify-ios-versions-2026-10-06-home-4",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-06T10:23:44.136Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:49:43.809Z",
   "screen_type": "feed",
   "published_as": "feed",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Home",
-  "flow_position": 4,
-  "name": "Home home (4)",
-  "description": "Feed screen with a 5-item tab bar. Dark theme, 38 text elements.",
-  "text": "9:41(\n•0\nS\nPodcasts\nAll\nMusic\nTo get you started\nИuкоn\nAnirudh\nSai Abhyankkar Mix\nVivel\nRavichander Mix\nSai Abhyankkar, Leon\nAnirudh Ravichander,\nSai Abhy\nJames and Asma Teji\nDhibu Ninan Thomas and...\nJames a\nMore like\nVivek\nPattampoochi\nSARHYANKKARS\nindie\nPadhenee\nVivek Mix\nSingle\nAlbum\nPlaylist\nPattampoochi (From\nDude (O\nSai Abhyankkar, Leon\nPicture S\n\"Vishwanath & Sons\")T...\nJames and G. V. Prakash\nSai Abhy\nG. V. Prakash, Sublahshin...\nJump into a session based on yourtastes\nStart listening\nДRUDE\nAathi (From \"Kaththi\")\n+\n11D\nHome\nSearch\nYour Library\nCreate\nPremium",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 5,
+  "name": "Home feed",
+  "description": "Feed screen with a 5-item tab bar. Dark theme, 29 text elements.",
+  "text": "9:41\no0ll\nPodcasts\nAll\nMusic\njump into a session pasea on your tastes\nStart listening\nANIRUDHI\nAathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dadlani, and Yu...\nPavazha Malli - From \"Think Indie\"\nSai Abhyankkar, Shruti Haasan, and Vivek\nRecommended Stations\nRADIO\nRADIO\nVivek\nAnirud\nSai Abhyankkar\nSai Abhyankkar, Sid\nAnirudh Ravichander, Sai\nAnirudh\nAbhyank\nSriram, G. V. Prakash, Viv...\nAbhyankkar, Sid Sriram, I...\nMore like\nAnirudh Ravichander\nSAABHYANKKAR'S\nKudimes\nnencime\nAdipo\nNowlamil\n+\nQ\nIID\nCreate\nYour Library\nPremium\nSearch\nHome",
+  "purpose": "To display personalized music recommendations and featured content on the home screen",
+  "primary_action": "Browse recommended content",
   "tags": [
     "home",
     "search",
@@ -26,7 +26,8 @@
   "elements": [
     "tab-bar",
     "nav-bar",
-    "list"
+    "list",
+    "banner"
   ],
   "style": [
     "dark"
@@ -36,69 +37,69 @@
       "title": "Layout",
       "points": [
         "Tab bar with 5 items: Home, Search, Your Library, Premium, Create",
-        "Navigation title reads “To get you started”",
+        "Navigation title reads “Start listening”",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Feed screen with a 5-item tab bar. Dark theme, 38 text elements.",
-        "38 text elements recognised"
+        "Feed screen with a 5-item tab bar. Dark theme, 29 text elements.",
+        "29 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 181 in “Home”",
-        "Reached from “Home home (3)”",
-        "Leads to “Home home (5)”"
+        "Step 5 of 181 in “Home”",
+        "Reached from “Home home (4)”",
+        "Leads to “Home home (6)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.7s at 2:19 in the recording",
-        "Frame 472 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 2:23 in the recording",
+        "Frame 479 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#181419",
+      "hex": "#191519",
       "role": "background",
-      "share": 0.61
+      "share": 0.606
     },
     {
-      "hex": "#332d31",
+      "hex": "#362e33",
       "role": "surface",
-      "share": 0.093
+      "share": 0.104
     },
     {
-      "hex": "#4f4a4c",
-      "role": "surface",
-      "share": 0.034
-    },
-    {
-      "hex": "#d0d9da",
+      "hex": "#dba6fc",
       "role": "text",
-      "share": 0.023
+      "share": 0.04
     },
     {
-      "hex": "#76858f",
+      "hex": "#4c474d",
       "role": "surface",
-      "share": 0.011
+      "share": 0.036
+    },
+    {
+      "hex": "#b88bd6",
+      "role": "accent",
+      "share": 0.014
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 472,
-    "atSeconds": 139.2,
-    "endSeconds": 141.9,
-    "holdSeconds": 2.7,
+    "frame": 479,
+    "atSeconds": 143.1,
+    "endSeconds": 144,
+    "holdSeconds": 0.9,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -108,7 +109,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 38,
+    "lineCount": 29,
     "tabLabels": [
       "Home",
       "Search",
@@ -119,12 +120,12 @@
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
-    "title": "To get you started",
-    "headline": "Padhenee"
+    "title": "Start listening",
+    "headline": "Vivek"
   },
   "crawler": {
-    "nodeId": "s055",
-    "depth": 54,
+    "nodeId": "s056",
+    "depth": 55,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -132,16 +133,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s054",
-        "via": "Back to Home home",
-        "name": "Home home (3)"
+        "from": "s055",
+        "via": "Tap “Vivek”",
+        "name": "Home home (4)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s056",
-        "via": "Tap “Vivek”",
-        "name": "Home home (5)"
+        "to": "s057",
+        "via": "Tap “Sai Abhyankkar”",
+        "name": "Home home (6)"
       }
     ]
   },

@@ -1,32 +1,30 @@
 {
-  "name": "Address options",
+  "name": "Phone number entry",
   "screenType": "login",
   "fineType": "login",
-  "states": [],
-  "description": "Login screen with 1 input field. Dark theme, 21 text elements.",
+  "states": [
+    "keyboard"
+  ],
+  "description": "Login screen with the keyboard open and a primary action labelled “Log in or sign up”. Light theme, 25 text elements.",
   "tags": [
-    "delivery",
-    "address",
-    "delete address",
-    "login",
-    "ios"
+    "phone-login"
   ],
   "elements": [
-    "nav-bar",
     "text-field",
-    "list",
-    "banner"
+    "keyboard",
+    "button"
   ],
   "style": [
-    "dark"
+    "light"
   ],
   "capturedAt": "2026-09-30",
   "capture": {
-    "atSeconds": 60.4,
-    "holdSeconds": 1.2,
+    "atSeconds": 3,
+    "holdSeconds": 1,
     "brief": false,
-    "visits": 2
+    "visits": 1
   },
-  "purpose": "Editing or deleting saved addresses",
-  "primaryAction": "Edit or delete address"
+  "purpose": "Allow the user to enter their mobile number to continue",
+  "primaryAction": "Enter mobile number",
+  "extraTypes": []
 }

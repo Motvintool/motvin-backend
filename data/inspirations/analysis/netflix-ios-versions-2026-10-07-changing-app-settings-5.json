@@ -1,0 +1,141 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-07-changing-app-settings-5",
+  "screen_id": "netflix-ios-versions-2026-10-07-changing-app-settings-5",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:25:58.495Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Changing app settings",
+  "flow_position": 9,
+  "name": "App settings",
+  "description": "Settings screen. Dark theme, 18 text elements.",
+  "text": "9:41€\nooll\nX\nApp Settings\nDownloads\nWi-Fi Only\nSmart Downloads\nDownload Next Episode\nVideo Quality\n>\nStandard\nDelete All Downloads\niPhone\n• Netflix\nUsed\nFree\nAbout\n()\nInternet speed test\nPrivacy Policy",
+  "purpose": "To configure app preferences for video playback and downloads.",
+  "primary_action": "View privacy policy.",
+  "tags": [
+    "settings",
+    "video",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “App Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 16 in “Settings”",
+        "Reached from “App Settings (4)”",
+        "Leads to “Settings (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:30 in the recording",
+        "Frame 1304 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.866
+    },
+    {
+      "hex": "#3a393c",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#5d5b5f",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#727072",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1304,
+    "atSeconds": 390.6,
+    "endSeconds": 391.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "App Settings",
+    "headline": "About"
+  },
+  "crawler": {
+    "nodeId": "s146",
+    "depth": 145,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s145",
+        "via": "Tap “App Settings”",
+        "name": "App Settings (4)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s147",
+        "via": "Wait 0.9s",
+        "name": "Settings (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-07",
+  "capturedBy": "motvin-ios-crawler"
+}

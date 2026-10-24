@@ -1,34 +1,31 @@
 {
-  "name": "Homes nearby (9)",
-  "screenType": "map",
-  "fineType": "map",
+  "name": "Explore home",
+  "screenType": "loading",
+  "fineType": "home",
   "states": [],
-  "description": "Map screen with a 5-item tab bar, a row of 3 category chips and prices. Light theme, 17 text elements.",
+  "description": "Home screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 5 text elements.",
   "tags": [
-    "price",
-    "map",
-    "discount",
-    "explore",
-    "wishlists",
-    "trips",
-    "messages",
-    "ios"
+    "loading-state"
   ],
   "elements": [
-    "tab-bar",
-    "nav-bar",
-    "price",
-    "list",
-    "chip"
+    "search-bar",
+    "chip",
+    "skeleton",
+    "tab-bar"
   ],
   "style": [
-    "light"
+    "light",
+    "minimal"
   ],
   "capturedAt": "2026-10-07",
   "capture": {
-    "atSeconds": 306.3,
-    "holdSeconds": 1.5,
+    "atSeconds": 429.6,
+    "holdSeconds": 0.9,
     "brief": false,
     "visits": 1
-  }
+  },
+  "extraTypes": [
+    "home"
+  ],
+  "purpose": "To show the user that content is loading after a search or navigation."
 }

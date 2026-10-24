@@ -1,20 +1,20 @@
 {
   "screenId": "duolingo-ios-versions-2026-10-11-onboarding-4",
   "screen_id": "duolingo-ios-versions-2026-10-11-onboarding-4",
-  "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-11T18:22:59.869Z",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.595Z",
   "screen_type": "other",
-  "published_as": "other",
+  "published_as": "onboarding",
   "states": [],
   "category": "education",
   "flow": "discovery",
   "flow_name": "Onboarding",
-  "flow_position": 4,
-  "name": "Other",
-  "description": "Other screen. Dark theme, 1 text element.",
-  "text": "9:41 C\n•1 S\nHi there! I'm Duo!\nCONTINUE",
-  "purpose": null,
-  "primary_action": null,
+  "flow_position": 5,
+  "name": "Welcome message",
+  "description": "Other screen. Dark theme, 2 text elements.",
+  "text": "9:41 C\nJust 7 quick questions before\nwe start your first lesson!\nCONTINUE",
+  "purpose": "To inform the user about the onboarding questions before starting the first lesson.",
+  "primary_action": "Continue",
   "tags": [
     "continue",
     "other",
@@ -35,23 +35,24 @@
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 1 text element.",
-        "1 text element recognised"
+        "Other screen. Dark theme, 2 text elements.",
+        "2 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 187 in “Onboarding”",
-        "Reached from “Welcome — scrolled”",
-        "Leads to “Other (2)”"
+        "Step 5 of 187 in “Onboarding”",
+        "Reached from “Other”",
+        "Leads to “Dialog”",
+        "Returned to 2 times in the recording"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.7s at 0:08 in the recording",
-        "Frame 36 of 1830 sampled at 3.3333333333333335 fps",
+        "Held for 2.4s at 0:12 in the recording",
+        "Frame 48 of 1830 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -60,25 +61,25 @@
     {
       "hex": "#131f26",
       "role": "background",
-      "share": 0.894
+      "share": 0.876
     },
     {
-      "hex": "#74a733",
+      "hex": "#74a732",
       "role": "surface",
       "share": 0.031
     },
     {
-      "hex": "#98d836",
+      "hex": "#96d737",
       "role": "text",
-      "share": 0.026
+      "share": 0.027
     },
     {
-      "hex": "#3c4945",
+      "hex": "#3e4a49",
       "role": "surface",
-      "share": 0.013
+      "share": 0.021
     },
     {
-      "hex": "#61cd05",
+      "hex": "#61d105",
       "role": "accent",
       "share": 0.009
     }
@@ -87,31 +88,31 @@
     "source": "Duolingo.mov",
     "fps": 3.3333333333333335,
     "frames": 1830,
-    "frame": 36,
-    "atSeconds": 8.4,
-    "endSeconds": 11.1,
-    "holdSeconds": 2.7,
+    "frame": 48,
+    "atSeconds": 12.3,
+    "endSeconds": 14.7,
+    "holdSeconds": 2.4,
     "brief": false,
     "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
-    "visits": 1
+    "visits": 2
   },
   "signals": {
-    "lineCount": 1,
+    "lineCount": 2,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
     "title": null,
-    "headline": "Hi there! I'm Duo!",
+    "headline": "Just 7 quick questions before",
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s004",
-    "depth": 3,
+    "nodeId": "s005",
+    "depth": 4,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -119,16 +120,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s003",
+        "from": "s004",
         "via": "Open Other",
-        "name": "Welcome — scrolled"
+        "name": "Other"
       }
     ],
     "leadsTo": [
       {
-        "to": "s005",
-        "via": "Open Other",
-        "name": "Other (2)"
+        "to": "s006",
+        "via": "Back to Dialog",
+        "name": "Dialog"
       }
     ]
   },

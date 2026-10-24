@@ -1,37 +1,33 @@
 {
-  "name": "Home (4)",
-  "screenType": "cart",
-  "fineType": "cart",
-  "states": [],
-  "description": "Cart screen with a 4-item tab bar, a row of 5 category chips, a search bar and prices. Dark theme, 32 text elements.",
+  "name": "Home",
+  "screenType": "home",
+  "fineType": "search_results",
+  "states": [
+    "toast"
+  ],
+  "description": "Search results toast over a dimmed screen, on top of Other with a 3-item tab bar, a search bar and a primary action labelled “EXPLORE MORE”. Dark theme, 27 text elements.",
   "tags": [
-    "search",
-    "cart",
-    "home",
-    "dining",
-    "ro",
-    "healthy mode",
-    "ios"
+    "categories",
+    "discount"
   ],
   "elements": [
-    "tab-bar",
-    "nav-bar",
     "search-bar",
-    "price",
-    "list",
+    "grid",
     "chip",
-    "banner"
+    "tab-bar"
   ],
   "style": [
     "dark"
   ],
   "capturedAt": "2026-09-30",
   "capture": {
-    "atSeconds": 493.8,
-    "holdSeconds": 2.6,
+    "atSeconds": 605.6,
+    "holdSeconds": 7,
     "brief": false,
-    "visits": 7
+    "visits": 4,
+    "overlayOf": null
   },
-  "purpose": "The main screen of the app showing the home page with search bar, promotional banners, and recommended food items.",
-  "primaryAction": "Search for items or restaurants"
+  "purpose": "To browse restaurants and explore food options on the platform.",
+  "primaryAction": "Search for food items or restaurants",
+  "extraTypes": []
 }

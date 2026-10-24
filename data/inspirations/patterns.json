@@ -109,8 +109,8 @@
         "facets"
       ],
       "match": {
-        "screenTypes": [
-          "search"
+        "tags": [
+          "filters"
         ],
         "elements": [
           "bottom-sheet",
@@ -239,6 +239,12 @@
       "match": {
         "elements": [
           "progress"
+        ],
+        "withoutTypes": [
+          "loading",
+          "onboarding",
+          "signup",
+          "form"
         ]
       }
     },
@@ -329,6 +335,9 @@
       "match": {
         "screenTypes": [
           "modal"
+        ],
+        "withoutElements": [
+          "bottom-sheet"
         ]
       }
     },
@@ -435,7 +444,7 @@
         "intro"
       ],
       "match": {
-        "screenTypes": [
+        "mainTypes": [
           "onboarding"
         ]
       }
@@ -448,6 +457,26 @@
       "tags": [
         "stepper",
         "progress"
+      ],
+      "match": {
+        "screenTypes": [
+          "onboarding",
+          "signup",
+          "form"
+        ],
+        "elements": [
+          "progress"
+        ]
+      }
+    },
+    {
+      "slug": "quantity-steppers",
+      "name": "Quantity steppers",
+      "category": "Checkout",
+      "description": "Plus and minus controls for choosing how many.",
+      "tags": [
+        "stepper",
+        "quantity"
       ],
       "match": {
         "elements": [
@@ -474,7 +503,7 @@
       "slug": "permission-prompts",
       "name": "Permission prompts",
       "category": "Onboarding",
-      "description": "Requests for access \u2014 photos, notifications, the microphone.",
+      "description": "Requests for access — photos, notifications, the microphone.",
       "tags": [
         "permission"
       ],
