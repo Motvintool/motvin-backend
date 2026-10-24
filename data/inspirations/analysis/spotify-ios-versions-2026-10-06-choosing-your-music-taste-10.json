@@ -2,130 +2,126 @@
   "screenId": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-10",
   "screen_id": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-10",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T07:49:43.827Z",
-  "screen_type": "toast",
-  "published_as": "loading",
-  "states": [
-    "toast"
-  ],
+  "analyzedAt": "2026-10-24T07:49:43.761Z",
+  "screen_type": "onboarding",
+  "published_as": "permission",
+  "states": [],
   "category": "productivity",
-  "flow": "discovery",
+  "flow": "onboarding",
   "flow_name": "Choosing your music taste",
-  "flow_position": 44,
-  "name": "Loading screen",
-  "description": "Toast over a dimmed screen, on top of Loading state. Dark theme, 1 text element.",
-  "text": "9:41 C\n¿ ll°\nFinding music for you...",
-  "purpose": "To inform the user that the app is loading content.",
-  "primary_action": null,
+  "flow_position": 1,
+  "name": "Tracking permission prompt",
+  "description": "Onboarding screen with a primary action labelled “Allow tracking for more”. Dark theme, 5 text elements.",
+  "text": "9:41C\nC\no0l\nAllow tracking for more\nrelevant ads\nYou can update your choice at any time in your\niOS settings.\nSpotify's Privacy Policy\nNext",
+  "purpose": "To request user permission to allow tracking for personalized ads.",
+  "primary_action": "Tap Next to proceed",
   "tags": [
-    "toast",
+    "settings",
+    "next",
+    "onboarding",
     "ios"
   ],
   "elements": [
-    "toast"
+    "cta",
+    "button",
+    "legal-text"
   ],
   "style": [
     "dark",
-    "minimal"
+    "bold"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Toast over a dimmed background, covering 2% of the height from 95% down",
-        "Dark, Minimal style"
+        "Navigation title reads “Allow tracking for more”",
+        "Dark, Bold style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Toast over a dimmed screen, on top of Loading state. Dark theme, 1 text element.",
-        "1 text element recognised",
-        "State: toast"
+        "Onboarding screen with a primary action labelled “Allow tracking for more”. Dark theme, 5 text elements.",
+        "Calls to action: “Allow tracking for more”",
+        "5 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 44 of 44 in “Onboarding”",
-        "Reached from “Toast — loading”",
-        "Leads to “Home home — loading”"
+        "Step 1 of 2 in “Allow tracking for more”",
+        "Reached from “Home home”",
+        "Leads to “Dialog”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.7s at 2:05 in the recording",
-        "Frame 425 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 1.2s at 2:12 in the recording",
+        "Frame 443 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#151217",
+      "hex": "#030104",
       "role": "background",
-      "share": 0.975
+      "share": 0.663
     },
     {
-      "hex": "#514f53",
+      "hex": "#2d1f21",
       "role": "surface",
-      "share": 0.013
+      "share": 0.084
     },
     {
-      "hex": "#323034",
+      "hex": "#583939",
       "role": "surface",
-      "share": 0.008
+      "share": 0.051
     },
     {
-      "hex": "#737174",
-      "role": "surface",
-      "share": 0.002
-    },
-    {
-      "hex": "#a6a4a7",
+      "hex": "#966953",
       "role": "text",
-      "share": 0.001
+      "share": 0.037
+    },
+    {
+      "hex": "#59220e",
+      "role": "accent",
+      "share": 0.03
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 425,
-    "atSeconds": 125.1,
-    "endSeconds": 127.8,
-    "holdSeconds": 2.7,
+    "frame": 443,
+    "atSeconds": 132,
+    "endSeconds": 133.2,
+    "holdSeconds": 1.2,
     "brief": false,
-    "kind": "overlay",
-    "overlay": {
-      "kind": "toast",
-      "dimmed": true,
-      "box": {
-        "x": 0.09375,
-        "y": 0.953125,
-        "w": 0.84375,
-        "h": 0.015625
-      }
-    },
+    "kind": "screen",
+    "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 1,
+    "lineCount": 5,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Allow tracking for more"
+    ],
     "keyboard": false,
-    "title": null,
-    "headline": "Finding music for you"
+    "title": "Allow tracking for more",
+    "headline": "Relevant ads",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s048",
-    "depth": 47,
+    "nodeId": "s051",
+    "depth": 50,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -133,16 +129,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s047",
-        "via": "Wait 1.8s",
-        "name": "Toast — loading"
+        "from": "s050",
+        "via": "Open Allow tracking for more",
+        "name": "Home home"
       }
     ],
     "leadsTo": [
       {
-        "to": "s049",
-        "via": "Open Home home — loading",
-        "name": "Home home — loading"
+        "to": "s052",
+        "via": "Open Activity across other companies'",
+        "name": "Dialog"
       }
     ]
   },

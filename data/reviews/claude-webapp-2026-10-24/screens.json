@@ -2,8 +2,16 @@
   "app": "claude",
   "platform": "webapp",
   "version": "2026-10-24",
-  "generatedAt": "2026-10-24T08:13:11.010Z",
+  "generatedAt": "2026-10-24T10:53:11.307Z",
+  "appName": "Claude",
+  "tagline": "Your thinking partner for big ambitions",
   "industry": "productivity",
+  "cardScreens": [
+    "claude-webapp-versions-2026-10-24-home-1",
+    "claude-webapp-versions-2026-10-24-chat-1",
+    "claude-webapp-versions-2026-10-24-comparing-plans-2",
+    "claude-webapp-versions-2026-10-24-browsing-plugins-1"
+  ],
   "industries": [
     "saas",
     "fintech",
@@ -198,122 +206,112 @@
   ],
   "tree": [
     {
-      "id": "claude-webapp-versions-2026-10-24-onboarding",
+      "id": "claude-webapp-versions-2026-10-24-onboarding-area",
       "path": "Onboarding",
       "category": "onboarding",
-      "screens": 15
+      "screens": 1
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-home",
-      "path": "Home",
-      "category": "discovery",
-      "screens": 3
-    },
-    {
-      "id": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
-      "path": "Home › Adjusting cookie settings",
-      "category": "settings",
-      "screens": 3
-    },
-    {
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "path": "Upgrading subscription",
-      "category": "checkout",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email",
+      "path": "Onboarding › Signing in with email",
+      "category": "authentication",
       "screens": 6
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-chats",
-      "path": "Chats",
+      "id": "claude-webapp-versions-2026-10-24-setting-cookie-preferences",
+      "path": "Onboarding › Setting cookie preferences",
+      "category": "settings",
+      "screens": 2
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-home-area",
+      "path": "Home",
+      "category": "discovery",
+      "screens": 2
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-going-incognito",
+      "path": "Home › Going incognito",
       "category": "discovery",
       "screens": 1
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "path": "Chats › Giving negative feedback",
-      "category": "discovery",
-      "screens": 8
+      "id": "claude-webapp-versions-2026-10-24-comparing-plans",
+      "path": "Home › Comparing plans",
+      "category": "checkout",
+      "screens": 2
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "path": "Chats › Sending a message",
+      "id": "claude-webapp-versions-2026-10-24-chat-area",
+      "path": "Chat",
+      "category": "discovery",
+      "screens": 1
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-editing-a-message",
+      "path": "Chat › Editing a message",
       "category": "creation",
-      "screens": 8
+      "screens": 1
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-opening-chat-options",
-      "path": "Chats › Opening chat options",
-      "category": "discovery",
+      "id": "claude-webapp-versions-2026-10-24-rating-a-response",
+      "path": "Chat › Rating a response",
+      "category": "settings",
       "screens": 3
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-chatting-with-claude",
-      "path": "Chats › Using voice input",
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
+      "path": "Chat › Adding tools to a chat",
+      "category": "creation",
+      "screens": 5
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-using-voice-input",
+      "path": "Chat › Using voice input",
       "category": "creation",
       "screens": 2
     },
     {
-      "id": "claude-webapp-versions-2026-10-24-settings",
+      "id": "claude-webapp-versions-2026-10-24-upgrading-to-pro",
+      "path": "Chat › Upgrading to Pro",
+      "category": "checkout",
+      "screens": 3
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-settings-area",
       "path": "Settings",
       "category": "settings",
-      "screens": 2
+      "screens": 1
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-browsing-plugins",
+      "path": "Settings › Browsing plugins",
+      "category": "discovery",
+      "screens": 1
     }
   ],
   "patterns": [
     {
-      "slug": "top-navigation-bars",
-      "name": "Top navigation bars",
+      "slug": "sidebar-navigation",
+      "name": "Sidebar navigation",
       "match": {
         "platforms": [
           "web",
           "webapp"
         ],
         "elements": [
-          "nav-bar"
+          "navigation"
         ]
       },
       "screens": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
         8,
-        9,
-        17,
-        18,
-        20,
-        22,
-        23,
+        10,
+        11,
+        15,
+        16,
         26,
-        28,
-        32,
-        33,
-        36,
-        37,
-        38,
-        39,
-        40,
-        44,
-        45,
-        46
-      ]
-    },
-    {
-      "slug": "tab-bars",
-      "name": "Tab bars",
-      "match": {
-        "elements": [
-          "tab-bar"
-        ]
-      },
-      "screens": [
-        21,
-        22,
-        25,
-        45,
-        46
+        30,
+        31
       ]
     },
     {
@@ -325,9 +323,8 @@
         ]
       },
       "screens": [
-        23,
-        45,
-        46
+        30,
+        31
       ]
     },
     {
@@ -339,10 +336,11 @@
         ]
       },
       "screens": [
-        21,
-        22,
-        24,
-        25
+        13,
+        14,
+        27,
+        28,
+        29
       ]
     },
     {
@@ -360,14 +358,7 @@
         4,
         5,
         6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
+        7
       ]
     },
     {
@@ -379,8 +370,9 @@
         ]
       },
       "screens": [
-        45,
-        46
+        9,
+        30,
+        31
       ]
     },
     {
@@ -395,21 +387,40 @@
         ]
       },
       "screens": [
-        16,
+        9,
         19,
+        20,
+        21,
+        23,
+        24
+      ]
+    },
+    {
+      "slug": "segmented-tabs",
+      "name": "Segmented tabs",
+      "match": {
+        "elements": [
+          "segmented-control"
+        ]
+      },
+      "screens": [
+        13,
+        14,
         27,
-        29,
-        30,
-        31,
-        34,
-        35,
-        36,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43
+        28,
+        29
+      ]
+    },
+    {
+      "slug": "empty-states",
+      "name": "Empty states",
+      "match": {
+        "screenTypes": [
+          "empty"
+        ]
+      },
+      "screens": [
+        12
       ]
     },
     {
@@ -421,23 +432,14 @@
         ]
       },
       "screens": [
-        26,
-        28,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44
+        15,
+        16,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26
       ]
     },
     {
@@ -449,22 +451,7 @@
         ]
       },
       "screens": [
-        44
-      ]
-    },
-    {
-      "slug": "toasts",
-      "name": "Toasts",
-      "match": {
-        "elements": [
-          "toast"
-        ]
-      },
-      "screens": [
-        39,
-        40,
-        42,
-        43
+        25
       ]
     },
     {
@@ -476,10 +463,11 @@
         ]
       },
       "screens": [
-        10,
-        11,
-        12,
-        33
+        1,
+        3,
+        4,
+        5,
+        8
       ]
     },
     {
@@ -491,7 +479,7 @@
         ]
       },
       "screens": [
-        15
+        27
       ]
     }
   ],
@@ -501,938 +489,432 @@
       "n": 1,
       "id": "claude-webapp-versions-2026-10-24-onboarding-1",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/1.webp",
-      "name": "Email sign-in",
+      "name": "Email entry",
       "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
+      "extraTypes": [],
       "elements": [
-        "nav-bar",
-        "button",
         "text-field",
-        "modal"
+        "button",
+        "banner"
       ],
       "style": [
         "light"
       ],
       "tags": [
         "email-login",
-        "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding-area",
       "patterns": [
-        "Top navigation bars",
-        "Login forms"
+        "Login forms",
+        "Banners"
       ]
     },
     {
       "n": 2,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/2.webp",
-      "name": "Email sign-in",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/1.webp",
+      "name": "Email entry",
       "type": "login",
       "extraTypes": [
-        "modal"
+        "error"
       ],
       "elements": [
-        "nav-bar",
-        "button",
         "text-field",
-        "modal"
+        "alert",
+        "button"
       ],
       "style": [
         "light"
       ],
       "tags": [
         "email-login",
-        "cookies",
-        "social-login"
+        "warning"
       ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Top navigation bars",
         "Login forms"
       ]
     },
     {
       "n": 3,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/3.webp",
-      "name": "Email sign-in",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/2.webp",
+      "name": "Email entry",
       "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
+      "extraTypes": [],
       "elements": [
-        "nav-bar",
-        "button",
         "text-field",
-        "modal"
+        "button",
+        "banner"
       ],
       "style": [
         "light"
       ],
       "tags": [
         "email-login",
-        "cookies",
         "social-login"
       ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Top navigation bars",
-        "Login forms"
+        "Login forms",
+        "Banners"
       ]
     },
     {
       "n": 4,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-4",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/4.webp",
-      "name": "Email sign-in",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-3",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/3.webp",
+      "name": "Check your email",
       "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
+      "extraTypes": [],
       "elements": [
-        "nav-bar",
         "button",
-        "text-field",
-        "modal"
+        "banner"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "email-login",
-        "cookies",
-        "social-login"
+        "email-login"
       ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Top navigation bars",
-        "Login forms"
+        "Login forms",
+        "Banners"
       ]
     },
     {
       "n": 5,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-5",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/5.webp",
-      "name": "Email verification",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-4",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/4.webp",
+      "name": "Verification code entry",
       "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
+      "extraTypes": [],
       "elements": [
-        "nav-bar",
-        "button"
+        "text-field",
+        "button",
+        "banner"
       ],
       "style": [
         "light"
       ],
       "tags": [
         "email-login",
-        "cookies"
+        "two-factor"
       ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Top navigation bars",
-        "Login forms"
+        "Login forms",
+        "Banners"
       ]
     },
     {
       "n": 6,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-6",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/6.webp",
-      "name": "Email sign-in",
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-5",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/5.webp",
+      "name": "Verification code entry",
       "type": "login",
       "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "text-field",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies",
-        "social-login"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Top navigation bars",
-        "Login forms"
-      ]
-    },
-    {
-      "n": 7,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-7",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/7.webp",
-      "name": "Sign-in options",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "text-field",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies",
-        "social-login"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Top navigation bars",
-        "Login forms"
-      ]
-    },
-    {
-      "n": 8,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-8",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/8.webp",
-      "name": "Email verification prompt",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Top navigation bars",
-        "Login forms"
-      ]
-    },
-    {
-      "n": 9,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-9",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/9.webp",
-      "name": "Email verification fallback",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "text-field",
-        "modal"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Top navigation bars",
-        "Login forms"
-      ]
-    },
-    {
-      "n": 10,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-10",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/10.webp",
-      "name": "Email verification",
-      "type": "login",
-      "extraTypes": [
-        "modal"
+        "loading"
       ],
       "elements": [
         "text-field",
-        "button",
-        "modal",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Login forms",
-        "Banners"
-      ]
-    },
-    {
-      "n": 11,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-11",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/11.webp",
-      "name": "Email verification",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "text-field",
-        "button",
-        "modal",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Login forms",
-        "Banners"
-      ]
-    },
-    {
-      "n": 12,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-12",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/12.webp",
-      "name": "Email verification",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "text-field",
-        "button",
-        "modal",
-        "banner"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Login forms",
-        "Banners"
-      ]
-    },
-    {
-      "n": 13,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-13",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/13.webp",
-      "name": "Email verification",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "text-field",
-        "button",
-        "alert"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Login forms"
-      ]
-    },
-    {
-      "n": 14,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-14",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/14.webp",
-      "name": "Email verification",
-      "type": "login",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "text-field",
-        "button"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "email-login",
-        "cookies"
-      ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
-      "patterns": [
-        "Login forms"
-      ]
-    },
-    {
-      "n": 15,
-      "id": "claude-webapp-versions-2026-10-24-onboarding-15",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/onboarding/15.webp",
-      "name": "Loading",
-      "type": "loading",
-      "extraTypes": [],
-      "elements": [
-        "skeleton",
         "progress"
       ],
       "style": [
         "light"
       ],
       "tags": [
+        "two-factor",
         "loading-state"
       ],
-      "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Skeleton loaders"
-      ]
+        "Login forms"
+      ],
+      "looksLike": 5
     },
     {
-      "n": 16,
-      "id": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adjusting-cookie-settings/1.webp",
-      "name": "Cookie settings",
-      "type": "modal",
+      "n": 7,
+      "id": "claude-webapp-versions-2026-10-24-signing-in-with-email-6",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/signing-in-with-email/6.webp",
+      "name": "Verification code entry",
+      "type": "login",
       "extraTypes": [
-        "home"
+        "error"
       ],
       "elements": [
-        "modal",
-        "button",
-        "legal-text",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "cookies",
-        "privacy"
-      ],
-      "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
-      "patterns": [
-        "Dialogs"
-      ]
-    },
-    {
-      "n": 17,
-      "id": "claude-webapp-versions-2026-10-24-home-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/home/1.webp",
-      "name": "Home",
-      "type": "home",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
         "text-field",
-        "button",
-        "badge"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant"
-      ],
-      "flow": "Home",
-      "flowId": "claude-webapp-versions-2026-10-24-home",
-      "patterns": [
-        "Top navigation bars"
-      ]
-    },
-    {
-      "n": 18,
-      "id": "claude-webapp-versions-2026-10-24-home-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/home/2.webp",
-      "name": "Incognito mode",
-      "type": "home",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
-        "badge",
-        "alert"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "privacy"
-      ],
-      "flow": "Home",
-      "flowId": "claude-webapp-versions-2026-10-24-home",
-      "patterns": [
-        "Top navigation bars"
-      ]
-    },
-    {
-      "n": 19,
-      "id": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adjusting-cookie-settings/2.webp",
-      "name": "Cookie settings",
-      "type": "modal",
-      "extraTypes": [
-        "home"
-      ],
-      "elements": [
-        "modal",
-        "button",
-        "legal-text",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "cookies",
-        "privacy"
-      ],
-      "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
-      "patterns": [
-        "Dialogs"
-      ]
-    },
-    {
-      "n": 20,
-      "id": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adjusting-cookie-settings/3.webp",
-      "name": "Home",
-      "type": "home",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
-        "badge",
-        "avatar"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant"
-      ],
-      "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
-      "patterns": [
-        "Top navigation bars"
-      ]
-    },
-    {
-      "n": 21,
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/1.webp",
-      "name": "Subscription plans",
-      "type": "pricing",
-      "extraTypes": [],
-      "elements": [
-        "tab-bar",
-        "card",
-        "button",
-        "list",
-        "text-field",
-        "badge"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "subscription",
-        "upgrade"
-      ],
-      "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "patterns": [
-        "Tab bars",
-        "Pricing cards"
-      ]
-    },
-    {
-      "n": 22,
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/2.webp",
-      "name": "Subscription plans",
-      "type": "pricing",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "tab-bar",
-        "card",
-        "list",
-        "price",
-        "cta"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "subscription",
-        "upgrade"
-      ],
-      "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "patterns": [
-        "Top navigation bars",
-        "Tab bars",
-        "Pricing cards"
-      ]
-    },
-    {
-      "n": 23,
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/3.webp",
-      "name": "Home",
-      "type": "home",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "search-bar",
-        "card",
-        "form",
-        "button",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant"
-      ],
-      "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "patterns": [
-        "Top navigation bars",
-        "Search inputs"
-      ]
-    },
-    {
-      "n": 24,
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-4",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/4.webp",
-      "name": "Upgrade prompt",
-      "type": "pricing",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "modal",
-        "list",
-        "button",
-        "text-field",
-        "badge"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "subscription",
-        "upgrade"
-      ],
-      "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "patterns": [
-        "Pricing cards"
-      ]
-    },
-    {
-      "n": 25,
-      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-5",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/5.webp",
-      "name": "Upgrade prompt",
-      "type": "pricing",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "modal",
-        "button",
-        "tab-bar",
-        "cta",
-        "text-field",
-        "legal-text"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "subscription",
-        "upgrade"
-      ],
-      "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
-      "patterns": [
-        "Tab bars",
-        "Pricing cards"
-      ]
-    },
-    {
-      "n": 26,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/1.webp",
-      "name": "Chat interface",
-      "type": "messages",
-      "extraTypes": [
-        "form"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Top navigation bars",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 27,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/2.webp",
-      "name": "Give negative feedback",
-      "type": "modal",
-      "extraTypes": [],
-      "elements": [
-        "modal",
-        "text-field",
+        "alert",
         "button"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
+        "two-factor",
+        "warning"
       ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "flow": "Onboarding › Signing in with email",
+      "flowId": "claude-webapp-versions-2026-10-24-signing-in-with-email",
       "patterns": [
-        "Dialogs"
+        "Login forms"
       ]
     },
     {
-      "n": 28,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/3.webp",
-      "name": "Chat interface",
-      "type": "messages",
+      "n": 8,
+      "id": "claude-webapp-versions-2026-10-24-setting-cookie-preferences-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/setting-cookie-preferences/1.webp",
+      "name": "Home",
+      "type": "home",
       "extraTypes": [],
       "elements": [
-        "nav-bar",
+        "navigation",
         "text-field",
-        "button"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Top navigation bars",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 29,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-4",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/4.webp",
-      "name": "Give negative feedback",
-      "type": "modal",
-      "extraTypes": [],
-      "elements": [
-        "modal",
-        "text-field",
-        "button"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Dialogs"
-      ]
-    },
-    {
-      "n": 30,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-5",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/5.webp",
-      "name": "Negative feedback form",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "modal",
-        "button",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Dialogs",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 31,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-6",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/6.webp",
-      "name": "Negative feedback form",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "modal",
-        "button",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Dialogs",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 32,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-7",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/7.webp",
-      "name": "Chat interface",
-      "type": "messages",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
-        "avatar"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
-      ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
-      "patterns": [
-        "Top navigation bars",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 33,
-      "id": "claude-webapp-versions-2026-10-24-giving-negative-feedback-8",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/giving-negative-feedback/8.webp",
-      "name": "Chat conversation",
-      "type": "messages",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
         "banner"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
+        "cookies",
+        "ai-assistant"
       ],
-      "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "flow": "Onboarding › Setting cookie preferences",
+      "flowId": "claude-webapp-versions-2026-10-24-setting-cookie-preferences",
       "patterns": [
-        "Top navigation bars",
-        "Chat screens",
+        "Sidebar navigation",
         "Banners"
       ]
     },
     {
-      "n": 34,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/1.webp",
-      "name": "Message editing",
+      "n": 9,
+      "id": "claude-webapp-versions-2026-10-24-setting-cookie-preferences-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/setting-cookie-preferences/2.webp",
+      "name": "Cookie settings",
       "type": "modal",
       "extraTypes": [
-        "messages"
+        "settings"
+      ],
+      "elements": [
+        "modal",
+        "toggle",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "cookies",
+        "privacy"
+      ],
+      "flow": "Onboarding › Setting cookie preferences",
+      "flowId": "claude-webapp-versions-2026-10-24-setting-cookie-preferences",
+      "patterns": [
+        "Settings forms",
+        "Dialogs"
+      ]
+    },
+    {
+      "n": 10,
+      "id": "claude-webapp-versions-2026-10-24-home-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/home/1.webp",
+      "name": "Home",
+      "type": "home",
+      "extraTypes": [],
+      "elements": [
+        "navigation",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "ai-assistant",
+        "chat"
+      ],
+      "flow": "Home",
+      "flowId": "claude-webapp-versions-2026-10-24-home-area",
+      "patterns": [
+        "Sidebar navigation"
+      ]
+    },
+    {
+      "n": 11,
+      "id": "claude-webapp-versions-2026-10-24-home-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/home/2.webp",
+      "name": "Home",
+      "type": "home",
+      "extraTypes": [],
+      "elements": [
+        "navigation",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "ai-assistant",
+        "chat"
+      ],
+      "flow": "Home",
+      "flowId": "claude-webapp-versions-2026-10-24-home-area",
+      "patterns": [
+        "Sidebar navigation"
+      ]
+    },
+    {
+      "n": 12,
+      "id": "claude-webapp-versions-2026-10-24-going-incognito-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/going-incognito/1.webp",
+      "name": "Incognito chat",
+      "type": "home",
+      "extraTypes": [
+        "empty"
+      ],
+      "elements": [
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "privacy",
+        "ai-assistant"
+      ],
+      "flow": "Home › Going incognito",
+      "flowId": "claude-webapp-versions-2026-10-24-going-incognito",
+      "patterns": [
+        "Empty states"
+      ]
+    },
+    {
+      "n": 13,
+      "id": "claude-webapp-versions-2026-10-24-comparing-plans-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/comparing-plans/1.webp",
+      "name": "Plans",
+      "type": "pricing",
+      "extraTypes": [],
+      "elements": [
+        "segmented-control",
+        "card",
+        "price",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "subscription",
+        "upgrade"
+      ],
+      "flow": "Home › Comparing plans",
+      "flowId": "claude-webapp-versions-2026-10-24-comparing-plans",
+      "patterns": [
+        "Pricing cards",
+        "Segmented tabs"
+      ]
+    },
+    {
+      "n": 14,
+      "id": "claude-webapp-versions-2026-10-24-comparing-plans-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/comparing-plans/2.webp",
+      "name": "Plans",
+      "type": "pricing",
+      "extraTypes": [],
+      "elements": [
+        "segmented-control",
+        "card",
+        "price",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "subscription",
+        "team"
+      ],
+      "flow": "Home › Comparing plans",
+      "flowId": "claude-webapp-versions-2026-10-24-comparing-plans",
+      "patterns": [
+        "Pricing cards",
+        "Segmented tabs"
+      ]
+    },
+    {
+      "n": 15,
+      "id": "claude-webapp-versions-2026-10-24-chat-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/chat/1.webp",
+      "name": "Chat",
+      "type": "messages",
+      "extraTypes": [],
+      "elements": [
+        "navigation",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "ai-assistant",
+        "chat"
+      ],
+      "flow": "Chat",
+      "flowId": "claude-webapp-versions-2026-10-24-chat-area",
+      "patterns": [
+        "Sidebar navigation",
+        "Chat screens"
+      ]
+    },
+    {
+      "n": 16,
+      "id": "claude-webapp-versions-2026-10-24-editing-a-message-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/editing-a-message/1.webp",
+      "name": "Editing a message",
+      "type": "messages",
+      "extraTypes": [
+        "form"
+      ],
+      "elements": [
+        "navigation",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "chat",
+        "editor"
+      ],
+      "flow": "Chat › Editing a message",
+      "flowId": "claude-webapp-versions-2026-10-24-editing-a-message",
+      "patterns": [
+        "Sidebar navigation",
+        "Chat screens"
+      ],
+      "looksLike": 15
+    },
+    {
+      "n": 17,
+      "id": "claude-webapp-versions-2026-10-24-rating-a-response-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/rating-a-response/1.webp",
+      "name": "Positive feedback dialog",
+      "type": "form",
+      "extraTypes": [
+        "modal"
       ],
       "elements": [
         "modal",
@@ -1443,61 +925,102 @@
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat",
-        "feedback"
+        "feedback",
+        "rating"
       ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "patterns": [
-        "Dialogs",
-        "Chat screens"
-      ]
+      "flow": "Chat › Rating a response",
+      "flowId": "claude-webapp-versions-2026-10-24-rating-a-response",
+      "patterns": []
     },
     {
-      "n": 35,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/2.webp",
-      "name": "Connector menu",
-      "type": "modal",
+      "n": 18,
+      "id": "claude-webapp-versions-2026-10-24-rating-a-response-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/rating-a-response/2.webp",
+      "name": "Negative feedback dialog",
+      "type": "form",
       "extraTypes": [
-        "messages"
+        "modal"
       ],
       "elements": [
         "modal",
-        "list",
+        "text-field",
         "button"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
+        "feedback",
+        "rating"
       ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "flow": "Chat › Rating a response",
+      "flowId": "claude-webapp-versions-2026-10-24-rating-a-response",
+      "patterns": []
+    },
+    {
+      "n": 19,
+      "id": "claude-webapp-versions-2026-10-24-rating-a-response-3",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/rating-a-response/3.webp",
+      "name": "Negative feedback dialog",
+      "type": "modal",
+      "extraTypes": [
+        "form"
+      ],
+      "elements": [
+        "modal",
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "feedback"
+      ],
+      "flow": "Chat › Rating a response",
+      "flowId": "claude-webapp-versions-2026-10-24-rating-a-response",
       "patterns": [
-        "Dialogs",
-        "Chat screens"
+        "Dialogs"
       ]
     },
     {
-      "n": 36,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/3.webp",
+      "n": 20,
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adding-tools-to-a-chat/1.webp",
       "name": "Add menu",
       "type": "modal",
       "extraTypes": [
         "messages"
       ],
       "elements": [
-        "nav-bar",
-        "button",
         "modal",
-        "text-field",
-        "badge"
+        "list"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "ai-assistant",
+        "file-upload"
+      ],
+      "flow": "Chat › Adding tools to a chat",
+      "flowId": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
+    },
+    {
+      "n": 21,
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adding-tools-to-a-chat/2.webp",
+      "name": "Add menu",
+      "type": "modal",
+      "extraTypes": [
+        "messages"
+      ],
+      "elements": [
+        "modal",
+        "list"
       ],
       "style": [
         "light"
@@ -1505,275 +1028,247 @@
       "tags": [
         "ai-assistant"
       ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "flow": "Chat › Adding tools to a chat",
+      "flowId": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
       "patterns": [
-        "Top navigation bars",
         "Dialogs",
         "Chat screens"
-      ]
+      ],
+      "looksLike": 20
     },
     {
-      "n": 37,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-4",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/4.webp",
-      "name": "Chat interface",
-      "type": "messages",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
-        "badge"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
-      ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "patterns": [
-        "Top navigation bars",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 38,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-5",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/5.webp",
-      "name": "Add menu",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "nav-bar",
-        "text-field",
-        "button",
-        "modal",
-        "badge"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
-      ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "patterns": [
-        "Top navigation bars",
-        "Dialogs",
-        "Chat screens"
-      ]
-    },
-    {
-      "n": 39,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-6",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/6.webp",
-      "name": "Add menu",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "modal",
-        "text-field",
-        "toast"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
-      ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "patterns": [
-        "Top navigation bars",
-        "Dialogs",
-        "Chat screens",
-        "Toasts"
-      ]
-    },
-    {
-      "n": 40,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-7",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/7.webp",
-      "name": "Add menu",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "nav-bar",
-        "button",
-        "modal",
-        "text-field",
-        "toast"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
-      ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
-      "patterns": [
-        "Top navigation bars",
-        "Dialogs",
-        "Chat screens",
-        "Toasts"
-      ]
-    },
-    {
-      "n": 41,
-      "id": "claude-webapp-versions-2026-10-24-sending-a-message-8",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/sending-a-message/8.webp",
+      "n": 22,
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat-3",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adding-tools-to-a-chat/3.webp",
       "name": "Add custom connector",
+      "type": "form",
+      "extraTypes": [
+        "modal"
+      ],
+      "elements": [
+        "modal",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "ai-assistant"
+      ],
+      "flow": "Chat › Adding tools to a chat",
+      "flowId": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
+      "patterns": []
+    },
+    {
+      "n": 23,
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat-4",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adding-tools-to-a-chat/4.webp",
+      "name": "Add menu",
       "type": "modal",
       "extraTypes": [
         "messages"
       ],
       "elements": [
         "modal",
-        "form",
-        "text-field",
-        "button",
-        "legal-text"
+        "list"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat",
-        "file-upload"
+        "ai-assistant"
       ],
-      "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "flow": "Chat › Adding tools to a chat",
+      "flowId": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
       "patterns": [
         "Dialogs",
         "Chat screens"
-      ]
+      ],
+      "looksLike": 20
     },
     {
-      "n": 42,
-      "id": "claude-webapp-versions-2026-10-24-opening-chat-options-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/opening-chat-options/1.webp",
-      "name": "Chat options menu",
+      "n": 24,
+      "id": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat-5",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adding-tools-to-a-chat/5.webp",
+      "name": "Add menu",
       "type": "modal",
       "extraTypes": [
         "messages"
       ],
       "elements": [
         "modal",
-        "button",
-        "toast",
-        "text-field"
+        "list"
       ],
       "style": [
         "light"
       ],
       "tags": [
-        "ai-assistant",
-        "chat"
+        "ai-assistant"
       ],
-      "flow": "Chats › Opening chat options",
-      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options",
+      "flow": "Chat › Adding tools to a chat",
+      "flowId": "claude-webapp-versions-2026-10-24-adding-tools-to-a-chat",
       "patterns": [
         "Dialogs",
-        "Chat screens",
-        "Toasts"
-      ]
+        "Chat screens"
+      ],
+      "looksLike": 21
     },
     {
-      "n": 43,
-      "id": "claude-webapp-versions-2026-10-24-opening-chat-options-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/opening-chat-options/2.webp",
-      "name": "Chat options menu",
-      "type": "modal",
-      "extraTypes": [
-        "messages"
-      ],
-      "elements": [
-        "modal",
-        "button",
-        "toast",
-        "text-field"
-      ],
-      "style": [
-        "light"
-      ],
-      "tags": [
-        "ai-assistant",
-        "chat"
-      ],
-      "flow": "Chats › Opening chat options",
-      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options",
-      "patterns": [
-        "Dialogs",
-        "Chat screens",
-        "Toasts"
-      ]
-    },
-    {
-      "n": 44,
+      "n": 25,
       "id": "claude-webapp-versions-2026-10-24-using-voice-input-1",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/using-voice-input/1.webp",
-      "name": "Microphone permission prompt",
+      "name": "Microphone prompt",
       "type": "permission",
       "extraTypes": [
         "messages"
       ],
       "elements": [
-        "modal",
-        "button",
-        "text-field",
-        "nav-bar"
+        "alert",
+        "button"
       ],
       "style": [
         "light"
       ],
       "tags": [
         "voice-input",
-        "ai-assistant"
+        "privacy"
       ],
-      "flow": "Chats › Using voice input",
-      "flowId": "claude-webapp-versions-2026-10-24-chatting-with-claude",
+      "flow": "Chat › Using voice input",
+      "flowId": "claude-webapp-versions-2026-10-24-using-voice-input",
       "patterns": [
-        "Top navigation bars",
         "Chat screens",
         "Permission prompts"
       ]
     },
     {
-      "n": 45,
-      "id": "claude-webapp-versions-2026-10-24-settings-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/settings/1.webp",
-      "name": "Skills management",
-      "type": "settings",
+      "n": 26,
+      "id": "claude-webapp-versions-2026-10-24-using-voice-input-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/using-voice-input/2.webp",
+      "name": "Voice input",
+      "type": "messages",
       "extraTypes": [],
       "elements": [
-        "nav-bar",
-        "tab-bar",
-        "search-bar",
+        "navigation",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "voice-input",
+        "audio"
+      ],
+      "flow": "Chat › Using voice input",
+      "flowId": "claude-webapp-versions-2026-10-24-using-voice-input",
+      "patterns": [
+        "Sidebar navigation",
+        "Chat screens"
+      ],
+      "looksLike": 24
+    },
+    {
+      "n": 27,
+      "id": "claude-webapp-versions-2026-10-24-upgrading-to-pro-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-to-pro/1.webp",
+      "name": "Upgrade dialog",
+      "type": "pricing",
+      "extraTypes": [
+        "modal",
+        "loading"
+      ],
+      "elements": [
+        "modal",
+        "segmented-control",
+        "skeleton",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "subscription",
+        "loading-state"
+      ],
+      "flow": "Chat › Upgrading to Pro",
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-to-pro",
+      "patterns": [
+        "Pricing cards",
+        "Segmented tabs",
+        "Skeleton loaders"
+      ]
+    },
+    {
+      "n": 28,
+      "id": "claude-webapp-versions-2026-10-24-upgrading-to-pro-2",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-to-pro/2.webp",
+      "name": "Upgrade dialog",
+      "type": "pricing",
+      "extraTypes": [
+        "modal"
+      ],
+      "elements": [
+        "modal",
+        "segmented-control",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "subscription",
+        "upgrade"
+      ],
+      "flow": "Chat › Upgrading to Pro",
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-to-pro",
+      "patterns": [
+        "Pricing cards",
+        "Segmented tabs"
+      ]
+    },
+    {
+      "n": 29,
+      "id": "claude-webapp-versions-2026-10-24-upgrading-to-pro-3",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-to-pro/3.webp",
+      "name": "Upgrade dialog",
+      "type": "pricing",
+      "extraTypes": [
+        "modal"
+      ],
+      "elements": [
+        "modal",
+        "segmented-control",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "subscription",
+        "discount"
+      ],
+      "flow": "Chat › Upgrading to Pro",
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-to-pro",
+      "patterns": [
+        "Pricing cards",
+        "Segmented tabs"
+      ]
+    },
+    {
+      "n": 30,
+      "id": "claude-webapp-versions-2026-10-24-settings-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/settings/1.webp",
+      "name": "Skills",
+      "type": "settings",
+      "extraTypes": [
+        "modal"
+      ],
+      "elements": [
+        "modal",
+        "navigation",
         "card",
-        "button",
-        "list"
+        "search-bar"
       ],
       "style": [
         "light"
@@ -1782,28 +1277,27 @@
         "ai-assistant"
       ],
       "flow": "Settings",
-      "flowId": "claude-webapp-versions-2026-10-24-settings",
+      "flowId": "claude-webapp-versions-2026-10-24-settings-area",
       "patterns": [
-        "Top navigation bars",
-        "Tab bars",
+        "Sidebar navigation",
         "Search inputs",
         "Settings forms"
       ]
     },
     {
-      "n": 46,
-      "id": "claude-webapp-versions-2026-10-24-settings-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/settings/2.webp",
-      "name": "Plugins directory",
+      "n": 31,
+      "id": "claude-webapp-versions-2026-10-24-browsing-plugins-1",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/browsing-plugins/1.webp",
+      "name": "Plugins",
       "type": "settings",
-      "extraTypes": [],
+      "extraTypes": [
+        "modal"
+      ],
       "elements": [
-        "nav-bar",
-        "search-bar",
-        "tab-bar",
+        "modal",
+        "navigation",
         "card",
-        "button",
-        "list"
+        "search-bar"
       ],
       "style": [
         "light"
@@ -1811,14 +1305,14 @@
       "tags": [
         "ai-assistant"
       ],
-      "flow": "Settings",
-      "flowId": "claude-webapp-versions-2026-10-24-settings",
+      "flow": "Settings › Browsing plugins",
+      "flowId": "claude-webapp-versions-2026-10-24-browsing-plugins",
       "patterns": [
-        "Top navigation bars",
-        "Tab bars",
+        "Sidebar navigation",
         "Search inputs",
         "Settings forms"
-      ]
+      ],
+      "looksLike": 30
     }
   ]
 }

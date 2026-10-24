@@ -4,52 +4,65 @@
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
   "analyzedAt": "2026-10-24T07:49:43.824Z",
   "screen_type": "other",
-  "published_as": "loading",
-  "states": [],
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Creating an account",
-  "flow_position": 23,
-  "name": "Loading screen",
-  "description": "Other screen. Dark theme, 1 text element.",
-  "text": "9:41C\nO\n¿ ll\n•",
-  "purpose": "To indicate that the app is processing the user's input.",
-  "primary_action": null,
+  "flow_position": 24,
+  "name": "CAPTCHA verification",
+  "description": "Loading state with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41(\nchallenge.spotify.com\nSpotify®\nWe need to make sure\nthat you're a human\nI'm not a robot\nreCAPTCHA\nContinue",
+  "purpose": "To verify that the user is not a bot before proceeding with account creation.",
+  "primary_action": "Complete CAPTCHA and continue",
   "tags": [
     "other",
+    "loading",
     "ios"
   ],
-  "elements": [],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
   "style": [
-    "dark",
-    "minimal"
+    "dark"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Dark, Minimal style"
+        "Navigation title reads “That you're a human”",
+        "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 1 text element.",
-        "1 text element recognised"
+        "Loading state with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised",
+        "State: loading"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 23 of 44 in “Onboarding”"
+        "Step 24 of 44 in “Onboarding”",
+        "Reached from “Create account (10)”",
+        "Leads to “Other (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.3s at 1:05 in the recording",
-        "Frame 217 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 3s at 1:09 in the recording",
+        "Frame 240 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
@@ -58,39 +71,39 @@
     {
       "hex": "#161318",
       "role": "background",
-      "share": 0.985
+      "share": 0.874
     },
     {
-      "hex": "#373438",
-      "role": "surface",
-      "share": 0.005
-    },
-    {
-      "hex": "#535054",
-      "role": "surface",
-      "share": 0.005
-    },
-    {
-      "hex": "#706e71",
-      "role": "surface",
-      "share": 0.004
-    },
-    {
-      "hex": "#aeacae",
+      "hex": "#79777a",
       "role": "text",
-      "share": 0
+      "share": 0.043
+    },
+    {
+      "hex": "#575559",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#39373c",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#1c9447",
+      "role": "accent",
+      "share": 0.008
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 217,
-    "atSeconds": 65.1,
-    "endSeconds": 65.4,
-    "holdSeconds": 0.3,
+    "frame": 240,
+    "atSeconds": 69.3,
+    "endSeconds": 72.3,
+    "holdSeconds": 3,
     "brief": false,
-    "kind": "screen",
+    "kind": "loading",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -98,24 +111,38 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 1,
+    "lineCount": 7,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Continue"
+    ],
     "keyboard": false,
-    "title": null,
-    "headline": null
+    "title": "That you're a human",
+    "headline": "That you're a human"
   },
   "crawler": {
-    "nodeId": "s025",
-    "depth": 24,
+    "nodeId": "s026",
+    "depth": 25,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [],
-    "leadsTo": []
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Open That you're a human",
+        "name": "Create account (10)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s027",
+        "via": "Wait 3s",
+        "name": "Other (2)"
+      }
+    ]
   },
   "capturedAt": "2026-10-06",
   "capturedBy": "motvin-ios-crawler"

@@ -4,17 +4,17 @@
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
   "analyzedAt": "2026-10-24T09:42:00.220Z",
   "screen_type": "other",
-  "published_as": "loading",
+  "published_as": "onboarding",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Switching workspace",
-  "flow_position": 5,
-  "name": "Getting ready",
-  "description": "Other screen. Dark theme, 4 text elements.",
-  "text": "9:41(\nO\n•l\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGetting ready...\nGet started",
-  "purpose": "To show the app is preparing to open the workspace",
-  "primary_action": null,
+  "flow_position": 6,
+  "name": "Work across devices",
+  "description": "Other screen. Dark theme, 3 text elements.",
+  "text": "9:41(\noll\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGet started",
+  "purpose": "To introduce the app and prompt the user to get started",
+  "primary_action": "Tap Get started",
   "tags": [
     "get started",
     "other",
@@ -37,57 +37,62 @@
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 4 text elements.",
-        "4 text elements recognised"
+        "Other screen. Dark theme, 3 text elements.",
+        "3 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 5 of 9 in “Choosing a use case”",
-        "Reached from “Create notes, tasks and more”",
-        "Leads to “Work across devices”"
+        "Step 6 of 9 in “Choosing a use case”",
+        "Reached from “Work across devices”",
+        "Leads to “That simple”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 6:03 in the recording",
-        "Frame 1216 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 0.6s at 6:06 in the recording",
+        "Frame 1222 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#151417",
+      "hex": "#222022",
       "role": "background",
-      "share": 0.872
+      "share": 0.718
     },
     {
-      "hex": "#3b393b",
-      "role": "surface",
-      "share": 0.125
-    },
-    {
-      "hex": "#5e5c5f",
-      "role": "surface",
-      "share": 0.002
-    },
-    {
-      "hex": "#aba9ab",
+      "hex": "#f7f5f7",
       "role": "text",
-      "share": 0
+      "share": 0.116
+    },
+    {
+      "hex": "#3b4553",
+      "role": "surface",
+      "share": 0.106
+    },
+    {
+      "hex": "#afadaf",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#716f71",
+      "role": "surface",
+      "share": 0.015
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 1216,
-    "atSeconds": 363.9,
-    "endSeconds": 365.1,
-    "holdSeconds": 1.2,
+    "frame": 1222,
+    "atSeconds": 366.3,
+    "endSeconds": 366.9,
+    "holdSeconds": 0.6,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -97,7 +102,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 4,
+    "lineCount": 3,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -111,8 +116,8 @@
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s098",
-    "depth": 97,
+    "nodeId": "s099",
+    "depth": 98,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -120,16 +125,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s096",
-        "via": "Tap “Acme 1.0 press release”",
-        "name": "Create notes, tasks and more"
+        "from": "s098",
+        "via": "Tap “Getting ready...”",
+        "name": "Work across devices"
       }
     ],
     "leadsTo": [
       {
-        "to": "s099",
-        "via": "Tap “Getting ready...”",
-        "name": "Work across devices"
+        "to": "s101",
+        "via": "Open That simple",
+        "name": "That simple"
       }
     ]
   },

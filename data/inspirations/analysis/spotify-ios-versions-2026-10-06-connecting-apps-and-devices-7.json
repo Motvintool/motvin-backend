@@ -2,105 +2,99 @@
   "screenId": "spotify-ios-versions-2026-10-06-connecting-apps-and-devices-7",
   "screen_id": "spotify-ios-versions-2026-10-06-connecting-apps-and-devices-7",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T07:49:43.829Z",
+  "analyzedAt": "2026-10-24T07:49:43.830Z",
   "screen_type": "external_auth",
-  "published_as": "login",
-  "states": [
-    "loading"
-  ],
+  "published_as": "error",
+  "states": [],
   "category": "productivity",
   "flow": "authentication",
   "flow_name": "Connecting apps and devices",
-  "flow_position": 3,
-  "name": "Google account authorization",
-  "description": "A third-party sign-in page, not the app's own design. Dark theme, 1 text element.",
-  "text": "9:41 C\n• S O\n1 Spotify\naccounts.google.com\n+\n23\n••",
-  "purpose": "To authenticate via Google account in an external browser.",
-  "primary_action": "Wait for Google authentication to complete",
+  "flow_position": 4,
+  "name": "Google account error",
+  "description": "A third-party sign-in page, not the app's own design. Light theme, 5 text elements.",
+  "text": "9:41C\n1 Spotify\ngoogle.com\nGoogle\n404. That's an error.\nThe requested URL was not found on this server.\nThat's all we know.\n• • • •",
+  "purpose": "To display an error when Google account authentication fails.",
+  "primary_action": null,
   "tags": [
     "external-auth",
-    "loading",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "skeleton",
-    "progress"
+    "nav-bar"
   ],
   "style": [
-    "dark",
-    "bold"
+    "light",
+    "minimal"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Dark, Bold style"
+        "Light, Minimal style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "A third-party sign-in page, not the app's own design. Dark theme, 1 text element.",
-        "1 text element recognised",
-        "State: loading"
+        "A third-party sign-in page, not the app's own design. Light theme, 5 text elements.",
+        "5 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 5 in “Opening a page (Home)”",
-        "Reached from “Third-party sign-in — loading”",
-        "Leads to “Third-party sign-in”"
+        "Step 4 of 5 in “Opening a page (Home)”",
+        "Reached from “Google sign-in”",
+        "Leads to “Third-party sign-in (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 11:37 in the recording",
-        "Frame 2327 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 2.1s at 11:38 in the recording",
+        "Frame 2335 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#010002",
+      "hex": "#fefefe",
       "role": "background",
-      "share": 0.78
+      "share": 0.732
     },
     {
-      "hex": "#34373a",
-      "role": "surface",
-      "share": 0.159
-    },
-    {
-      "hex": "#5a5d61",
-      "role": "surface",
-      "share": 0.049
-    },
-    {
-      "hex": "#7f8286",
+      "hex": "#35383b",
       "role": "text",
-      "share": 0.011
+      "share": 0.145
     },
     {
-      "hex": "#1a1a1c",
+      "hex": "#616367",
       "role": "surface",
-      "share": 0.001
+      "share": 0.048
+    },
+    {
+      "hex": "#dfe0e3",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#bdbec0",
+      "role": "surface",
+      "share": 0.019
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 2327,
-    "atSeconds": 697.8,
-    "endSeconds": 698.4,
-    "holdSeconds": 0.6,
+    "frame": 2335,
+    "atSeconds": 698.7,
+    "endSeconds": 700.8,
+    "holdSeconds": 2.1,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -108,17 +102,17 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 1,
+    "lineCount": 5,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
     "title": null,
-    "headline": null
+    "headline": "That's all we know"
   },
   "crawler": {
-    "nodeId": "s303",
-    "depth": 302,
+    "nodeId": "s304",
+    "depth": 303,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -126,16 +120,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s302",
+        "from": "s303",
         "via": "Wait 0.6s",
-        "name": "Third-party sign-in — loading"
+        "name": "Google sign-in"
       }
     ],
     "leadsTo": [
       {
-        "to": "s304",
-        "via": "Wait 0.6s",
-        "name": "Third-party sign-in"
+        "to": "s305",
+        "via": "Tap “Google”",
+        "name": "Third-party sign-in (2)"
       }
     ]
   },

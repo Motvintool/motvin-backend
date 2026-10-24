@@ -11,12 +11,12 @@
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Adding a profile",
-  "flow_position": 4,
+  "flow_position": 5,
   "name": "Add profile",
-  "description": "Toast, on top of Add Profile with a row of 3 category chips. Dark theme, 8 text elements.",
-  "text": "9:41€\nSave\nCancel\nAdd Profile\nProfile name\nMotvin\nChildren's Profile\nMade for children 12 and under, but parents have\nall the control.",
-  "purpose": "To create a new user profile with a name and avatar",
-  "primary_action": "Save profile",
+  "description": "Toast over a dimmed screen, on top of Add Profile toast with a row of 3 category chips. Dark theme, 9 text elements.",
+  "text": "9:41C\nAdd Profile\nSave\nCancel\nProfile name\nMotvin\nChildren's Profile\nMade for children 12 and under, but parents have\nall the\nontrol.",
+  "purpose": "To confirm and save the new profile creation",
+  "primary_action": null,
   "tags": [
     "profile",
     "toast",
@@ -36,81 +36,81 @@
       "points": [
         "No tab bar",
         "Navigation title reads “Add Profile”",
-        "Category strip: Save, Cancel, Add Profile",
-        "Toast, covering 11% of the height from 84% down",
+        "Category strip: Add Profile, Save, Cancel",
+        "Toast over a dimmed background, covering 5% of the height from 92% down",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Toast, on top of Add Profile with a row of 3 category chips. Dark theme, 8 text elements.",
-        "8 text elements recognised",
+        "Toast over a dimmed screen, on top of Add Profile toast with a row of 3 category chips. Dark theme, 9 text elements.",
+        "9 text elements recognised",
         "State: toast"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 5 in “Opening Choose Icon”",
-        "Reached from “Add Profile (3)”",
-        "Leads to “Add Profile toast (2)”"
+        "Step 5 of 5 in “Opening Choose Icon”",
+        "Reached from “Add Profile toast”",
+        "Leads to “Profile (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 4.2s at 1:24 in the recording",
-        "Frame 295 of 1701 sampled at 3.3333333333333335 fps",
+        "Held for 0.6s at 1:28 in the recording",
+        "Frame 296 of 1701 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#1a181b",
+      "hex": "#0a080b",
       "role": "background",
-      "share": 0.874
+      "share": 0.935
     },
     {
-      "hex": "#3f3c3e",
+      "hex": "#272423",
       "role": "surface",
-      "share": 0.055
+      "share": 0.036
     },
     {
-      "hex": "#050306",
+      "hex": "#423f41",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5d5b5d",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#3f3005",
       "role": "accent",
-      "share": 0.031
-    },
-    {
-      "hex": "#5f5a59",
-      "role": "surface",
-      "share": 0.016
-    },
-    {
-      "hex": "#7d7873",
-      "role": "text",
-      "share": 0.006
+      "share": 0
     }
   ],
   "capture": {
     "source": "Netflix.mov",
     "fps": 3.3333333333333335,
     "frames": 1701,
-    "frame": 295,
-    "atSeconds": 84.6,
-    "endSeconds": 88.8,
-    "holdSeconds": 4.2,
+    "frame": 296,
+    "atSeconds": 88.8,
+    "endSeconds": 89.4,
+    "holdSeconds": 0.6,
     "brief": false,
     "kind": "overlay",
     "overlay": {
       "kind": "toast",
-      "dimmed": false,
+      "dimmed": true,
       "box": {
         "x": 0.0625,
-        "y": 0.84375,
-        "w": 0.90625,
-        "h": 0.109375
+        "y": 0.921875,
+        "w": 0.875,
+        "h": 0.046875
       }
     },
     "overlayOf": null,
@@ -119,12 +119,12 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 8,
+    "lineCount": 9,
     "tabLabels": [],
     "chipLabels": [
+      "Add Profile",
       "Save",
-      "Cancel",
-      "Add Profile"
+      "Cancel"
     ],
     "ctas": [],
     "keyboard": false,
@@ -132,8 +132,8 @@
     "headline": "Motvin"
   },
   "crawler": {
-    "nodeId": "s024",
-    "depth": 23,
+    "nodeId": "s025",
+    "depth": 24,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -141,16 +141,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s023",
+        "from": "s024",
         "via": "Tap “Add Profile”",
-        "name": "Add Profile (3)"
+        "name": "Add Profile toast"
       }
     ],
     "leadsTo": [
       {
-        "to": "s025",
-        "via": "Tap “Add Profile”",
-        "name": "Add Profile toast (2)"
+        "to": "s026",
+        "via": "Open Profile",
+        "name": "Profile (2)"
       }
     ]
   },

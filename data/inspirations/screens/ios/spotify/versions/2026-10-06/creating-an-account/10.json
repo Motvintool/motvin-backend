@@ -1,26 +1,29 @@
 {
-  "name": "Creating account",
-  "screenType": "loading",
-  "fineType": "loading",
-  "states": [],
-  "description": "Other screen. Dark theme, 1 text element.",
+  "name": "Human check",
+  "screenType": "login",
+  "fineType": "login",
+  "states": [
+    "loading"
+  ],
+  "description": "Loading state with a primary action labelled “Continue”. Dark theme, 7 text elements.",
   "tags": [
-    "loading-state"
+    "security"
   ],
   "elements": [
-    "progress"
+    "button"
   ],
   "style": [
-    "dark",
-    "minimal"
+    "dark"
   ],
   "capturedAt": "2026-10-06",
   "capture": {
-    "atSeconds": 65.1,
-    "holdSeconds": 0.3,
+    "atSeconds": 69.3,
+    "holdSeconds": 3,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "loadingOf": null
   },
   "extraTypes": [],
-  "purpose": "To indicate that the app is processing the user's input."
+  "purpose": "To verify that the user is not a bot before proceeding with account creation.",
+  "primaryAction": "Complete CAPTCHA and continue"
 }

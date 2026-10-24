@@ -2,126 +2,138 @@
   "screenId": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-11",
   "screen_id": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-11",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T07:49:43.761Z",
-  "screen_type": "onboarding",
-  "published_as": "permission",
-  "states": [],
+  "analyzedAt": "2026-10-24T07:49:43.762Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
   "category": "productivity",
-  "flow": "onboarding",
+  "flow": "discovery",
   "flow_name": "Choosing your music taste",
-  "flow_position": 1,
-  "name": "Tracking permission prompt",
-  "description": "Onboarding screen with a primary action labelled “Allow tracking for more”. Dark theme, 5 text elements.",
-  "text": "9:41C\nC\no0l\nAllow tracking for more\nrelevant ads\nYou can update your choice at any time in your\niOS settings.\nSpotify's Privacy Policy\nNext",
-  "purpose": "To request user permission to allow tracking for personalized ads.",
-  "primary_action": "Tap Next to proceed",
+  "flow_position": 2,
+  "name": "Activity tracking permission dialog",
+  "description": "Dialog over a dimmed screen, on top of Allow tracking for more with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+  "text": "9:41€\n|\nAllow \"Spotify\" to track your\nactivity across other companies'\napps and websites?\nYour data will be used to deliver\npersonalised ads or content to you.\nAsk App Not to Track\nAllow\nNext",
+  "purpose": "To request user permission to track activity across apps and websites.",
+  "primary_action": "Tap Allow or Ask App Not to Track",
   "tags": [
-    "settings",
     "next",
-    "onboarding",
+    "dialog",
+    "modal",
     "ios"
   ],
   "elements": [
     "cta",
     "button",
-    "legal-text"
+    "modal"
   ],
   "style": [
-    "dark",
-    "bold"
+    "dark"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Allow tracking for more”",
-        "Dark, Bold style"
+        "Navigation title reads “Activity across other companies'”",
+        "Dialog over a dimmed background, covering 31% of the height from 38% down",
+        "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Onboarding screen with a primary action labelled “Allow tracking for more”. Dark theme, 5 text elements.",
-        "Calls to action: “Allow tracking for more”",
-        "5 text elements recognised"
+        "Dialog over a dimmed screen, on top of Allow tracking for more with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+        "Calls to action: “Allow”",
+        "7 text elements recognised",
+        "State: modal"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Allow tracking for more”",
-        "Reached from “Home home”",
-        "Leads to “Dialog”"
+        "Step 2 of 2 in “Allow tracking for more”",
+        "Reached from “Allow tracking for more”",
+        "Leads to “Home home (2)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 2:12 in the recording",
-        "Frame 443 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 2:13 in the recording",
+        "Frame 447 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#030104",
+      "hex": "#080507",
       "role": "background",
-      "share": 0.663
+      "share": 0.605
     },
     {
-      "hex": "#2d1f21",
+      "hex": "#2d2221",
       "role": "surface",
-      "share": 0.084
+      "share": 0.275
     },
     {
-      "hex": "#583939",
+      "hex": "#4d4646",
       "role": "surface",
-      "share": 0.051
+      "share": 0.045
     },
     {
-      "hex": "#966953",
-      "role": "text",
-      "share": 0.037
+      "hex": "#5a3727",
+      "role": "surface",
+      "share": 0.015
     },
     {
-      "hex": "#59220e",
+      "hex": "#116830",
       "role": "accent",
-      "share": 0.03
+      "share": 0.009
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 443,
-    "atSeconds": 132,
-    "endSeconds": 133.2,
-    "holdSeconds": 1.2,
+    "frame": 447,
+    "atSeconds": 133.5,
+    "endSeconds": 134.4,
+    "holdSeconds": 0.9,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.375,
+        "w": 0.59375,
+        "h": 0.3125
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 5,
+    "lineCount": 7,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [
-      "Allow tracking for more"
+      "Allow"
     ],
     "keyboard": false,
-    "title": "Allow tracking for more",
-    "headline": "Relevant ads",
+    "title": "Activity across other companies'",
+    "headline": "Activity across other companies'",
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s051",
-    "depth": 50,
+    "nodeId": "s052",
+    "depth": 51,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -129,16 +141,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s050",
-        "via": "Open Allow tracking for more",
-        "name": "Home home"
+        "from": "s051",
+        "via": "Open Activity across other companies'",
+        "name": "Allow tracking for more"
       }
     ],
     "leadsTo": [
       {
-        "to": "s052",
-        "via": "Open Activity across other companies'",
-        "name": "Dialog"
+        "to": "s053",
+        "via": "Back to Home home",
+        "name": "Home home (2)"
       }
     ]
   },

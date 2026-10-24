@@ -2,33 +2,27 @@
   "screenId": "notion-ios-versions-2026-10-24-switching-workspace-5",
   "screen_id": "notion-ios-versions-2026-10-24-switching-workspace-5",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T09:42:00.223Z",
-  "screen_type": "messages",
-  "published_as": "modal",
-  "states": [
-    "toast"
-  ],
+  "analyzedAt": "2026-10-24T09:42:00.219Z",
+  "screen_type": "other",
+  "published_as": "onboarding",
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Switching workspace",
-  "flow_position": 6,
-  "name": "Account selection",
-  "description": "Messages toast over a dimmed screen, on top of Search results with a paged carousel. Dark theme, 16 text elements.",
-  "text": "9:41(\nC\nM\nInbox\nYou're all caught up\nAccounts\nmotvintool@gmail.com\n•••\nMotvin's Space\nM\nFree plan\nMotvin's Space\nM\nFree plan\n+\nNew workspace\n+\nAdd another account\nLog out",
-  "purpose": "To allow the user to switch between different workspaces or accounts.",
-  "primary_action": "Select a workspace or account",
+  "flow_position": 1,
+  "name": "Onboarding: Choose use case",
+  "description": "Other screen. Dark theme, 10 text elements.",
+  "text": "9:41(\n•0l 5\nHow do you want to use Notion?\nFor work\nTrack projects, company goals, meeting\nnotes\nFor personal life\nWrite better, think more clearly, stay\norganized\nFor school\nKeep notes, research, and tasks in one\nplace\nNext",
+  "purpose": "To gather user preferences for onboarding by selecting a primary use case.",
+  "primary_action": "Select a use case and proceed",
   "tags": [
-    "log out",
-    "messages",
-    "toast",
+    "search",
+    "next",
+    "other",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "list",
-    "carousel",
-    "page-indicator",
-    "toast"
+    "nav-bar"
   ],
   "style": [
     "dark"
@@ -38,91 +32,79 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Accounts”",
-        "Paged carousel with a page indicator",
-        "Toast over a dimmed background, covering 2% of the height from 48% down",
+        "Navigation title reads “For personal life”",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Messages toast over a dimmed screen, on top of Search results with a paged carousel. Dark theme, 16 text elements.",
-        "16 text elements recognised",
-        "State: toast"
+        "Other screen. Dark theme, 10 text elements.",
+        "10 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 6 of 16 in “That simple”",
-        "Reached from “Search results”",
-        "Leads to “Inbox”"
+        "Step 1 of 9 in “Choosing a use case”",
+        "Reached from “Toast”",
+        "Leads to “Keep your thoughts organized”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 3.6s at 6:22 in the recording",
-        "Frame 1286 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 3.9s at 5:54 in the recording",
+        "Frame 1195 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#19171a",
+      "hex": "#232224",
       "role": "background",
-      "share": 0.942
+      "share": 0.896
     },
     {
-      "hex": "#3c3738",
+      "hex": "#494749",
       "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#26486e",
+      "role": "accent",
       "share": 0.041
     },
     {
-      "hex": "#514f51",
+      "hex": "#686668",
       "role": "surface",
-      "share": 0.016
+      "share": 0.005
     },
     {
-      "hex": "#6b696c",
-      "role": "surface",
-      "share": 0
-    },
-    {
-      "hex": "#aaa9aa",
+      "hex": "#8a898b",
       "role": "text",
-      "share": 0
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 1286,
-    "atSeconds": 382.5,
-    "endSeconds": 386.1,
-    "holdSeconds": 3.6,
+    "frame": 1195,
+    "atSeconds": 354.9,
+    "endSeconds": 358.8,
+    "holdSeconds": 3.9,
     "brief": false,
-    "kind": "overlay",
-    "overlay": {
-      "kind": "toast",
-      "dimmed": true,
-      "box": {
-        "x": 0.40625,
-        "y": 0.484375,
-        "w": 0.1875,
-        "h": 0.015625
-      }
-    },
+    "kind": "screen",
+    "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 16,
+    "lineCount": 10,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -131,13 +113,13 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Accounts",
-    "headline": "You're all caught up",
+    "title": "For personal life",
+    "headline": "For personal life",
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s106",
-    "depth": 105,
+    "nodeId": "s094",
+    "depth": 93,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -145,16 +127,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s105",
-        "via": "Back to Accounts",
-        "name": "Search results"
+        "from": "s093",
+        "via": "Back to For personal life",
+        "name": "Toast"
       }
     ],
     "leadsTo": [
       {
-        "to": "s107",
-        "via": "Tap “Inbox”",
-        "name": "Inbox"
+        "to": "s095",
+        "via": "Back to Keep your thoughts organized",
+        "name": "Keep your thoughts organized"
       }
     ]
   },

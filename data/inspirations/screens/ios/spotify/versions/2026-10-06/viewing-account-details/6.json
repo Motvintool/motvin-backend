@@ -1,24 +1,34 @@
 {
-  "name": "Redirecting",
-  "screenType": "loading",
-  "fineType": "loading",
-  "states": [],
-  "description": "Launch screen shown while the app starts. Dark theme.",
-  "tags": [
-    "loading-state"
+  "name": "Edit personal info",
+  "screenType": "form",
+  "fineType": "form",
+  "states": [
+    "scrolled"
   ],
-  "elements": [],
+  "description": "Form screen, scrolled further down from Other with 3 input fields. Dark theme, 14 text elements.",
+  "tags": [
+    "personalization",
+    "cookies"
+  ],
+  "elements": [
+    "text-field",
+    "banner",
+    "button"
+  ],
   "style": [
-    "dark",
-    "minimal"
+    "dark"
   ],
   "capturedAt": "2026-10-06",
   "capture": {
-    "atSeconds": 642.3,
-    "holdSeconds": 0.9,
+    "atSeconds": 648,
+    "holdSeconds": 1.2,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "scrolledFrom": null
   },
-  "extraTypes": [],
-  "purpose": "To display the app's branding while loading"
+  "extraTypes": [
+    "settings"
+  ],
+  "purpose": "To allow the user to edit their personal information",
+  "primaryAction": "Update personal details"
 }

@@ -4,17 +4,17 @@
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
   "analyzedAt": "2026-10-24T09:42:00.220Z",
   "screen_type": "other",
-  "published_as": "onboarding",
+  "published_as": "loading",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Switching workspace",
-  "flow_position": 4,
-  "name": "Onboarding: cross-device sync",
-  "description": "Other screen. Dark theme, 3 text elements.",
-  "text": "9:41(\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGet started",
-  "purpose": "To inform the user about syncing across devices and prompt them to get started.",
-  "primary_action": "Tap Get started",
+  "flow_position": 5,
+  "name": "Getting ready",
+  "description": "Other screen. Dark theme, 4 text elements.",
+  "text": "9:41(\nO\n•l\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGetting ready...\nGet started",
+  "purpose": "To show the app is preparing to open the workspace",
+  "primary_action": null,
   "tags": [
     "get started",
     "other",
@@ -37,48 +37,45 @@
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 3 text elements.",
-        "3 text elements recognised"
+        "Other screen. Dark theme, 4 text elements.",
+        "4 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 4 of 9 in “Choosing a use case”"
+        "Step 5 of 9 in “Choosing a use case”",
+        "Reached from “Create notes, tasks and more”",
+        "Leads to “Work across devices”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.3s at 6:03 in the recording",
-        "Frame 1212 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 1.2s at 6:03 in the recording",
+        "Frame 1216 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#19181c",
+      "hex": "#151417",
       "role": "background",
-      "share": 0.83
+      "share": 0.872
     },
     {
-      "hex": "#767476",
+      "hex": "#3b393b",
       "role": "surface",
-      "share": 0.134
+      "share": 0.125
     },
     {
-      "hex": "#525053",
+      "hex": "#5e5c5f",
       "role": "surface",
-      "share": 0.021
+      "share": 0.002
     },
     {
-      "hex": "#39373a",
-      "role": "surface",
-      "share": 0.015
-    },
-    {
-      "hex": "#acabad",
+      "hex": "#aba9ab",
       "role": "text",
       "share": 0
     }
@@ -87,10 +84,10 @@
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 1212,
-    "atSeconds": 363.6,
-    "endSeconds": 363.9,
-    "holdSeconds": 0.3,
+    "frame": 1216,
+    "atSeconds": 363.9,
+    "endSeconds": 365.1,
+    "holdSeconds": 1.2,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -100,7 +97,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 3,
+    "lineCount": 4,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -114,15 +111,27 @@
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s097",
-    "depth": 96,
+    "nodeId": "s098",
+    "depth": 97,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [],
-    "leadsTo": []
+    "reachedFrom": [
+      {
+        "from": "s096",
+        "via": "Tap “Acme 1.0 press release”",
+        "name": "Create notes, tasks and more"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s099",
+        "via": "Tap “Getting ready...”",
+        "name": "Work across devices"
+      }
+    ]
   },
   "capturedAt": "2026-10-24",
   "capturedBy": "motvin-ios-crawler"

@@ -3,27 +3,25 @@
   "screen_id": "netflix-ios-versions-2026-10-07-adding-a-profile-3",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
   "analyzedAt": "2026-10-24T06:25:58.480Z",
-  "screen_type": "bottom_sheet",
-  "published_as": "loading",
-  "states": [
-    "bottom-sheet"
-  ],
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Adding a profile",
-  "flow_position": 1,
-  "name": "Choose icon loading",
-  "description": "Bottom sheet, on top of Add Profile. Dark theme, 1 text element.",
-  "text": "9:41C\nChoose Icon",
-  "purpose": "To show that the icon selection list is loading.",
-  "primary_action": null,
+  "flow_position": 2,
+  "name": "Choose icon selection",
+  "description": "Other screen. Dark theme, 5 text elements.",
+  "text": "9:41 €\noll\nChoose Icon\nThe Classics\nHistory\nMoney Heist\nStranger Things\nSquid Game",
+  "purpose": "To let the user select an avatar icon for a new profile.",
+  "primary_action": "Select an icon from the list.",
   "tags": [
-    "bottom-sheet",
+    "squid game",
+    "other",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "bottom-sheet"
+    "nav-bar"
   ],
   "style": [
     "dark"
@@ -34,99 +32,89 @@
       "points": [
         "No tab bar",
         "Navigation title reads “Choose Icon”",
-        "Bottom sheet, covering 47% of the height from 44% down",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Bottom sheet, on top of Add Profile. Dark theme, 1 text element.",
-        "1 text element recognised",
-        "State: bottom-sheet"
+        "Other screen. Dark theme, 5 text elements.",
+        "5 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 5 in “Opening Choose Icon”",
-        "Reached from “Add Profile (2)”",
-        "Leads to “Choose Icon”"
+        "Step 2 of 5 in “Opening Choose Icon”",
+        "Reached from “Choose Icon sheet”",
+        "Leads to “Add Profile (3)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 1:19 in the recording",
-        "Frame 265 of 1701 sampled at 3.3333333333333335 fps",
+        "Held for 2.1s at 1:20 in the recording",
+        "Frame 273 of 1701 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#19171a",
+      "hex": "#191518",
       "role": "background",
-      "share": 0.927
+      "share": 0.455
     },
     {
-      "hex": "#050305",
+      "hex": "#070305",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#373638",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#655f63",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#fea902",
       "role": "accent",
-      "share": 0.055
-    },
-    {
-      "hex": "#3d3b3e",
-      "role": "surface",
-      "share": 0.013
-    },
-    {
-      "hex": "#5c5a5c",
-      "role": "surface",
-      "share": 0.005
-    },
-    {
-      "hex": "#a5a4a6",
-      "role": "text",
-      "share": 0
+      "share": 0.01
     }
   ],
   "capture": {
     "source": "Netflix.mov",
     "fps": 3.3333333333333335,
     "frames": 1701,
-    "frame": 265,
-    "atSeconds": 79.2,
-    "endSeconds": 79.8,
-    "holdSeconds": 0.6,
+    "frame": 273,
+    "atSeconds": 80.1,
+    "endSeconds": 82.2,
+    "holdSeconds": 2.1,
     "brief": false,
-    "kind": "overlay",
-    "overlay": {
-      "kind": "bottom_sheet",
-      "dimmed": false,
-      "box": {
-        "x": 0.125,
-        "y": 0.4375,
-        "w": 0.8125,
-        "h": 0.46875
-      }
-    },
+    "kind": "screen",
+    "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 1,
+    "lineCount": 5,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
     "keyboard": false,
     "title": "Choose Icon",
-    "headline": null
+    "headline": "History",
+    "tabBar": false
   },
   "crawler": {
-    "nodeId": "s021",
-    "depth": 20,
+    "nodeId": "s022",
+    "depth": 21,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -134,16 +122,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s020",
-        "via": "Open Choose Icon",
-        "name": "Add Profile (2)"
+        "from": "s021",
+        "via": "Tap “Choose Icon”",
+        "name": "Choose Icon sheet"
       }
     ],
     "leadsTo": [
       {
-        "to": "s022",
-        "via": "Tap “Choose Icon”",
-        "name": "Choose Icon"
+        "to": "s023",
+        "via": "Open Add Profile",
+        "name": "Add Profile (3)"
       }
     ]
   },

@@ -1,27 +1,28 @@
 {
-  "name": "Authorise",
-  "screenType": "loading",
-  "fineType": "loading",
+  "name": "Welcome back login",
+  "screenType": "login",
+  "fineType": "login",
   "states": [],
-  "description": "Other screen. Dark theme, 2 text elements.",
+  "description": "Login screen with 1 input field and a primary action labelled “Continue”. Dark theme, 11 text elements.",
   "tags": [
-    "loading-state"
+    "email-login",
+    "social-login"
   ],
   "elements": [
-    "progress"
+    "text-field",
+    "button"
   ],
   "style": [
     "dark"
   ],
   "capturedAt": "2026-10-06",
   "capture": {
-    "atSeconds": 693,
-    "holdSeconds": 2.1,
+    "atSeconds": 695.1,
+    "holdSeconds": 0.6,
     "brief": false,
     "visits": 1
   },
-  "extraTypes": [
-    "login"
-  ],
-  "purpose": "To authorize the app to access Spotify account information"
+  "extraTypes": [],
+  "purpose": "To log in to Spotify using email or social accounts.",
+  "primaryAction": "Enter email and tap Continue"
 }

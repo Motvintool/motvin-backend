@@ -9,90 +9,93 @@
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Creating an account",
-  "flow_position": 32,
-  "name": "CAPTCHA verification",
-  "description": "Other screen. Light theme, 4 text elements.",
-  "text": "9:41 €\nchallenge.spotify.com\nSelect all images with\ncars\nVERIFY",
-  "purpose": "Verify the user is human by selecting images with cars",
-  "primary_action": "Select images with cars and click Verify",
+  "flow_position": 33,
+  "name": "reCAPTCHA verification",
+  "description": "Other screen with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41(\nchallenge.spotify.com\nSpotify®\nWe need to make sure\nthat you're a human\nI'm not a robot\nreCAPTCHA\nContinue",
+  "purpose": "Verify the user is human using reCAPTCHA",
+  "primary_action": "Click Continue",
   "tags": [
     "other",
     "ios"
   ],
   "elements": [
-    "nav-bar"
+    "nav-bar",
+    "cta",
+    "button"
   ],
   "style": [
-    "light"
+    "dark"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Select all images with”",
-        "Light style"
+        "Navigation title reads “That you're a human”",
+        "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen. Light theme, 4 text elements.",
-        "4 text elements recognised"
+        "Other screen with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 32 of 44 in “Onboarding”",
-        "Reached from “Other (8)”",
-        "Leads to “That you're a human”"
+        "Step 33 of 44 in “Onboarding”",
+        "Reached from “Other (9)”",
+        "Leads to “Other — loading”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.4s at 1:34 in the recording",
-        "Frame 321 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 1.5s at 1:36 in the recording",
+        "Frame 327 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#fafbfc",
+      "hex": "#161418",
       "role": "background",
-      "share": 0.224
+      "share": 0.752
     },
     {
-      "hex": "#8c8a8a",
-      "role": "surface",
-      "share": 0.15
-    },
-    {
-      "hex": "#d3d9e2",
-      "role": "surface",
-      "share": 0.104
-    },
-    {
-      "hex": "#181519",
+      "hex": "#fbfafb",
       "role": "text",
-      "share": 0.091
+      "share": 0.111
     },
     {
-      "hex": "#2076ea",
-      "role": "accent",
-      "share": 0.082
+      "hex": "#79777a",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#312f33",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#575559",
+      "role": "surface",
+      "share": 0.025
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 321,
-    "atSeconds": 94.2,
-    "endSeconds": 96.6,
-    "holdSeconds": 2.4,
+    "frame": 327,
+    "atSeconds": 96.9,
+    "endSeconds": 98.4,
+    "holdSeconds": 1.5,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -102,17 +105,19 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 4,
+    "lineCount": 7,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Continue"
+    ],
     "keyboard": false,
-    "title": "Select all images with",
-    "headline": "Cars"
+    "title": "That you're a human",
+    "headline": "That you're a human"
   },
   "crawler": {
-    "nodeId": "s034",
-    "depth": 33,
+    "nodeId": "s035",
+    "depth": 34,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -120,16 +125,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s033",
-        "via": "Back to Other",
-        "name": "Other (8)"
+        "from": "s034",
+        "via": "Open That you're a human",
+        "name": "Other (9)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s035",
-        "via": "Open That you're a human",
-        "name": "That you're a human"
+        "to": "s036",
+        "via": "Open Other — loading",
+        "name": "Other — loading"
       }
     ]
   },

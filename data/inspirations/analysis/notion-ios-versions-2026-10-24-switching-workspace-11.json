@@ -2,19 +2,19 @@
   "screenId": "notion-ios-versions-2026-10-24-switching-workspace-11",
   "screen_id": "notion-ios-versions-2026-10-24-switching-workspace-11",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T09:42:00.220Z",
+  "analyzedAt": "2026-10-24T09:42:00.221Z",
   "screen_type": "other",
-  "published_as": "onboarding",
+  "published_as": "loading",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Switching workspace",
-  "flow_position": 6,
-  "name": "Work across devices",
-  "description": "Other screen. Dark theme, 3 text elements.",
-  "text": "9:41(\noll\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGet started",
-  "purpose": "To introduce the app and prompt the user to get started",
-  "primary_action": "Tap Get started",
+  "flow_position": 7,
+  "name": "Taking you to workspace",
+  "description": "Other screen. Dark theme, 4 text elements.",
+  "text": "9:41(\nO\n•l\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nTaking you to your workspace...\nGet started",
+  "purpose": "To show the app is navigating to the user's workspace",
+  "primary_action": null,
   "tags": [
     "get started",
     "other",
@@ -37,62 +37,55 @@
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 3 text elements.",
-        "3 text elements recognised"
+        "Other screen. Dark theme, 4 text elements.",
+        "4 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 6 of 9 in “Choosing a use case”",
-        "Reached from “Work across devices”",
-        "Leads to “That simple”"
+        "Step 7 of 9 in “Choosing a use case”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.6s at 6:06 in the recording",
-        "Frame 1222 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 0.3s at 6:07 in the recording",
+        "Frame 1224 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#222022",
+      "hex": "#161417",
       "role": "background",
-      "share": 0.718
+      "share": 0.886
     },
     {
-      "hex": "#f7f5f7",
+      "hex": "#393739",
+      "role": "surface",
+      "share": 0.111
+    },
+    {
+      "hex": "#5e5c5f",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#aba9ab",
       "role": "text",
-      "share": 0.116
-    },
-    {
-      "hex": "#3b4553",
-      "role": "surface",
-      "share": 0.106
-    },
-    {
-      "hex": "#afadaf",
-      "role": "surface",
-      "share": 0.016
-    },
-    {
-      "hex": "#716f71",
-      "role": "surface",
-      "share": 0.015
+      "share": 0
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 1222,
-    "atSeconds": 366.3,
-    "endSeconds": 366.9,
-    "holdSeconds": 0.6,
+    "frame": 1224,
+    "atSeconds": 367.2,
+    "endSeconds": 367.5,
+    "holdSeconds": 0.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -102,7 +95,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 3,
+    "lineCount": 4,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -116,27 +109,15 @@
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s099",
-    "depth": 98,
+    "nodeId": "s100",
+    "depth": 99,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s098",
-        "via": "Tap “Getting ready...”",
-        "name": "Work across devices"
-      }
-    ],
-    "leadsTo": [
-      {
-        "to": "s101",
-        "via": "Open That simple",
-        "name": "That simple"
-      }
-    ]
+    "reachedFrom": [],
+    "leadsTo": []
   },
   "capturedAt": "2026-10-24",
   "capturedBy": "motvin-ios-crawler"

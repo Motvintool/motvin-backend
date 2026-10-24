@@ -5,27 +5,25 @@
   "analyzedAt": "2026-10-24T07:49:43.830Z",
   "screen_type": "other",
   "published_as": "other",
-  "states": [
-    "loading"
-  ],
+  "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Importing music",
-  "flow_position": 1,
-  "name": "Loading state",
-  "description": "Loading state. Dark theme, 9 text elements.",
-  "text": "9:41 (\nO\n¿ ll\n<\nl€\nh\nS,\ne\nOC\nar\nec\nS1",
-  "purpose": "To show that the app is loading content",
-  "primary_action": null,
+  "flow_position": 2,
+  "name": "Import music introduction",
+  "description": "Other screen with a primary action labelled “Get Started”. Dark theme, 14 text elements.",
+  "text": "9:41C\nC\nImport your existing\nmusic to Spotify\nTransfer from Apple Music, Youlube, Amazon\nMusic, and more, using TuneMyMusic.\nGet Started\nTuneMyMusic\nPowered by\nBy clicking \"Get Started\" you will be redirected to TuneMyMusic.\nTuneMyMusic is a third party and not affiliated with Spotify. Spotify does\nnot have any formal relationship with this provider and cannot guarantee\nthe quality of their service. Your use of any third party services will be\nsubject to the service provider's own terms and conditions and privacy\npolicy, and Spotify cannot assist you with any dispute that might arise\nbetween you and a provider.",
+  "purpose": "To introduce the music import feature and explain the third-party service",
+  "primary_action": "Click 'Get Started' to begin import",
   "tags": [
     "other",
-    "loading",
     "ios"
   ],
   "elements": [
-    "nav-bar",
-    "skeleton",
-    "progress"
+    "list",
+    "cta",
+    "button",
+    "legal-text"
   ],
   "style": [
     "dark"
@@ -35,71 +33,72 @@
       "title": "Layout",
       "points": [
         "No tab bar",
+        "Navigation title reads “Import your existing”",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Loading state. Dark theme, 9 text elements.",
-        "9 text elements recognised",
-        "State: loading"
+        "Other screen with a primary action labelled “Get Started”. Dark theme, 14 text elements.",
+        "Calls to action: “Get Started”",
+        "14 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 1 of 2 in “Opening a page (Home)”",
-        "Reached from “Home home (82)”",
-        "Leads to “Import your existing”"
+        "Step 2 of 2 in “Opening a page (Home)”",
+        "Reached from “Loading state (15)”",
+        "Leads to “Home home (83)”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.8s at 11:44 in the recording",
-        "Frame 2349 of 2732 sampled at 3.3333333333333335 fps",
+        "Held for 3.6s at 11:46 in the recording",
+        "Frame 2366 of 2732 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#161318",
+      "hex": "#030205",
       "role": "background",
-      "share": 0.987
+      "share": 0.421
     },
     {
-      "hex": "#343135",
+      "hex": "#3e2a56",
       "role": "surface",
-      "share": 0.006
+      "share": 0.266
     },
     {
-      "hex": "#524f53",
+      "hex": "#1b1a22",
       "role": "surface",
-      "share": 0.004
+      "share": 0.248
     },
     {
-      "hex": "#706e71",
+      "hex": "#625f77",
       "role": "surface",
-      "share": 0.002
+      "share": 0.02
     },
     {
-      "hex": "#aeacae",
-      "role": "text",
-      "share": 0
+      "hex": "#1fb554",
+      "role": "accent",
+      "share": 0.015
     }
   ],
   "capture": {
     "source": "spotify.mov",
     "fps": 3.3333333333333335,
     "frames": 2732,
-    "frame": 2349,
-    "atSeconds": 704.7,
-    "endSeconds": 706.5,
-    "holdSeconds": 1.8,
+    "frame": 2366,
+    "atSeconds": 706.5,
+    "endSeconds": 710.1,
+    "holdSeconds": 3.6,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -107,17 +106,19 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 9,
+    "lineCount": 14,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [],
+    "ctas": [
+      "Get Started"
+    ],
     "keyboard": false,
-    "title": null,
-    "headline": null
+    "title": "Import your existing",
+    "headline": "Import your existing"
   },
   "crawler": {
-    "nodeId": "s307",
-    "depth": 306,
+    "nodeId": "s308",
+    "depth": 307,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -125,16 +126,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s306",
-        "via": "Open Loading state",
-        "name": "Home home (82)"
+        "from": "s307",
+        "via": "Wait 1.8s",
+        "name": "Loading state (15)"
       }
     ],
     "leadsTo": [
       {
-        "to": "s308",
-        "via": "Wait 1.8s",
-        "name": "Import your existing"
+        "to": "s309",
+        "via": "Back to Home home",
+        "name": "Home home (83)"
       }
     ]
   },

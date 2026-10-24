@@ -2,98 +2,95 @@
   "screenId": "notion-ios-versions-2026-10-24-switching-workspace-8",
   "screen_id": "notion-ios-versions-2026-10-24-switching-workspace-8",
   "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
-  "analyzedAt": "2026-10-24T09:42:00.219Z",
+  "analyzedAt": "2026-10-24T09:42:00.220Z",
   "screen_type": "other",
   "published_as": "onboarding",
   "states": [],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Switching workspace",
-  "flow_position": 3,
-  "name": "Onboarding: creating content",
-  "description": "Other screen. Light theme, 17 text elements.",
-  "text": "9:41(\n••l ą\nCreate notes, tasks and more\nUse Notion blocks to create anything, big or\nsmall.\n9:41\n• Private\nAcme 1.0 press release\nIntroducing Acme: A Tool for\nCharitable Investment\nDiversification\nIntroduction\nFor many people, charitable giving is an\nimportant part of their lives. But often, it can\n{ + Aa [ 4»...\nB =\nQWER\nT\nP\nNext",
-  "purpose": "To demonstrate how to create notes and tasks using Notion blocks.",
-  "primary_action": "Tap Next",
+  "flow_position": 4,
+  "name": "Onboarding: cross-device sync",
+  "description": "Other screen. Dark theme, 3 text elements.",
+  "text": "9:41(\nWork across devices\nDownload Notion on your phone, tablet, or\ndesktop.\nGet started",
+  "purpose": "To inform the user about syncing across devices and prompt them to get started.",
+  "primary_action": "Tap Get started",
   "tags": [
-    "next",
+    "get started",
     "other",
     "ios"
   ],
-  "elements": [
-    "list"
-  ],
+  "elements": [],
   "style": [
-    "light"
+    "dark",
+    "minimal"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Create notes, tasks and more”",
-        "Light style"
+        "Navigation title reads “Work across devices”",
+        "Dark, Minimal style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen. Light theme, 17 text elements.",
-        "17 text elements recognised"
+        "Other screen. Dark theme, 3 text elements.",
+        "3 text elements recognised"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 3 of 9 in “Choosing a use case”",
-        "Reached from “Keep your thoughts organized”",
-        "Leads to “Work across devices”"
+        "Step 4 of 9 in “Choosing a use case”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.9s at 6:00 in the recording",
-        "Frame 1203 of 1550 sampled at 3.3333333333333335 fps",
+        "Held for 0.3s at 6:03 in the recording",
+        "Frame 1212 of 1550 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#222022",
+      "hex": "#19181c",
       "role": "background",
-      "share": 0.466
+      "share": 0.83
     },
     {
-      "hex": "#fdfcfd",
+      "hex": "#767476",
+      "role": "surface",
+      "share": 0.134
+    },
+    {
+      "hex": "#525053",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#39373a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#acabad",
       "role": "text",
-      "share": 0.248
-    },
-    {
-      "hex": "#d9d7d9",
-      "role": "surface",
-      "share": 0.078
-    },
-    {
-      "hex": "#4a494a",
-      "role": "surface",
-      "share": 0.07
-    },
-    {
-      "hex": "#767577",
-      "role": "surface",
-      "share": 0.042
+      "share": 0
     }
   ],
   "capture": {
     "source": "Notion.mov",
     "fps": 3.3333333333333335,
     "frames": 1550,
-    "frame": 1203,
-    "atSeconds": 360.3,
-    "endSeconds": 361.2,
-    "holdSeconds": 0.9,
+    "frame": 1212,
+    "atSeconds": 363.6,
+    "endSeconds": 363.9,
+    "holdSeconds": 0.3,
     "brief": false,
     "kind": "screen",
     "overlay": null,
@@ -103,7 +100,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 17,
+    "lineCount": 3,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -112,32 +109,20 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Create notes, tasks and more",
-    "headline": "Create notes, tasks and more",
+    "title": "Work across devices",
+    "headline": "Work across devices",
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s096",
-    "depth": 95,
+    "nodeId": "s097",
+    "depth": 96,
     "path": [],
     "visits": 1,
     "blocked": false,
     "blockedReason": null,
     "actions": [],
-    "reachedFrom": [
-      {
-        "from": "s095",
-        "via": "Back to Create notes, tasks and more",
-        "name": "Keep your thoughts organized"
-      }
-    ],
-    "leadsTo": [
-      {
-        "to": "s098",
-        "via": "Tap “Acme 1.0 press release”",
-        "name": "Work across devices"
-      }
-    ]
+    "reachedFrom": [],
+    "leadsTo": []
   },
   "capturedAt": "2026-10-24",
   "capturedBy": "motvin-ios-crawler"
