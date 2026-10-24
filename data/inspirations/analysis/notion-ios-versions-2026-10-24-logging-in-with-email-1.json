@@ -1,0 +1,145 @@
+{
+  "screenId": "notion-ios-versions-2026-10-24-logging-in-with-email-1",
+  "screen_id": "notion-ios-versions-2026-10-24-logging-in-with-email-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T09:42:00.183Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 1,
+  "name": "Login options",
+  "description": "Login screen with 1 input field. Dark theme, 11 text elements.",
+  "text": "9:41(\n•Іl\nYour Al workspace.\nLog in to your Notion account\nGoogle\nChatGPT\nApple\nMicrosoft\nPasskey\nSSO\nEmail\nNew user? Sign up\nBy continuing, you acknowledge that you understand\nand agree to the Terms & Conditions and Privacy Policy.",
+  "purpose": "Allow the user to choose a method to sign in to their Notion account.",
+  "primary_action": "Select a sign-in method",
+  "tags": [
+    "chat",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "text-field",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Al workspace”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 9 in “Logging in with email”",
+        "Reached from “Splash screen”",
+        "Leads to “Sign in with email — scrolled”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 0:01 in the recording",
+        "Frame 22 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1a1d",
+      "role": "background",
+      "share": 0.919
+    },
+    {
+      "hex": "#383637",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#545254",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#757375",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#625f19",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 22,
+    "atSeconds": 1.5,
+    "endSeconds": 6.9,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your Al workspace",
+    "headline": "Your Al workspace"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Your Al workspace",
+        "name": "Splash screen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Scroll",
+        "name": "Sign in with email — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

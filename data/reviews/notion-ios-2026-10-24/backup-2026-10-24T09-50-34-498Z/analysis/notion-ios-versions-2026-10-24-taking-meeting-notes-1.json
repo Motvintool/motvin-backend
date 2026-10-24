@@ -1,0 +1,162 @@
+{
+  "screenId": "notion-ios-versions-2026-10-24-taking-meeting-notes-1",
+  "screen_id": "notion-ios-versions-2026-10-24-taking-meeting-notes-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T09:42:00.200Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "detail",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Taking meeting notes",
+  "flow_position": 2,
+  "name": "Meeting details",
+  "description": "Bottom sheet over a dimmed screen with a paged carousel. Dark theme, 9 text elements.",
+  "text": "9:41 €\n<\n•••\nMeeting @Today\n• ~ Meeting @Today & +°\nStart transcribing\nAl will summarize the notes and\ntranscript\neveryone being trans\nAuto v\nAsk Al",
+  "purpose": "To view and manage a meeting session with transcription and AI summarization",
+  "primary_action": "Start transcribing",
+  "tags": [
+    "ask al",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Ask Al”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet over a dimmed background, covering 30% of the height from 69% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen with a paged carousel. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Starting transcription”",
+        "Reached from “Home”",
+        "Leads to “Meeting @Today”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 2:54 in the recording",
+        "Frame 598 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1a1d",
+      "role": "background",
+      "share": 0.931
+    },
+    {
+      "hex": "#39383b",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#6a6869",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#215893",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 598,
+    "atSeconds": 174,
+    "endSeconds": 179.7,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.6875,
+        "w": 0.875,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Ask Al",
+    "headline": "Everyone being trans",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s038",
+    "depth": 37,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s037",
+        "via": "Wait 1.5s",
+        "name": "Home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s039",
+        "via": "Dismiss",
+        "name": "Meeting @Today"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

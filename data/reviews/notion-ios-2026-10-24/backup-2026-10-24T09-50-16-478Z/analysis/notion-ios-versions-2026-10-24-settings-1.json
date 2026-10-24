@@ -1,0 +1,161 @@
+{
+  "screenId": "notion-ios-versions-2026-10-24-settings-1",
+  "screen_id": "notion-ios-versions-2026-10-24-settings-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T09:42:00.227Z",
+  "screen_type": "settings",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Unsaved changes warning",
+  "description": "Settings toast over a dimmed screen. Dark theme, 24 text elements.",
+  "text": "9:41€\nSettings\nNotifications\nMobile push notifications\nGet push notifications for mentions\nand comments on your mobile app\nActivity in my workspace\nGet emails about comments, mentions,\npage invites, reminders, access requests,\nand database property changes\nYou have unsaved changes. If you\nAll\nlog out now, you could lose them.\nGE\nev\nDiscard edits and log out\nCancel\nP:\nGet email digests about pages\nyou've turned on notifications\nfor and pages you've created\nWorkspace digest\nGet email digests about what's\nhappening in your workspace\nSlack notifications\nGet Slack notifications about\nOff v\nactivity in your Notion workspace\nMicrocoft Taame notifinatinno",
+  "purpose": "To alert the user about unsaved changes before logging out.",
+  "primary_action": "Discard edits and log out",
+  "tags": [
+    "settings",
+    "notification",
+    "off v",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log out now, you could lose them”",
+        "Toast over a dimmed background, covering 6% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings toast over a dimmed screen. Dark theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 14 in “Settings”",
+        "Reached from “Search results”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:51 in the recording",
+        "Frame 1383 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161518",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#3e3334",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#e97066",
+      "role": "accent",
+      "share": 0.021
+    },
+    {
+      "hex": "#565658",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#6d6b6d",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 1383,
+    "atSeconds": 411.9,
+    "endSeconds": 415.2,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.484375,
+        "w": 0.75,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log out now, you could lose them",
+    "headline": "Get emails about comments, mentions",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s117",
+    "depth": 116,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s116",
+        "via": "Tap “Settings”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s118",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

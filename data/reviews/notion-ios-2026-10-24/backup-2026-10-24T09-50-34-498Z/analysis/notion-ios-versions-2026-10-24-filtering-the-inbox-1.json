@@ -1,0 +1,158 @@
+{
+  "screenId": "notion-ios-versions-2026-10-24-filtering-the-inbox-1",
+  "screen_id": "notion-ios-versions-2026-10-24-filtering-the-inbox-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T09:42:00.217Z",
+  "screen_type": "search_results",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Filtering the inbox",
+  "flow_position": 2,
+  "name": "Filter options",
+  "description": "Search results toast over a dimmed screen, on top of Inbox. Dark theme, 7 text elements.",
+  "text": "9:41(\nC\nM\nInbox\nYou're all caught up\nFilters\nUnread and read\nUnread only\nArchived only",
+  "purpose": "To allow the user to select a filter for their inbox items.",
+  "primary_action": "Select a filter",
+  "tags": [
+    "filter",
+    "search-results",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Filters”",
+        "Toast over a dimmed background, covering 3% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results toast over a dimmed screen, on top of Inbox. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Searching and sorting”",
+        "Reached from “Inbox”",
+        "Leads to “Inbox”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 5:40 in the recording",
+        "Frame 1137 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191c",
+      "role": "background",
+      "share": 0.955
+    },
+    {
+      "hex": "#393739",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#6b696c",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#aaa9aa",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 1137,
+    "atSeconds": 340.2,
+    "endSeconds": 341.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.4375,
+        "y": 0.484375,
+        "w": 0.125,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Filters",
+    "headline": "You're all caught up"
+  },
+  "crawler": {
+    "nodeId": "s089",
+    "depth": 88,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s088",
+        "via": "Tap “You're all caught up”",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s090",
+        "via": "Dismiss",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}
