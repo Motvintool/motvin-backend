@@ -489,6 +489,14 @@ export function buildInspirationsManifest(root: string): BuildReport {
   const appsFile = readJson<{ apps?: any[] }>(join(root, 'apps.json'), { apps: [] });
   const flowsFile = readJson<{ flows?: any[] }>(join(root, 'flows.json'), { flows: [] });
   const patternsFile = readJson<{ patterns?: any[] }>(join(root, 'patterns.json'), { patterns: [] });
+  // The one list of tags a screen may carry beyond its types, platform,
+  // category and states (tags.json). Anything else in a sidecar — words read
+  // off the screen, a type it no longer has — is left out of the manifest.
+  const tagVocabulary = new Set<string>(
+    (readJson<{ tags?: Array<string | { slug?: string }> }>(join(root, 'tags.json'), { tags: [] }).tags || [])
+      .map((tag) => slugValue(typeof tag === 'string' ? tag : tag?.slug))
+      .filter((tag): tag is string => Boolean(tag)),
+  );
   const sourcesFile = readJson<{ sources?: Record<string, any> }>(join(root, 'sources.json'), { sources: {} });
 
   const sources = sourcesFile.sources || {};
@@ -579,6 +587,15 @@ export function buildInspirationsManifest(root: string): BuildReport {
         if (sidecarType && !(SCREEN_TYPES as readonly string[]).includes(sidecarType)) {
           warnings.push(`${platform}/${appId}/${base}.json uses a new screenType "${sidecarType}" — added to the filters`);
         }
+        // Up to four more types the screen also is (a permission prompt over
+        // a chat is permission and messages): known types only, never the
+        // main one again, never "other". The main type stays first.
+        const extraTypes: string[] = uniq<string>(
+          (Array.isArray(sidecar.extraTypes) ? sidecar.extraTypes : [])
+            .map(slugValue)
+            .filter((t: string | null): t is string => Boolean(t) && t !== screenType && t !== 'other' && (SCREEN_TYPES as readonly string[]).includes(t as string)),
+        ).slice(0, 4);
+        const screenTypesAll = [screenType, ...extraTypes];
         const styles: string[] = uniq<string>(
           (Array.isArray(sidecar.style) ? sidecar.style : []).map(slugValue).filter((v: string | null): v is string => Boolean(v)),
         );
@@ -636,6 +653,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
             bytes: statSync(abs).size,
             platform,
             screenType,
+            // Every type the screen is, the main one first — what filters and patterns match on.
+            screenTypes: screenTypesAll,
             fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
             states,
             description: typeof sidecar.description === 'string' ? sidecar.description : '',
@@ -645,7 +664,14 @@ export function buildInspirationsManifest(root: string): BuildReport {
             // Its place among its version's screens when an admin has set the order by hand (see sort below).
             order: numberOrNull(sidecar.order),
             industry: app.industry,
-            tags: uniq([...(sidecar.tags || []), app.industry, screenType, ...states, platform]),
+            // Rebuilt every time from what the screen is now, plus words from the shared list only.
+            tags: uniq([
+              ...screenTypesAll.filter((t) => t !== 'other' || screenTypesAll.length === 1),
+              ...states,
+              ...(Array.isArray(sidecar.tags) ? sidecar.tags : []).map(slugValue).filter((t: string | null): t is string => Boolean(t) && (!tagVocabulary.size || tagVocabulary.has(t as string))),
+              app.industry,
+              platform,
+            ].filter(Boolean)),
             elements: uniq<string>(sidecar.elements || []),
             style: styles,
             capturedAt: sidecar.capturedAt || source.capturedAt || null,
@@ -856,7 +882,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       const m = pattern.match || {};
       const matched = screens.filter((screen) => {
         if (m.platforms && !m.platforms.includes(screen.platform)) return false;
-        if (m.screenTypes && !m.screenTypes.includes(screen.screenType)) return false;
+        if (m.screenTypes && !m.screenTypes.some((t: string) => (screen.screenTypes ?? [screen.screenType]).includes(t))) return false;
         if (m.industries && !m.industries.includes(screen.industry)) return false;
         if (m.elements && !m.elements.some((e: string) => screen.elements.includes(e))) return false;
         if (m.tags && !m.tags.some((t: string) => screen.tags.includes(t))) return false;
@@ -896,7 +922,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
     // validation and for the admin tooling.
     taxonomy: {
       platforms: PLATFORMS.filter((p) => screens.some((s) => s.platform === p)),
-      screenTypes: presentInOrder(SCREEN_TYPES, new Set(screens.map((s) => s.screenType))),
+      screenTypes: presentInOrder(SCREEN_TYPES, new Set(screens.flatMap((s) => s.screenTypes ?? [s.screenType]))),
       states: presentInOrder(SCREEN_STATES, new Set(screens.flatMap((s) => s.states))),
       industries: PICKABLE_INDUSTRIES.filter((i) => screens.some((s) => s.industry === i)),
       styles: presentInOrder(STYLES, new Set(screens.flatMap((s) => s.style))),
@@ -912,6 +938,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
       flowCategories: FLOW_CATEGORIES,
       permissions: PERMISSIONS,
       reviewStatuses: REVIEW_STATUSES,
+      tags: Array.from(tagVocabulary).sort(),
     },
     settings: readLibrarySettings(root),
     apps,

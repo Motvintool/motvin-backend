@@ -1,0 +1,156 @@
+{
+  "screenId": "notion-ios-versions-2026-10-23-entering-personal-information-2",
+  "screen_id": "notion-ios-versions-2026-10-23-entering-personal-information-2",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-23T11:05:42.133Z",
+  "screen_type": "paywall",
+  "published_as": "onboarding",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Entering personal information",
+  "flow_position": 13,
+  "name": "Name entry",
+  "description": "Paywall screen with the keyboard open and a primary action labelled “Next”. Dark theme, 29 text elements.",
+  "text": "M\n9:41€\nUpload photo (optional)\nEnter your name\nMotvin\nl agree to Notion marketing communications\nYou may unsubscribe from receiving marketing\ncommunications at any time. Notion's websites\nand communications are subject to our Privacy\nPolicy.\nNext\n\"Motvin\"\ni\nW\nt\ne\nO\nh\nk\nf\nd\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\nA",
+  "purpose": "To collect the user's name during onboarding.",
+  "primary_action": "Enter name",
+  "tags": [
+    "photo",
+    "paywall",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your name”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with the keyboard open and a primary action labelled “Next”. Dark theme, 29 text elements.",
+        "Calls to action: “Next”",
+        "29 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 68 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:00 in the recording",
+        "Frame 204 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#252426",
+      "role": "background",
+      "share": 0.823
+    },
+    {
+      "hex": "#424143",
+      "role": "surface",
+      "share": 0.069
+    },
+    {
+      "hex": "#5e5c5e",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#2981da",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#2663a2",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 204,
+    "atSeconds": 60.6,
+    "endSeconds": 61.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter your name",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s013",
+    "depth": 12,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Type “Motvin”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s014",
+        "via": "Open For personal life",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-23",
+  "capturedBy": "motvin-ios-crawler"
+}

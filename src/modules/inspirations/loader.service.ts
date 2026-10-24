@@ -23,6 +23,8 @@ export interface InspirationScreen {
   bytes: number;
   platform: string;
   screenType: string;
+  /** Every type the screen is, the main one (screenType) first — up to five. */
+  screenTypes: string[];
   /** The crawler's finer type (e.g. `coach_mark`, `otp`), when recorded. */
   fineType: string;
   /** Conditions the screen is in: loading, empty, modal, … */
@@ -210,6 +212,7 @@ export class LoaderService implements OnModuleInit {
       parsed.screens = (parsed.screens || []).map((screen) => ({
         ...screen,
         fineType: screen.fineType || screen.screenType,
+        screenTypes: Array.isArray(screen.screenTypes) && screen.screenTypes.length ? screen.screenTypes : [screen.screenType],
         states: Array.isArray(screen.states) ? screen.states : [],
         description: screen.description || '',
         purpose: screen.purpose ?? null,

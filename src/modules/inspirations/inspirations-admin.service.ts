@@ -494,10 +494,17 @@ export class InspirationsAdminService {
       description:
         typeof meta.description === 'string' ? meta.description.trim().slice(0, 600) : (existing.description as string | undefined) ?? '',
       tags: Array.isArray(meta.tags) ? meta.tags.map(String).filter(Boolean) : [],
+      // More types the screen also is, up to four; the main one is screenType.
+      extraTypes: Array.isArray(meta.extraTypes)
+        ? Array.from(new Set(meta.extraTypes.map((t: unknown) => String(t).trim().toLowerCase()).filter((t: string) => TAXONOMY_VALUE.test(t) && t !== screenType && t !== 'other'))).slice(0, 4)
+        : (existing.extraTypes as string[] | undefined),
       elements: Array.isArray(meta.elements) ? meta.elements.map(String).filter(Boolean) : [],
       style: styles,
       capturedAt: typeof meta.capturedAt === 'string' && meta.capturedAt ? meta.capturedAt : (existing.capturedAt as string | undefined),
     };
+    // A tag an admin typed is a word the library means to have: it joins the
+    // shared list (tags.json), which is what the manifest keeps tags from.
+    this.addToTagList(sidecar.tags);
 
     this.writeJson(sidecarFile, sidecar);
     const file = this.qualifiedFile(version, flow, `${base}${ext}`);
@@ -574,6 +581,17 @@ export class InspirationsAdminService {
       this.writeJson(sidecarFile, { ...readJson<Record<string, unknown>>(sidecarFile, {}), order });
     });
     return { report: this.rebuild() };
+  }
+
+  /** Adds tags to the shared list the manifest keeps tags from (tags.json), when it exists. */
+  private addToTagList(tags: string[]) {
+    const file = join(this.root, 'tags.json');
+    if (!existsSync(file) || !tags.length) return;
+    const doc = readJson<{ version?: number; tags?: Array<string | { slug?: string }> }>(file, { version: 1, tags: [] });
+    const have = new Set((doc.tags || []).map((tag) => (typeof tag === 'string' ? tag : tag?.slug ?? '')));
+    const added = tags.map((tag) => tag.trim().toLowerCase()).filter((tag) => /^[a-z0-9]+(-[a-z0-9]+)*$/.test(tag) && !have.has(tag));
+    if (!added.length) return;
+    this.writeJson(file, { version: doc.version || 1, tags: [...(doc.tags || []), ...added] });
   }
 
   deleteScreen(platformRaw: string, appIdRaw: string, fileNameRaw: string, versionRaw?: string, flowRaw?: string) {

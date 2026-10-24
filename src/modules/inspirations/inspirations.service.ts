@@ -205,7 +205,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     const flows = (await this.loader.getFlows()).filter((f) => on.has(f.platform));
     const apps = (await this.loader.getApps()).filter((a) => a.platforms.some((p) => on.has(p)));
 
-    const screenTypes = new Set(screens.map((s) => s.screenType));
+    const screenTypes = new Set(screens.flatMap((s) => s.screenTypes ?? [s.screenType]));
     const industries = new Set(screens.map((s) => s.industry));
     const states = new Set(screens.flatMap((s) => s.states));
     const styles = new Set(screens.flatMap((s) => s.style));
@@ -250,7 +250,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
       return out;
     };
     return {
-      screenTypes: tally(screens.map((s) => s.screenType)),
+      screenTypes: tally(screens.flatMap((s) => s.screenTypes ?? [s.screenType])),
       elements: tally(screens.flatMap((s) => s.elements)),
       industries: tally(screens.map((s) => s.industry)),
       flowCategories: tally(flows.map((f) => f.category)),
@@ -262,7 +262,8 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     let out = screens;
     if (query.apps?.length) out = out.filter((s) => query.apps.includes(s.appId));
     if (query.platform?.length) out = out.filter((s) => query.platform.includes(s.platform));
-    if (query.screenType?.length) out = out.filter((s) => query.screenType.includes(s.screenType));
+    // A screen is under every type it is, not only its main one.
+    if (query.screenType?.length) out = out.filter((s) => (s.screenTypes ?? [s.screenType]).some((t) => query.screenType.includes(t)));
     if (query.state?.length) out = out.filter((s) => query.state.some((v) => s.states.includes(v)));
     if (query.industry?.length) out = out.filter((s) => query.industry.includes(s.industry));
     if (query.style?.length) out = out.filter((s) => query.style.some((v) => s.style.includes(v)));
@@ -474,7 +475,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     // Counts per filter value among the matches, each dimension counted with every *other* filter applied — so
     // a pill lists every value the results hold (new ones included) and how many screens picking it would show.
     const facets = {
-      screenTypes: this.tally(this.filterScreens(rankedAll, { ...filters, screenType: undefined }).map((s) => [s.screenType])),
+      screenTypes: this.tally(this.filterScreens(rankedAll, { ...filters, screenType: undefined }).map((s) => s.screenTypes ?? [s.screenType])),
       states: this.tally(this.filterScreens(rankedAll, { ...filters, state: undefined }).map((s) => s.states)),
       industries: this.tally(this.filterScreens(rankedAll, { ...filters, industry: undefined }).map((s) => [s.industry])),
       styles: this.tally(this.filterScreens(rankedAll, { ...filters, style: undefined }).map((s) => s.style)),
