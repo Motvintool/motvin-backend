@@ -1,0 +1,171 @@
+{
+  "screenId": "lensa-ios-versions-2026-10-24-photos-4",
+  "screen_id": "lensa-ios-versions-2026-10-24-photos-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T13:51:12.232Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": null,
+  "flow": "onboarding",
+  "flow_name": "Photos",
+  "flow_position": 6,
+  "name": "Notifications permission",
+  "description": "Permission screen with a 4-item tab bar, a row of 4 category chips and a primary action labelled “Allow”. Dark theme, 17 text elements.",
+  "text": "9:41(\noll\nPhotos\nW Upgrade\nFavourites\nSelfies\nFaces\nRecents\n\"Lensa\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nO°\nAll photos\nEdited\nCamera\nNEW\nMagic Al\nPhotos\nVideos\nSettings",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "photo",
+    "notification",
+    "photos",
+    "magic al",
+    "videos",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Photos, Magic Al, Videos, Settings",
+        "Navigation title reads “Photos”",
+        "Category strip: Favourites, Selfies, Faces, Recents",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a 4-item tab bar, a row of 4 category chips and a primary action labelled “Allow”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow”",
+        "17 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 34 in “Photos”",
+        "Reached from “Location permission”",
+        "Leads to “Photos home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:50 in the recording",
+        "Frame 169 of 414 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171519",
+      "role": "background",
+      "share": 0.879
+    },
+    {
+      "hex": "#363336",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#5e6916",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#585559",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#727073",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Lensa.mov",
+    "fps": 3.3333333333333335,
+    "frames": 414,
+    "frame": 169,
+    "atSeconds": 50.1,
+    "endSeconds": 51,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Photos",
+      "Magic Al",
+      "Videos",
+      "Settings"
+    ],
+    "chipLabels": [
+      "Favourites",
+      "Selfies",
+      "Faces",
+      "Recents"
+    ],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Photos",
+    "headline": "\"Lensa\" Would Like to Send You"
+  },
+  "crawler": {
+    "nodeId": "s036",
+    "depth": 35,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s033",
+        "via": "Tap “Photos”",
+        "name": "Location permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s037",
+        "via": "Wait 0.9s",
+        "name": "Photos home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

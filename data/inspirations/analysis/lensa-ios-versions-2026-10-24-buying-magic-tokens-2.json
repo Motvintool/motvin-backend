@@ -1,0 +1,154 @@
+{
+  "screenId": "lensa-ios-versions-2026-10-24-buying-magic-tokens-2",
+  "screen_id": "lensa-ios-versions-2026-10-24-buying-magic-tokens-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T13:51:15.932Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Buying magic tokens",
+  "flow_position": 23,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a 4-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41(\n•Іl\nSUPPORT\nSend Feedback\nPrivacy & Legal\nEmail tips & updates\nReceive occasional product updates by email\nRate on the App Store\nRestore Purchases\nClear Video Editor Cache\nFree up space\nSign Out\nDelete Account & Data\nVarnian 012 A 1OARA)\nSettings\nMagic Al\nPhotos\nVideos",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "photos",
+    "magic al",
+    "videos",
+    "settings",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Photos, Magic Al, Videos, Settings",
+        "Navigation title reads “Send Feedback”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a 4-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 34 in “Photos”",
+        "Reached from “Settings”",
+        "Leads to “Photos home”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 1:43 in the recording",
+        "Frame 361 of 414 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232023",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#4f4c4f",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#4f3134",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#6e6c6f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#a2a1a3",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Lensa.mov",
+    "fps": 3.3333333333333335,
+    "frames": 414,
+    "frame": 361,
+    "atSeconds": 103.8,
+    "endSeconds": 105,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [
+      "Photos",
+      "Magic Al",
+      "Videos",
+      "Settings"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Send Feedback",
+    "headline": "Privacy & Legal"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Tap “SUBSCRIPTION”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s080",
+        "via": "Wait 2.4s",
+        "name": "Photos home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,154 @@
+{
+  "screenId": "lensa-ios-versions-2026-10-24-logging-in-with-email-8",
+  "screen_id": "lensa-ios-versions-2026-10-24-logging-in-with-email-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T13:51:10.999Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 14,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Submit”. Dark theme, 25 text elements.",
+  "text": "Sign In\nAn email with the code has been sent to\nmotvintool@gmail.com\n976285\nSubmit\nDid't get the code? Try again\nFrom Gmail\n976286\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Submit”. Dark theme, 25 text elements.",
+        "Calls to action: “Submit”",
+        "25 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 23 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:32 in the recording",
+        "Frame 111 of 414 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.487
+    },
+    {
+      "hex": "#1c1a1e",
+      "role": "surface",
+      "share": 0.256
+    },
+    {
+      "hex": "#3b383b",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#fed300",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#5c595c",
+      "role": "surface",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "Lensa.mov",
+    "fps": 3.3333333333333335,
+    "frames": 414,
+    "frame": 111,
+    "atSeconds": 32.7,
+    "endSeconds": 33.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Submit"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Did't get the code? Try again"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "lensa-ios-versions-2026-10-24-starting-a-video-project-1",
+  "screen_id": "lensa-ios-versions-2026-10-24-starting-a-video-project-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T13:51:14.469Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Starting a video project",
+  "flow_position": 2,
+  "name": "Select photos & videos sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Loading state with a row of 4 category chips. Dark theme, 28 text elements.",
+  "text": "9:41(\noll\nSelect photos & videos\nCancel\nMix photos and videos in one clip!\nRecents V\nVideos\nAll\nPhotos\nWe'reheretohelp\nWereheretohelp\nideas shine\nideas shine\nInspiredByRealApp\nScreens,Flows, Patterns, Ul\nP\n0:51\n0:16\n0:48\nInspired ByRealApp\nScreens, Flows, Patterns, UI\n1:11\n1:19\n3:02\nHP OMEN by HP Gaming Laptop 16-xf0xxx\n20575\nResult Information\n0:07\n0:10\n0:11\n0:24\n0:13\n0:38",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "video",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select photos & videos”",
+        "Category strip: Recents V, Videos, All, Photos",
+        "Bottom sheet over a dimmed background, covering 20% of the height from 77% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Loading state with a row of 4 category chips. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Select photos & videos”",
+        "Reached from “Select photos & videos sheet — loading”",
+        "Leads to “Photos home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:21 in the recording",
+        "Frame 276 of 414 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060508",
+      "role": "background",
+      "share": 0.306
+    },
+    {
+      "hex": "#222124",
+      "role": "surface",
+      "share": 0.146
+    },
+    {
+      "hex": "#b7b5b4",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#d5d3d0",
+      "role": "text",
+      "share": 0.065
+    },
+    {
+      "hex": "#474446",
+      "role": "surface",
+      "share": 0.058
+    }
+  ],
+  "capture": {
+    "source": "Lensa.mov",
+    "fps": 3.3333333333333335,
+    "frames": 414,
+    "frame": 276,
+    "atSeconds": 81,
+    "endSeconds": 83.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.765625,
+        "w": 0.84375,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [
+      "Recents V",
+      "Videos",
+      "All",
+      "Photos"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select photos & videos",
+    "headline": "Recents"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s059",
+        "via": "Wait 3.9s",
+        "name": "Select photos & videos sheet — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Dismiss",
+        "name": "Photos home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}
