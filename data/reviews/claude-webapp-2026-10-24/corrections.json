@@ -2,16 +2,19 @@
  "screens": [
   {
    "id": "claude-webapp-versions-2026-10-24-logging-in-with-email-1",
-   "name": "Email entry",
+   "name": "Sign-in options",
    "type": "login",
-   "extraTypes": [],
+   "extraTypes": [
+    "onboarding"
+   ],
    "tags": [
+    "social-login",
     "email-login",
-    "social-login"
+    "cookies"
    ],
    "elements": [
-    "text-field",
     "button",
+    "text-field",
     "banner"
    ],
    "style": [
@@ -124,21 +127,6 @@
     "text-field",
     "alert",
     "button"
-   ],
-   "style": [
-    "light"
-   ]
-  },
-  {
-   "id": "claude-webapp-versions-2026-10-24-logging-in-with-email-12",
-   "name": "Signing in",
-   "type": "loading",
-   "extraTypes": [],
-   "tags": [
-    "loading-state"
-   ],
-   "elements": [
-    "banner"
    ],
    "style": [
     "light"
@@ -761,16 +749,6 @@
    "to": "claude-webapp-versions-2026-10-24-signing-in-with-email"
   },
   {
-   "screen": "claude-webapp-versions-2026-10-24-logging-in-with-email-12",
-   "from": "claude-webapp-versions-2026-10-24-onboarding",
-   "to": "claude-webapp-versions-2026-10-24-signing-in-with-email"
-  },
-  {
-   "screen": "claude-webapp-versions-2026-10-24-logging-in-with-email-12",
-   "from": "claude-webapp-versions-2026-10-24-logging-in-with-email",
-   "to": "claude-webapp-versions-2026-10-24-signing-in-with-email"
-  },
-  {
    "screen": "claude-webapp-versions-2026-10-24-opening-settings-1",
    "from": "claude-webapp-versions-2026-10-24-home",
    "to": "claude-webapp-versions-2026-10-24-setting-cookie-preferences"
@@ -902,6 +880,7 @@
   }
  ],
  "remove": [
+  "claude-webapp-versions-2026-10-24-logging-in-with-email-12",
   "claude-webapp-versions-2026-10-24-logging-in-with-email-2",
   "claude-webapp-versions-2026-10-24-logging-in-with-email-6",
   "claude-webapp-versions-2026-10-24-logging-in-with-email-8",
@@ -963,5 +942,19 @@
     "app": "claude"
    }
   ]
- }
+ },
+ "frames": [
+  {
+   "id": "claude-webapp-versions-2026-10-24-chats-2",
+   "at": 101.1
+  },
+  {
+   "id": "claude-webapp-versions-2026-10-24-settings-2",
+   "at": 169.5
+  },
+  {
+   "id": "claude-webapp-versions-2026-10-24-subscribing-1",
+   "at": 74.1
+  }
+ ]
 }

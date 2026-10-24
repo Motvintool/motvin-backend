@@ -1,0 +1,151 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-24-subscribing-11",
+  "screen_id": "claude-webapp-versions-2026-10-24-subscribing-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T11:30:50.964Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Subscribing",
+  "flow_position": 11,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a sidebar. Light theme, 21 text elements.",
+  "text": "• Claude\nGreeting v\nShare\nNew\nProjects\nHello\n8 Artifacts\nE Customize\nGood morning! How can I help you today?\nQ 9b\nRecents\nCustomize Claude for you\nTry\nUse Opus 5.5 with Claude Pro\nGreeting\nGreeting\n• Higher usage limits\nAccess to more Claude models\n‹> Claude Code directly in your codebase\né= Power through tasks with Cowork\nYearly • Save 17%\nMonthly\nUpgrade to Pro\nBilled annually\nSee all plans. Not now\nPrices and plans are subject to change at Anthropic's discretion.\nReply\nM Motvin • Free v\nClaude is Al and can make mistakes.\nSonnet 5.5 Medium\nManual",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "price",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Greeting”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a sidebar. Light theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 13 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Greeting”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 2:16 in the recording",
+        "Frame 465 of 593 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#a1a09f",
+      "role": "background",
+      "share": 0.823
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.098
+    },
+    {
+      "hex": "#c5c5c4",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#e0e1e1",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#8b8a89",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Claude test.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 593,
+    "frame": 465,
+    "atSeconds": 136.8,
+    "endSeconds": 139.8,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Claude",
+      "New",
+      "Projects",
+      "Artifacts",
+      "Customize"
+    ],
+    "activeTab": null,
+    "listedInSidebar": true,
+    "title": "Greeting",
+    "headline": "Use Opus 5.5 with Claude Pro"
+  },
+  "crawler": {
+    "nodeId": "s036",
+    "depth": 35,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s035",
+        "via": "Tap “Monthly”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s037",
+        "via": "Tap “Greeting”",
+        "name": "Greeting"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}
