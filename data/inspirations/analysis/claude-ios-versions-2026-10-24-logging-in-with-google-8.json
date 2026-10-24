@@ -1,0 +1,158 @@
+{
+  "screenId": "claude-ios-versions-2026-10-24-logging-in-with-google-8",
+  "screen_id": "claude-ios-versions-2026-10-24-logging-in-with-google-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T14:46:10.964Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 24,
+  "name": "Google sign-in",
+  "description": "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in to Claude”. Dark theme, 18 text elements.",
+  "text": "9:41(\naccounts.google.com\nG\nSign in with Google\nSign in to Claude\nmotvintool@gmail.com\nS\nGoogle will allow Claude to access\nthis info about you\ng Surendar\nName and profile picture\nmotvintool@gmail.com\nEmail address\nReview Claude's privacy policy and Terms of\nService to understand how Claude will process and\nprotect your data.\nTo make changes at any time, go to your Google\nAccount.\nLearn more about Sign in with Google.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "address",
+    "external-auth",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in to Claude”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in to Claude”. Dark theme, 18 text elements.",
+        "Calls to action: “Sign in to Claude”",
+        "18 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 30 in “Logging in with email”",
+        "Reached from “Google sign-in”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:42 in the recording",
+        "Frame 1542 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131113",
+      "role": "background",
+      "share": 0.928
+    },
+    {
+      "hex": "#2e2c31",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#4f4e50",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#785e57",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#683b2e",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Claude.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 1542,
+    "atSeconds": 462.3,
+    "endSeconds": 462.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in to Claude"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in to Claude",
+    "headline": "This info about you"
+  },
+  "crawler": {
+    "nodeId": "s364",
+    "depth": 364,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s363",
+        "via": "Tap “this info about you”",
+        "name": "Google sign-in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s369",
+        "via": "Wait 0.6s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

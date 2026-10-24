@@ -1,0 +1,159 @@
+{
+  "screenId": "claude-ios-versions-2026-10-24-choosing-a-plan-1",
+  "screen_id": "claude-ios-versions-2026-10-24-choosing-a-plan-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T14:45:46.144Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Choosing a plan",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a row of 3 category chips and a primary action labelled “Save 17%”. Dark theme, 17 text elements.",
+  "text": "9:41 €\n•l\n•\nChoose a plan\nFree\nPro\nMax\nPro\nFor everyday productivity\nSend more messages with Claude Pro\nV Access more Claude models\nOrganize chats and documents with\nunlimited Projects\nSave 17%\n71,999/month\n71,659/month\nPay monthly\nPay · 19,900/year\nGet Pro plan\nStay on Free\n*Usage limits apply",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "stay on free",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose a plan”",
+        "Category strip: Free, Pro, Max",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a row of 3 category chips and a primary action labelled “Save 17%”. Dark theme, 17 text elements.",
+        "Calls to action: “Save 17%”",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 98 in “Subscribing”",
+        "Reached from “Subscription plans — loading”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.6s at 1:42 in the recording",
+        "Frame 362 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201d1e",
+      "role": "background",
+      "share": 0.825
+    },
+    {
+      "hex": "#403e41",
+      "role": "surface",
+      "share": 0.1
+    },
+    {
+      "hex": "#f8f7f7",
+      "role": "text",
+      "share": 0.036
+    },
+    {
+      "hex": "#56595f",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#918d8d",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Claude.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 362,
+    "atSeconds": 102.3,
+    "endSeconds": 108.9,
+    "holdSeconds": 6.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [
+      "Free",
+      "Pro",
+      "Max"
+    ],
+    "ctas": [
+      "Save 17%"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose a plan",
+    "headline": "Pay monthly",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Wait 0.6s",
+        "name": "Subscription plans — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Tap “Choose a plan”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

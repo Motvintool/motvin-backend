@@ -1,0 +1,138 @@
+{
+  "screenId": "claude-ios-versions-2026-10-24-logging-in-with-email-5",
+  "screen_id": "claude-ios-versions-2026-10-24-logging-in-with-email-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T14:45:44.916Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 13,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Dark theme, 24 text elements.",
+  "text": "9:41(\nClaude\nCheck your inbox\nTap the link we sent to motvintool@gmail.com, or\nenter the code shown on your other device.\nChange address\nBy continuing, you agree to Anthropic's Consumer Terms and\nUsage Policy, and acknowledge their Privacy Policy.\n2\n3\n1\nABC\nDEF\n4\n5\n6\nMNO\nJKL\nGHI\n7\n8\n9\nWXYZ\nTUV\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your inbox”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Dark theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 27 in “Logging in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.3s at 0:31 in the recording",
+        "Frame 106 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181b",
+      "role": "background",
+      "share": 0.734
+    },
+    {
+      "hex": "#3c3a3c",
+      "role": "surface",
+      "share": 0.222
+    },
+    {
+      "hex": "#5f5d5f",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#aeacae",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Claude.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 106,
+    "atSeconds": 31.8,
+    "endSeconds": 32.1,
+    "holdSeconds": 0.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your inbox",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": []
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}
