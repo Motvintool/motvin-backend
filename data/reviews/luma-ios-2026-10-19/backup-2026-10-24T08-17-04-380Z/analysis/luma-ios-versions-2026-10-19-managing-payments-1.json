@@ -1,0 +1,162 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-managing-payments-1",
+  "screen_id": "luma-ios-versions-2026-10-19-managing-payments-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.837Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "lifestyle",
+  "flow": "checkout",
+  "flow_name": "Managing payments",
+  "flow_position": 50,
+  "name": "Payment methods",
+  "description": "Payment bottom sheet, on top of No Payments (empty) with a 3-item tab bar. Dark theme, 4 text elements.",
+  "text": "9:41 (\n<\nPayment\nAdd Payment Method\nPayment History\nHome\nDiscover\nChat",
+  "purpose": "To manage payment methods and view payment history.",
+  "primary_action": "Add a payment method",
+  "tags": [
+    "payment",
+    "home",
+    "discover",
+    "chat",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Chat”",
+        "Bottom sheet, covering 52% of the height from 42% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment bottom sheet, on top of No Payments (empty) with a 3-item tab bar. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 50 of 69 in “Home”",
+        "Reached from “No Payments (empty)”",
+        "Leads to “Settings (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:34 in the recording",
+        "Frame 1315 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#212022",
+      "role": "surface",
+      "share": 0.105
+    },
+    {
+      "hex": "#454446",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#626063",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#888789",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1315,
+    "atSeconds": 394.2,
+    "endSeconds": 394.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.421875,
+        "w": 0.875,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Chat",
+    "headline": "Payment History"
+  },
+  "crawler": {
+    "nodeId": "s149",
+    "depth": 149,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s148",
+        "via": "Dismiss",
+        "name": "No Payments (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s150",
+        "via": "Back to Settings",
+        "name": "Settings (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

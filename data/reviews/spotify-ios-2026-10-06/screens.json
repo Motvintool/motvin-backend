@@ -2,7 +2,33 @@
   "app": "spotify",
   "platform": "ios",
   "version": "2026-10-06",
-  "generatedAt": "2026-10-24T07:53:11.966Z",
+  "generatedAt": "2026-10-24T08:09:39.533Z",
+  "industry": "entertainment",
+  "industries": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "travel",
+    "productivity",
+    "ai",
+    "social",
+    "finance",
+    "food",
+    "entertainment",
+    "lifestyle",
+    "unsorted"
+  ],
+  "flowCategories": [
+    "onboarding",
+    "checkout",
+    "authentication",
+    "search",
+    "settings",
+    "creation",
+    "discovery"
+  ],
   "types": [
     "landing",
     "splash",
@@ -187,25 +213,13 @@
       "id": "spotify-ios-versions-2026-10-06-signing-up",
       "path": "Onboarding › Creating an account",
       "category": "authentication",
-      "screens": 13
-    },
-    {
-      "id": "spotify-ios-versions-2026-10-06-turning-on-notifications",
-      "path": "Onboarding › Turning on notifications",
-      "category": "onboarding",
-      "screens": 1
+      "screens": 14
     },
     {
       "id": "spotify-ios-versions-2026-10-06-choosing-your-taste",
       "path": "Onboarding › Choosing your music taste",
       "category": "onboarding",
-      "screens": 10
-    },
-    {
-      "id": "spotify-ios-versions-2026-10-06-allowing-tracking",
-      "path": "Onboarding › Allowing ad tracking",
-      "category": "onboarding",
-      "screens": 2
+      "screens": 12
     },
     {
       "id": "spotify-ios-versions-2026-10-06-home-area",
@@ -828,7 +842,7 @@
       "slug": "dialogs",
       "name": "Dialogs",
       "match": {
-        "screenTypes": [
+        "mainTypes": [
           "modal"
         ],
         "withoutElements": [
@@ -837,16 +851,9 @@
       },
       "screens": [
         7,
-        11,
         44,
-        66,
-        126,
-        140,
         147,
         180,
-        203,
-        205,
-        209,
         220,
         221,
         222,
@@ -1134,6 +1141,7 @@
       ]
     }
   ],
+  "problems": [],
   "screens": [
     {
       "n": 1,
@@ -1143,6 +1151,9 @@
       "type": "splash",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "first-run"
       ],
@@ -1159,6 +1170,9 @@
       "extraTypes": [],
       "elements": [
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "welcome",
@@ -1179,6 +1193,9 @@
       "extraTypes": [],
       "elements": [
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "welcome",
@@ -1203,6 +1220,9 @@
         "bottom-sheet",
         "list",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "password"
@@ -1229,6 +1249,9 @@
         "button",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "warning"
@@ -1251,6 +1274,9 @@
         "text-field",
         "button",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -1275,6 +1301,9 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "warning"
@@ -1296,6 +1325,9 @@
         "nav-bar",
         "text-field",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -1322,6 +1354,9 @@
         "bottom-sheet",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "password"
       ],
@@ -1343,6 +1378,9 @@
         "nav-bar",
         "text-field",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "password"
@@ -1368,14 +1406,16 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "password"
       ],
       "flow": "Onboarding › Creating an account",
       "flowId": "spotify-ios-versions-2026-10-06-signing-up",
       "patterns": [
-        "Signup forms",
-        "Dialogs"
+        "Signup forms"
       ]
     },
     {
@@ -1389,6 +1429,9 @@
         "nav-bar",
         "text-field",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Onboarding › Creating an account",
@@ -1409,6 +1452,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Onboarding › Creating an account",
       "flowId": "spotify-ios-versions-2026-10-06-signing-up",
@@ -1428,6 +1474,9 @@
         "text-field",
         "button",
         "legal-text"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "legal"
@@ -1451,6 +1500,9 @@
         "keyboard",
         "legal-text"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "legal"
       ],
@@ -1473,6 +1525,9 @@
         "button",
         "legal-text"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "legal"
       ],
@@ -1492,6 +1547,10 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -1508,6 +1567,9 @@
       "extraTypes": [],
       "elements": [
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "security"
@@ -1529,6 +1591,9 @@
         "grid",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "security"
       ],
@@ -1548,6 +1613,9 @@
       "elements": [
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "security"
       ],
@@ -1559,8 +1627,8 @@
     },
     {
       "n": 21,
-      "id": "spotify-ios-versions-2026-10-06-turning-on-notifications-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/turning-on-notifications/1.webp",
+      "id": "spotify-ios-versions-2026-10-06-creating-an-account-14",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/creating-an-account/14.webp",
       "name": "Notifications prompt",
       "type": "permission",
       "extraTypes": [
@@ -1569,11 +1637,14 @@
       "elements": [
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
-      "flow": "Onboarding › Turning on notifications",
-      "flowId": "spotify-ios-versions-2026-10-06-turning-on-notifications",
+      "flow": "Onboarding › Creating an account",
+      "flowId": "spotify-ios-versions-2026-10-06-signing-up",
       "patterns": [
         "Permission prompts"
       ]
@@ -1588,6 +1659,9 @@
       "elements": [
         "grid",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "personalization",
@@ -1609,6 +1683,9 @@
       "elements": [
         "grid",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "personalization",
@@ -1633,6 +1710,9 @@
         "avatar",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "personalization",
         "first-run"
@@ -1656,6 +1736,9 @@
         "grid",
         "avatar",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "personalization",
@@ -1682,6 +1765,9 @@
         "empty-state",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "personalization"
       ],
@@ -1705,6 +1791,9 @@
         "search-bar",
         "list",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "personalization"
@@ -1730,6 +1819,9 @@
         "list",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "personalization"
       ],
@@ -1754,6 +1846,9 @@
         "list",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "personalization"
       ],
@@ -1777,6 +1872,9 @@
         "avatar",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "personalization",
         "first-run"
@@ -1798,6 +1896,10 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "loading-state",
         "personalization"
@@ -1808,27 +1910,31 @@
     },
     {
       "n": 32,
-      "id": "spotify-ios-versions-2026-10-06-allowing-ad-tracking-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/allowing-ad-tracking/1.webp",
+      "id": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-11",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/choosing-your-music-taste/11.webp",
       "name": "Ad tracking intro",
       "type": "permission",
       "extraTypes": [],
       "elements": [
         "button"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "privacy"
       ],
-      "flow": "Onboarding › Allowing ad tracking",
-      "flowId": "spotify-ios-versions-2026-10-06-allowing-tracking",
+      "flow": "Onboarding › Choosing your music taste",
+      "flowId": "spotify-ios-versions-2026-10-06-choosing-your-taste",
       "patterns": [
         "Permission prompts"
       ]
     },
     {
       "n": 33,
-      "id": "spotify-ios-versions-2026-10-06-allowing-ad-tracking-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/allowing-ad-tracking/2.webp",
+      "id": "spotify-ios-versions-2026-10-06-choosing-your-music-taste-12",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/spotify/versions/2026-10-06/choosing-your-music-taste/12.webp",
       "name": "Tracking prompt",
       "type": "permission",
       "extraTypes": [],
@@ -1836,11 +1942,14 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "privacy"
       ],
-      "flow": "Onboarding › Allowing ad tracking",
-      "flowId": "spotify-ios-versions-2026-10-06-allowing-tracking",
+      "flow": "Onboarding › Choosing your music taste",
+      "flowId": "spotify-ios-versions-2026-10-06-choosing-your-taste",
       "patterns": [
         "Permission prompts"
       ]
@@ -1858,6 +1967,9 @@
         "carousel",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recommendations",
@@ -1885,6 +1997,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recommendations",
         "music"
@@ -1910,6 +2025,9 @@
         "carousel",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recommendations",
@@ -1937,6 +2055,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recommendations",
         "music"
@@ -1962,6 +2083,9 @@
         "carousel",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recommendations",
@@ -1989,6 +2113,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recommendations",
         "music"
@@ -2014,6 +2141,9 @@
         "carousel",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recommendations",
@@ -2041,6 +2171,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recommendations",
         "music"
@@ -2066,6 +2199,9 @@
         "carousel",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recommendations",
@@ -2094,6 +2230,9 @@
         "toast",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "account-switching",
         "confirmation"
@@ -2120,6 +2259,9 @@
         "modal",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recommendations",
         "music"
@@ -2142,6 +2284,9 @@
         "card",
         "button",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2168,6 +2313,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -2189,6 +2337,9 @@
         "card",
         "button",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2215,6 +2366,9 @@
         "button",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recents"
@@ -2239,6 +2393,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2265,6 +2422,9 @@
         "toast",
         "media-player"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "music",
         "confirmation"
@@ -2289,6 +2449,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -2311,6 +2474,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2337,6 +2503,9 @@
         "toast",
         "media-player"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "music",
         "confirmation"
@@ -2361,6 +2530,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -2383,6 +2555,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2407,6 +2582,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -2429,6 +2607,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2453,6 +2634,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -2475,6 +2659,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2499,6 +2686,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -2521,6 +2711,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -2541,6 +2734,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing",
@@ -2563,6 +2759,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "music"
@@ -2584,6 +2783,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "music"
@@ -2604,6 +2806,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing",
@@ -2630,14 +2835,15 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
       "flow": "Home › Managing a playlist",
       "flowId": "spotify-ios-versions-2026-10-06-managing-a-playlist",
-      "patterns": [
-        "Dialogs"
-      ]
+      "patterns": []
     },
     {
       "n": 67,
@@ -2649,6 +2855,10 @@
       "elements": [
         "media-player",
         "coach-mark"
+      ],
+      "style": [
+        "dark",
+        "bold"
       ],
       "tags": [
         "video",
@@ -2671,6 +2881,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "music"
@@ -2691,6 +2904,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "favorites",
@@ -2714,6 +2930,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "music"
@@ -2734,6 +2953,9 @@
         "list",
         "segmented-control",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2759,6 +2981,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -2781,6 +3006,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -2802,6 +3030,9 @@
         "list",
         "segmented-control",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -2827,6 +3058,9 @@
         "segmented-control",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "followers"
@@ -2851,6 +3085,9 @@
         "card",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "music"
@@ -2873,6 +3110,9 @@
         "avatar",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "followers"
       ],
@@ -2892,6 +3132,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing",
@@ -2915,6 +3158,9 @@
         "card",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -2940,6 +3186,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -2963,6 +3212,9 @@
         "card",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -2988,6 +3240,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3011,6 +3266,9 @@
         "card",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3036,6 +3294,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3059,6 +3320,9 @@
         "card",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3084,6 +3348,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3107,6 +3374,9 @@
         "card",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3132,6 +3402,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3156,6 +3429,9 @@
         "card",
         "progress"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -3177,6 +3453,9 @@
         "segmented-control",
         "toast",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3205,6 +3484,9 @@
         "toast",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "reminders"
@@ -3230,6 +3512,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3252,6 +3537,9 @@
         "segmented-control",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3276,6 +3564,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3298,6 +3589,9 @@
         "segmented-control",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3322,6 +3616,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3344,6 +3641,9 @@
         "segmented-control",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3368,6 +3668,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3390,6 +3693,9 @@
         "segmented-control",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3414,6 +3720,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3436,6 +3745,9 @@
         "segmented-control",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3460,6 +3772,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3481,6 +3796,9 @@
         "nav-bar",
         "toggle",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3504,6 +3822,9 @@
         "toggle",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "offline"
@@ -3526,6 +3847,9 @@
         "toggle",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "offline"
@@ -3546,6 +3870,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3570,6 +3897,9 @@
         "bottom-sheet",
         "progress"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "loading-state"
@@ -3591,6 +3921,9 @@
         "bottom-sheet",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing"
       ],
@@ -3610,6 +3943,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3633,6 +3969,9 @@
         "button",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3652,6 +3991,9 @@
         "media-player",
         "button",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3673,6 +4015,9 @@
         "button",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "video"
@@ -3692,6 +4037,9 @@
         "media-player",
         "button",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3713,6 +4061,10 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "podcast",
         "transcription"
@@ -3733,6 +4085,10 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "podcast",
         "transcription"
@@ -3751,6 +4107,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "transcription",
@@ -3773,6 +4132,10 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "feedback"
       ],
@@ -3792,6 +4155,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -3814,6 +4180,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast",
         "sharing"
@@ -3834,6 +4203,9 @@
       "elements": [
         "media-player",
         "coach-mark"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "video",
@@ -3856,6 +4228,9 @@
         "media-player",
         "coach-mark"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "tips"
@@ -3877,6 +4252,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "podcast"
@@ -3895,6 +4273,9 @@
       "elements": [
         "media-player",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "video",
@@ -3915,6 +4296,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "podcast"
@@ -3933,6 +4317,9 @@
       "elements": [
         "media-player",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "video",
@@ -3955,14 +4342,15 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "warning"
       ],
       "flow": "Home › Listening to podcasts › Watching video clips",
       "flowId": "spotify-ios-versions-2026-10-06-watching-video-clips",
-      "patterns": [
-        "Dialogs"
-      ]
+      "patterns": []
     },
     {
       "n": 127,
@@ -3976,6 +4364,9 @@
       "elements": [
         "bottom-sheet",
         "progress"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "loading-state"
@@ -3996,6 +4387,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "podcast",
@@ -4021,6 +4415,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -4043,6 +4440,9 @@
         "bottom-sheet",
         "list",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music"
@@ -4067,6 +4467,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -4089,6 +4492,9 @@
         "bottom-sheet",
         "list",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music"
@@ -4113,6 +4519,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -4135,6 +4544,9 @@
         "bottom-sheet",
         "list",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music"
@@ -4159,6 +4571,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -4182,6 +4597,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
@@ -4203,6 +4621,9 @@
       "elements": [
         "bottom-sheet",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "subscription",
@@ -4228,6 +4649,9 @@
         "bottom-sheet",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "subscription",
         "upgrade"
@@ -4252,6 +4676,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "audio"
       ],
@@ -4273,13 +4700,15 @@
       "elements": [
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "collaboration"
       ],
       "flow": "Home › Starting a Jam",
       "flowId": "spotify-ios-versions-2026-10-06-starting-a-jam",
       "patterns": [
-        "Dialogs",
         "Welcome carousels"
       ]
     },
@@ -4292,6 +4721,10 @@
       "extraTypes": [],
       "elements": [
         "button"
+      ],
+      "style": [
+        "dark",
+        "minimal"
       ],
       "tags": [
         "privacy"
@@ -4316,6 +4749,9 @@
         "toggle",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "collaboration"
@@ -4338,6 +4774,9 @@
         "alert",
         "map",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "privacy",
@@ -4362,6 +4801,9 @@
         "bottom-sheet",
         "toggle",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing",
@@ -4388,6 +4830,9 @@
         "toggle",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "collaboration"
@@ -4413,6 +4858,9 @@
         "toggle",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "collaboration"
@@ -4434,6 +4882,9 @@
       "elements": [
         "modal",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "audio"
@@ -4457,6 +4908,9 @@
         "bottom-sheet",
         "toggle",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing",
@@ -4483,6 +4937,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "collaboration",
         "music"
@@ -4507,6 +4964,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "collaboration",
         "music"
@@ -4529,6 +4989,9 @@
         "avatar",
         "toggle",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "collaboration",
@@ -4553,6 +5016,9 @@
         "toggle",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "collaboration",
         "invite"
@@ -4573,6 +5039,10 @@
       "elements": [
         "bottom-sheet",
         "toggle"
+      ],
+      "style": [
+        "dark",
+        "bold"
       ],
       "tags": [
         "collaboration"
@@ -4595,6 +5065,9 @@
         "avatar",
         "toggle",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "collaboration",
@@ -4619,6 +5092,9 @@
         "search-bar",
         "skeleton",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "loading-state"
@@ -4645,6 +5121,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4669,6 +5148,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4695,6 +5177,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4719,6 +5204,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4745,6 +5233,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4769,6 +5260,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4795,6 +5289,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4819,6 +5316,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4845,6 +5345,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4869,6 +5372,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4895,6 +5401,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4919,6 +5428,9 @@
         "grid",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories",
@@ -4945,6 +5457,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4970,6 +5485,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories",
         "music"
@@ -4994,6 +5512,9 @@
         "empty-state",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Search",
       "flowId": "spotify-ios-versions-2026-10-06-search-area",
@@ -5013,6 +5534,9 @@
         "search-bar",
         "grid",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories"
@@ -5037,6 +5561,9 @@
         "grid",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories"
       ],
@@ -5059,6 +5586,9 @@
         "search-bar",
         "grid",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "categories"
@@ -5083,6 +5613,9 @@
         "grid",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "categories"
       ],
@@ -5106,6 +5639,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5132,6 +5668,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "categories"
@@ -5154,6 +5693,9 @@
       "elements": [
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -5173,6 +5715,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music"
@@ -5195,6 +5740,9 @@
         "grid",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing"
       ],
@@ -5216,6 +5764,9 @@
       "elements": [
         "modal",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "camera",
@@ -5241,6 +5792,9 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "camera",
         "privacy"
@@ -5264,6 +5818,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5290,6 +5847,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5314,6 +5874,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5340,6 +5903,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5364,6 +5930,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5390,6 +5959,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5414,6 +5986,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5440,6 +6015,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "podcast"
       ],
@@ -5463,6 +6041,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5489,6 +6070,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5513,6 +6097,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5539,6 +6126,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5563,6 +6153,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5589,6 +6182,9 @@
         "media-player",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "podcast"
@@ -5613,6 +6209,9 @@
         "list",
         "media-player",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5639,6 +6238,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "favorites"
@@ -5658,6 +6260,9 @@
         "search-bar",
         "empty-state",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Your Library",
@@ -5679,6 +6284,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5702,6 +6310,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "collaboration"
@@ -5723,6 +6334,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "collaboration"
@@ -5743,6 +6357,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5769,14 +6386,15 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
       "flow": "Your Library › Creating a playlist",
       "flowId": "spotify-ios-versions-2026-10-06-creating-a-playlist",
-      "patterns": [
-        "Dialogs"
-      ]
+      "patterns": []
     },
     {
       "n": 204,
@@ -5788,6 +6406,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5814,14 +6435,15 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
       "flow": "Your Library › Creating a playlist",
       "flowId": "spotify-ios-versions-2026-10-06-creating-a-playlist",
-      "patterns": [
-        "Dialogs"
-      ]
+      "patterns": []
     },
     {
       "n": 206,
@@ -5833,6 +6455,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5855,6 +6480,9 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "collaboration"
@@ -5875,6 +6503,9 @@
       "elements": [
         "bottom-sheet",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5901,14 +6532,15 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music"
       ],
       "flow": "Your Library › Creating a playlist",
       "flowId": "spotify-ios-versions-2026-10-06-creating-a-playlist",
-      "patterns": [
-        "Dialogs"
-      ]
+      "patterns": []
     },
     {
       "n": 210,
@@ -5922,6 +6554,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music",
@@ -5946,6 +6581,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "music",
         "recommendations"
@@ -5967,6 +6605,9 @@
         "nav-bar",
         "avatar",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "invite",
@@ -5990,6 +6631,9 @@
         "avatar",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "invite",
         "collaboration"
@@ -6011,6 +6655,9 @@
         "nav-bar",
         "avatar",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "invite",
@@ -6034,6 +6681,9 @@
         "grid",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing",
         "invite"
@@ -6055,6 +6705,9 @@
         "button",
         "list",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "subscription",
@@ -6079,6 +6732,9 @@
         "list",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "subscription",
         "upgrade"
@@ -6101,6 +6757,9 @@
         "button",
         "list",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "subscription",
@@ -6126,6 +6785,9 @@
         "bottom-sheet",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "subscription"
       ],
@@ -6150,6 +6812,9 @@
         "avatar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Profile menu",
       "flowId": "spotify-ios-versions-2026-10-06-profile-area",
@@ -6170,6 +6835,9 @@
         "navigation",
         "avatar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Profile menu",
@@ -6192,6 +6860,9 @@
         "avatar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Profile menu",
       "flowId": "spotify-ios-versions-2026-10-06-profile-area",
@@ -6212,6 +6883,9 @@
         "navigation",
         "avatar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Profile menu",
@@ -6234,6 +6908,9 @@
         "avatar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Profile menu",
       "flowId": "spotify-ios-versions-2026-10-06-profile-area",
@@ -6253,6 +6930,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recents",
@@ -6278,6 +6958,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6301,6 +6984,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recents",
@@ -6326,6 +7012,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6349,6 +7038,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recents",
@@ -6374,6 +7066,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6397,6 +7092,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recents",
@@ -6422,6 +7120,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6445,6 +7146,9 @@
         "chip",
         "list",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "recents",
@@ -6470,6 +7174,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6494,6 +7201,9 @@
         "list",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "recents",
         "history"
@@ -6516,6 +7226,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "followers"
       ],
@@ -6536,6 +7249,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "followers"
       ],
@@ -6555,6 +7271,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "followers"
@@ -6579,6 +7298,9 @@
         "empty-state",
         "toast"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "confirmation"
       ],
@@ -6601,6 +7323,10 @@
         "bottom-sheet",
         "list"
       ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "destructive-action"
       ],
@@ -6622,6 +7348,9 @@
         "text-field",
         "card"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "ai-assistant"
       ],
@@ -6641,6 +7370,9 @@
         "text-field",
         "card",
         "banner"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "ai-assistant",
@@ -6665,6 +7397,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6684,6 +7419,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6705,6 +7443,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6724,6 +7465,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6745,6 +7489,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6764,6 +7511,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6785,6 +7535,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6804,6 +7557,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6825,6 +7581,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6844,6 +7603,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6865,6 +7627,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6885,6 +7650,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6902,6 +7670,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6923,6 +7694,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6942,6 +7716,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -6963,6 +7740,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -6982,6 +7762,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -7003,6 +7786,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -7022,6 +7808,9 @@
         "list",
         "button",
         "media-player"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [],
       "flow": "Settings",
@@ -7043,6 +7832,9 @@
         "button",
         "media-player"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -7063,6 +7855,9 @@
         "bottom-sheet",
         "list",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "privacy"
@@ -7088,6 +7883,9 @@
         "empty-state",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [],
       "flow": "Settings",
       "flowId": "spotify-ios-versions-2026-10-06-settings-area",
@@ -7107,6 +7905,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "subscription"
@@ -7128,6 +7929,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "subscription"
       ],
@@ -7148,6 +7952,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "subscription"
       ],
@@ -7167,6 +7974,10 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -7184,6 +7995,10 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -7199,6 +8014,10 @@
       "type": "loading",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "dark",
+        "minimal"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -7215,6 +8034,10 @@
       "extraTypes": [],
       "elements": [
         "progress"
+      ],
+      "style": [
+        "dark",
+        "minimal"
       ],
       "tags": [
         "loading-state"
@@ -7236,6 +8059,9 @@
         "text-field",
         "banner",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "personalization",
@@ -7260,6 +8086,9 @@
         "toggle",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "video",
         "language"
@@ -7280,6 +8109,9 @@
       "elements": [
         "nav-bar",
         "toggle"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "privacy",
@@ -7302,6 +8134,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "audio"
       ],
@@ -7323,6 +8158,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7347,6 +8185,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7369,6 +8210,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7393,6 +8237,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7415,6 +8262,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7439,6 +8289,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7461,6 +8314,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7485,6 +8341,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7507,6 +8366,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7531,6 +8393,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7553,6 +8418,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "reminders"
@@ -7577,6 +8445,9 @@
         "nav-bar",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7600,6 +8471,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7622,6 +8496,9 @@
         "list",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing"
       ],
@@ -7642,6 +8519,9 @@
         "nav-bar",
         "list",
         "toggle"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing"
@@ -7664,6 +8544,9 @@
         "list",
         "toggle"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "sharing"
       ],
@@ -7684,6 +8567,9 @@
         "nav-bar",
         "list",
         "toggle"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "sharing"
@@ -7706,6 +8592,9 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -7725,6 +8614,9 @@
       "elements": [
         "text-field",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -7748,6 +8640,10 @@
       "elements": [
         "progress"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "social-login",
         "loading-state"
@@ -7766,6 +8662,10 @@
       "type": "error",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "light",
+        "minimal"
+      ],
       "tags": [
         "warning"
       ],
@@ -7781,6 +8681,9 @@
       "type": "error",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "warning"
       ],
@@ -7796,6 +8699,9 @@
       "type": "loading",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -7813,6 +8719,9 @@
       "elements": [
         "nav-bar",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "music"
@@ -7832,6 +8741,9 @@
         "nav-bar",
         "toggle",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "offline"
@@ -7853,6 +8765,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "audio"
       ],
@@ -7872,6 +8787,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "legal"
@@ -7893,6 +8811,9 @@
         "nav-bar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "legal"
       ],
@@ -7912,6 +8833,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "legal"
@@ -7933,6 +8857,9 @@
         "nav-bar",
         "list",
         "banner"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "legal",
@@ -7957,6 +8884,9 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "destructive-action"
       ],
@@ -7980,6 +8910,9 @@
         "alert",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "destructive-action"
       ],
@@ -8000,6 +8933,9 @@
       "elements": [
         "avatar",
         "list"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "account-switching"
@@ -8022,6 +8958,9 @@
       "elements": [
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "account-switching"
       ],
@@ -8043,6 +8982,9 @@
         "nav-bar",
         "text-field",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8067,6 +9009,9 @@
         "button",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "social-login"
@@ -8089,6 +9034,9 @@
         "text-field",
         "button",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8113,6 +9061,9 @@
         "button",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "social-login"
@@ -8135,6 +9086,9 @@
         "text-field",
         "button",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8161,6 +9115,9 @@
         "button",
         "keyboard"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "warning"
@@ -8183,6 +9140,9 @@
         "text-field",
         "button",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8207,6 +9167,9 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "two-factor"
@@ -8229,6 +9192,9 @@
         "text-field",
         "keyboard",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8253,6 +9219,9 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "two-factor"
@@ -8275,6 +9244,9 @@
         "text-field",
         "keyboard",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8300,6 +9272,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "warning"
@@ -8322,6 +9297,9 @@
         "text-field",
         "keyboard",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "email-login",
@@ -8347,6 +9325,9 @@
         "text-field",
         "progress"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "email-login",
         "loading-state"
@@ -8368,6 +9349,9 @@
         "avatar",
         "list"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "account-switching"
       ],
@@ -8388,6 +9372,9 @@
       ],
       "elements": [
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "account-switching"

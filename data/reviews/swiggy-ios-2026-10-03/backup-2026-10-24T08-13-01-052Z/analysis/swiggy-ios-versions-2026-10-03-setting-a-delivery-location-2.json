@@ -1,0 +1,144 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-setting-a-delivery-location-2",
+  "screen_id": "swiggy-ios-versions-2026-10-03-setting-a-delivery-location-2",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.315Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [],
+  "category": "productivity",
+  "flow": "creation",
+  "flow_name": "Setting a delivery location",
+  "flow_position": 9,
+  "name": "Location selection",
+  "description": "Form screen with a row of 5 category chips, a search bar and 2 input fields. Light theme, 15 text elements.",
+  "text": "9:41¢ all ¥ ae\nselect your location\nsearch an area or address q\n® [l)\nuse current add new request\nlocation address address\nsaved addresses\nj other :\nvg, gg, sekkadu, manali, chenndai,\ntamil nadu 600051, india\nj other -\njjj, yhhh, shastri nagar, manali,\nchennai, tamil nadu 600051, india",
+  "purpose": "To allow the user to select a saved delivery address or add a new one.",
+  "primary_action": "Select a saved address",
+  "tags": [
+    "search",
+    "location",
+    "address",
+    "form",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select your location”",
+        "Category strip: Request, Add New, Use Current, Address, Address",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with a row of 5 category chips, a search bar and 2 input fields. Light theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 9 in “Onboarding”",
+        "Reached from “OTP verification (3)”",
+        "Leads to “Feature tip · Food”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:09 in the recording",
+        "Frame 36 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7f7f80",
+      "role": "background",
+      "share": 0.993
+    },
+    {
+      "hex": "#606161",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#303030",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 36,
+    "atSeconds": 9.6,
+    "endSeconds": 11.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [
+      "Request",
+      "Add New",
+      "Use Current",
+      "Address",
+      "Address"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Select your location",
+    "headline": "Vg, gg, Sekkadu, Manali, Chennai"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open Select your location",
+        "name": "OTP verification (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Wait 1.5s",
+        "name": "Feature tip · Food"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

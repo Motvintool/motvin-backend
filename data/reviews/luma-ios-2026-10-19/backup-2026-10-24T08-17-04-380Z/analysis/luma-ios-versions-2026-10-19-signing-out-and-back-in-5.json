@@ -1,0 +1,150 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-signing-out-and-back-in-5",
+  "screen_id": "luma-ios-versions-2026-10-19-signing-out-and-back-in-5",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.844Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "lifestyle",
+  "flow": "authentication",
+  "flow_name": "Signing out and back in",
+  "flow_position": 3,
+  "name": "Verification code entry",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Next”. Dark theme, 24 text elements.",
+  "text": "9:41 €\nEnter Verification Code\nWe sent a verification code to your email\nmotvintool@gmail.com.\nF--\nNext\nFrom Gmail\n038282\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": "To enter a verification code sent to the user's email.",
+  "primary_action": "Enter verification code",
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter Verification Code”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Next”. Dark theme, 24 text elements.",
+        "Calls to action: “Next”",
+        "24 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Logging in with email”",
+        "Reached from “Sign in with email (6)”",
+        "Leads to “OTP verification (10)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.7s at 7:31 in the recording",
+        "Frame 1534 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232325",
+      "role": "background",
+      "share": 0.816
+    },
+    {
+      "hex": "#404042",
+      "role": "surface",
+      "share": 0.158
+    },
+    {
+      "hex": "#626264",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#7b7b7c",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#b0b0b1",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1534,
+    "atSeconds": 451.8,
+    "endSeconds": 460.5,
+    "holdSeconds": 8.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": true,
+    "title": "Enter Verification Code",
+    "headline": "Enter Verification Code"
+  },
+  "crawler": {
+    "nodeId": "s170",
+    "depth": 170,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s169",
+        "via": "Back to OTP verification",
+        "name": "Sign in with email (6)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s171",
+        "via": "Back to OTP verification",
+        "name": "OTP verification (10)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

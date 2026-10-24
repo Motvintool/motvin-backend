@@ -1,0 +1,154 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-taking-the-first-lesson-1",
+  "screen_id": "duolingo-ios-versions-2026-10-11-taking-the-first-lesson-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.591Z",
+  "screen_type": "dialog",
+  "published_as": "onboarding",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Taking the first lesson",
+  "flow_position": 39,
+  "name": "First lesson introduction",
+  "description": "Dialog over a dimmed screen. Dark theme, 2 text elements.",
+  "text": "9:41 C\nOkay! Here's your first 2\nminute lesson.\nCONTINUE",
+  "purpose": "To introduce the user to their first lesson and prompt them to continue.",
+  "primary_action": "Click continue",
+  "tags": [
+    "continue",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Okay! Here's your first 2”",
+        "Dialog over a dimmed background, covering 25% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Dark theme, 2 text elements.",
+        "2 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 39 of 187 in “Onboarding”",
+        "Reached from “Find my level”",
+        "Leads to “Coffee sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:51 in the recording",
+        "Frame 374 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#142027",
+      "role": "background",
+      "share": 0.898
+    },
+    {
+      "hex": "#39454f",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#60cc05",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#7e6831",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#94e240",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 374,
+    "atSeconds": 111.9,
+    "endSeconds": 112.5,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.34375,
+        "w": 0.5,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Okay! Here's your first 2",
+    "headline": "Okay! Here's your first 2",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Back to Dialog",
+        "name": "Find my level"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s043",
+        "via": "Open Coffee",
+        "name": "Coffee sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

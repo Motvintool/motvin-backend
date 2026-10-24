@@ -2,7 +2,33 @@
   "app": "claude",
   "platform": "webapp",
   "version": "2026-10-24",
-  "generatedAt": "2026-10-24T03:02:17.617Z",
+  "generatedAt": "2026-10-24T08:13:11.010Z",
+  "industry": "productivity",
+  "industries": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "travel",
+    "productivity",
+    "ai",
+    "social",
+    "finance",
+    "food",
+    "entertainment",
+    "lifestyle",
+    "unsorted"
+  ],
+  "flowCategories": [
+    "onboarding",
+    "checkout",
+    "authentication",
+    "search",
+    "settings",
+    "creation",
+    "discovery"
+  ],
   "types": [
     "landing",
     "splash",
@@ -232,6 +258,244 @@
       "screens": 2
     }
   ],
+  "patterns": [
+    {
+      "slug": "top-navigation-bars",
+      "name": "Top navigation bars",
+      "match": {
+        "platforms": [
+          "web",
+          "webapp"
+        ],
+        "elements": [
+          "nav-bar"
+        ]
+      },
+      "screens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        17,
+        18,
+        20,
+        22,
+        23,
+        26,
+        28,
+        32,
+        33,
+        36,
+        37,
+        38,
+        39,
+        40,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "slug": "tab-bars",
+      "name": "Tab bars",
+      "match": {
+        "elements": [
+          "tab-bar"
+        ]
+      },
+      "screens": [
+        21,
+        22,
+        25,
+        45,
+        46
+      ]
+    },
+    {
+      "slug": "search-inputs",
+      "name": "Search inputs",
+      "match": {
+        "elements": [
+          "search-bar"
+        ]
+      },
+      "screens": [
+        23,
+        45,
+        46
+      ]
+    },
+    {
+      "slug": "pricing-cards",
+      "name": "Pricing cards",
+      "match": {
+        "screenTypes": [
+          "pricing"
+        ]
+      },
+      "screens": [
+        21,
+        22,
+        24,
+        25
+      ]
+    },
+    {
+      "slug": "login-forms",
+      "name": "Login forms",
+      "match": {
+        "screenTypes": [
+          "login"
+        ]
+      },
+      "screens": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "slug": "settings-forms",
+      "name": "Settings forms",
+      "match": {
+        "screenTypes": [
+          "settings"
+        ]
+      },
+      "screens": [
+        45,
+        46
+      ]
+    },
+    {
+      "slug": "dialogs",
+      "name": "Dialogs",
+      "match": {
+        "mainTypes": [
+          "modal"
+        ],
+        "withoutElements": [
+          "bottom-sheet"
+        ]
+      },
+      "screens": [
+        16,
+        19,
+        27,
+        29,
+        30,
+        31,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "slug": "chat-screens",
+      "name": "Chat screens",
+      "match": {
+        "screenTypes": [
+          "messages"
+        ]
+      },
+      "screens": [
+        26,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "slug": "permission-prompts",
+      "name": "Permission prompts",
+      "match": {
+        "screenTypes": [
+          "permission"
+        ]
+      },
+      "screens": [
+        44
+      ]
+    },
+    {
+      "slug": "toasts",
+      "name": "Toasts",
+      "match": {
+        "elements": [
+          "toast"
+        ]
+      },
+      "screens": [
+        39,
+        40,
+        42,
+        43
+      ]
+    },
+    {
+      "slug": "banners",
+      "name": "Banners",
+      "match": {
+        "elements": [
+          "banner"
+        ]
+      },
+      "screens": [
+        10,
+        11,
+        12,
+        33
+      ]
+    },
+    {
+      "slug": "skeleton-loaders",
+      "name": "Skeleton loaders",
+      "match": {
+        "elements": [
+          "skeleton"
+        ]
+      },
+      "screens": [
+        15
+      ]
+    }
+  ],
+  "problems": [],
   "screens": [
     {
       "n": 1,
@@ -248,13 +512,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 2,
@@ -271,13 +542,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 3,
@@ -294,13 +572,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 4,
@@ -317,13 +602,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 5,
@@ -338,12 +630,19 @@
         "nav-bar",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 6,
@@ -360,13 +659,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 7,
@@ -383,13 +689,20 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies",
         "social-login"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 8,
@@ -405,12 +718,19 @@
         "button",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 9,
@@ -427,12 +747,19 @@
         "text-field",
         "modal"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Top navigation bars",
+        "Login forms"
+      ]
     },
     {
       "n": 10,
@@ -449,12 +776,19 @@
         "modal",
         "banner"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Login forms",
+        "Banners"
+      ]
     },
     {
       "n": 11,
@@ -471,12 +805,19 @@
         "modal",
         "banner"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Login forms",
+        "Banners"
+      ]
     },
     {
       "n": 12,
@@ -493,12 +834,19 @@
         "modal",
         "banner"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Login forms",
+        "Banners"
+      ]
     },
     {
       "n": 13,
@@ -514,12 +862,18 @@
         "button",
         "alert"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Login forms"
+      ]
     },
     {
       "n": 14,
@@ -534,12 +888,18 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "cookies"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Login forms"
+      ]
     },
     {
       "n": 15,
@@ -552,17 +912,23 @@
         "skeleton",
         "progress"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
       "flow": "Onboarding",
-      "flowId": "claude-webapp-versions-2026-10-24-onboarding"
+      "flowId": "claude-webapp-versions-2026-10-24-onboarding",
+      "patterns": [
+        "Skeleton loaders"
+      ]
     },
     {
       "n": 16,
       "id": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings-1",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/adjusting-cookie-settings/1.webp",
-      "name": "Cookie settings · bottom sheet",
+      "name": "Cookie settings",
       "type": "modal",
       "extraTypes": [
         "home"
@@ -573,18 +939,24 @@
         "legal-text",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "cookies",
         "privacy"
       ],
       "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings"
+      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
+      "patterns": [
+        "Dialogs"
+      ]
     },
     {
       "n": 17,
       "id": "claude-webapp-versions-2026-10-24-home-1",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/home/1.webp",
-      "name": "Home screen",
+      "name": "Home",
       "type": "home",
       "extraTypes": [],
       "elements": [
@@ -593,11 +965,17 @@
         "button",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Home",
-      "flowId": "claude-webapp-versions-2026-10-24-home"
+      "flowId": "claude-webapp-versions-2026-10-24-home",
+      "patterns": [
+        "Top navigation bars"
+      ]
     },
     {
       "n": 18,
@@ -613,11 +991,17 @@
         "badge",
         "alert"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "privacy"
       ],
       "flow": "Home",
-      "flowId": "claude-webapp-versions-2026-10-24-home"
+      "flowId": "claude-webapp-versions-2026-10-24-home",
+      "patterns": [
+        "Top navigation bars"
+      ]
     },
     {
       "n": 19,
@@ -634,12 +1018,18 @@
         "legal-text",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "cookies",
         "privacy"
       ],
       "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings"
+      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
+      "patterns": [
+        "Dialogs"
+      ]
     },
     {
       "n": 20,
@@ -655,11 +1045,17 @@
         "badge",
         "avatar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Home › Adjusting cookie settings",
-      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings"
+      "flowId": "claude-webapp-versions-2026-10-24-adjusting-cookie-settings",
+      "patterns": [
+        "Top navigation bars"
+      ]
     },
     {
       "n": 21,
@@ -676,12 +1072,19 @@
         "text-field",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "upgrade"
       ],
       "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription"
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "patterns": [
+        "Tab bars",
+        "Pricing cards"
+      ]
     },
     {
       "n": 22,
@@ -698,18 +1101,26 @@
         "price",
         "cta"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "upgrade"
       ],
       "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription"
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "patterns": [
+        "Top navigation bars",
+        "Tab bars",
+        "Pricing cards"
+      ]
     },
     {
       "n": 23,
       "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-3",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/webapp/claude/versions/2026-10-24/upgrading-subscription/3.webp",
-      "name": "Home screen",
+      "name": "Home",
       "type": "home",
       "extraTypes": [],
       "elements": [
@@ -720,11 +1131,18 @@
         "button",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription"
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "patterns": [
+        "Top navigation bars",
+        "Search inputs"
+      ]
     },
     {
       "n": 24,
@@ -742,12 +1160,18 @@
         "text-field",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "upgrade"
       ],
       "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription"
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "patterns": [
+        "Pricing cards"
+      ]
     },
     {
       "n": 25,
@@ -766,12 +1190,19 @@
         "text-field",
         "legal-text"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "upgrade"
       ],
       "flow": "Upgrading subscription",
-      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription"
+      "flowId": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "patterns": [
+        "Tab bars",
+        "Pricing cards"
+      ]
     },
     {
       "n": 26,
@@ -787,11 +1218,18 @@
         "button",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens"
+      ]
     },
     {
       "n": 27,
@@ -805,13 +1243,19 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Dialogs"
+      ]
     },
     {
       "n": 28,
@@ -825,13 +1269,20 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens"
+      ]
     },
     {
       "n": 29,
@@ -845,13 +1296,19 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Dialogs"
+      ]
     },
     {
       "n": 30,
@@ -867,13 +1324,20 @@
         "button",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 31,
@@ -889,13 +1353,20 @@
         "button",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 32,
@@ -910,13 +1381,20 @@
         "button",
         "avatar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens"
+      ]
     },
     {
       "n": 33,
@@ -931,13 +1409,21 @@
         "button",
         "banner"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Giving negative feedback",
-      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback"
+      "flowId": "claude-webapp-versions-2026-10-24-giving-negative-feedback",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens",
+        "Banners"
+      ]
     },
     {
       "n": 34,
@@ -953,13 +1439,20 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "feedback"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 35,
@@ -975,13 +1468,20 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 36,
@@ -999,11 +1499,19 @@
         "text-field",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Top navigation bars",
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 37,
@@ -1018,13 +1526,20 @@
         "button",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens"
+      ]
     },
     {
       "n": 38,
@@ -1042,13 +1557,21 @@
         "modal",
         "badge"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Top navigation bars",
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 39,
@@ -1066,13 +1589,22 @@
         "text-field",
         "toast"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Top navigation bars",
+        "Dialogs",
+        "Chat screens",
+        "Toasts"
+      ]
     },
     {
       "n": 40,
@@ -1090,13 +1622,22 @@
         "text-field",
         "toast"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Top navigation bars",
+        "Dialogs",
+        "Chat screens",
+        "Toasts"
+      ]
     },
     {
       "n": 41,
@@ -1114,13 +1655,20 @@
         "button",
         "legal-text"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat",
         "file-upload"
       ],
       "flow": "Chats › Sending a message",
-      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message"
+      "flowId": "claude-webapp-versions-2026-10-24-sending-a-message",
+      "patterns": [
+        "Dialogs",
+        "Chat screens"
+      ]
     },
     {
       "n": 42,
@@ -1137,12 +1685,20 @@
         "toast",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat"
       ],
       "flow": "Chats › Opening chat options",
-      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options"
+      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options",
+      "patterns": [
+        "Dialogs",
+        "Chat screens",
+        "Toasts"
+      ]
     },
     {
       "n": 43,
@@ -1159,12 +1715,20 @@
         "toast",
         "text-field"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "chat"
       ],
       "flow": "Chats › Opening chat options",
-      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options"
+      "flowId": "claude-webapp-versions-2026-10-24-opening-chat-options",
+      "patterns": [
+        "Dialogs",
+        "Chat screens",
+        "Toasts"
+      ]
     },
     {
       "n": 44,
@@ -1181,12 +1745,20 @@
         "text-field",
         "nav-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "voice-input",
         "ai-assistant"
       ],
       "flow": "Chats › Using voice input",
-      "flowId": "claude-webapp-versions-2026-10-24-chatting-with-claude"
+      "flowId": "claude-webapp-versions-2026-10-24-chatting-with-claude",
+      "patterns": [
+        "Top navigation bars",
+        "Chat screens",
+        "Permission prompts"
+      ]
     },
     {
       "n": 45,
@@ -1203,11 +1775,20 @@
         "button",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Settings",
-      "flowId": "claude-webapp-versions-2026-10-24-settings"
+      "flowId": "claude-webapp-versions-2026-10-24-settings",
+      "patterns": [
+        "Top navigation bars",
+        "Tab bars",
+        "Search inputs",
+        "Settings forms"
+      ]
     },
     {
       "n": 46,
@@ -1224,11 +1805,20 @@
         "button",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant"
       ],
       "flow": "Settings",
-      "flowId": "claude-webapp-versions-2026-10-24-settings"
+      "flowId": "claude-webapp-versions-2026-10-24-settings",
+      "patterns": [
+        "Top navigation bars",
+        "Tab bars",
+        "Search inputs",
+        "Settings forms"
+      ]
     }
   ]
 }

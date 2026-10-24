@@ -1,0 +1,145 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-03-claiming-a-breakfast-offer-2",
+  "screen_id": "swiggy-ios-versions-2026-10-03-claiming-a-breakfast-offer-2",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T07:22:09.319Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Claiming a breakfast offer",
+  "flow_position": 2,
+  "name": "Offer booked confirmation",
+  "description": "Success screen. Light theme, 8 text elements.",
+  "text": "| 9:414 all ¥ @\n= © &\nyour offer\nbooked for\ntomorrow!\nj\ncg a (gs\note a ws i =. _ utok\nyay! you're all set for breakfast!\nomc\ncome back tomorrow morning between\n6am -11am",
+  "purpose": "To confirm that a breakfast offer has been successfully booked",
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "banner"
+  ],
+  "style": [
+    "light",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Offer”",
+        "Light, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen. Light theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Pick Your”",
+        "Reached from “Pick Your”",
+        "Leads to “Item detail (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 8:19 in the recording",
+        "Frame 1673 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdb802",
+      "role": "background",
+      "share": 0.696
+    },
+    {
+      "hex": "#fefcfb",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#d69508",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#fdd56e",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#8d500d",
+      "role": "text",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "swiggy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1673,
+    "atSeconds": 499.2,
+    "endSeconds": 502.2,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Your Offer",
+    "headline": "Tomorrow!"
+  },
+  "crawler": {
+    "nodeId": "s235",
+    "depth": 234,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s234",
+        "via": "Open Your Offer",
+        "name": "Pick Your"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s236",
+        "via": "Back to Item detail",
+        "name": "Item detail (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-03",
+  "capturedBy": "motvin-ios-crawler"
+}

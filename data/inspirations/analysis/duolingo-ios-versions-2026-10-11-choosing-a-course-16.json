@@ -1,0 +1,160 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-choosing-a-course-16",
+  "screen_id": "duolingo-ios-versions-2026-10-11-choosing-a-course-16",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.589Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Choosing a course",
+  "flow_position": 27,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 10 text elements.",
+  "text": "9:41€\nC\n•0ll\nI'll remind you to\npractice so it becomes a\nhabit!\n\"Duolingo\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nREMIND ME TO PRACTICE",
+  "purpose": "To request permission to send app notifications",
+  "primary_action": "Allow",
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Duolingo\" Would Like to Send”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 10 text elements.",
+        "Calls to action: “Allow”",
+        "10 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 187 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “I'll cheer you on from”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:19 in the recording",
+        "Frame 267 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c1216",
+      "role": "background",
+      "share": 0.793
+    },
+    {
+      "hex": "#2b3134",
+      "role": "surface",
+      "share": 0.089
+    },
+    {
+      "hex": "#425d1b",
+      "role": "accent",
+      "share": 0.081
+    },
+    {
+      "hex": "#43484b",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#606465",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 267,
+    "atSeconds": 79.5,
+    "endSeconds": 80.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.390625,
+        "w": 0.625,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "title": "\"Duolingo\" Would Like to Send",
+    "headline": "\"Duolingo\" Would Like to Send"
+  },
+  "crawler": {
+    "nodeId": "s029",
+    "depth": 28,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s028",
+        "via": "Tap “\"Duolingo\" Would Like to”",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s030",
+        "via": "Open I'll cheer you on from",
+        "name": "I'll cheer you on from"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

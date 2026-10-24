@@ -1,0 +1,161 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-searching-for-events-6",
+  "screen_id": "luma-ios-versions-2026-10-19-searching-for-events-6",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.853Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "lifestyle",
+  "flow": "search",
+  "flow_name": "Searching for events",
+  "flow_position": 3,
+  "name": "Search events",
+  "description": "Search bottom sheet, on top of Search with a search bar and the keyboard open. Dark theme, 38 text elements.",
+  "text": "9:41(\n<\nQ Search events...\n1\nAny Date\nNear You\nRecently viewed\nSecondlnnings -Meet up\nChennai • Saturday, 3:00PM\nReading Rhythms DC + Free Book: Sens...\nWashington • Tuesday, 7:00 PM GMT-4\nI'm\nThe\nR\nU\nQ\nW\nT\nO\nP\nE\nY\nH\nA\nS\nD\nG\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123\nU",
+  "purpose": "To search for events and filter by date and location.",
+  "primary_action": "Type a search query and press search.",
+  "tags": [
+    "search",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search events”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Bottom sheet, covering 19% of the height from 69% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search bottom sheet, on top of Search with a search bar and the keyboard open. Dark theme, 38 text elements.",
+        "38 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Searching for “Any Date””",
+        "Reached from “Search (3)”",
+        "Leads to “Search events”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:00 in the recording",
+        "Frame 1004 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.565
+    },
+    {
+      "hex": "#242225",
+      "role": "surface",
+      "share": 0.317
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#5d5c5f",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#0b509e",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1004,
+    "atSeconds": 300.6,
+    "endSeconds": 301.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.6875,
+        "w": 0.5,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "title": "Search events",
+    "headline": "Secondlnnings -Meet up"
+  },
+  "crawler": {
+    "nodeId": "s107",
+    "depth": 106,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s106",
+        "via": "Dismiss",
+        "name": "Search (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s108",
+        "via": "Open Search events",
+        "name": "Search events"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

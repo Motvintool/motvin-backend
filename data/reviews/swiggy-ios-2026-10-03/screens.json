@@ -2,7 +2,33 @@
   "app": "swiggy",
   "platform": "ios",
   "version": "2026-10-03",
-  "generatedAt": "2026-10-24T07:53:05.268Z",
+  "generatedAt": "2026-10-24T08:13:02.143Z",
+  "industry": "food",
+  "industries": [
+    "saas",
+    "fintech",
+    "healthcare",
+    "ecommerce",
+    "education",
+    "travel",
+    "productivity",
+    "ai",
+    "social",
+    "finance",
+    "food",
+    "entertainment",
+    "lifestyle",
+    "unsorted"
+  ],
+  "flowCategories": [
+    "onboarding",
+    "checkout",
+    "authentication",
+    "search",
+    "settings",
+    "creation",
+    "discovery"
+  ],
   "types": [
     "landing",
     "splash",
@@ -217,19 +243,13 @@
       "id": "swiggy-ios-versions-2026-10-03-searching-for-food",
       "path": "Food › Searching for food",
       "category": "search",
-      "screens": 2
+      "screens": 5
     },
     {
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
       "path": "Food › Ordering from a restaurant",
       "category": "checkout",
       "screens": 21
-    },
-    {
-      "id": "swiggy-ios-versions-2026-10-03-using-voice-search",
-      "path": "Food › Using voice search",
-      "category": "search",
-      "screens": 3
     },
     {
       "id": "swiggy-ios-versions-2026-10-03-starting-a-group-order",
@@ -544,13 +564,13 @@
         34,
         43,
         44,
-        45,
-        46,
         48,
         49,
-        50,
+        51,
+        52,
         53,
-        55,
+        56,
+        58,
         69,
         72,
         74,
@@ -630,16 +650,16 @@
       "screens": [
         43,
         44,
+        45,
         46,
-        48,
-        50,
+        47,
+        49,
         51,
-        52,
         53,
+        54,
         55,
-        66,
-        67,
-        68,
+        56,
+        58,
         94,
         95,
         96,
@@ -677,13 +697,13 @@
         39,
         40,
         41,
-        45,
-        49,
-        58,
-        59,
-        60,
+        48,
+        52,
         61,
-        65,
+        62,
+        63,
+        64,
+        68,
         81,
         83,
         86,
@@ -713,7 +733,7 @@
         ]
       },
       "screens": [
-        57,
+        60,
         125,
         217,
         218
@@ -759,8 +779,8 @@
         ]
       },
       "screens": [
-        47,
-        54,
+        50,
+        57,
         82,
         119,
         120,
@@ -865,8 +885,8 @@
         ]
       },
       "screens": [
-        56,
-        64,
+        59,
+        67,
         85,
         93,
         114
@@ -876,7 +896,7 @@
       "slug": "dialogs",
       "name": "Dialogs",
       "match": {
-        "screenTypes": [
+        "mainTypes": [
           "modal"
         ],
         "withoutElements": [
@@ -884,13 +904,9 @@
         ]
       },
       "screens": [
-        56,
-        64,
         75,
         77,
-        85,
         95,
-        127,
         189,
         191,
         194,
@@ -909,12 +925,12 @@
         ]
       },
       "screens": [
-        47,
-        51,
-        52,
+        50,
         54,
+        55,
         57,
-        62,
+        60,
+        65,
         70,
         71,
         79,
@@ -1058,12 +1074,12 @@
         ]
       },
       "screens": [
-        58,
-        59,
-        60,
         61,
+        62,
         63,
-        65,
+        64,
+        66,
+        68,
         86,
         87,
         90,
@@ -1086,9 +1102,9 @@
         ]
       },
       "screens": [
-        66,
-        67,
-        68
+        45,
+        46,
+        47
       ]
     },
     {
@@ -1195,8 +1211,8 @@
         26,
         35,
         42,
-        53,
-        55,
+        56,
+        58,
         112,
         113,
         115,
@@ -1237,6 +1253,7 @@
       ]
     }
   ],
+  "problems": [],
   "screens": [
     {
       "n": 1,
@@ -1246,6 +1263,10 @@
       "type": "splash",
       "extraTypes": [],
       "elements": [],
+      "style": [
+        "light",
+        "bold"
+      ],
       "tags": [
         "first-run"
       ],
@@ -1262,6 +1283,10 @@
       "extraTypes": [],
       "elements": [
         "button"
+      ],
+      "style": [
+        "light",
+        "bold"
       ],
       "tags": [
         "welcome",
@@ -1285,6 +1310,9 @@
         "button",
         "legal-text"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "phone-login"
       ],
@@ -1305,6 +1333,9 @@
         "text-field",
         "keyboard",
         "legal-text"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "phone-login"
@@ -1327,6 +1358,9 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "phone-login",
         "two-factor"
@@ -1348,6 +1382,9 @@
         "text-field",
         "keyboard",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "phone-login",
@@ -1373,6 +1410,9 @@
         "progress",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "phone-login",
         "loading-state"
@@ -1396,6 +1436,9 @@
         "search-bar",
         "card",
         "empty-state"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -1423,6 +1466,9 @@
         "card",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "loading-state"
@@ -1447,6 +1493,10 @@
         "segmented-control",
         "coach-mark",
         "button"
+      ],
+      "style": [
+        "dark",
+        "bold"
       ],
       "tags": [
         "tips",
@@ -1473,6 +1523,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1502,6 +1555,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -1529,6 +1585,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1558,6 +1617,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -1585,6 +1647,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1614,6 +1679,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -1641,6 +1709,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1671,6 +1742,9 @@
         "skeleton",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -1698,6 +1772,9 @@
         "skeleton",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -1723,6 +1800,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1752,6 +1832,9 @@
         "banner",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -1778,6 +1861,9 @@
         "card",
         "banner",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1806,6 +1892,9 @@
         "banner",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -1832,6 +1921,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1861,6 +1953,9 @@
         "banner",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -1887,6 +1982,9 @@
         "card",
         "banner",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1915,6 +2013,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -1942,6 +2043,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -1972,6 +2076,9 @@
         "skeleton",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -1999,6 +2106,9 @@
         "skeleton",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -2024,6 +2134,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -2053,6 +2166,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -2080,6 +2196,9 @@
         "carousel",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -2109,6 +2228,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "categories",
@@ -2135,6 +2257,9 @@
         "card",
         "banner"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "filters",
@@ -2159,6 +2284,9 @@
         "segmented-control",
         "card",
         "carousel"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "recommendations",
@@ -2185,6 +2313,9 @@
         "chip",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery",
         "categories"
@@ -2209,6 +2340,9 @@
         "grid",
         "chip",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -2235,6 +2369,9 @@
         "chip",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery",
         "categories"
@@ -2259,6 +2396,9 @@
         "chip",
         "card",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "discount",
@@ -2285,6 +2425,9 @@
         "card",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "discount",
         "filters"
@@ -2310,6 +2453,9 @@
         "button",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "categories"
       ],
@@ -2332,6 +2478,9 @@
         "search-bar",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Food › Searching for food",
       "flowId": "swiggy-ios-versions-2026-10-03-searching-for-food",
@@ -2351,6 +2500,9 @@
         "search-bar",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Food › Searching for food",
       "flowId": "swiggy-ios-versions-2026-10-03-searching-for-food",
@@ -2361,6 +2513,86 @@
     },
     {
       "n": 45,
+      "id": "swiggy-ios-versions-2026-10-03-searching-for-food-3",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/searching-for-food/3.webp",
+      "name": "Voice search prompt",
+      "type": "permission",
+      "extraTypes": [
+        "search"
+      ],
+      "elements": [
+        "modal",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "voice-input"
+      ],
+      "flow": "Food › Searching for food",
+      "flowId": "swiggy-ios-versions-2026-10-03-searching-for-food",
+      "patterns": [
+        "Search results",
+        "Permission prompts"
+      ]
+    },
+    {
+      "n": 46,
+      "id": "swiggy-ios-versions-2026-10-03-searching-for-food-4",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/searching-for-food/4.webp",
+      "name": "Speech recognition prompt",
+      "type": "permission",
+      "extraTypes": [
+        "search"
+      ],
+      "elements": [
+        "alert",
+        "button"
+      ],
+      "style": [
+        "dark"
+      ],
+      "tags": [
+        "voice-input",
+        "privacy"
+      ],
+      "flow": "Food › Searching for food",
+      "flowId": "swiggy-ios-versions-2026-10-03-searching-for-food",
+      "patterns": [
+        "Search results",
+        "Permission prompts"
+      ]
+    },
+    {
+      "n": 47,
+      "id": "swiggy-ios-versions-2026-10-03-searching-for-food-5",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/searching-for-food/5.webp",
+      "name": "Microphone prompt",
+      "type": "permission",
+      "extraTypes": [
+        "search"
+      ],
+      "elements": [
+        "alert",
+        "button"
+      ],
+      "style": [
+        "dark"
+      ],
+      "tags": [
+        "voice-input",
+        "privacy"
+      ],
+      "flow": "Food › Searching for food",
+      "flowId": "swiggy-ios-versions-2026-10-03-searching-for-food",
+      "patterns": [
+        "Search results",
+        "Permission prompts"
+      ]
+    },
+    {
+      "n": 48,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-1",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/1.webp",
       "name": "Restaurant menu",
@@ -2373,6 +2605,9 @@
         "card",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery",
         "discount",
@@ -2386,7 +2621,7 @@
       ]
     },
     {
-      "n": 46,
+      "n": 49,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-2",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/2.webp",
       "name": "Menu search",
@@ -2397,6 +2632,9 @@
         "grid",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Food › Ordering from a restaurant",
       "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
@@ -2406,7 +2644,7 @@
       ]
     },
     {
-      "n": 47,
+      "n": 50,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-3",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/3.webp",
       "name": "Dish sheet",
@@ -2419,6 +2657,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery"
       ],
@@ -2430,7 +2671,7 @@
       ]
     },
     {
-      "n": 48,
+      "n": 51,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-4",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/4.webp",
       "name": "Menu search",
@@ -2441,6 +2682,9 @@
         "grid",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Food › Ordering from a restaurant",
       "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
@@ -2450,7 +2694,7 @@
       ]
     },
     {
-      "n": 49,
+      "n": 52,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-5",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/5.webp",
       "name": "Restaurant menu",
@@ -2462,6 +2706,9 @@
         "chip",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -2476,7 +2723,7 @@
       ]
     },
     {
-      "n": 50,
+      "n": 53,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-6",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/6.webp",
       "name": "Menu search",
@@ -2487,6 +2734,9 @@
         "grid",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Food › Ordering from a restaurant",
       "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
@@ -2496,7 +2746,7 @@
       ]
     },
     {
-      "n": 51,
+      "n": 54,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-7",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/7.webp",
       "name": "Voice search",
@@ -2506,6 +2756,9 @@
       ],
       "elements": [
         "bottom-sheet"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "voice-input",
@@ -2519,7 +2772,7 @@
       ]
     },
     {
-      "n": 52,
+      "n": 55,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-8",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/8.webp",
       "name": "Voice search",
@@ -2528,6 +2781,9 @@
       "elements": [
         "bottom-sheet",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "voice-input"
@@ -2540,7 +2796,7 @@
       ]
     },
     {
-      "n": 53,
+      "n": 56,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-9",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/9.webp",
       "name": "Menu search",
@@ -2550,6 +2806,9 @@
         "search-bar",
         "grid",
         "banner"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [],
       "flow": "Food › Ordering from a restaurant",
@@ -2561,7 +2820,7 @@
       ]
     },
     {
-      "n": 54,
+      "n": 57,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-10",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/10.webp",
       "name": "Dish sheet",
@@ -2574,6 +2833,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery"
       ],
@@ -2585,7 +2847,7 @@
       ]
     },
     {
-      "n": 55,
+      "n": 58,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-11",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/11.webp",
       "name": "Menu search",
@@ -2595,6 +2857,9 @@
         "search-bar",
         "grid",
         "banner"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [],
       "flow": "Food › Ordering from a restaurant",
@@ -2606,7 +2871,7 @@
       ]
     },
     {
-      "n": 56,
+      "n": 59,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-12",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/12.webp",
       "name": "Coupon applied dialog",
@@ -2618,6 +2883,9 @@
         "modal",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "coupon",
         "discount",
@@ -2626,12 +2894,11 @@
       "flow": "Food › Ordering from a restaurant",
       "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
       "patterns": [
-        "Order confirmation",
-        "Dialogs"
+        "Order confirmation"
       ]
     },
     {
-      "n": 57,
+      "n": 60,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-13",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/13.webp",
       "name": "Swiggy One upsell",
@@ -2642,6 +2909,9 @@
       "elements": [
         "bottom-sheet",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -2655,7 +2925,7 @@
       ]
     },
     {
-      "n": 58,
+      "n": 61,
       "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-14",
       "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/14.webp",
       "name": "Cart",
@@ -2668,83 +2938,8 @@
         "chip",
         "button"
       ],
-      "tags": [
-        "discount",
-        "subscription",
-        "delivery"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Filter chips",
-        "Quantity steppers"
-      ]
-    },
-    {
-      "n": 59,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-15",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/15.webp",
-      "name": "Cart",
-      "type": "cart",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "list",
-        "stepper",
-        "chip",
-        "button"
-      ],
-      "tags": [
-        "discount",
-        "subscription",
-        "delivery"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Filter chips",
-        "Quantity steppers"
-      ]
-    },
-    {
-      "n": 60,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-16",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/16.webp",
-      "name": "Cart",
-      "type": "cart",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "list",
-        "stepper",
-        "chip",
-        "button"
-      ],
-      "tags": [
-        "discount",
-        "subscription",
-        "delivery"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Filter chips",
-        "Quantity steppers"
-      ]
-    },
-    {
-      "n": 61,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-17",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/17.webp",
-      "name": "Cart",
-      "type": "cart",
-      "extraTypes": [],
-      "elements": [
-        "nav-bar",
-        "list",
-        "stepper",
-        "chip",
-        "button"
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -2760,82 +2955,8 @@
     },
     {
       "n": 62,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-18",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/18.webp",
-      "name": "Receiver details sheet",
-      "type": "form",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "bottom-sheet",
-        "text-field",
-        "button"
-      ],
-      "tags": [
-        "delivery"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Bottom sheets"
-      ]
-    },
-    {
-      "n": 63,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-19",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/19.webp",
-      "name": "Cart",
-      "type": "cart",
-      "extraTypes": [
-        "error"
-      ],
-      "elements": [
-        "nav-bar",
-        "list",
-        "stepper",
-        "alert",
-        "button"
-      ],
-      "tags": [
-        "delivery",
-        "warning"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Quantity steppers"
-      ]
-    },
-    {
-      "n": 64,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-20",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/20.webp",
-      "name": "Coupon applied dialog",
-      "type": "success",
-      "extraTypes": [
-        "modal"
-      ],
-      "elements": [
-        "modal",
-        "button"
-      ],
-      "tags": [
-        "coupon",
-        "discount",
-        "celebration"
-      ],
-      "flow": "Food › Ordering from a restaurant",
-      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
-      "patterns": [
-        "Order confirmation",
-        "Dialogs"
-      ]
-    },
-    {
-      "n": 65,
-      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-21",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/21.webp",
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-15",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/15.webp",
       "name": "Cart",
       "type": "cart",
       "extraTypes": [],
@@ -2845,6 +2966,9 @@
         "stepper",
         "chip",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -2859,74 +2983,172 @@
       ]
     },
     {
-      "n": 66,
-      "id": "swiggy-ios-versions-2026-10-03-using-voice-search-1",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/using-voice-search/1.webp",
-      "name": "Voice search prompt",
-      "type": "permission",
+      "n": 63,
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-16",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/16.webp",
+      "name": "Cart",
+      "type": "cart",
+      "extraTypes": [],
+      "elements": [
+        "nav-bar",
+        "list",
+        "stepper",
+        "chip",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "discount",
+        "subscription",
+        "delivery"
+      ],
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
+      "patterns": [
+        "Filter chips",
+        "Quantity steppers"
+      ]
+    },
+    {
+      "n": 64,
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-17",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/17.webp",
+      "name": "Cart",
+      "type": "cart",
+      "extraTypes": [],
+      "elements": [
+        "nav-bar",
+        "list",
+        "stepper",
+        "chip",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "discount",
+        "subscription",
+        "delivery"
+      ],
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
+      "patterns": [
+        "Filter chips",
+        "Quantity steppers"
+      ]
+    },
+    {
+      "n": 65,
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-18",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/18.webp",
+      "name": "Receiver details sheet",
+      "type": "form",
       "extraTypes": [
-        "search"
+        "modal"
+      ],
+      "elements": [
+        "bottom-sheet",
+        "text-field",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "delivery"
+      ],
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
+      "patterns": [
+        "Bottom sheets"
+      ]
+    },
+    {
+      "n": 66,
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-19",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/19.webp",
+      "name": "Cart",
+      "type": "cart",
+      "extraTypes": [
+        "error"
+      ],
+      "elements": [
+        "nav-bar",
+        "list",
+        "stepper",
+        "alert",
+        "button"
+      ],
+      "style": [
+        "light"
+      ],
+      "tags": [
+        "delivery",
+        "warning"
+      ],
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
+      "patterns": [
+        "Quantity steppers"
+      ]
+    },
+    {
+      "n": 67,
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-20",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/20.webp",
+      "name": "Coupon applied dialog",
+      "type": "success",
+      "extraTypes": [
+        "modal"
       ],
       "elements": [
         "modal",
         "button"
       ],
-      "tags": [
-        "voice-input"
-      ],
-      "flow": "Food › Using voice search",
-      "flowId": "swiggy-ios-versions-2026-10-03-using-voice-search",
-      "patterns": [
-        "Search results",
-        "Permission prompts"
-      ]
-    },
-    {
-      "n": 67,
-      "id": "swiggy-ios-versions-2026-10-03-using-voice-search-2",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/using-voice-search/2.webp",
-      "name": "Speech recognition prompt",
-      "type": "permission",
-      "extraTypes": [
-        "search"
-      ],
-      "elements": [
-        "alert",
-        "button"
+      "style": [
+        "light"
       ],
       "tags": [
-        "voice-input",
-        "privacy"
+        "coupon",
+        "discount",
+        "celebration"
       ],
-      "flow": "Food › Using voice search",
-      "flowId": "swiggy-ios-versions-2026-10-03-using-voice-search",
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
       "patterns": [
-        "Search results",
-        "Permission prompts"
+        "Order confirmation"
       ]
     },
     {
       "n": 68,
-      "id": "swiggy-ios-versions-2026-10-03-using-voice-search-3",
-      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/using-voice-search/3.webp",
-      "name": "Microphone prompt",
-      "type": "permission",
-      "extraTypes": [
-        "search"
-      ],
+      "id": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant-21",
+      "file": "/Users/surendar-15488/works/demo/Plugin/motvin-backend/data/inspirations/screens/ios/swiggy/versions/2026-10-03/ordering-from-a-restaurant/21.webp",
+      "name": "Cart",
+      "type": "cart",
+      "extraTypes": [],
       "elements": [
-        "alert",
+        "nav-bar",
+        "list",
+        "stepper",
+        "chip",
         "button"
       ],
-      "tags": [
-        "voice-input",
-        "privacy"
+      "style": [
+        "light"
       ],
-      "flow": "Food › Using voice search",
-      "flowId": "swiggy-ios-versions-2026-10-03-using-voice-search",
+      "tags": [
+        "discount",
+        "subscription",
+        "delivery"
+      ],
+      "flow": "Food › Ordering from a restaurant",
+      "flowId": "swiggy-ios-versions-2026-10-03-ordering-from-a-restaurant",
       "patterns": [
-        "Search results",
-        "Permission prompts"
+        "Filter chips",
+        "Quantity steppers"
       ]
     },
     {
@@ -2941,6 +3163,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -2964,6 +3189,9 @@
         "bottom-sheet",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "collaboration",
         "invite"
@@ -2984,6 +3212,9 @@
       "elements": [
         "bottom-sheet",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3007,6 +3238,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3033,6 +3267,9 @@
         "button",
         "empty-state"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "collaboration"
       ],
@@ -3054,6 +3291,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3079,6 +3319,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "sharing"
       ],
@@ -3100,6 +3343,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3125,6 +3371,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "sharing"
       ],
@@ -3146,6 +3395,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3169,6 +3421,9 @@
         "bottom-sheet",
         "avatar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "sharing"
       ],
@@ -3190,6 +3445,9 @@
         "carousel",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "collaboration",
@@ -3215,6 +3473,9 @@
         "chip",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -3242,6 +3503,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery"
       ],
@@ -3265,6 +3529,9 @@
         "chip",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -3290,6 +3557,10 @@
       "elements": [
         "skeleton"
       ],
+      "style": [
+        "light",
+        "minimal"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -3312,6 +3583,9 @@
         "modal",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "coupon",
         "discount",
@@ -3320,8 +3594,7 @@
       "flow": "Food › Ordering for someone else",
       "flowId": "swiggy-ios-versions-2026-10-03-ordering-for-someone-else",
       "patterns": [
-        "Order confirmation",
-        "Dialogs"
+        "Order confirmation"
       ]
     },
     {
@@ -3337,6 +3610,9 @@
         "stepper",
         "chip",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -3364,6 +3640,9 @@
         "chip",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "subscription",
@@ -3390,6 +3669,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery"
       ],
@@ -3412,6 +3694,9 @@
         "bottom-sheet",
         "text-field",
         "keyboard"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery"
@@ -3438,6 +3723,9 @@
         "alert",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "delivery",
         "warning"
@@ -3461,6 +3749,9 @@
         "chip",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -3486,6 +3777,9 @@
         "card",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "coupon"
@@ -3503,6 +3797,10 @@
       "extraTypes": [],
       "elements": [
         "card"
+      ],
+      "style": [
+        "light",
+        "bold"
       ],
       "tags": [
         "discount",
@@ -3525,6 +3823,9 @@
         "search-bar",
         "card",
         "list"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -3550,6 +3851,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location"
       ],
@@ -3571,6 +3875,9 @@
         "search-bar",
         "card",
         "list"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -3595,6 +3902,9 @@
         "card",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -3617,6 +3927,9 @@
         "map",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -3642,6 +3955,9 @@
         "segmented-control",
         "skeleton",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "loading-state"
@@ -3670,6 +3986,9 @@
         "skeleton",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state"
       ],
@@ -3694,6 +4013,9 @@
         "card",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -3717,6 +4039,9 @@
         "search-bar",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -3738,6 +4063,9 @@
         "search-bar",
         "card",
         "list"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -3763,6 +4091,9 @@
         "card",
         "list",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -3791,6 +4122,9 @@
         "list",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery",
@@ -3817,6 +4151,9 @@
         "card",
         "list",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -3845,6 +4182,9 @@
         "list",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery",
@@ -3871,6 +4211,9 @@
         "card",
         "list",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -3899,6 +4242,9 @@
         "list",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery",
@@ -3924,6 +4270,9 @@
         "grid",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "categories"
       ],
@@ -3945,6 +4294,9 @@
         "nav-bar",
         "grid",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "categories"
@@ -3968,6 +4320,9 @@
         "grid",
         "stepper",
         "banner"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "categories",
@@ -3993,6 +4348,9 @@
         "grid",
         "stepper",
         "banner"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "categories",
@@ -4020,6 +4378,9 @@
         "grid",
         "toast"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "bookmarks",
         "discount"
@@ -4044,6 +4405,9 @@
         "banner",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "file-upload",
         "documents"
@@ -4066,6 +4430,9 @@
         "button",
         "banner",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "file-upload",
@@ -4090,6 +4457,9 @@
         "card",
         "keyboard"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount"
       ],
@@ -4111,6 +4481,9 @@
         "search-bar",
         "card",
         "grid"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount"
@@ -4134,6 +4507,9 @@
         "chip",
         "price",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -4160,6 +4536,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -4184,6 +4563,9 @@
         "chip",
         "price",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -4210,6 +4592,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -4234,6 +4619,9 @@
         "chip",
         "price",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -4260,6 +4648,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -4284,6 +4675,9 @@
       "elements": [
         "bottom-sheet",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -4310,6 +4704,9 @@
         "stepper",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -4335,6 +4732,9 @@
         "search-bar",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -4342,8 +4742,7 @@
       "flow": "Instamart › Shopping for groceries",
       "flowId": "swiggy-ios-versions-2026-10-03-shopping-groceries",
       "patterns": [
-        "Search inputs",
-        "Dialogs"
+        "Search inputs"
       ]
     },
     {
@@ -4357,6 +4756,9 @@
         "search-bar",
         "card",
         "keyboard"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount"
@@ -4380,6 +4782,9 @@
         "card",
         "stepper"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "bookmarks"
       ],
@@ -4401,6 +4806,9 @@
         "map",
         "search-bar",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -4426,6 +4834,9 @@
         "stepper",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "delivery"
@@ -4449,6 +4860,9 @@
         "chip",
         "price",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount",
@@ -4474,6 +4888,9 @@
         "card",
         "grid"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount"
       ],
@@ -4497,6 +4914,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "booking",
@@ -4525,6 +4945,9 @@
         "segmented-control",
         "skeleton"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "loading-state",
         "location"
@@ -4550,6 +4973,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4578,6 +5004,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4604,6 +5033,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4632,6 +5064,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4658,6 +5093,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4686,6 +5124,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4712,6 +5153,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "booking",
@@ -4740,6 +5184,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4766,6 +5213,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4794,6 +5244,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4820,6 +5273,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4848,6 +5304,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4874,6 +5333,9 @@
         "card",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "booking",
@@ -4902,6 +5364,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4929,6 +5394,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -4953,6 +5421,9 @@
         "banner",
         "card",
         "chip"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "booking",
@@ -4980,6 +5451,10 @@
         "button",
         "tab-bar"
       ],
+      "style": [
+        "dark",
+        "bold"
+      ],
       "tags": [
         "video"
       ],
@@ -5003,6 +5478,9 @@
         "card",
         "empty-state",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "favorites",
@@ -5030,6 +5508,9 @@
         "empty-state",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "favorites",
         "bookmarks"
@@ -5055,6 +5536,9 @@
         "card",
         "empty-state",
         "tab-bar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "favorites",
@@ -5082,6 +5566,9 @@
         "empty-state",
         "tab-bar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "favorites",
         "bookmarks"
@@ -5106,6 +5593,9 @@
         "card",
         "carousel",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "ai-assistant",
@@ -5132,6 +5622,9 @@
         "carousel",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "location"
@@ -5156,6 +5649,9 @@
         "card",
         "carousel",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "ai-assistant",
@@ -5182,6 +5678,9 @@
         "carousel",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "location"
@@ -5206,6 +5705,9 @@
         "card",
         "carousel",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "ai-assistant",
@@ -5232,6 +5734,9 @@
         "carousel",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "ai-assistant",
         "location"
@@ -5255,6 +5760,9 @@
         "search-bar",
         "card",
         "keyboard"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "ai-assistant",
@@ -5280,6 +5788,9 @@
         "card",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -5304,6 +5815,9 @@
         "card",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -5327,6 +5841,9 @@
         "segmented-control",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "booking",
@@ -5354,6 +5871,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "scheduling"
@@ -5380,6 +5900,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "scheduling"
@@ -5403,6 +5926,9 @@
         "segmented-control",
         "card",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "booking",
@@ -5428,6 +5954,9 @@
         "card",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "booking",
         "discount"
@@ -5451,6 +5980,9 @@
         "keyboard",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount",
         "coupon"
@@ -5473,6 +6005,9 @@
         "segmented-control",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets",
@@ -5500,6 +6035,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5525,6 +6063,9 @@
         "segmented-control",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets",
@@ -5552,6 +6093,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5577,6 +6121,9 @@
         "segmented-control",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets",
@@ -5604,6 +6151,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5629,6 +6179,9 @@
         "segmented-control",
         "carousel",
         "tab-bar"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets",
@@ -5656,6 +6209,9 @@
         "carousel",
         "tab-bar"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5680,6 +6236,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5700,6 +6259,9 @@
         "chip",
         "stepper",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets"
@@ -5724,6 +6286,9 @@
         "chip",
         "stepper",
         "button"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "tickets"
@@ -5750,6 +6315,9 @@
         "list",
         "skeleton"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "loading-state"
@@ -5775,6 +6343,9 @@
         "price",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "coupon"
@@ -5797,6 +6368,9 @@
         "media-player",
         "button"
       ],
+      "style": [
+        "dark"
+      ],
       "tags": [
         "tickets",
         "booking"
@@ -5816,6 +6390,9 @@
         "search-bar",
         "card",
         "keyboard"
+      ],
+      "style": [
+        "dark"
       ],
       "tags": [
         "scheduling"
@@ -5840,6 +6417,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -5860,6 +6440,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -5882,6 +6465,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Account",
       "flowId": "swiggy-ios-versions-2026-10-03-account-area",
@@ -5901,6 +6487,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -5923,6 +6512,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Account",
       "flowId": "swiggy-ios-versions-2026-10-03-account-area",
@@ -5942,6 +6534,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -5964,6 +6559,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -5985,6 +6583,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Account",
       "flowId": "swiggy-ios-versions-2026-10-03-account-area",
@@ -6004,6 +6605,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6026,6 +6630,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Account",
       "flowId": "swiggy-ios-versions-2026-10-03-account-area",
@@ -6045,6 +6652,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6067,6 +6677,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6087,6 +6700,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6109,6 +6725,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6129,6 +6748,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6151,6 +6773,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6171,6 +6796,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6193,6 +6821,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6213,6 +6844,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6235,6 +6869,9 @@
         "modal",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [],
       "flow": "Account",
       "flowId": "swiggy-ios-versions-2026-10-03-account-area",
@@ -6254,6 +6891,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6276,6 +6916,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6296,6 +6939,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6318,6 +6964,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "wallet"
@@ -6338,6 +6987,9 @@
         "card",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6360,6 +7012,9 @@
         "nav-bar",
         "list",
         "empty-state"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "history"
@@ -6384,6 +7039,9 @@
         "list",
         "empty-state"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -6406,6 +7064,9 @@
         "nav-bar",
         "list",
         "empty-state"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "history"
@@ -6430,6 +7091,9 @@
         "list",
         "empty-state"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -6453,6 +7117,9 @@
         "list",
         "empty-state"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -6473,6 +7140,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "subscription",
@@ -6496,6 +7166,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "subscription",
         "free-trial"
@@ -6517,6 +7190,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "wallet",
@@ -6540,6 +7216,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "coupon",
         "subscription"
@@ -6562,6 +7241,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "personalization"
       ],
@@ -6580,6 +7262,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -6603,6 +7288,9 @@
         "search-bar",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6625,6 +7313,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6645,6 +7336,9 @@
       "elements": [
         "alert",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "destructive-action",
@@ -6668,6 +7362,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6690,6 +7387,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6711,6 +7411,9 @@
         "bottom-sheet",
         "avatar"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "sharing"
       ],
@@ -6730,6 +7433,9 @@
       "elements": [
         "bottom-sheet",
         "avatar"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "sharing"
@@ -6751,6 +7457,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -6774,6 +7483,9 @@
         "search-bar",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6794,6 +7506,9 @@
       "elements": [
         "search-bar",
         "keyboard"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location"
@@ -6816,6 +7531,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "location",
@@ -6840,6 +7558,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "location",
         "delivery"
@@ -6861,6 +7582,9 @@
         "carousel",
         "segmented-control",
         "text-field"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "delivery",
@@ -6886,6 +7610,9 @@
         "text-field",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "tickets"
       ],
@@ -6910,6 +7637,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "discount"
@@ -6932,6 +7662,9 @@
         "text-field",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "email-login",
         "discount"
@@ -6950,6 +7683,9 @@
       "elements": [
         "text-field",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "email-login",
@@ -6972,6 +7708,9 @@
         "nav-bar",
         "card"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount"
       ],
@@ -6989,6 +7728,9 @@
       "elements": [
         "nav-bar",
         "card"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "discount"
@@ -7009,6 +7751,9 @@
         "list",
         "progress"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "discount"
       ],
@@ -7028,6 +7773,9 @@
       "elements": [
         "text-field",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "email-login",
@@ -7051,6 +7799,9 @@
         "empty-state",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "bookmarks"
       ],
@@ -7072,6 +7823,9 @@
         "empty-state",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "bookmarks"
       ],
@@ -7090,6 +7844,9 @@
       "extraTypes": [],
       "elements": [
         "empty-state"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "favorites"
@@ -7114,6 +7871,9 @@
         "segmented-control",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "wallet"
       ],
@@ -7135,6 +7895,10 @@
       "elements": [
         "nav-bar",
         "empty-state"
+      ],
+      "style": [
+        "light",
+        "minimal"
       ],
       "tags": [
         "history",
@@ -7158,6 +7922,9 @@
         "card",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "wallet"
       ],
@@ -7177,6 +7944,9 @@
         "text-field",
         "chip",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "wallet"
@@ -7199,6 +7969,9 @@
         "toggle",
         "list"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "reminders"
       ],
@@ -7219,6 +7992,9 @@
         "nav-bar",
         "toggle",
         "list"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "reminders"
@@ -7243,6 +8019,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "privacy",
         "cookies"
@@ -7264,6 +8043,10 @@
       "elements": [
         "empty-state",
         "button"
+      ],
+      "style": [
+        "light",
+        "minimal"
       ],
       "tags": [
         "privacy"
@@ -7288,6 +8071,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -7310,6 +8096,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "history"
@@ -7334,6 +8123,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -7356,6 +8148,9 @@
         "nav-bar",
         "list",
         "button"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "history"
@@ -7380,6 +8175,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -7403,6 +8201,9 @@
         "list",
         "button"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "history"
       ],
@@ -7424,6 +8225,9 @@
         "list",
         "legal-text"
       ],
+      "style": [
+        "light"
+      ],
       "tags": [
         "privacy",
         "sharing"
@@ -7444,6 +8248,9 @@
       "elements": [
         "nav-bar",
         "list"
+      ],
+      "style": [
+        "light"
       ],
       "tags": [
         "feedback"

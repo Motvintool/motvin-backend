@@ -142,6 +142,15 @@ export const SCREEN_TYPES = [
  * loading, a feed can be empty, a settings page can have a sheet over it. A
  * screen may carry several.
  */
+/** What a screen is about, in words search can match: a hand-written description, else its name and purpose. */
+function describeScreen(sidecar: Record<string, unknown>): string {
+  const written = typeof sidecar.description === 'string' ? sidecar.description.trim() : '';
+  if (written && !/\btext elements?\.?$/i.test(written)) return written;
+  const name = typeof sidecar.name === 'string' ? sidecar.name.trim() : '';
+  const purpose = typeof sidecar.purpose === 'string' ? sidecar.purpose.trim() : '';
+  return [name, purpose].filter(Boolean).join(' — ') || written;
+}
+
 export const SCREEN_STATES = [
   'loading', 'empty', 'error', 'success', 'modal', 'bottom-sheet', 'toast',
   'coach-mark', 'permission', 'scrolled', 'keyboard',
@@ -603,9 +612,16 @@ export function buildInspirationsManifest(root: string): BuildReport {
         if (newStyles.length) {
           warnings.push(`${platform}/${appId}/${base}.json uses new style(s): ${newStyles.join(', ')} — added to the filters`);
         }
-        const states: string[] = uniq<string>(
-          (Array.isArray(sidecar.states) ? sidecar.states : []).map(slugValue).filter((v: string | null): v is string => Boolean(v)),
-        );
+        // States follow from what the screen is now — its types and the elements
+        // on it — so they stay right after a review changes either. Only
+        // "scrolled", a fact of the capture, comes from the sidecar.
+        const sidecarStates: string[] = (Array.isArray(sidecar.states) ? sidecar.states : []).map(slugValue).filter((v: string | null): v is string => Boolean(v));
+        const elementsForStates: string[] = Array.isArray(sidecar.elements) ? sidecar.elements : [];
+        const states: string[] = uniq<string>([
+          ...(['loading', 'empty', 'error', 'success', 'modal', 'permission'] as const).filter((t) => screenTypesAll.includes(t)),
+          ...(['bottom-sheet', 'toast', 'coach-mark', 'keyboard'] as const).filter((e) => elementsForStates.includes(e)),
+          ...sidecarStates.filter((v) => v === 'scrolled' || !(SCREEN_STATES as readonly string[]).includes(v)),
+        ]);
         const newStates = states.filter((v) => !(SCREEN_STATES as readonly string[]).includes(v));
         if (newStates.length) {
           warnings.push(`${platform}/${appId}/${base}.json uses new state(s): ${newStates.join(', ')} — added to the filters`);
@@ -657,7 +673,10 @@ export function buildInspirationsManifest(root: string): BuildReport {
             screenTypes: screenTypesAll,
             fineType: typeof sidecar.fineType === 'string' && sidecar.fineType ? sidecar.fineType : screenType,
             states,
-            description: typeof sidecar.description === 'string' ? sidecar.description : '',
+            // The classifier's own sentence ("Profile screen with a search bar. Light theme, 13 text
+            // elements.") goes stale once a review corrects the screen; the screen's checked name and
+            // purpose say what it is, so they stand in for it. A description written by hand is kept.
+            description: describeScreen(sidecar),
             purpose: stringOrNull(sidecar.purpose),
             primaryAction: stringOrNull(sidecar.primaryAction),
             capture,

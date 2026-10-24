@@ -1,0 +1,143 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-event-page-8",
+  "screen_id": "luma-ios-versions-2026-10-19-event-page-8",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.819Z",
+  "screen_type": "signup",
+  "published_as": "detail",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "authentication",
+  "flow_name": "Event page",
+  "flow_position": 2,
+  "name": "Event detail",
+  "description": "Sign up screen with a paged carousel. Dark theme, 14 text elements.",
+  "text": "9:41\nSecondlnnings -Meet up\nSecondinnings meet ups >\nSat, 17 Oct, 3:00PM - 4:30 PM\n8 2 Spots Left\n•••\nContact\nRegister\nShare\nMore\nLocation\nThe Brew Room\n30°C\n146, Dr Radha Krishnan Salai, Mylapore,\nChennai, Tamil Nadu 600004, India\nVALLUVAR\nКOTTAM\nThe Brew Room",
+  "purpose": "To display details of a specific event and allow registration",
+  "primary_action": "Register for the event",
+  "tags": [
+    "location",
+    "valluvar",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a paged carousel. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Event Poster”",
+        "Reached from “Event Poster (2)”",
+        "Leads to “Create account (12)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:25 in the recording",
+        "Frame 887 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#45415c",
+      "role": "background",
+      "share": 0.449
+    },
+    {
+      "hex": "#32436a",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#174194",
+      "role": "accent",
+      "share": 0.043
+    },
+    {
+      "hex": "#1f2d58",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#3263b4",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 887,
+    "atSeconds": 265.5,
+    "endSeconds": 266.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": null,
+    "headline": "Secondlnnings -Meet up",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s089",
+    "depth": 88,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s088",
+        "via": "Back to Create account",
+        "name": "Event Poster (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s090",
+        "via": "Tap “Secondlnnings -Meet up”",
+        "name": "Create account (12)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

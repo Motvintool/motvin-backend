@@ -1,0 +1,147 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-finding-friends-from-contacts-5",
+  "screen_id": "duolingo-ios-versions-2026-10-11-finding-friends-from-contacts-5",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.604Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Finding friends from contacts",
+  "flow_position": 76,
+  "name": "Contacts permission request",
+  "description": "Permission screen with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+  "text": "9:41C\n•oll\nLet's find some\nfriends to have the\nbest experience!\n\"Duolingo\" Would Like to Access\nYour Contacts\nFind your friends on Duolingo\nDon't Allow\nContinue\nCONTINUE WITHOUT CONTACTS",
+  "purpose": "To request permission to access the user's contacts for finding friends.",
+  "primary_action": "Grant or deny contact access.",
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Let's find some”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue”",
+        "8 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 76 of 187 in “Onboarding”",
+        "Reached from “Phone number entry · bottom sheet”",
+        "Leads to “Add your friends and learn”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 4:21 in the recording",
+        "Frame 898 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141d23",
+      "role": "background",
+      "share": 0.837
+    },
+    {
+      "hex": "#353a3c",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#98d837",
+      "role": "accent",
+      "share": 0.028
+    },
+    {
+      "hex": "#73a633",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#495157",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 898,
+    "atSeconds": 261.3,
+    "endSeconds": 269.7,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "title": "Let's find some",
+    "headline": "\"Duolingo\" Would Like to Access"
+  },
+  "crawler": {
+    "nodeId": "s080",
+    "depth": 79,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s079",
+        "via": "Back to Contacts permission",
+        "name": "Phone number entry · bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s081",
+        "via": "Open Add your friends and learn",
+        "name": "Add your friends and learn"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

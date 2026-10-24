@@ -1,0 +1,144 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-settings-6",
+  "screen_id": "duolingo-ios-versions-2026-10-11-settings-6",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.582Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 165,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 15 text elements.",
+  "text": "9:41(\n•ll\nX\nSettings\nACCOUNT\n>\nPreferences\nProfile\nNotifications\n>\nCourses\nDuolingo for Schools\nSocial accounts\nPrivacy settings\nSUBSCRIPTION\nChoose a plan\nRESTORE SUBSCRIPTION\nCLIDDADT",
+  "purpose": "To allow the user to manage their account and subscription settings.",
+  "primary_action": "Navigate to a settings option.",
+  "tags": [
+    "profile",
+    "settings",
+    "notification",
+    "subscription",
+    "cliddadt",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 165 of 187 in “Onboarding”",
+        "Reached from “Settings — loading”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:04 in the recording",
+        "Frame 1615 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#152128",
+      "role": "background",
+      "share": 0.914
+    },
+    {
+      "hex": "#586268",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#2f3e46",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#364d59",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#757e85",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1615,
+    "atSeconds": 484.2,
+    "endSeconds": 484.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Settings",
+    "headline": "Privacy settings",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s176",
+    "depth": 175,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s175",
+        "via": "Wait 0.9s",
+        "name": "Settings — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s177",
+        "via": "Tap “ACCOUNT”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

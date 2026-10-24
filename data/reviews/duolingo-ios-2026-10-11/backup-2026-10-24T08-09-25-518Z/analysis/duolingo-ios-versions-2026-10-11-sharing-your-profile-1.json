@@ -1,0 +1,155 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-11-sharing-your-profile-1",
+  "screen_id": "duolingo-ios-versions-2026-10-11-sharing-your-profile-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T06:39:21.578Z",
+  "screen_type": "dialog",
+  "published_as": "profile",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Sharing your profile",
+  "flow_position": 154,
+  "name": "Share profile",
+  "description": "Dialog over a dimmed screen, on top of Profile. Light theme, 7 text elements.",
+  "text": "9:41(\nooll\nSurendar V\nSurendar V\n@SurendarV19\nOFTAO\nduolingo\nCopy link\nShare link\nfol",
+  "purpose": "To allow the user to share their profile via a QR code or link.",
+  "primary_action": "Copy or share link",
+  "tags": [
+    "fol",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “OFTAO”",
+        "Dialog over a dimmed background, covering 64% of the height from 19% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Profile. Light theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 154 of 187 in “Onboarding”",
+        "Reached from “Profile (11)”",
+        "Leads to “Profile (12)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:45 in the recording",
+        "Frame 1555 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#07080a",
+      "role": "background",
+      "share": 0.48
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.22
+    },
+    {
+      "hex": "#c5c4c6",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#e0dfdf",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#6d6d6e",
+      "role": "surface",
+      "share": 0.037
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1555,
+    "atSeconds": 465.9,
+    "endSeconds": 466.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.1875,
+        "w": 0.875,
+        "h": 0.640625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "OFTAO",
+    "headline": "OFTAO",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s164",
+    "depth": 163,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s163",
+        "via": "Open OFTAO",
+        "name": "Profile (11)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s165",
+        "via": "Dismiss",
+        "name": "Profile (12)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-11",
+  "capturedBy": "motvin-ios-crawler"
+}

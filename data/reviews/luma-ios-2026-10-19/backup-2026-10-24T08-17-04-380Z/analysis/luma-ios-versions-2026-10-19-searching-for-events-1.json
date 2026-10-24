@@ -1,0 +1,150 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-searching-for-events-1",
+  "screen_id": "luma-ios-versions-2026-10-19-searching-for-events-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.830Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "discovery",
+  "flow_name": "Searching for events",
+  "flow_position": 25,
+  "name": "Event discovery",
+  "description": "Home screen with a 3-item tab bar and a search bar. Dark theme, 10 text elements.",
+  "text": "9:41€\n<\nQ Search events...\n1\nAny Date\nNear You\nRecently viewed\nSecondlnnings -Meet up\nChennai • Saturday, 3:00PM\nReading Rhythms DC + Free Book: Sens...\nWashington • Tuesday, 7:00 PM GMT-4\nDiscover\nHome\nChat",
+  "purpose": "To browse and search for events",
+  "primary_action": "Search for events",
+  "tags": [
+    "search",
+    "home",
+    "discover",
+    "chat",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Search events”",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar and a search bar. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 69 in “Home”",
+        "Reached from “Clear End Date toast”",
+        "Leads to “Create account · VALLUVAR”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:08 in the recording",
+        "Frame 1031 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.872
+    },
+    {
+      "hex": "#201f21",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#3b393b",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#58575c",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#7f7d80",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1031,
+    "atSeconds": 308.1,
+    "endSeconds": 309.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Search events",
+    "headline": "Secondlnnings -Meet up"
+  },
+  "crawler": {
+    "nodeId": "s110",
+    "depth": 109,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s109",
+        "via": "Open Search events",
+        "name": "Clear End Date toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s111",
+        "via": "Wait 1.5s",
+        "name": "Create account · VALLUVAR"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}
