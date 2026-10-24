@@ -1117,6 +1117,20 @@ export class InspirationsAdminService {
     const flowsRemoved = (flowsData.flows || []).length - keptFlows.length;
     this.writeJson(flowsFile, { version: flowsData.version || 1, flows: keptFlows });
 
+    // Its "Reviewed by Claude" marks, and any review still in progress for it.
+    const marksFile = join(this.root, 'reviewed.json');
+    if (existsSync(marksFile)) {
+      const marks = readJson<Record<string, unknown>>(marksFile, {});
+      for (const key of Object.keys(marks)) if (key.startsWith(`${id}-`) && PLATFORMS.some((platform) => key.startsWith(`${id}-${platform}-`))) delete marks[key];
+      this.writeJson(marksFile, marks);
+    }
+    const reviewsDir = join(this.root, '..', 'reviews');
+    if (existsSync(reviewsDir)) {
+      for (const entry of readdirSync(reviewsDir)) {
+        if (PLATFORMS.some((platform) => entry.startsWith(`${id}-${platform}-`))) rmSync(join(reviewsDir, entry), { recursive: true, force: true });
+      }
+    }
+
     this.logger.log(
       `Deleted app ${id}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)` +
         (logoRemoved ? ', logo' : ''),
