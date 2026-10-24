@@ -723,6 +723,19 @@ export function buildInspirationsManifest(root: string): BuildReport {
       if (!flowOrder.has(id)) flowOrder.set(id, index * 10_000 + position);
     });
   });
+  // A flow's own (reviewed) order wins over the recording's clock: a step never sorts before
+  // the step ahead of it, even when its picture was taken from earlier or later in the video.
+  const timeOf = new Map(screens.map((screen) => [screen.id, screen.capture?.atSeconds ?? null]));
+  const stepTime = new Map<string, number>();
+  for (const flow of flowsFile.flows || []) {
+    let floor = Number.NEGATIVE_INFINITY;
+    for (const id of flow.screenIds || []) {
+      const own = timeOf.get(id);
+      if (own === undefined || own === null || stepTime.has(id)) continue;
+      floor = Math.max(floor, own);
+      stepTime.set(id, floor);
+    }
+  }
   const appOrder = new Map<string, number>();
   screens.forEach((screen, index) => appOrder.set(screen.appId, Math.min(appOrder.get(screen.appId) ?? index, index)));
   screens.sort((a, b) => {
@@ -731,8 +744,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
     const ob: number | null = b.order ?? null;
     if (oa !== null && ob !== null && oa !== ob) return oa - ob;
     if ((oa === null) !== (ob === null)) return oa === null ? 1 : -1;
-    const ta = a.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
-    const tb = b.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
+    const ta = stepTime.get(a.id) ?? a.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
+    const tb = stepTime.get(b.id) ?? b.capture?.atSeconds ?? Number.POSITIVE_INFINITY;
     if (ta !== tb) return ta - tb;
     const fa = flowOrder.get(a.id) ?? Number.POSITIVE_INFINITY;
     const fb = flowOrder.get(b.id) ?? Number.POSITIVE_INFINITY;

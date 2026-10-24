@@ -1,19 +1,19 @@
 {
-  "name": "Terms agreement",
-  "screenType": "signup",
-  "fineType": "signup",
+  "name": "Verification code entry",
+  "screenType": "login",
+  "fineType": "login",
   "states": [
-    "bottom-sheet",
     "keyboard"
   ],
-  "description": "Sign up bottom sheet, on top of OTP verification with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+  "description": "Verification code screen with the keyboard open. Dark theme, 24 text elements.",
   "tags": [
-    "legal",
-    "privacy"
+    "email-login",
+    "warning",
+    "logged-out"
   ],
   "elements": [
-    "page-indicator",
-    "button",
+    "text-field",
+    "keyboard",
     "legal-text"
   ],
   "style": [
@@ -21,11 +21,12 @@
   ],
   "capturedAt": "2026-10-24",
   "capture": {
-    "atSeconds": 87.1,
-    "holdSeconds": 0.9,
+    "atSeconds": 77.25,
+    "holdSeconds": 0.3,
     "brief": false,
-    "visits": 1,
-    "overlayOf": null
+    "visits": 1
   },
-  "extraTypes": []
+  "extraTypes": [
+    "error"
+  ]
 }

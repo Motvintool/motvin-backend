@@ -1,18 +1,20 @@
 {
-  "name": "Terms agreement",
-  "screenType": "signup",
-  "fineType": "signup",
+  "name": "Verification code entry",
+  "screenType": "login",
+  "fineType": "login",
   "states": [
-    "modal"
+    "keyboard"
   ],
-  "description": "Sign up dialog over a dimmed screen with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "description": "Verification code screen with the keyboard open. Dark theme, 30 text elements.",
   "tags": [
-    "legal",
-    "privacy"
+    "email-login",
+    "loading-state",
+    "logged-out"
   ],
   "elements": [
-    "page-indicator",
-    "button",
+    "text-field",
+    "keyboard",
+    "progress",
     "legal-text"
   ],
   "style": [
@@ -20,11 +22,12 @@
   ],
   "capturedAt": "2026-10-24",
   "capture": {
-    "atSeconds": 87,
-    "holdSeconds": 3.6,
+    "atSeconds": 79.5,
+    "holdSeconds": 15.9,
     "brief": false,
-    "visits": 2,
-    "overlayOf": null
+    "visits": 2
   },
-  "extraTypes": []
+  "extraTypes": [
+    "loading"
+  ]
 }
