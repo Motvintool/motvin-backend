@@ -1,0 +1,94 @@
+{
+  "screens": [
+    {
+      "id": "claude-webapp-versions-2026-10-24-home-2",
+      "type": "home"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-home-1",
+      "type": "home",
+      "name": "Home screen"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-4",
+      "type": "pricing",
+      "name": "Upgrade prompt"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-upgrading-subscription-5",
+      "type": "pricing",
+      "name": "Upgrade prompt"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-sending-a-message-3",
+      "type": "modal",
+      "name": "Add menu"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-sending-a-message-5",
+      "type": "modal",
+      "name": "Add menu"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-sending-a-message-6",
+      "type": "modal",
+      "name": "Add menu"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-sending-a-message-7",
+      "type": "modal",
+      "name": "Add menu"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-chatting-with-claude-1",
+      "type": "permission",
+      "name": "Microphone permission prompt"
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-24-settings-2",
+      "type": "settings"
+    }
+  ],
+  "flows": [
+    {
+      "id": "claude-webapp-versions-2026-10-24-chatting-with-claude",
+      "name": "Using voice input",
+      "category": "creation"
+    }
+  ],
+  "moves": [
+    {
+      "screen": "claude-webapp-versions-2026-10-24-upgrading-subscription-6",
+      "from": "claude-webapp-versions-2026-10-24-upgrading-subscription",
+      "to": "claude-webapp-versions-2026-10-24-sending-a-message"
+    }
+  ],
+  "rules": {
+    "screenTypes": [
+      {
+        "name": "Incognito mode",
+        "type": "home",
+        "app": "claude"
+      },
+      {
+        "name": "Upgrade prompt",
+        "type": "pricing"
+      },
+      {
+        "name": "Add menu",
+        "type": "modal"
+      },
+      {
+        "name": "Plugins directory",
+        "type": "settings",
+        "app": "claude"
+      }
+    ],
+    "wordTypes": [
+      {
+        "pattern": "\\bwants to use (your )?(microphone|camera|location)\\b",
+        "type": "permission"
+      }
+    ]
+  }
+}

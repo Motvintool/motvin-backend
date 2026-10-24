@@ -1,0 +1,154 @@
+{
+  "screenId": "notion-ios-versions-2026-10-23-choosing-a-font-style-2",
+  "screen_id": "notion-ios-versions-2026-10-23-choosing-a-font-style-2",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-23T11:05:42.126Z",
+  "screen_type": "signup",
+  "published_as": "modal",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Choosing a font style",
+  "flow_position": 4,
+  "name": "Actions menu",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 18 text elements.",
+  "text": "9:41 €\n•••\nWelcome to Notion!\nCreate an account with Notion\nTap anywhere and just start typing. It's\nthat simple.\nHighlight text and use the menu above\nyour keyboard to change the style.\nTap the + icon above your keyboard to\nadd content: headings, to-dos, and\nmore.\nCollapse your keyboard, then tap and\nhold this line to move content.\nTap the home icon at the bottom left to\nsee your pages. (We've installed a To\nDo List for you - go check it out!)\nClick on the\nNotion Al face in the\nbottom right of your screen or click here\nto see what Agent can do\nKeep exploring!\nYou've just learned the basics. But there's\nch\ned\nAsk Al\nIle and immeng\nrpagt\nusing the compose icon in the bottom right",
+  "purpose": "To display a list of actions available for a page.",
+  "primary_action": "Select an action",
+  "tags": [
+    "ch",
+    "ask al",
+    "ed",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: ch, Ask Al, ed",
+        "Navigation title reads “That simple”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a 3-item tab bar and a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 9 in “Ch”",
+        "Reached from “Loading state (2)”",
+        "Leads to “Category page (2)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 4:12 in the recording",
+        "Frame 843 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d20",
+      "role": "background",
+      "share": 0.731
+    },
+    {
+      "hex": "#3e3c3f",
+      "role": "surface",
+      "share": 0.2
+    },
+    {
+      "hex": "#5a5a5c",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#737173",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#7a5d23",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 843,
+    "atSeconds": 252.6,
+    "endSeconds": 253.2,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "ch",
+      "Ask Al",
+      "ed"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "That simple",
+    "headline": "Welcome to Notion!"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Wait 1.2s",
+        "name": "Loading state (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s080",
+        "via": "Back to Category page",
+        "name": "Category page (2)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-23",
+  "capturedBy": "motvin-ios-crawler"
+}

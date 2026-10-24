@@ -6,232 +6,556 @@
       "name": "Top navigation bars",
       "category": "Navigation",
       "description": "Horizontal primary navigation across the top of a page.",
-      "tags": ["header", "navbar"],
-      "match": { "platforms": ["web"], "elements": ["navigation"] }
+      "tags": [
+        "header",
+        "navbar"
+      ],
+      "match": {
+        "platforms": [
+          "web",
+          "webapp"
+        ],
+        "elements": [
+          "nav-bar"
+        ]
+      }
     },
     {
       "slug": "sidebar-navigation",
       "name": "Sidebar navigation",
       "category": "Navigation",
       "description": "Persistent left rails inside authenticated products.",
-      "tags": ["sidebar", "rail"],
-      "match": { "platforms": ["web"], "elements": ["sidebar"] }
+      "tags": [
+        "sidebar",
+        "rail"
+      ],
+      "match": {
+        "platforms": [
+          "web",
+          "webapp"
+        ],
+        "elements": [
+          "navigation"
+        ]
+      }
     },
     {
       "slug": "tab-bars",
       "name": "Tab bars",
       "category": "Bottom Navigation",
       "description": "Mobile bottom tab bars with four or five destinations.",
-      "tags": ["tab bar", "mobile"],
-      "match": { "elements": ["bottom-nav"] }
+      "tags": [
+        "tab bar",
+        "mobile"
+      ],
+      "match": {
+        "elements": [
+          "tab-bar"
+        ]
+      }
     },
     {
       "slug": "search-inputs",
       "name": "Search inputs",
       "category": "Search",
       "description": "Prominent search fields with suggestions and recent queries.",
-      "tags": ["search", "autocomplete"],
-      "match": { "elements": ["search"] }
+      "tags": [
+        "search",
+        "autocomplete"
+      ],
+      "match": {
+        "elements": [
+          "search-bar"
+        ]
+      }
     },
     {
       "slug": "search-results",
       "name": "Search results",
       "category": "Search",
       "description": "Result lists and grids with dense metadata.",
-      "tags": ["results", "list"],
-      "match": { "screenTypes": ["search"] }
+      "tags": [
+        "results",
+        "list"
+      ],
+      "match": {
+        "screenTypes": [
+          "search"
+        ]
+      }
     },
     {
       "slug": "filter-chips",
       "name": "Filter chips",
       "category": "Filters",
       "description": "Horizontally scrolling filter chips above a result set.",
-      "tags": ["chips", "filter"],
-      "match": { "elements": ["chip"] }
+      "tags": [
+        "chips",
+        "filter"
+      ],
+      "match": {
+        "elements": [
+          "chip"
+        ]
+      }
     },
     {
       "slug": "filter-panels",
       "name": "Filter panels",
       "category": "Filters",
       "description": "Side or overlay panels with grouped filter controls.",
-      "tags": ["panel", "facets"],
-      "match": { "elements": ["filter-panel"] }
+      "tags": [
+        "panel",
+        "facets"
+      ],
+      "match": {
+        "screenTypes": [
+          "search"
+        ],
+        "elements": [
+          "bottom-sheet",
+          "modal"
+        ]
+      }
     },
     {
       "slug": "kpi-cards",
       "name": "KPI cards",
       "category": "Cards",
       "description": "Compact stat cards with trend indicators.",
-      "tags": ["kpi", "metrics"],
-      "match": { "elements": ["kpi-card"] }
+      "tags": [
+        "kpi",
+        "metrics"
+      ],
+      "match": {
+        "elements": [
+          "kpi-card"
+        ]
+      }
     },
     {
       "slug": "pricing-cards",
       "name": "Pricing cards",
       "category": "Cards",
       "description": "Tiered plan cards with a highlighted recommendation.",
-      "tags": ["pricing", "tiers"],
-      "match": { "screenTypes": ["pricing"] }
+      "tags": [
+        "pricing",
+        "tiers"
+      ],
+      "match": {
+        "screenTypes": [
+          "pricing"
+        ]
+      }
     },
     {
       "slug": "feed-cards",
       "name": "Feed cards",
       "category": "Cards",
       "description": "Content cards inside vertical feeds.",
-      "tags": ["feed", "post"],
-      "match": { "screenTypes": ["feed"] }
+      "tags": [
+        "feed",
+        "post"
+      ],
+      "match": {
+        "screenTypes": [
+          "feed"
+        ]
+      }
     },
     {
       "slug": "product-cards",
       "name": "Product cards",
       "category": "Cards",
       "description": "Image-led cards with price and quick actions.",
-      "tags": ["product", "catalog"],
-      "match": { "screenTypes": ["product"] }
+      "tags": [
+        "product",
+        "catalog"
+      ],
+      "match": {
+        "screenTypes": [
+          "product"
+        ]
+      }
     },
     {
       "slug": "data-tables",
       "name": "Data tables",
       "category": "Tables",
       "description": "Sortable tables inside dashboards and admin tools.",
-      "tags": ["table", "rows"],
-      "match": { "elements": ["table"] }
+      "tags": [
+        "table",
+        "rows"
+      ],
+      "match": {
+        "elements": [
+          "table"
+        ]
+      }
     },
     {
       "slug": "transaction-lists",
       "name": "Transaction lists",
       "category": "Tables",
       "description": "Row-based lists of transactions and activity.",
-      "tags": ["transactions", "list"],
-      "match": { "industries": ["fintech", "finance"], "elements": ["list"] }
+      "tags": [
+        "transactions",
+        "list"
+      ],
+      "match": {
+        "industries": [
+          "fintech",
+          "finance"
+        ],
+        "elements": [
+          "list"
+        ]
+      }
     },
     {
       "slug": "bar-line-charts",
       "name": "Bar & line charts",
       "category": "Charts",
       "description": "Time-series charts embedded in overview screens.",
-      "tags": ["chart", "analytics"],
-      "match": { "elements": ["chart"] }
+      "tags": [
+        "chart",
+        "analytics"
+      ],
+      "match": {
+        "elements": [
+          "chart"
+        ]
+      }
     },
     {
       "slug": "progress-rings",
       "name": "Progress rings",
       "category": "Charts",
       "description": "Circular progress for goals and health metrics.",
-      "tags": ["progress", "ring"],
-      "match": { "elements": ["progress-ring"] }
+      "tags": [
+        "progress",
+        "ring"
+      ],
+      "match": {
+        "elements": [
+          "progress"
+        ]
+      }
     },
     {
       "slug": "login-forms",
       "name": "Login forms",
       "category": "Forms",
       "description": "Email and password sign-in with social options.",
-      "tags": ["auth", "login"],
-      "match": { "screenTypes": ["login"] }
+      "tags": [
+        "auth",
+        "login"
+      ],
+      "match": {
+        "screenTypes": [
+          "login"
+        ]
+      }
     },
     {
       "slug": "signup-forms",
       "name": "Signup forms",
       "category": "Forms",
       "description": "Account creation with inline validation.",
-      "tags": ["auth", "signup"],
-      "match": { "screenTypes": ["signup"] }
+      "tags": [
+        "auth",
+        "signup"
+      ],
+      "match": {
+        "screenTypes": [
+          "signup"
+        ]
+      }
     },
     {
       "slug": "settings-forms",
       "name": "Settings forms",
       "category": "Forms",
       "description": "Grouped preference forms with toggles.",
-      "tags": ["settings", "toggles"],
-      "match": { "screenTypes": ["settings"] }
+      "tags": [
+        "settings",
+        "toggles"
+      ],
+      "match": {
+        "screenTypes": [
+          "settings"
+        ]
+      }
     },
     {
       "slug": "payment-forms",
       "name": "Payment forms",
       "category": "Checkout",
       "description": "Card entry, address and order summary layouts.",
-      "tags": ["payment", "card"],
-      "match": { "screenTypes": ["checkout"] }
+      "tags": [
+        "payment",
+        "card"
+      ],
+      "match": {
+        "screenTypes": [
+          "checkout"
+        ]
+      }
     },
     {
       "slug": "order-confirmation",
       "name": "Order confirmation",
       "category": "Checkout",
       "description": "Success states after a purchase or transfer.",
-      "tags": ["success", "confirmation"],
-      "match": { "elements": ["success-state"] }
+      "tags": [
+        "success",
+        "confirmation"
+      ],
+      "match": {
+        "screenTypes": [
+          "success"
+        ]
+      }
     },
     {
       "slug": "dialogs",
       "name": "Dialogs",
       "category": "Modals",
       "description": "Centered modal dialogs.",
-      "tags": ["modal", "dialog"],
-      "match": { "elements": ["modal"] }
+      "tags": [
+        "modal",
+        "dialog"
+      ],
+      "match": {
+        "screenTypes": [
+          "modal"
+        ]
+      }
     },
     {
       "slug": "bottom-sheets",
       "name": "Bottom sheets",
       "category": "Modals",
       "description": "Mobile sheets sliding from the bottom edge.",
-      "tags": ["sheet", "mobile"],
-      "match": { "elements": ["bottom-sheet"] }
+      "tags": [
+        "sheet",
+        "mobile"
+      ],
+      "match": {
+        "elements": [
+          "bottom-sheet"
+        ]
+      }
     },
     {
       "slug": "segmented-tabs",
       "name": "Segmented tabs",
       "category": "Tabs",
       "description": "Tab strips switching views inside a page.",
-      "tags": ["tabs", "segmented"],
-      "match": { "elements": ["tabs"] }
+      "tags": [
+        "tabs",
+        "segmented"
+      ],
+      "match": {
+        "elements": [
+          "segmented-control"
+        ]
+      }
     },
     {
       "slug": "profile-tabs",
       "name": "Profile tabs",
       "category": "Tabs",
       "description": "Tabs separating posts, saved and about on profiles.",
-      "tags": ["profile", "tabs"],
-      "match": { "screenTypes": ["profile"], "elements": ["tabs"] }
+      "tags": [
+        "profile",
+        "tabs"
+      ],
+      "match": {
+        "screenTypes": [
+          "profile"
+        ],
+        "elements": [
+          "segmented-control"
+        ]
+      }
     },
     {
       "slug": "date-range-pickers",
       "name": "Date range pickers",
       "category": "Date Pickers",
       "description": "Calendar and range controls in analytics tools.",
-      "tags": ["date", "range"],
-      "match": { "elements": ["date-picker"] }
+      "tags": [
+        "date",
+        "range"
+      ],
+      "match": {
+        "screenTypes": [
+          "calendar"
+        ]
+      }
     },
     {
       "slug": "empty-states",
       "name": "Empty states",
       "category": "Empty States",
       "description": "First-run and no-results states with a clear next step.",
-      "tags": ["empty", "first run"],
-      "match": { "elements": ["empty-state"] }
+      "tags": [
+        "empty",
+        "first run"
+      ],
+      "match": {
+        "screenTypes": [
+          "empty"
+        ]
+      }
     },
     {
       "slug": "notification-centers",
       "name": "Notification centers",
       "category": "Notifications",
       "description": "In-app inboxes and toast stacks.",
-      "tags": ["notifications", "toast"],
-      "match": { "elements": ["notification"] }
+      "tags": [
+        "notifications",
+        "toast"
+      ],
+      "match": {
+        "screenTypes": [
+          "notifications"
+        ]
+      }
     },
     {
       "slug": "welcome-carousels",
       "name": "Welcome carousels",
       "category": "Onboarding",
       "description": "Swipeable intro screens before sign-up.",
-      "tags": ["carousel", "intro"],
-      "match": { "screenTypes": ["onboarding"] }
+      "tags": [
+        "carousel",
+        "intro"
+      ],
+      "match": {
+        "screenTypes": [
+          "onboarding"
+        ]
+      }
     },
     {
       "slug": "progress-steppers",
       "name": "Progress steppers",
       "category": "Onboarding",
       "description": "Multi-step setup with visible progress.",
-      "tags": ["stepper", "progress"],
-      "match": { "elements": ["stepper"] }
+      "tags": [
+        "stepper",
+        "progress"
+      ],
+      "match": {
+        "elements": [
+          "stepper"
+        ]
+      }
+    },
+    {
+      "slug": "chat-screens",
+      "name": "Chat screens",
+      "category": "Messaging",
+      "description": "Conversations with people or an AI assistant.",
+      "tags": [
+        "chat",
+        "messages"
+      ],
+      "match": {
+        "screenTypes": [
+          "messages"
+        ]
+      }
+    },
+    {
+      "slug": "permission-prompts",
+      "name": "Permission prompts",
+      "category": "Onboarding",
+      "description": "Requests for access \u2014 photos, notifications, the microphone.",
+      "tags": [
+        "permission"
+      ],
+      "match": {
+        "screenTypes": [
+          "permission"
+        ]
+      }
+    },
+    {
+      "slug": "carousels",
+      "name": "Carousels",
+      "category": "Content",
+      "description": "Horizontally swiping rows of cards or images.",
+      "tags": [
+        "carousel"
+      ],
+      "match": {
+        "elements": [
+          "carousel"
+        ]
+      }
+    },
+    {
+      "slug": "toasts",
+      "name": "Toasts",
+      "category": "Feedback",
+      "description": "Brief messages that appear and go on their own.",
+      "tags": [
+        "toast",
+        "snackbar"
+      ],
+      "match": {
+        "elements": [
+          "toast"
+        ]
+      }
+    },
+    {
+      "slug": "banners",
+      "name": "Banners",
+      "category": "Content",
+      "description": "Promotional or informational strips across a page.",
+      "tags": [
+        "banner"
+      ],
+      "match": {
+        "elements": [
+          "banner"
+        ]
+      }
+    },
+    {
+      "slug": "skeleton-loaders",
+      "name": "Skeleton loaders",
+      "category": "Feedback",
+      "description": "Grey placeholders shown while content loads.",
+      "tags": [
+        "skeleton",
+        "loading"
+      ],
+      "match": {
+        "elements": [
+          "skeleton"
+        ]
+      }
+    },
+    {
+      "slug": "coach-marks",
+      "name": "Coach marks",
+      "category": "Onboarding",
+      "description": "Tips pointing at parts of the interface for first-time users.",
+      "tags": [
+        "tooltip",
+        "coach-mark"
+      ],
+      "match": {
+        "elements": [
+          "coach-mark"
+        ]
+      }
     }
   ]
 }

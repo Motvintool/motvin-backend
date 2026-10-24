@@ -1,0 +1,162 @@
+{
+  "screenId": "notion-ios-versions-2026-10-23-upgrading-a-plan-4",
+  "screen_id": "notion-ios-versions-2026-10-23-upgrading-a-plan-4",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-23T11:05:42.175Z",
+  "screen_type": "paywall",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Upgrading a plan",
+  "flow_position": 42,
+  "name": "Subscription confirmation",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with prices. Dark theme, 24 text elements.",
+  "text": "Business\nPlus\nNotion Plus\n1 member limit\n· 11,900\n$ 1,199\n17% off\nper month\nper year\nDouble-Click\nto Subscribe\nTrial of Notion Al\nV Unlimited file uploads\nView data with charts\nApp Store\nNotion - Plus Yearly\nN\nNotion: notes, tasks, Al (\nSubscription\n· 11,900 per year\nCancel at any time in Settings > Apple Account at least\none day before each renewal date. Plan automatically\nrenews until cancelled.\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": "To confirm a subscription purchase via the App Store",
+  "primary_action": "Confirm with Side Button",
+  "tags": [
+    "settings",
+    "subscription",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notion Plus”",
+        "Dialog over a dimmed background, covering 41% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with prices. Dark theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 42 of 46 in “Customizing a page”",
+        "Reached from “Subscription plans (5)”",
+        "Leads to “Subscription plans (6)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:42 in the recording",
+        "Frame 1342 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131115",
+      "role": "background",
+      "share": 0.708
+    },
+    {
+      "hex": "#353335",
+      "role": "surface",
+      "share": 0.226
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#706e71",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a19fa1",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 1342,
+    "atSeconds": 402.3,
+    "endSeconds": 402.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.03125,
+        "w": 0.8125,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notion Plus",
+    "headline": "To Subscribe"
+  },
+  "crawler": {
+    "nodeId": "s133",
+    "depth": 132,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s132",
+        "via": "Tap “Notion Plus”",
+        "name": "Subscription plans (5)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s134",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans (6)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-23",
+  "capturedBy": "motvin-ios-crawler"
+}

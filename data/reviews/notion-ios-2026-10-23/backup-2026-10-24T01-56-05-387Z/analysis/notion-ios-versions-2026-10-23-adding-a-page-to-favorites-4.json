@@ -1,0 +1,151 @@
+{
+  "screenId": "notion-ios-versions-2026-10-23-adding-a-page-to-favorites-4",
+  "screen_id": "notion-ios-versions-2026-10-23-adding-a-page-to-favorites-4",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-23T11:05:42.112Z",
+  "screen_type": "signup",
+  "published_as": "modal",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Adding a page to Favorites",
+  "flow_position": 2,
+  "name": "Actions menu",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 18 text elements.",
+  "text": "9:41 €\n..•\nWelcome to Notion!\nCreate an account with Notion\nTap anywhere and just start typing. It's\nthat simple.\nHighlight text and use the menu above\nyour keyboard to change the style.\nTap the + icon above your keyboard to\nadd content: headings, to-dos, and\nmore.\nCollapse your keyboard, then tap and\nhold this line to move content.\nTap the home icon at the bottom left to\nsee your pages. (We've installed a To\nDo List for you - go check it out!)\nClick on the\nNotion Al face in the\nbottom right of your screen or click here\nto see what Agent can do\nKeep exploring!\nYou've just learned the basics. But there's\nch\ned\nAsk Al\nIle and irmeng\npagt\nusing the compose icon in the bottom right",
+  "purpose": "To manage a page by performing actions like copying, sharing, or moving it.",
+  "primary_action": "Copy page contents",
+  "tags": [
+    "ch",
+    "ask al",
+    "ed",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: ch, Ask Al, ed",
+        "Navigation title reads “That simple”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a 3-item tab bar. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Ch”",
+        "Reached from “Create account (3)”",
+        "Leads to “Add to Favorites”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:59 in the recording",
+        "Frame 802 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1d1f",
+      "role": "background",
+      "share": 0.73
+    },
+    {
+      "hex": "#3e3c3f",
+      "role": "surface",
+      "share": 0.201
+    },
+    {
+      "hex": "#5a595b",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#737173",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#7a5d23",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 802,
+    "atSeconds": 239.4,
+    "endSeconds": 240.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "ch",
+      "Ask Al",
+      "ed"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "That simple",
+    "headline": "Welcome to Notion!"
+  },
+  "crawler": {
+    "nodeId": "s074",
+    "depth": 73,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s073",
+        "via": "Wait 2.1s",
+        "name": "Create account (3)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s075",
+        "via": "Open Add to Favorites",
+        "name": "Add to Favorites"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-23",
+  "capturedBy": "motvin-ios-crawler"
+}
