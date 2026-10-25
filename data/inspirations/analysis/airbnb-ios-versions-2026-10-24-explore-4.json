@@ -1,0 +1,165 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-24-explore-4",
+  "screen_id": "airbnb-ios-versions-2026-10-24-explore-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T17:09:58.690Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Explore",
+  "flow_position": 1,
+  "name": "Explore home",
+  "description": "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
+  "text": "9:41(\n•0\nQ Start your search\nExperiences\nHomes\nServi\nAll\nContinue searching for\nphotographers in Mumbai\nRecently viewed\n→\nCandolim\nGoa\nNorth Goa\n1bed • *4.9\n1 bed • * 5.0\n1 bed • * 4.91\nGuest favourite homes in Puducherry\n→\nIndian guests often rate these homes highly\nGuest favourite\nGuest favourite\nRoom in Puducherrv\nShared room in Puducherrv\nR\nExplore\nWishlists\nMessages\nTrips\nProfile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "photo",
+    "explore",
+    "wishlists",
+    "trips",
+    "messages",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
+        "Navigation title reads “Start your search”",
+        "Category strip: Experiences, Homes, Servi, All",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar, a row of 4 category chips and a search bar. Light theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Start your search”",
+        "Reached from “Explore home — loading”",
+        "Leads to “Start your search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:57 in the recording",
+        "Frame 394 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f1eff2",
+      "role": "background",
+      "share": 0.532
+    },
+    {
+      "hex": "#d5d1ce",
+      "role": "surface",
+      "share": 0.208
+    },
+    {
+      "hex": "#b9b2aa",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#a0917f",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#5d5448",
+      "role": "text",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 394,
+    "atSeconds": 117.9,
+    "endSeconds": 118.5,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "Explore",
+      "Wishlists",
+      "Trips",
+      "Messages",
+      "Profile"
+    ],
+    "chipLabels": [
+      "Experiences",
+      "Homes",
+      "Servi",
+      "All"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Start your search",
+    "headline": "Recently viewed"
+  },
+  "crawler": {
+    "nodeId": "s052",
+    "depth": 56,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s051",
+        "via": "Wait 0.6s",
+        "name": "Explore home — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s053",
+        "via": "Tap “photographers in Mumbai”",
+        "name": "Start your search"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

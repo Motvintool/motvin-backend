@@ -1,0 +1,149 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-24-logging-in-12",
+  "screen_id": "airbnb-ios-versions-2026-10-24-logging-in-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T17:09:58.385Z",
+  "screen_type": "calendar",
+  "published_as": "calendar",
+  "states": [],
+  "category": "travel",
+  "flow": "creation",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "Calendar",
+  "description": "Calendar screen with a primary action labelled “Turn on notifications”. Light theme, 6 text elements.",
+  "text": "9:41C\nX\nTurn on notifications\nDon't miss important messages like check-in\ndetails and account activity.\nGet travel deals, personalised\nrecommendations and more.\nYes, notify me",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "notification",
+    "calendar",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar screen with a primary action labelled “Turn on notifications”. Light theme, 6 text elements.",
+        "Calls to action: “Turn on notifications”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Choosing a date”",
+        "Reached from “Explore home”",
+        "Leads to “Notifications permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 1:53 in the recording",
+        "Frame 387 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#9b999b",
+      "role": "background",
+      "share": 0.531
+    },
+    {
+      "hex": "#fdfcfd",
+      "role": "surface",
+      "share": 0.312
+    },
+    {
+      "hex": "#dad8da",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#4a484b",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#0c0a0d",
+      "role": "text",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 387,
+    "atSeconds": 113.4,
+    "endSeconds": 116.4,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Turn on notifications"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Details and account activity"
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 52,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s046",
+        "via": "Wait 1.2s",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Open Notifications",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

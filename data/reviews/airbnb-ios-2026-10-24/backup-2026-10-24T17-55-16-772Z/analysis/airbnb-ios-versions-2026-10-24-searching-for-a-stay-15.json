@@ -1,0 +1,152 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-24-searching-for-a-stay-15",
+  "screen_id": "airbnb-ios-versions-2026-10-24-searching-for-a-stay-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T17:10:01.693Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Searching for a stay",
+  "flow_position": 13,
+  "name": "Checkout",
+  "description": "Checkout screen with a row of 3 category chips. Light theme, 40 text elements.",
+  "text": "9:41(\n•ill\nServices\nHomes\nExperiences\nWhere\nNearby\nWhen?\nFlexible\nDates\nM\nW\nS\nT\nT\nF\n+ 14 days\n+ 7 days\n3\n10\n= 3 days\n8\n9\n4\n15\n16\n17\n+ 2 days\n22\n23\n24\n1\n+ 1 day\n29\n31\n30\n8\nExact date\nCheckout\nCheck-in\nExact date\nExact date\nReset\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "reset",
+    "next",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: Services, Homes, Experiences",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a row of 3 category chips. Light theme, 40 text elements.",
+        "40 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 21 in “Browsing a category (Explore)”",
+        "Reached from “Checkout”",
+        "Leads to “Checkout”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 2:31 in the recording",
+        "Frame 514 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f4f6",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#d9d6d7",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#bfbab8",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#4c4a4b",
+      "role": "text",
+      "share": 0.013
+    },
+    {
+      "hex": "#a29b98",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 514,
+    "atSeconds": 151.8,
+    "endSeconds": 154.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 40,
+    "tabLabels": [],
+    "chipLabels": [
+      "Services",
+      "Homes",
+      "Experiences"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "When?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s081",
+    "depth": 85,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s080",
+        "via": "Tap “Dates”",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s082",
+        "via": "Tap “+ 14 days”",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}
