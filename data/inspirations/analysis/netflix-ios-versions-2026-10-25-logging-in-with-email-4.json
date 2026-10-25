@@ -1,0 +1,154 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-logging-in-with-email-4",
+  "screen_id": "netflix-ios-versions-2026-10-25-logging-in-with-email-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:30.436Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 7,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 34 text elements.",
+  "text": "9:41 C\nooll\nNETFLIX\n<\nEnter your info to sign in\nEmail or mobile number\nContinue\nGet Help ^\nForgot email or mobile number?\nLearn more about sign-in\nThis page is protected by Google reCAPTCHA to ensure\nvou're not a bot\npassword for www.netflix.com - Chrome\nsurendarv638@gmail.com\ni\nW\ne\nt\ny\nO\np\nk\nf\nh\nd\ng\nJ\nS\nb\nZ\nm\nC\nV\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 34 text elements.",
+        "Calls to action: “Continue”",
+        "34 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 27 in “Opening a page (Settings)”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 7:08 in the recording",
+        "Frame 1438 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#251517",
+      "role": "background",
+      "share": 0.677
+    },
+    {
+      "hex": "#373033",
+      "role": "surface",
+      "share": 0.142
+    },
+    {
+      "hex": "#595355",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#ca0915",
+      "role": "accent",
+      "share": 0.047
+    },
+    {
+      "hex": "#7d777a",
+      "role": "text",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1438,
+    "atSeconds": 428.7,
+    "endSeconds": 431.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s437",
+    "depth": 436,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s436",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s439",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

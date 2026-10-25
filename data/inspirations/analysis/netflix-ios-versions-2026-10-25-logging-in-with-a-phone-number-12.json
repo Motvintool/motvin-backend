@@ -1,0 +1,138 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-logging-in-with-a-phone-number-12",
+  "screen_id": "netflix-ios-versions-2026-10-25-logging-in-with-a-phone-number-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:56:50.924Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with a phone number",
+  "flow_position": 21,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Dark theme, 15 text elements.",
+  "text": "9:41(\n•ll\nNETFLIX\n<\nCheck your text messages\nand enter the code\n+916382102514\nChange\nThat code was incorrect. Please try again.\nThis code will expire in 15 minutes.\nDid not get a code? Resend code.\nGet Help v\nFrom Messages\n8531\n3\n2\n1\nDEF\nABC\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your text messages”",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 23 in “Logging in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.3s at 0:59 in the recording",
+        "Frame 198 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#180b0d",
+      "role": "background",
+      "share": 0.548
+    },
+    {
+      "hex": "#3b3335",
+      "role": "surface",
+      "share": 0.234
+    },
+    {
+      "hex": "#3c181a",
+      "role": "accent",
+      "share": 0.15
+    },
+    {
+      "hex": "#625558",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#97898b",
+      "role": "text",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 198,
+    "atSeconds": 59.4,
+    "endSeconds": 59.7,
+    "holdSeconds": 0.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your text messages",
+    "headline": "Check your text messages"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": []
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

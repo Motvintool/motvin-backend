@@ -1,0 +1,150 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-editing-a-profile-8",
+  "screen_id": "netflix-ios-versions-2026-10-25-editing-a-profile-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:56:55.023Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Editing a profile",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 15 text elements.",
+  "text": "9:41(\noll\nDisplay\nChange the language of the text you see on Netflix. Any\nchange will also apply to the default language for audio and\nsubtitles.\nDansk\nDeutsch\nEnglish\nEspañol\nFilipino\nFrançais\nHrvatski\nIndonesia\nItaliano\nMagyar\nMelayu\nNederlands",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "nederlands",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Opening a page”",
+        "Reached from “Edit Profile”",
+        "Leads to “Edit Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:50 in the recording",
+        "Frame 371 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.857
+    },
+    {
+      "hex": "#383639",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#050305",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#4e4d4f",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#666466",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 371,
+    "atSeconds": 110.7,
+    "endSeconds": 111.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "English",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s078",
+    "depth": 77,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Tap “English”",
+        "name": "Edit Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s081",
+        "via": "Wait 0.9s",
+        "name": "Edit Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

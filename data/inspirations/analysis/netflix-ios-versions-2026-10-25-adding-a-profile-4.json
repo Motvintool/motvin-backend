@@ -1,0 +1,149 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-adding-a-profile-4",
+  "screen_id": "netflix-ios-versions-2026-10-25-adding-a-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:56:52.391Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Adding a profile",
+  "flow_position": 1,
+  "name": "Add Profile",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 8 text elements.",
+  "text": "9:41€\nSave\nCancel\nAdd Profile\nProfile name\nMotvin\nChildren's Profile\nMade for children 12 and under, but parents have\nall the control.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add Profile”",
+        "Category strip: Save, Cancel, Add Profile",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 9 in “Opening Choose Icon”",
+        "Reached from “Add Profile form”",
+        "Leads to “Choose Icon sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:18 in the recording",
+        "Frame 263 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.867
+    },
+    {
+      "hex": "#050305",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#47484d",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#2f8bee",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#2a3038",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 263,
+    "atSeconds": 78,
+    "endSeconds": 79.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [
+      "Save",
+      "Cancel",
+      "Add Profile"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add Profile",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 47,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Back to Add Profile",
+        "name": "Add Profile form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Open Choose Icon",
+        "name": "Choose Icon sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

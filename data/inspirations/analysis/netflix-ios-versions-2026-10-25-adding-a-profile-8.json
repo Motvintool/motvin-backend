@@ -1,0 +1,148 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-adding-a-profile-8",
+  "screen_id": "netflix-ios-versions-2026-10-25-adding-a-profile-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:56:55.686Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "entertainment",
+  "flow": "settings",
+  "flow_name": "Adding a profile",
+  "flow_position": 1,
+  "name": "Profile",
+  "description": "Profile screen with a 3-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:41 C\nWITHIN\nComing on 15 October\nChoose your profile\nRakeshh\nSurendar\nMalini\nMotvin\nEdit\nAngu",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "angu",
+    "motvin",
+    "edit",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Angu, Motvin, Edit",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a 3-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening a page (Angu)”",
+        "Reached from “Edit Profile”",
+        "Leads to “Home home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:56 in the recording",
+        "Frame 393 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#432425",
+      "role": "background",
+      "share": 0.255
+    },
+    {
+      "hex": "#95292a",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#560304",
+      "role": "accent",
+      "share": 0.087
+    },
+    {
+      "hex": "#624748",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#bfbabc",
+      "role": "text",
+      "share": 0.051
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 393,
+    "atSeconds": 116.1,
+    "endSeconds": 118.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Angu",
+      "Motvin",
+      "Edit"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "WITHIN"
+  },
+  "crawler": {
+    "nodeId": "s086",
+    "depth": 85,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s084",
+        "via": "Open Profile",
+        "name": "Edit Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s088",
+        "via": "Open Home home — loading",
+        "name": "Home home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

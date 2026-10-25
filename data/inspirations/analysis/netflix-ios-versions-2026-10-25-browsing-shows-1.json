@@ -1,0 +1,146 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-browsing-shows-1",
+  "screen_id": "netflix-ios-versions-2026-10-25-browsing-shows-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:14.921Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Browsing shows",
+  "flow_position": 4,
+  "name": "Notifications",
+  "description": "Notifications screen. Dark theme, 13 text elements.",
+  "text": "9:41(\noll\nNotifications\nWOMAN\nNew arrival\nThe Woman in the Yard\nNYARD\n28 Sep\nLast call to watch\nTime's (almost) up on these\n06 Sep\nA top action title picked just for you\nВИSТ\nCheck out Blast\n14 Aug",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “New & Hot”",
+        "Reached from “Home home”",
+        "Leads to “VATGHERS home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 4:41 in the recording",
+        "Frame 944 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.884
+    },
+    {
+      "hex": "#33333a",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#1c1c1f",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#5b5756",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#4f0208",
+      "role": "accent",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 944,
+    "atSeconds": 281.7,
+    "endSeconds": 283.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "NYARD"
+  },
+  "crawler": {
+    "nodeId": "s277",
+    "depth": 276,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s274",
+        "via": "Open Notifications",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s283",
+        "via": "Wait 1.8s",
+        "name": "VATGHERS home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,168 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-logging-in-with-email-6",
+  "screen_id": "netflix-ios-versions-2026-10-25-logging-in-with-email-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:30.964Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 13,
+  "name": "Phone number entry",
+  "description": "Login bottom sheet over a dimmed screen, on top of Phone number entry with the keyboard open and a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "text": "9:41C\n•0l\nNETFLIX\n<\nEnter your info to sign in\nEmail or mobile number\nsurendarv638@gmail.com\nContinue\nGet Help ^\nForgot email or mobile number?\nLearn more about sign\nThis page is protected by Google reCAPTCHA to ensure\nyou're not a bot.\ne\nt\nW\ny\nO\nj\nk\nh\nd\nf\na\nS\ng",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 22% of the height from 78% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen, on top of Phone number entry with the keyboard open and a primary action labelled “Continue”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue”",
+        "11 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 27 in “Opening a page (Settings)”",
+        "Reached from “Phone number entry”",
+        "Leads to “OTP verification”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 7:15 in the recording",
+        "Frame 1453 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#160a0c",
+      "role": "background",
+      "share": 0.642
+    },
+    {
+      "hex": "#391e20",
+      "role": "surface",
+      "share": 0.232
+    },
+    {
+      "hex": "#810406",
+      "role": "accent",
+      "share": 0.053
+    },
+    {
+      "hex": "#4b4346",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#6f6365",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1453,
+    "atSeconds": 435.9,
+    "endSeconds": 437.4,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.78125,
+        "w": 0.875,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Enter your info to sign in"
+  },
+  "crawler": {
+    "nodeId": "s443",
+    "depth": 442,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s442",
+        "via": "Tap “Enter your info to sign in”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s445",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}
