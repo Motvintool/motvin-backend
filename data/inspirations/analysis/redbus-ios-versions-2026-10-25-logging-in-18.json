@@ -1,0 +1,156 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-logging-in-18",
+  "screen_id": "redbus-ios-versions-2026-10-25-logging-in-18",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:00.797Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 12,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 27 text elements.",
+  "text": "9:41(\nLog in or create a new account\nMobile number\nCountry Code\n63821025145\n+91(IND) V\nContinue\nåp Sign in with Passkey\nor\nG Sign in with Google\nSian in with Annle\n2\n3\n1\nDEF\nABC\n5\n6\n4\nJKL\nGHI\nMNO\n8\n9\n7\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in with Passkey”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 27 text elements.",
+        "Calls to action: “Continue”",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 47 in “Logging in”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.7s at 0:27 in the recording",
+        "Frame 118 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fb",
+      "role": "background",
+      "share": 0.557
+    },
+    {
+      "hex": "#e0dfe4",
+      "role": "surface",
+      "share": 0.266
+    },
+    {
+      "hex": "#b3b7c1",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#fb3d49",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#f8bcc1",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 118,
+    "atSeconds": 27,
+    "endSeconds": 35.7,
+    "holdSeconds": 8.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in with Passkey",
+    "headline": "Sign in with Google"
+  },
+  "crawler": {
+    "nodeId": "s023",
+    "depth": 22,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Tap “& Sign in with Passkey”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Open Sign in with Passkey",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

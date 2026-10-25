@@ -1,0 +1,148 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-filtering-train-results-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-filtering-train-results-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:29.888Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "travel",
+  "flow": "search",
+  "flow_name": "Filtering train results",
+  "flow_position": 7,
+  "name": "Search results",
+  "description": "Search results screen. Light theme, 20 text elements.",
+  "text": "9:41(\nFilter trains\nClose\nDefault\nSort by\nAvailable First\nTicket class\nDeparture\nShortest First\ntime range\nArrival\nDeparture: Earliest First\ntime range\nDeparture: Latest First\nQuota\nDeparting\nArrival: Earliest First\nStations\nArriving\nArrival: Latest First\nStations\nClear All\nApply",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "clear all",
+    "apply",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Filter trains”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen. Light theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 38 in “Train Tickets”",
+        "Reached from “Error”",
+        "Leads to “Error”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 6:13 in the recording",
+        "Frame 1253 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f4f4f6",
+      "role": "background",
+      "share": 0.799
+    },
+    {
+      "hex": "#c3c3c4",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#dbdbde",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#df6972",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#d5323c",
+      "role": "accent",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1253,
+    "atSeconds": 373.2,
+    "endSeconds": 376.2,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Filter trains",
+    "headline": "Departure: Earliest First",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s321",
+    "depth": 321,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s319",
+        "via": "Open Filter trains",
+        "name": "Error"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s322",
+        "via": "Back to Error",
+        "name": "Error"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

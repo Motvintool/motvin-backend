@@ -1,0 +1,166 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-train-tickets-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-train-tickets-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:27.158Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Train tickets",
+  "flow_position": 2,
+  "name": "Diwali dialog",
+  "description": "Dialog over a dimmed screen with a primary action labelled “Book Now”. Light theme, 20 text elements.",
+  "text": "9:41(\n•ll\n·300 Off\nGet 20% of\nredBus\nredRail\nTrain Tickets\nHotels\nMetro Ticke1\nBus Tickets\nBook train tickets\nSeats filling fast\nDiwali Bookings Open - Use DIWALIRAIL\nFrom Station\nTo Station\nDiwali Bookings\nDiwali\nDiwali Bookings are Open!\nBegin your festive journey home! Secure your\ntrain seat today and use code EARLYDIWALI to\nsave upto {501 on your first booking.\nBook Now\nClose",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "close",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Diwali”",
+        "Dialog over a dimmed background, covering 55% of the height from 2% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a primary action labelled “Book Now”. Light theme, 20 text elements.",
+        "Calls to action: “Book Now”",
+        "20 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Opening Home home options”",
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:36 in the recording",
+        "Frame 1125 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#ccc5b9",
+      "role": "background",
+      "share": 0.432
+    },
+    {
+      "hex": "#faf5f2",
+      "role": "surface",
+      "share": 0.312
+    },
+    {
+      "hex": "#afa594",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#d33a41",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#dfdcde",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1125,
+    "atSeconds": 336.3,
+    "endSeconds": 337.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Book Now"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Diwali",
+    "headline": "Diwali",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s292",
+    "depth": 291,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s289",
+        "via": "Open Diwali",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s294",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

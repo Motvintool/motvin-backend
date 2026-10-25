@@ -1,0 +1,145 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-redeeming-a-gift-card-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-redeeming-a-gift-card-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:49.939Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Redeeming a gift card",
+  "flow_position": 1,
+  "name": "Payment method",
+  "description": "Payment screen. Light theme, 12 text elements.",
+  "text": "9:41(\nRedeem gift card\n< Back\nGIFT CARD\nEnter 16-digit gift card number\nEnter PIN\n• Gift card amount will be added to redBus wallet which\ncan be used to make bookings on redBus\n• Gift card amount added will be valid for 1 year from the\ndate of redemption\n• Gift card amount cannot be transferred to bank\naccount or another wallet\nView terms and conditions\nRedeem gift card",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "wallet",
+    "payment",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Redeem gift card”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Light theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 18 in “Paying”",
+        "Reached from “Payment method — scrolled”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 10:50 in the recording",
+        "Frame 2184 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f5fa",
+      "role": "background",
+      "share": 0.637
+    },
+    {
+      "hex": "#e5272b",
+      "role": "accent",
+      "share": 0.208
+    },
+    {
+      "hex": "#dbdae5",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#db4b4b",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#f3b8bb",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2184,
+    "atSeconds": 650.4,
+    "endSeconds": 655.5,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Redeem gift card",
+    "headline": "Enter 16-digit gift card number"
+  },
+  "crawler": {
+    "nodeId": "s537",
+    "depth": 539,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s535",
+        "via": "Open Redeem gift card",
+        "name": "Payment method — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s540",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

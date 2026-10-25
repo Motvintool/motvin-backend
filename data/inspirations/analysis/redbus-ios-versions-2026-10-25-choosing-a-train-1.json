@@ -1,0 +1,165 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-choosing-a-train-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-choosing-a-train-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:31.977Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Choosing a train",
+  "flow_position": 31,
+  "name": "Quota dialog",
+  "description": "Dialog over a dimmed screen, on top of Class with a primary action labelled “Confirm date of journey”. Light theme, 28 text elements.",
+  "text": "9:41(\nPUNE → NDLS\n<\nTue, 06 Oct . 8 trains\n• Quota v\nTI AC\nE Class v\nPune Jn. (\nHazrat Nizamuddin Jn\n7km from NDLS\nFastest train\n·4,385\nЗА\n₴1,835\n1A\nSL\nRLWL 26\nRLWL 2\nOther t\n2 hr ago\n2 hr ago\n08 Oct • 1 train\n22685\nCdg Skranti Exp\nMIWTFSS\nConfirm date of journey\nThis train departs on\nThu, 08 Oct from Pune Jn\nContinue booking\nGo back to search results",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Quota”",
+        "Dialog over a dimmed background, covering 44% of the height from 2% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Class with a primary action labelled “Confirm date of journey”. Light theme, 28 text elements.",
+        "Calls to action: “Confirm date of journey”, “Continue booking”",
+        "28 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 31 of 38 in “Train Tickets”",
+        "Reached from “Class”",
+        "Leads to “Class”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:41 in the recording",
+        "Frame 1343 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c7c2c3",
+      "role": "background",
+      "share": 0.547
+    },
+    {
+      "hex": "#fcfafc",
+      "role": "surface",
+      "share": 0.304
+    },
+    {
+      "hex": "#aba4a3",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#e1dddf",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#db6068",
+      "role": "accent",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1343,
+    "atSeconds": 401.4,
+    "endSeconds": 403.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm date of journey",
+      "Continue booking"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Quota",
+    "headline": "Cdg Skranti Exp"
+  },
+  "crawler": {
+    "nodeId": "s345",
+    "depth": 345,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s342",
+        "via": "Tap “RLWL 2”",
+        "name": "Class"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s348",
+        "via": "Dismiss",
+        "name": "Class"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

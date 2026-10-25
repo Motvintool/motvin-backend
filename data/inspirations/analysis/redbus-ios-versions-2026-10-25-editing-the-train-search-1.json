@@ -1,0 +1,161 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-editing-the-train-search-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-editing-the-train-search-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:32.431Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Editing the train search",
+  "flow_position": 36,
+  "name": "Quota dialog",
+  "description": "Dialog over a dimmed screen, on top of Class with a search bar. Light theme, 35 text elements.",
+  "text": "9:41(\nPUNE → NDLS\n<\nTue, 06 Oct . 8 trains\n• Quota v\n\" AC\nE Class v\nHazrat Nizamuddin Jn\nPune Jn.\n7km from NDLS\nFastest train\n·4,385\nЗА\n₴1,835\n1A\nSL\nRLWL 26\nRLWL 2\nOther t\n2 hrago\n2 hr ago\n08 Oct • 1 train\n22685\nMIWTESS\nCdg Skranti Exp\nEdit Search\nSource\nPimpri Chinchwad PUNE\nDestination\nDelhi NDLS\nDate of journey\nDay After\nTomorrow\n06 Oct, Tue\n1\nQ Search Trains\n(R) IRCTC Authorised Partner",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Quota”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 44% of the height from 2% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Class with a search bar. Light theme, 35 text elements.",
+        "35 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 38 in “Train Tickets”",
+        "Reached from “Class”",
+        "Leads to “Class”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:47 in the recording",
+        "Frame 1363 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c7c2c3",
+      "role": "background",
+      "share": 0.565
+    },
+    {
+      "hex": "#fbf8fa",
+      "role": "surface",
+      "share": 0.298
+    },
+    {
+      "hex": "#aba3a2",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#e2dee0",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#d8525a",
+      "role": "accent",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1363,
+    "atSeconds": 407.4,
+    "endSeconds": 409.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Quota",
+    "headline": "Pimpri Chinchwad PUNE"
+  },
+  "crawler": {
+    "nodeId": "s350",
+    "depth": 350,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s348",
+        "via": "Open Quota",
+        "name": "Class"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s351",
+        "via": "Dismiss",
+        "name": "Class"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-adding-gst-details-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-adding-gst-details-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:51.147Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Adding GST details",
+  "flow_position": 6,
+  "name": "Add your business details",
+  "description": "Detail screen. Light theme, 8 text elements.",
+  "text": "9:41 C\nGST Details\nAdd your business details\nGSTIN\nBusiness Name\nBusiness Address\nBusiness Email\nIn case of invalid/cancelled GSTIN, booking shall be\nconsidered as personal booking\nSave GST details",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "address",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add your business details”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 6 in “Opening RedBus wallet”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 11:13 in the recording",
+        "Frame 2250 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf9fb",
+      "role": "background",
+      "share": 0.875
+    },
+    {
+      "hex": "#dfd5d3",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#d73a44",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#eaaab0",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#a5a3a6",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2250,
+    "atSeconds": 673.8,
+    "endSeconds": 675.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add your business details",
+    "headline": "GSTIN"
+  },
+  "crawler": {
+    "nodeId": "s551",
+    "depth": 553,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s550",
+        "via": "Open Add your business details",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s552",
+        "via": "Wait 1.5s",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

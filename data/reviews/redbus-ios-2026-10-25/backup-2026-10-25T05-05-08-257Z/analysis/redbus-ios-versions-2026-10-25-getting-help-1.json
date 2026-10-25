@@ -1,0 +1,164 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-getting-help-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-getting-help-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:53.119Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Getting help",
+  "flow_position": 16,
+  "name": "Payment method",
+  "description": "Payment dialog over a dimmed screen, on top of Payment method. Light theme, 17 text elements.",
+  "text": "9:41 C\nPayments\nGift Card\nNEW\nredBus Wallet\n>\n• Payment methods\n>\nGST details\nMore\nOffers\n>\nReferrals\nHelp\n• Chat with us\n>\nBus Support\n+919945600000\nRail Support\n>\n+919902977777",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "payment",
+    "offer",
+    "wallet",
+    "rail support",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payments”",
+        "Dialog over a dimmed background, covering 34% of the height from 2% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment dialog over a dimmed screen, on top of Payment method. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 18 in “Paying”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 11:47 in the recording",
+        "Frame 2367 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cdcbcd",
+      "role": "background",
+      "share": 0.68
+    },
+    {
+      "hex": "#fbfafb",
+      "role": "surface",
+      "share": 0.247
+    },
+    {
+      "hex": "#aba9ab",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#e5e3e5",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#8b898b",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2367,
+    "atSeconds": 707.7,
+    "endSeconds": 710.4,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Payments",
+    "headline": "Help",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s573",
+    "depth": 575,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s572",
+        "via": "Tap “Payments”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s576",
+        "via": "Dismiss",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

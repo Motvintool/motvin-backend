@@ -1,0 +1,157 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-account-2",
+  "screen_id": "redbus-ios-versions-2026-10-25-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:47.828Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Account",
+  "flow_position": 172,
+  "name": "Payment method",
+  "description": "Payment screen with a 5-item tab bar. Light theme, 18 text elements.",
+  "text": "9:41\n6001\nUser\n916382102514\nMember since Apr 2025\nMy details\nE Bookings\n• Scratch Card\n>\nPersonal information\n>\n• Passengers\nIrctc Details\nPayments\n>\nGift Card\nNEW\nredBus Wallet\n>\nPayment methods\nOffers\nHome\nMy Account\nMy Bookings\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "booking",
+    "wallet",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “My details”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with a 5-item tab bar. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 172 of 200 in “Home”",
+        "Reached from “Help (error)”",
+        "Leads to “My Bookings (empty)”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 10:20 in the recording",
+        "Frame 2073 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafc",
+      "role": "background",
+      "share": 0.647
+    },
+    {
+      "hex": "#24203e",
+      "role": "text",
+      "share": 0.108
+    },
+    {
+      "hex": "#dbd8da",
+      "role": "surface",
+      "share": 0.107
+    },
+    {
+      "hex": "#3e3873",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#a9a6ac",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2073,
+    "atSeconds": 620.1,
+    "endSeconds": 622.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My details",
+    "headline": "Irctc Details"
+  },
+  "crawler": {
+    "nodeId": "s512",
+    "depth": 513,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s510",
+        "via": "Open My details",
+        "name": "Help (error)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s514",
+        "via": "Back to My Bookings (empty)",
+        "name": "My Bookings (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}
