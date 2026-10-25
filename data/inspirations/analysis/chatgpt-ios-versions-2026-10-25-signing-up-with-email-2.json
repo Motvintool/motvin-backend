@@ -1,0 +1,168 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-25-signing-up-with-email-2",
+  "screen_id": "chatgpt-ios-versions-2026-10-25-signing-up-with-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T06:23:14.208Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 6,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+  "text": "Log in or sign up\nYou'll get smarter responses and can upload files,\nimages and more.\nEmail\nmotvintool@gmail\nContinue\nOR\npassword for auth0.openai.com - Chrome\nCloudshare63@gmail.com\ni\nW\nt\ne\nr\nO\nh\nk\nf\nd\na\ng\nJ\nS\nb\nZ\nm\nC\nV\nn\n123\n@",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Cloudshare63@gmail.com”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+        "Calls to action: “Continue”",
+        "31 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 40 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:16 in the recording",
+        "Frame 59 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f22",
+      "role": "background",
+      "share": 0.653
+    },
+    {
+      "hex": "#3c3a3d",
+      "role": "surface",
+      "share": 0.161
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.066
+    },
+    {
+      "hex": "#636163",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "mvnfkrp0-v0bm1y.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 59,
+    "atSeconds": 16.5,
+    "endSeconds": 18,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.484375,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Cloudshare63@gmail.com",
+    "headline": "Motvintool@gmail"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Tap “motvintool@g”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

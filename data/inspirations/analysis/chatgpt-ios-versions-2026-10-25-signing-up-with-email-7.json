@@ -1,0 +1,155 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-25-signing-up-with-email-7",
+  "screen_id": "chatgpt-ios-versions-2026-10-25-signing-up-with-email-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T06:23:14.715Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 12,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 26 text elements.",
+  "text": "Check your inbox\nEnter the verification code we just sent to\nmotvintool@gmail.com.\nCode\n4\nContinue\nResend email\nFrom Gmail\n434294\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your inbox”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 26 text elements.",
+        "Calls to action: “Continue”",
+        "26 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 40 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 24.6s at 0:25 in the recording",
+        "Frame 165 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.609
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.237
+    },
+    {
+      "hex": "#010002",
+      "role": "accent",
+      "share": 0.064
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#69676a",
+      "role": "surface",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "mvnfkrp0-v0bm1y.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 165,
+    "atSeconds": 25.2,
+    "endSeconds": 49.8,
+    "holdSeconds": 24.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your inbox",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Tap “Check your inbox”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

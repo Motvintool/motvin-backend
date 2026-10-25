@@ -1,0 +1,178 @@
+{
+  "screenId": "arc-search-ios-versions-2026-10-25-searching-on-google-5",
+  "screen_id": "arc-search-ios-versions-2026-10-25-searching-on-google-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T06:14:45.121Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Searching on Google",
+  "flow_position": 27,
+  "name": "Third-party sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a row of 5 category chips, a search bar and a primary action labelled “Allow”. Light theme, 30 text elements.",
+  "text": "9:41(\n•0il\nQ\nbest dim sum near me\nAll\nAl Mode\nMaps\nShort videos\nShopping\nx Top rated\nQ\n• Chennai. Tamil Nadu 600119\n\"www.google.com\" would like to\nuse your current location.\nThis website will use your precise\nPli\nlocation because \"Arc Search\"\ncurrently has access to your precise\nlocation.\nPa\nLI60\nDon't Allow\nAllow\nAyudha Puja might affect these hours\nZhouyu ECR - A Chinese | Asia….\nPr.\nChinese\n4.\nClnand. 110 Enct Cnact Ra\nArc just blocked\n7 trackers\nSee more and change block settings in the ^ menu\n4.\n+",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "map",
+    "video",
+    "location",
+    "external-auth",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Top rated”",
+        "Category strip: All, Al Mode, Maps, Short videos, Shopping",
+        "Search bar present",
+        "Toast over a dimmed background, covering 8% of the height from 22% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a row of 5 category chips, a search bar and a primary action labelled “Allow”. Light theme, 30 text elements.",
+        "Calls to action: “Allow”",
+        "30 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 64 in “Logging in with email”",
+        "Reached from “Top rated dialog”",
+        "Leads to “Best dim sum near me”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:06 in the recording",
+        "Frame 223 of 513 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#807d81",
+      "role": "background",
+      "share": 0.699
+    },
+    {
+      "hex": "#434447",
+      "role": "surface",
+      "share": 0.214
+    },
+    {
+      "hex": "#646268",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#362123",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#141427",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvnfkr9w-gykx70.mov",
+    "fps": 3.3333333333333335,
+    "frames": 513,
+    "frame": 223,
+    "atSeconds": 66.3,
+    "endSeconds": 67.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.6875,
+        "y": 0.21875,
+        "w": 0.3125,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [
+      "All",
+      "Al Mode",
+      "Maps",
+      "Short videos",
+      "Shopping"
+    ],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Top rated",
+    "headline": "Use your current location"
+  },
+  "crawler": {
+    "nodeId": "s033",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s032",
+        "via": "Open Top rated",
+        "name": "Top rated dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s034",
+        "via": "Dismiss",
+        "name": "Best dim sum near me"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}
