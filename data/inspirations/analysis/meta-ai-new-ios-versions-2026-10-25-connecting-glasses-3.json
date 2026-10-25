@@ -1,0 +1,160 @@
+{
+  "screenId": "meta-ai-new-ios-versions-2026-10-25-connecting-glasses-3",
+  "screen_id": "meta-ai-new-ios-versions-2026-10-25-connecting-glasses-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:11:22.681Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": null,
+  "flow": "onboarding",
+  "flow_name": "Connecting glasses",
+  "flow_position": 33,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen. Dark theme, 9 text elements.",
+  "text": "9:41C\noll\nX\nSelect glasses\n\"Meta Al\" would like to use\nBluetooth for new connections\nYou can allow new connections\nin Settings.\nSettings\nClose\nMeta Glasses\nRerkn",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "rerkn",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dialog over a dimmed background, covering 19% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 33 of 109 in “Success”",
+        "Reached from “Iconic style meets Meta Al”",
+        "Leads to “Turn on Bluetooth — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 3:59 in the recording",
+        "Frame 808 of 1568 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151316",
+      "role": "background",
+      "share": 0.907
+    },
+    {
+      "hex": "#343336",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#5a585b",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#09a0fb",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#136299",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "mvns6ile-0xuatd.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1568,
+    "frame": 808,
+    "atSeconds": 239.7,
+    "endSeconds": 242.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.71875,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Settings",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s094",
+    "depth": 93,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s093",
+        "via": "Open Settings",
+        "name": "Iconic style meets Meta Al"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s095",
+        "via": "Dismiss",
+        "name": "Turn on Bluetooth — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

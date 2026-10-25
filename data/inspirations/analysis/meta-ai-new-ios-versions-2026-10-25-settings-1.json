@@ -1,0 +1,149 @@
+{
+  "screenId": "meta-ai-new-ios-versions-2026-10-25-settings-1",
+  "screen_id": "meta-ai-new-ios-versions-2026-10-25-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:11:25.807Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": null,
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 66,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 15 text elements.",
+  "text": "9:41(\nO\nSettings\nView profile\n@motvintool\nSubscriptions\nMeta Al Free\nUpgrade\nUpgrade for more\nAl usage\nMeta Al settings\nApps\nVoice\nSaved locations\nYour likeness\nGlasses\nShop online\nVirtual try-on\n60\nApp settings",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "subscription",
+    "location",
+    "app settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 66 of 109 in “Success”",
+        "Reached from “Search”",
+        "Leads to “Edit profile — loading”",
+        "Returned to 9 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 5:53 in the recording",
+        "Frame 1254 of 1568 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222125",
+      "role": "background",
+      "share": 0.849
+    },
+    {
+      "hex": "#404044",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#0d0a0e",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#57575a",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#184177",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvns6ile-0xuatd.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1568,
+    "frame": 1254,
+    "atSeconds": 353.7,
+    "endSeconds": 354.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 9
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Upgrade",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s129",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s128",
+        "via": "Open Settings",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s130",
+        "via": "Wait 3s",
+        "name": "Edit profile — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

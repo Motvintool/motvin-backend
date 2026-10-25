@@ -1,0 +1,157 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-onboarding-2",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:51.451Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission",
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Allow”. Dark theme, 5 text elements.",
+  "text": "9:41(\nEnable Notifications for Grok\nGet notified when Grok completes\nyour requests.\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "permission",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "skeleton",
+    "progress",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get notified when Grok completes”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Allow”. Dark theme, 5 text elements.",
+        "Calls to action: “Allow”",
+        "5 text elements recognised",
+        "State: permission, loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Notifications permission”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:01 in the recording",
+        "Frame 8 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060609",
+      "role": "background",
+      "share": 0.735
+    },
+    {
+      "hex": "#25272b",
+      "role": "surface",
+      "share": 0.224
+    },
+    {
+      "hex": "#444548",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#626365",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#a5a4a6",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 8,
+    "atSeconds": 1.5,
+    "endSeconds": 3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get notified when Grok completes",
+    "headline": "Get notified when Grok completes"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Get notified when Grok completes",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 1.5s",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

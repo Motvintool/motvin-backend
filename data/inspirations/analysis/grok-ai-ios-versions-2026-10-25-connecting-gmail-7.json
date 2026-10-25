@@ -1,0 +1,160 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-connecting-gmail-7",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-connecting-gmail-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:56.065Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Connecting Gmail",
+  "flow_position": 4,
+  "name": "Choose an account",
+  "description": "A third-party sign-in page, not the app's own design. Dark theme, 16 text elements.",
+  "text": "9:41€\naccounts.google.com\n-\nG\nSign in with Google\nChoose an account\nto continue to Grok\nsurendarv\nsurendarv638@gmail.com\nSurendar V\nsurendarv.uxui@gmail.com\nSurendar\nS\nmotvintool@gmail.com\ng Use another account\nBefore using this app, you can review Grok's Privacy\nPolicy and Terms of Service.\nX",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "external-auth",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Policy and Terms of Service”",
+        "Toast over a dimmed background, covering 11% of the height from 86% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 28 in “External sign-in”",
+        "Reached from “Choose an account”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:12 in the recording",
+        "Frame 444 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111012",
+      "role": "background",
+      "share": 0.952
+    },
+    {
+      "hex": "#2c2d30",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#4f4d4f",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#636263",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#17575f",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 444,
+    "atSeconds": 132.9,
+    "endSeconds": 133.5,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.859375,
+        "w": 0.84375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Policy and Terms of Service",
+    "headline": "Choose an account"
+  },
+  "crawler": {
+    "nodeId": "s054",
+    "depth": 53,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s053",
+        "via": "Back to Choose an account",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s055",
+        "via": "Tap “Policy and Terms of Service.”",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

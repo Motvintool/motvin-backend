@@ -1,0 +1,162 @@
+{
+  "screenId": "meta-ai-new-ios-versions-2026-10-25-sending-a-message-9",
+  "screen_id": "meta-ai-new-ios-versions-2026-10-25-sending-a-message-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:11:18.989Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Sending a message",
+  "flow_position": 43,
+  "name": "Hey guys, how are you? toast",
+  "description": "Toast over a dimmed screen, on top of Quick hello toast with a paged carousel. Dark theme, 14 text elements.",
+  "text": "9:41 €\nQuick hello\n•••\nHey guys, how are you?\nHey! I'm good — hanging out on a Sunday\nevening here with you.\nHow's your evening going in Chennai? What's on\nyour mind?\nShare a link\nCopy link\nWhatsApp\nShare to\nInstagram\nMesse\nmessages\nSharing a link creates a copy of this response that's visible to\nanyone with the link. Learn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hey guys, how are you?”",
+        "Paged carousel with a page indicator",
+        "Toast over a dimmed background, covering 9% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Quick hello toast with a paged carousel. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 43 of 46 in “Entering phone number”",
+        "Reached from “Quick hello toast”",
+        "Leads to “Quick hello”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:21 in the recording",
+        "Frame 473 of 1568 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0d11",
+      "role": "background",
+      "share": 0.664
+    },
+    {
+      "hex": "#2c2c2f",
+      "role": "surface",
+      "share": 0.299
+    },
+    {
+      "hex": "#45474b",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#636366",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#783352",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvns6ile-0xuatd.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1568,
+    "frame": 473,
+    "atSeconds": 141,
+    "endSeconds": 142.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.046875,
+        "w": 0.84375,
+        "h": 0.09375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hey guys, how are you?",
+    "headline": "Hey! I'm good — hanging out on a Sunday"
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s048",
+        "via": "Tap “Hey guys, how are you?”",
+        "name": "Quick hello toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s050",
+        "via": "Dismiss",
+        "name": "Quick hello"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

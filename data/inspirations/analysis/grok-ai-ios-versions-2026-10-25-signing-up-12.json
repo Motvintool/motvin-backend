@@ -1,0 +1,149 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-signing-up-12",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-signing-up-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:52.958Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 14,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Confirm email”. Dark theme, 21 text elements.",
+  "text": "9:41 C\naccounts.x.ai\nGrok\nYou are signing into\nVerify your email\nWe've emailed a one time security code to\nmotvintool@gmail.com. It should arrive in the next\nfew minutes. If you don't see it in your inbox, please\ncheck your spam/junk folder. Please enter it below:\n7\n3\n9\n6\n7\n8\n-\nDidn't receive a code? Resend (12)\nConfirm email\nGo back\nBy continuing, you agree to xAl's\nTerms of Service, Privacy Policy, and\nCookie Policy. Your privacy choices",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You are signing into”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Confirm email”. Dark theme, 21 text elements.",
+        "Calls to action: “Confirm email”",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 25 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:50 in the recording",
+        "Frame 170 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111012",
+      "role": "background",
+      "share": 0.89
+    },
+    {
+      "hex": "#323033",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#acaaac",
+      "role": "text",
+      "share": 0.023
+    },
+    {
+      "hex": "#7e7c7e",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#575659",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 170,
+    "atSeconds": 50.7,
+    "endSeconds": 51.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You are signing into",
+    "headline": "Verify your email"
+  },
+  "crawler": {
+    "nodeId": "s018",
+    "depth": 17,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s017",
+        "via": "Tap “Verify your email”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s019",
+        "via": "Tap “You are signing into”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

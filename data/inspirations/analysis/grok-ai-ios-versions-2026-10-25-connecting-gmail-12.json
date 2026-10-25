@@ -1,0 +1,150 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-connecting-gmail-12",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-connecting-gmail-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:56.321Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Connecting Gmail",
+  "flow_position": 7,
+  "name": "Google sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Send email on your behalf.”. Dark theme, 15 text elements.",
+  "text": "9:41 €\n•0l\naccounts.google.com\nG\nSign in with Google\nGrok wants access to\nyour Google Account\nmotvintool@gmail.com\nS\nSelect what Grok can access\nSelect all\nView your email messages and\nsettings. See access details\nSend email on your behalf.\nSee access details\nSee and edit your email labels.\nSee access details\nRead, compose and send e!\nfrom your Gmail account.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "external-auth",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Google Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Send email on your behalf.”. Dark theme, 15 text elements.",
+        "Calls to action: “Send email on your behalf.”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 28 in “External sign-in”",
+        "Reached from “Google sign-in”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:19 in the recording",
+        "Frame 465 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100e11",
+      "role": "background",
+      "share": 0.791
+    },
+    {
+      "hex": "#2b2b30",
+      "role": "surface",
+      "share": 0.146
+    },
+    {
+      "hex": "#464446",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#5f5e5f",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#1a4962",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 465,
+    "atSeconds": 139.2,
+    "endSeconds": 139.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send email on your behalf."
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your Google Account",
+    "headline": "Your Google Account"
+  },
+  "crawler": {
+    "nodeId": "s057",
+    "depth": 57,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s056",
+        "via": "Wait 0.6s",
+        "name": "Google sign-in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s058",
+        "via": "Tap “accounts.google.com”",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

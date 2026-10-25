@@ -1,0 +1,152 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-sending-a-voice-message-7",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-sending-a-voice-message-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:59.691Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Sending a voice message",
+  "flow_position": 18,
+  "name": "Loading state",
+  "description": "Loading state with a paged carousel. Dark theme, 14 text elements.",
+  "text": "9:41(\noll\n=\nAsk\nBuild\nImagine\n•••\nHey, how are you?\nHey! I'm doing great, thanks for asking. How\nabout you?\n0.91s\n...\n→ What are you good at?\n→ Can you help me write an email?\n→ Are you free to use?\nAsk Anything\n1ll Speak\n4 Fast",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a paged carousel. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 25 in “Documents & files detail”",
+        "Reached from “Other”",
+        "Leads to “Subscription plans”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 4:19 in the recording",
+        "Frame 918 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.825
+    },
+    {
+      "hex": "#232124",
+      "role": "surface",
+      "share": 0.133
+    },
+    {
+      "hex": "#454346",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#cac9cb",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#a4a2a4",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 918,
+    "atSeconds": 259.2,
+    "endSeconds": 261.3,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "About you?"
+  },
+  "crawler": {
+    "nodeId": "s096",
+    "depth": 99,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s095",
+        "via": "Open Loading state",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Wait 4.8s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}
