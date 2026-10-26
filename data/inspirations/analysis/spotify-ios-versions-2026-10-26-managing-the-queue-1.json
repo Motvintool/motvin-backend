@@ -1,0 +1,165 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-managing-the-queue-1",
+  "screen_id": "spotify-ios-versions-2026-10-26-managing-the-queue-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:11.204Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Managing the queue",
+  "flow_position": 2,
+  "name": "Ravichander Mix dialog",
+  "description": "Dialog over a dimmed screen with a 3-item tab bar. Dark theme, 17 text elements.",
+  "text": "9:41(\nAniruch\nRavichander Mix\nQueue\nPlaying Anirudh Ravichander Mix\nANIRUDH\n….. Aathi (From \"Kaththi\")\nAnirudh Ravichander, Vishal Dadlani, Yugab...\nM Shuffling from:\nPavazha Malli - From \"Think Indie\"\nSai Abhyankkar, Shruti Haasan, Vivek\nRaga of Revenge\nAnirudh Ravichander\nOthaiyadi Pathayila\nDhibu Ninan Thomas, Anirudh Ravichander,...\nKANAA\nRaavana Mavandaa\nAnirudh Ravichander, Vivek\nShuffle\nTimer\nRepeat",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "shuffle",
+    "repeat",
+    "timer",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Shuffle, Repeat, Timer",
+        "Navigation title reads “Ravichander Mix”",
+        "Dialog over a dimmed background, covering 55% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a 3-item tab bar. Dark theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 14 in “Shuffle”",
+        "Reached from “Shuffle home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:47 in the recording",
+        "Frame 559 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272427",
+      "role": "background",
+      "share": 0.66
+    },
+    {
+      "hex": "#3f4043",
+      "role": "surface",
+      "share": 0.287
+    },
+    {
+      "hex": "#645f5f",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#0a090a",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#7d7873",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 559,
+    "atSeconds": 167.1,
+    "endSeconds": 168,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.046875,
+        "w": 0.90625,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Shuffle",
+      "Repeat",
+      "Timer"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Ravichander Mix",
+    "headline": "Ravichander Mix"
+  },
+  "crawler": {
+    "nodeId": "s064",
+    "depth": 63,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s063",
+        "via": "Tap “Ravichander Mix”",
+        "name": "Shuffle home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s065",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

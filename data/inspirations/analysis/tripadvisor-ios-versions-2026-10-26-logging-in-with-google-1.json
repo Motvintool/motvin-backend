@@ -1,0 +1,165 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:57.113Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 1,
+  "name": "Sign-in options",
+  "description": "Login bottom sheet over a dimmed screen, on top of Account with a primary action labelled “Sign in”. Dark theme, 12 text elements.",
+  "text": "9:414\nAccount\nKickstart your trip planning\nGet travel recs, save and share faves, and\norganise trip ideas-all in one spot.\nSign in\nSign in to book with Tripadvisor\nand save with Trip Cash\nCreate account\nContinue with Apple\nG\nContinue with Google\nHave an account? Log in\nBy proceeding, you agree to our Terms of Use and confirm you\nhave read our Privacy and Cookie Statement.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in to book with Tripadvisor”",
+        "Bottom sheet over a dimmed background, covering 59% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen, on top of Account with a primary action labelled “Sign in”. Dark theme, 12 text elements.",
+        "Calls to action: “Sign in”, “Create account”, “Continue with Apple”, “Continue with Google”",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 9 in “Logging in”",
+        "Reached from “Account”",
+        "Leads to “Permission request”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 8:40 in the recording",
+        "Frame 1747 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030304",
+      "role": "background",
+      "share": 0.711
+    },
+    {
+      "hex": "#12291d",
+      "role": "accent",
+      "share": 0.132
+    },
+    {
+      "hex": "#444947",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#fdfbfd",
+      "role": "text",
+      "share": 0.03
+    },
+    {
+      "hex": "#8a898b",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1747,
+    "atSeconds": 520.5,
+    "endSeconds": 524.4,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.375,
+        "w": 0.84375,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Create account",
+      "Continue with Apple",
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in to book with Tripadvisor",
+    "headline": "Kickstart your trip planning"
+  },
+  "crawler": {
+    "nodeId": "s237",
+    "depth": 237,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s236",
+        "via": "Open Sign in to book with Tripadvisor",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s238",
+        "via": "Open \"TripAdvisor\" Wants to Use",
+        "name": "Permission request"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

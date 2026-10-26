@@ -1,0 +1,168 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-26-browsing-food-sections-1",
+  "screen_id": "swiggy-ios-versions-2026-10-26-browsing-food-sections-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:50:14.196Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [
+    "toast"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Browsing food sections",
+  "flow_position": 14,
+  "name": "Checkout",
+  "description": "Checkout toast, on top of Food home with a 4-item tab bar. Light theme, 41 text elements.",
+  "text": "9:414\n•oll\nBolt\nFood in 15 mins!\nFresh, Hot\n& Crisp\nPopular Brands\nFROZEN\nANJAP\nBOTTLE\nSri Kginhna Sweet8)\nChai Kings\negowingmemories -\nKFC\nKFC\nChai Kings\nSri Krishna S...\nFrozen Bottle\nAnjap\nWOW\nBURGER\nKING\nBERWNE\nпопо\nVEG.RESTAURANT\nA2B - Adyar...\nThe Brownie...\nWow Momo\nMani's D\nBurger_King\nWhat's on your mind?\nCakes\nPizzas\nBiryani\nFried\nBurgers\nVeg/Non-Veg\nV\nKFC\nCheckout\nX\nView full menu\n1ltem • {399\nPick Your\n15 MIN\nOffer!\nGourmet\nEatRight\nFood\nBolt",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Bolt”",
+        "Toast, covering 11% of the height from 6% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout toast, on top of Food home with a 4-item tab bar. Light theme, 41 text elements.",
+        "41 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 27 in “Food”",
+        "Reached from “Food home”",
+        "Leads to “Checkout — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:02 in the recording",
+        "Frame 1611 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafb",
+      "role": "background",
+      "share": 0.526
+    },
+    {
+      "hex": "#661636",
+      "role": "accent",
+      "share": 0.157
+    },
+    {
+      "hex": "#e2e0e1",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#915c72",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#c66846",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "mvo4xws5-rihcb2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1611,
+    "atSeconds": 482.4,
+    "endSeconds": 483.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.84375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Bolt",
+    "headline": "Popular Brands"
+  },
+  "crawler": {
+    "nodeId": "s239",
+    "depth": 238,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s238",
+        "via": "Tap “Food in 15 mins!”",
+        "name": "Food home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s240",
+        "via": "Tap “Checkout”",
+        "name": "Checkout — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

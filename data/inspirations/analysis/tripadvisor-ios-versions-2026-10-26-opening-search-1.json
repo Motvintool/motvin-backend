@@ -1,0 +1,165 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-opening-search-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-opening-search-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:40.027Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast",
+    "keyboard"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Opening search",
+  "flow_position": 2,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen with the keyboard open. Dark theme, 28 text elements.",
+  "text": "9:41(\n•ll\nQ Places to go, things to do, hote...\nCancel\nExplore nearby\nAllow location access\nRecent searches\nIndia\nAsia\ni\nW\nt\ne\nr\nO\nh\nk\nf\nd\ng\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n123\nA",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "location",
+    "toast",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Places to go, things to do, hote”",
+        "Keyboard is open, so the lower half is input",
+        "Toast over a dimmed background, covering 11% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen with the keyboard open. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: toast, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Explore home options”",
+        "Reached from “Explore home”",
+        "Leads to “Explore home — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 2:42 in the recording",
+        "Frame 548 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.553
+    },
+    {
+      "hex": "#242224",
+      "role": "surface",
+      "share": 0.311
+    },
+    {
+      "hex": "#444347",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#5d5c5e",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#0b509e",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 548,
+    "atSeconds": 162.3,
+    "endSeconds": 164.7,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.03125,
+        "w": 0.84375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Places to go, things to do, hote",
+    "headline": "India"
+  },
+  "crawler": {
+    "nodeId": "s053",
+    "depth": 52,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s052",
+        "via": "Type “Cancel”",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s054",
+        "via": "Dismiss",
+        "name": "Explore home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

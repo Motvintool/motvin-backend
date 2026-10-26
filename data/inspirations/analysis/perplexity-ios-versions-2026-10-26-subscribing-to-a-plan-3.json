@@ -1,0 +1,162 @@
+{
+  "screenId": "perplexity-ios-versions-2026-10-26-subscribing-to-a-plan-3",
+  "screen_id": "perplexity-ios-versions-2026-10-26-subscribing-to-a-plan-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:31:24.131Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Subscribing to a plan",
+  "flow_position": 21,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen, on top of Subscription plans with prices. Dark theme, 26 text elements.",
+  "text": "9:41(\nX\nRestore\nGet the most\naccurate answers\n• Sonar\nClaude Opus 5\nGPT-5.6\nPro\nMax\nFeatures\nFree\nPro\nSomething went wrong, try\nagain later\nOK\nV\nPremium app connectors\n-\nMore usage and memory\nYearly\nMonthly\n-18%\n$19,900 /yr\n71,999 /mo\n723,988/yr\n71,658/mo\nGet Pro",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "get pro",
+    "paywall",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Something went wrong, try”",
+        "Toast over a dimmed background, covering 9% of the height from 42% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen, on top of Subscription plans with prices. Dark theme, 26 text elements.",
+        "26 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 99 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:13 in the recording",
+        "Frame 251 of 1873 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121213",
+      "role": "background",
+      "share": 0.842
+    },
+    {
+      "hex": "#2c2d2f",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#2f4b51",
+      "role": "accent",
+      "share": 0.067
+    },
+    {
+      "hex": "#5f5e60",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#a9a9aa",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvo4xudd-dcft1b.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1873,
+    "frame": 251,
+    "atSeconds": 73.8,
+    "endSeconds": 75.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.421875,
+        "w": 0.375,
+        "h": 0.09375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Something went wrong, try",
+    "headline": "Accurate answers",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Tap “accurate answers”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

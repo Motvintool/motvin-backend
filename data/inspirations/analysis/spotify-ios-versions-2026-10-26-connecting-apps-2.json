@@ -1,0 +1,153 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-connecting-apps-2",
+  "screen_id": "spotify-ios-versions-2026-10-26-connecting-apps-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:35.934Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Connecting apps",
+  "flow_position": 3,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field and a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "text": "9:41(\nooll\nAuthorise\nCancel\nWelcome back\nEmail\nContinue\nContinue with phone number\nContinue with Google\nContinue with Facebook\nf\nContinue with Apple\nDon't have an account?\nSign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "sign up",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Continue”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue”, “Continue with phone number”, “Continue with Google”, “Continue with Facebook”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Opening a page (Home)”",
+        "Reached from “Other”",
+        "Leads to “Third-party sign-in — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 11:35 in the recording",
+        "Frame 2318 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171419",
+      "role": "background",
+      "share": 0.778
+    },
+    {
+      "hex": "#38363a",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#020102",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#1fcd5c",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#4f4d51",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 2318,
+    "atSeconds": 695.1,
+    "endSeconds": 696,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Continue with phone number",
+      "Continue with Google",
+      "Continue with Facebook"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome back",
+    "headline": "Welcome back",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s319",
+    "depth": 318,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s318",
+        "via": "Open Welcome back",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s320",
+        "via": "Open Third-party sign-in — loading",
+        "name": "Third-party sign-in — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,168 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-filtering-restaurants-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-filtering-restaurants-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:41.199Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Filtering restaurants",
+  "flow_position": 10,
+  "name": "Restaurants sheet",
+  "description": "Bottom sheet, on top of Restaurants sheet with a 5-item tab bar. Dark theme, 1 text element.",
+  "text": "9:41\n* Restaurants\nExplore\nReview\nMap\nTrips\nAccount",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “Restaurants”",
+        "Bottom sheet, covering 17% of the height from 73% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Restaurants sheet with a 5-item tab bar. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 96 in “Explore”",
+        "Reached from “Restaurants sheet”",
+        "Leads to “Open now sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:07 in the recording",
+        "Frame 627 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.867
+    },
+    {
+      "hex": "#1f1e21",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#4b4f66",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#383945",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#6f7284",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 627,
+    "atSeconds": 187.8,
+    "endSeconds": 188.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.734375,
+        "w": 0.875,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Restaurants",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s064",
+    "depth": 63,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s063",
+        "via": "Dismiss",
+        "name": "Restaurants sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s065",
+        "via": "Dismiss",
+        "name": "Open now sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

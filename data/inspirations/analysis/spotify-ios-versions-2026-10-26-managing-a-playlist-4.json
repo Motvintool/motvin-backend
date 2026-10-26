@@ -1,0 +1,159 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-managing-a-playlist-4",
+  "screen_id": "spotify-ios-versions-2026-10-26-managing-a-playlist-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:11.613Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Managing a playlist",
+  "flow_position": 2,
+  "name": "Ravichander Mix dialog",
+  "description": "Dialog over a dimmed screen, on top of Home home. Dark theme, 11 text elements.",
+  "text": "9:41(\nAniruch\nRavichander Mix\nSai Abhyankkar, Dhibu Ninan Thomas and ARJN\nAnirudh Ravichander Mix\nLukon\nRavichander Mix\nShare\nRemove from Your Library\nDownload\nStart a Jam\nInclude playlist in your taste profile\nAdd to Profile\n+>\nAdd to Queue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "add to profile",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Ravichander Mix”",
+        "Dialog over a dimmed background, covering 27% of the height from 30% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Home home. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Ravichander Mix”",
+        "Reached from “Home home”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:52 in the recording",
+        "Frame 577 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232023",
+      "role": "background",
+      "share": 0.695
+    },
+    {
+      "hex": "#3e4043",
+      "role": "surface",
+      "share": 0.276
+    },
+    {
+      "hex": "#070709",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#5d6066",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#7a7a7f",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 577,
+    "atSeconds": 172.5,
+    "endSeconds": 173.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.296875,
+        "w": 0.59375,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Ravichander Mix",
+    "headline": "Ravichander Mix",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s068",
+    "depth": 67,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s067",
+        "via": "Back to Ravichander Mix dialog",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s069",
+        "via": "Dismiss",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "lovi-ios-versions-2026-10-25-setting-up-a-face-scan-3",
+  "screen_id": "lovi-ios-versions-2026-10-25-setting-up-a-face-scan-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:11:28.196Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Setting up a face scan",
+  "flow_position": 40,
+  "name": "Allow Camera",
+  "description": "Onboarding screen with a primary action labelled “Allow Camera”. Dark theme, 4 text elements.",
+  "text": "9:41C\nO\nAllow Camera\naccess to make a\nface scan\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow Camera”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with a primary action labelled “Allow Camera”. Dark theme, 4 text elements.",
+        "Calls to action: “Allow Camera”, “Continue”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 40 of 57 in “Onboarding”",
+        "Reached from “Scan Instructions”",
+        "Leads to “Other — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 2:03 in the recording",
+        "Frame 421 of 2036 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e20",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#fffeff",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#c3c1c3",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#3b393b",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#514f51",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "mvo4xs70-rj1rpy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2036,
+    "frame": 421,
+    "atSeconds": 123.9,
+    "endSeconds": 126.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Camera",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow Camera",
+    "headline": "Access to make a"
+  },
+  "crawler": {
+    "nodeId": "s044",
+    "depth": 43,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s043",
+        "via": "Open Allow Camera",
+        "name": "Scan Instructions"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s045",
+        "via": "Open Other — loading",
+        "name": "Other — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

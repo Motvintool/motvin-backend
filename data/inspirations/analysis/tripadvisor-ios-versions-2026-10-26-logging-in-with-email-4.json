@@ -1,0 +1,152 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-email-4",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-email-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:36.579Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 12,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Let's go”. Dark theme, 6 text elements.",
+  "text": "9:41 C\nHey there, welcome back\nEmail\nmotvintool@gmail.com\nPassword\nForgot password?\nLet's go\nDismiss\nInvalid email or password",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dismiss",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hey there, welcome back”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Let's go”. Dark theme, 6 text elements.",
+        "Calls to action: “Let's go”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 45 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 0:24 in the recording",
+        "Frame 99 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020202",
+      "role": "background",
+      "share": 0.765
+    },
+    {
+      "hex": "#2a2828",
+      "role": "surface",
+      "share": 0.158
+    },
+    {
+      "hex": "#f6f7f6",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#d1d2d1",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#474545",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 99,
+    "atSeconds": 24,
+    "endSeconds": 30,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Let's go"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hey there, welcome back",
+    "headline": "Password",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Tap “Hey there, welcome back”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

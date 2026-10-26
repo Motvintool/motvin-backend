@@ -1,0 +1,152 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-filtering-hotel-results-3",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-filtering-hotel-results-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:47.704Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Filtering hotel results",
+  "flow_position": 2,
+  "name": "Edit details",
+  "description": "Detail screen with a row of 3 category chips. Dark theme, 49 text elements.",
+  "text": "9:414\nEdit details\n#\n27 Oct → 28 Oct\nTonight\nTomorrow\nNext weekend\nS\nM\nW\nF\nT\nT\nS\nOctober 2026\n1\n2\n3\n10\n4\n5\n6\n8\n9\n11\n13\n14\n12\n16\n17\n15\n18\n19\n21\n20\n22\n23\n24\n26\n25\n27\n28\n29\n30\n31\nNovember 2026\n°\n• Averane\nHiahAr\nChenner\nApply\nReset",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "reset",
+    "apply",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Edit details”",
+        "Category strip: Tonight, Tomorrow, Next weekend",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a row of 3 category chips. Dark theme, 49 text elements.",
+        "49 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Hotel detail”",
+        "Reached from “Search results”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 5:17 in the recording",
+        "Frame 1064 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030304",
+      "role": "background",
+      "share": 0.648
+    },
+    {
+      "hex": "#262826",
+      "role": "surface",
+      "share": 0.139
+    },
+    {
+      "hex": "#474b45",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#cbebe0",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#adcac0",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1064,
+    "atSeconds": 317.4,
+    "endSeconds": 319.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 49,
+    "tabLabels": [],
+    "chipLabels": [
+      "Tonight",
+      "Tomorrow",
+      "Next weekend"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Edit details",
+    "headline": "Tonight",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s126",
+    "depth": 125,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s125",
+        "via": "Open Edit details",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s127",
+        "via": "Open Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,165 @@
+{
+  "screenId": "google-gemini-ios-versions-2026-10-25-rating-a-response-2",
+  "screen_id": "google-gemini-ios-versions-2026-10-25-rating-a-response-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:09:21.061Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Rating a response",
+  "flow_position": 4,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Gemini Auto toast with a primary action labelled “Submit”. Dark theme, 18 text elements.",
+  "text": "9:41(\n•0l\n=\nC\nGemini Auto v\n• ••\nHello\nHello! How can I help you today?\n•.°\nGemini is Al and can make mistakes.\nX\nWhy did you choose this rating?\nFactually correct\nEasy to understand\nOther\nInformative\nCreative/interesting\nProvide additional feedback\nSubmit\nData is reviewed by trained service providers after it's\ndisconnected from your account. Delete in Gemini.Apps\nactivity. at any time.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "rating",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hello! How can I help you today?”",
+        "Dialog over a dimmed background, covering 25% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Gemini Auto toast with a primary action labelled “Submit”. Dark theme, 18 text elements.",
+        "Calls to action: “Submit”",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 40 in “Gemini Auto”",
+        "Reached from “Gemini Auto toast”",
+        "Leads to “Gemini Auto”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:23 in the recording",
+        "Frame 282 of 1604 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.434
+    },
+    {
+      "hex": "#222124",
+      "role": "surface",
+      "share": 0.377
+    },
+    {
+      "hex": "#3c3a3c",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#575557",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#243e9a",
+      "role": "accent",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "mvo4xrid-u0twnj.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1604,
+    "frame": 282,
+    "atSeconds": 83.1,
+    "endSeconds": 84.9,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.84375,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Submit"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hello! How can I help you today?",
+    "headline": "Why did you choose this rating?"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Back to Dialog",
+        "name": "Gemini Auto toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Tap “Hello”",
+        "name": "Gemini Auto"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

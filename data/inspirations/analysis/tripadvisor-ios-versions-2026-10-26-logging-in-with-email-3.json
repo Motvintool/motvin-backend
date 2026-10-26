@@ -1,0 +1,157 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-email-3",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-email-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:36.265Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Let's go”. Dark theme, 30 text elements.",
+  "text": "9:41 C\nHey there, welcome back\nEmail\nmotvintool@gmail.com\nPassword\nPassword\nForgot password?\nLet's go\n9 Passwords\ni\nW\ne\nt\nr\nO\nh\nk\nf\nd\ng\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\na\nU",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hey there, welcome back”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Let's go”. Dark theme, 30 text elements.",
+        "Calls to action: “Let's go”",
+        "30 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 45 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 0:14 in the recording",
+        "Frame 79 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242225",
+      "role": "background",
+      "share": 0.424
+    },
+    {
+      "hex": "#030304",
+      "role": "accent",
+      "share": 0.387
+    },
+    {
+      "hex": "#444244",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#f8f7f9",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#615f61",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 79,
+    "atSeconds": 14.4,
+    "endSeconds": 16.2,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Let's go"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hey there, welcome back",
+    "headline": "9 Passwords"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Tap “Hey there, welcome back”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Type “motvintool”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

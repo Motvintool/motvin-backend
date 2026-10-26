@@ -1,0 +1,146 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-opening-the-inbox-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-opening-the-inbox-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:54.813Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Opening the inbox",
+  "flow_position": 2,
+  "name": "Inbox",
+  "description": "Messages screen with a paged carousel. Light theme, 7 text elements.",
+  "text": "9:414\nX\nInbox\n•••\nInbox\nNewest\nSort v\nNo alerts or messages at this time",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Inbox”",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a paged carousel. Light theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Reading messages”",
+        "Reached from “Account”",
+        "Leads to “Inbox”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 7:37 in the recording",
+        "Frame 1529 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fffdff",
+      "role": "background",
+      "share": 0.721
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.208
+    },
+    {
+      "hex": "#b5b5b6",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#d9d8da",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#2a282a",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1529,
+    "atSeconds": 457.2,
+    "endSeconds": 459,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "No alerts or messages at this time"
+  },
+  "crawler": {
+    "nodeId": "s207",
+    "depth": 207,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s206",
+        "via": "Back to Inbox",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s208",
+        "via": "Back to Inbox",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

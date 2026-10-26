@@ -1,0 +1,146 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-scanning-a-code-3",
+  "screen_id": "spotify-ios-versions-2026-10-26-scanning-a-code-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:24.493Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Scanning a code",
+  "flow_position": null,
+  "name": "Home home — loading",
+  "description": "Loading state of Home home. Dark theme, 3 text elements.",
+  "text": "9:41€\nX\nPoint your camera at a Spotify code.\nSelect from photos",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Home home. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Camera permission”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:41 in the recording",
+        "Frame 1538 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232121",
+      "role": "background",
+      "share": 0.71
+    },
+    {
+      "hex": "#403c3a",
+      "role": "surface",
+      "share": 0.202
+    },
+    {
+      "hex": "#040305",
+      "role": "accent",
+      "share": 0.065
+    },
+    {
+      "hex": "#5a5656",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#777375",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1538,
+    "atSeconds": 461.1,
+    "endSeconds": 461.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Point your camera at a Spotify code"
+  },
+  "crawler": {
+    "nodeId": "s196",
+    "depth": 195,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s195",
+        "via": "Open Home home — loading",
+        "name": "Camera permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s197",
+        "via": "Wait 0.6s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

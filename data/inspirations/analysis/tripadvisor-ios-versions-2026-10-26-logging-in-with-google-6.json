@@ -1,0 +1,152 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-6",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:57.685Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 8,
+  "name": "Google sign-in",
+  "description": "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Continue”. Dark theme, 22 text elements.",
+  "text": "9:414\n•ll\naccounts.google.com\nSOI\nmotvintool@gmail.com\nS\nGoogle will allow Tripadvisor to\naccess this info about you\nSurendar\nName and profile picture\nmotvintool@gmail.com\nEmail address\nReview Tripadvisor's privacy policy and Terms of\nService to understand how Tripadvisor will process\nand protect your data.\nTo make changes at any time, go to your Google\nAccount.\nLearn more about Sign in with Google.\nCancel\nContinue\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms\n<",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "address",
+    "external-auth",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Access this info about you”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Continue”. Dark theme, 22 text elements.",
+        "Calls to action: “Continue”",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 9 in “Logging in”",
+        "Reached from “Google sign-in”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:54 in the recording",
+        "Frame 1784 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100f11",
+      "role": "background",
+      "share": 0.807
+    },
+    {
+      "hex": "#2d2d31",
+      "role": "surface",
+      "share": 0.171
+    },
+    {
+      "hex": "#4c4b4e",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#656365",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#12565f",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1784,
+    "atSeconds": 534.6,
+    "endSeconds": 535.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Access this info about you",
+    "headline": "Google will allow Tripadvisor to"
+  },
+  "crawler": {
+    "nodeId": "s244",
+    "depth": 244,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s243",
+        "via": "Tap “accounts.google.com”",
+        "name": "Google sign-in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s245",
+        "via": "Tap “Google will allow Tripadvisor to”",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

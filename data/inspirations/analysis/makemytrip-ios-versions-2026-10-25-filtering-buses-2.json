@@ -1,0 +1,180 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-filtering-buses-2",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-filtering-buses-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:37.915Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Filtering buses",
+  "flow_position": 3,
+  "name": "Primo Buses dialog",
+  "description": "Dialog over a dimmed screen, on top of Trains toast with a 4-item tab bar, a paged carousel, a primary action labelled “APPLY” and prices. Light theme, 38 text elements.",
+  "text": "9:41(\nDelhi to Kolkata\nEdit\n8Oct, Thursday\nTrains\nBus\n7650 • 17h 5m\n72999• ~29h 40m\nPrimo Buses\nFree Cancellatio\nTravel with best amenities\nGet 100% refund + N.\nPrimo\n& handpicked operators\ncancellation fees\nSee Buses →\nSee Buses\nWELCOMEMMT\nGet Flat 10% instant discount up to Rs 150 +\nСору\nFlat 10% cashback up to Rs 150 on first bus\nbooking\n••\nSeen\nShyamoli Paribahan Pvt Lta Primo\n(141)\n* 4.0\n• Volvo 9600 SLX Multi-Axle AC Sleeper (2+ 1)\n= г ллО\n17.00\n11.10.11\nAPPLY\nSeat\nSEAT TYPE\nJ Seater\nSleeper\nSINGLE SEATER/SLEEPER\nSingle Seats\nSingle Window Seats\nSeat\nTiming\nAC\nSort\nAll Filters",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "discount",
+    "seat",
+    "timing",
+    "sort",
+    "all filters",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "price",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Seat, Timing, Sort, All Filters",
+        "Navigation title reads “Primo Buses”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 33% of the height from 6% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Trains toast with a 4-item tab bar, a paged carousel, a primary action labelled “APPLY” and prices. Light theme, 38 text elements.",
+        "Calls to action: “APPLY”",
+        "38 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 7 in “Seat”",
+        "Reached from “Trains toast”",
+        "Leads to “Seat home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 9:09 in the recording",
+        "Frame 1837 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#959397",
+      "role": "background",
+      "share": 0.586
+    },
+    {
+      "hex": "#faf9fb",
+      "role": "surface",
+      "share": 0.199
+    },
+    {
+      "hex": "#727680",
+      "role": "surface",
+      "share": 0.097
+    },
+    {
+      "hex": "#d7d5d7",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#212d3c",
+      "role": "accent",
+      "share": 0.04
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 1837,
+    "atSeconds": 549.6,
+    "endSeconds": 551.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.90625,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [
+      "Seat",
+      "Timing",
+      "Sort",
+      "All Filters"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "APPLY"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Primo Buses",
+    "headline": "Primo Buses"
+  },
+  "crawler": {
+    "nodeId": "s251",
+    "depth": 250,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s250",
+        "via": "Tap “Primo Buses”",
+        "name": "Trains toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s252",
+        "via": "Tap “Delhi to Kolkata”",
+        "name": "Seat home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

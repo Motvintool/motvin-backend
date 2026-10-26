@@ -1,0 +1,163 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-creating-an-account-5",
+  "screen_id": "spotify-ios-versions-2026-10-26-creating-an-account-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:06.721Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "toast"
+  ],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 14,
+  "name": "Create account",
+  "description": "Sign up toast, on top of Create account with a primary action labelled “Next”. Dark theme, 5 text elements.",
+  "text": "9:41 €\n•ll\n<\nCreate account\nWhat's your date of birth?\n6 October 2016\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Toast, covering 11% of the height from 75% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up toast, on top of Create account with a primary action labelled “Next”. Dark theme, 5 text elements.",
+        "Calls to action: “Next”",
+        "5 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 44 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “Create account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:43 in the recording",
+        "Frame 157 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151217",
+      "role": "background",
+      "share": 0.942
+    },
+    {
+      "hex": "#343136",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#535054",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#1fd45f",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#737074",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 157,
+    "atSeconds": 43.5,
+    "endSeconds": 44.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.75,
+        "w": 0.84375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Tap “Create account”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Tap “Create account”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

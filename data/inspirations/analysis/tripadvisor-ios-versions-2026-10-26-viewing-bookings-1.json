@@ -1,0 +1,156 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-viewing-bookings-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-viewing-bookings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:54.348Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "travel",
+  "flow": "settings",
+  "flow_name": "Viewing bookings",
+  "flow_position": 1,
+  "name": "Account",
+  "description": "Settings screen with a 5-item tab bar. Dark theme, 9 text elements.",
+  "text": "9:414\noll\nAccount\nBookings\nProfile\nNotifications\nPreferences\nSupport\nSign out\nVersion: v70.2.0 build 261005000\nDevice ID: E13EBFF8-4A25-44C7-A55A-0434CFFBEAB7\nExplore\nReview\nAccount\nMap\nTrips",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "notification",
+    "booking",
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a 5-item tab bar. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Opening a page (Explore)”",
+        "Reached from “Explore home”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:28 in the recording",
+        "Frame 1499 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030304",
+      "role": "background",
+      "share": 0.797
+    },
+    {
+      "hex": "#1c2320",
+      "role": "surface",
+      "share": 0.147
+    },
+    {
+      "hex": "#3e3e3f",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#5d5b5d",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#7c7776",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1499,
+    "atSeconds": 448.8,
+    "endSeconds": 450,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Sign out"
+  },
+  "crawler": {
+    "nodeId": "s201",
+    "depth": 201,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s200",
+        "via": "Back to Account",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s202",
+        "via": "Back to Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

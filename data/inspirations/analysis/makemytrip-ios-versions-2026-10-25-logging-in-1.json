@@ -1,0 +1,154 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-logging-in-1",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:13.271Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Sign in",
+  "description": "Login screen with a primary action labelled “Signup or Login”. Light theme, 14 text elements.",
+  "text": "9:41 C\n•l S O\nmake My trip\nSKIP\nwy Biz\nUpto 30% OFF on your first\nbooking as a Welcome Gift\nSignup or Login\n+91v\n6382102514\nCONTINUE\nOr\nHave a Referral Code / Link?\nBy proceeding, you agree to MakeMyTrip's User\nAgreement, T&Cs and Privacy as well as Mobile\nConnect's T&Cs",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "signup",
+    "booking",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Make My trip”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Signup or Login”. Light theme, 14 text elements.",
+        "Calls to action: “Signup or Login”, “CONTINUE”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 15 in “Logging in”",
+        "Reached from “Notifications permission”",
+        "Leads to “Country Name or Code”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:03 in the recording",
+        "Frame 20 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfe",
+      "role": "background",
+      "share": 0.545
+    },
+    {
+      "hex": "#122216",
+      "role": "accent",
+      "share": 0.194
+    },
+    {
+      "hex": "#374436",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#d8d9da",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#696d68",
+      "role": "surface",
+      "share": 0.038
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 20,
+    "atSeconds": 3.6,
+    "endSeconds": 6.3,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Signup or Login",
+      "CONTINUE"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Make My trip",
+    "headline": "Booking as a Welcome Gift"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Wait 1.2s",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Open Country Name or Code",
+        "name": "Country Name or Code"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,168 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-creating-a-trip-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-creating-a-trip-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:51.908Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Creating a trip",
+  "flow_position": 1,
+  "name": "My trips dialog",
+  "description": "Dialog over a dimmed screen, on top of Explore home with a 5-item tab bar. Dark theme, 12 text elements.",
+  "text": "9:414\nMy trips\nWhere to next?\nBuild a trip with your saves or use Al to get\ncustom recommendations, collaborate with\nfriends, and organise your trip ideas.\nCreate a trip\nCompleted trips\nTrip to India\nBI Add dates/days\n+\nCreate a trip\n2 saves\nExplore\nReview\nAccount\nMap\nTrips",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “My trips”",
+        "Dialog over a dimmed background, covering 17% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Explore home with a 5-item tab bar. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening My trips”",
+        "Reached from “Explore home”",
+        "Leads to “My trips dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:40 in the recording",
+        "Frame 1338 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.874
+    },
+    {
+      "hex": "#2f2d2f",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#1a181a",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#f3f2f4",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1338,
+    "atSeconds": 400.5,
+    "endSeconds": 401.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.03125,
+        "w": 0.78125,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My trips",
+    "headline": "Completed trips"
+  },
+  "crawler": {
+    "nodeId": "s172",
+    "depth": 172,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s171",
+        "via": "Tap “My trips”",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s173",
+        "via": "Tap “My trips”",
+        "name": "My trips dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

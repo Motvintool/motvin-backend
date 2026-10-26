@@ -1,0 +1,158 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-2",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:57.195Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 2,
+  "name": "Permission request",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Sign in”. Dark theme, 11 text elements.",
+  "text": "9:414\nAccount\nKickstart your trip planning\nGet travel recs, save and share faves, and\norganise trip ideas-all in one spot.\nSign in\n\"TripAdvisor\" Wants to Use\n\"google.com\" to Sign In\nThis allows the app and website to\nshare information about you.\nContinue\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"TripAdvisor\" Wants to Use”",
+        "Dialog over a dimmed background, covering 33% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Sign in”. Dark theme, 11 text elements.",
+        "Calls to action: “Sign in”, “Continue”",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Logging in”",
+        "Reached from “Sign-in options”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:45 in the recording",
+        "Frame 1752 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030204",
+      "role": "background",
+      "share": 0.833
+    },
+    {
+      "hex": "#252326",
+      "role": "surface",
+      "share": 0.11
+    },
+    {
+      "hex": "#454345",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#5c5a5d",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1752,
+    "atSeconds": 525,
+    "endSeconds": 525.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.078125,
+        "w": 0.8125,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"TripAdvisor\" Wants to Use",
+    "headline": "\"TripAdvisor\" Wants to Use"
+  },
+  "crawler": {
+    "nodeId": "s238",
+    "depth": 238,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s237",
+        "via": "Open \"TripAdvisor\" Wants to Use",
+        "name": "Sign-in options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s239",
+        "via": "Open Google sign-in",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

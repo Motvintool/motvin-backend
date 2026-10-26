@@ -1,0 +1,163 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-creating-a-trip-2",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-creating-a-trip-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:51.987Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Creating a trip",
+  "flow_position": 2,
+  "name": "My trips dialog",
+  "description": "Dialog over a dimmed screen with a paged carousel. Dark theme, 10 text elements.",
+  "text": "9:414\n•dll\nMy trips\nWhere to next?\nBuild a trip with your saves or use Al to get\ncustom recommendations, collaborate with\nfriends, and organise your trip ideas.\nCreate a trip\nCreate a trip\nTrip name\nEx: Weekend in NYC\n0/80\nCreate trip",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "create trip",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My trips”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 31% of the height from 3% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a paged carousel. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening My trips”",
+        "Reached from “My trips dialog”",
+        "Leads to “Explore home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 6:42 in the recording",
+        "Frame 1346 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.813
+    },
+    {
+      "hex": "#262425",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#989698",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#444244",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#b5b3b6",
+      "role": "text",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1346,
+    "atSeconds": 402,
+    "endSeconds": 404.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.03125,
+        "w": 0.84375,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My trips",
+    "headline": "Friends, and organise your trip ideas",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s173",
+    "depth": 173,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s172",
+        "via": "Tap “My trips”",
+        "name": "My trips dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s174",
+        "via": "Dismiss",
+        "name": "Explore home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

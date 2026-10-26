@@ -1,0 +1,170 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-review-3",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-review-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:53.852Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Review",
+  "flow_position": 72,
+  "name": "Review dialog",
+  "description": "Dialog over a dimmed screen, on top of Explore home with a 5-item tab bar. Dark theme, 16 text elements.",
+  "text": "9:414\n•ll\nReview\nShare your experience\nO Write a review\n• Upload a photo\nFinish your review\nThe Leela Palace Chennai\nChennai (Madras), Tamil Nadu, Indio\nYour Achievements\nAdd a place\nWrite your first\niew\nUnlock review milWrite a review\nUpload a photo\nUpload your first photo\nUnlock photo milestones\nStart a review\nExplore\nTrips\nReview\nAccount\nMap\nawaro",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "photo",
+    "explore",
+    "map",
+    "trips",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “Review”",
+        "Dialog over a dimmed background, covering 36% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Explore home with a 5-item tab bar. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 72 of 96 in “Explore”",
+        "Reached from “Explore home”",
+        "Leads to “Explore home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 7:12 in the recording",
+        "Frame 1447 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.831
+    },
+    {
+      "hex": "#242123",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#393739",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#565456",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#f3f2f3",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1447,
+    "atSeconds": 432,
+    "endSeconds": 434.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.28125,
+        "y": 0.03125,
+        "w": 0.59375,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Review",
+    "headline": "Finish your review"
+  },
+  "crawler": {
+    "nodeId": "s195",
+    "depth": 195,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s194",
+        "via": "Back to Review dialog",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s196",
+        "via": "Dismiss",
+        "name": "Explore home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

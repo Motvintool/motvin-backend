@@ -1,0 +1,165 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-finding-a-hotel-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-finding-a-hotel-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:47.794Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [
+    "loading"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Finding a hotel",
+  "flow_position": 44,
+  "name": "Loading state",
+  "description": "Loading state with a 5-item tab bar and a row of 3 category chips. Dark theme, 6 text elements.",
+  "text": "9:414\nooll\nChennai (Madras) Hotels and Places t...\n• 27 → 28 Oct\nPA 1 2V\nPrice\nV\nV\nExplore\nReview\nAccount\nMap\nTrips",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "price",
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "home",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Category strip: Price, V, V",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 5-item tab bar and a row of 3 category chips. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 44 of 96 in “Explore”",
+        "Reached from “Edit details”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:20 in the recording",
+        "Frame 1072 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020203",
+      "role": "background",
+      "share": 0.899
+    },
+    {
+      "hex": "#192821",
+      "role": "accent",
+      "share": 0.054
+    },
+    {
+      "hex": "#3a3e3d",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#575557",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#9b9e9d",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1072,
+    "atSeconds": 320.4,
+    "endSeconds": 321.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [
+      "Price",
+      "V",
+      "V"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s127",
+    "depth": 126,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Open Loading state",
+        "name": "Edit details"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s128",
+        "via": "Wait 1.5s",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

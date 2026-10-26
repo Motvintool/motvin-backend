@@ -1,0 +1,163 @@
+{
+  "screenId": "google-gemini-ios-versions-2026-10-25-settings-2",
+  "screen_id": "google-gemini-ios-versions-2026-10-25-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:09:30.681Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Settings",
+  "flow_position": 9,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of New chat. Dark theme, 13 text elements.",
+  "text": "9:41(\nX\nSettings\nUpgrade to Google Al Plus\nC Usage limits\nPreferences\nNotifications\nPersonal Intelligence\nAvatar\n3)) Voice\nAgents and automation\nData and privacy\nGemini Apps activity\nG Public links\nCo Privacy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "co privacy",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dialog over a dimmed background, covering 19% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of New chat. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 26 in “Filling in Gemini Auto”",
+        "Reached from “New chat”",
+        "Leads to “Splash”",
+        "Returned to 9 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:59 in the recording",
+        "Frame 1205 of 1604 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2f2d31",
+      "role": "background",
+      "share": 0.474
+    },
+    {
+      "hex": "#030304",
+      "role": "surface",
+      "share": 0.44
+    },
+    {
+      "hex": "#514f53",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#19181a",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#a4a4a4",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvo4xrid-u0twnj.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1604,
+    "frame": 1205,
+    "atSeconds": 359.4,
+    "endSeconds": 361.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.8125,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 9
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Avatar",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s132",
+    "depth": 133,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Open Settings",
+        "name": "New chat"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s133",
+        "via": "Open Splash screen",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}
