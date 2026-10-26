@@ -1,0 +1,148 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-26-signing-in-with-email-4",
+  "screen_id": "chatgpt-ios-versions-2026-10-26-signing-in-with-email-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T09:43:57.858Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing in with email",
+  "flow_position": 11,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field. Dark theme, 9 text elements.",
+  "text": "Log in or sign up\nYou'll get smarter responses and can upload files,\nimages and more.\nEmail\nmotvintool@gmail.com\nOR\nG Continue with Google\né Continue with Apple\n& Continue with phone",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "text-field",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in or sign up”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 40 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:23 in the recording",
+        "Frame 81 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.847
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.086
+    },
+    {
+      "hex": "#413f42",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#5c5a5d",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#828083",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvp29bl1-i0r732.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 81,
+    "atSeconds": 23.4,
+    "endSeconds": 24.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log in or sign up",
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Tap “Log in or sign up”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Wait 1.2s",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

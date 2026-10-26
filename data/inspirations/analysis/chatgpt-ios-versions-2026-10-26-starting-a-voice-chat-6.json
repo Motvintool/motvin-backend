@@ -1,0 +1,165 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-26-starting-a-voice-chat-6",
+  "screen_id": "chatgpt-ios-versions-2026-10-26-starting-a-voice-chat-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T09:44:01.600Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Starting a voice chat",
+  "flow_position": 9,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Upgrade with a primary action labelled “Allow”. Dark theme, 11 text elements.",
+  "text": "9:41€\nUpgrade\n\"ChatGPT\" would like to access\nthe Microphone.\nChatGPT uses your microphone for\nvoice mode and dictation.\nDon't Allow\nAllow\nStart a voice chat\noll'\nCreate an image or sticker\nWrite or edit\n+ Ask ChatGPT\noflo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "oflo",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Upgrade”",
+        "Dialog over a dimmed background, covering 59% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Upgrade with a primary action labelled “Allow”. Dark theme, 11 text elements.",
+        "Calls to action: “Allow”",
+        "11 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 51 in “Add files”",
+        "Reached from “Upgrade”",
+        "Leads to “Meet Voice”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:13 in the recording",
+        "Frame 647 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050406",
+      "role": "background",
+      "share": 0.86
+    },
+    {
+      "hex": "#252326",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#5a5a5e",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#f6943e",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvp29bl1-i0r732.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 647,
+    "atSeconds": 193.2,
+    "endSeconds": 194.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.03125,
+        "w": 0.9375,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Upgrade",
+    "headline": "\"ChatGPT\" would like to access",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s050",
+    "depth": 53,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s049",
+        "via": "Tap “› Upgrade”",
+        "name": "Upgrade"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s051",
+        "via": "Open Other",
+        "name": "Meet Voice"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

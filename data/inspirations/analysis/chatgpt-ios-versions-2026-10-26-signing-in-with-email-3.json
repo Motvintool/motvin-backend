@@ -1,0 +1,154 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-26-signing-in-with-email-3",
+  "screen_id": "chatgpt-ios-versions-2026-10-26-signing-in-with-email-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T09:43:57.774Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing in with email",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+  "text": "Log in or sign up\nYou'll get smarter responses and can upload files,\nimages and more.\nEmail\nmotvintool@gmail.com J\nContinue\nOR\npassword for auth0.openai.com - Chrome\nCloudshare63@gmail.com\nW\ne\nt\nr\nh\nf\nj\nd\n1\ng\nS\nb\nZ\nn\nC\nV\n123\n@",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in or sign up”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+        "Calls to action: “Continue”",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 40 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:21 in the recording",
+        "Frame 75 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e22",
+      "role": "background",
+      "share": 0.64
+    },
+    {
+      "hex": "#3c3a3d",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.066
+    },
+    {
+      "hex": "#615f62",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "mvp29bl1-i0r732.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 75,
+    "atSeconds": 21.9,
+    "endSeconds": 22.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log in or sign up",
+    "headline": "Motvintool@gmail.com J"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Tap “Log in or sign up”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}
