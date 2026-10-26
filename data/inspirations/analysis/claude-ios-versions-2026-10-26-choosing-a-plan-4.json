@@ -1,0 +1,159 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-choosing-a-plan-4",
+  "screen_id": "claude-ios-versions-2026-10-26-choosing-a-plan-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:16.501Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Choosing a plan",
+  "flow_position": 32,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Other. Dark theme, 13 text elements.",
+  "text": "9:41(\nooll\n=\n+\n••.\nHey\nHey! What can I help you with tonight?\nClaude is Al and can make mistakes.\nAdd to session\nFiles\nCamera\nPhotos\nShow recent photos\nAdd to project\nNone\nPermission\nManual >\nE Connectors\n>",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "permission",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Other. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 44 in “Subscribing”",
+        "Reached from “Hey! What can I help you with tonight?”",
+        "Leads to “Toast — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 3:27 in the recording",
+        "Frame 701 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151316",
+      "role": "background",
+      "share": 0.928
+    },
+    {
+      "hex": "#313134",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#4e4c4e",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#686669",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a8a7a8",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 701,
+    "atSeconds": 207.6,
+    "endSeconds": 210.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.0625,
+        "w": 0.8125,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Add to session",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s055",
+    "depth": 54,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s054",
+        "via": "Open Toast",
+        "name": "Hey! What can I help you with tonight?"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s056",
+        "via": "Scroll",
+        "name": "Toast — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

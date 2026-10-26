@@ -2,7 +2,7 @@
   "screenId": "arc-search-ios-versions-2026-10-26-searching-by-voice-2",
   "screen_id": "arc-search-ios-versions-2026-10-26-searching-by-voice-2",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-26T02:50:47.894Z",
+  "analyzedAt": "2026-10-26T04:53:11.134Z",
   "screen_type": "permission",
   "published_as": "permission",
   "states": [
@@ -11,15 +11,14 @@
   "category": "productivity",
   "flow": "onboarding",
   "flow_name": "Searching by voice",
-  "flow_position": 49,
+  "flow_position": 48,
   "name": "Permission prompt",
-  "description": "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 23 text elements.",
-  "text": "9:41 €\n•ol\nQ best dim sum near me\npllI\nm in Cr\nTI\n\"Arc Search\" would like to\nC\naccess the Microphone.\nlogle.c\nAllows you to search via dictation or\nrecord voice memos\nTo\nin\nDon't Allow\nAllow\nthis restaurant poasts a 4.8 ratng and\noffers a luxurious dining experience with a\ndiverse menu featuring Chinese, Japanese,\nand Thai dishes. Signature dim sums\ninclude Xiang Gu Jiao and Lotus Stem and\nAsparagus.\n-\nGolden Dragon - Situated in\nCoromandel, this restaurant he\nSpeech and Mic permissions required.",
+  "description": "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 24 text elements.",
+  "text": "9:41C\nQ best dim sum near me\n\"Arc Search\" would like to\naccess Speech Recognition.\nSpeech data from this app will be\nm in Cr\nTI\nC\nsent to Apple to process your\nrequests. This will also help Apple\nogle.c\nimprove its speech recognition\ntechnology.\nin\nThe speech recognizer will be used to\ntranscribe what you say when you lift\nyour phone to your ear.\nDon't Allow\nAllow\nse,\nanа mагирпео. отупасате umsuno\ninclude Xiang Gu Jiao and Lotus Stem and\nAsparagus.\nGolden Dragon - Situated in 7\nCoromandel, this restaurant he\nSpeech and Mic permissions required.",
   "purpose": null,
   "primary_action": null,
   "tags": [
     "search",
-    "offer",
     "permission",
     "ios"
   ],
@@ -29,7 +28,6 @@
     "list",
     "cta",
     "button",
-    "banner",
     "alert"
   ],
   "style": [
@@ -40,6 +38,7 @@
       "title": "Layout",
       "points": [
         "No tab bar",
+        "Navigation title reads “Access Speech Recognition”",
         "Search bar present",
         "Dark style"
       ]
@@ -47,39 +46,39 @@
     {
       "title": "Content",
       "points": [
-        "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 23 text elements.",
+        "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 24 text elements.",
         "Calls to action: “Allow”",
-        "23 text elements recognised",
+        "24 text elements recognised",
         "State: permission"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 49 of 64 in “Logging in with email”",
-        "Reached from “Permission prompt”",
-        "Leads to “Third-party sign-in”"
+        "Step 48 of 64 in “Logging in with email”",
+        "Reached from “Search”",
+        "Leads to “Permission prompt”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 0.9s at 1:52 in the recording",
-        "Frame 377 of 513 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 1:51 in the recording",
+        "Frame 373 of 513 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#17171b",
+      "hex": "#18181c",
       "role": "background",
-      "share": 0.796
+      "share": 0.784
     },
     {
-      "hex": "#313137",
+      "hex": "#343439",
       "role": "surface",
-      "share": 0.075
+      "share": 0.091
     },
     {
       "hex": "#232575",
@@ -92,21 +91,21 @@
       "share": 0.036
     },
     {
-      "hex": "#4e4b53",
+      "hex": "#57545a",
       "role": "surface",
       "share": 0.021
     }
   ],
   "capture": {
-    "source": "mvonqctz-vddlh4.mov",
+    "source": "mvos3mz3-4u709e.mov",
     "fps": 3.3333333333333335,
     "frames": 513,
-    "frame": 377,
-    "atSeconds": 112.8,
-    "endSeconds": 113.7,
+    "frame": 373,
+    "atSeconds": 111.3,
+    "endSeconds": 112.2,
     "holdSeconds": 0.9,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -114,7 +113,7 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 23,
+    "lineCount": 24,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [
@@ -125,12 +124,12 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": null,
-    "headline": "This restaurant poasts a 4.8 ratng and"
+    "title": "Access Speech Recognition",
+    "headline": "Access Speech Recognition"
   },
   "crawler": {
-    "nodeId": "s055",
-    "depth": 54,
+    "nodeId": "s054",
+    "depth": 53,
     "path": [],
     "visits": 1,
     "blocked": true,
@@ -138,16 +137,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s054",
-        "via": "Open Permission prompt",
-        "name": "Permission prompt"
+        "from": "s053",
+        "via": "Open Access Speech Recognition",
+        "name": "Search"
       }
     ],
     "leadsTo": [
       {
-        "to": "s056",
-        "via": "Wait 0.9s",
-        "name": "Third-party sign-in"
+        "to": "s055",
+        "via": "Open Permission prompt",
+        "name": "Permission prompt"
       }
     ]
   },

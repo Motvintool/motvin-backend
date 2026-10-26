@@ -1,15 +1,18 @@
 {
-  "name": "Search results",
-  "screenType": "search",
-  "fineType": "search",
-  "states": [],
-  "description": "A third-party sign-in page, not the app's own design. Dark theme, 23 text elements.",
+  "name": "Microphone permission",
+  "screenType": "permission",
+  "fineType": "permission",
+  "states": [
+    "permission"
+  ],
+  "description": "Permission screen with a search bar and a primary action labelled “Allow”. Dark theme, 23 text elements.",
   "tags": [
-    "ai-assistant"
+    "voice-input",
+    "privacy"
   ],
   "elements": [
-    "nav-bar",
-    "list",
+    "alert",
+    "button",
     "banner"
   ],
   "style": [
@@ -17,10 +20,11 @@
   ],
   "capturedAt": "2026-10-26",
   "capture": {
-    "atSeconds": 113.7,
-    "holdSeconds": 2.4,
+    "atSeconds": 112.8,
+    "holdSeconds": 0.9,
     "brief": false,
-    "visits": 1
+    "visits": 1,
+    "loadingOf": null
   },
   "extraTypes": []
 }
