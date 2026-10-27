@@ -1165,14 +1165,9 @@ export class InspirationsAdminService {
     if (!['allowed', 'view-only'].includes(redistribution)) {
       throw new BadRequestException('redistribution must be "allowed" or "view-only"');
     }
-    // Approving is the act that publishes screenshots, so it still has to say
-    // on what basis. Licence, licence URL and attribution are optional: they
-    // are recorded when known and shown on the screen page when present, but
-    // several honest bases (own work, editorial reference) have no licence
-    // string to quote.
-    if (status === 'approved' && !input?.permission) {
-      throw new BadRequestException('approved entries need a permission basis');
-    }
+    // The status alone publishes: a permission basis, licence, licence URL and
+    // attribution are all optional — recorded when known and shown on the
+    // screen page when present.
 
     const file = join(this.root, 'sources.json');
     const data = readJson<{ version?: number; sources?: Record<string, any> }>(file, { version: 1, sources: {} });

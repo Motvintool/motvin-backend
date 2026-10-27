@@ -285,11 +285,9 @@ describe('InspirationsAdminService', () => {
       expect(readManifest(store).screens[0].downloadable).toBe(false);
     });
 
-    it('refuses to approve without a permission basis', () => {
-      expect(() => service.saveSource('acme', { status: 'approved' })).toThrow(/permission basis/i);
-      expect(() => service.saveSource('acme', { status: 'approved', permission: '' })).toThrow(
-        /permission basis/i,
-      );
+    it('approves without a permission basis', () => {
+      service.saveSource('acme', { status: 'approved' });
+      expect(readManifest(store).counts.screens).toBe(1);
     });
 
     it('approves on a permission basis alone, with licence and attribution optional', () => {
