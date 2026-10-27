@@ -1,0 +1,157 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-onboarding-7",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:31.690Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign-in options",
+  "description": "Login screen with a sidebar and a primary action labelled “Continue”. Light theme, 13 text elements.",
+  "text": "ChatGPT v\nLog in\nSign up for free\nC New chat\n2 Images\n@ Plugins\n* See plans and pricing\n© Help\nLog in or sign up\n* Deep research\nYou'll get smarter responses and can upload files,\nSettings\nimages, and more.\njin?\nG Continue with Google\né Continue with Apple\n& Continue with phone\nOR\nmotvintool@gmail.com\nContinue\nGet responses\ntailored to you\nLog in to get answers based on\nsaved chats, plus create images and\nupload files.\nLog in\nChatGPT is Al.By using it, you agree to our Terms & Privacy Policy. Chats may be reviewed and used to improve our Al models. Learn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign up for free”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a sidebar and a primary action labelled “Continue”. Light theme, 13 text elements.",
+        "Calls to action: “Continue”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 40 in “Logging in”",
+        "Reached from “Create account”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.7s at 0:02 in the recording",
+        "Frame 35 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#888888",
+      "role": "background",
+      "share": 0.805
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.097
+    },
+    {
+      "hex": "#dddddd",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#6e6f71",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#1d1d1d",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 35,
+    "atSeconds": 2.1,
+    "endSeconds": 10.8,
+    "holdSeconds": 8.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "New chat",
+      "Images",
+      "Plugins",
+      "See plans and pricing",
+      "Help",
+      "Deep research",
+      "Settings"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign up for free",
+    "headline": "Continue with Apple"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Sign up for free",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Check your inbox",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,152 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-managing-account-settings-14",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-managing-account-settings-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:51.111Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "ai",
+  "flow": "settings",
+  "flow_name": "Managing account settings",
+  "flow_position": 1,
+  "name": "Account",
+  "description": "Settings screen with a sidebar and 3 input fields. Light theme, 16 text elements.",
+  "text": "Account\n< Back to app\nGeneral\nQ Search\nSurendar V 0\nName\nPersonal\n0 General\nUsername\n@motvintool 0\nO: Appearance\nmotvintool@gmail.com\n• Notifications\nEmail\n@ Profile\nAccount Status\nFree\n& Security and login\nGPT builder profile\nSurendar V O\ng Account\nE Archived chats\nA Verify age >\nAge\ng Parental controls\n& Trusted contact\nO Voice\nDelete account\nDelete\n• Storage\n• Personalization\n• Pets\n• Keyboard\n(ơ) Usage\ne Billing\n• Data controls\nIntegrations\n@ Plugins",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a sidebar and 3 input fields. Light theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 26 in “Chatting with support”",
+        "Reached from “OTP verification”",
+        "Leads to “Support chat”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 11:39 in the recording",
+        "Frame 2337 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafbfa",
+      "role": "background",
+      "share": 0.965
+    },
+    {
+      "hex": "#dcdcdb",
+      "role": "surface",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 2337,
+    "atSeconds": 699,
+    "endSeconds": 704.4,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Search",
+      "Personal",
+      "General",
+      "Appearance",
+      "Notifications",
+      "Profile",
+      "Security and login",
+      "Account",
+      "Archived chats",
+      "Parental controls",
+      "Trusted contact",
+      "Voice",
+      "Storage",
+      "Personalization",
+      "Pets",
+      "Keyboard",
+      "Usage",
+      "Billing",
+      "Data controls"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s136",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s135",
+        "via": "Open Account",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s137",
+        "via": "Tap “& Trusted contact”",
+        "name": "Support chat"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}
