@@ -68,6 +68,8 @@ export interface InspirationAppVersion {
   capturedAt: string;
   /** Whether this is the newest version by date — drives the "Latest" label. */
   isLatest: boolean;
+  /** The platforms this upload has screens on. */
+  platforms?: string[];
 }
 
 export interface InspirationApp {
@@ -81,6 +83,8 @@ export interface InspirationApp {
   logo: string | null;
   screenCount: number;
   flowCount: number;
+  /** Screens and flows per platform the app is on. */
+  platformCounts?: Record<string, { screens: number; flows: number }>;
   license: string | null;
   attribution: string;
   rating: number | null;

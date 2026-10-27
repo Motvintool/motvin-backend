@@ -1,0 +1,112 @@
+{
+  "part": 4,
+  "of": 4,
+  "app": {
+    "id": "claude",
+    "platform": "webapp",
+    "version": "2026-10-27",
+    "name": "Claude"
+  },
+  "flows": [
+    {
+      "id": "claude-webapp-versions-2026-10-27-chats",
+      "path": "Chats",
+      "sheet": "flow-3.png",
+      "steps": [
+        {
+          "n": 11,
+          "id": "claude-webapp-versions-2026-10-27-chats-1",
+          "name": "AI chat",
+          "type": "messages",
+          "atSeconds": 93.1
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-incognito",
+      "path": "Chats › Opening incognito mode",
+      "sheet": "flow-4.png",
+      "steps": [
+        {
+          "n": 12,
+          "id": "claude-webapp-versions-2026-10-27-opening-incognito-mode-1",
+          "name": "Incognito mode",
+          "type": "home",
+          "atSeconds": 68.1
+        },
+        {
+          "n": 13,
+          "id": "claude-webapp-versions-2026-10-27-opening-incognito-mode-2",
+          "name": "Home",
+          "type": "home",
+          "atSeconds": 71.1
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-upgrading-from-chat",
+      "path": "Chats › Upgrading to Pro",
+      "sheet": "flow-6.png",
+      "steps": [
+        {
+          "n": 19,
+          "id": "claude-webapp-versions-2026-10-27-upgrading-to-pro-1",
+          "name": "Upgrade dialog",
+          "type": "pricing",
+          "atSeconds": 132.3
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-adding-connectors",
+      "path": "Chats › Adding connectors",
+      "sheet": "flow-8.png",
+      "steps": [
+        {
+          "n": 23,
+          "id": "claude-webapp-versions-2026-10-27-adding-connectors-1",
+          "name": "Attach button tooltip",
+          "type": "messages",
+          "atSeconds": 154.5
+        },
+        {
+          "n": 24,
+          "id": "claude-webapp-versions-2026-10-27-adding-connectors-2",
+          "name": "Connectors menu",
+          "type": "messages",
+          "atSeconds": 156.4
+        },
+        {
+          "n": 25,
+          "id": "claude-webapp-versions-2026-10-27-adding-connectors-3",
+          "name": "Add connector dialog",
+          "type": "modal",
+          "atSeconds": 157.8
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-settings",
+      "path": "Settings",
+      "sheet": "flow-13.png",
+      "steps": [
+        {
+          "n": 32,
+          "id": "claude-webapp-versions-2026-10-27-settings-1",
+          "name": "Plugins settings",
+          "type": "settings",
+          "atSeconds": 169.5
+        }
+      ]
+    }
+  ],
+  "flowCategories": [
+    "onboarding",
+    "checkout",
+    "authentication",
+    "search",
+    "settings",
+    "creation",
+    "discovery"
+  ]
+}

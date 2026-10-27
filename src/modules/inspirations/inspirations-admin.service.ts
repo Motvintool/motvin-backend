@@ -978,7 +978,8 @@ export class InspirationsAdminService {
 
   /**
    * Validates the ids picked for an app's card carousel: strings, no
-   * repeats, at most MAX_CARD_SCREENS, and every one a screen actually stored
+   * repeats, at most MAX_CARD_SCREENS per platform (Claude has four on iOS and
+   * four on the web, each section's card its own), and every one a screen actually stored
    * for this app — a card pointing at another app's screen, or at one that
    * was deleted, would be a silent blank in the gallery.
    */
@@ -987,8 +988,10 @@ export class InspirationsAdminService {
       throw new BadRequestException('cardScreens must be a list of screen ids');
     }
     const ids = Array.from(new Set((raw as string[]).map((v) => v.trim()).filter(Boolean)));
-    if (ids.length > MAX_CARD_SCREENS) {
-      throw new BadRequestException(`cardScreens may hold at most ${MAX_CARD_SCREENS} screens`);
+    for (const platform of PLATFORMS) {
+      if (ids.filter((sid) => sid.startsWith(`${appId}-${platform}-`)).length > MAX_CARD_SCREENS) {
+        throw new BadRequestException(`cardScreens may hold at most ${MAX_CARD_SCREENS} screens per platform`);
+      }
     }
     const stored = this.storedScreenIds(appId);
     const unknown = ids.filter((sid) => !stored.has(sid));
@@ -1059,8 +1062,15 @@ export class InspirationsAdminService {
    * file count in its confirmation. The returned counts say what went, so the
    * result can be reported rather than assumed.
    */
-  deleteApp(appIdRaw: string) {
+  deleteApp(appIdRaw: string, platformRaw?: string) {
     const id = this.assertSlug(appIdRaw, 'app id');
+    if (platformRaw && !(PLATFORMS as readonly string[]).includes(platformRaw)) {
+      throw new BadRequestException(`platform must be one of ${PLATFORMS.join(', ')}`);
+    }
+    // One platform of an app on several (Claude's web part): only that part goes; the app, its logo and
+    // licence stay for the platform that is left. Its last platform deletes the whole app.
+    const others = PLATFORMS.filter((p) => p !== platformRaw && existsSync(this.inStore('screens', p, id)));
+    if (platformRaw && others.length > 0) return this.deleteAppPlatform(id, platformRaw as (typeof PLATFORMS)[number]);
 
     let screensRemoved = 0;
     const analysisRemoved: string[] = [];
@@ -1145,6 +1155,60 @@ export class InspirationsAdminService {
         logo: logoRemoved,
         source: sourceExisted,
       },
+      report: this.rebuild(),
+    };
+  }
+
+  /** `deleteApp` for one platform of an app that is on others too. */
+  private deleteAppPlatform(id: string, platform: (typeof PLATFORMS)[number]) {
+    const prefix = `${id}-${platform}-`;
+    let screensRemoved = 0;
+    let analysisRemoved = 0;
+    const dir = this.inStore('screens', platform, id);
+    if (existsSync(dir)) {
+      for (const entry of listAppScreenFiles(dir)) {
+        screensRemoved++;
+        const screenId = screenIdFor(platform, id, entry.file);
+        const analysis = this.inStore('analysis', `${screenId}.json`);
+        if (existsSync(analysis)) {
+          rmSync(analysis, { force: true });
+          analysisRemoved++;
+        }
+        rmSync(this.inStore('words', `${screenId}.json`), { force: true });
+      }
+      rmSync(dir, { recursive: true, force: true });
+    }
+
+    // The record stays, without this platform and without its card pictures.
+    const appsFile = join(this.root, 'apps.json');
+    const appsData = readJson<{ version?: number; apps?: any[] }>(appsFile, { version: 1, apps: [] });
+    const record = (appsData.apps || []).find((a) => a.id === id);
+    if (record) {
+      if (Array.isArray(record.platforms)) record.platforms = record.platforms.filter((p: string) => p !== platform);
+      if (Array.isArray(record.cardScreens)) record.cardScreens = record.cardScreens.filter((sid: string) => !sid.startsWith(prefix));
+      this.writeJson(appsFile, { version: appsData.version || 1, apps: appsData.apps });
+    }
+
+    const flowsFile = join(this.root, 'flows.json');
+    const flowsData = readJson<{ version?: number; flows?: any[] }>(flowsFile, { version: 1, flows: [] });
+    const keptFlows = (flowsData.flows || []).filter((f) => !(f.appId === id && f.platform === platform));
+    const flowsRemoved = (flowsData.flows || []).length - keptFlows.length;
+    this.writeJson(flowsFile, { version: flowsData.version || 1, flows: keptFlows });
+
+    const marksFile = join(this.root, 'reviewed.json');
+    if (existsSync(marksFile)) {
+      const marks = readJson<Record<string, unknown>>(marksFile, {});
+      for (const key of Object.keys(marks)) if (key.startsWith(prefix)) delete marks[key];
+      this.writeJson(marksFile, marks);
+    }
+    const reviewsDir = join(this.root, '..', 'reviews');
+    if (existsSync(reviewsDir)) {
+      for (const entry of readdirSync(reviewsDir)) if (entry.startsWith(prefix)) rmSync(join(reviewsDir, entry), { recursive: true, force: true });
+    }
+
+    this.logger.log(`Deleted ${platform} of app ${id}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)`);
+    return {
+      removed: { app: false, screens: screensRemoved, analysis: analysisRemoved, flows: flowsRemoved, logo: null, source: false },
       report: this.rebuild(),
     };
   }

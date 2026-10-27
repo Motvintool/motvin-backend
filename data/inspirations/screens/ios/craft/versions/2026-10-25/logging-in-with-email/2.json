@@ -1,18 +1,17 @@
 {
   "name": "Email entry",
-  "screenType": "login",
-  "fineType": "login",
+  "screenType": "loading",
+  "fineType": "loading",
   "states": [
-    "keyboard"
+    "loading"
   ],
-  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 25 text elements.",
+  "description": "Loading state. Light theme.",
   "tags": [
-    "email-login",
-    "logged-out"
+    "loading-state",
+    "email-login"
   ],
   "elements": [
-    "text-field",
-    "keyboard",
+    "progress",
     "button"
   ],
   "style": [
@@ -20,10 +19,12 @@
   ],
   "capturedAt": "2026-10-25",
   "capture": {
-    "atSeconds": 5.7,
-    "holdSeconds": 4.8,
+    "atSeconds": 17.4,
+    "holdSeconds": 0.9,
     "brief": false,
-    "visits": 2
+    "visits": 1
   },
-  "extraTypes": []
+  "extraTypes": [
+    "login"
+  ]
 }

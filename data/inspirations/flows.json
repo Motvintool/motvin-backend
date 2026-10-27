@@ -6484,78 +6484,6 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-onboarding",
-      "appId": "craft",
-      "name": "Onboarding",
-      "category": "onboarding",
-      "platform": "ios",
-      "screenIds": [
-        "craft-ios-versions-2026-10-25-onboarding-1",
-        "craft-ios-versions-2026-10-25-onboarding-2",
-        "craft-ios-versions-2026-10-25-onboarding-3",
-        "craft-ios-versions-2026-10-25-onboarding-4",
-        "craft-ios-versions-2026-10-25-onboarding-5",
-        "craft-ios-versions-2026-10-25-onboarding-6",
-        "craft-ios-versions-2026-10-25-onboarding-7",
-        "craft-ios-versions-2026-10-25-onboarding-8"
-      ],
-      "parentId": null,
-      "steps": [
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-1",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-2",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-3",
-          "action": {
-            "kind": "tap",
-            "label": "Long press, and move me to the",
-            "basis": "press"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-4",
-          "action": {
-            "kind": "back",
-            "label": "Drag And Drop Anything",
-            "basis": "structure"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-5",
-          "action": {
-            "kind": "tap",
-            "label": "Drag And Drop Anything",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-6",
-          "action": {
-            "kind": "open",
-            "label": "Wipe & or → on me, and change my",
-            "basis": "destination"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-7",
-          "action": {
-            "kind": "tap",
-            "label": "Easy Styling",
-            "basis": "match"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-onboarding-8",
-          "action": null
-        }
-      ]
-    },
-    {
       "id": "craft-ios-versions-2026-10-25-logging-in-with-email",
       "appId": "craft",
       "name": "Logging in with email",
@@ -6569,17 +6497,12 @@
         "craft-ios-versions-2026-10-25-logging-in-with-email-5",
         "craft-ios-versions-2026-10-25-logging-in-with-email-6",
         "craft-ios-versions-2026-10-25-logging-in-with-email-7",
-        "craft-ios-versions-2026-10-25-logging-in-with-email-8",
-        "craft-ios-versions-2026-10-25-logging-in-with-email-9"
+        "craft-ios-versions-2026-10-25-logging-in-with-email-8"
       ],
       "parentId": "craft-ios-versions-2026-10-25-onboarding",
       "steps": [
         {
           "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-1",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-2",
           "action": {
             "kind": "tap",
             "label": "Enter your email to",
@@ -6587,12 +6510,20 @@
           }
         },
         {
+          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-2",
+          "action": null
+        },
+        {
           "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-3",
           "action": null
         },
         {
           "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-4",
-          "action": null
+          "action": {
+            "kind": "tap",
+            "label": "Didn't receive the email?",
+            "basis": "press"
+          }
         },
         {
           "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-5",
@@ -6605,21 +6536,13 @@
         {
           "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-6",
           "action": {
-            "kind": "tap",
-            "label": "Didn't receive the email?",
-            "basis": "press"
-          }
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-7",
-          "action": {
             "kind": "wait",
             "label": "1.8s",
             "basis": "structure"
           }
         },
         {
-          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-8",
+          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-7",
           "action": {
             "kind": "wait",
             "label": "1.2s",
@@ -6627,7 +6550,7 @@
           }
         },
         {
-          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-9",
+          "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-8",
           "action": {
             "kind": "back",
             "label": "Form",
@@ -6664,6 +6587,58 @@
         },
         {
           "screenId": "craft-ios-versions-2026-10-25-entering-your-name-4",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "craft-ios-versions-2026-10-25-taking-the-app-tour",
+      "appId": "craft",
+      "name": "Taking the app tour",
+      "category": "onboarding",
+      "platform": "ios",
+      "screenIds": [
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-1",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-2",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-3",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-4",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-5",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-6",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-7",
+        "craft-ios-versions-2026-10-25-taking-the-app-tour-8"
+      ],
+      "parentId": "craft-ios-versions-2026-10-25-onboarding",
+      "steps": [
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-1",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-2",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-3",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-4",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-5",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-6",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-7",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-taking-the-app-tour-8",
           "action": null
         }
       ]
@@ -7011,23 +6986,55 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-home",
+      "id": "craft-ios-versions-2026-10-25-onboarding",
       "appId": "craft",
-      "name": "Home",
-      "category": "discovery",
+      "name": "Onboarding",
+      "category": "onboarding",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-home-1",
-        "craft-ios-versions-2026-10-25-home-2"
+        "craft-ios-versions-2026-10-25-onboarding-1"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-home-1",
+          "screenId": "craft-ios-versions-2026-10-25-onboarding-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "craft-ios-versions-2026-10-25-turning-on-notifications",
+      "appId": "craft",
+      "name": "Turning on notifications",
+      "category": "settings",
+      "platform": "ios",
+      "screenIds": [
+        "craft-ios-versions-2026-10-25-turning-on-notifications-1",
+        "craft-ios-versions-2026-10-25-turning-on-notifications-2",
+        "craft-ios-versions-2026-10-25-turning-on-notifications-3",
+        "craft-ios-versions-2026-10-25-turning-on-notifications-4",
+        "craft-ios-versions-2026-10-25-turning-on-notifications-5"
+      ],
+      "parentId": "craft-ios-versions-2026-10-25-home",
+      "steps": [
+        {
+          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-1",
           "action": null
         },
         {
-          "screenId": "craft-ios-versions-2026-10-25-home-2",
+          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-2",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-3",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-4",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-5",
           "action": null
         }
       ]
@@ -7080,43 +7087,6 @@
         },
         {
           "screenId": "craft-ios-versions-2026-10-25-editing-a-document-8",
-          "action": null
-        }
-      ]
-    },
-    {
-      "id": "craft-ios-versions-2026-10-25-turning-on-notifications",
-      "appId": "craft",
-      "name": "Turning on notifications",
-      "category": "settings",
-      "platform": "ios",
-      "screenIds": [
-        "craft-ios-versions-2026-10-25-turning-on-notifications-1",
-        "craft-ios-versions-2026-10-25-turning-on-notifications-2",
-        "craft-ios-versions-2026-10-25-turning-on-notifications-3",
-        "craft-ios-versions-2026-10-25-turning-on-notifications-4",
-        "craft-ios-versions-2026-10-25-turning-on-notifications-5"
-      ],
-      "parentId": "craft-ios-versions-2026-10-25-home",
-      "steps": [
-        {
-          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-1",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-2",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-3",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-4",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-5",
           "action": null
         }
       ]
@@ -7250,18 +7220,23 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-tasks",
+      "id": "craft-ios-versions-2026-10-25-home",
       "appId": "craft",
-      "name": "Tasks",
+      "name": "Home",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-tasks-1"
+        "craft-ios-versions-2026-10-25-home-1",
+        "craft-ios-versions-2026-10-25-home-2"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-tasks-1",
+          "screenId": "craft-ios-versions-2026-10-25-home-1",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-home-2",
           "action": null
         }
       ]
@@ -7326,18 +7301,18 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-calendar",
+      "id": "craft-ios-versions-2026-10-25-tasks",
       "appId": "craft",
-      "name": "Calendar",
+      "name": "Tasks",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-calendar-1"
+        "craft-ios-versions-2026-10-25-tasks-1"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-calendar-1",
+          "screenId": "craft-ios-versions-2026-10-25-tasks-1",
           "action": null
         }
       ]
@@ -7419,18 +7394,18 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-assistant",
+      "id": "craft-ios-versions-2026-10-25-calendar",
       "appId": "craft",
-      "name": "Assistant",
+      "name": "Calendar",
       "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-assistant-1"
+        "craft-ios-versions-2026-10-25-calendar-1"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-assistant-1",
+          "screenId": "craft-ios-versions-2026-10-25-calendar-1",
           "action": null
         }
       ]
@@ -7475,23 +7450,18 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-space",
+      "id": "craft-ios-versions-2026-10-25-assistant",
       "appId": "craft",
-      "name": "Space",
-      "category": "settings",
+      "name": "Assistant",
+      "category": "discovery",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-space-1",
-        "craft-ios-versions-2026-10-25-space-2"
+        "craft-ios-versions-2026-10-25-assistant-1"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-space-1",
-          "action": null
-        },
-        {
-          "screenId": "craft-ios-versions-2026-10-25-space-2",
+          "screenId": "craft-ios-versions-2026-10-25-assistant-1",
           "action": null
         }
       ]
@@ -7556,18 +7526,23 @@
       ]
     },
     {
-      "id": "craft-ios-versions-2026-10-25-settings",
+      "id": "craft-ios-versions-2026-10-25-space",
       "appId": "craft",
-      "name": "Settings",
+      "name": "Space",
       "category": "settings",
       "platform": "ios",
       "screenIds": [
-        "craft-ios-versions-2026-10-25-settings-1"
+        "craft-ios-versions-2026-10-25-space-1",
+        "craft-ios-versions-2026-10-25-space-2"
       ],
       "parentId": null,
       "steps": [
         {
-          "screenId": "craft-ios-versions-2026-10-25-settings-1",
+          "screenId": "craft-ios-versions-2026-10-25-space-1",
+          "action": null
+        },
+        {
+          "screenId": "craft-ios-versions-2026-10-25-space-2",
           "action": null
         }
       ]
@@ -24923,6 +24898,356 @@
       "steps": [
         {
           "screenId": "lensa-ios-versions-2026-10-27-reading-legal-information-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-onboarding",
+      "appId": "claude",
+      "name": "Onboarding",
+      "category": "onboarding",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-onboarding-1",
+        "claude-webapp-versions-2026-10-27-onboarding-2",
+        "claude-webapp-versions-2026-10-27-onboarding-3",
+        "claude-webapp-versions-2026-10-27-onboarding-4",
+        "claude-webapp-versions-2026-10-27-onboarding-5",
+        "claude-webapp-versions-2026-10-27-onboarding-6",
+        "claude-webapp-versions-2026-10-27-onboarding-7",
+        "claude-webapp-versions-2026-10-27-onboarding-8"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-2",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-3",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-4",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-5",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-6",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-7",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-onboarding-8",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-opening-settings",
+      "appId": "claude",
+      "name": "Managing cookies",
+      "category": "settings",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-managing-cookies-1",
+        "claude-webapp-versions-2026-10-27-managing-cookies-2",
+        "claude-webapp-versions-2026-10-27-managing-cookies-3"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-cookies-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-cookies-2",
+          "action": {
+            "kind": "tap",
+            "label": "Manual",
+            "basis": "press"
+          }
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-cookies-3",
+          "action": {
+            "kind": "tap",
+            "label": "Cookie settings",
+            "basis": "press"
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-chats",
+      "appId": "claude",
+      "name": "Chats",
+      "category": "discovery",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-chats-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-chats-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-incognito",
+      "appId": "claude",
+      "name": "Opening incognito mode",
+      "category": "discovery",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-opening-incognito-mode-1",
+        "claude-webapp-versions-2026-10-27-opening-incognito-mode-2"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-opening-incognito-mode-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-opening-incognito-mode-2",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-giving-feedback",
+      "appId": "claude",
+      "name": "Giving feedback",
+      "category": "creation",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-giving-feedback-1",
+        "claude-webapp-versions-2026-10-27-giving-feedback-2",
+        "claude-webapp-versions-2026-10-27-giving-feedback-3",
+        "claude-webapp-versions-2026-10-27-giving-feedback-4",
+        "claude-webapp-versions-2026-10-27-giving-feedback-5"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-giving-feedback-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-giving-feedback-2",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-giving-feedback-3",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-giving-feedback-4",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-giving-feedback-5",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-upgrading-from-chat",
+      "appId": "claude",
+      "name": "Upgrading to Pro",
+      "category": "checkout",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-upgrading-to-pro-1"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-upgrading-to-pro-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-managing-skills",
+      "appId": "claude",
+      "name": "Managing skills",
+      "category": "settings",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-managing-skills-1",
+        "claude-webapp-versions-2026-10-27-managing-skills-2",
+        "claude-webapp-versions-2026-10-27-managing-skills-3"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-skills-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-skills-2",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-managing-skills-3",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-adding-connectors",
+      "appId": "claude",
+      "name": "Adding connectors",
+      "category": "settings",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-adding-connectors-1",
+        "claude-webapp-versions-2026-10-27-adding-connectors-2",
+        "claude-webapp-versions-2026-10-27-adding-connectors-3"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-adding-connectors-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-adding-connectors-2",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-adding-connectors-3",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-opening-greeting-options",
+      "appId": "claude",
+      "name": "Adding a design system",
+      "category": "discovery",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-adding-a-design-system-1"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-adding-a-design-system-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-using-voice-input",
+      "appId": "claude",
+      "name": "Dictating a message",
+      "category": "creation",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-dictating-a-message-1",
+        "claude-webapp-versions-2026-10-27-dictating-a-message-2"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-chats",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-dictating-a-message-1",
+          "action": null
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-dictating-a-message-2",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-plans",
+      "appId": "claude",
+      "name": "Plans",
+      "category": "checkout",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-plans-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-plans-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-subscribing",
+      "appId": "claude",
+      "name": "Comparing plans",
+      "category": "checkout",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-comparing-plans-1",
+        "claude-webapp-versions-2026-10-27-comparing-plans-2"
+      ],
+      "parentId": "claude-webapp-versions-2026-10-27-plans",
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-comparing-plans-1",
+          "action": {
+            "kind": "tap",
+            "label": "Plans that grow with you",
+            "basis": "match"
+          }
+        },
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-comparing-plans-2",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "claude-webapp-versions-2026-10-27-settings",
+      "appId": "claude",
+      "name": "Settings",
+      "category": "settings",
+      "platform": "webapp",
+      "screenIds": [
+        "claude-webapp-versions-2026-10-27-settings-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "claude-webapp-versions-2026-10-27-settings-1",
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "craft-ios-versions-2026-10-25-settings",
+      "appId": "craft",
+      "name": "Settings",
+      "category": "settings",
+      "platform": "ios",
+      "screenIds": [
+        "craft-ios-versions-2026-10-25-settings-1"
+      ],
+      "parentId": null,
+      "steps": [
+        {
+          "screenId": "craft-ios-versions-2026-10-25-settings-1",
           "action": null
         }
       ]

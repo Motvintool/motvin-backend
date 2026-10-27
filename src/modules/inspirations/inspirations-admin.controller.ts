@@ -140,8 +140,8 @@ export class InspirationsAdminController {
   }
 
   @Delete('apps/:app')
-  deleteApp(@Param('app') app: string) {
-    return { success: true, data: this.admin.deleteApp(app) };
+  deleteApp(@Param('app') app: string, @Query('platform') platform?: string) {
+    return { success: true, data: this.admin.deleteApp(app, platform || undefined) };
   }
 
   // ─── Licensing ────────────────────────────────────────────────────────────

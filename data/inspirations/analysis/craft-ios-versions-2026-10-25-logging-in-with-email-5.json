@@ -2,109 +2,122 @@
   "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-5",
   "screen_id": "craft-ios-versions-2026-10-25-logging-in-with-email-5",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-25T11:15:45.144Z",
-  "screen_type": "other",
-  "published_as": "other",
-  "states": [],
+  "analyzedAt": "2026-10-25T11:15:45.370Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
   "category": "productivity",
   "flow": "discovery",
   "flow_name": "Logging in with email",
-  "flow_position": 24,
-  "name": "Easy Styling",
-  "description": "Other screen. Dark theme, 10 text elements.",
-  "text": "9:41€\nDone\nEasy Styling\nMaking your content look both beautiful\nand legible has never been simpler\nSwipe & or → on me, and change my\nstyle\nHeading\nBody\nPage\nMore...\nFocus\nBlock\n••.",
+  "flow_position": 26,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Loading state. Dark theme, 3 text elements.",
+  "text": "9:41C\nC\nThat's it!\nWell done, that's all you need to know for\nnow. Have fun using Craft!\nExplore Craft",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "focus",
-    "block",
-    "other",
+    "explore craft",
+    "toast",
     "ios"
   ],
   "elements": [
-    "nav-bar"
+    "toast"
   ],
   "style": [
-    "dark"
+    "dark",
+    "bold"
   ],
   "sections": [
     {
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Easy Styling”",
-        "Dark style"
+        "Navigation title reads “Well done, that's all you need to know”",
+        "Toast over a dimmed background, covering 11% of the height from 47% down",
+        "Dark, Bold style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Other screen. Dark theme, 10 text elements.",
-        "10 text elements recognised"
+        "Toast over a dimmed screen, on top of Loading state. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: toast"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 24 of 38 in “Onboarding”",
-        "Reached from “Dialog”",
-        "Leads to “Easy Styling dialog”"
+        "Step 26 of 38 in “Onboarding”",
+        "Reached from “Toast — loading”",
+        "Leads to “Subscription plans”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 2.4s at 1:29 in the recording",
-        "Frame 306 of 1127 sampled at 3.3333333333333335 fps",
+        "Held for 0.9s at 1:37 in the recording",
+        "Frame 326 of 1127 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#030204",
+      "hex": "#010002",
       "role": "background",
-      "share": 0.708
+      "share": 0.918
     },
     {
-      "hex": "#222428",
+      "hex": "#1f789b",
       "role": "surface",
-      "share": 0.177
+      "share": 0.028
     },
     {
-      "hex": "#2e5868",
+      "hex": "#323133",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#279dcb",
       "role": "accent",
-      "share": 0.065
+      "share": 0.021
     },
     {
-      "hex": "#3f3f42",
+      "hex": "#1b1a1c",
       "role": "surface",
-      "share": 0.023
-    },
-    {
-      "hex": "#5e5d60",
-      "role": "text",
-      "share": 0.017
+      "share": 0.004
     }
   ],
   "capture": {
     "source": "mvnq9f8i-9kp2ct.mov",
     "fps": 3.3333333333333335,
     "frames": 1127,
-    "frame": 306,
-    "atSeconds": 89.7,
-    "endSeconds": 92.1,
-    "holdSeconds": 2.4,
+    "frame": 326,
+    "atSeconds": 97.2,
+    "endSeconds": 98.1,
+    "holdSeconds": 0.9,
     "brief": false,
-    "kind": "screen",
-    "overlay": null,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.46875,
+        "w": 0.75,
+        "h": 0.109375
+      }
+    },
     "overlayOf": null,
     "loadingOf": null,
     "scrolledFrom": null,
     "visits": 1
   },
   "signals": {
-    "lineCount": 10,
+    "lineCount": 3,
     "tabLabels": [],
     "chipLabels": [],
     "ctas": [],
@@ -113,13 +126,13 @@
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Easy Styling",
-    "headline": "Easy Styling",
+    "title": "Well done, that's all you need to know",
+    "headline": "That's it!",
     "tabBar": false
   },
   "crawler": {
-    "nodeId": "s028",
-    "depth": 27,
+    "nodeId": "s031",
+    "depth": 30,
     "path": [],
     "visits": 1,
     "blocked": false,
@@ -127,16 +140,16 @@
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s027",
-        "via": "Tap “Easy Styling”",
-        "name": "Dialog"
+        "from": "s030",
+        "via": "Wait 1.8s",
+        "name": "Toast — loading"
       }
     ],
     "leadsTo": [
       {
-        "to": "s029",
-        "via": "Back to Easy Styling dialog",
-        "name": "Easy Styling dialog"
+        "to": "s032",
+        "via": "Open Home",
+        "name": "Subscription plans"
       }
     ]
   },

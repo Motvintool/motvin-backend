@@ -845,9 +845,12 @@ export function buildInspirationsManifest(root: string): BuildReport {
    */
   function versionsForApp(appId: string, appScreens: any[]) {
     const datesByVersion = new Map<string, string[]>();
+    const platformsByVersion = new Map<string, Set<string>>();
     for (const s of appScreens) {
       if (!datesByVersion.has(s.version)) datesByVersion.set(s.version, []);
       if (s.capturedAt) datesByVersion.get(s.version)!.push(s.capturedAt);
+      if (!platformsByVersion.has(s.version)) platformsByVersion.set(s.version, new Set());
+      platformsByVersion.get(s.version)!.add(s.platform);
     }
     const entries = Array.from(datesByVersion.entries())
       .map(([id, dates]) => ({ id, capturedAt: dates.length ? dates.slice().sort()[0] : `${id}-01` }))
@@ -858,6 +861,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
       label: dayLabel(e.id),
       capturedAt: e.capturedAt,
       isLatest: e.id === newestId,
+      // Where this upload is: Claude's 27 Oct upload is its web one, so "newest" in iOS skips it.
+      platforms: PLATFORMS.filter((p) => platformsByVersion.get(e.id)?.has(p)),
     }));
   }
 
@@ -878,6 +883,11 @@ export function buildInspirationsManifest(root: string): BuildReport {
         const dropped = wantedCard.filter((sid) => !appScreenIds.has(sid));
         warnings.push(`app "${appId}" card drops ${dropped.length} screen id(s) not stored or not approved: ${dropped.join(', ')}`);
       }
+      // Four per platform it has screens on: short of that, the card in that section shows one automatic picture.
+      for (const p of PLATFORMS.filter((p) => appScreens.some((s) => s.platform === p))) {
+        const here = cardScreens.filter((sid) => sid.startsWith(`${appId}-${p}-`)).length;
+        if (here < 4) warnings.push(`app "${appId}" has ${here} of 4 card pictures on ${p} — pick them in Apps → ${app.name || appId} → Card`);
+      }
       return {
         id: appId,
         name: app.name || titleCase(appId),
@@ -892,6 +902,17 @@ export function buildInspirationsManifest(root: string): BuildReport {
         logo: logo ? `/api/inspirations/logos/${logo}` : null,
         screenCount: appScreens.length,
         flowCount: publishedFlows.filter((f) => f.appId === appId).length,
+        // The same counts per platform it is on: an app on iOS and the web is shown with the count of the
+        // section it is seen in (Claude in Webs: its web screens), never the two added together.
+        platformCounts: Object.fromEntries(
+          PLATFORMS.filter((p) => appScreens.some((s) => s.platform === p)).map((p) => [
+            p,
+            {
+              screens: appScreens.filter((s) => s.platform === p).length,
+              flows: publishedFlows.filter((f) => f.appId === appId && f.platform === p).length,
+            },
+          ]),
+        ),
         license: source.license || null,
         attribution: source.attribution || app.name || titleCase(appId),
         versions,

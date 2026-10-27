@@ -559,6 +559,41 @@ describe('InspirationsAdminService', () => {
       );
     });
 
+    it('keeps four card screens per platform', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      for (const name of ['a', 'b', 'c', 'd']) {
+        service.uploadScreen('ios', 'acme', `${name}.png`, PNG_1X1, false, '');
+        service.uploadScreen('web', 'acme', `${name}.png`, PNG_1X1, false, '');
+      }
+      const picks = ['a', 'b', 'c', 'd'].flatMap((name) => [`acme-ios-${name}`, `acme-web-${name}`]);
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: picks });
+      expect(readManifest(store).apps[0].cardScreens).toEqual(picks);
+    });
+
+    it('deletes only one platform of an app on several, keeping the app', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'web'] });
+      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: ['acme-ios-login', 'acme-web-dashboard'] });
+
+      const result = service.deleteApp('acme', 'web');
+
+      expect(result.removed.app).toBe(false);
+      expect(result.removed.screens).toBe(1);
+      const app = readManifest(store).apps[0];
+      expect(app.id).toBe('acme');
+      expect(app.platforms).toEqual(['ios']);
+      expect(app.cardScreens).toEqual(['acme-ios-login']);
+      expect(readManifest(store).counts.screens).toBe(1);
+    });
+
+    it('deletes the whole app when its last platform goes', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      expect(service.deleteApp('acme', 'ios').removed.app).toBe(true);
+      expect(readManifest(store).apps).toEqual([]);
+    });
+
     it('removes everything stored for an app when it is deleted', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');

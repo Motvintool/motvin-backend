@@ -2,33 +2,31 @@
   "screenId": "craft-ios-versions-2026-10-25-logging-in-with-email-7",
   "screen_id": "craft-ios-versions-2026-10-25-logging-in-with-email-7",
   "analyzer": "motvin on-device (Vision OCR + rules)",
-  "analyzedAt": "2026-10-25T11:15:43.830Z",
+  "analyzedAt": "2026-10-25T11:15:43.904Z",
   "screen_type": "otp",
   "published_as": "login",
   "states": [
-    "loading"
+    "keyboard"
   ],
   "category": "productivity",
   "flow": "authentication",
   "flow_name": "Logging in with email",
-  "flow_position": 10,
-  "name": "Loading state",
-  "description": "Loading state with a primary action labelled “Login Failed”. Dark theme, 12 text elements.",
-  "text": "9:41(\noll\nPlease enter the code sent to\nmotvintool@gmail.com\n-\n-\n-\n-\n-\nLogin Failed\nmotvintool@gmail.com\nInvalid code\n(AUTH/2/721)\nOk\nDidn't receive the email?\nCheck your spam folder",
+  "flow_position": 11,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Dark theme, 25 text elements.",
+  "text": "9:41(\nodll\nPlease enter the code sent to\nmotvintool@gmail.com\n---\n---\nDidn't receive the email?\nCheck your spam folder\nFrom Gmail\n720601\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nTUV\nPQRS",
   "purpose": null,
   "primary_action": null,
   "tags": [
-    "login",
     "otp",
-    "loading",
+    "keyboard",
     "ios"
   ],
   "elements": [
     "nav-bar",
-    "cta",
-    "button",
-    "skeleton",
-    "progress"
+    "keyboard",
+    "text-field",
+    "list"
   ],
   "style": [
     "dark"
@@ -38,59 +36,58 @@
       "title": "Layout",
       "points": [
         "No tab bar",
-        "Navigation title reads “Login Failed”",
+        "Keyboard is open, so the lower half is input",
         "Dark style"
       ]
     },
     {
       "title": "Content",
       "points": [
-        "Loading state with a primary action labelled “Login Failed”. Dark theme, 12 text elements.",
-        "Calls to action: “Login Failed”",
-        "12 text elements recognised",
-        "State: loading"
+        "Verification code screen with the keyboard open. Dark theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: keyboard"
       ]
     },
     {
       "title": "Navigation",
       "points": [
-        "Step 10 of 38 in “Onboarding”",
-        "Reached from “Form”",
-        "Leads to “OTP verification”"
+        "Step 11 of 38 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Form”"
       ]
     },
     {
       "title": "Capture",
       "points": [
-        "Held for 1.2s at 0:46 in the recording",
-        "Frame 159 of 1127 sampled at 3.3333333333333335 fps",
+        "Held for 1.5s at 0:48 in the recording",
+        "Frame 164 of 1127 sampled at 3.3333333333333335 fps",
         "Classified on-device from recognised text and pixels"
       ]
     }
   ],
   "palette": [
     {
-      "hex": "#040305",
+      "hex": "#030204",
       "role": "background",
-      "share": 0.894
+      "share": 0.562
     },
     {
-      "hex": "#252326",
+      "hex": "#1c1a1d",
       "role": "surface",
-      "share": 0.097
+      "share": 0.223
     },
     {
-      "hex": "#434144",
+      "hex": "#3b383b",
       "role": "surface",
-      "share": 0.006
+      "share": 0.193
     },
     {
-      "hex": "#59575a",
+      "hex": "#595759",
       "role": "surface",
-      "share": 0.003
+      "share": 0.021
     },
     {
-      "hex": "#a4a3a4",
+      "hex": "#706e70",
       "role": "text",
       "share": 0
     }
@@ -99,12 +96,12 @@
     "source": "mvnq9f8i-9kp2ct.mov",
     "fps": 3.3333333333333335,
     "frames": 1127,
-    "frame": 159,
-    "atSeconds": 46.8,
-    "endSeconds": 48,
-    "holdSeconds": 1.2,
+    "frame": 164,
+    "atSeconds": 48.3,
+    "endSeconds": 49.8,
+    "holdSeconds": 1.5,
     "brief": false,
-    "kind": "loading",
+    "kind": "screen",
     "overlay": null,
     "overlayOf": null,
     "loadingOf": null,
@@ -112,40 +109,38 @@
     "visits": 1
   },
   "signals": {
-    "lineCount": 12,
+    "lineCount": 25,
     "tabLabels": [],
     "chipLabels": [],
-    "ctas": [
-      "Login Failed"
-    ],
-    "keyboard": false,
+    "ctas": [],
+    "keyboard": true,
     "layout": "phone",
     "navLabels": [],
     "activeTab": null,
     "listedInSidebar": false,
-    "title": "Login Failed",
+    "title": null,
     "headline": "Motvintool@gmail.com"
   },
   "crawler": {
-    "nodeId": "s011",
-    "depth": 10,
+    "nodeId": "s012",
+    "depth": 11,
     "path": [],
     "visits": 1,
-    "blocked": false,
-    "blockedReason": null,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
     "actions": [],
     "reachedFrom": [
       {
-        "from": "s010",
-        "via": "Wait 1.8s",
-        "name": "Form"
+        "from": "s011",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
       }
     ],
     "leadsTo": [
       {
-        "to": "s012",
-        "via": "Wait 1.2s",
-        "name": "OTP verification"
+        "to": "s013",
+        "via": "Back to Form",
+        "name": "Form"
       }
     ]
   },
