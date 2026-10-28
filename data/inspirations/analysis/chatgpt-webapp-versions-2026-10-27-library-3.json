@@ -1,0 +1,167 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-library-3",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-library-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:45.052Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Library",
+  "flow_position": 2,
+  "name": "Claim offer sheet",
+  "description": "Bottom sheet, on top of Settings with a sidebar, a row of 3 category chips, a search bar and 1 input field. Light theme, 10 text elements.",
+  "text": "ChatGPT\nLibrary > Trash\nQ Search trash\n88\n=\nC New chat\nRestore files you've recently deleted. Files are deleted forever after 30 days.\nEmpty file trash\nD Images\n• Tasks\nDeleted\nName\nSize\nUD Library\n@ Plugins\n• Codex\n••• Explore\nPinned\nWelcome\nProjects\nNo projects\nRecents\nWeekly Article Recommendations\nChennai IT Job Listings\nCreate Poster Brief\nSurendar V\nFree\n# Claim offer",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "offer",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "chip",
+    "banner",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Claim offer”",
+        "Category strip: Deleted, Name, Size",
+        "Search bar present",
+        "Bottom sheet, covering 27% of the height from 70% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Settings with a sidebar, a row of 3 category chips, a search bar and 1 input field. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Claim offer”",
+        "Reached from “Settings”",
+        "Leads to “Plugins”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 9:12 in the recording",
+        "Frame 1843 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9faf9",
+      "role": "background",
+      "share": 0.974
+    },
+    {
+      "hex": "#e1e1e1",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#c1c2c2",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 1843,
+    "atSeconds": 552.6,
+    "endSeconds": 555.9,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.28125,
+        "y": 0.703125,
+        "w": 0.65625,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [
+      "Deleted",
+      "Name",
+      "Size"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "New chat",
+      "Images",
+      "Tasks",
+      "Library",
+      "Plugins",
+      "Codex",
+      "Explore"
+    ],
+    "activeTab": "Deleted",
+    "listedInSidebar": false,
+    "title": "Claim offer",
+    "headline": "Size",
+    "walkTab": "Deleted"
+  },
+  "crawler": {
+    "nodeId": "s097",
+    "depth": 97,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s096",
+        "via": "Open Claim offer",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s098",
+        "via": "Tap “@ Plugins”",
+        "name": "Plugins"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

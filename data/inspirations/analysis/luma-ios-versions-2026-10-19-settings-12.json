@@ -1,0 +1,152 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-settings-12",
+  "screen_id": "luma-ios-versions-2026-10-19-settings-12",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.836Z",
+  "screen_type": "login",
+  "published_as": "settings",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "authentication",
+  "flow_name": "Settings",
+  "flow_position": 45,
+  "name": "Account settings",
+  "description": "Login screen with a 3-item tab bar and 3 input fields. Dark theme, 18 text elements.",
+  "text": "9:41 (\n•ll\n<\nAccount Settings\nBasic Info\nEmail\nmotvintool@gmail.com\n+91 63821 02514 0\nPhone Number\nUsername\nSecurity\nPasskeys\nCrypto Identities\nEthereum Address\n-\nSolana Address\n-\nWe don't support linking crypto wallets in-app at this\ntime. You can do so on the website.\nDelete Account\nDiscover\nHome\nChat",
+  "purpose": "To display and manage the user's account information and security settings.",
+  "primary_action": "View or edit account details",
+  "tags": [
+    "settings",
+    "wallet",
+    "address",
+    "home",
+    "discover",
+    "chat",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Account Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a 3-item tab bar and 3 input fields. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 45 of 69 in “Home”",
+        "Reached from “Edit Profile”",
+        "Leads to “Settings (4)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:23 in the recording",
+        "Frame 1288 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050406",
+      "role": "background",
+      "share": 0.643
+    },
+    {
+      "hex": "#242426",
+      "role": "surface",
+      "share": 0.296
+    },
+    {
+      "hex": "#454345",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#5d5c5e",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#838183",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1288,
+    "atSeconds": 383.4,
+    "endSeconds": 386.7,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Account Settings",
+    "headline": "Crypto Identities"
+  },
+  "crawler": {
+    "nodeId": "s143",
+    "depth": 143,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s142",
+        "via": "Open Account Settings",
+        "name": "Edit Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s144",
+        "via": "Back to Settings",
+        "name": "Settings (4)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

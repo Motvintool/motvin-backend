@@ -1,0 +1,147 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-26-settings-12",
+  "screen_id": "chatgpt-ios-versions-2026-10-26-settings-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T09:44:13.544Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Settings",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen. Dark theme, 23 text elements.",
+  "text": "9:416\nall\nSecurity and login\nLog in\nAdd >\nSecurity keys & passkeys\nUse passkeys or hardware security keys to sign in. These\nphishing-resistant methods provide stronger protection\nthan passwords.\nMulti-factor Authentication (MFA)\nAuthenticator app\nOff >\nOff >\nText messages\nRequire an extra security challenge when logging in. If\nyou are unable to pass this challenge, you will have the\noption to recover your account.\nSessions\n1\nActive sessions\nView all devices and sessions that have accessed your\naccount. You can review active sessions, remove trusted\ndevices, or use Log out all to end all sessions.\nAdvanced security\nAdvanced account security\nLockdown mode\nAdds the highest level of account security by requiring\nstronger sign-in methods and applying stricter\nprotections to help prevent unauthorized access.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "review",
+    "login",
+    "lockdown mode",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Security and login”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Dark theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in with email”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 10:03 in the recording",
+        "Frame 2021 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070709",
+      "role": "background",
+      "share": 0.688
+    },
+    {
+      "hex": "#1f1e21",
+      "role": "surface",
+      "share": 0.238
+    },
+    {
+      "hex": "#3e3c40",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#585658",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#aba9ab",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvp29bl1-i0r732.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 2021,
+    "atSeconds": 603.6,
+    "endSeconds": 606.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Security and login",
+    "headline": "Multi-factor Authentication (MFA)",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s196",
+    "depth": 201,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s195",
+        "via": "Tap “Security and login”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s197",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

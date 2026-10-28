@@ -1,0 +1,146 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-changing-account-settings-2",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-changing-account-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:30:26.452Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Changing account settings",
+  "flow_position": 1,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field. Light theme, 22 text elements.",
+  "text": "in\nSettings\nAccount access\nEmail addresses\nsurendarv638@gmail.com →\n• Account preferences\nPhone numbers\n→\n& Sign in & security\nChange password\n→\nPasskeys\n→\n• Visibility\n→\nWhere you're signed in\n• Data privacy\nDevices that remember your password\n→\nTwo-factor authentication\nOn →\nAdvertising data\n• Notifications\nAccessibility\nHelp Center\nProfessional Community Policies\nPrivacy Policy\nRecommendation Transparency\nUser Agreement End User License Agreement\nLinked in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account access”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Light theme, 22 text elements.",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 31 in “Entering phone number”",
+        "Reached from “Settings”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 16:58 in the recording",
+        "Frame 3404 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f7f5",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#d3d5d3",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#afb0ae",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#8b9e91",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#a1c0e2",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 3404,
+    "atSeconds": 1018.2,
+    "endSeconds": 1021.5,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account access",
+    "headline": "Two-factor authentication"
+  },
+  "crawler": {
+    "nodeId": "s327",
+    "depth": 330,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s326",
+        "via": "Open Account access",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s328",
+        "via": "Tap “• Visibility”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

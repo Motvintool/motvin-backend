@@ -1,0 +1,150 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-onboarding-2",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:29:31.756Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 13 text elements.",
+  "text": "Sign in\nNew to Linkedin? Join now\nSign in with Apple\nBy continuing, you agree to Linkedln's User Agreement, Privacy\nPolicy, and Cookie Policy.\nor\nEmail or phone\nPassword\nForgot password?\nKeep me signed in\nSign in\nLinkedln Corporation © 2026\nUser Agreement Privacy Policy Community Guidelines Cookie Policy Copyright Policy Send Feedback Language",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 13 text elements.",
+        "Calls to action: “Sign in”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 79 in “Logging in”",
+        "Reached from “Sign-in options”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:02 in the recording",
+        "Frame 8 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.969
+    },
+    {
+      "hex": "#d8dfe2",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#066bcb",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#559cda",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#b3d3e7",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 8,
+    "atSeconds": 2.1,
+    "endSeconds": 2.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Forgot password?"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 3,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Sign in with email",
+        "name": "Sign-in options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 0.6s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

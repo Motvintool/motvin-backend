@@ -1,0 +1,157 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-settings-6",
+  "screen_id": "claude-ios-versions-2026-10-26-settings-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:22.332Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "ai",
+  "flow": "checkout",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall bottom sheet over a dimmed screen, on top of Settings. Dark theme, 7 text elements.",
+  "text": "9:41(\n\"ll\nBilling\nAccount plan\nFree\nGet more Claude\nUpgrade for more usage and capabilities\nUpgrade\nRestore purchases",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Restore purchases”",
+        "Bottom sheet over a dimmed background, covering 36% of the height from 61% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall bottom sheet over a dimmed screen, on top of Settings. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Free”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:43 in the recording",
+        "Frame 1347 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181619",
+      "role": "background",
+      "share": 0.925
+    },
+    {
+      "hex": "#413f40",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#b2b0b1",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#ececec",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 1347,
+    "atSeconds": 403.5,
+    "endSeconds": 404.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.609375,
+        "w": 0.8125,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Restore purchases",
+    "headline": "Upgrade"
+  },
+  "crawler": {
+    "nodeId": "s128",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s127",
+        "via": "Tap “Upgrade”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s129",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

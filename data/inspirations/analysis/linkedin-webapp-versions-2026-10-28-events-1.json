@@ -1,0 +1,148 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-events-1",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-events-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:30:05.047Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Events",
+  "flow_position": 4,
+  "name": "Notifications",
+  "description": "Notifications screen with a search bar. Light theme, 15 text elements.",
+  "text": "in\nQ Search\nNotifications\nMessaging\nNetwork\nHome\nJobs\nMey\nFor Business v Hire with Al\nEvents\nCreate an event\nYour events\nRecommended for you\n... C ^\nMessaging",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "notification",
+    "notifications",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Events”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen with a search bar. Light theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 9 in “Logging in”",
+        "Reached from “Search”",
+        "Leads to “Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 11:24 in the recording",
+        "Frame 2285 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f5f3",
+      "role": "background",
+      "share": 0.986
+    },
+    {
+      "hex": "#ced0d1",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#b7b3ae",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#949594",
+      "role": "text",
+      "share": 0
+    },
+    {
+      "hex": "#9fbee1",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 2285,
+    "atSeconds": 684.6,
+    "endSeconds": 685.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Events",
+    "headline": "Your events"
+  },
+  "crawler": {
+    "nodeId": "s206",
+    "depth": 208,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s205",
+        "via": "Open Events",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s207",
+        "via": "Wait 1.2s",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

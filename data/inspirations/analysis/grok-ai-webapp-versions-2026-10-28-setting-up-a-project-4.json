@@ -1,0 +1,158 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-setting-up-a-project-4",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-setting-up-a-project-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:15.672Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Setting up a project",
+  "flow_position": 55,
+  "name": "My wonh dialog",
+  "description": "Dialog over a dimmed screen, on top of Instructions toast with a primary action labelled “Save”. Light theme, 12 text elements.",
+  "text": ".!!!!\nQ\nĐ My wonh\nMy:\nSet project instructions\nNew Chae\nProvide Grok with instructions for chats in this project.\nAsk anything\nAdd instructions for Grok in this project...\nveeting Eechang\nSave\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My wonh”",
+        "Dialog over a dimmed background, covering 44% of the height from 28% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Instructions toast with a primary action labelled “Save”. Light theme, 12 text elements.",
+        "Calls to action: “Save”",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 55 of 143 in “Opening a page”",
+        "Reached from “Instructions toast”",
+        "Leads to “My work's settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:01 in the recording",
+        "Frame 1408 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cfcece",
+      "role": "background",
+      "share": 0.832
+    },
+    {
+      "hex": "#f6f5f3",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#e5e4e3",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#b2b1b0",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 1408,
+    "atSeconds": 421.5,
+    "endSeconds": 422.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.28125,
+        "w": 0.375,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My wonh",
+    "headline": "My wonh"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 63,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Back to My wonh dialog",
+        "name": "Instructions toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Dismiss",
+        "name": "My work's settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

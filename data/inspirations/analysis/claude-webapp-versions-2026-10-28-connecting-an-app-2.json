@@ -1,0 +1,153 @@
+{
+  "screenId": "claude-webapp-versions-2026-10-28-connecting-an-app-2",
+  "screen_id": "claude-webapp-versions-2026-10-28-connecting-an-app-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:26:36.704Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Connecting an app",
+  "flow_position": 2,
+  "name": "Confirm access",
+  "description": "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in”. Light theme, 12 text elements.",
+  "text": "G Sign in with Google\nEmail or phone\nSign in\nForgot email?\nto continue to Claude for Google Drive\nBefore using this app, you can review Claude for Google Drive's Privacy\nPolicy and Terms of Service.\nNext\nHelp\nPrivacy\nTerms\nEnglish (United States)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "external-auth",
+    "scrolled",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in”. Light theme, 12 text elements.",
+        "Calls to action: “Sign in”, “Next”",
+        "12 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening a page (Customize)”",
+        "Reached from “Customize”",
+        "Leads to “Search results — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 8:24 in the recording",
+        "Frame 1691 of 2360 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f4f7fa",
+      "role": "background",
+      "share": 0.979
+    },
+    {
+      "hex": "#d7dbe1",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#a6c1ec",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#2266d2",
+      "role": "accent",
+      "share": 0.001
+    },
+    {
+      "hex": "#a6a6a6",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvrjdb1r-w15hy8.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2360,
+    "frame": 1691,
+    "atSeconds": 504.6,
+    "endSeconds": 507.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "To continue to Claude for Google Drive"
+  },
+  "crawler": {
+    "nodeId": "s107",
+    "depth": 106,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s106",
+        "via": "Scroll",
+        "name": "Customize"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s108",
+        "via": "Open Customize",
+        "name": "Search results — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

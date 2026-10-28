@@ -1,0 +1,162 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-connecting-an-account-3",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-connecting-an-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:10.287Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Connecting an account",
+  "flow_position": 30,
+  "name": "Detail",
+  "description": "Detail dialog over a dimmed screen, on top of Dreeting Exchang. Light theme, 18 text elements.",
+  "text": "Finance\nConnecting...\nFinance\nSecurely connect your accounts so Grok can help with questions about\nyour spending, subscriptions, balances, and investments.\nAbout this Connector\nSee your finances in chat\nAsk about balances, recentspending, subscriptions, and\ninvestments across linked accounts.\nÔ Your credentials stay private\nxAI does not store or view any bank account or password\ncredentials.\nRead-only access\nA financial connection is read-only, which means it can't be\nused to move money into or out of bank accounts.\nThird-party connectors are not built or maintained by xAl. Use caution when\ngranting access to external services. Review the permissions before\nconnecting. Usage is subject to the xAI Privacy Policy-",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "review",
+    "subscription",
+    "detail",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your credentials stay private”",
+        "Dialog over a dimmed background, covering 59% of the height from 20% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail dialog over a dimmed screen, on top of Dreeting Exchang. Light theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 30 of 143 in “Opening a page”",
+        "Reached from “Dreeting Exchang”",
+        "Leads to “Phone number entry”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 9s at 4:39 in the recording",
+        "Frame 961 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#aaa8a8",
+      "role": "background",
+      "share": 0.751
+    },
+    {
+      "hex": "#f5f4f2",
+      "role": "surface",
+      "share": 0.151
+    },
+    {
+      "hex": "#dad9d8",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#91908f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#c3c1c1",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 961,
+    "atSeconds": 279.6,
+    "endSeconds": 288.6,
+    "holdSeconds": 9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.203125,
+        "w": 0.375,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your credentials stay private",
+    "headline": "Your credentials stay private"
+  },
+  "crawler": {
+    "nodeId": "s036",
+    "depth": 38,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s035",
+        "via": "Open Your credentials stay private",
+        "name": "Dreeting Exchang"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s037",
+        "via": "Open Your account",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

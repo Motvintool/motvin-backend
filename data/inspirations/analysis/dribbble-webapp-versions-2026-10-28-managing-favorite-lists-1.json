@@ -1,0 +1,163 @@
+{
+  "screenId": "dribbble-webapp-versions-2026-10-28-managing-favorite-lists-1",
+  "screen_id": "dribbble-webapp-versions-2026-10-28-managing-favorite-lists-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:22:52.517Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Managing favorite lists",
+  "flow_position": 58,
+  "name": "Yet dialog",
+  "description": "Dialog over a dimmed screen, on top of Favorites (empty) with 1 input field and a paged carousel. Light theme, 22 text elements.",
+  "text": "Dribbble\nExplore v\nWhat are you looking for?\nShots V\nHire Talent v\nGet Hired v\nCommunity v\n+ Create New\nFavorites\n• Share\nLists\nO designers\nFavorites\nX\nCreate a list\nName...\n0/40\nyet\nwse,\nCreate\nCancel\n+ New List",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "carousel",
+    "page-indicator",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Yet”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 25% of the height from 38% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Favorites (empty) with 1 input field and a paged carousel. Light theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 58 of 164 in “Opening Messages”",
+        "Reached from “Favorites (empty)”",
+        "Leads to “Favorites (empty)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 4:49 in the recording",
+        "Frame 970 of 2302 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#898a89",
+      "role": "background",
+      "share": 0.892
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#a5a6a5",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#706e71",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#08091c",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "mvrjdbna-gkxlnf.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2302,
+    "frame": 970,
+    "atSeconds": 289.2,
+    "endSeconds": 291.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.375,
+        "w": 0.3125,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Yet",
+    "headline": "Create a list"
+  },
+  "crawler": {
+    "nodeId": "s102",
+    "depth": 102,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s101",
+        "via": "Open Yet",
+        "name": "Favorites (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s103",
+        "via": "Dismiss",
+        "name": "Favorites (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

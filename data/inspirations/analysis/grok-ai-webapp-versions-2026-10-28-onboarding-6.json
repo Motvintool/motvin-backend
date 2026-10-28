@@ -1,0 +1,153 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-onboarding-6",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:04.023Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with 3 input fields and a primary action labelled “Login”. Light theme, 24 text elements.",
+  "text": "Grok v\nYou are signing into\nLog in with your email\nEmail\nmotvintool@gmail.com\nEmail sign-in code\nor\nPassword\nForgot your password?\n. . .\nWrong email address or password\nSuccess!\nCLOUDFLARE\nPrivacy • Help\nLogin\nGo back\nDon't have an account? Sign up\nEssential cookies keep the site working and stay on. Optional cookies help\nwith performance and advertising - accept, reject, or manage them. Learn\nmore in our Cookie Policy, Privacy Policy, and Terms of Service.\nReject All\nCookie Settings\nAccept All Cookies\nYour privacy choices",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "login",
+    "address",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You are signing into”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields and a primary action labelled “Login”. Light theme, 24 text elements.",
+        "Calls to action: “Login”",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.9s at 0:24 in the recording",
+        "Frame 104 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#dbdbdb",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#9a9c9a",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#060606",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#b1b1b1",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 104,
+    "atSeconds": 24.6,
+    "endSeconds": 31.5,
+    "holdSeconds": 6.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You are signing into",
+    "headline": "Email"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 4,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Tap “Email”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Tap “Email sign-in code”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}
