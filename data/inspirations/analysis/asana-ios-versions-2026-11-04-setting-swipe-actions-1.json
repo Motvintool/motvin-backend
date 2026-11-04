@@ -1,0 +1,144 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-setting-swipe-actions-1",
+  "screen_id": "asana-ios-versions-2026-11-04-setting-swipe-actions-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:07.234Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Setting swipe actions",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 11 text elements.",
+  "text": "9:41C\nCancel\nSwipe right action\nDone\nAdd to bookmarks\nArchive\nCreate follow-up task\nMark as read\nX\nNone\n2x\nUnfollow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Swipe right action”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Swipe right action”",
+        "Reached from “Inbox”",
+        "Leads to “Inbox”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 7:19 in the recording",
+        "Frame 1471 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1e21",
+      "role": "background",
+      "share": 0.953
+    },
+    {
+      "hex": "#3e4044",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#616063",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#a9a9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1471,
+    "atSeconds": 439.8,
+    "endSeconds": 441.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Swipe right action",
+    "headline": "Archive"
+  },
+  "crawler": {
+    "nodeId": "s180",
+    "depth": 180,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s179",
+        "via": "Open Swipe right action",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s181",
+        "via": "Wait 1.8s",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

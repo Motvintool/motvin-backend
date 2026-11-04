@@ -1,0 +1,163 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-logging-in-3",
+  "screen_id": "asana-ios-versions-2026-11-04-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:56.607Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 40,
+  "name": "Sign in",
+  "description": "Login bottom sheet, on top of Other with a primary action labelled “Continue to app”. Light theme, 6 text elements.",
+  "text": "9:41 C\napp.asana.com\nasana\nYou are logging in as\nmotvintool@gmail.com\nContinue to app\nLog in as another user",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue to app”",
+        "Bottom sheet, covering 44% of the height from 44% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet, on top of Other with a primary action labelled “Continue to app”. Light theme, 6 text elements.",
+        "Calls to action: “Continue to app”, “Log in as another user”",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 40 of 47 in “External sign-in”",
+        "Reached from “Other”",
+        "Leads to “Notifications permission — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:45 in the recording",
+        "Frame 357 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f6f9",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#350641",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#b8b6b9",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#68476f",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#d6d6db",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 357,
+    "atSeconds": 105.6,
+    "endSeconds": 107.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.4375,
+        "w": 0.71875,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue to app",
+      "Log in as another user"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue to app",
+    "headline": "You are logging in as"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s042",
+        "via": "Open Continue to app",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Open Notifications permission — loading",
+        "name": "Notifications permission — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

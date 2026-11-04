@@ -1,0 +1,160 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-seeing-premium-offers-2",
+  "screen_id": "headway-ios-versions-2026-11-04-seeing-premium-offers-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:54.040Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Seeing premium offers",
+  "flow_position": 7,
+  "name": "We have a special gift dialog",
+  "description": "Dialog over a dimmed screen, on top of History. Dark theme, 10 text elements.",
+  "text": "9:41C\nStephen\nHawking\nWe have a special gift\nfor you\nOpen\nWh\nDive into the unique structure of the world and\ngain answers to puzzling questions that have\nperplexed people for eons. Embrace the\nuncertainty of your life.\nn Listen\n= Read",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "n listen",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “We have a special gift”",
+        "Dialog over a dimmed background, covering 38% of the height from 31% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of History. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 41 in “History”",
+        "Reached from “History”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:33 in the recording",
+        "Frame 915 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c191e",
+      "role": "background",
+      "share": 0.542
+    },
+    {
+      "hex": "#38363a",
+      "role": "surface",
+      "share": 0.202
+    },
+    {
+      "hex": "#0871b9",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#b880fd",
+      "role": "text",
+      "share": 0.031
+    },
+    {
+      "hex": "#0598f6",
+      "role": "accent",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 915,
+    "atSeconds": 273.3,
+    "endSeconds": 274.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.3125,
+        "w": 0.71875,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "We have a special gift",
+    "headline": "We have a special gift",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s112",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s111",
+        "via": "Open We have a special gift",
+        "name": "History"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s113",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

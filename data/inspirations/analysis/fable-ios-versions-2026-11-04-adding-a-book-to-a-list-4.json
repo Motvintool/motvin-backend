@@ -1,0 +1,164 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-adding-a-book-to-a-list-4",
+  "screen_id": "fable-ios-versions-2026-11-04-adding-a-book-to-a-list-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:53.667Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Adding a book to a list",
+  "flow_position": 5,
+  "name": "Comes Knocking dialog",
+  "description": "Dialog over a dimmed screen with a paged carousel. Dark theme, 23 text elements.",
+  "text": "9:41(\nX\n•••\nWHEN\nVTHE\nNIGHT\nA NOVEL\nCOMES\nINAAIINA\nWhen the Night\nWIIEN\nTHE\nComes Knocking\nCOMES\nKNOCKING\nBy Katherine Daniel\nBE CRBERRL WHAT POU LET IN\nWant to\nCurrently\nFinished\nReading\nRead\n+\nCreate list\nConfirm",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "confirm",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Comes Knocking”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 52% of the height from 23% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a paged carousel. Dark theme, 23 text elements.",
+        "23 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 40 in “Sharing”",
+        "Reached from “Comes Knocking dialog”",
+        "Leads to “When the Night Comes”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 2:28 in the recording",
+        "Frame 504 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b080b",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#630908",
+      "role": "accent",
+      "share": 0.138
+    },
+    {
+      "hex": "#2e2a2d",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#cccacd",
+      "role": "text",
+      "share": 0.027
+    },
+    {
+      "hex": "#4e4b4d",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 504,
+    "atSeconds": 148.5,
+    "endSeconds": 151.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.234375,
+        "w": 0.875,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Comes Knocking",
+    "headline": "Comes Knocking",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s051",
+    "depth": 50,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s050",
+        "via": "Tap “COMES”",
+        "name": "Comes Knocking dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s052",
+        "via": "Dismiss",
+        "name": "When the Night Comes"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

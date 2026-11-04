@@ -1,0 +1,153 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-settings-5",
+  "screen_id": "headway-ios-versions-2026-11-04-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:06.117Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Settings",
+  "flow_position": 3,
+  "name": "Permission prompt",
+  "description": "Permission screen with a primary action labelled “Allow Access to Screen Time”. Dark theme, 11 text elements.",
+  "text": "9:41C\nAllow Access to Screen Time\nProviding \"Headway\" access to\nScreen Time allows it to see your\nactivity data, restrict content, and\nlimit the usage of apps and\nwebsites.\nYou can control which apps\naccess your own in Screen Time\nOptions in Settings.\nLearn more...\nAllow with Face ID\nDon't Allow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow Access to Screen Time”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow Access to Screen Time”. Dark theme, 11 text elements.",
+        "Calls to action: “Allow Access to Screen Time”, “Allow with Face ID”",
+        "11 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Allowing a permission”",
+        "Reached from “Permission prompt”",
+        "Leads to “Settings — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 9:31 in the recording",
+        "Frame 1913 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c21",
+      "role": "background",
+      "share": 0.802
+    },
+    {
+      "hex": "#38393f",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#0694ff",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#575558",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#163a56",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1913,
+    "atSeconds": 571.2,
+    "endSeconds": 574.2,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Access to Screen Time",
+      "Allow with Face ID"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow Access to Screen Time",
+    "headline": "Access your own in Screen Time",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s243",
+    "depth": 243,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s242",
+        "via": "Open Allow Access to Screen Time",
+        "name": "Permission prompt"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s244",
+        "via": "Open Settings — loading",
+        "name": "Settings — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

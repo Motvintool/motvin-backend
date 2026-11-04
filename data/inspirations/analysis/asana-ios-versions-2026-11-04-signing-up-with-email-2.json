@@ -1,0 +1,150 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-signing-up-with-email-2",
+  "screen_id": "asana-ios-versions-2026-11-04-signing-up-with-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:53.457Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Continue”. Light theme, 14 text elements.",
+  "text": "9:41 €\nasana.com\nasana\nYou're one click away\nfrom less busywork\nTry Asana for free. No credit card required.\nWork email\nname@company.com\nContinue\nOR\nG Google\nMicrosoft\nAlready have an account? Log in\nBy signing up, l agree to Asana's Terms of Service and Product-\nSpecific Terms and acknowledge the Privacy Statement.\nX",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You're one click away”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Continue”. Light theme, 14 text elements.",
+        "Calls to action: “Continue”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 47 in “External sign-in”",
+        "Reached from “Sign in with email — loading”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:09 in the recording",
+        "Frame 43 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafd",
+      "role": "background",
+      "share": 0.734
+    },
+    {
+      "hex": "#230613",
+      "role": "accent",
+      "share": 0.097
+    },
+    {
+      "hex": "#c5c4c8",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#e2e1e4",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#62444f",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 43,
+    "atSeconds": 9.9,
+    "endSeconds": 13.2,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You're one click away",
+    "headline": "You're one click away"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Open Form",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

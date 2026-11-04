@@ -1,0 +1,152 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-logging-in-2",
+  "screen_id": "quizlet-ios-versions-2026-11-04-logging-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:35.671Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+  "text": "9:41€\nC\noll\nLog in\nEmail or username\nPassword\nLog in\nForgot password\nG Continue with Google\nContinue with Apple\nContinue with WhatsApp\nContinue with Facebook",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+        "Calls to action: “Log in”, “Continue with Apple”, “Continue with WhatsApp”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 56 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 0:06 in the recording",
+        "Frame 35 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0b30",
+      "role": "background",
+      "share": 0.599
+    },
+    {
+      "hex": "#2b3252",
+      "role": "surface",
+      "share": 0.251
+    },
+    {
+      "hex": "#4f5671",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#485afe",
+      "role": "accent",
+      "share": 0.032
+    },
+    {
+      "hex": "#f7f6f8",
+      "role": "text",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 35,
+    "atSeconds": 6.3,
+    "endSeconds": 10.8,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in",
+      "Continue with Apple",
+      "Continue with WhatsApp"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Forgot password”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,156 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-creating-an-account-1",
+  "screen_id": "headway-ios-versions-2026-11-04-creating-an-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:50.829Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with a paged carousel and a primary action labelled “Confirm your email”. Dark theme, 15 text elements.",
+  "text": "9:41(\nActivity\n1 STEP LEFT TO START LEARNING\nFinalize your account\n2/3\nCreate an account\nPass personalizing quiz\nConfirm your email\nConfirm\nLog in to personalize your\nexperience and track your\nprogress\nContinue with Apple\nDaily mission\n• 4H LEFT\nStart a streak\n0/1\nScan the cover\n00\nE\nL\nGet relevant summaries",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "scan the cover",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Activity”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a paged carousel and a primary action labelled “Confirm your email”. Dark theme, 15 text elements.",
+        "Calls to action: “Confirm your email”, “Confirm”, “Log in to personalize your”, “Continue with Apple”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 25 in “Logging in with email”",
+        "Reached from “Search results”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 9.3s at 2:56 in the recording",
+        "Frame 617 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282729",
+      "role": "background",
+      "share": 0.454
+    },
+    {
+      "hex": "#3c3b3d",
+      "role": "surface",
+      "share": 0.344
+    },
+    {
+      "hex": "#595759",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#d6d4d6",
+      "role": "text",
+      "share": 0.032
+    },
+    {
+      "hex": "#767476",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 617,
+    "atSeconds": 176.1,
+    "endSeconds": 185.4,
+    "holdSeconds": 9.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm your email",
+      "Confirm",
+      "Log in to personalize your",
+      "Continue with Apple"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Activity",
+    "headline": "Pass personalizing quiz",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s076",
+    "depth": 75,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s075",
+        "via": "Tap “Scan the cover”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s077",
+        "via": "Type “X Log in”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

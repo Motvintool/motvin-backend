@@ -1,0 +1,154 @@
+{
+  "screenId": "brilliant-ios-versions-2026-11-04-logging-in-with-email-2",
+  "screen_id": "brilliant-ios-versions-2026-11-04-logging-in-with-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:23.135Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Log in”. Light theme, 28 text elements.",
+  "text": "9:41 €\nLog In\nmotvintool@gmail.com\nPassword\nForgot your password?\nLog in\nReset password\nNew user? Sign up\n9 Passwords\ni\nW\nt\ne\nr\nO\nk\nf\nd\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n→\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Log in”. Light theme, 28 text elements.",
+        "Calls to action: “Log in”",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 41 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 1:39 in the recording",
+        "Frame 339 of 2138 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfe",
+      "role": "background",
+      "share": 0.46
+    },
+    {
+      "hex": "#1c191d",
+      "role": "text",
+      "share": 0.23
+    },
+    {
+      "hex": "#353235",
+      "role": "surface",
+      "share": 0.132
+    },
+    {
+      "hex": "#dfdee1",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#575457",
+      "role": "surface",
+      "share": 0.054
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2138,
+    "frame": 339,
+    "atSeconds": 99.6,
+    "endSeconds": 102,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "9 Passwords"
+  },
+  "crawler": {
+    "nodeId": "s045",
+    "depth": 44,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s044",
+        "via": "Tap “Forgot your password?”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s046",
+        "via": "Tap “New user? Sign up”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

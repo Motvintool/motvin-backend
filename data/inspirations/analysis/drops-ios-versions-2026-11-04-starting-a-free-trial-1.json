@@ -1,0 +1,151 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-starting-a-free-trial-1",
+  "screen_id": "drops-ios-versions-2026-11-04-starting-a-free-trial-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:40.490Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Starting a free trial",
+  "flow_position": 17,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a primary action labelled “Start Free Trial”. Dark theme, 15 text elements.",
+  "text": "X\nPREMIUM\nA\nX\nSave time. Learn languages 2.2x\nfaster with Premium\nYearly\n·708/MO\n7-day free trial\n· 8,500\nMonthly\nR 1,799 /MO\nFree\nLearn 5 minutes a day\nStart Free Trial\nAl-po\nRecurring payments • Cancel anytime",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Faster with Premium”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a primary action labelled “Start Free Trial”. Dark theme, 15 text elements.",
+        "Calls to action: “Start Free Trial”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 70 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Subscription plans”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:42 in the recording",
+        "Frame 152 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1368",
+      "role": "background",
+      "share": 0.593
+    },
+    {
+      "hex": "#6425a1",
+      "role": "accent",
+      "share": 0.145
+    },
+    {
+      "hex": "#5f3879",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#d9e15c",
+      "role": "text",
+      "share": 0.049
+    },
+    {
+      "hex": "#80609c",
+      "role": "surface",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 152,
+    "atSeconds": 42,
+    "endSeconds": 42.6,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Start Free Trial"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Faster with Premium",
+    "headline": "Yearly"
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Wait 2.4s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Tap “Learn 5 minutes a day”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

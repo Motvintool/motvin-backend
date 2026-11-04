@@ -1,0 +1,155 @@
+{
+  "screenId": "brilliant-ios-versions-2026-11-04-logging-in-with-email-1",
+  "screen_id": "brilliant-ios-versions-2026-11-04-logging-in-with-email-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:22.564Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "Facebook sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Log In”. Light theme, 6 text elements.",
+  "text": "9:41C\nLog In\nG Log in with Google\nf\nLog in with Facebook\nLog in with email\nNew user? Sign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in with Google”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Log In”. Light theme, 6 text elements.",
+        "Calls to action: “Log In”, “Log in with Facebook”, “Log in with email”",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 41 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:24 in the recording",
+        "Frame 286 of 2138 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfe",
+      "role": "background",
+      "share": 0.897
+    },
+    {
+      "hex": "#2e2c2e",
+      "role": "text",
+      "share": 0.033
+    },
+    {
+      "hex": "#c5c4c8",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#737074",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#8b898b",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2138,
+    "frame": 286,
+    "atSeconds": 84.6,
+    "endSeconds": 86.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log In",
+      "Log in with Facebook",
+      "Log in with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log in with Google",
+    "headline": "Log in with Google"
+  },
+  "crawler": {
+    "nodeId": "s039",
+    "depth": 38,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s038",
+        "via": "Open Log in with Google",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s040",
+        "via": "Wait 1.5s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

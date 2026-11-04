@@ -1,0 +1,151 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-creating-a-team-project-2",
+  "screen_id": "todoist-ios-versions-2026-11-04-creating-a-team-project-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:18.670Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Creating a team project",
+  "flow_position": 18,
+  "name": "Search Projects & Folders toast",
+  "description": "Toast, on top of Loading state. Dark theme, 8 text elements.",
+  "text": "9:41\n# Add Project\nDevelor\nBrowse Templates\nActive Projects\nAdd Folder\n1 Project\n#\nTeam Setup Guide\nQ Search Projects & Folders",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search Projects & Folders”",
+        "Toast, covering 13% of the height from 78% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast, on top of Loading state. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 21 in “Filling in E.g. Marketing Team”",
+        "Reached from “Loading state”",
+        "Leads to “New Project form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 11:01 in the recording",
+        "Frame 2215 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222023",
+      "role": "background",
+      "share": 0.948
+    },
+    {
+      "hex": "#4b494b",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#656365",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#afadaf",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 2215,
+    "atSeconds": 661.5,
+    "endSeconds": 664.8,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.34375,
+        "y": 0.78125,
+        "w": 0.59375,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search Projects & Folders",
+    "headline": "Team Setup Guide"
+  },
+  "crawler": {
+    "nodeId": "s229",
+    "depth": 231,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s228",
+        "via": "Wait 3s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s230",
+        "via": "Type “New Project”",
+        "name": "New Project form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

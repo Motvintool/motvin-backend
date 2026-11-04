@@ -1,0 +1,168 @@
+{
+  "screenId": "blinkist-ios-versions-2026-11-04-choosing-interests-6",
+  "screen_id": "blinkist-ios-versions-2026-11-04-choosing-interests-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:27:24.236Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Choosing interests",
+  "flow_position": 3,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Follow categories you're with a primary action labelled “Allow”. Dark theme, 16 text elements.",
+  "text": "9:41C\nSTEP 3 OF 4\nFollow categories you're\ninterested in to get\nrecommendations\nCorporate Culture\n\"Blinkist\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nEducation\nEntrepreneurship\nCareer & Success\nMarketing & Sales\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Blinkist\" Would Like to Send”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Follow categories you're with a primary action labelled “Allow”. Dark theme, 16 text elements.",
+        "Calls to action: “Allow”",
+        "16 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 17 in “Success”",
+        "Reached from “Follow categories you're”",
+        "Leads to “Follow categories you're”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:06 in the recording",
+        "Frame 226 of 1569 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#061821",
+      "role": "background",
+      "share": 0.767
+    },
+    {
+      "hex": "#26383c",
+      "role": "surface",
+      "share": 0.175
+    },
+    {
+      "hex": "#187343",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#475157",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#636c72",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Blinkist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1569,
+    "frame": 226,
+    "atSeconds": 66.9,
+    "endSeconds": 68.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.59375,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Blinkist\" Would Like to Send",
+    "headline": "Interested in to get",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Tap “interested in to get”",
+        "name": "Follow categories you're"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Dismiss",
+        "name": "Follow categories you're"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

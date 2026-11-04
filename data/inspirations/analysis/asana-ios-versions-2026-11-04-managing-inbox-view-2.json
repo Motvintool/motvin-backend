@@ -1,0 +1,144 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-managing-inbox-view-2",
+  "screen_id": "asana-ios-versions-2026-11-04-managing-inbox-view-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:09.168Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Managing Inbox view",
+  "flow_position": 6,
+  "name": "Inbox",
+  "description": "Messages screen. Dark theme, 6 text elements.",
+  "text": "9:41(\nInbox\nHooray, you're up to date!\nCheck back later for updates on your team's work\n<\nRead Status\nAll\nUnread\nRead",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "unread",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Inbox”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 7 in “Searching Home”",
+        "Reached from “Search results”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:13 in the recording",
+        "Frame 1649 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131316",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#39383b",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#807679",
+      "role": "text",
+      "share": 0.029
+    },
+    {
+      "hex": "#6a5153",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#7d2722",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1649,
+    "atSeconds": 493.5,
+    "endSeconds": 495,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "Hooray, you're up to date!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s205",
+    "depth": 205,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s204",
+        "via": "Tap “Inbox”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s206",
+        "via": "Wait 1.5s",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

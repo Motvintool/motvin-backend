@@ -1,0 +1,151 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-changing-view-options-2",
+  "screen_id": "todoist-ios-versions-2026-11-04-changing-view-options-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:08.753Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "productivity",
+  "flow": "search",
+  "flow_name": "Changing view options",
+  "flow_position": 2,
+  "name": "Search results",
+  "description": "Search results screen with a paged carousel. Dark theme, 20 text elements.",
+  "text": "9:41 €\n•0l\nDisplay\nLayout\n•••\nList\nBoard\nCalendar\n+\nCompleted Tasks\nCompleted Tasks Feedback\nSort\nGrouping\nNone >\nJT\nSorting\nManual >\nFilter\nAII >\nDate\nAII >\nDeadline\nAII >\nPriority",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "calendar",
+    "priority",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Completed Tasks”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 12 in “Searching Inbox”",
+        "Reached from “Inbox”",
+        "Leads to “Today/Upcoming in calendar — loading”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:02 in the recording",
+        "Frame 1217 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282628",
+      "role": "background",
+      "share": 0.85
+    },
+    {
+      "hex": "#474446",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#121013",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#5f5d5f",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#703436",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 1217,
+    "atSeconds": 362.1,
+    "endSeconds": 365.4,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Completed Tasks",
+    "headline": "Grouping",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s108",
+    "depth": 109,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s107",
+        "via": "Open Completed Tasks",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s109",
+        "via": "Wait 3.3s",
+        "name": "Today/Upcoming in calendar — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

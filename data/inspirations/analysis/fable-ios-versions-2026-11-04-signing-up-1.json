@@ -1,0 +1,147 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-signing-up-1",
+  "screen_id": "fable-ios-versions-2026-11-04-signing-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:49.528Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with email”. Dark theme, 6 text elements.",
+  "text": "9:41(\n•oll\nJoin or sign in\nTrack your books, hit your goals, and\nconnect with millions of fellow readers\nG Continue with Google\n Continue with Apple\nContinue with email\nBy continuing, you agree to Fable's Terms of Service and\nPrivacy Policy:",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with email”. Dark theme, 6 text elements.",
+        "Calls to action: “Continue with email”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 26 in “Onboarding”",
+        "Reached from “Toast”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 0:01 in the recording",
+        "Frame 18 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#064a37",
+      "role": "background",
+      "share": 0.507
+    },
+    {
+      "hex": "#1e1c1f",
+      "role": "surface",
+      "share": 0.199
+    },
+    {
+      "hex": "#2d6857",
+      "role": "accent",
+      "share": 0.045
+    },
+    {
+      "hex": "#444245",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#eeebed",
+      "role": "text",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 18,
+    "atSeconds": 1.5,
+    "endSeconds": 5.7,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Join or sign in"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Sign in with email",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Type “Sign in”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-logging-in-6",
+  "screen_id": "quizlet-ios-versions-2026-11-04-logging-in-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:36.393Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet, on top of Sign in with email with 2 input fields and a primary action labelled “Log in”. Dark theme, 12 text elements.",
+  "text": "9:41€\nLog in\nThis login information does not match any Quizlet\naccount. Check your information and try again or\nreset your password.\nEmail or username\nmotvintool@gmail.com\nPassword\nLog in\nForgot password\nG Continue with Google\nContinue with Apple\nContinue with WhatsApp\nf\nContinue with Facebook",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Google”",
+        "Bottom sheet, covering 50% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet, on top of Sign in with email with 2 input fields and a primary action labelled “Log in”. Dark theme, 12 text elements.",
+        "Calls to action: “Log in”, “Continue with Apple”, “Continue with WhatsApp”",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 56 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 0:29 in the recording",
+        "Frame 118 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0b2f",
+      "role": "background",
+      "share": 0.494
+    },
+    {
+      "hex": "#29314f",
+      "role": "surface",
+      "share": 0.192
+    },
+    {
+      "hex": "#4456fd",
+      "role": "accent",
+      "share": 0.066
+    },
+    {
+      "hex": "#55576e",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#e4b3b1",
+      "role": "text",
+      "share": 0.038
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 118,
+    "atSeconds": 29.7,
+    "endSeconds": 35.7,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.4375,
+        "w": 0.875,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in",
+      "Continue with Apple",
+      "Continue with WhatsApp"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Google",
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Open Continue with Google",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

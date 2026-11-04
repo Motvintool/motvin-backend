@@ -1,0 +1,151 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-logging-out-1",
+  "screen_id": "quizlet-ios-versions-2026-11-04-logging-out-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:56:02.166Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Logging out",
+  "flow_position": 4,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 15 text elements.",
+  "text": "9:41C\n•dll\nSettings\nenecti\nHaptic feedback\n>\nYour privacy and cookie choices\nAbout\nPrivacy policy\nCalifornia privacy\n›\nTerms of service\n>\nOpen source licenses\nHelp Centre\nLog out\nDelete account\nv10.58",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Settings”",
+        "Reached from “Subscription plans”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:52 in the recording",
+        "Frame 2179 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0c30",
+      "role": "background",
+      "share": 0.804
+    },
+    {
+      "hex": "#2f3252",
+      "role": "surface",
+      "share": 0.113
+    },
+    {
+      "hex": "#ab0121",
+      "role": "accent",
+      "share": 0.032
+    },
+    {
+      "hex": "#51526d",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#6d0426",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 2179,
+    "atSeconds": 652.5,
+    "endSeconds": 654,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Privacy policy"
+  },
+  "crawler": {
+    "nodeId": "s296",
+    "depth": 295,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s295",
+        "via": "Tap “Settings”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s297",
+        "via": "Wait 1.5s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

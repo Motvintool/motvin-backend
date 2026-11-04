@@ -1,0 +1,162 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-adding-a-photo-to-a-comment-1",
+  "screen_id": "fable-ios-versions-2026-11-04-adding-a-photo-to-a-comment-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:00.443Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": null,
+  "flow": "onboarding",
+  "flow_name": "Adding a photo to a comment",
+  "flow_position": 30,
+  "name": "Camera permission",
+  "description": "Permission toast over a dimmed screen with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+  "text": "\"Fable\" would like to access\nthe Camera.\nThe app uses the camera so you can\nshare photos in book club\nconversations, or share photos to\nFable Support to help us improve\nyour experience.\nDon't Allow\nAllow\nPHOTO",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Fable\" would like to access”",
+        "Toast over a dimmed background, covering 6% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+        "Calls to action: “Allow”",
+        "9 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 30 of 52 in “SaueurnIo vurnur detail”",
+        "Reached from “Say something form”",
+        "Leads to “Say something form — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 5:04 in the recording",
+        "Frame 1021 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050406",
+      "role": "background",
+      "share": 0.834
+    },
+    {
+      "hex": "#282629",
+      "role": "surface",
+      "share": 0.123
+    },
+    {
+      "hex": "#4f4d4f",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#878588",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#676568",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 1021,
+    "atSeconds": 304.8,
+    "endSeconds": 306.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.046875,
+        "w": 0.125,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Fable\" would like to access",
+    "headline": "Share photos in book club"
+  },
+  "crawler": {
+    "nodeId": "s125",
+    "depth": 124,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s124",
+        "via": "Open \"Fable\" would like to access",
+        "name": "Say something form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s126",
+        "via": "Dismiss",
+        "name": "Say something form — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,157 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-managing-a-library-book-1",
+  "screen_id": "headway-ios-versions-2026-11-04-managing-a-library-book-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:03.399Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Managing a library book",
+  "flow_position": 2,
+  "name": "Continue 1 dialog",
+  "description": "Dialog over a dimmed screen, on top of Home home. Dark theme, 11 text elements.",
+  "text": "9:41(\n•0\nContinue 1\nA Brief History of Time\nStephen\nHawking\n...\nStephen Hawking, PhD\nA Brief\nHistory\nof Time\nA Brief History of Time\nShare\nMark as finished\nRemove from Library",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue 1”",
+        "Dialog over a dimmed background, covering 14% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Home home. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Home home options”",
+        "Reached from “Home home”",
+        "Leads to “Calendar”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:33 in the recording",
+        "Frame 1716 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191c",
+      "role": "background",
+      "share": 0.733
+    },
+    {
+      "hex": "#3b393c",
+      "role": "surface",
+      "share": 0.227
+    },
+    {
+      "hex": "#615e62",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#7b7480",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#8b8695",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1716,
+    "atSeconds": 513.3,
+    "endSeconds": 515.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.03125,
+        "w": 0.875,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue 1",
+    "headline": "Stephen Hawking, PhD"
+  },
+  "crawler": {
+    "nodeId": "s212",
+    "depth": 212,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s211",
+        "via": "Back to Continue 1 dialog",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s213",
+        "via": "Open Calendar",
+        "name": "Calendar"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

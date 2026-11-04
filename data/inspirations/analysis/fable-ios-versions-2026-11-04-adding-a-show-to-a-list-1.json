@@ -1,0 +1,157 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-adding-a-show-to-a-list-1",
+  "screen_id": "fable-ios-versions-2026-11-04-adding-a-show-to-a-list-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:09.969Z",
+  "screen_type": "player",
+  "published_as": "player",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Adding a show to a list",
+  "flow_position": 1,
+  "name": "Search",
+  "description": "Player screen with a 5-item tab bar and a search bar. Dark theme, 18 text elements.",
+  "text": "9:41(\nSearch\nBooks\nTV Shows\nQ Search all shows\nBingeable K-Drama\nK-Dramas so good you'll keep saying \"one more\nepisode\"\nGobl\nWEICHTLIFTIN\nFAIRY\nKIM BOK-JOO\nSTRONG WOMAN\nDO BONG\nSOON\nNow streaming\nThe TV shows we're bingeing now.\n3\nPROB\nO0\nClubs\nSearch\nProfile\nHome\nLibrary",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "home",
+    "clubs",
+    "library",
+    "player",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, Clubs, Search, Library, Profile",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Player screen with a 5-item tab bar and a search bar. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Search”",
+        "Reached from “Home home”",
+        "Leads to “Loading state”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 9:56 in the recording",
+        "Frame 2008 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0c0f",
+      "role": "background",
+      "share": 0.535
+    },
+    {
+      "hex": "#2c2a2c",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#494a4d",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#ed1017",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#cdd3d7",
+      "role": "text",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2008,
+    "atSeconds": 596.4,
+    "endSeconds": 602.7,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Home",
+      "Clubs",
+      "Search",
+      "Library",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "Gobl"
+  },
+  "crawler": {
+    "nodeId": "s227",
+    "depth": 228,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s226",
+        "via": "Tap “Search”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s228",
+        "via": "Tap “Search”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

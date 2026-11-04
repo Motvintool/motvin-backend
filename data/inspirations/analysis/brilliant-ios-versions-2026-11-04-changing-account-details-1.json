@@ -1,0 +1,147 @@
+{
+  "screenId": "brilliant-ios-versions-2026-11-04-changing-account-details-1",
+  "screen_id": "brilliant-ios-versions-2026-11-04-changing-account-details-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:34.030Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Changing account details",
+  "flow_position": 1,
+  "name": "Account",
+  "description": "Settings screen with 2 input fields. Dark theme, 10 text elements.",
+  "text": "9:41 C\nall\nAccount\nName\nMotvin Tool ›\nEmail address\nmotvintool@gmail.com\n>\nPassword\nExport your data\n>\nDeactivate or delete account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 2 input fields. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Opening First name*”",
+        "Reached from “Settings”",
+        "Leads to “First name* sheet”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:19 in the recording",
+        "Frame 1670 of 2138 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#353035",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#201b20",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#585358",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#747074",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2138,
+    "frame": 1670,
+    "atSeconds": 499.2,
+    "endSeconds": 501.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s172",
+    "depth": 171,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s171",
+        "via": "Tap “Account”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s173",
+        "via": "Open First name*",
+        "name": "First name* sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

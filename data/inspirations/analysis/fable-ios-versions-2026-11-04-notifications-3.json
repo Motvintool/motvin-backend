@@ -1,0 +1,150 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-notifications-3",
+  "screen_id": "fable-ios-versions-2026-11-04-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:08.816Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Notifications",
+  "flow_position": 4,
+  "name": "Notifications",
+  "description": "Notifications screen with a row of 3 category chips. Dark theme, 14 text elements.",
+  "text": "9:41(\n•ll\n<\nNotifications\nNew book 2m\nadded to your bookshelf.\nWHEN\nWhen the Night Comes\nLTHI\nNIGHT\nKnocking\nCOMES\nKNOCKING\nBy Katherine Daniel\nR CaRre mET unIR\nKATHERINE DANIEL",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Category strip: WHEN, LTHI, NIGHT",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen with a row of 3 category chips. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Checking notifications”",
+        "Reached from “WHEN”",
+        "Leads to “Manage Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:28 in the recording",
+        "Frame 1898 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#09070a",
+      "role": "background",
+      "share": 0.943
+    },
+    {
+      "hex": "#2e2c2e",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#7e1110",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#565457",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#430b0c",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 1898,
+    "atSeconds": 568.8,
+    "endSeconds": 569.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [
+      "WHEN",
+      "LTHI",
+      "NIGHT"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "Added to your bookshelf"
+  },
+  "crawler": {
+    "nodeId": "s215",
+    "depth": 216,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s214",
+        "via": "Back to Notifications",
+        "name": "WHEN"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s216",
+        "via": "Open Manage Notifications",
+        "name": "Manage Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

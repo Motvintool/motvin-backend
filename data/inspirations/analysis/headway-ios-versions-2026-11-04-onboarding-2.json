@@ -1,0 +1,154 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-onboarding-2",
+  "screen_id": "headway-ios-versions-2026-11-04-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:44.583Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [
+    "loading"
+  ],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+  "text": "9:41C\nAllow \"Headway\" to track your\nactivity across other companies'\napps and websites?\nIt lets us improve your\npersonalization, provide relevant\ndiscounts, and reduce repetitive ads\non social media.\nAsk App Not to Track\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "discount",
+    "onboarding",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Activity across other companies'”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+        "Calls to action: “Allow”",
+        "9 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “People have one thing”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:03 in the recording",
+        "Frame 18 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#033380",
+      "role": "background",
+      "share": 0.905
+    },
+    {
+      "hex": "#2a4e86",
+      "role": "accent",
+      "share": 0.058
+    },
+    {
+      "hex": "#496693",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#6083b8",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#f4ad6a",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 18,
+    "atSeconds": 3.9,
+    "endSeconds": 5.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Activity across other companies'",
+    "headline": "Apps and websites?"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Activity across other companies'",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 1.8s",
+        "name": "People have one thing"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

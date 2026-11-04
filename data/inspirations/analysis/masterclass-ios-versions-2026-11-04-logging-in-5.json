@@ -1,0 +1,151 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-logging-in-5",
+  "screen_id": "masterclass-ios-versions-2026-11-04-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:51:57.666Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login screen, scrolled further down with a primary action labelled “CONTINUE”. Dark theme, 8 text elements.",
+  "text": "9:41 C\n• | S\n<\nLog In\nmotvintool@gmail.com\nM\nA Password\nForgot password?\nCONTINUE\nLOG IN WITH YOUR ORGANIZATION",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Password”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down with a primary action labelled “CONTINUE”. Dark theme, 8 text elements.",
+        "Calls to action: “CONTINUE”",
+        "8 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 29 in “Logging in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:24 in the recording",
+        "Frame 86 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020101",
+      "role": "background",
+      "share": 0.807
+    },
+    {
+      "hex": "#1f171b",
+      "role": "surface",
+      "share": 0.182
+    },
+    {
+      "hex": "#3c3e42",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#5d5f61",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#abacad",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 86,
+    "atSeconds": 24.6,
+    "endSeconds": 26.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "CONTINUE"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Password",
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s013",
+    "depth": 12,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s014",
+        "via": "Tap “Forgot password?”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

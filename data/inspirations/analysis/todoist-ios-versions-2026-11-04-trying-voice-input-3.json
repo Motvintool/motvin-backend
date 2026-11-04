@@ -1,0 +1,151 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-trying-voice-input-3",
+  "screen_id": "todoist-ios-versions-2026-11-04-trying-voice-input-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:02.822Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Trying voice input",
+  "flow_position": 34,
+  "name": "Permission prompt",
+  "description": "Permission screen with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+  "text": "9:41€\n•0la\n\"Todoist\" would like to access\nthe Microphone.\nTodoist needs to access the\nmicrophone to dictate tasks and\nrecord voice notes for comments.\nDon't Allow\nAllow\nListening..•\nSay everything you need to get done.\nD0000000000000",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The Microphone”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow”. Dark theme, 9 text elements.",
+        "Calls to action: “Allow”",
+        "9 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 34 of 41 in “Logging in with email”",
+        "Reached from “Continue”",
+        "Leads to “April\"”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:53 in the recording",
+        "Frame 581 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e1516",
+      "role": "background",
+      "share": 0.888
+    },
+    {
+      "hex": "#4c3031",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#665354",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#ffa548",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#804c27",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 581,
+    "atSeconds": 173.4,
+    "endSeconds": 174.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "The Microphone",
+    "headline": "The Microphone"
+  },
+  "crawler": {
+    "nodeId": "s035",
+    "depth": 34,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s034",
+        "via": "Open The Microphone",
+        "name": "Continue"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s036",
+        "via": "Wait 1.2s",
+        "name": "April\""
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

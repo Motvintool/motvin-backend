@@ -1,0 +1,147 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-verifying-an-email-code-5",
+  "screen_id": "asana-ios-versions-2026-11-04-verifying-an-email-code-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:55.039Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Verifying an email code",
+  "flow_position": 21,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue with Google”. Light theme, 12 text elements.",
+  "text": "9:41 €\napp.asana.com\nWe emailed you a code\nWe sent a six digit code to motvintool@gmail.com. Enter\nthe code below:\n5738 97\nVerify\nOr\nG\nContinue with Google\nDidn't receive an email? Try\nResend code\nchecking your junk folder.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “We emailed you a code”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue with Google”. Light theme, 12 text elements.",
+        "Calls to action: “Continue with Google”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 47 in “External sign-in”",
+        "Reached from “ABC sheet”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:51 in the recording",
+        "Frame 171 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafd",
+      "role": "background",
+      "share": 0.773
+    },
+    {
+      "hex": "#d8d7da",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#310114",
+      "role": "accent",
+      "share": 0.059
+    },
+    {
+      "hex": "#bdbbbf",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#8077fc",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 171,
+    "atSeconds": 51,
+    "endSeconds": 51.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "We emailed you a code",
+    "headline": "Verify"
+  },
+  "crawler": {
+    "nodeId": "s024",
+    "depth": 23,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s023",
+        "via": "Tap “We emailed you a code”",
+        "name": "ABC sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s025",
+        "via": "Open Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

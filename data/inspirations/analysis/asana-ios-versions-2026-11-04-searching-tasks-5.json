@@ -1,0 +1,151 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-searching-tasks-5",
+  "screen_id": "asana-ios-versions-2026-11-04-searching-tasks-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:09.942Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Searching tasks",
+  "flow_position": 4,
+  "name": "In project (empty)",
+  "description": "Empty state screen with a search bar. Dark theme, 6 text elements, an empty state.",
+  "text": "9:41(\n•ll\nIn project\nNo projects\nQ\nProject name\nNo results\nTry a different search",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “In project”",
+        "Search bar present",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a search bar. Dark theme, 6 text elements, an empty state.",
+        "6 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Searching for “Cancel””",
+        "Reached from “Search”",
+        "Leads to “Search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:39 in the recording",
+        "Frame 1733 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1e21",
+      "role": "background",
+      "share": 0.974
+    },
+    {
+      "hex": "#36383b",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#5e5d61",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#4c4d50",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#a9a9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1733,
+    "atSeconds": 519,
+    "endSeconds": 520.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "In project",
+    "headline": "No projects"
+  },
+  "crawler": {
+    "nodeId": "s215",
+    "depth": 215,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s214",
+        "via": "Back to In project (empty)",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s216",
+        "via": "Type “Cancel”",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,162 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-verifying-an-email-code-4",
+  "screen_id": "asana-ios-versions-2026-11-04-verifying-an-email-code-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:54.957Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Verifying an email code",
+  "flow_position": 20,
+  "name": "ABC sheet",
+  "description": "Bottom sheet, on top of We emailed you a code form with the keyboard open. Light theme, 24 text elements.",
+  "text": "9:41 €\n•ll\napp.asana.com\nWe emailed you a code\nWe sent a six digit code to motvintool@gmail.com. Enter\nthe code below:\n57 3 897\nVerify\nOr\n2\n3\n1\nABC\nDEF\n5\n4\n6\nJKL\nMNO\nGHI\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ABC”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet, covering 39% of the height from 50% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of We emailed you a code form with the keyboard open. Light theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 47 in “External sign-in”",
+        "Reached from “We emailed you a code form”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:49 in the recording",
+        "Frame 169 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafc",
+      "role": "background",
+      "share": 0.447
+    },
+    {
+      "hex": "#4a4549",
+      "role": "surface",
+      "share": 0.24
+    },
+    {
+      "hex": "#626062",
+      "role": "surface",
+      "share": 0.121
+    },
+    {
+      "hex": "#d9d7de",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#310114",
+      "role": "accent",
+      "share": 0.059
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 169,
+    "atSeconds": 49.5,
+    "endSeconds": 51,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.5,
+        "w": 0.8125,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "ABC",
+    "headline": "Verify"
+  },
+  "crawler": {
+    "nodeId": "s023",
+    "depth": 22,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s022",
+        "via": "Tap “Or”",
+        "name": "We emailed you a code form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Tap “We emailed you a code”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

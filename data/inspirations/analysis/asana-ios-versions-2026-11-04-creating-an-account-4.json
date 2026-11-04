@@ -1,0 +1,151 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-creating-an-account-4",
+  "screen_id": "asana-ios-versions-2026-11-04-creating-an-account-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:55.531Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 27,
+  "name": "Create account",
+  "description": "Sign up screen with 3 input fields, a paged carousel and a primary action labelled “Create account”. Light theme, 12 text elements.",
+  "text": "9:41(\noll\napp.asana.com\nEmail\nmotvintool@gmail.com\nFull name\nMotvin\nPassword\n...\n••••\nUse 8+ characters, and avoid dates, names, and simple\npatterns — random phrases are strongest.\n^\nCreate account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 3 input fields, a paged carousel and a primary action labelled “Create account”. Light theme, 12 text elements.",
+        "Calls to action: “Create account”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 47 in “External sign-in”",
+        "Reached from “Profile form”",
+        "Leads to “Create account — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 1:01 in the recording",
+        "Frame 216 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcfc",
+      "role": "background",
+      "share": 0.818
+    },
+    {
+      "hex": "#d9d6e7",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#310212",
+      "role": "accent",
+      "share": 0.059
+    },
+    {
+      "hex": "#7957e1",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#63414b",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 216,
+    "atSeconds": 61.2,
+    "endSeconds": 65.1,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Create account"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Full name"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Tap “Password”",
+        "name": "Profile form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Scroll",
+        "name": "Create account — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

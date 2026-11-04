@@ -1,0 +1,152 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-searching-for-a-word-2",
+  "screen_id": "drops-ios-versions-2026-11-04-searching-for-a-word-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:55.097Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "creation",
+  "flow_name": "Searching for a word",
+  "flow_position": 2,
+  "name": "Form",
+  "description": "Form screen with the keyboard open. Dark theme, 20 text elements.",
+  "text": "X\nCancel\n\"W\"\nW\nt\ne\ny\nf\nh\nJ\na\nS\ng\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Filling in a form”",
+        "Reached from “Home home”",
+        "Leads to “Form”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:52 in the recording",
+        "Frame 1379 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3c165f",
+      "role": "background",
+      "share": 0.801
+    },
+    {
+      "hex": "#2a153d",
+      "role": "accent",
+      "share": 0.107
+    },
+    {
+      "hex": "#584766",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#72657d",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#d7d2da",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1379,
+    "atSeconds": 412.5,
+    "endSeconds": 414,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s146",
+    "depth": 147,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s145",
+        "via": "Type “Cancel”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s147",
+        "via": "Wait 1.5s",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,164 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-logging-in-3",
+  "screen_id": "fable-ios-versions-2026-11-04-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:19.386Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen with 2 input fields and a primary action labelled “Sign in”. Dark theme, 8 text elements.",
+  "text": "9:41(\n<\nSign up\nWelcome back\nEmail\nmotvintool@gmail.com\nPassword\nSign in\nForgot password? Reset it",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen with 2 input fields and a primary action labelled “Sign in”. Dark theme, 8 text elements.",
+        "Calls to action: “Sign in”",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 8 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Home home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 14:13 in the recording",
+        "Frame 2862 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191c",
+      "role": "background",
+      "share": 0.872
+    },
+    {
+      "hex": "#060407",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#383639",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#59585a",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#f9f9f9",
+      "role": "text",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2862,
+    "atSeconds": 853.2,
+    "endSeconds": 858.9,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.546875,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome back",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s334",
+    "depth": 335,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s333",
+        "via": "Tap “Welcome back”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s335",
+        "via": "Dismiss",
+        "name": "Home home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

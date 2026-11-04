@@ -1,0 +1,165 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-logging-in-1",
+  "screen_id": "masterclass-ios-versions-2026-11-04-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:51:57.115Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Sign-in options",
+  "description": "Login bottom sheet over a dimmed screen with a primary action labelled “CONTINUE WITH APPLE”. Dark theme, 9 text elements.",
+  "text": "9:41(\nodll\nCreate an account to continue.\nBy creating an account, you agree to our\nTerms of Service and Privacy Policy:\nf CONTINUE WITH FACEBOOK\nCONTINUE WITH APPLE\nCONTINUE WITH GOOGLE\nOR\nCREATE AN ACCOUNT\nLOG IN",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “LOG IN”",
+        "Bottom sheet over a dimmed background, covering 22% of the height from 75% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen with a primary action labelled “CONTINUE WITH APPLE”. Dark theme, 9 text elements.",
+        "Calls to action: “CONTINUE WITH APPLE”, “CONTINUE WITH GOOGLE”, “LOG IN”",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 29 in “Logging in”",
+        "Reached from “Sign in with email — loading”",
+        "Leads to “Sign in with email”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 0:06 in the recording",
+        "Frame 40 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.717
+    },
+    {
+      "hex": "#261a20",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#3560ab",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#e72c58",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#fcfbfc",
+      "role": "text",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 40,
+    "atSeconds": 6.6,
+    "endSeconds": 12.3,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.75,
+        "w": 0.8125,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "CONTINUE WITH APPLE",
+      "CONTINUE WITH GOOGLE",
+      "LOG IN"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "LOG IN",
+    "headline": "Terms of Service and Privacy Policy"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Wait 1.5s",
+        "name": "Sign in with email — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

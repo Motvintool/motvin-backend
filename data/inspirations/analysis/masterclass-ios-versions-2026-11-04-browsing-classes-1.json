@@ -1,0 +1,155 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-browsing-classes-1",
+  "screen_id": "masterclass-ios-versions-2026-11-04-browsing-classes-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:51:58.341Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Browsing classes",
+  "flow_position": 17,
+  "name": "Create account",
+  "description": "Sign up screen with the keyboard open and a primary action labelled “CONTINUE”. Dark theme, 27 text elements.",
+  "text": "9:41 C\n•Іl\n<\nCreate an Account\nE-mail\nmoty\n& Password\nBy tapping \"Continue\", you agree to our\nTerms of Service and Privacy Policy.\nCONTINUE\n9 Passwords\nW\nt\ne\nk\nf\nh\nd\nJ\nS\nV\nà\nb\nZ\nm\nC\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create an Account”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with the keyboard open and a primary action labelled “CONTINUE”. Dark theme, 27 text elements.",
+        "Calls to action: “CONTINUE”",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 29 in “Logging in”",
+        "Reached from “Loading state”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:48 in the recording",
+        "Frame 167 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201b20",
+      "role": "background",
+      "share": 0.435
+    },
+    {
+      "hex": "#050305",
+      "role": "accent",
+      "share": 0.423
+    },
+    {
+      "hex": "#3c3b3d",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#575557",
+      "role": "surface",
+      "share": 0.062
+    },
+    {
+      "hex": "#727073",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 167,
+    "atSeconds": 48.3,
+    "endSeconds": 50.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "CONTINUE"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create an Account",
+    "headline": "9 Passwords"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 22,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Type “motvint”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,163 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-searching-tasks-2",
+  "screen_id": "asana-ios-versions-2026-11-04-searching-tasks-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:09.776Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Searching tasks",
+  "flow_position": 2,
+  "name": "Search results",
+  "description": "Search results screen with a row of 5 category chips, a search bar and the keyboard open. Dark theme, 41 text elements.",
+  "text": "9:41C\nQ Search My Company\nCancel\nProjects\nTasks\nAl Teammates\nPeople\nRecoi\nQuick filters\nTasks assigned to...\nTasks with collaborators...\n(E)\nTasks in project...\nShortcuts\nTasks l've created\nTasks l've assigned to others\nQ\nW\nR\nT\nU\nO\nP\nE\nY\nA\nS\nD\nG\nH\nJ\nK\nL\nF\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "filter",
+    "search-results",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search My Company”",
+        "Category strip: Projects, Tasks, Al Teammates, People, Recoi",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a row of 5 category chips, a search bar and the keyboard open. Dark theme, 41 text elements.",
+        "41 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Searching for “Cancel””",
+        "Reached from “Search results”",
+        "Leads to “Search”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:32 in the recording",
+        "Frame 1714 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202124",
+      "role": "background",
+      "share": 0.828
+    },
+    {
+      "hex": "#424346",
+      "role": "surface",
+      "share": 0.121
+    },
+    {
+      "hex": "#616163",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#0e52a1",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#087ffe",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1714,
+    "atSeconds": 512.7,
+    "endSeconds": 514.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [],
+    "chipLabels": [
+      "Projects",
+      "Tasks",
+      "Al Teammates",
+      "People",
+      "Recoi"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search My Company",
+    "headline": "Tasks assigned to"
+  },
+  "crawler": {
+    "nodeId": "s213",
+    "depth": 213,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s212",
+        "via": "Type “Cancel”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s214",
+        "via": "Type “In project”",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

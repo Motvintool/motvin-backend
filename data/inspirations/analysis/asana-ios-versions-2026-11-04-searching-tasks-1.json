@@ -1,0 +1,166 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-searching-tasks-1",
+  "screen_id": "asana-ios-versions-2026-11-04-searching-tasks-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:09.697Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Searching tasks",
+  "flow_position": 1,
+  "name": "Search results",
+  "description": "Search results screen with a 5-item tab bar, a row of 5 category chips and a search bar. Dark theme, 14 text elements.",
+  "text": "9:41 C\nQ Search My Company\nProjects\nAl Teammates\nTasks\nPeople\nRecoi\nQuick filters\nTasks assigned to...\nTasks with collaborators...\nTasks in project...\nShortcuts\nTasks l've created\nTasks l've assigned to others\nRecently completed tasks\nMy tasks\nInbox\nSearch\nAccount\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "filter",
+    "home",
+    "my tasks",
+    "inbox",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Search My Company”",
+        "Category strip: Projects, Al Teammates, Tasks, People, Recoi",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a 5-item tab bar, a row of 5 category chips and a search bar. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 6 in “Searching for “Cancel””",
+        "Reached from “Inbox”",
+        "Leads to “Search results”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 8:27 in the recording",
+        "Frame 1707 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e2023",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#3f4145",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#5c5d62",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#727375",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#aeaeb0",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1707,
+    "atSeconds": 507.6,
+    "endSeconds": 512.4,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [
+      "Projects",
+      "Al Teammates",
+      "Tasks",
+      "People",
+      "Recoi"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search My Company",
+    "headline": "Tasks assigned to"
+  },
+  "crawler": {
+    "nodeId": "s212",
+    "depth": 212,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s211",
+        "via": "Open Search My Company",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s213",
+        "via": "Type “Cancel”",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,164 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-creating-an-account-8",
+  "screen_id": "masterclass-ios-versions-2026-11-04-creating-an-account-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:51:59.121Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Creating an account",
+  "flow_position": 27,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Personalized updates sheet with a primary action labelled “Send You Notifications”. Dark theme, 12 text elements.",
+  "text": "9:41(\nGet the most from your\nMasterClass membership with\npersonalized updates.\n\"MasterClass\" Would Like to\nSend You Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nSOUNDS GOOD!\nTURN OFF NOTIFICATIONS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications may include alerts”",
+        "Dialog over a dimmed background, covering 16% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Personalized updates sheet with a primary action labelled “Send You Notifications”. Dark theme, 12 text elements.",
+        "Calls to action: “Send You Notifications”, “Allow”",
+        "12 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 29 in “Logging in”",
+        "Reached from “Personalized updates sheet”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:16 in the recording",
+        "Frame 256 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060507",
+      "role": "background",
+      "share": 0.754
+    },
+    {
+      "hex": "#2d272b",
+      "role": "surface",
+      "share": 0.158
+    },
+    {
+      "hex": "#71152c",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#1c1a1d",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#4b494c",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 256,
+    "atSeconds": 76.2,
+    "endSeconds": 77.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.40625,
+        "w": 0.59375,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send You Notifications",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications may include alerts",
+    "headline": "Get the most from your"
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s031",
+        "via": "Tap “Get the most from your”",
+        "name": "Personalized updates sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s033",
+        "via": "Back to Create account",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

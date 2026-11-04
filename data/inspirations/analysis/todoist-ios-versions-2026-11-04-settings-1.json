@@ -1,0 +1,148 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-settings-1",
+  "screen_id": "todoist-ios-versions-2026-11-04-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:19.653Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "productivity",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 15 text elements.",
+  "text": "9:41(\nSettings\nAccount\nGeneral\nSubscription\nCalendar\nPersonalization\nTodoist >\nTheme\nTodoist >\nApp Icon\nNavigation\n>\nQuick Add\n>\nTeam Settings\nDevelopment Team\nProductivity",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "calendar",
+    "subscription",
+    "productivity",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 12 in “Settings”",
+        "Reached from “Inbox home”",
+        "Leads to “Account”",
+        "Returned to 10 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 11:29 in the recording",
+        "Frame 2301 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282528",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#494345",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#5f5d5f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#100e11",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#d54c53",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 2301,
+    "atSeconds": 689.1,
+    "endSeconds": 690.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 10
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Navigation",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s241",
+    "depth": 243,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s240",
+        "via": "Open Settings",
+        "name": "Inbox home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s242",
+        "via": "Wait 1.5s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

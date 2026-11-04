@@ -1,0 +1,156 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-creating-an-account-5",
+  "screen_id": "headway-ios-versions-2026-11-04-creating-an-account-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:51.592Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 11,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Get started”. Dark theme, 34 text elements.",
+  "text": "9:41 €\n•0l\nX Create account\nLog in\nName\nPassword (8+ characters)\nGet started\nBy continuing I agree with the Privacy Policy.,\nTerms & Conditions\n9 Passwords\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nJ\nK\nL\nF\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Get started”. Dark theme, 34 text elements.",
+        "Calls to action: “Get started”",
+        "34 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 25 in “Logging in with email”",
+        "Reached from “Create account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:25 in the recording",
+        "Frame 686 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242326",
+      "role": "background",
+      "share": 0.736
+    },
+    {
+      "hex": "#363f47",
+      "role": "surface",
+      "share": 0.133
+    },
+    {
+      "hex": "#5f5d5f",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#029dff",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#165783",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 686,
+    "atSeconds": 205.5,
+    "endSeconds": 206.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "9 Passwords"
+  },
+  "crawler": {
+    "nodeId": "s085",
+    "depth": 84,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s084",
+        "via": "Type “Name”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s086",
+        "via": "Type “Motv”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

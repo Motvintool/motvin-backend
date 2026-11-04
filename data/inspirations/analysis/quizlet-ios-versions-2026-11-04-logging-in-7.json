@@ -1,0 +1,164 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-logging-in-7",
+  "screen_id": "quizlet-ios-versions-2026-11-04-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:36.593Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 12,
+  "name": "Create account",
+  "description": "Sign up toast over a dimmed screen, on top of Sign in with email with a primary action labelled “Save Password?”. Dark theme, 8 text elements.",
+  "text": "9:41C\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nSave\nNot Now\nSign up with WhatsApp\nSign up with email\nHave an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up toast over a dimmed screen, on top of Sign in with email with a primary action labelled “Save Password?”. Dark theme, 8 text elements.",
+        "Calls to action: “Save Password?”, “Save”, “Sign up with WhatsApp”, “Sign up with email”",
+        "8 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 56 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:36 in the recording",
+        "Frame 127 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d1d",
+      "role": "background",
+      "share": 0.742
+    },
+    {
+      "hex": "#2e2f45",
+      "role": "surface",
+      "share": 0.134
+    },
+    {
+      "hex": "#545058",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#5f260d",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#1d1d3a",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 127,
+    "atSeconds": 36.9,
+    "endSeconds": 38.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save",
+      "Sign up with WhatsApp",
+      "Sign up with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Securely store your password so it's"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Open Create account",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

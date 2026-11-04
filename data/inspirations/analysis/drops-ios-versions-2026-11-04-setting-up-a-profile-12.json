@@ -1,0 +1,142 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-setting-up-a-profile-12",
+  "screen_id": "drops-ios-versions-2026-11-04-setting-up-a-profile-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:40.305Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 15,
+  "name": "Under 18",
+  "description": "Other screen. Dark theme, 9 text elements.",
+  "text": "<\nHow old are you?\nUnder 18\n18-24\n25-34\n35-44\n45-54\n55-64\n65+",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 70 in “Onboarding”",
+        "Reached from “Select all that apply”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:38 in the recording",
+        "Frame 131 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#41136d",
+      "role": "background",
+      "share": 0.62
+    },
+    {
+      "hex": "#61229c",
+      "role": "accent",
+      "share": 0.336
+    },
+    {
+      "hex": "#8257a9",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#5e3b69",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#887561",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 131,
+    "atSeconds": 38.4,
+    "endSeconds": 39.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Under 18"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “What interests you?”",
+        "name": "Select all that apply"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

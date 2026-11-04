@@ -1,0 +1,149 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-answering-the-quiz-21",
+  "screen_id": "headway-ios-versions-2026-11-04-answering-the-quiz-21",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:45.343Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Answering the quiz",
+  "flow_position": null,
+  "name": "Other — loading",
+  "description": "Loading state of Other. Dark theme, 2 text elements.",
+  "text": "9:41(\nSelect your gender\nPrefer not to say\nNon-binary\nFemale\nMale",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "male",
+    "female",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select your gender”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Other. Dark theme, 2 text elements.",
+        "2 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Great! Consistency will”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:31 in the recording",
+        "Frame 109 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#252325",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#3b393c",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#6a686a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#175683",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 109,
+    "atSeconds": 31.5,
+    "endSeconds": 33,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select your gender",
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Open Select your gender",
+        "name": "Great! Consistency will"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Wait 1.5s",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

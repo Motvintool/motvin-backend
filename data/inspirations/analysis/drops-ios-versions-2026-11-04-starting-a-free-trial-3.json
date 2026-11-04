@@ -1,0 +1,165 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-starting-a-free-trial-3",
+  "screen_id": "drops-ios-versions-2026-11-04-starting-a-free-trial-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:40.899Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Starting a free trial",
+  "flow_position": 21,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen with a primary action labelled “Start Free Trial”. Dark theme, 13 text elements.",
+  "text": "PREMIUM\nA\nSave time. Learn languages 2.2x\nfactarwith Dramium\nError\nPurchase or subscribe failed with\nerror: 1\nOkay\nMonthly\nR 1,799 / MO\nFree\nLearn 5 minutes a day\nStart Free Trial\nAl-po\nRecurring payments • Cancel anytime",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "paywall",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Okay”",
+        "Toast over a dimmed background, covering 11% of the height from 42% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen with a primary action labelled “Start Free Trial”. Dark theme, 13 text elements.",
+        "Calls to action: “Start Free Trial”",
+        "13 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 70 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:57 in the recording",
+        "Frame 194 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#250e3b",
+      "role": "background",
+      "share": 0.772
+    },
+    {
+      "hex": "#422958",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#6e7032",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#675a72",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#827f83",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 194,
+    "atSeconds": 57,
+    "endSeconds": 58.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.40625,
+        "y": 0.421875,
+        "w": 0.3125,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Start Free Trial"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Okay",
+    "headline": "Monthly"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Tap “Monthly”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

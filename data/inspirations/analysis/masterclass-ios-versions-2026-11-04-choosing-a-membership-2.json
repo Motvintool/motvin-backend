@@ -1,0 +1,147 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-choosing-a-membership-2",
+  "screen_id": "masterclass-ios-versions-2026-11-04-choosing-a-membership-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:52:03.353Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Choosing a membership",
+  "flow_position": 2,
+  "name": "Subscription plans",
+  "description": "Paywall screen with 1 input field. Dark theme, 19 text elements.",
+  "text": "_V MasterClass\nPlus\nP19,900.00\n(R1,658.33/month; billed annually)\nV Stream from 2 devices Create up to 6 profiles\nDownload and watch offline\nStandard\n·11,900.00\n(7991.67/month; billed annually)\nStream from 1 device\nE-mail Reminder\nWe'll send an email before your membership\nautomatically renews on 31/10/27\nSecured with iTunes\nBy confirming, you agree you will be charged the price\nlisted above and annually thereafter at the then-current\nrate, plus any applicable taxes, unless you cancel before\nthe end of the period in your Apple Settings. No refunds\nor credits issued for partial unused periods.\nCONFIRM SUBSCRIPTION",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "price",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “MasterClass”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with 1 input field. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 8 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “EVERYONE TRUSTS”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 3:21 in the recording",
+        "Frame 674 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060507",
+      "role": "background",
+      "share": 0.537
+    },
+    {
+      "hex": "#181a1e",
+      "role": "surface",
+      "share": 0.333
+    },
+    {
+      "hex": "#36373b",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#898888",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#aeacac",
+      "role": "text",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 674,
+    "atSeconds": 201.3,
+    "endSeconds": 202.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "MasterClass",
+    "headline": "Standard"
+  },
+  "crawler": {
+    "nodeId": "s081",
+    "depth": 81,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s080",
+        "via": "Open MasterClass",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s082",
+        "via": "Back to Other",
+        "name": "EVERYONE TRUSTS"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

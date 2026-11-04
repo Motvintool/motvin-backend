@@ -1,0 +1,151 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-choosing-a-plan-1",
+  "screen_id": "fable-ios-versions-2026-11-04-choosing-a-plan-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:51.907Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Choosing a plan",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a primary action labelled “Save 30%”. Dark theme, 25 text elements.",
+  "text": "9:41 €\nSkip\nfable plus\nGet the most out of\nyour time reading\nFable Plus subscribers are 2x more likely to hit\ntheir annual reading goal.\nTrack like never before\nWeekly & Monthly Goals\nNotch small wins to build a\nconsistent habit.\n4of4\nof21\nBooks finished\nread\n3.6 days\n12 days\nWeok\nMonth\nSave 30%\nGo Annual\nGo Monthly\n· 4,999/yr\n·599.00/mo\nNo free trial\n· 4,999/yr after free trial.\nStart free 7d trial\nTerms\nRestore Purchases",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "terms",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your time reading”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a primary action labelled “Save 30%”. Dark theme, 25 text elements.",
+        "Calls to action: “Save 30%”",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 7 in “Subscribing”",
+        "Reached from “Goalset toast”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 1:28 in the recording",
+        "Frame 320 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#16342d",
+      "role": "background",
+      "share": 0.459
+    },
+    {
+      "hex": "#314c4c",
+      "role": "surface",
+      "share": 0.257
+    },
+    {
+      "hex": "#060508",
+      "role": "accent",
+      "share": 0.057
+    },
+    {
+      "hex": "#f8f4ef",
+      "role": "text",
+      "share": 0.046
+    },
+    {
+      "hex": "#8a8c8a",
+      "role": "surface",
+      "share": 0.042
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 320,
+    "atSeconds": 88.5,
+    "endSeconds": 96.3,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save 30%"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your time reading",
+    "headline": "Your time reading",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Open Your time reading",
+        "name": "Goalset toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Back to Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

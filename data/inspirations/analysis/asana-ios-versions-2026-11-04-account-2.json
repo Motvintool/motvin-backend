@@ -1,0 +1,161 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-account-2",
+  "screen_id": "asana-ios-versions-2026-11-04-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:08.069Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Account",
+  "flow_position": 12,
+  "name": "Loading state",
+  "description": "Loading state with a 5-item tab bar. Dark theme, 18 text elements.",
+  "text": "9:41(\n•ll\nDo not disturb\nSave\nPause now\n30 minutes\n1 hour\n2 hours\n4 hours\n8 hours\nUntil tomorrow\nPause later\nSchedule\nAsana won't send push notifications during\nscheduled times.\nDays off\nSunday\nMonday\nTuesday\nWednesday\nThuendau\nMy tasks\nInbox\nSearch\nAccount\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "home",
+    "my tasks",
+    "inbox",
+    "search",
+    "feed",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Do not disturb”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 5-item tab bar. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 49 in “Home”",
+        "Reached from “Account”",
+        "Leads to “Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 7:43 in the recording",
+        "Frame 1552 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2023",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#414246",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#606164",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#b0b0b3",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#ffffff",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1552,
+    "atSeconds": 463.5,
+    "endSeconds": 465.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Do not disturb",
+    "headline": "Sunday"
+  },
+  "crawler": {
+    "nodeId": "s191",
+    "depth": 191,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s190",
+        "via": "Tap “Do not disturb”",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s192",
+        "via": "Wait 2.4s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

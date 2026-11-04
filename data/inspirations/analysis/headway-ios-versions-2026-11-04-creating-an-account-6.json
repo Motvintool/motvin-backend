@@ -1,0 +1,148 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-creating-an-account-6",
+  "screen_id": "headway-ios-versions-2026-11-04-creating-an-account-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:51.758Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 13,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “Get started”. Dark theme, 8 text elements.",
+  "text": "9:41(\nX Create account\nLog in\nX\nMotvin\nX\nGet started\nBy continuing I agree with the Privacy Policy.,\nTerms & Conditions",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Get started”. Dark theme, 8 text elements.",
+        "Calls to action: “Get started”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 25 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 3:28 in the recording",
+        "Frame 722 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222222",
+      "role": "background",
+      "share": 0.834
+    },
+    {
+      "hex": "#3b3b3b",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#029cff",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#0876c0",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#145785",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 722,
+    "atSeconds": 208.5,
+    "endSeconds": 216.9,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s087",
+    "depth": 86,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s086",
+        "via": "Back to Create account",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s088",
+        "via": "Open Activity",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

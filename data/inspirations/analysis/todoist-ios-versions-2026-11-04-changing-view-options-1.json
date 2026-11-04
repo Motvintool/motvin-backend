@@ -1,0 +1,152 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-changing-view-options-1",
+  "screen_id": "todoist-ios-versions-2026-11-04-changing-view-options-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:08.682Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Changing view options",
+  "flow_position": 1,
+  "name": "Inbox",
+  "description": "Messages screen with a 4-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:41 €\n000\nInbox\n• Works\n2 0/1\nProject\n+\n29\nUpcoming\nBrowse\nInbox\nToday",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "inbox",
+    "today",
+    "upcoming",
+    "browse",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Inbox, Today, Upcoming, Browse",
+        "Navigation title reads “Inbox”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a 4-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 12 in “Searching Inbox”",
+        "Reached from “Inbox”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 5:58 in the recording",
+        "Frame 1205 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.937
+    },
+    {
+      "hex": "#494547",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#6d6a6c",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#d0464c",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#878688",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 1205,
+    "atSeconds": 358.2,
+    "endSeconds": 361.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Inbox",
+      "Today",
+      "Upcoming",
+      "Browse"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "Works"
+  },
+  "crawler": {
+    "nodeId": "s107",
+    "depth": 108,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s106",
+        "via": "Back to Inbox",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s108",
+        "via": "Open Completed Tasks",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-using-task-actions-2",
+  "screen_id": "asana-ios-versions-2026-11-04-using-task-actions-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:01.666Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Using task actions",
+  "flow_position": 11,
+  "name": "My tasks toast",
+  "description": "Toast over a dimmed screen, on top of Mark complete — scrolled with a row of 3 category chips. Dark theme, 18 text elements.",
+  "text": "9:41(\nMark complete\n• • •\nMo\nTomorrow\nMotvin\nMy tasks\nWork V\nProjects\nAdd to projects\n• Add tags\nMake a subtask of\nMark as...\n& Create follow-up task\nMake dependent\nMerge duplicate tasks\nRemove like\nShare task\nFollow task\nDelete task",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "delete task",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My tasks”",
+        "Category strip: Mo, Tomorrow, Motvin",
+        "Toast over a dimmed background, covering 8% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Mark complete — scrolled with a row of 3 category chips. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 77 in “Filling in Hi, I'm Dash”",
+        "Reached from “Mark complete — scrolled”",
+        "Leads to “My tasks toast — scrolled”",
+        "Returned to 10 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 4:39 in the recording",
+        "Frame 1116 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191a1d",
+      "role": "background",
+      "share": 0.925
+    },
+    {
+      "hex": "#3b3c40",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#535457",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#6a696c",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a9a9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1116,
+    "atSeconds": 279,
+    "endSeconds": 280.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.25,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 10
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [
+      "Mo",
+      "Tomorrow",
+      "Motvin"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My tasks",
+    "headline": "My tasks",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 108,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Tap “My tasks”",
+        "name": "Mark complete — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Scroll",
+        "name": "My tasks toast — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

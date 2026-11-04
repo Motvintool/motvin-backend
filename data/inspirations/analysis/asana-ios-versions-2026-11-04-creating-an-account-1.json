@@ -1,0 +1,150 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-creating-an-account-1",
+  "screen_id": "asana-ios-versions-2026-11-04-creating-an-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:55.119Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 22,
+  "name": "Loading state",
+  "description": "Loading state with 3 input fields. Light theme, 12 text elements.",
+  "text": "9:41 C\n•l ą\napp.asana.com\nasana\nAlready have an account? Log In\nEmail\nmotvintool@gmail.com\nFull name\nFirst and last name\nPassword\nUse 8+ characters, and avoid dates, names, and simple\npatterns — random phrases are strongest.\nBy clicking Create account, you indicate that you have read\nand agree to the Ierms of Service and Privacy Policy.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "legal-text",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 3 input fields. Light theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 22 of 47 in “External sign-in”",
+        "Reached from “OTP verification”",
+        "Leads to “Profile form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:51 in the recording",
+        "Frame 179 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfe",
+      "role": "background",
+      "share": 0.79
+    },
+    {
+      "hex": "#e2e2e6",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#310114",
+      "role": "accent",
+      "share": 0.059
+    },
+    {
+      "hex": "#bec1c6",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#65444f",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 179,
+    "atSeconds": 51.6,
+    "endSeconds": 54,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Asana"
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Open Loading state",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Wait 2.4s",
+        "name": "Profile form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

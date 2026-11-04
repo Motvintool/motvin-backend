@@ -1,0 +1,147 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-setting-up-a-profile-8",
+  "screen_id": "drops-ios-versions-2026-11-04-setting-up-a-profile-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:39.801Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 10,
+  "name": "Set a time to learn Ainu daily",
+  "description": "Other screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "<\nWhen will you practice?\nSet a time to learn Ainu daily\n11:00\n18:00\n12:00\n06:00\n24:00\nContinue\nChange this anytime in the Profile settings",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 70 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Notifications permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:27 in the recording",
+        "Frame 99 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1369",
+      "role": "background",
+      "share": 0.805
+    },
+    {
+      "hex": "#633a7b",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#988a61",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#8a6099",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#e1eb5c",
+      "role": "accent",
+      "share": 0.037
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 99,
+    "atSeconds": 27.6,
+    "endSeconds": 30,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Set a time to learn Ainu daily"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Wait 2.1s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Tap “When will you practice?”",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

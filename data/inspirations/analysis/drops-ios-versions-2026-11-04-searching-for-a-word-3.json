@@ -1,0 +1,152 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-searching-for-a-word-3",
+  "screen_id": "drops-ios-versions-2026-11-04-searching-for-a-word-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:55.306Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Searching for a word",
+  "flow_position": 4,
+  "name": "We couldn't find \"work\" (error)",
+  "description": "Error screen with the keyboard open. Dark theme, 24 text elements.",
+  "text": "wor\nCancel\nWe couldn't find \"work\"\nTry again using different spelling.\n\"wor\"\nworking\nwork\ni\nW\nt\ne\ny\nf\nh\nJ\na\nS\ng\nb\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "error",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “We couldn't find \"work\"”",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen with the keyboard open. Dark theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: error, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Filling in a form”",
+        "Reached from “Form”",
+        "Leads to “Working sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:55 in the recording",
+        "Frame 1390 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3c175f",
+      "role": "background",
+      "share": 0.782
+    },
+    {
+      "hex": "#2a153d",
+      "role": "accent",
+      "share": 0.098
+    },
+    {
+      "hex": "#58446a",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#76608b",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#d7d2da",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1390,
+    "atSeconds": 415.8,
+    "endSeconds": 417.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "We couldn't find \"work\"",
+    "headline": "We couldn't find \"work\""
+  },
+  "crawler": {
+    "nodeId": "s148",
+    "depth": 149,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s147",
+        "via": "Back to We couldn't find \"work\" (error)",
+        "name": "Form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s149",
+        "via": "Type “emus”",
+        "name": "Working sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

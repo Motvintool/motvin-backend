@@ -1,0 +1,158 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-search-3",
+  "screen_id": "asana-ios-versions-2026-11-04-search-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:10.478Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Search",
+  "flow_position": 24,
+  "name": "Home home",
+  "description": "Home screen with a 5-item tab bar and a row of 3 category chips. Dark theme, 9 text elements.",
+  "text": "9:41(\n‹ Tasks l've created\nMobile project\nMo\n• Follow up on \"Design\"\nTomorrow\nMo\nDesign\nTomorrow\nMo\nInbox\nSearch\nHome\nMy tasks\nAccount",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "my tasks",
+    "inbox",
+    "search",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Tasks l've created”",
+        "Category strip: Design, Tomorrow, Mo",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 5-item tab bar and a row of 3 category chips. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 49 in “Home”",
+        "Reached from “Search results”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.6s at 8:53 in the recording",
+        "Frame 1799 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1f22",
+      "role": "background",
+      "share": 0.93
+    },
+    {
+      "hex": "#3f4246",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#61676b",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#4c818e",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#6abed2",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1799,
+    "atSeconds": 533.4,
+    "endSeconds": 540,
+    "holdSeconds": 6.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [
+      "Design",
+      "Tomorrow",
+      "Mo"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Tasks l've created",
+    "headline": "Follow up on \"Design\""
+  },
+  "crawler": {
+    "nodeId": "s222",
+    "depth": 222,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s221",
+        "via": "Tap “Tasks”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s223",
+        "via": "Back to Search results",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

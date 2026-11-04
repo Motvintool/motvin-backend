@@ -1,0 +1,161 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-settings-8",
+  "screen_id": "headway-ios-versions-2026-11-04-settings-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:06.037Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Settings",
+  "flow_position": 2,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+  "text": "9:41€\n\"Headway\" Would Like to\nAccess Screen Time\nProviding \"Headway\" access to\nScreen Time may allow it to see your\nactivity data, restrict content, and\nlimit the usage of apps and websites.\nDon't Allow\nContinue\nA Brief History of Time",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Headway\" Would Like to”",
+        "Dialog over a dimmed background, covering 23% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue”",
+        "8 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Allowing a permission”",
+        "Reached from “Permission prompt — loading”",
+        "Leads to “Permission prompt”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:29 in the recording",
+        "Frame 1901 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.863
+    },
+    {
+      "hex": "#323235",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#535257",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#0cb5f9",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#0e668e",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1901,
+    "atSeconds": 569.1,
+    "endSeconds": 570.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.375,
+        "w": 0.65625,
+        "h": 0.234375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Headway\" Would Like to",
+    "headline": "\"Headway\" Would Like to"
+  },
+  "crawler": {
+    "nodeId": "s242",
+    "depth": 242,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s241",
+        "via": "Wait 1.2s",
+        "name": "Permission prompt — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s243",
+        "via": "Open Allow Access to Screen Time",
+        "name": "Permission prompt"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

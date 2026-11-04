@@ -1,0 +1,150 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-signing-up-2",
+  "screen_id": "drops-ios-versions-2026-11-04-signing-up-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:43.830Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 50,
+  "name": "Create account",
+  "description": "Sign up screen with the keyboard open. Dark theme, 30 text elements.",
+  "text": "Sign up\nExisting user? Log in\nName\nmotvintool@gmail.com\nSurendar V\nQ\nW\nR\nT\nY\nU\nO\nP\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign up”",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with the keyboard open. Dark theme, 30 text elements.",
+        "30 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 50 of 70 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 2:26 in the recording",
+        "Frame 494 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3b195b",
+      "role": "background",
+      "share": 0.596
+    },
+    {
+      "hex": "#5a2a89",
+      "role": "accent",
+      "share": 0.227
+    },
+    {
+      "hex": "#524454",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#342628",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#6a5a73",
+      "role": "surface",
+      "share": 0.04
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 494,
+    "atSeconds": 146.1,
+    "endSeconds": 148.5,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign up",
+    "headline": "Name"
+  },
+  "crawler": {
+    "nodeId": "s051",
+    "depth": 50,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s050",
+        "via": "Back to Create account",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s052",
+        "via": "Tap “Sign up”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

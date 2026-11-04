@@ -1,0 +1,154 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-filtering-notifications-1",
+  "screen_id": "asana-ios-versions-2026-11-04-filtering-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:08.793Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Filtering notifications",
+  "flow_position": 2,
+  "name": "Search results",
+  "description": "Search results screen with a primary action labelled “Done”. Dark theme, 18 text elements.",
+  "text": "9:41(\nInbox\nManage view\nDone\nFilters\nAssigned by me\nAssigned to me\n@\n@Mentioned\nFor me\n>\nFrom person\n• Inproject\n>\nRead Status\n• Messages & status updates\nSort\nNewest\nSee recent notifications first\nRelevance\nSee timely, actionable notifications first",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "message",
+    "notification",
+    "relevance",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Inbox”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a primary action labelled “Done”. Dark theme, 18 text elements.",
+        "Calls to action: “Done”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 7 in “Searching Home”",
+        "Reached from “Inbox”",
+        "Leads to “Loading state — scrolled — loading”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 8:04 in the recording",
+        "Frame 1628 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18191c",
+      "role": "background",
+      "share": 0.915
+    },
+    {
+      "hex": "#37393c",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#4d4e51",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#6a696c",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a9a9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1628,
+    "atSeconds": 484.2,
+    "endSeconds": 488.7,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Done"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "Assigned to me",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s200",
+    "depth": 200,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s199",
+        "via": "Tap “Inbox”",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s201",
+        "via": "Tap “From person”",
+        "name": "Loading state — scrolled — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

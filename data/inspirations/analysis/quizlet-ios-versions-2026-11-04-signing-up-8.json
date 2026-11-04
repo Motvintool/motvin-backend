@@ -1,0 +1,143 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-signing-up-8",
+  "screen_id": "quizlet-ios-versions-2026-11-04-signing-up-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:37.845Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 25,
+  "name": "OTP verification",
+  "description": "Verification code screen. Dark theme, 10 text elements.",
+  "text": "9:41€\nConfirm your email address\nto continue\nWe've sent an email to motvintool@gmail.com.\nConfirm your address is correct by clicking the\nlink in the email.\nDidn't get an email? Check your spam folder or request\nanother email.\nResend confirmation email\nUpdate your email\nLog out",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "otp",
+    "ios"
+  ],
+  "elements": [],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm your email address”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 56 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:20 in the recording",
+        "Frame 279 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0c31",
+      "role": "background",
+      "share": 0.546
+    },
+    {
+      "hex": "#15125e",
+      "role": "accent",
+      "share": 0.255
+    },
+    {
+      "hex": "#2c2f4f",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#4557fc",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#5b5d78",
+      "role": "surface",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 279,
+    "atSeconds": 80.1,
+    "endSeconds": 80.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Confirm your email address",
+    "headline": "To continue"
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Open Confirm your email address",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}
