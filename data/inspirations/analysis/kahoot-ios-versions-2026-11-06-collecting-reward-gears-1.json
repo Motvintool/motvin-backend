@@ -1,0 +1,156 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-collecting-reward-gears-1",
+  "screen_id": "kahoot-ios-versions-2026-11-06-collecting-reward-gears-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:21:59.687Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Collecting reward gears",
+  "flow_position": 2,
+  "name": "Play to collect toast",
+  "description": "Toast over a dimmed screen, on top of Profile. Dark theme, 5 text elements.",
+  "text": "41\nNew season\nSpark the gear!\nLearn, build, collect! Step into the steam\nengine to earn golden gears and reclaim lost\nartifacts.\nPlay to collect",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Play to collect”",
+        "Toast over a dimmed background, covering 13% of the height from 88% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Profile. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 89 in “Opening Play to collect”",
+        "Reached from “Profile”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:53 in the recording",
+        "Frame 183 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1314",
+      "role": "background",
+      "share": 0.348
+    },
+    {
+      "hex": "#42302b",
+      "role": "surface",
+      "share": 0.285
+    },
+    {
+      "hex": "#6a4d3c",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#f0b21d",
+      "role": "accent",
+      "share": 0.051
+    },
+    {
+      "hex": "#946026",
+      "role": "surface",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 183,
+    "atSeconds": 53.1,
+    "endSeconds": 55.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.875,
+        "w": 1,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Play to collect",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s029",
+    "depth": 28,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s028",
+        "via": "Open Play to collect",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s030",
+        "via": "Open Join New Season",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

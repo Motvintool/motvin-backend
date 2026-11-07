@@ -1,0 +1,147 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-logging-in-6",
+  "screen_id": "uptime-ios-versions-2026-11-06-logging-in-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:08.078Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 14,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41C\n***%\nPlease enter the code we sent to\nmotvintool@gmail.com\n415955\nCheck your code is correct and try again.\nContinue\nDidn't get it? Send me a new code",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 27 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.5s at 0:36 in the recording",
+        "Frame 175 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0b1f",
+      "role": "background",
+      "share": 0.59
+    },
+    {
+      "hex": "#18213a",
+      "role": "surface",
+      "share": 0.24
+    },
+    {
+      "hex": "#eb0153",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#3e3d4d",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#dbd3d6",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 175,
+    "atSeconds": 36.3,
+    "endSeconds": 36.9,
+    "holdSeconds": 10.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-creating-an-account-3",
+  "screen_id": "coursera-ios-versions-2026-11-06-creating-an-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:27.836Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen with a primary action labelled “Log in or Sign up”. Dark theme, 15 text elements.",
+  "text": "9:41(\n•ll\nSign Up Later\ncoursera\nTake the world's best courses online\nfrom top universities and industry\npartners.\nLog in or Sign up\nApple\nG\nf\nFacebook\nGoogle\nOт Log in with your organization (SSO)\nLog In with Email\nor\nNew to Coursera? Create an Account!\nBy creating an account under any method above, you accept Coursera's\nTerms of Use and Privacy Notice",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log In with Email”",
+        "Bottom sheet over a dimmed background, covering 28% of the height from 69% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen with a primary action labelled “Log in or Sign up”. Dark theme, 15 text elements.",
+        "Calls to action: “Log in or Sign up”, “Log In with Email”",
+        "15 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 13 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “Create account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 0:09 in the recording",
+        "Frame 49 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080208",
+      "role": "background",
+      "share": 0.67
+    },
+    {
+      "hex": "#89b8fc",
+      "role": "text",
+      "share": 0.116
+    },
+    {
+      "hex": "#769edb",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#27252d",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#055be0",
+      "role": "accent",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 49,
+    "atSeconds": 9.3,
+    "endSeconds": 15,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.6875,
+        "w": 0.8125,
+        "h": 0.28125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or Sign up",
+      "Log In with Email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log In with Email",
+    "headline": "Coursera"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open Log In with Email",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Dismiss",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

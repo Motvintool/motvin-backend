@@ -1,0 +1,154 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-setting-up-a-profile-1",
+  "screen_id": "uptime-ios-versions-2026-11-06-setting-up-a-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:08.839Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 23,
+  "name": "Detail",
+  "description": "Detail screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+  "text": "9:41C\nGreat! Now tell us about you.\nWhat's your name?\nYour name\nContinue\nSurendar V\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nJ\nK\nL\nF\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+        "Calls to action: “Continue”",
+        "31 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 27 in “Logging in”",
+        "Reached from “Bottom sheet”",
+        "Leads to “Detail”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:09 in the recording",
+        "Frame 239 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191d2e",
+      "role": "background",
+      "share": 0.619
+    },
+    {
+      "hex": "#07091d",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#3e414d",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#5c5d67",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#ec0154",
+      "role": "accent",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 239,
+    "atSeconds": 69.9,
+    "endSeconds": 70.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Great! Now tell us about you"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Open Detail",
+        "name": "Bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Back to Detail",
+        "name": "Detail"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-restoring-purchases-2",
+  "screen_id": "kahoot-ios-versions-2026-11-06-restoring-purchases-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:41.107Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Restoring purchases",
+  "flow_position": 9,
+  "name": "Phone number entry",
+  "description": "Login toast over a dimmed screen, on top of Subscription plans with 1 input field. Dark theme, 21 text elements.",
+  "text": "9:41 C\n•0l\nSettings\nProfile\nProfila Cattir\nSign in to Apple Account\nP\nEnter the password for your\nApple Account \"+91 6382-102514\".\nR\nPassword\nD\nCancel\nOK\n•\nGeneral\nRestoring purchases...\nLanguage\nLiquid Glass\nMusic and haptics\nMusic\nSound Effects\nHaptics\nKahoot! Quiz games",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Language”",
+        "Toast over a dimmed background, covering 6% of the height from 53% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Subscription plans with 1 input field. Dark theme, 21 text elements.",
+        "21 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 10 in “Activate student pass”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 14:44 in the recording",
+        "Frame 2952 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0c0c",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#2c2d2d",
+      "role": "surface",
+      "share": 0.11
+    },
+    {
+      "hex": "#0d7bc5",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#0fa2ff",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#474747",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2952,
+    "atSeconds": 884.7,
+    "endSeconds": 885.9,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.53125,
+        "w": 0.5,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Language",
+    "headline": "Language"
+  },
+  "crawler": {
+    "nodeId": "s442",
+    "depth": 443,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s441",
+        "via": "Tap “Language”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s443",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

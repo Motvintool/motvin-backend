@@ -1,0 +1,167 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-adjusting-hack-options-11",
+  "screen_id": "uptime-ios-versions-2026-11-06-adjusting-hack-options-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:12.297Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Adjusting hack options",
+  "flow_position": 15,
+  "name": "Choose your Hack speed dialog",
+  "description": "Dialog over a dimmed screen, on top of Category page with a row of 3 category chips. Dark theme, 18 text elements.",
+  "text": "9:41 €\n())\nSpark card\nShare\nLess\nMode\nBuy this book\nAudio\nDownload\nSaved\n-\nChoose your Hack speed\n0.5x\n0.75x\n1.0x\n1.25x\n1.5x\n1.75x\n2.0x\nSet Hack speed",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "set hack speed",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose your Hack speed”",
+        "Category strip: Spark card, Share, Less",
+        "Dialog over a dimmed background, covering 25% of the height from 27% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Category page with a row of 3 category chips. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 23 in “Browsing a category (Spark card)”",
+        "Reached from “Category page”",
+        "Leads to “Category page”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:55 in the recording",
+        "Frame 588 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0c16",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#30142b",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#ec0254",
+      "role": "accent",
+      "share": 0.033
+    },
+    {
+      "hex": "#333441",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#54545b",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 588,
+    "atSeconds": 175.2,
+    "endSeconds": 176.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.265625,
+        "w": 0.8125,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [
+      "Spark card",
+      "Share",
+      "Less"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose your Hack speed",
+    "headline": "Choose your Hack speed",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s069",
+    "depth": 68,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s068",
+        "via": "Open Choose your Hack speed",
+        "name": "Category page"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s070",
+        "via": "Dismiss",
+        "name": "Category page"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,160 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-viewing-history-1",
+  "screen_id": "uptime-ios-versions-2026-11-06-viewing-history-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:17.052Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Viewing history",
+  "flow_position": 1,
+  "name": "Discover home",
+  "description": "Feed screen with a 4-item tab bar and a row of 3 category chips. Dark theme, 30 text elements.",
+  "text": "9:41C\nYou\nMy Library\nMy Stats\nMy Sparks\nUnfinished\nAll history\nSaved Collections\nSaved\nBook Hack\nTHE\nSUBTLE\nART OF\nThe Subtle Art of Not Giving a F*ck by\nNOT\nGIVING\nMark Manson\nA PICK\nNG A GOOD LIFE\nUptime\nMARK MANSON\nMel Robbins\nBook Hack\nThhe 5 Seccod Ruo\nThe\nThe High 5 Habit by Mel Robbins\nHigh5\nUptime\nHabit\nYou've opened 2 Hacks so far\nSee your history ›\nYou\nPremium\nDiscover\nBrowse",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "discover",
+    "browse",
+    "you",
+    "premium",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Discover, Browse, You, Premium",
+        "Navigation title reads “All history”",
+        "Category strip: My Library, My Stats, My Sparks",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar and a row of 3 category chips. Dark theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “My history”",
+        "Reached from “Spark card home”",
+        "Leads to “My history”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:56 in the recording",
+        "Frame 991 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090c20",
+      "role": "background",
+      "share": 0.521
+    },
+    {
+      "hex": "#1b233c",
+      "role": "accent",
+      "share": 0.346
+    },
+    {
+      "hex": "#3a3e52",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#575b6f",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#848692",
+      "role": "text",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 991,
+    "atSeconds": 296.1,
+    "endSeconds": 297.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [
+      "Discover",
+      "Browse",
+      "You",
+      "Premium"
+    ],
+    "chipLabels": [
+      "My Library",
+      "My Stats",
+      "My Sparks"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "All history",
+    "headline": "All history"
+  },
+  "crawler": {
+    "nodeId": "s124",
+    "depth": 123,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s123",
+        "via": "Switch to Discover",
+        "name": "Spark card home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s125",
+        "via": "Open My history",
+        "name": "My history"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,149 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-changing-notification-settings-1",
+  "screen_id": "uptime-ios-versions-2026-11-06-changing-notification-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:23.958Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Changing notification settings",
+  "flow_position": 4,
+  "name": "Notifications",
+  "description": "Notifications screen. Dark theme, 13 text elements.",
+  "text": "9:41 C\n•0\n<\nNotifications\nSuggested content\nDaily reminder\nPersonal reminders\nSpark Repetition\nThe Backdrop\nStuff you've saved\nUpdates & offers\nResearch\nAll notifications\nPush notifications\nEmails",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "notification",
+    "offer",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 29 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Notifications — loading”",
+        "Returned to 9 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:42 in the recording",
+        "Frame 1546 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090b1f",
+      "role": "background",
+      "share": 0.904
+    },
+    {
+      "hex": "#363747",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#222234",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#50515f",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#75707d",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1546,
+    "atSeconds": 462,
+    "endSeconds": 464.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 9
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "Spark Repetition"
+  },
+  "crawler": {
+    "nodeId": "s202",
+    "depth": 201,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s201",
+        "via": "Tap “Notifications”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s203",
+        "via": "Tap “Notifications”",
+        "name": "Notifications — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

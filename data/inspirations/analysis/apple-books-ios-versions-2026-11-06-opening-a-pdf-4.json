@@ -1,0 +1,157 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-opening-a-pdf-4",
+  "screen_id": "apple-books-ios-versions-2026-11-06-opening-a-pdf-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:13.184Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": null,
+  "flow": "onboarding",
+  "flow_name": "Opening a PDF",
+  "flow_position": 6,
+  "name": "Feature tip",
+  "description": "Coach mark bottom sheet, on top of Loading state. Dark theme, 12 text elements.",
+  "text": "9:41(\nooll\nThe_Design_of_Everyday_Things_by..\nThe DESIGN\nofEVERYDAY\nTHINGS\nG Send Copy\nNUKMAN\nAirDrop\nMore\nPrint\nWhen you're reading a PDF,\ntap the Bookmark button to\nmark the current page.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet",
+    "coach-mark"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Tap the Bookmark button to”",
+        "Bottom sheet, covering 41% of the height from 53% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark bottom sheet, on top of Loading state. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Opening a page (Home)”",
+        "Reached from “Feature tip — loading”",
+        "Leads to “Feature tip”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 3:10 in the recording",
+        "Frame 638 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070508",
+      "role": "background",
+      "share": 0.863
+    },
+    {
+      "hex": "#242224",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#49484a",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#f8f7f8",
+      "role": "text",
+      "share": 0.007
+    },
+    {
+      "hex": "#0e67c9",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 638,
+    "atSeconds": 190.8,
+    "endSeconds": 191.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.53125,
+        "w": 0.84375,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Tap the Bookmark button to",
+    "headline": "When you're reading a PDF"
+  },
+  "crawler": {
+    "nodeId": "s087",
+    "depth": 86,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s086",
+        "via": "Wait 0.6s",
+        "name": "Feature tip — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s088",
+        "via": "Dismiss",
+        "name": "Feature tip"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

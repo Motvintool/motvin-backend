@@ -1,0 +1,163 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-logging-in-with-email-9",
+  "screen_id": "coursera-ios-versions-2026-11-06-logging-in-with-email-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:50.433Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 14,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen, on top of Sign in with email with 2 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+  "text": "9:41€\n<\ncoursera\nEmail\nmotvintool@gmail.com\nPassword\nPassword (Required)\nForgot password?\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Bottom sheet over a dimmed background, covering 25% of the height from 72% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen, on top of Sign in with email with 2 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+        "Calls to action: “Log in”",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 16 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:58 in the recording",
+        "Frame 1998 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#010101",
+      "role": "background",
+      "share": 0.912
+    },
+    {
+      "hex": "#212835",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#10151c",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#476388",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#43484e",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 1998,
+    "atSeconds": 598.2,
+    "endSeconds": 599.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.71875,
+        "w": 0.8125,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Password (Required)"
+  },
+  "crawler": {
+    "nodeId": "s256",
+    "depth": 255,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s255",
+        "via": "Tap “Log in”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s257",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

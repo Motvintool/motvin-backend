@@ -1,0 +1,148 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-switching-profiles-1",
+  "screen_id": "kahoot-ios-versions-2026-11-06-switching-profiles-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:34.871Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Switching profiles",
+  "flow_position": 2,
+  "name": "Category page",
+  "description": "Category screen with a row of 3 category chips. Dark theme, 13 text elements.",
+  "text": "9:41(\nKahoot!\nm\nkids\nMotvin\nAdd child\nmotvintool\nYour characters\n34\nTap to switch\nprofiles\nCustomization\nActivate student pass\nChild Activity Dashboard",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: Motvin, Add child, motvintool",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Category screen with a row of 3 category chips. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Browsing a category (Home)”",
+        "Reached from “Library toast”",
+        "Leads to “Parents only toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:38 in the recording",
+        "Frame 2532 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a080b",
+      "role": "background",
+      "share": 0.949
+    },
+    {
+      "hex": "#2b282a",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#f8f7f9",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#545254",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#a4a2a5",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2532,
+    "atSeconds": 758.4,
+    "endSeconds": 759.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [
+      "Motvin",
+      "Add child",
+      "motvintool"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Kahoot!"
+  },
+  "crawler": {
+    "nodeId": "s379",
+    "depth": 380,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s378",
+        "via": "Tap “Kahoot”",
+        "name": "Library toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s380",
+        "via": "Wait 1.5s",
+        "name": "Parents only toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

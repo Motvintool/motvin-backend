@@ -1,0 +1,146 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-settings-1",
+  "screen_id": "kahoot-ios-versions-2026-11-06-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:39.152Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Settings",
+  "flow_position": 4,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Light theme, 14 text elements.",
+  "text": "9:41(\nSettings\nProfile\nProfile Settings\nPrivacy Settings\nRestore Purchases\nDelete Account\nLog Out\nGeneral\nLanguage\nLiquid Glass\nMusic and haptics\nMusic\nSound Effects\nHaptics\nKahoot! Quiz games",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Light theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 4 in “Activate student pass (Profile)”",
+        "Reached from “Parents only”",
+        "Leads to “Profile Settings”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 14:05 in the recording",
+        "Frame 2821 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c1d4eb",
+      "role": "background",
+      "share": 0.719
+    },
+    {
+      "hex": "#a3abd7",
+      "role": "surface",
+      "share": 0.164
+    },
+    {
+      "hex": "#82d9f7",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#e8eefa",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#6991d1",
+      "role": "accent",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2821,
+    "atSeconds": 845.1,
+    "endSeconds": 846.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Liquid Glass"
+  },
+  "crawler": {
+    "nodeId": "s420",
+    "depth": 421,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s419",
+        "via": "Open Settings",
+        "name": "Parents only"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s421",
+        "via": "Tap “Profile”",
+        "name": "Profile Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

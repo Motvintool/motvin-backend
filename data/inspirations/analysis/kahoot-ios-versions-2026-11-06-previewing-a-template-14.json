@@ -1,0 +1,153 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-previewing-a-template-14",
+  "screen_id": "kahoot-ios-versions-2026-11-06-previewing-a-template-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:24.611Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Previewing a template",
+  "flow_position": 7,
+  "name": "Loading state",
+  "description": "Loading state with a paged carousel. Dark theme, 7 text elements.",
+  "text": "9:41 (\n1/12\n01.\nTrue or False\nInsert a true statement here: Ex.\nThe author mentions that the\nprotagonist succeeds in her mission.\nWin up to 1,000 points",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “True or False”",
+        "Paged carousel with a page indicator",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a paged carousel. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 20 in “Study with True/ detail”",
+        "Reached from “Toast”",
+        "Leads to “Bottom sheet”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 9:36 in the recording",
+        "Frame 1935 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#5b0bad",
+      "role": "background",
+      "share": 0.671
+    },
+    {
+      "hex": "#8420d9",
+      "role": "accent",
+      "share": 0.143
+    },
+    {
+      "hex": "#4e2476",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#7138a7",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#342f38",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 1935,
+    "atSeconds": 576.3,
+    "endSeconds": 577.8,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "True or False",
+    "headline": "Insert a true statement here: Ex"
+  },
+  "crawler": {
+    "nodeId": "s279",
+    "depth": 279,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s278",
+        "via": "Open True or False",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s280",
+        "via": "Wait 3s",
+        "name": "Bottom sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

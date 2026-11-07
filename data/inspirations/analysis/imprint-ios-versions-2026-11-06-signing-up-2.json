@@ -1,0 +1,155 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-signing-up-2",
+  "screen_id": "imprint-ios-versions-2026-11-06-signing-up-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:04.259Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 23,
+  "name": "Loading state",
+  "description": "Loading state with 2 input fields and a primary action labelled “Create Account”. Dark theme, 7 text elements.",
+  "text": "9:41 €\n<\nCreate an Account\nSave your progress, sync across\ndevices, and more\nEmail\nPassword\nCreate Account\nAlready have an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create an Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 2 input fields and a primary action labelled “Create Account”. Dark theme, 7 text elements.",
+        "Calls to action: “Create Account”",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 33 in “Want to invite”",
+        "Reached from “Sign in with email”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 2:01 in the recording",
+        "Frame 411 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11140d",
+      "role": "background",
+      "share": 0.821
+    },
+    {
+      "hex": "#2d302a",
+      "role": "surface",
+      "share": 0.113
+    },
+    {
+      "hex": "#e2e1e4",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#b3b4b4",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#294562",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 411,
+    "atSeconds": 121.5,
+    "endSeconds": 123.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Create Account"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create an Account",
+    "headline": "Devices, and more"
+  },
+  "crawler": {
+    "nodeId": "s055",
+    "depth": 54,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s054",
+        "via": "Tap “Create an Account”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s056",
+        "via": "Wait 2.1s",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,143 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-signing-up-6",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-signing-up-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:30.889Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login screen. Dark theme, 9 text elements.",
+  "text": "9:41(\n<\nContinue with email\nCreate your account to build a\npersonalized journey towards your goals.\nMotvin\nmotvintool@gmail.com\nBy signing up, you agree to our Privacy Policy and Terms\nof Use.\nCreate an account\nAlready have an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with email”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 14 in “Logging in”",
+        "Reached from “Sign in with email — loading”",
+        "Leads to “Save Password? dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:39 in the recording",
+        "Frame 134 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#10141b",
+      "role": "background",
+      "share": 0.876
+    },
+    {
+      "hex": "#494c52",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#282d36",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.029
+    },
+    {
+      "hex": "#6b6e73",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 134,
+    "atSeconds": 39.9,
+    "endSeconds": 40.5,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with email",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s018",
+    "depth": 17,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s017",
+        "via": "Wait 3s",
+        "name": "Sign in with email — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s019",
+        "via": "Open Save Password?",
+        "name": "Save Password? dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

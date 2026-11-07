@@ -1,0 +1,155 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-browsing-want-to-read-5",
+  "screen_id": "apple-books-ios-versions-2026-11-06-browsing-want-to-read-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:07.067Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Browsing Want to Read",
+  "flow_position": null,
+  "name": "Home home — loading",
+  "description": "Loading state of Home home with a 3-item tab bar. Dark theme, 5 text elements.",
+  "text": "9:41€\n•ll\n<\nWant to Read\nNo Books\nTo add to this collection, tap any book or\naudiobook in the store and select Want to Read.\nlah\nLibrary\nHome\nBook Store",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "library",
+    "book store",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Library, Book Store",
+        "Navigation title reads “Want to Read”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Home home with a 3-item tab bar. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Suggest Less sheet”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 1:11 in the recording",
+        "Frame 249 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#1f1d20",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#403e40",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#605f61",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#9d9c9e",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 249,
+    "atSeconds": 71.1,
+    "endSeconds": 75,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Home",
+      "Library",
+      "Book Store"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Want to Read",
+    "headline": "No Books"
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 31,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s031",
+        "via": "Tap “Want to Read”",
+        "name": "Suggest Less sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s033",
+        "via": "Wait 3.9s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

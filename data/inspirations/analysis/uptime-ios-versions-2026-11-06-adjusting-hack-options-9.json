@@ -1,0 +1,166 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-adjusting-hack-options-9",
+  "screen_id": "uptime-ios-versions-2026-11-06-adjusting-hack-options-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:12.134Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Adjusting hack options",
+  "flow_position": 13,
+  "name": "Lol dialog",
+  "description": "Dialog over a dimmed screen, on top of Category page with a row of 3 category chips. Dark theme, 25 text elements.",
+  "text": "9:41(\nSpark card\nShare\nLess\nMode\nBuy this book\nAudio\nDownload\nSaved\nChange your default voice\n• lol\nDanny (US)\n• |!o]\nZach (US)\nHlool\nJean (GB)\n• ||]\nDiana (US)\nJ0\n• |lol\nHarold (US)\n• |100|\nLydia (US)\n00\nO\nRandom\nSelect voice",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "select voice",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Lol”",
+        "Category strip: Spark card, Share, Less",
+        "Dialog over a dimmed background, covering 27% of the height from 27% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Category page with a row of 3 category chips. Dark theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 23 in “Browsing a category (Spark card)”",
+        "Reached from “Category page”",
+        "Leads to “Category page”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 2:43 in the recording",
+        "Frame 562 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0c16",
+      "role": "background",
+      "share": 0.832
+    },
+    {
+      "hex": "#323443",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#2d192f",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#ec0154",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#525256",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 562,
+    "atSeconds": 163.5,
+    "endSeconds": 168.9,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.265625,
+        "w": 0.84375,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [
+      "Spark card",
+      "Share",
+      "Less"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Lol",
+    "headline": "Hlool",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 66,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Open Lol",
+        "name": "Category page"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Dismiss",
+        "name": "Category page"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

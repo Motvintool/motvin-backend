@@ -1,0 +1,155 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-logging-in-3",
+  "screen_id": "uptime-ios-versions-2026-11-06-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:07.594Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Logging in",
+  "flow_position": 8,
+  "name": "Hello, let's get you started",
+  "description": "Detail screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+  "text": "9:41C\nHello, let's get you started.\nWhat's your email address?\nWe'll use it to verify your account and keep your\ndetails secure.\nmotvintool@gmail.com\nContinue\nW\nt\ne\ny\nO\nk\nf\nh\nd\nJ\na\ng\nS\nb\nZ\nm\nC\nV\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "detail",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hello, let's get you started”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+        "Calls to action: “Continue”",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 27 in “Logging in”",
+        "Reached from “Hello, let's get you started”",
+        "Leads to “Magic link”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:15 in the recording",
+        "Frame 57 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151628",
+      "role": "background",
+      "share": 0.69
+    },
+    {
+      "hex": "#30323e",
+      "role": "surface",
+      "share": 0.119
+    },
+    {
+      "hex": "#545661",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#ec0154",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#f6f5f7",
+      "role": "text",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 57,
+    "atSeconds": 15,
+    "endSeconds": 17.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hello, let's get you started",
+    "headline": "Hello, let's get you started"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Back to Hello, let's get you started",
+        "name": "Hello, let's get you started"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Open Magic link",
+        "name": "Magic link"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

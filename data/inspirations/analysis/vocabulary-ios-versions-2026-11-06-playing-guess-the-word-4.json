@@ -1,0 +1,159 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-playing-guess-the-word-4",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-playing-guess-the-word-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:13.720Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Playing Guess the word",
+  "flow_position": 3,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Other. Dark theme, 11 text elements.",
+  "text": "9:41(\nD 1\nGuess the word\nAn aggregate amount; sum, whole\ntotality\nx\nbattery\nThat's incorrect\nCorrect answer:\ntotality 4\nUsed in a sentence: The totality of the evidence pointed\nto his guilt.\nNext word",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "next word",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “An aggregate amount; sum, whole”",
+        "Dialog over a dimmed background, covering 45% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Other. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 11 in “An aggregate amount; sum, whole”",
+        "Reached from “An aggregate amount; sum, whole”",
+        "Leads to “Detail”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:44 in the recording",
+        "Frame 1152 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.619
+    },
+    {
+      "hex": "#373537",
+      "role": "surface",
+      "share": 0.187
+    },
+    {
+      "hex": "#657750",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#8c554d",
+      "role": "accent",
+      "share": 0.051
+    },
+    {
+      "hex": "#92bfc0",
+      "role": "text",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 1152,
+    "atSeconds": 344.4,
+    "endSeconds": 345.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.046875,
+        "w": 0.9375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "An aggregate amount; sum, whole",
+    "headline": "An aggregate amount; sum, whole",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s159",
+    "depth": 159,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s158",
+        "via": "Tap “An aggregate amount; sum, whole”",
+        "name": "An aggregate amount; sum, whole"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s160",
+        "via": "Dismiss",
+        "name": "Detail"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,158 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-signing-in-to-apple-account-1",
+  "screen_id": "apple-books-ios-versions-2026-11-06-signing-in-to-apple-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:21.027Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Signing in to Apple Account",
+  "flow_position": 1,
+  "name": "Home home",
+  "description": "Feed screen with a 3-item tab bar and a row of 4 category chips. Dark theme, 31 text elements.",
+  "text": "9:41(\nHome\n5\nContinue\nThe_Design_of_Everyd\nThe Ad\nhe DEGN\nay_Things_by_Don...\nSherloc\nOfCVEKTDAT\nTHINGS\nArthur (\nDon Norman\nPDF • 1%\nBook •\nMore to Explore\nA Tale of\nPride and\nTwo Cities\nPrejudice\nJane Austen\nFiction &\nCharles Dicken\nLiterature\nThe Art of War\nSun Tzu\nThe R\nA Tre\nHumai\nNon-Fiction\nPl\nDavic\nelle\nHome\nLibrary\nBook Store\nPride and",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "library",
+    "book store",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Library, Book Store",
+        "Navigation title reads “Home”",
+        "Category strip: The Ad, he DEGN, Sherloc, OfCVEKTDAT",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a row of 4 category chips. Dark theme, 31 text elements.",
+        "31 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Logging in with phone number”",
+        "Reached from “Loading state”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 5:34 in the recording",
+        "Frame 1120 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080708",
+      "role": "background",
+      "share": 0.365
+    },
+    {
+      "hex": "#29282a",
+      "role": "surface",
+      "share": 0.323
+    },
+    {
+      "hex": "#4a4e4e",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#676668",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#8b6302",
+      "role": "accent",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 1120,
+    "atSeconds": 334.2,
+    "endSeconds": 336.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [
+      "Home",
+      "Library",
+      "Book Store"
+    ],
+    "chipLabels": [
+      "The Ad",
+      "he DEGN",
+      "Sherloc",
+      "OfCVEKTDAT"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home",
+    "headline": "More to Explore"
+  },
+  "crawler": {
+    "nodeId": "s158",
+    "depth": 157,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s157",
+        "via": "Wait 3.9s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s159",
+        "via": "Type “Apple Account Sign-In Requested”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

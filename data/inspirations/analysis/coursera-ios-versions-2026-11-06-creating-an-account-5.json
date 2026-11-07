@@ -1,0 +1,166 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-creating-an-account-5",
+  "screen_id": "coursera-ios-versions-2026-11-06-creating-an-account-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:28.032Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 5,
+  "name": "Create account",
+  "description": "Sign up dialog over a dimmed screen, on top of Create account with the keyboard open. Dark theme, 38 text elements.",
+  "text": "9:41€\noll\n<\ncoursera\nFull name\nFull name (Required)\nEmail\nEmail (Required)\nPassword\nPassword (Required)\nBy creating an account, l accept Coursera's Terms of Use and\nPrivacy Notice\nCreate an Account\nSurendar V\nR\nU\nQ\nW\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Password (Required)”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 14% of the height from 42% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up dialog over a dimmed screen, on top of Create account with the keyboard open. Dark theme, 38 text elements.",
+        "38 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 13 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “Create account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:17 in the recording",
+        "Frame 62 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c080d",
+      "role": "background",
+      "share": 0.704
+    },
+    {
+      "hex": "#2d2b31",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#545358",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#4b648c",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#706e70",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 62,
+    "atSeconds": 17.4,
+    "endSeconds": 18.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.421875,
+        "w": 0.75,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Password (Required)",
+    "headline": "Email (Required)"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Wait 7.8s",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Type “Motvin”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

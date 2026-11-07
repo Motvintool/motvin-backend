@@ -1,0 +1,166 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-signing-up-1",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-signing-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:24.326Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 2,
+  "name": "Sign-in options",
+  "description": "Login bottom sheet over a dimmed screen with a primary action labelled “Continue with Apple”. Dark theme, 4 text elements.",
+  "text": "9:41C\nC\nuxcel\nContinue with Apple\nG Continue with Google\nSign up\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "log in",
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Uxcel”",
+        "Bottom sheet over a dimmed background, covering 64% of the height from 33% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen with a primary action labelled “Continue with Apple”. Dark theme, 4 text elements.",
+        "Calls to action: “Continue with Apple”, “Sign up”",
+        "4 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 42 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 0:00 in the recording",
+        "Frame 20 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080711",
+      "role": "background",
+      "share": 0.847
+    },
+    {
+      "hex": "#25242e",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#45444d",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#f6f5f6",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#c7c6c9",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 20,
+    "atSeconds": 0.9,
+    "endSeconds": 6.3,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.328125,
+        "w": 0.875,
+        "h": 0.640625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Sign up"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Uxcel",
+    "headline": "Uxcel",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Uxcel",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

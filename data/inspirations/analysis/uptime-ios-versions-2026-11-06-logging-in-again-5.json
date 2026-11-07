@@ -1,0 +1,155 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-logging-in-again-5",
+  "screen_id": "uptime-ios-versions-2026-11-06-logging-in-again-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:27.750Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in again",
+  "flow_position": 10,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 24 text elements.",
+  "text": "9:41(\nPlease enter the code we sent to\nmotvintool@gmail.com\n12449\nContinue\nDidn't get it? Send me a new code\nNext\n2\n3\n1\nAB C\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS\n•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 24 text elements.",
+        "Calls to action: “Continue”, “Next”",
+        "24 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 12 in “Hello, let's get you started detail”",
+        "Reached from “OTP verification”",
+        "Leads to “We're getting you up and running”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:18 in the recording",
+        "Frame 1861 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f1325",
+      "role": "background",
+      "share": 0.653
+    },
+    {
+      "hex": "#363844",
+      "role": "surface",
+      "share": 0.182
+    },
+    {
+      "hex": "#a00240",
+      "role": "accent",
+      "share": 0.027
+    },
+    {
+      "hex": "#515360",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#6c6e7a",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1861,
+    "atSeconds": 558,
+    "endSeconds": 558.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Next"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s250",
+    "depth": 249,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s249",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s251",
+        "via": "Back to Other",
+        "name": "We're getting you up and running"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

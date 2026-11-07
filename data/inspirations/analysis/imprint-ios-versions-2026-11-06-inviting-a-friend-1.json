@@ -1,0 +1,151 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-inviting-a-friend-1",
+  "screen_id": "imprint-ios-versions-2026-11-06-inviting-a-friend-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:02.277Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Inviting a friend",
+  "flow_position": 30,
+  "name": "Loading state",
+  "description": "Loading state. Light theme, 9 text elements.",
+  "text": "• ą\n9:41(\n<\nWant to invite\na friend?\nFREE\n7-Day\nGuest Pass\nYou're 4x more likely to achieve your\ngoals with a friend!\nInvite a Friend\nNot now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "not now",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Want to invite”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Light theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 30 of 30 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “New Quick home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 1:12 in the recording",
+        "Frame 252 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf9fc",
+      "role": "background",
+      "share": 0.688
+    },
+    {
+      "hex": "#8baa83",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#598564",
+      "role": "text",
+      "share": 0.059
+    },
+    {
+      "hex": "#d7dde0",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#b2c59b",
+      "role": "surface",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 252,
+    "atSeconds": 72.6,
+    "endSeconds": 75.9,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Want to invite",
+    "headline": "Guest Pass",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Dismiss",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Wait 3.3s",
+        "name": "New Quick home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

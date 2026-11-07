@@ -1,0 +1,141 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-browsing-purchases-4",
+  "screen_id": "apple-books-ios-versions-2026-11-06-browsing-purchases-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:19.584Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Browsing purchases",
+  "flow_position": 2,
+  "name": "Recent Purchases",
+  "description": "Other screen. Dark theme, 10 text elements.",
+  "text": "9:41€\n<\nX\nAudiobooks\nAll\nNot on this iPhone\n0 >\nAll Audiobooks\n0 >\nRecent Purchases\nGENRES",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening a page”",
+        "Reached from “Account”",
+        "Leads to “Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:55 in the recording",
+        "Frame 988 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e22",
+      "role": "background",
+      "share": 0.875
+    },
+    {
+      "hex": "#030204",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#48464b",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#696970",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#88888f",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 988,
+    "atSeconds": 295.5,
+    "endSeconds": 296.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Recent Purchases"
+  },
+  "crawler": {
+    "nodeId": "s143",
+    "depth": 142,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s142",
+        "via": "Open Other",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s144",
+        "via": "Wait 1.2s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

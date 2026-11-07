@@ -1,0 +1,156 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-deleting-an-account-2",
+  "screen_id": "dailyart-ios-versions-2026-11-06-deleting-an-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:48.289Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Deleting an account",
+  "flow_position": 2,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Account Details. Dark theme, 11 text elements.",
+  "text": "9:41 C\noll\nDelete Account\n<\nPlease tell us why you want to delete your account.\nIt's really important to us to know the reasons!\nTechnical Issues\nOI don't use this service enough\nO I found a better app\nCost-related reasons\n• Other\n• Decline to answer\nDelete Account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “It's really important to us to know the”",
+        "Toast over a dimmed background, covering 6% of the height from 11% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Account Details. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Account Details options”",
+        "Reached from “Account Details”",
+        "Leads to “Toast — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 5:09 in the recording",
+        "Frame 1044 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0f14",
+      "role": "background",
+      "share": 0.856
+    },
+    {
+      "hex": "#2e2f34",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#666970",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#97999d",
+      "role": "text",
+      "share": 0.004
+    },
+    {
+      "hex": "#48494d",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 1044,
+    "atSeconds": 309.3,
+    "endSeconds": 313.5,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.109375,
+        "w": 1,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "It's really important to us to know the",
+    "headline": "OI don't use this service enough"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 159,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Open It's really important to us to know the",
+        "name": "Account Details"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Dismiss",
+        "name": "Toast — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

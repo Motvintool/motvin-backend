@@ -1,0 +1,143 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-changing-your-name-1",
+  "screen_id": "uptime-ios-versions-2026-11-06-changing-your-name-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:26.143Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Changing your name",
+  "flow_position": 2,
+  "name": "Change your name",
+  "description": "Other screen. Dark theme, 3 text elements.",
+  "text": "9:41€\nChange your name\nMotvin\nUpdate now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Change your name”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Change your name”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:22 in the recording",
+        "Frame 1677 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080a1e",
+      "role": "background",
+      "share": 0.868
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#f40558",
+      "role": "accent",
+      "share": 0.021
+    },
+    {
+      "hex": "#6e6f7b",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#86033a",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1677,
+    "atSeconds": 502.8,
+    "endSeconds": 503.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Change your name",
+    "headline": "Update now"
+  },
+  "crawler": {
+    "nodeId": "s231",
+    "depth": 230,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s230",
+        "via": "Wait 3s",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s232",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

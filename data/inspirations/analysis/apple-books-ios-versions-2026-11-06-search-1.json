@@ -1,0 +1,149 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-search-1",
+  "screen_id": "apple-books-ios-versions-2026-11-06-search-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:18.287Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Search",
+  "flow_position": 2,
+  "name": "Search",
+  "description": "Other screen with a search bar. Dark theme, 12 text elements.",
+  "text": "9:41(\n•ll\nSearch\nTrending\nQ love stories books\nQ hamlet\nQ the sexy books with picture\nQ atomic habits\nQ meditations\nQ 48 laws of power\nQ julius caesar\nQ english learning books\nQ animal farm\nQ the power of subconscious mind\nQ\nApple Books\nU",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "apple books",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "banner"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a search bar. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Search”",
+        "Reached from “Home home”",
+        "Leads to “Love and Freindship [sic] — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 4:27 in the recording",
+        "Frame 891 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.894
+    },
+    {
+      "hex": "#211f21",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#444345",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#616062",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#79787a",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 891,
+    "atSeconds": 267,
+    "endSeconds": 267.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "Q the sexy books with picture",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s131",
+    "depth": 130,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s130",
+        "via": "Open Search",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s132",
+        "via": "Wait 0.6s",
+        "name": "Love and Freindship [sic] — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

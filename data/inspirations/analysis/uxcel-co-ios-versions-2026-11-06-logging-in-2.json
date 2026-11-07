@@ -1,0 +1,154 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-logging-in-2",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-logging-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:42.212Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 12 text elements.",
+  "text": "9:41 C\n•Il\nLog in\nEmail address\nname@example.com\nPassword\nForgot my_password\nContinue\nor\nContinue with Google\nContinue with Apple\nf\nContinue with Facebook\nContinue with SSO",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email address”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 12 text elements.",
+        "Calls to action: “Continue”, “Continue with Google”, “Continue with Apple”, “Continue with Facebook”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 19 in “Logging in”",
+        "Reached from “Sign-in options”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:20 in the recording",
+        "Frame 1671 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272630",
+      "role": "background",
+      "share": 0.715
+    },
+    {
+      "hex": "#414048",
+      "role": "surface",
+      "share": 0.195
+    },
+    {
+      "hex": "#6d6c72",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#4133a5",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5841f4",
+      "role": "accent",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1671,
+    "atSeconds": 500.4,
+    "endSeconds": 501.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Continue with Google",
+      "Continue with Apple",
+      "Continue with Facebook"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email address",
+    "headline": "Name@example.com"
+  },
+  "crawler": {
+    "nodeId": "s226",
+    "depth": 225,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s225",
+        "via": "Open Email address",
+        "name": "Sign-in options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s227",
+        "via": "Tap “Email address”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

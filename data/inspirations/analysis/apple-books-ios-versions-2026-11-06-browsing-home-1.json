@@ -1,0 +1,149 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-browsing-home-1",
+  "screen_id": "apple-books-ios-versions-2026-11-06-browsing-home-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:03.450Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Browsing Home",
+  "flow_position": 1,
+  "name": "Home home",
+  "description": "Home screen with a 3-item tab bar and a primary action labelled “Explore the Book Store”. Dark theme, 10 text elements.",
+  "text": "9:41(\nHome\n5\nReading Goals\nFind a great book, set a goall and make reading a\ndaily habit.\nToday's Reading\n0:00\nof your 5-minute goal >\nExplore the Book Store\nTerms and Conditions ›\nlah\nLibrary\nHome\nBook Store",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "library",
+    "book store",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Library, Book Store",
+        "Navigation title reads “Home”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar and a primary action labelled “Explore the Book Store”. Dark theme, 10 text elements.",
+        "Calls to action: “Explore the Book Store”",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 53 in “Home”",
+        "Leads to “Lah sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:00 in the recording",
+        "Frame 3 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030103",
+      "role": "background",
+      "share": 0.923
+    },
+    {
+      "hex": "#1e1e20",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#3f3e40",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#616062",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#a2a1a2",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 3,
+    "atSeconds": 0,
+    "endSeconds": 1.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Home",
+      "Library",
+      "Book Store"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Explore the Book Store"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home",
+    "headline": "Today's Reading"
+  },
+  "crawler": {
+    "nodeId": "s001",
+    "depth": 0,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [],
+    "leadsTo": [
+      {
+        "to": "s002",
+        "via": "Tap “Home”",
+        "name": "Lah sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,160 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-restoring-purchases-1",
+  "screen_id": "kahoot-ios-versions-2026-11-06-restoring-purchases-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:41.028Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Restoring purchases",
+  "flow_position": 8,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans. Dark theme, 15 text elements.",
+  "text": "9:41 (\n.08l\nSettings\nProfile\nProfile Settings\nPrivacy Settings\nRestore Purchases\nDelete Account\nLog Out\nGeneral\nRestoring purchases...\nLanguage\nLiquid Glass\nMusic and haptics\nMusic\nSound Effects\nHaptics\nKahoot! Quiz games",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log Out”",
+        "Dialog over a dimmed background, covering 19% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 10 in “Activate student pass”",
+        "Reached from “Subscription plans”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 14:42 in the recording",
+        "Frame 2948 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.881
+    },
+    {
+      "hex": "#323033",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#59595c",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#0d2b52",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#6c6b6e",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2948,
+    "atSeconds": 882.9,
+    "endSeconds": 884.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.40625,
+        "w": 0.5,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log Out",
+    "headline": "Privacy Settings"
+  },
+  "crawler": {
+    "nodeId": "s441",
+    "depth": 442,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s440",
+        "via": "Tap “Privacy Settings”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s442",
+        "via": "Tap “Language”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

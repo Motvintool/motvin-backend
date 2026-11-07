@@ -1,0 +1,157 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-settings-2",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:56.779Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Settings",
+  "flow_position": 12,
+  "name": "Blocked Users toast",
+  "description": "Toast over a dimmed screen. Dark theme, 5 text elements.",
+  "text": "9:41 €\nBlocked Users\n..\nNo blocked users\nIt seems like you've had positive interactions with\neveryone so far! That's great news.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Blocked Users”",
+        "Toast over a dimmed background, covering 6% of the height from 91% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 16 in “Subscribing”",
+        "Reached from “Passwo flange password sheet”",
+        "Leads to “Manage Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:07 in the recording",
+        "Frame 2029 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e121c",
+      "role": "background",
+      "share": 0.919
+    },
+    {
+      "hex": "#2c313a",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#4b5059",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#b3b5c0",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#70727b",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 2029,
+    "atSeconds": 607.2,
+    "endSeconds": 609,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.90625,
+        "w": 0.84375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Blocked Users",
+    "headline": "Everyone so far! That's great news"
+  },
+  "crawler": {
+    "nodeId": "s267",
+    "depth": 266,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s266",
+        "via": "Open Blocked Users",
+        "name": "Passwo flange password sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s268",
+        "via": "Dismiss",
+        "name": "Manage Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

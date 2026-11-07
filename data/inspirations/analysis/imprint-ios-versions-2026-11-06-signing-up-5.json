@@ -1,0 +1,159 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-signing-up-5",
+  "screen_id": "imprint-ios-versions-2026-11-06-signing-up-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:04.744Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 29,
+  "name": "Create account",
+  "description": "Sign up bottom sheet over a dimmed screen, on top of Create account with 2 input fields. Dark theme, 7 text elements.",
+  "text": "9:41€\n<\nCreate an Account\nSave your progress, sync across\ndevices, and more\nEmail\nmotvintool@gmail.com\nPassword\nAlready have an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Already have an account? Log in”",
+        "Bottom sheet over a dimmed background, covering 41% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up bottom sheet over a dimmed screen, on top of Create account with 2 input fields. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 29 of 33 in “Want to invite”",
+        "Reached from “Create account”",
+        "Leads to “Select a course”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.2s at 2:15 in the recording",
+        "Frame 473 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11140d",
+      "role": "background",
+      "share": 0.828
+    },
+    {
+      "hex": "#2f322c",
+      "role": "surface",
+      "share": 0.107
+    },
+    {
+      "hex": "#4579dc",
+      "role": "accent",
+      "share": 0.047
+    },
+    {
+      "hex": "#284564",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#51534e",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 473,
+    "atSeconds": 135,
+    "endSeconds": 142.2,
+    "holdSeconds": 7.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.5625,
+        "w": 0.875,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Already have an account? Log in",
+    "headline": "Devices, and more"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Tap “devices, and more”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Open Select a course",
+        "name": "Select a course"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

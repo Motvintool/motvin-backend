@@ -1,0 +1,148 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-signing-in-to-apple-account-2",
+  "screen_id": "apple-books-ios-versions-2026-11-06-signing-in-to-apple-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:21.143Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing in to Apple Account",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open and a primary action labelled “Sign In”. Dark theme, 28 text elements.",
+  "text": "9:41(\nApple Account Sign-In Requested\nEmail or Phone Number\n• Forgot password?\nSign In\nCancel\ni\nW\nt\ne\nr\ny\nO\nk\nf\nh\nd\ng\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Apple Account Sign-In Requested”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Sign In”. Dark theme, 28 text elements.",
+        "Calls to action: “Sign In”",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in with phone number”",
+        "Reached from “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 5:36 in the recording",
+        "Frame 1142 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d21",
+      "role": "background",
+      "share": 0.658
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.16
+    },
+    {
+      "hex": "#5d5b5e",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.053
+    },
+    {
+      "hex": "#faf8fb",
+      "role": "text",
+      "share": 0.033
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 1142,
+    "atSeconds": 336.9,
+    "endSeconds": 342.9,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign In"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Apple Account Sign-In Requested",
+    "headline": "Email or Phone Number"
+  },
+  "crawler": {
+    "nodeId": "s159",
+    "depth": 158,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s158",
+        "via": "Type “Apple Account Sign-In Requested”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": []
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

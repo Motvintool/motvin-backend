@@ -1,0 +1,164 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-answering-profile-questions-11",
+  "screen_id": "mimo-ios-versions-2026-11-06-answering-profile-questions-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:18:50.987Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Answering profile questions",
+  "flow_position": 17,
+  "name": "Allow \"Mimo\" to track your dialog",
+  "description": "Dialog over a dimmed screen, on top of Other with a primary action labelled “Allow \"Mimo\" to track your”. Dark theme, 9 text elements.",
+  "text": "9:41C\nAllow \"Mimo\" to track your\nactivity across other companies'\napps and websites?\nWe do not use this data for any other\npurpose except understanding how\nour users discover Mimo and\nimproving your Mimo experience.\nAsk App Not to Track\nAllow\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow \"Mimo\" to track your”",
+        "Dialog over a dimmed background, covering 44% of the height from 28% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Other with a primary action labelled “Allow \"Mimo\" to track your”. Dark theme, 9 text elements.",
+        "Calls to action: “Allow \"Mimo\" to track your”, “Allow”",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 37 in “Onboarding”",
+        "Reached from “How long do you want to”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:28 in the recording",
+        "Frame 99 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171728",
+      "role": "background",
+      "share": 0.783
+    },
+    {
+      "hex": "#343146",
+      "role": "surface",
+      "share": 0.15
+    },
+    {
+      "hex": "#503b76",
+      "role": "accent",
+      "share": 0.033
+    },
+    {
+      "hex": "#575661",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#6f707a",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 99,
+    "atSeconds": 28.8,
+    "endSeconds": 30,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.28125,
+        "w": 0.6875,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow \"Mimo\" to track your",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow \"Mimo\" to track your",
+    "headline": "We do not use this data for any other",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Open Allow \"Mimo\" to track your",
+        "name": "How long do you want to"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Dismiss",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

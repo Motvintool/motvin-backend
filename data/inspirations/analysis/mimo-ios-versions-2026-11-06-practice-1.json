@@ -1,0 +1,166 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-practice-1",
+  "screen_id": "mimo-ios-versions-2026-11-06-practice-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:18:59.762Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Practice",
+  "flow_position": 1,
+  "name": "Leaderboard sheet",
+  "description": "Bottom sheet, on top of Loading state with a 4-item tab bar. Dark theme, 5 text elements.",
+  "text": "• S\n9:41€\n220\n1\n1\nPython Developer\n1. Intro to Python\nPractice\nLearn\nLeaderboard\nProfile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "learn",
+    "practice",
+    "leaderboard",
+    "profile",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Learn, Practice, Leaderboard, Profile",
+        "Navigation title reads “Leaderboard”",
+        "Bottom sheet, covering 52% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Loading state with a 4-item tab bar. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening Leaderboard sheet options”",
+        "Reached from “Loading state”",
+        "Leads to “1. Intro to Python dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 5:03 in the recording",
+        "Frame 1026 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#28294a",
+      "role": "background",
+      "share": 0.756
+    },
+    {
+      "hex": "#46477a",
+      "role": "surface",
+      "share": 0.212
+    },
+    {
+      "hex": "#676894",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#b19156",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#9890bb",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 1026,
+    "atSeconds": 303.6,
+    "endSeconds": 308.1,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.40625,
+        "w": 0.875,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Learn",
+      "Practice",
+      "Leaderboard",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Leaderboard",
+    "headline": "1. Intro to Python"
+  },
+  "crawler": {
+    "nodeId": "s125",
+    "depth": 124,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s124",
+        "via": "Wait 0.9s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s126",
+        "via": "Tap “1. Intro to Python”",
+        "name": "1. Intro to Python dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

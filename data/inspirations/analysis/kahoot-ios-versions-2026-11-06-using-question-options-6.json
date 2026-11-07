@@ -1,0 +1,160 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-using-question-options-6",
+  "screen_id": "kahoot-ios-versions-2026-11-06-using-question-options-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:23.414Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Using question options",
+  "flow_position": 36,
+  "name": "Single select dialog",
+  "description": "Dialog over a dimmed screen, on top of (optional) sheet. Dark theme, 13 text elements.",
+  "text": "9:41\n.ll\nQuiz\nDone\nMulti-select\nSingle select\nParticipants can only select one of the answers.\nMulti-select\nParticipants can select multiple answers before\nsubmitting.\nAdd answer\nAdd answer\n(optional)\n(optional)\nAdd more answers\nPlay\nPlay",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "play",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Single select”",
+        "Dialog over a dimmed background, covering 27% of the height from 42% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of (optional) sheet. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 41 in “Add Media”",
+        "Reached from “(optional) sheet”",
+        "Leads to “Play”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:11 in the recording",
+        "Frame 1839 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121110",
+      "role": "background",
+      "share": 0.682
+    },
+    {
+      "hex": "#2a2925",
+      "role": "surface",
+      "share": 0.276
+    },
+    {
+      "hex": "#403f41",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#595759",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#716f71",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 1839,
+    "atSeconds": 551.1,
+    "endSeconds": 552,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.421875,
+        "w": 0.875,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Single select",
+    "headline": "Single select",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s267",
+    "depth": 267,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s266",
+        "via": "Tap “Play”",
+        "name": "(optional) sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s268",
+        "via": "Back to Other",
+        "name": "Play"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

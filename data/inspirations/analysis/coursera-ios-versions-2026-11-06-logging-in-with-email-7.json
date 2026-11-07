@@ -1,0 +1,159 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-logging-in-with-email-7",
+  "screen_id": "coursera-ios-versions-2026-11-06-logging-in-with-email-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:50.209Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 11,
+  "name": "Sign in with email",
+  "description": "Login toast over a dimmed screen, on top of Form with 2 input fields and a primary action labelled “Sign In Failed”. Dark theme, 8 text elements.",
+  "text": "9:41€\noll\n<\ncoursera\nEmail\nmotvintool@gmail.com\nPassword\nSign In Failed\nUnauthorized request.\nOK",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign In Failed”",
+        "Toast over a dimmed background, covering 3% of the height from 45% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Form with 2 input fields and a primary action labelled “Sign In Failed”. Dark theme, 8 text elements.",
+        "Calls to action: “Sign In Failed”",
+        "8 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 16 in “Logging in with email”",
+        "Reached from “Form”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 9:50 in the recording",
+        "Frame 1971 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020202",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#242b33",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#4e5156",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#a3a3a3",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 1971,
+    "atSeconds": 590.4,
+    "endSeconds": 591.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.453125,
+        "w": 0.6875,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign In Failed"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign In Failed",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s253",
+    "depth": 252,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s252",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s254",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}
