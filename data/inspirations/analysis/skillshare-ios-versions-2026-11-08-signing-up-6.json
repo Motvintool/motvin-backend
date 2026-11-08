@@ -1,0 +1,154 @@
+{
+  "screenId": "skillshare-ios-versions-2026-11-08-signing-up-6",
+  "screen_id": "skillshare-ios-versions-2026-11-08-signing-up-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:51:59.195Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 7,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field, a paged carousel and a primary action labelled “Continue”. Light theme, 18 text elements.",
+  "text": "9:41 C\nauth.skillshare.com\nEmail address*\nmotvintool@gmail.com\nPassword* -\n••••••••••\nYour password must contain:\nAt least 8 characters\n• At least 3 of the following:\n• Lower case letters (a-z)\n• Upper case letters (A-Z)\n/ Numbers (0-9)\n^\nContinue\nAlready have an account? Log in\nOR\nG\nContinue with Google\nf Continue with Facebook\nContinue with Apple",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email address*”",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field, a paged carousel and a primary action labelled “Continue”. Light theme, 18 text elements.",
+        "Calls to action: “Continue”, “Continue with Google”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 11 in “External sign-in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:29 in the recording",
+        "Frame 103 of 1270 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8fafa",
+      "role": "background",
+      "share": 0.779
+    },
+    {
+      "hex": "#929a95",
+      "role": "text",
+      "share": 0.065
+    },
+    {
+      "hex": "#dbe1e1",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#52d898",
+      "role": "accent",
+      "share": 0.029
+    },
+    {
+      "hex": "#c5c5c4",
+      "role": "surface",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "Skillshare.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1270,
+    "frame": 103,
+    "atSeconds": 29.7,
+    "endSeconds": 31.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email address*",
+    "headline": "Your password must contain"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Tap “Email address”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Tap “Email address*”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

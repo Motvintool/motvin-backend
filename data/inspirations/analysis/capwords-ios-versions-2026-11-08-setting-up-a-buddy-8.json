@@ -1,0 +1,154 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-setting-up-a-buddy-8",
+  "screen_id": "capwords-ios-versions-2026-11-08-setting-up-a-buddy-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:45.078Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting up a buddy",
+  "flow_position": 16,
+  "name": "Permission prompt",
+  "description": "Permission screen with a primary action labelled “Turn On All”. Dark theme, 10 text elements.",
+  "text": "CapWords\n9:41(\nHealth Access\nHealth\n\"CapWords\" would like to access\nand update your Health data.\nTurn On All\nAllow \"CapWords\" to read\nActive Energy\nHeart Rate Variability\nSleep\nAllow\nDon't Allow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Health Access”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Turn On All”. Dark theme, 10 text elements.",
+        "Calls to action: “Turn On All”, “Allow \"CapWords\" to read”, “Allow”",
+        "10 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 19 in “Let's bring your buddy”",
+        "Reached from “Apple Health Context sheet”",
+        "Leads to “Permission prompt”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 4:01 in the recording",
+        "Frame 815 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#212023",
+      "role": "background",
+      "share": 0.773
+    },
+    {
+      "hex": "#413f44",
+      "role": "surface",
+      "share": 0.118
+    },
+    {
+      "hex": "#0c0d0b",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#5c5b5e",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 815,
+    "atSeconds": 241.2,
+    "endSeconds": 244.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Turn On All",
+      "Allow \"CapWords\" to read",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Health Access",
+    "headline": "\"CapWords\" would like to access",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s110",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s109",
+        "via": "Open Health Access",
+        "name": "Apple Health Context sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s111",
+        "via": "Tap “Health Access”",
+        "name": "Permission prompt"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

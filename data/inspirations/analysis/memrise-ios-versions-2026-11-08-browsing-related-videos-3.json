@@ -1,0 +1,159 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-browsing-related-videos-3",
+  "screen_id": "memrise-ios-versions-2026-11-08-browsing-related-videos-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:11.448Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Browsing related videos",
+  "flow_position": 2,
+  "name": "1DEAS dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state. Dark theme, 9 text elements.",
+  "text": "9:41C\n|\nB B C\n1DEAS\nA BRIEF HISTORY\nA BRIEF HISTOF\nOF CURRY\nOF SUSHI\n3:15\nHow curry from India conquered\nHow we fell in love with\nBritain | Edible Histories...\nBBC Ideas\n6 years ago\n5 years ago",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bbc ideas",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “1DEAS”",
+        "Dialog over a dimmed background, covering 50% of the height from 9% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Player options”",
+        "Reached from “Player — loading”",
+        "Leads to “Player”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:36 in the recording",
+        "Frame 1323 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.581
+    },
+    {
+      "hex": "#392d26",
+      "role": "surface",
+      "share": 0.252
+    },
+    {
+      "hex": "#524c4c",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#9b673f",
+      "role": "accent",
+      "share": 0.026
+    },
+    {
+      "hex": "#211816",
+      "role": "surface",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1323,
+    "atSeconds": 396,
+    "endSeconds": 397.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.09375,
+        "w": 0.875,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "1DEAS",
+    "headline": "1DEAS",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s234",
+    "depth": 233,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s233",
+        "via": "Wait 0.6s",
+        "name": "Player — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s235",
+        "via": "Back to Player",
+        "name": "Player"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-logging-back-in-3",
+  "screen_id": "elevate-ios-versions-2026-11-08-logging-back-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:19.128Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging back in",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 7 text elements.",
+  "text": "9:41 €\nLog in\nContinue with Apple\nContinue with Google\nf\nContinue with Facebook\nOR\nContinue with Email",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue with Apple”, “Continue with Google”, “Continue with Facebook”, “Continue with Email”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 7 in “Welcome back to Elevate”",
+        "Reached from “Sign in”",
+        "Leads to “Sign in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:22 in the recording",
+        "Frame 1876 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.947
+    },
+    {
+      "hex": "#4a484a",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#6a686a",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#0ca2d4",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#1a445f",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1876,
+    "atSeconds": 562.5,
+    "endSeconds": 563.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Continue with Google",
+      "Continue with Facebook",
+      "Continue with Email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s301",
+    "depth": 300,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s300",
+        "via": "Wait 3.9s",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s302",
+        "via": "Wait 0.6s",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

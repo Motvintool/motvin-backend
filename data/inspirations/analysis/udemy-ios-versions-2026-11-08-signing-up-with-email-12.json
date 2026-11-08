@@ -1,0 +1,164 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-signing-up-with-email-12",
+  "screen_id": "udemy-ios-versions-2026-11-08-signing-up-with-email-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:07.337Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Signing up with email",
+  "flow_position": 15,
+  "name": "Sian up",
+  "description": "Messages bottom sheet over a dimmed screen, on top of OTP verification with the keyboard open. Dark theme, 28 text elements.",
+  "text": "9:41C\nodll\n#‡‡\nCheck your inbox\nEnter the 6-character code we sent to motvintool@gmail.com to\nfinish your sign-up.\n6-character code\nSian up\nFrom Gmail\n246066\ni\nW\nt\ne\nO\nk\nf\nd\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n→\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messages",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sian up”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen, on top of OTP verification with the keyboard open. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 24 in “Logging in with email”",
+        "Reached from “OTP verification”",
+        "Leads to “Check your inbox”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:33 in the recording",
+        "Frame 116 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.499
+    },
+    {
+      "hex": "#232124",
+      "role": "surface",
+      "share": 0.337
+    },
+    {
+      "hex": "#464448",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#626062",
+      "role": "text",
+      "share": 0.028
+    },
+    {
+      "hex": "#8533bd",
+      "role": "accent",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 116,
+    "atSeconds": 33.6,
+    "endSeconds": 35.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.546875,
+        "w": 0.8125,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sian up",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bOTP\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Tap “Check your inbox”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Tap “Check your inbox”",
+        "name": "Check your inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

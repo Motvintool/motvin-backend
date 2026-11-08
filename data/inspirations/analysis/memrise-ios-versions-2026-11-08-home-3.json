@@ -1,0 +1,161 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-home-3",
+  "screen_id": "memrise-ios-versions-2026-11-08-home-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:52.845Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 2,
+  "name": "Start learning dialog",
+  "description": "Dialog over a dimmed screen, on top of Home home. Dark theme, 16 text elements.",
+  "text": "9:41C\n•0\nWelcome offer: 50% off Memrise\nLifetime - This offer ends soon!\nCurrent Word List\nOxford 3000: A1 Level\nStart learning\nImmerse\nWatch a video to immerse\nyourself in the language\nPronunciation\nCo tha lanale nan\nYour streak\nThe days in a row you've made progress\ntowards fluency\nO day(s)\nCurrent\nLongest 0 day(s)\nEach day watch a video, practice a conversation,\nlearn or review words to keep your streak growing.\nYou can alter your streak in your Learning Settings.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "offer",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Start learning”",
+        "Dialog over a dimmed background, covering 45% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Home home. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Starting a learning”",
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:57 in the recording",
+        "Frame 396 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#223042",
+      "role": "background",
+      "share": 0.666
+    },
+    {
+      "hex": "#3f4b5c",
+      "role": "surface",
+      "share": 0.215
+    },
+    {
+      "hex": "#756d50",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#7e6511",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#4f4723",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 396,
+    "atSeconds": 117.6,
+    "endSeconds": 119.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Start learning",
+    "headline": "Start learning"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Tap “Start learning”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

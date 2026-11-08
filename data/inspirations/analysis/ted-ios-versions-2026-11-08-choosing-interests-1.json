@@ -1,0 +1,147 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-choosing-interests-1",
+  "screen_id": "ted-ios-versions-2026-11-08-choosing-interests-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:24.128Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Choosing interests",
+  "flow_position": 16,
+  "name": "What interests you?",
+  "description": "Other screen with a primary action labelled “Save”. Dark theme, 15 text elements.",
+  "text": "•1l 3\n9:41(\nWhat interests you?\nArt & Design\nBusiness\nClimate Change\nSociety & Culture\nEducation\nHealth\nNature\nMusic/Performance\nPsychology\nPersonal Growth\nTechnology\nScience\nSurprise Me\nSave\nSkip this for now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a primary action labelled “Save”. Dark theme, 15 text elements.",
+        "Calls to action: “Save”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 20 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Save Password? dialog”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:51 in the recording",
+        "Frame 188 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.92
+    },
+    {
+      "hex": "#3f3d40",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#5c5a5d",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#441c1b",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#706e71",
+      "role": "text",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 188,
+    "atSeconds": 51.9,
+    "endSeconds": 52.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "What interests you?"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 18,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Wait 6s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Wait 2.4s",
+        "name": "Save Password? dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

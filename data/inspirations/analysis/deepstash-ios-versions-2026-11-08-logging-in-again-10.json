@@ -1,0 +1,168 @@
+{
+  "screenId": "deepstash-ios-versions-2026-11-08-logging-in-again-10",
+  "screen_id": "deepstash-ios-versions-2026-11-08-logging-in-again-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:45.609Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in again",
+  "flow_position": 12,
+  "name": "OTP verification",
+  "description": "Verification code bottom sheet, on top of OTP verification with the keyboard open and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+  "text": "9:41€\n•oll\nSkip\n‹ Check your email\nWe just sent an email to\nmotvintool@gmail.com. Tap on the Sign in\nbutton inside or enter the code below.\n9\n5\n9\n6\n5\nDidn't get the email? Resend in 0:24\nContinue\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS\n•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Didn't get the email? Resend in 0:24”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet, covering 53% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code bottom sheet, on top of OTP verification with the keyboard open and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+        "Calls to action: “Continue”",
+        "30 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 16 in “Searching”",
+        "Reached from “OTP verification”",
+        "Leads to “Deepstash toast — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 11:34 in the recording",
+        "Frame 2317 of 2364 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1e",
+      "role": "background",
+      "share": 0.66
+    },
+    {
+      "hex": "#3f3d40",
+      "role": "surface",
+      "share": 0.244
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#777577",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#a7a5a7",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Deepstash.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2364,
+    "frame": 2317,
+    "atSeconds": 694.8,
+    "endSeconds": 695.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.34375,
+        "w": 0.9375,
+        "h": 0.53125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Didn't get the email? Resend in 0:24",
+    "headline": "Check your email"
+  },
+  "crawler": {
+    "nodeId": "s314",
+    "depth": 314,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s313",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s315",
+        "via": "Open Shake the world",
+        "name": "Deepstash toast — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

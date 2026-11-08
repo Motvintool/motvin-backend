@@ -1,0 +1,169 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-profile-9",
+  "screen_id": "capwords-ios-versions-2026-11-08-profile-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:57.588Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 26,
+  "name": "Settings",
+  "description": "Settings dialog over a dimmed screen, on top of Settings with a 4-item tab bar. Dark theme, 18 text elements.",
+  "text": "9:411\nCapWords\nProfile\nSystem =\nAppearance\nEnglish >\nInterface Language\nFree >\nManage Subscription\nClear Audio Cache\nDon't worry - the feature will still\nwork. This only removes previously\n>\ncached Al audio files\nClear\nH\nLater\nContact & Support\nSuggest a Feature\n& Our Story\noojo\nReview\nProfile\nCapture\nSpeak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "subscription",
+    "capture",
+    "speak",
+    "review",
+    "settings",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Capture, Speak, Review, Profile",
+        "Navigation title reads “Clear”",
+        "Dialog over a dimmed background, covering 27% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings with a 4-item tab bar. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 35 in “Capture”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:23 in the recording",
+        "Frame 1683 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151316",
+      "role": "background",
+      "share": 0.722
+    },
+    {
+      "hex": "#312f30",
+      "role": "surface",
+      "share": 0.175
+    },
+    {
+      "hex": "#4b4a4c",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#f8f6f9",
+      "role": "text",
+      "share": 0.023
+    },
+    {
+      "hex": "#5d5b5e",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 1683,
+    "atSeconds": 503.7,
+    "endSeconds": 505.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.359375,
+        "w": 0.6875,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Capture",
+      "Speak",
+      "Review",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Clear",
+    "headline": "Free"
+  },
+  "crawler": {
+    "nodeId": "s231",
+    "depth": 233,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s230",
+        "via": "Tap “Free >”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s232",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

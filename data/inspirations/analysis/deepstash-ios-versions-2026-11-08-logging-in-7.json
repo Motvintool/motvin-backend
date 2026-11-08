@@ -1,0 +1,155 @@
+{
+  "screenId": "deepstash-ios-versions-2026-11-08-logging-in-7",
+  "screen_id": "deepstash-ios-versions-2026-11-08-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:12.204Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 13,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+  "text": "9:41 C\nSkip\n‹ Check your email\nWe just sent an email to\nmotvintool@gmail.com. Tap on the Sign in\nbutton inside or enter the code below.\n5\n4\n3\n2\n1\n1\nDidn't get the email? Resend in 0:16\nContinue\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS\n•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your email”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+        "Calls to action: “Continue”",
+        "31 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 26 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:43 in the recording",
+        "Frame 154 of 2364 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1e",
+      "role": "background",
+      "share": 0.666
+    },
+    {
+      "hex": "#3e3c3e",
+      "role": "surface",
+      "share": 0.24
+    },
+    {
+      "hex": "#6e6c6e",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#565356",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#969496",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Deepstash.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2364,
+    "frame": 154,
+    "atSeconds": 43.8,
+    "endSeconds": 46.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your email",
+    "headline": "Check your email"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Open Start your journey",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

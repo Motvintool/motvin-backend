@@ -1,0 +1,146 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-settings-16",
+  "screen_id": "elevate-ios-versions-2026-11-08-settings-16",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:17.568Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Settings",
+  "flow_position": null,
+  "name": "Settings — loading",
+  "description": "Loading state of Settings. Dark theme, 5 text elements.",
+  "text": "9:41 C\n•ll\n<\nDark Mode\nON\nOFF\nSYSTEM DEFAULT",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Dark Mode”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Settings. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:50 in the recording",
+        "Frame 1769 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.981
+    },
+    {
+      "hex": "#444346",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#646265",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#1b4d5d",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#b0aeb0",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1769,
+    "atSeconds": 530.7,
+    "endSeconds": 531.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Dark Mode",
+    "headline": "SYSTEM DEFAULT"
+  },
+  "crawler": {
+    "nodeId": "s285",
+    "depth": 284,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s284",
+        "via": "Tap “Settings”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s286",
+        "via": "Wait 0.6s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

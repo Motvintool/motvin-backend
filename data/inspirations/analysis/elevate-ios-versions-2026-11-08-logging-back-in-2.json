@@ -1,0 +1,148 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-logging-back-in-2",
+  "screen_id": "elevate-ios-versions-2026-11-08-logging-back-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:19.041Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging back in",
+  "flow_position": 3,
+  "name": "Sign in",
+  "description": "Login screen with a primary action labelled “Log in”. Dark theme, 6 text elements.",
+  "text": "9:41C\nAlready have an account?\nContinue your personalized training.\nLog in\nNew to Elevate?\nStart improving with 40+ games.\nGet started",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue your personalized training”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in”. Dark theme, 6 text elements.",
+        "Calls to action: “Log in”, “Get started”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 7 in “Welcome back to Elevate”",
+        "Reached from “Welcome back to Elevate”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 9:18 in the recording",
+        "Frame 1873 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222123",
+      "role": "background",
+      "share": 0.878
+    },
+    {
+      "hex": "#08c1f8",
+      "role": "accent",
+      "share": 0.049
+    },
+    {
+      "hex": "#374045",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#5e5c5e",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#1381a3",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1873,
+    "atSeconds": 558.3,
+    "endSeconds": 562.2,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in",
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue your personalized training",
+    "headline": "Already have an account?"
+  },
+  "crawler": {
+    "nodeId": "s300",
+    "depth": 299,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s299",
+        "via": "Wait 3.3s",
+        "name": "Welcome back to Elevate"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s301",
+        "via": "Wait 3.9s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

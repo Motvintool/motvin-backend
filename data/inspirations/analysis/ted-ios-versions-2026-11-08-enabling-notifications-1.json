@@ -1,0 +1,175 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-enabling-notifications-1",
+  "screen_id": "ted-ios-versions-2026-11-08-enabling-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:24.700Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Enabling notifications",
+  "flow_position": 1,
+  "name": "Notifications permission",
+  "description": "Permission toast over a dimmed screen, on top of Settings with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 17 text elements.",
+  "text": "9:41€\nTED\nNew on TED\n\"TED\" Would Like to Send You\n16\nNotifications\nNotifications may include alerts,\nMU\nsounds and icon badges. These can\nV\nbe configured in Settings.\n40\n2 d\nDon't Allow\nAllow\nMaybe later\nTr\nSurprise me!\nLibrary\nBrowse\nPodcasts\nHome\nSurprise Me!",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "home",
+    "browse",
+    "podcasts",
+    "library",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Browse, Podcasts, Library",
+        "Navigation title reads “\"TED\" Would Like to Send You”",
+        "Toast over a dimmed background, covering 2% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen, on top of Settings with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow”",
+        "17 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “New on TED”",
+        "Reached from “Settings”",
+        "Leads to “New on TED”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:06 in the recording",
+        "Frame 225 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080508",
+      "role": "background",
+      "share": 0.571
+    },
+    {
+      "hex": "#5f2318",
+      "role": "surface",
+      "share": 0.196
+    },
+    {
+      "hex": "#2d161f",
+      "role": "surface",
+      "share": 0.136
+    },
+    {
+      "hex": "#5a3e37",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#7b4014",
+      "role": "accent",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 225,
+    "atSeconds": 66.9,
+    "endSeconds": 68.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.21875,
+        "y": 0.40625,
+        "w": 0.15625,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Home",
+      "Browse",
+      "Podcasts",
+      "Library"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"TED\" Would Like to Send You",
+    "headline": "Sounds and icon badges. These can"
+  },
+  "crawler": {
+    "nodeId": "s026",
+    "depth": 25,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Tap “Stay up-to-date with”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s027",
+        "via": "Tap “New on TED”",
+        "name": "New on TED"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

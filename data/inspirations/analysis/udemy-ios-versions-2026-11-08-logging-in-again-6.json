@@ -1,0 +1,168 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-logging-in-again-6",
+  "screen_id": "udemy-ios-versions-2026-11-08-logging-in-again-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:23.311Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Logging in again",
+  "flow_position": 10,
+  "name": "Messages",
+  "description": "Messages bottom sheet over a dimmed screen, on top of OTP verification with the keyboard open and a primary action labelled “log in.”. Dark theme, 28 text elements.",
+  "text": "9:41€\nodll\n##‡#\nCheck your inbox\nEnter the 6-character code we sent to motvintool@gmail.com to\nlog in.\n144676\nx\nLog in to a different account\nLoa in\ni\nW\nt\ne\nO\nk\nf\nd\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n→\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messages",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Loa in”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen, on top of OTP verification with the keyboard open and a primary action labelled “log in.”. Dark theme, 28 text elements.",
+        "Calls to action: “log in.”",
+        "28 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 14 in “Logging in with email”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:48 in the recording",
+        "Frame 1567 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.513
+    },
+    {
+      "hex": "#242125",
+      "role": "surface",
+      "share": 0.321
+    },
+    {
+      "hex": "#474549",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#626062",
+      "role": "text",
+      "share": 0.028
+    },
+    {
+      "hex": "#682d90",
+      "role": "accent",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 1567,
+    "atSeconds": 468.3,
+    "endSeconds": 470.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.546875,
+        "w": 0.8125,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "log in."
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Loa in",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s199",
+    "depth": 199,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bOTP\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s198",
+        "via": "Back to Messages",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s200",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

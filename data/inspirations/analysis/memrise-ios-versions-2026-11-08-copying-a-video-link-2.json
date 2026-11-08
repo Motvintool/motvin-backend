@@ -1,0 +1,158 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-copying-a-video-link-2",
+  "screen_id": "memrise-ios-versions-2026-11-08-copying-a-video-link-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:10.629Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Copying a video link",
+  "flow_position": 2,
+  "name": "Captions sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Player. Dark theme, 10 text elements.",
+  "text": "9:41C\nB B C\n10-0S\nQuality\n720р >\nSpeed\nNormal >\nCaptions\nOff >\nAudio Track\nEnglish (US) original ›\nMore options\n•••",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "more options",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Captions”",
+        "Bottom sheet over a dimmed background, covering 22% of the height from 75% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Player. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Opening Player options”",
+        "Reached from “Player”",
+        "Leads to “Copy video URL”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:27 in the recording",
+        "Frame 1292 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.511
+    },
+    {
+      "hex": "#2a2420",
+      "role": "surface",
+      "share": 0.434
+    },
+    {
+      "hex": "#45403f",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#59575b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#6b717c",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1292,
+    "atSeconds": 387,
+    "endSeconds": 387.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.75,
+        "w": 0.84375,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Captions",
+    "headline": "Quality",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s227",
+    "depth": 226,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s226",
+        "via": "Back to Captions sheet",
+        "name": "Player"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s228",
+        "via": "Open Other",
+        "name": "Copy video URL"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-allowing-notifications-2",
+  "screen_id": "elevate-ios-versions-2026-11-08-allowing-notifications-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:30:56.767Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Allowing notifications",
+  "flow_position": 71,
+  "name": "Notifications permission",
+  "description": "Permission screen with a primary action labelled “Allow”. Dark theme, 8 text elements.",
+  "text": "9:41 €\nGet a reminder to play\ndaily\nElevate would like to send\nyou notifications\nDon't allow\nAllow\n1\nReminders help you build good habits\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get a reminder to play”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow”. Dark theme, 8 text elements.",
+        "Calls to action: “Allow”",
+        "8 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 71 of 147 in “Onboarding”",
+        "Reached from “Mood, focus, and self-confidence”",
+        "Leads to “Notifications permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:38 in the recording",
+        "Frame 534 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242224",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#09bff7",
+      "role": "accent",
+      "share": 0.052
+    },
+    {
+      "hex": "#353f44",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#656365",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#3dd0fb",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 534,
+    "atSeconds": 158.7,
+    "endSeconds": 160.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get a reminder to play",
+    "headline": "Daily",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s076",
+    "depth": 75,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s075",
+        "via": "Wait 1.8s",
+        "name": "Mood, focus, and self-confidence"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s077",
+        "via": "Wait 1.8s",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

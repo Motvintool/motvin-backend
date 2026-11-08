@@ -1,0 +1,168 @@
+{
+  "screenId": "skillshare-ios-versions-2026-11-08-signing-up-8",
+  "screen_id": "skillshare-ios-versions-2026-11-08-signing-up-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:51:59.382Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 9,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen, on top of Sign in with email with 1 input field and a primary action labelled “Save Password?”. Light theme, 15 text elements.",
+  "text": "9:41 (\n•Il\nauth.skillshare.com\nEmail address*\nmotvintool@gmail.com\nPassword*\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nSave\nNever for This Website\nNot Now\nOR\nG\nContinue with Google\nContinue with Facebook\nContinue with Apple",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Securely store your password so it's”",
+        "Dialog over a dimmed background, covering 45% of the height from 27% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Sign in with email with 1 input field and a primary action labelled “Save Password?”. Light theme, 15 text elements.",
+        "Calls to action: “Save Password?”, “Save”, “Continue with Google”, “Continue with Facebook”",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 11 in “External sign-in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:32 in the recording",
+        "Frame 112 of 1270 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cbcbcc",
+      "role": "background",
+      "share": 0.62
+    },
+    {
+      "hex": "#ebeced",
+      "role": "surface",
+      "share": 0.164
+    },
+    {
+      "hex": "#7b807d",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#a0a3a3",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#027ef8",
+      "role": "accent",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "Skillshare.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1270,
+    "frame": 112,
+    "atSeconds": 32.7,
+    "endSeconds": 33.9,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.265625,
+        "w": 0.8125,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save",
+      "Continue with Google",
+      "Continue with Facebook"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Securely store your password so it's",
+    "headline": "Securely store your password so it's"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Open Securely store your password so it's",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,158 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-quests-1",
+  "screen_id": "elevate-ios-versions-2026-11-08-quests-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:09.564Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Quests",
+  "flow_position": 9,
+  "name": "Today home",
+  "description": "Home screen with a 5-item tab bar and a paged carousel. Dark theme, 10 text elements.",
+  "text": "9:41(\nQuests\nGet rewards by completing\nchallenges every day.\nDAILY QUESTS\n16 HOURS LEFT\nPlay 5 games\n1/5\nUPCOMING\nRevealed in 2 days\nRevealed in 5 days\nQuests\nLeagues\nToday\nGames\nMe",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "rewards",
+    "today",
+    "quests",
+    "leagues",
+    "games",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Today, Quests, Leagues, Games, Me",
+        "Navigation title reads “Get rewards by completing”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 5-item tab bar and a paged carousel. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 26 in “Today”",
+        "Reached from “Today home”",
+        "Leads to “Subscription plans — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 6:48 in the recording",
+        "Frame 1564 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232123",
+      "role": "background",
+      "share": 0.86
+    },
+    {
+      "hex": "#434143",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#51360a",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#5f5e61",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#757375",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1564,
+    "atSeconds": 408.6,
+    "endSeconds": 410.7,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Today",
+      "Quests",
+      "Leagues",
+      "Games",
+      "Me"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get rewards by completing",
+    "headline": "Play 5 games"
+  },
+  "crawler": {
+    "nodeId": "s209",
+    "depth": 208,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s208",
+        "via": "Open Get rewards by completing",
+        "name": "Today home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s210",
+        "via": "Wait 4.5s",
+        "name": "Subscription plans — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

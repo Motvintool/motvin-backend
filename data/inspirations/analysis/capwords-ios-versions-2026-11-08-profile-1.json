@@ -1,0 +1,170 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-profile-1",
+  "screen_id": "capwords-ios-versions-2026-11-08-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:55.224Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Profile",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Capture home with a 4-item tab bar. Dark theme, 8 text elements.",
+  "text": "9:41 (\nCapWords\nProfile\nMotvin\nEnglish\n© Upgrade to Premium\nGo Premium Learn\nEnglish Faster!\nStart 3-Day Free Trial\nLearning Settings\noojo\nProfile\nReview\nSpeak\nCapture",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "premium",
+    "capture",
+    "speak",
+    "review",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Capture, Speak, Review, Profile",
+        "Navigation title reads “English Faster!”",
+        "Dialog over a dimmed background, covering 72% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Capture home with a 4-item tab bar. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Profile”",
+        "Reached from “Capture home”",
+        "Leads to “Profile”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:37 in the recording",
+        "Frame 1531 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1b1e",
+      "role": "background",
+      "share": 0.67
+    },
+    {
+      "hex": "#c3a790",
+      "role": "text",
+      "share": 0.09
+    },
+    {
+      "hex": "#393637",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#b9896b",
+      "role": "accent",
+      "share": 0.067
+    },
+    {
+      "hex": "#6f625a",
+      "role": "surface",
+      "share": 0.048
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 1531,
+    "atSeconds": 457.5,
+    "endSeconds": 459.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.03125,
+        "w": 0.8125,
+        "h": 0.71875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [
+      "Capture",
+      "Speak",
+      "Review",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "English Faster!",
+    "headline": "English Faster!"
+  },
+  "crawler": {
+    "nodeId": "s207",
+    "depth": 209,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s206",
+        "via": "Open English Faster!",
+        "name": "Capture home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s208",
+        "via": "Tap “Profile”",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

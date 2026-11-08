@@ -1,0 +1,159 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-reviewing-account-pages-3",
+  "screen_id": "udemy-ios-versions-2026-11-08-reviewing-account-pages-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:21.196Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Reviewing account pages",
+  "flow_position": 138,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen, on top of Subscription. Dark theme, 13 text elements.",
+  "text": "9:41€\nall\nSubscription\nActive plans\nYou don't have any active subscriptions\nSubscription plans available\nPersonal plan\nNew opportunities await. Sign up for Personal Plan to\nget all this and more:\nAccess to 28,000 top courses\nCourses in tech, business, and more\nPractice tests, exercises, and Q&A\nStart subscription\nLearn more\nStarting at 7849.92 per month. Cancel any time.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "subscription",
+    "paywall",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subscription”",
+        "Toast over a dimmed background, covering 8% of the height from 89% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen, on top of Subscription. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 138 of 153 in “Subscribing”",
+        "Reached from “Subscription”",
+        "Leads to “Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:54 in the recording",
+        "Frame 1384 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040305",
+      "role": "background",
+      "share": 0.78
+    },
+    {
+      "hex": "#222023",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#4a494c",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#d6d6d8",
+      "role": "text",
+      "share": 0.017
+    },
+    {
+      "hex": "#a2a2a4",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 1384,
+    "atSeconds": 414.3,
+    "endSeconds": 415.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.890625,
+        "w": 0.84375,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Subscription",
+    "headline": "Start subscription"
+  },
+  "crawler": {
+    "nodeId": "s173",
+    "depth": 173,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s172",
+        "via": "Tap “Subscription”",
+        "name": "Subscription"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s174",
+        "via": "Back to Account",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

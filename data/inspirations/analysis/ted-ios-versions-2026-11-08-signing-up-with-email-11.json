@@ -1,0 +1,163 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-signing-up-with-email-11",
+  "screen_id": "ted-ios-versions-2026-11-08-signing-up-with-email-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:24.205Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Signing up with email",
+  "flow_position": 17,
+  "name": "Save Password? dialog",
+  "description": "Dialog over a dimmed screen, on top of Other with a primary action labelled “Save Password?”. Dark theme, 10 text elements.",
+  "text": "9:41(\noll\nWhat interests you?\nArt & Design\nBusiness\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nNot Now\nSave\nSave\nSkip this for now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Save Password?”",
+        "Dialog over a dimmed background, covering 19% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Other with a primary action labelled “Save Password?”. Dark theme, 10 text elements.",
+        "Calls to action: “Save Password?”, “Save”, “Save”",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 20 in “Onboarding”",
+        "Reached from “What interests you?”",
+        "Leads to “What interests you?”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:53 in the recording",
+        "Frame 180 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0c0f",
+      "role": "background",
+      "share": 0.895
+    },
+    {
+      "hex": "#2f2d30",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#4f4e4f",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#666467",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#2e5375",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 180,
+    "atSeconds": 53.1,
+    "endSeconds": 54.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.4375,
+        "w": 0.09375,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save",
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Save Password?",
+    "headline": "What interests you?"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Wait 2.4s",
+        "name": "What interests you?"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Dismiss",
+        "name": "What interests you?"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

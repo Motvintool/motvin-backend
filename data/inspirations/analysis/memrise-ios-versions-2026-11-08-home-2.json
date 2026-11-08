@@ -1,0 +1,154 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-home-2",
+  "screen_id": "memrise-ios-versions-2026-11-08-home-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:52.624Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a row of 3 category chips. Dark theme, 10 text elements.",
+  "text": "9:41C\nMy words\nHeard\nUsed\nLearned\n0 words\n0 words\n0 words\nThis space is looking empty... for now!\nStart learning, and your words will show up\nhere.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "category",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My words”",
+        "Category strip: Heard, Used, Learned",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 3 category chips. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “My words”",
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:54 in the recording",
+        "Frame 386 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2d3a4e",
+      "role": "background",
+      "share": 0.838
+    },
+    {
+      "hex": "#4d596d",
+      "role": "surface",
+      "share": 0.122
+    },
+    {
+      "hex": "#727885",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#8a92a0",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#856c60",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 386,
+    "atSeconds": 114.3,
+    "endSeconds": 116.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [
+      "Heard",
+      "Used",
+      "Learned"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My words",
+    "headline": "Heard"
+  },
+  "crawler": {
+    "nodeId": "s059",
+    "depth": 58,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s058",
+        "via": "Open My words",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s060",
+        "via": "Wait 1.8s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

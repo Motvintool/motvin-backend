@@ -1,0 +1,157 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-choosing-captions-and-audio-2",
+  "screen_id": "memrise-ios-versions-2026-11-08-choosing-captions-and-audio-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:10.164Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Choosing captions and audio",
+  "flow_position": 2,
+  "name": "Captions sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Player. Dark theme, 9 text elements.",
+  "text": "9:41C\nBB C\nQuality\n720р >\nSpeed\nNormal >\nCaptions\nOff >\nAudio Track\nEnglish (US) original ›\nMore options\n•••",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "more options",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Captions”",
+        "Bottom sheet over a dimmed background, covering 22% of the height from 75% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Player. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Opening Player options”",
+        "Reached from “Player”",
+        "Leads to “BEAS”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:21 in the recording",
+        "Frame 1273 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070106",
+      "role": "background",
+      "share": 0.5
+    },
+    {
+      "hex": "#2d2621",
+      "role": "surface",
+      "share": 0.422
+    },
+    {
+      "hex": "#4a3f38",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#59585b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#6b717c",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1273,
+    "atSeconds": 381,
+    "endSeconds": 382.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.75,
+        "w": 0.84375,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Captions",
+    "headline": "Quality",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s223",
+    "depth": 222,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s222",
+        "via": "Back to Captions sheet",
+        "name": "Player"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s224",
+        "via": "Open Other",
+        "name": "BEAS"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

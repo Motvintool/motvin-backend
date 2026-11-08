@@ -1,0 +1,161 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-starting-a-lesson-12",
+  "screen_id": "memrise-ios-versions-2026-11-08-starting-a-lesson-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:57.472Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Starting a lesson",
+  "flow_position": 32,
+  "name": "Feature tip",
+  "description": "Coach mark dialog over a dimmed screen, on top of Pick the correct answer with a primary action labelled “Got it”. Dark theme, 7 text elements.",
+  "text": "9:41 C\n.dll\nIt's ok to make mistakes!\nWe've put this word in a separate\nDifficult Words session to help you\npractice it later\nGot it\nsole\na gap",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "coach-mark"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “It's ok to make mistakes!”",
+        "Dialog over a dimmed background, covering 42% of the height from 30% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark dialog over a dimmed screen, on top of Pick the correct answer with a primary action labelled “Got it”. Dark theme, 7 text elements.",
+        "Calls to action: “Got it”",
+        "7 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 36 in “Word Lists”",
+        "Reached from “Pick the correct answer”",
+        "Leads to “Higher than something”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:22 in the recording",
+        "Frame 676 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#101117",
+      "role": "background",
+      "share": 0.511
+    },
+    {
+      "hex": "#242e3c",
+      "role": "surface",
+      "share": 0.21
+    },
+    {
+      "hex": "#442120",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#444b53",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#d0a110",
+      "role": "accent",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 676,
+    "atSeconds": 202.5,
+    "endSeconds": 203.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.296875,
+        "w": 0.75,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Got it"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "It's ok to make mistakes!",
+    "headline": "It's ok to make mistakes!"
+  },
+  "crawler": {
+    "nodeId": "s103",
+    "depth": 102,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s102",
+        "via": "Open It's ok to make mistakes!",
+        "name": "Pick the correct answer"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s104",
+        "via": "Back to Higher than something",
+        "name": "Higher than something"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,173 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-profile-4",
+  "screen_id": "capwords-ios-versions-2026-11-08-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:56.057Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Profile",
+  "flow_position": 18,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with a 4-item tab bar and a primary action labelled “Save”. Dark theme, 9 text elements.",
+  "text": "9:41€\nCapWords\noll\nProfile\nMotvin\nYou can change your avatar and\nusername at any time, and they\nmay also appear in shares\nSave\nCancel\nStart 3-Day Free Trial\nLearning Settings\noojo\nReview\nSpeak\nProfile\nCapture",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "capture",
+    "speak",
+    "review",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Capture, Speak, Review, Profile",
+        "Navigation title reads “Motvin”",
+        "Dialog over a dimmed background, covering 34% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with a 4-item tab bar and a primary action labelled “Save”. Dark theme, 9 text elements.",
+        "Calls to action: “Save”",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 35 in “Capture”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 7:55 in the recording",
+        "Frame 1594 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#110f12",
+      "role": "background",
+      "share": 0.551
+    },
+    {
+      "hex": "#333031",
+      "role": "surface",
+      "share": 0.26
+    },
+    {
+      "hex": "#5f5047",
+      "role": "surface",
+      "share": 0.119
+    },
+    {
+      "hex": "#797676",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#f8f6f9",
+      "role": "text",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 1594,
+    "atSeconds": 475.5,
+    "endSeconds": 478.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.375,
+        "w": 0.5,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [
+      "Capture",
+      "Speak",
+      "Review",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Motvin",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s215",
+    "depth": 217,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s214",
+        "via": "Tap “Motvin”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s216",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

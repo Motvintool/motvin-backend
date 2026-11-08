@@ -1,0 +1,151 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-subscribing-to-a-plan-3",
+  "screen_id": "udemy-ios-versions-2026-11-08-subscribing-to-a-plan-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:08.364Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission",
+    "loading"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Subscribing to a plan",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+  "text": "9:41€\n\"Udemy\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "skeleton",
+    "progress",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Udemy\" Would Like to Send”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+        "Calls to action: “Allow”",
+        "7 text elements recognised",
+        "State: permission, loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 153 in “Subscribing”",
+        "Reached from “Can we join your learning journey?”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:03 in the recording",
+        "Frame 216 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#120f13",
+      "role": "background",
+      "share": 0.912
+    },
+    {
+      "hex": "#343235",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#565457",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#737174",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 216,
+    "atSeconds": 63.3,
+    "endSeconds": 65.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Udemy\" Would Like to Send",
+    "headline": "\"Udemy\" Would Like to Send"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s027",
+        "via": "Open \"Udemy\" Would Like to Send",
+        "name": "Can we join your learning journey?"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Wait 1.8s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

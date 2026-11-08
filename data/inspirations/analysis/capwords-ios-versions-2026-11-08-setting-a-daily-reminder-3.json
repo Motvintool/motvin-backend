@@ -1,0 +1,165 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-setting-a-daily-reminder-3",
+  "screen_id": "capwords-ios-versions-2026-11-08-setting-a-daily-reminder-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:39.478Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting a daily reminder",
+  "flow_position": 51,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Set later with a primary action labelled “Allow”. Dark theme, 20 text elements.",
+  "text": "C CapWords\n9:41C\nSet later\nTurn your day into a\nlanguage habit\nPick a time. We'll remind you to learn a little\nfrom your day\n\"CapWords\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\n07\n08\n00\n:\n01\n09\n02\n10\nTip: An easy way to build a new habit is to stack\nit onto an existing daily habit",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"CapWords\" Would Like to Send”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Set later with a primary action labelled “Allow”. Dark theme, 20 text elements.",
+        "Calls to action: “Allow”",
+        "20 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 51 of 78 in “Onboarding”",
+        "Reached from “Set later”",
+        "Leads to “Set later”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:49 in the recording",
+        "Frame 366 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.895
+    },
+    {
+      "hex": "#363335",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#575558",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#674c17",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#736f6b",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 366,
+    "atSeconds": 109.2,
+    "endSeconds": 110.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.6875,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"CapWords\" Would Like to Send",
+    "headline": "Language habit"
+  },
+  "crawler": {
+    "nodeId": "s057",
+    "depth": 56,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s056",
+        "via": "Tap “language habit”",
+        "name": "Set later"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s058",
+        "via": "Dismiss",
+        "name": "Set later"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

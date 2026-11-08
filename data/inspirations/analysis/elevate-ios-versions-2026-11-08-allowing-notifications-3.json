@@ -1,0 +1,165 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-allowing-notifications-3",
+  "screen_id": "elevate-ios-versions-2026-11-08-allowing-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:30:56.849Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Allowing notifications",
+  "flow_position": 72,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 10 text elements.",
+  "text": "9:41€\nGet a reminder to play\ndaily\n\"Elevate\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nReminders help you build good habits\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Elevate\" Would Like to Send”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 10 text elements.",
+        "Calls to action: “Allow”",
+        "10 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 72 of 147 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “Add our Streak widget”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:40 in the recording",
+        "Frame 537 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.843
+    },
+    {
+      "hex": "#343335",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#066380",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#535154",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#6a6b6d",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 537,
+    "atSeconds": 160.8,
+    "endSeconds": 161.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.390625,
+        "w": 0.59375,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Elevate\" Would Like to Send",
+    "headline": "Daily",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s077",
+    "depth": 76,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Wait 1.8s",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s078",
+        "via": "Open Add our Streak widget",
+        "name": "Add our Streak widget"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

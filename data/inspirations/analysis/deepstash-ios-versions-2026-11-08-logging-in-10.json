@@ -1,0 +1,168 @@
+{
+  "screenId": "deepstash-ios-versions-2026-11-08-logging-in-10",
+  "screen_id": "deepstash-ios-versions-2026-11-08-logging-in-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:12.515Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 16,
+  "name": "OTP verification",
+  "description": "Verification code bottom sheet, on top of OTP verification with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+  "text": "9:41 C\nSkip\n‹ Check your email\nWe just sent an email to\nmotvintool@gmail.com. Tap on the Sign in\nbutton inside or enter the code below.\n4\n3\n3\n1\n5\n1\nDidn't get the email? Resend in 0:11\nContinue\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nTUV\nPQRS\n•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Didn't get the email? Resend in 0:11”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet, covering 52% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code bottom sheet, on top of OTP verification with the keyboard open and a primary action labelled “Continue”. Dark theme, 31 text elements.",
+        "Calls to action: “Continue”",
+        "31 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 26 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:50 in the recording",
+        "Frame 170 of 2364 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1e",
+      "role": "background",
+      "share": 0.656
+    },
+    {
+      "hex": "#3f3c3f",
+      "role": "surface",
+      "share": 0.25
+    },
+    {
+      "hex": "#5c595c",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#777577",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#a6a4a7",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Deepstash.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2364,
+    "frame": 170,
+    "atSeconds": 50.4,
+    "endSeconds": 51.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.359375,
+        "w": 0.875,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Didn't get the email? Resend in 0:11",
+    "headline": "Check your email"
+  },
+  "crawler": {
+    "nodeId": "s024",
+    "depth": 23,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s023",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s025",
+        "via": "Back to Sign-in options",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

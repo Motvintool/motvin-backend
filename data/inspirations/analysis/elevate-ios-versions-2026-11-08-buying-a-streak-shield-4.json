@@ -1,0 +1,169 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-buying-a-streak-shield-4",
+  "screen_id": "elevate-ios-versions-2026-11-08-buying-a-streak-shield-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:06.316Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Buying a streak shield",
+  "flow_position": 7,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of X streak with a row of 7 category chips. Dark theme, 30 text elements.",
+  "text": "9:41 €\nXy streak\nYou ve started a new streak. Keep it up!\nNOVEMBER 2026\nW\nM\nS\nT\nT\nF\nS\n3\n5\n1\n7\n12\n13\n10\n11\n14\n15\n16\n17\n18\n19\n20\n21\nStreak Shield\nKeep your streak safe for 7 days.\nBuy for\n1000\nNot now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "not now",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You ve started a new streak. Keep it up!”",
+        "Category strip: W, M, S, T, T, F, S",
+        "Toast over a dimmed background, covering 13% of the height from 13% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of X streak with a row of 7 category chips. Dark theme, 30 text elements.",
+        "30 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 13 in “Personalized to you”",
+        "Reached from “X streak”",
+        "Leads to “X streak”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:01 in the recording",
+        "Frame 1208 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181a",
+      "role": "background",
+      "share": 0.869
+    },
+    {
+      "hex": "#0bc1f8",
+      "role": "accent",
+      "share": 0.045
+    },
+    {
+      "hex": "#2b3e49",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#343134",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#626068",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1208,
+    "atSeconds": 361.2,
+    "endSeconds": 362.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.125,
+        "w": 0.6875,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [
+      "W",
+      "M",
+      "S",
+      "T",
+      "T",
+      "F",
+      "S"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You ve started a new streak. Keep it up!",
+    "headline": "Streak Shield",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s178",
+    "depth": 177,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s177",
+        "via": "Tap “Streak Shield”",
+        "name": "X streak"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s179",
+        "via": "Dismiss",
+        "name": "X streak"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

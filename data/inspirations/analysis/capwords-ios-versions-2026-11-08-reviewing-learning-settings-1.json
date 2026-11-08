@@ -1,0 +1,155 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-reviewing-learning-settings-1",
+  "screen_id": "capwords-ios-versions-2026-11-08-reviewing-learning-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:56.247Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Reviewing learning settings",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen with a 4-item tab bar. Dark theme, 18 text elements.",
+  "text": "C CapWords\n9:41(\nProfile\nLearning Settings\nOn\nDaily Reminder\nReview Remind...\n>\n•|• Pronunciation Voice\n>\nHomescreen widgets\nOO\nApp & Account\nAppearance\nSystem -\nEnglish >\nInterface Language\nFree >\nManage Subscription\nApple Health\noojo\nReview\nProfile\nCapture\nSpeak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "review",
+    "subscription",
+    "capture",
+    "speak",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Capture, Speak, Review, Profile",
+        "Navigation title reads “Profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a 4-item tab bar. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening Settings options”",
+        "Reached from “Subscription plans”",
+        "Leads to “Dialog”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:01 in the recording",
+        "Frame 1608 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232123",
+      "role": "background",
+      "share": 0.792
+    },
+    {
+      "hex": "#4a4849",
+      "role": "surface",
+      "share": 0.097
+    },
+    {
+      "hex": "#cebeaf",
+      "role": "text",
+      "share": 0.021
+    },
+    {
+      "hex": "#9c877a",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#78665c",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 1608,
+    "atSeconds": 481.2,
+    "endSeconds": 482.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Capture",
+      "Speak",
+      "Review",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Profile",
+    "headline": "English"
+  },
+  "crawler": {
+    "nodeId": "s217",
+    "depth": 219,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s216",
+        "via": "Tap “Profile”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s218",
+        "via": "Open Pick a voice you'd love to",
+        "name": "Dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}
