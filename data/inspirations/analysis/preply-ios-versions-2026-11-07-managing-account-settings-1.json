@@ -1,0 +1,160 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-managing-account-settings-1",
+  "screen_id": "preply-ios-versions-2026-11-07-managing-account-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:27.218Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Managing account settings",
+  "flow_position": 2,
+  "name": "Loading state — scrolled",
+  "description": "Login screen, scrolled further down from Loading state with a row of 4 category chips and 2 input fields. Light theme, 17 text elements.",
+  "text": "9:41 0\nMore settings\nPayment me\nPassword\nEmail\nAccount\nAccount Settings\nProfile image\nL, Upload photo\nMaximum size - 2MB\nJPG or PNG format\nFirst name • Required\nMotvin\nLast name\nPhone number\n- +1\nTimezone\nAsia/Kolkata GMT +5:30\nSocial networks",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "payment",
+    "photo",
+    "login",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payment me”",
+        "Category strip: Payment me, Password, Email, Account",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Loading state with a row of 4 category chips and 2 input fields. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in”",
+        "Reached from “Loading state — scrolled — loading”",
+        "Leads to “More settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 4:55 in the recording",
+        "Frame 993 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfbfd",
+      "role": "background",
+      "share": 0.885
+    },
+    {
+      "hex": "#d0ced2",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#e4e2e4",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#b0aeb2",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#04030a",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 993,
+    "atSeconds": 295.5,
+    "endSeconds": 298.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [
+      "Payment me",
+      "Password",
+      "Email",
+      "Account"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Payment me",
+    "headline": "Account Settings"
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s136",
+        "via": "Scroll",
+        "name": "Loading state — scrolled — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s138",
+        "via": "Tap “More settings”",
+        "name": "More settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-editing-profile-2",
+  "screen_id": "preply-ios-versions-2026-11-07-editing-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:26.460Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Editing profile",
+  "flow_position": 4,
+  "name": "Phone number entry — scrolled — scrolled",
+  "description": "Login screen, scrolled further down from Phone number entry — scrolled with a row of 4 category chips and 2 input fields. Light theme, 17 text elements.",
+  "text": "9:41 0\nDelete account\nPayment met\nPassword\nAccount\nEmail\nAccount Settings\nProfile image\nL, Upload photo\nMaximum size - 2MB\nJPG or PNG format\nFirst name • Required\nMotvin\nLast name\nPhone number\n- +1\nTimezone\nAsia/Kolkata GMT +5:30\nSocial networks",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "payment",
+    "photo",
+    "login",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payment met”",
+        "Category strip: Payment met, Password, Account, Email",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Phone number entry — scrolled with a row of 4 category chips and 2 input fields. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Logging in with phone number”",
+        "Reached from “Phone number entry — scrolled”",
+        "Leads to “Phone number entry”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 4:36 in the recording",
+        "Frame 931 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfd",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#d0ced2",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#e3e1e4",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#b1afb3",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#04030a",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 931,
+    "atSeconds": 276.6,
+    "endSeconds": 279.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [
+      "Payment met",
+      "Password",
+      "Account",
+      "Email"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Payment met",
+    "headline": "Account Settings"
+  },
+  "crawler": {
+    "nodeId": "s127",
+    "depth": 126,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Scroll",
+        "name": "Phone number entry — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s128",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

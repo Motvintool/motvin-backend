@@ -1,0 +1,157 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-reading-the-terms-of-use-2",
+  "screen_id": "brainly-ios-versions-2026-11-07-reading-the-terms-of-use-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:43.062Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Reading the terms of use",
+  "flow_position": null,
+  "name": "Settings — loading",
+  "description": "Loading state of Settings with a 4-item tab bar. Dark theme, 5 text elements.",
+  "text": "9:41C\n•0l\n<\nAbout\nTerms of use\nPrivacy policy\nOpen source libraries\nCommunity\nProfile\nHome\nTextbooks",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "community",
+    "textbooks",
+    "profile",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Community, Textbooks, Profile",
+        "Navigation title reads “About”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Settings with a 4-item tab bar. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Sign in with email”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:30 in the recording",
+        "Frame 1705 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#292e37",
+      "role": "background",
+      "share": 0.9
+    },
+    {
+      "hex": "#444c56",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#636a73",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#9199a2",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#b7bec5",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 1705,
+    "atSeconds": 510.6,
+    "endSeconds": 512.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Home",
+      "Community",
+      "Textbooks",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "About",
+    "headline": "Privacy policy"
+  },
+  "crawler": {
+    "nodeId": "s251",
+    "depth": 252,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s250",
+        "via": "Wait 1.2s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s252",
+        "via": "Wait 1.5s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

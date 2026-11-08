@@ -1,0 +1,146 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-sending-feedback-2",
+  "screen_id": "nibble-ios-versions-2026-11-07-sending-feedback-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:09.158Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Sending feedback",
+  "flow_position": null,
+  "name": "Profile — loading",
+  "description": "Loading state of Profile. Light theme, 3 text elements.",
+  "text": "9:41(\nThanks for your feedback!\nIt means a lot. We use feedback to decide\nwhat to fix next\nClose",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "close",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Profile. Light theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Share feedback — scrolled”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:47 in the recording",
+        "Frame 1761 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf8fb",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#7801da",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#ddd8e1",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#983ce1",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#c896ee",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 1761,
+    "atSeconds": 527.4,
+    "endSeconds": 528.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Thanks for your feedback!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s259",
+    "depth": 262,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s258",
+        "via": "Open Profile — loading",
+        "name": "Share feedback — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s260",
+        "via": "Wait 1.2s",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

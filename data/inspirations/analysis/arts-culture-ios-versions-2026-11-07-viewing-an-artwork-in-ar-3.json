@@ -1,0 +1,158 @@
+{
+  "screenId": "arts-culture-ios-versions-2026-11-07-viewing-an-artwork-in-ar-3",
+  "screen_id": "arts-culture-ios-versions-2026-11-07-viewing-an-artwork-in-ar-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:54:24.329Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Viewing an artwork in AR",
+  "flow_position": 10,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Other. Dark theme, 3 text elements.",
+  "text": "9:41 C\nMove iPhone to start\nMore images\nTurn on audio when recording video\nSend feedback",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "send feedback",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 45% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Other. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Opening a page (New Quick)”",
+        "Reached from “Move iPhone to start”",
+        "Leads to “Other — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:38 in the recording",
+        "Frame 1733 of 1897 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a191a",
+      "role": "background",
+      "share": 0.697
+    },
+    {
+      "hex": "#fefcfe",
+      "role": "text",
+      "share": 0.185
+    },
+    {
+      "hex": "#050505",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#cac8ca",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#383737",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Arts & Culture.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1897,
+    "frame": 1733,
+    "atSeconds": 518.4,
+    "endSeconds": 520.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.28125,
+        "y": 0.453125,
+        "w": 0.09375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Move iPhone to start",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s251",
+    "depth": 252,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s250",
+        "via": "Tap “Move iPhone to start”",
+        "name": "Move iPhone to start"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s252",
+        "via": "Tap “Move iPhone to start”",
+        "name": "Other — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

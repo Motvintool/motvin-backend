@@ -1,0 +1,163 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-chatting-with-an-ai-tutor-9",
+  "screen_id": "nibble-ios-versions-2026-11-07-chatting-with-an-ai-tutor-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:05.568Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Chatting with an AI tutor",
+  "flow_position": 11,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Al Tutor with a primary action labelled “Allow”. Light theme, 25 text elements.",
+  "text": "9:41(\nAl Tutor\nX\nDecode the sneakiest detail in Renaissance...\nLooks like an ordinary wedding portrait... but it's\ncloser to a signed contract, with two strangers\nhidden inside. Before I show you — do you think\nyou could spot them?\n\"Nibble\" would like to access\nSpeech Recognition.\nSpeech data from this app will be\nsent to Apple to process your\nrequests. This will also help Apple\nimprove its speech recognition\ntechnology.\nNibble converts your speech to text\nHe\nright on your device - your voice\nhic\nrecordings are never uploaded or\nclc\nstored.\nsta\nAllow\nDon't Allow\nHold to speak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Nibble converts your speech to text”",
+        "Dialog over a dimmed background, covering 14% of the height from 59% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Al Tutor with a primary action labelled “Allow”. Light theme, 25 text elements.",
+        "Calls to action: “Allow”",
+        "25 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 16 in “Al Tutor”",
+        "Reached from “Al Tutor”",
+        "Leads to “Al Tutor”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:39 in the recording",
+        "Frame 1532 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7f7d7f",
+      "role": "background",
+      "share": 0.539
+    },
+    {
+      "hex": "#454345",
+      "role": "surface",
+      "share": 0.36
+    },
+    {
+      "hex": "#656166",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#430973",
+      "role": "accent",
+      "share": 0.019
+    },
+    {
+      "hex": "#2c2928",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 1532,
+    "atSeconds": 459,
+    "endSeconds": 459.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.59375,
+        "w": 0.25,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Nibble converts your speech to text",
+    "headline": "Speech Recognition"
+  },
+  "crawler": {
+    "nodeId": "s226",
+    "depth": 228,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s225",
+        "via": "Open Nibble converts your speech to text",
+        "name": "Al Tutor"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s227",
+        "via": "Dismiss",
+        "name": "Al Tutor"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

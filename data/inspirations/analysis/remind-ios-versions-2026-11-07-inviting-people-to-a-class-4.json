@@ -1,0 +1,156 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-inviting-people-to-a-class-4",
+  "screen_id": "remind-ios-versions-2026-11-07-inviting-people-to-a-class-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:06.678Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Inviting people to a class",
+  "flow_position": 5,
+  "name": "Link copied toast",
+  "description": "Toast, on top of Share a Link. Light theme, 7 text elements.",
+  "text": "9:41 €\nX\nLink copied\nShare this link\nThis link includes your class code, so anyone who has it\ncan join your class instantly.\nhttps://www.remind.com/join/eak7a2\nST Share mu ® copy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Link copied”",
+        "Toast, covering 8% of the height from 86% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast, on top of Share a Link. Light theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 7 in “Share a Link”",
+        "Reached from “Share a Link”",
+        "Leads to “Share a Link toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:47 in the recording",
+        "Frame 961 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f5f8",
+      "role": "background",
+      "share": 0.839
+    },
+    {
+      "hex": "#11896a",
+      "role": "text",
+      "share": 0.074
+    },
+    {
+      "hex": "#0b76df",
+      "role": "accent",
+      "share": 0.026
+    },
+    {
+      "hex": "#d7d9de",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#4296e5",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 961,
+    "atSeconds": 287.7,
+    "endSeconds": 288.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.859375,
+        "w": 1,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Link copied",
+    "headline": "ST Share mu ® copy"
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 109,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Open Link copied",
+        "name": "Share a Link"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Dismiss",
+        "name": "Share a Link toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

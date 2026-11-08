@@ -1,0 +1,164 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-recording-a-voice-clip-3",
+  "screen_id": "remind-ios-versions-2026-11-07-recording-a-voice-clip-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:02.246Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Recording a voice clip",
+  "flow_position": 7,
+  "name": "Permission prompt",
+  "description": "Permission toast over a dimmed screen with a primary action labelled “Allow”. Dark theme, 18 text elements.",
+  "text": "9:41C\n•o0l\nNew Message\n+\nMath\nTo:\nWelcome to Math! I'm looking forward to using\nRemind to share updates, notes, and more. Thanks\nfor joining!\n\"Remind\" would like to access\nthe Microphone.\nYou can use the microphone to\nrecord short audio clips you can\nattach to your messages on Remind.\nAl\nDon't Allow\nAllow\nUU.UI/ UU.ZU\nU\nRecord voice clips up to 2 minutes with\nRemind Hub. Learn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Attach to your messages on Remind”",
+        "Toast over a dimmed background, covering 8% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen with a primary action labelled “Allow”. Dark theme, 18 text elements.",
+        "Calls to action: “Allow”",
+        "18 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 49 in “Reading messages”",
+        "Reached from “New Message”",
+        "Leads to “New Message”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:45 in the recording",
+        "Frame 553 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#413f41",
+      "role": "background",
+      "share": 0.54
+    },
+    {
+      "hex": "#838183",
+      "role": "surface",
+      "share": 0.321
+    },
+    {
+      "hex": "#2b2a2c",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#676566",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#784d36",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 553,
+    "atSeconds": 165.3,
+    "endSeconds": 166.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.5625,
+        "w": 0.1875,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Attach to your messages on Remind",
+    "headline": "You can use the microphone to"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 61,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Open Attach to your messages on Remind",
+        "name": "New Message"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Dismiss",
+        "name": "New Message"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-logging-in-6",
+  "screen_id": "nibble-ios-versions-2026-11-07-logging-in-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:12.772Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 12,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue”. Light theme, 13 text elements.",
+  "text": "9:41 €\nContinue with password\nEnter the code we've sent to\nmotvintool@gmail.com\nIncorrect code. Please try again.\n3\n9\n3\n7\n4\n4\nContinue\nCan't find it? Check your Spam folder.\nResend the code in 0:40",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with password”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue”. Light theme, 13 text elements.",
+        "Calls to action: “Continue”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 17 in “Replace scrolling”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 10:48 in the recording",
+        "Frame 2162 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf6f9",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#ded7df",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#7800da",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#b7b5ba",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#9c40e3",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 2162,
+    "atSeconds": 648,
+    "endSeconds": 648.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with password",
+    "headline": "Incorrect code. Please try again"
+  },
+  "crawler": {
+    "nodeId": "s299",
+    "depth": 303,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s298",
+        "via": "Tap “Continue with password”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s300",
+        "via": "Scroll",
+        "name": "OTP verification — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

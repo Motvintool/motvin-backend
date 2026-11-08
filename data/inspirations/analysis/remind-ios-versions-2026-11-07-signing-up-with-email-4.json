@@ -1,0 +1,148 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-signing-up-with-email-4",
+  "screen_id": "remind-ios-versions-2026-11-07-signing-up-with-email-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:51:57.379Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 9,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 16 text elements.",
+  "text": "9:41 €\nRemind\nK·\nLog in or sign up\nmotvintool@gmail.com\nContinue\n9 Passwords\n•iop\nt\n9 We\nj\nh\nsat\ng\nvbnm\n•× C\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 16 text elements.",
+        "Calls to action: “Log in or sign up”, “Continue”",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 50 in “Entering phone number”",
+        "Reached from “Sign in with email”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:22 in the recording",
+        "Frame 79 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f3f0ef",
+      "role": "background",
+      "share": 0.785
+    },
+    {
+      "hex": "#d2d2d7",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#0776e4",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#b1cee9",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#353435",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 79,
+    "atSeconds": 22.8,
+    "endSeconds": 24,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "9 Passwords"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Open Check your email",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

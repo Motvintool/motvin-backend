@@ -1,0 +1,165 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-search-8",
+  "screen_id": "preply-ios-versions-2026-11-07-search-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:26.005Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Search",
+  "flow_position": 10,
+  "name": "Success",
+  "description": "Success bottom sheet, on top of Loading state with a 3-item tab bar. Light theme, 6 text elements.",
+  "text": "9:41(\nSchedule\nM\nBook a lesson to see it here\nYour lesson schedule is the path to success.\nSchedule a trial lesson to start.\nFind a tutor\nQ\nSearch\nSchedule\nMessages",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "messages",
+    "schedule",
+    "confirmation",
+    "success",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Search, Messages, Schedule",
+        "Bottom sheet, covering 25% of the height from 66% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success bottom sheet, on top of Loading state with a 3-item tab bar. Light theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 15 in “Search”",
+        "Reached from “Search results — loading”",
+        "Leads to “Search results”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 4:24 in the recording",
+        "Frame 887 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.88
+    },
+    {
+      "hex": "#e1dce1",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#df90af",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#fa74a8",
+      "role": "accent",
+      "share": 0.024
+    },
+    {
+      "hex": "#c1bfc2",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 887,
+    "atSeconds": 264.3,
+    "endSeconds": 266.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.65625,
+        "w": 0.9375,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Search",
+      "Messages",
+      "Schedule"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Book a lesson to see it here"
+  },
+  "crawler": {
+    "nodeId": "s121",
+    "depth": 120,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s120",
+        "via": "Wait 2.7s",
+        "name": "Search results — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s122",
+        "via": "Type “Math”",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

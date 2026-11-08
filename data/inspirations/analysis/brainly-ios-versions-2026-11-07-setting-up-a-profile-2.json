@@ -1,0 +1,148 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-setting-up-a-profile-2",
+  "screen_id": "brainly-ios-versions-2026-11-07-setting-up-a-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:20.469Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 2,
+  "name": "Tell us about yourself",
+  "description": "Detail screen with a primary action labelled “NEXT”. Dark theme, 8 text elements.",
+  "text": "9:41(\n<\nTell us about yourself\nWe need this information to keep Brainly safe place.\nCountry\nAge\nHow did you hear about Brainly?\nSelect\nNEXT",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Tell us about yourself”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a primary action labelled “NEXT”. Dark theme, 8 text elements.",
+        "Calls to action: “NEXT”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 11 in “Tell us about yourself detail”",
+        "Reached from “Profile”",
+        "Leads to “Choose your country”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:30 in the recording",
+        "Frame 106 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#292f38",
+      "role": "background",
+      "share": 0.859
+    },
+    {
+      "hex": "#53575f",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#15171c",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#8c8d93",
+      "role": "text",
+      "share": 0.027
+    },
+    {
+      "hex": "#41454d",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 106,
+    "atSeconds": 30.6,
+    "endSeconds": 32.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "NEXT"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Tell us about yourself",
+    "headline": "Tell us about yourself"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Open Tell us about yourself",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Open Choose your country",
+        "name": "Choose your country"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

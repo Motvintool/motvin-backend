@@ -1,0 +1,151 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-browsing-class-tabs-4",
+  "screen_id": "remind-ios-versions-2026-11-07-browsing-class-tabs-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:06.940Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Browsing class tabs",
+  "flow_position": 8,
+  "name": "Settings",
+  "description": "Settings screen with a row of 4 category chips. Light theme, 13 text elements.",
+  "text": "9:41 0\nMath\nFiles\nPeople\nMessages\nSettings\nWAYS TO ADD PEOPLE\nAdd people\nShare a link\nShow people how to join\nFIRST, LAST V\nMotvin\nM\nYou",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Messages”",
+        "Category strip: Files, People, Messages, Settings",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a row of 4 category chips. Light theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 18 in “Settings”",
+        "Reached from “Text Message Instructions”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:54 in the recording",
+        "Frame 986 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf8fb",
+      "role": "background",
+      "share": 0.93
+    },
+    {
+      "hex": "#d7d6d8",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#b6b4be",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#7475b2",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#28ac90",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 986,
+    "atSeconds": 294.6,
+    "endSeconds": 296.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [
+      "Files",
+      "People",
+      "Messages",
+      "Settings"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Messages",
+    "headline": "Add people"
+  },
+  "crawler": {
+    "nodeId": "s112",
+    "depth": 112,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s111",
+        "via": "Back to Settings",
+        "name": "Text Message Instructions"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s113",
+        "via": "Tap “Share a link”",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

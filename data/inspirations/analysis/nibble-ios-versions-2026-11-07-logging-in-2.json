@@ -1,0 +1,155 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-logging-in-2",
+  "screen_id": "nibble-ios-versions-2026-11-07-logging-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:12.246Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 6,
+  "name": "Sign in",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 25 text elements.",
+  "text": "9:41€\n.oll\nSign in\nmotvintool@gmail.com\nContinue\ni\nW\ne\nt\nU\nO\nh\nd\na\nS\ng\nb\nm\nZ\nX\nC\nV\nn\na\n123\ncontinue\nspace",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Light theme, 25 text elements.",
+        "Calls to action: “Continue”, “continue”",
+        "25 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 17 in “Replace scrolling”",
+        "Reached from “Sign in”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:26 in the recording",
+        "Frame 2094 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f6f9",
+      "role": "background",
+      "share": 0.604
+    },
+    {
+      "hex": "#d6d7de",
+      "role": "surface",
+      "share": 0.275
+    },
+    {
+      "hex": "#7800da",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#b5b7c0",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#9e45e3",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 2094,
+    "atSeconds": 626.7,
+    "endSeconds": 628.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s293",
+    "depth": 297,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s292",
+        "via": "Tap “Sign in”",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s294",
+        "via": "Open Continue with password",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

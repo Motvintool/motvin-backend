@@ -1,0 +1,155 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-setting-up-a-profile-7",
+  "screen_id": "remind-ios-versions-2026-11-07-setting-up-a-profile-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:51:59.058Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "creation",
+  "flow_name": "Setting up a profile",
+  "flow_position": 27,
+  "name": "Profile form",
+  "description": "Form screen with the keyboard open and a primary action labelled “Continue”. Light theme, 25 text elements.",
+  "text": "9:41(\nH!ll\nWhat is your birthday?\nThis will stay private to you and will help keep\nRemind safe\nBirthday\nMM/ DD / YYYY\n04 / 12/ 2000|\nContinue\n2\n3\n1\nABC\nDEF\n4\n5\n6\nJKL\nMNO\nGHI\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open and a primary action labelled “Continue”. Light theme, 25 text elements.",
+        "Calls to action: “Continue”",
+        "25 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 50 in “Entering phone number”",
+        "Reached from “Profile form”",
+        "Leads to “Join your first class”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:22 in the recording",
+        "Frame 279 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafc",
+      "role": "background",
+      "share": 0.708
+    },
+    {
+      "hex": "#e3e3e7",
+      "role": "surface",
+      "share": 0.194
+    },
+    {
+      "hex": "#0c78e0",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#c9c4c7",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#b2d2f4",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 279,
+    "atSeconds": 82.5,
+    "endSeconds": 84,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "What is your birthday?"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 27,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s027",
+        "via": "Tap “MM/ DD / YYYY”",
+        "name": "Profile form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Type “a class instead or create a class”",
+        "name": "Join your first class"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

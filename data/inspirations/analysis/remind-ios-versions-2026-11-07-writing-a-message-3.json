@@ -1,0 +1,161 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-writing-a-message-3",
+  "screen_id": "remind-ios-versions-2026-11-07-writing-a-message-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:02.816Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Writing a message",
+  "flow_position": 13,
+  "name": "New Message",
+  "description": "Messages dialog over a dimmed screen, on top of New Message. Light theme, 29 text elements.",
+  "text": "9:41(\nNew Message\nMath\nTo:\nWelcome to Math! I'm looking forward to using\nRemind to share updates, notes, and more. Thanks\nfor joining!\n00:03\nSchedule Message\nWed 4 Nov\n37\nThu 5 Nov\nFri 6 Nov\n38\nAM\n/\nToday\n8\nPM\n39\nSun 8 Nov\n9\n40\n41\nMon 9 Nov\n10\n11\nTue 10 NoV\n42\nSet time\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New Message”",
+        "Dialog over a dimmed background, covering 48% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of New Message. Light theme, 29 text elements.",
+        "29 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 49 in “Reading messages”",
+        "Reached from “New Message”",
+        "Leads to “New Message”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:57 in the recording",
+        "Frame 595 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafc",
+      "role": "background",
+      "share": 0.403
+    },
+    {
+      "hex": "#7f7e80",
+      "role": "surface",
+      "share": 0.399
+    },
+    {
+      "hex": "#686669",
+      "role": "text",
+      "share": 0.094
+    },
+    {
+      "hex": "#c3c1c4",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#2988e2",
+      "role": "accent",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 595,
+    "atSeconds": 177.3,
+    "endSeconds": 178.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.484375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New Message",
+    "headline": "Schedule Message",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 67,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Tap “New Message”",
+        "name": "New Message"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Dismiss",
+        "name": "New Message"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

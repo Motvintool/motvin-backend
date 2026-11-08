@@ -1,0 +1,159 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-verifying-an-email-address-2",
+  "screen_id": "preply-ios-versions-2026-11-07-verifying-an-email-address-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:25.008Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Verifying an email address",
+  "flow_position": 6,
+  "name": "OTP verification",
+  "description": "Verification code bottom sheet, on top of OTP verification. Light theme, 10 text elements.",
+  "text": "9:41(\nll g\nNot A\nwhy it worked? Well, that's not a math\nproblem, that's a teaching problem. And\nAniksha S.\nFrom India\nX\nVerify your email\nTo message tutors, confirm your email by clicking\nthe link we sent to motvintool@gmail.com\nResend confirmation email\nEdit email address",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Verify your email”",
+        "Bottom sheet, covering 27% of the height from 63% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code bottom sheet, on top of OTP verification. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Aniksha S”",
+        "Reached from “OTP verification”",
+        "Leads to “Aniksha S”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 3:52 in the recording",
+        "Frame 782 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfbfd",
+      "role": "background",
+      "share": 0.346
+    },
+    {
+      "hex": "#7b797b",
+      "role": "surface",
+      "share": 0.307
+    },
+    {
+      "hex": "#dbd8dc",
+      "role": "surface",
+      "share": 0.118
+    },
+    {
+      "hex": "#36302f",
+      "role": "text",
+      "share": 0.076
+    },
+    {
+      "hex": "#5e5a5a",
+      "role": "surface",
+      "share": 0.074
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 782,
+    "atSeconds": 232.2,
+    "endSeconds": 234.9,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.625,
+        "w": 1,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Verify your email",
+    "headline": "Aniksha S"
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 108,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Tap “Verify your email”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Tap “Aniksha S.”",
+        "name": "Aniksha S"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

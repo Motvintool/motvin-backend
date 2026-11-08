@@ -1,0 +1,159 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-booking-a-trial-lesson-8",
+  "screen_id": "preply-ios-versions-2026-11-07-booking-a-trial-lesson-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:23.897Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Booking a trial lesson",
+  "flow_position": 24,
+  "name": "Payment method",
+  "description": "Payment toast over a dimmed screen with prices. Light theme, 27 text elements.",
+  "text": "Pay\nApple Pay\nEdit\nBy confirming payment, you agree to Preply's Refund\nand Payment Policy\nShaheen is a great choice\n914\n177\nstudents\nlessons\nJashanjot (*)\n1 month ago\n**\n*\n*\nGreat, If you are looking for someone\nShe\nserious about their teaching go\nbre\nnowhere she is the one.\nunc\nX\nPay\nSelect Payment Method\nPay Preply Inc.\n1\n$9.30\nSelect Payment Method",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Pay”",
+        "Toast over a dimmed background, covering 5% of the height from 6% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment toast over a dimmed screen with prices. Light theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 30 in “Favorite tutors detail”",
+        "Reached from “Checkout — scrolled — scrolled — scrolled”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 3:31 in the recording",
+        "Frame 709 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#797779",
+      "role": "background",
+      "share": 0.641
+    },
+    {
+      "hex": "#3d3c3e",
+      "role": "surface",
+      "share": 0.284
+    },
+    {
+      "hex": "#5d5b5d",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#294c68",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#9b9b9e",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 709,
+    "atSeconds": 211.2,
+    "endSeconds": 213,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.0625,
+        "w": 0.28125,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Pay",
+    "headline": "Jashanjot (*)"
+  },
+  "crawler": {
+    "nodeId": "s096",
+    "depth": 95,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s095",
+        "via": "Tap “Pay”",
+        "name": "Checkout — scrolled — scrolled — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Dismiss",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}
