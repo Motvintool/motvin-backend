@@ -108,6 +108,8 @@ export interface InspirationFlow {
   steps?: { screenId: string; action: { kind: string; label: string | null } | null }[];
   /** One sentence on what the person does across the journey, when written. */
   summary?: string | null;
+  /** Its standard kind (Logging In, Browsing Home…) from flow-kinds.json, when tagged; the search groups by it. */
+  kind?: string | null;
   /** Which capture this flow's screens belong to; null if it has none. */
   version?: string | null;
 }

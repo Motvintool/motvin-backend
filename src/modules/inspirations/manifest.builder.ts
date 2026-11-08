@@ -498,6 +498,9 @@ export function buildInspirationsManifest(root: string): BuildReport {
   const appsFile = readJson<{ apps?: any[] }>(join(root, 'apps.json'), { apps: [] });
   const flowsFile = readJson<{ flows?: any[] }>(join(root, 'flows.json'), { flows: [] });
   const patternsFile = readJson<{ patterns?: any[] }>(join(root, 'patterns.json'), { patterns: [] });
+  // Each flow's standard kind (Logging In, Browsing Home…), the Mobbin-style grouping the site's search lists
+  // flows by: kept in a file of its own, keyed by flow id, so rewriting flows.json (a re-upload) never drops it.
+  const flowKinds = readJson<{ kinds?: Record<string, string> }>(join(root, 'flow-kinds.json'), { kinds: {} }).kinds || {};
   // The one list of tags a screen may carry beyond its types, platform,
   // category and states (tags.json). Anything else in a sidecar — words read
   // off the screen, a type it no longer has — is left out of the manifest.
@@ -810,6 +813,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
         ...flow,
         platform: effectivePlatform(flow.appId, flow.platform),
         summary: stringOrNull(flow.summary),
+        kind: stringOrNull(flowKinds[flow.id]),
         screenIds,
         steps: steps.length === screenIds.length ? steps : screenIds.map((id: string) => ({ screenId: id, action: null })),
         // A flow's screens all come from one capture, in practice — the
