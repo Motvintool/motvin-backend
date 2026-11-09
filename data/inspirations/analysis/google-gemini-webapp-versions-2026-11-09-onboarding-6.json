@@ -1,0 +1,162 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-onboarding-6",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:41.067Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Welcome dialog with a primary action labelled “Continue”. Dark theme, 12 text elements.",
+  "text": "C\nSimplify your sign-in\nmotvintool@gmail.com\nWith passkeys you can now use your fingerprint, face, or screen lock to\nverify it's really you.\nOnly create a passkey if this is your device. Learn more\nContinue\nNot now\nEnglish (United States)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Simplify your sign-in”",
+        "Dialog over a dimmed background, covering 27% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Welcome dialog with a primary action labelled “Continue”. Dark theme, 12 text elements.",
+        "Calls to action: “Continue”",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 130 in “Choose an account”",
+        "Reached from “Welcome dialog”",
+        "Leads to “Toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:29 in the recording",
+        "Frame 98 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202323",
+      "role": "background",
+      "share": 0.705
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.279
+    },
+    {
+      "hex": "#3b3d3f",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#606265",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#899fc0",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 98,
+    "atSeconds": 29.1,
+    "endSeconds": 29.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.359375,
+        "w": 0.65625,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Simplify your sign-in",
+    "headline": "Simplify your sign-in"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Open Simplify your sign-in",
+        "name": "Welcome dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “Simplify your sign-in”",
+        "name": "Toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

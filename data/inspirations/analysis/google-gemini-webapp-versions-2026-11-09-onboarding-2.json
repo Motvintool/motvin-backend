@@ -1,0 +1,142 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-onboarding-2",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:40.589Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Choose an account",
+  "description": "A third-party sign-in page, not the app's own design. Dark theme, 11 text elements.",
+  "text": "C\nChoose an account\nSigned out\nsurendarv\nsurendarv638@gmail.com\ng Use another account\n9- Remove an account\nEnglish (United States)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose an account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 130 in “Choose an account”",
+        "Reached from “Getapp”",
+        "Leads to “Forgot email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:04 in the recording",
+        "Frame 18 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202223",
+      "role": "background",
+      "share": 0.763
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.226
+    },
+    {
+      "hex": "#4f5050",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#383a3a",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#676767",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 18,
+    "atSeconds": 4.2,
+    "endSeconds": 5.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose an account",
+    "headline": "Choose an account"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Choose an account",
+        "name": "Getapp"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 1.5s",
+        "name": "Forgot email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

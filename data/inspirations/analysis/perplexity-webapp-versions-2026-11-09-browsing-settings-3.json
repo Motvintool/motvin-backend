@@ -1,0 +1,163 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-browsing-settings-3",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-browsing-settings-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:42.392Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "ai",
+  "flow": "checkout",
+  "flow_name": "Browsing settings",
+  "flow_position": 7,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen, on top of Answer with a search bar. Dark theme, 47 text elements.",
+  "text": "Q\n• Search settings\nPreferences\nAppearance\nAccount\ng Account\nTheme\nHow Perplexity looks on your device\nii Preferences\n•\n© Personalisation\n8 Memory\nLight\nDark\nAuto\nA Notifications\nAnswer font\nFont style for Al response text\nComputer\nAa\nAa\nộ Configuration\nSans-serif\nv Serif\n• Devices\n& Credential vault\nHomepage heading font\nFont style for the homepage heading\no Connectors\nAa\nAa\n& Plugins and skills\nSerif\nSans-serif\nOther\nUpgrade to Enterprise\nPreferences\nAbout Enterprise\n• API Platform\nLanguage\nDefault\nThe language Perplexity displays in\nPreferred response language\nAutomatic (detect input)\nThe language used for Al responses\nAutosuggest\nhttps://www.perplexity.ai/session/15881899-9e26-4262-bf00-29b70e0d359d#settings/personalize",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "notification",
+    "paywall",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Preferences”",
+        "Search bar present",
+        "Toast over a dimmed background, covering 11% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen, on top of Answer with a search bar. Dark theme, 47 text elements.",
+        "47 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 13 in “Opening N bundles”",
+        "Reached from “Answer”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 15:33 in the recording",
+        "Frame 3117 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11151a",
+      "role": "background",
+      "share": 0.908
+    },
+    {
+      "hex": "#31363b",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#989c9e",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#b7b9ba",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#4b4f54",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 3117,
+    "atSeconds": 933.6,
+    "endSeconds": 935.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 0.8125,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 47,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Preferences",
+    "headline": "Credential vault"
+  },
+  "crawler": {
+    "nodeId": "s197",
+    "depth": 196,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s196",
+        "via": "Open Preferences",
+        "name": "Answer"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s198",
+        "via": "Tap “• Search settings”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

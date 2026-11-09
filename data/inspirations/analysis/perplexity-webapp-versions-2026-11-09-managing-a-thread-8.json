@@ -1,0 +1,158 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-managing-a-thread-8",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-managing-a-thread-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:23.065Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Managing a thread",
+  "flow_position": 64,
+  "name": "Helte sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Search results with a search bar. Dark theme, 11 text elements.",
+  "text": "Swap project\nNew project\n+ Create new project\nQ Search projects...\nExisting project\n• Design\nLlle\nAclid\nWork\nHelte\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Helte”",
+        "Search bar present",
+        "Bottom sheet over a dimmed background, covering 69% of the height from 23% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Search results with a search bar. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 64 of 116 in “Dismissing the welcome tip”",
+        "Reached from “Search results”",
+        "Leads to “Image results for: Hello”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 5:36 in the recording",
+        "Frame 1131 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e1115",
+      "role": "background",
+      "share": 0.677
+    },
+    {
+      "hex": "#343432",
+      "role": "surface",
+      "share": 0.092
+    },
+    {
+      "hex": "#686866",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#55514b",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#82817e",
+      "role": "text",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 1131,
+    "atSeconds": 336,
+    "endSeconds": 339.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.234375,
+        "w": 0.4375,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Helte",
+    "headline": "Helte"
+  },
+  "crawler": {
+    "nodeId": "s070",
+    "depth": 69,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s069",
+        "via": "Back to Helte sheet",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s071",
+        "via": "Dismiss",
+        "name": "Image results for: Hello"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

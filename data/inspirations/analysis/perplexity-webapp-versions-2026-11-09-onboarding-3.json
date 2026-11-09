@@ -1,0 +1,150 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-onboarding-3",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:12.085Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with email”. Dark theme, 20 text elements.",
+  "text": "Sign up below to unlock the full\npotential of Perplexity\nG Continue with Google\n• Continue with Apple\nmotvintool@gmail.com\nContinue with email\nSingle sign-on (SSO)\nClose\nBy continuing, you agree to the\n• Cookie Policy\nPerplexity Terms of Service and Privacy Notice\nWe and our partners use cookies, pixels, SDKs, APls, and\nserver-to-server integrations. Perplexity does not use these\ntechnologies to sell third party ads on our services. Perplexity\nuses them to measure our ad performance on third party\npartner websites and to improve our services. If you continue\nusing Perplexity, without adjusting your settings, you are\nconsenting to these technologies.\nGot it\nDecline optional",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Potential of Perplexity”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with email”. Dark theme, 20 text elements.",
+        "Calls to action: “Continue with email”, “Got it”",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 0:03 in the recording",
+        "Frame 38 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0e10",
+      "role": "background",
+      "share": 0.876
+    },
+    {
+      "hex": "#272d33",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#454b51",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#c0c3c9",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#a5a9af",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 38,
+    "atSeconds": 3.9,
+    "endSeconds": 11.7,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with email",
+      "Got it"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Potential of Perplexity",
+    "headline": "Potential of Perplexity"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Wait 1.5s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “G Continue with Google”",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

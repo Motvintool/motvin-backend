@@ -1,0 +1,143 @@
+{
+  "screenId": "duolingo-webapp-versions-2026-11-09-onboarding-56",
+  "screen_id": "duolingo-webapp-versions-2026-11-09-onboarding-56",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:56.704Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "Sign in",
+  "description": "Login screen with a primary action labelled “NEXT”. Light theme, 14 text elements.",
+  "text": "LOGIN\nHow old are you?\n25\nProviding your age ensures you get the right Duolingo\nexperience. For more details, please visit our Privacy\nPolicy.\nNEXT\nOR -\nG GOOGLE\nAPPLE\nBy signing in to Duolingo, you agree to our Terms and Privacy\nPolicy.\nThis site is protected by reCAPTCHA Enterprise and the Google\nPrivacy Policy and Terms of Service apply.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “NEXT”. Light theme, 14 text elements.",
+        "Calls to action: “NEXT”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 9 in “Logging in”",
+        "Reached from “Time to create a profile!”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:37 in the recording",
+        "Frame 1133 of 2572 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.977
+    },
+    {
+      "hex": "#43c7fe",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#d7e6ee",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#bebebe",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2572,
+    "frame": 1133,
+    "atSeconds": 337.8,
+    "endSeconds": 340.2,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "NEXT"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "How old are you?"
+  },
+  "crawler": {
+    "nodeId": "s045",
+    "depth": 44,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s044",
+        "via": "Open Sign in",
+        "name": "Time to create a profile!"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s046",
+        "via": "Open Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

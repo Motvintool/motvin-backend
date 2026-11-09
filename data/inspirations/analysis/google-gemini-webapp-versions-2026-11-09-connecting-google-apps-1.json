@@ -1,0 +1,174 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-connecting-google-apps-1",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-connecting-google-apps-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:43.249Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Connecting Google apps",
+  "flow_position": 20,
+  "name": "Getapp dialog",
+  "description": "Dialog over a dimmed screen with a sidebar and a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "Gemini\nL Getapp\nUpgrade\nC\nNew chat\nLibrary\nImages\nScheduled\nO\nCustomise\nNotebooks\n+New notebook\nAll\nS\nA Friendly Greeting\nAnalyzing Classic Novel Structure and T...\nBranch • A Friendly Greeting\nGemini Auto\nUnlock the best Gemini for you\nGet smarter help by connecting your Google apps, safely\nand securely.\nUse without content apps\nContinue\nSurendar\nS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Getapp”",
+        "Dialog over a dimmed background, covering 20% of the height from 23% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a sidebar and a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 130 in “Choose an account”",
+        "Reached from “Getapp”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 1:19 in the recording",
+        "Frame 278 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100f0d",
+      "role": "background",
+      "share": 0.783
+    },
+    {
+      "hex": "#262524",
+      "role": "surface",
+      "share": 0.15
+    },
+    {
+      "hex": "#4e3910",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#596cb3",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#384345",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 278,
+    "atSeconds": 79.8,
+    "endSeconds": 83.7,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.234375,
+        "w": 0.375,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Gemini",
+      "New chat",
+      "Library",
+      "Images",
+      "Scheduled",
+      "Customise",
+      "Notebooks",
+      "New notebook",
+      "All",
+      "Friendly Greeting",
+      "Branch • A Friendly Greeting"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Getapp",
+    "headline": "Unlock the best Gemini for you"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Open Getapp",
+        "name": "Getapp"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Dismiss",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,149 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-browsing-settings-9",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-browsing-settings-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:43.322Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "ai",
+  "flow": "checkout",
+  "flow_name": "Browsing settings",
+  "flow_position": 13,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a search bar. Dark theme, 31 text elements.",
+  "text": "Q\n• Search settings\nCredential vault\nStore credentials securely. Secret values are write-only after save.\nAccount\nScope\n9 Account\nDefine credentials for external APls that are not supported by Connectors.\nPersonal\nOnly you can use these credentials, in any of your Computer sessions. To\nti Preferences\ncreate a credential for a single session, ask Computer in that session.\n• Personalisation\nAdd credential\n+ Add credential\n* Memory\n• Notifications\nSaved credentials\nComputer\nộ Configuration\nNo personal credentials saved.\n• Devices\n8 Credential vault\ns° Connectors\n→\n& Plugins and skills\nOther\nUpgrade to Enterprise\nAbout Enterprise\n• API Platform\nhttps://www.perplexity.ai/computer/plugins",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "notification",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Credential vault”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a search bar. Dark theme, 31 text elements.",
+        "31 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 13 in “Opening N bundles”",
+        "Reached from “Subscription plans”",
+        "Leads to “Plugins”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 15:43 in the recording",
+        "Frame 3150 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f1418",
+      "role": "background",
+      "share": 0.935
+    },
+    {
+      "hex": "#2e343a",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#494e52",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#cbcfd4",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#9ba0a6",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 3150,
+    "atSeconds": 943.5,
+    "endSeconds": 945.3,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Credential vault",
+    "headline": "Notifications"
+  },
+  "crawler": {
+    "nodeId": "s203",
+    "depth": 202,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s202",
+        "via": "Wait 1.8s",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s204",
+        "via": "Wait 1.8s",
+        "name": "Plugins"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

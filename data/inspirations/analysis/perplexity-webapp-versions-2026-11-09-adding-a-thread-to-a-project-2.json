@@ -1,0 +1,158 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-adding-a-thread-to-a-project-2",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-adding-a-thread-to-a-project-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:22.446Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Adding a thread to a project",
+  "flow_position": 61,
+  "name": "Helle",
+  "description": "Detail bottom sheet over a dimmed screen, on top of Search results. Dark theme, 14 text elements.",
+  "text": "Create new project\nTitle\ndesign works\nDescription (optional)\nDescribe what this project is for\nPello\nLlle\n0 /1000\nInstructions (optional)\nCustom instructions for the agent in this project\nHelle\n0 / 8000\nHE420\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Helle”",
+        "Bottom sheet over a dimmed background, covering 69% of the height from 23% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail bottom sheet over a dimmed screen, on top of Search results. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 61 of 116 in “Dismissing the welcome tip”",
+        "Reached from “Search results”",
+        "Leads to “Image results for: Hello”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 9.3s at 5:19 in the recording",
+        "Frame 1094 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f1215",
+      "role": "background",
+      "share": 0.692
+    },
+    {
+      "hex": "#585654",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#383632",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#82817e",
+      "role": "text",
+      "share": 0.044
+    },
+    {
+      "hex": "#6f706c",
+      "role": "surface",
+      "share": 0.036
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 1094,
+    "atSeconds": 319.2,
+    "endSeconds": 328.5,
+    "holdSeconds": 9.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.234375,
+        "w": 0.4375,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Helle",
+    "headline": "Helle"
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 66,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Tap “Helle®”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Dismiss",
+        "name": "Image results for: Hello"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

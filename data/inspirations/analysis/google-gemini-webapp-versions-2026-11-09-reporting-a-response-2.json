@@ -1,0 +1,143 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-reporting-a-response-2",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-reporting-a-response-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:49.729Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Reporting a response",
+  "flow_position": 66,
+  "name": "External sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a search bar. Light theme, 27 text elements.",
+  "text": "= G\n= Legal Help\nLegal C\nReport content on Google\nGoogle's content and product policies apply wherever you are in the world, but we also have processes in\nplace to remove or restrict access to content based on local laws. This page will help you get to the right place\nto report content that you would like removed from Google's services under Google's policies or applicable\nlaws.\nYou can also visit http://support.google.com for non-legal issues that concern Google's Terms of Service or\ncontent and product policies.\nLegal standards vary greatly by country/region. Content that violates a specific law in one country/region may\nbe legal in others. Typically, we remove or restrict access to the content only in the country/region where it is\ndeemed to be illegal. When content is found to violate Google's content or product policies or Terms of\nService, however, we typically remove or restrict access globally.\nYou may report the same content through both legal and content/product policy reporting paths, but you must\nfile each report separately. Note that reporting content through a content/product policy path does not\nsubstitute for reporting it through a legal path and does not serve as legal notice.\nSelect the Google product where the content that you are reporting appears\nNote: You must submit a separate report for each Google product where the content appears\n• G Google search\n• B Blogger/Blogspot\nO 9 Google Maps and related products\n• |\nGoogle Play\n• • YouTube\n• AA Google Ad\n• & Drive (Docs, Slides, Sheets, Forms, etc.) l",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "map",
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Legal C”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a search bar. Light theme, 27 text elements.",
+        "27 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 66 of 130 in “Choose an account”",
+        "Reached from “Splash”",
+        "Leads to “External sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:24 in the recording",
+        "Frame 883 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfbfb",
+      "role": "background",
+      "share": 0.87
+    },
+    {
+      "hex": "#dddede",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#bdbdbd",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#93cbd2",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 883,
+    "atSeconds": 264,
+    "endSeconds": 265.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Legal C",
+    "headline": "Report content on Google"
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 66,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Open Legal C",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Wait 1.5s",
+        "name": "External sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

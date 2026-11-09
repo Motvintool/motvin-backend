@@ -1,0 +1,157 @@
+{
+  "screenId": "duolingo-webapp-versions-2026-11-09-starting-a-chess-course-7",
+  "screen_id": "duolingo-webapp-versions-2026-11-09-starting-a-chess-course-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:11:13.279Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Starting a chess course",
+  "flow_position": 32,
+  "name": "Progress if you quit now dialog",
+  "description": "Dialog over a dimmed screen, on top of Solve the puzzle. Light theme, 7 text elements.",
+  "text": "X =\nSolve the puzzle\nThe rook moves in straight lines. Capture the stars.\nWait, don't go! You'll lose your\nprogress if you quit now\nKEEP LEARNING\nEND SESSION",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Progress if you quit now”",
+        "Dialog over a dimmed background, covering 41% of the height from 30% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Solve the puzzle. Light theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 36 in “Opening settings”",
+        "Reached from “Solve the puzzle”",
+        "Leads to “Play Chess”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 12:38 in the recording",
+        "Frame 2535 of 2572 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#a1a1a1",
+      "role": "background",
+      "share": 0.871
+    },
+    {
+      "hex": "#fcfdfc",
+      "role": "text",
+      "share": 0.07
+    },
+    {
+      "hex": "#cdcece",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#85817c",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#40b8f7",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2572,
+    "frame": 2535,
+    "atSeconds": 758.7,
+    "endSeconds": 760.8,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.296875,
+        "w": 0.25,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Progress if you quit now",
+    "headline": "Progress if you quit now"
+  },
+  "crawler": {
+    "nodeId": "s151",
+    "depth": 152,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s150",
+        "via": "Back to Progress if you quit now dialog",
+        "name": "Solve the puzzle"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s152",
+        "via": "Open Play Chess",
+        "name": "Play Chess"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}
