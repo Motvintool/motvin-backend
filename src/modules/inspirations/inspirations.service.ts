@@ -276,7 +276,9 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
   }
 
   async getScreens(query: ScreenQuery): Promise<Page<InspirationScreen>> {
-    let screens = this.filterScreens(await this.loader.getScreens(), { ...query, apps: query.app ? [query.app] : undefined });
+    // `app` is one app id, or several comma-separated (the web's colour filter: every app of one brand colour).
+    const appIds = query.app?.split(',').map((id) => id.trim()).filter(Boolean);
+    let screens = this.filterScreens(await this.loader.getScreens(), { ...query, apps: appIds?.length ? appIds : undefined });
 
     if (query.q?.trim()) {
       const apps = await this.loader.getApps();
