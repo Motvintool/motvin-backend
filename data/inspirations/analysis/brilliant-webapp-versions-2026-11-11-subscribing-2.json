@@ -1,0 +1,156 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-subscribing-2",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-subscribing-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:49.387Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Subscribing",
+  "flow_position": 4,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a row of 3 category chips and 2 input fields. Dark theme, 29 text elements.",
+  "text": "Brilliant\n·2,124.00\nTotal due today\nView details v\nPayment method\nCard number\nVISA\nSupercharge\nExpiry date\nSecurity code\nyour learning\n-123\nCountry/Territory\nIndia\nUnlimited visual, interactive tutoring\n) By checking this box and clicking \"Subscribe now\", I agree to the\nProgress tracking and personal stats\nTerms of Service and Privacy Policy.\nBy checking this box and clicking \"Subscribe now\", I understand\nthat: (1) my subscription will begin immediately and I will be charged\nNo in-app purchases or ads\n72,124.00 per month, (2) my monthly subscription will continue to\nrenew automatically unless I cancel and l authorize Brilliant\nWorldwide, Inc. to charge me for these automatically recurring\nNew content added regularly\ncharges, and (3) | can cancel any time before the renewal date in my\naccount settings.\n& Subscribe now\nPowered by stripe",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "payment",
+    "subscription",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "chip",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Total due today”",
+        "Category strip: Card number, VISA, Supercharge",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a row of 3 category chips and 2 input fields. Dark theme, 29 text elements.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 94 in “Subscribing”",
+        "Reached from “Splash”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 2:58 in the recording",
+        "Frame 607 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191918",
+      "role": "background",
+      "share": 0.608
+    },
+    {
+      "hex": "#3a3338",
+      "role": "surface",
+      "share": 0.318
+    },
+    {
+      "hex": "#545457",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#53451b",
+      "role": "accent",
+      "share": 0.024
+    },
+    {
+      "hex": "#6f6b73",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 607,
+    "atSeconds": 178.2,
+    "endSeconds": 178.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [
+      "Card number",
+      "VISA",
+      "Supercharge"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Total due today",
+    "headline": "Your learning"
+  },
+  "crawler": {
+    "nodeId": "s068",
+    "depth": 67,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s067",
+        "via": "Open Total due today",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s069",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

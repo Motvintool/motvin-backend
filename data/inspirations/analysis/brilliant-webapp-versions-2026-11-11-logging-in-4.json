@@ -1,0 +1,156 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-logging-in-4",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-logging-in-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:43.748Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 24,
+  "name": "Sign in with email",
+  "description": "Login toast over a dimmed screen, on top of Sign in with email. Dark theme, 8 text elements.",
+  "text": "Login\nOR\nmotvintool@gmail.com\nSuccess!\nCLOUDFLARE\nPrivacy • Help\nNew user? Sign up\nReset password",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Login”",
+        "Toast over a dimmed background, covering 6% of the height from 30% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Sign in with email. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 57 in “Entering phone number”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 1:18 in the recording",
+        "Frame 270 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131513",
+      "role": "background",
+      "share": 0.957
+    },
+    {
+      "hex": "#353735",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#4d5c4d",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#758074",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#8a926b",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 270,
+    "atSeconds": 78.6,
+    "endSeconds": 81.3,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.296875,
+        "w": 0.3125,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Login",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Tap “Login”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

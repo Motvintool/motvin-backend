@@ -1,0 +1,164 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-onboarding-11",
+  "screen_id": "udemy-webapp-versions-2026-11-11-onboarding-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:39:31.158Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 14,
+  "name": "Loading state",
+  "description": "Loading state with a row of 5 category chips and a search bar. Light theme, 19 text elements.",
+  "text": "1 day left! Transform your wishlist goals into career skills | Get those skills and more with this special offer.\nüdemy Explore\nSearch for anything\nUdemy Business\nTeach on Udemy My learning\nSubscribe\nFinance & Accounting\nIT & Software Office Productivity\nPersonal Development\nHealth & Fitness\nDesign\nMarketing\nDevelopment\nBusiness\nMusic\nWelcome, Motvin\nManager, Software Development\nEdit occupation and interests\nWhat to learn next",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "offer",
+    "paywall",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Demy Explore”",
+        "Category strip: Design, Marketing, Development, Business, Music",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 5 category chips and a search bar. Light theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 14 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:15 in the recording",
+        "Frame 258 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f7fa",
+      "role": "background",
+      "share": 0.937
+    },
+    {
+      "hex": "#cae5e8",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#b5c0c5",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#727377",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#949496",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 258,
+    "atSeconds": 75.6,
+    "endSeconds": 77.7,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [
+      "Design",
+      "Marketing",
+      "Development",
+      "Business",
+      "Music"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "Development",
+    "listedInSidebar": false,
+    "title": "Demy Explore",
+    "headline": "Welcome, Motvin",
+    "walkTab": "Development"
+  },
+  "crawler": {
+    "nodeId": "s014",
+    "depth": 13,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s013",
+        "via": "Open Demy Explore",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s015",
+        "via": "Wait 2.1s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,140 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-viewing-account-settings-3",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-viewing-account-settings-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:58.758Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Viewing account settings",
+  "flow_position": 66,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Dark theme, 29 text elements.",
+  "text": "Brilliant\n=\n14\n8 You\nO 5\nGo Premium\n• Home\n• Topics\nConnected accounts\nAccount\nYou don't have any social accounts connected to your Brilliant account yet.\nPremium\nPreferences\nCookie settings\nManage your cookie preferences and privacy settings.\nManage cookie settings\nExport your data\nStart exporting your data regarding your usage of Brilliant.\nStart exporting your data\nAccount Management\nIf you need to take a break or want to permanently delete your account, you can\nmanage these options here.\nDeactivate or delete your account\nEducators\nAbout us\nPrivacy &\nCareers\nHelp\nLegal",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "premium",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Connected accounts”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Dark theme, 29 text elements.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 66 of 94 in “Subscribing”",
+        "Reached from “Subscription plans — scrolled”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:15 in the recording",
+        "Frame 1255 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141614",
+      "role": "background",
+      "share": 0.937
+    },
+    {
+      "hex": "#343535",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#505150",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#6b6c6b",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 1255,
+    "atSeconds": 375.9,
+    "endSeconds": 376.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Connected accounts",
+    "headline": "Export your data"
+  },
+  "crawler": {
+    "nodeId": "s132",
+    "depth": 132,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Tap “Connect”",
+        "name": "Subscription plans — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s133",
+        "via": "Wait 0.9s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,139 @@
+{
+  "screenId": "masterclass-webapp-versions-2026-11-11-onboarding-3",
+  "screen_id": "masterclass-webapp-versions-2026-11-11-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:07:54.248Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 4,
+  "name": "MasterClass",
+  "description": "Other screen. Dark theme, 15 text elements.",
+  "text": "W MasterClass\nInterests\nGoals\nClasses For You\nGreat! Any other topics of interest?\n• Applying Al\nActing & Performing Arts\nU Art & Design\nBusiness & Entrepreneurship\nCommunity & Government\nFilm & TV\nFood & Drink\nGames & Digital Media\nHealth & Wellness\nMusic",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “MasterClass”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 51 in “Onboarding”",
+        "Reached from “MasterClass”",
+        "Leads to “Film & TV”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:06 in the recording",
+        "Frame 27 of 1209 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#000000",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#191d24",
+      "role": "surface",
+      "share": 0.21
+    },
+    {
+      "hex": "#373b43",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#585a5e",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1209,
+    "frame": 27,
+    "atSeconds": 6.9,
+    "endSeconds": 8.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "MasterClass",
+    "headline": "Applying Al"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Wait 6s",
+        "name": "MasterClass"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Wait 1.5s",
+        "name": "Film & TV"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

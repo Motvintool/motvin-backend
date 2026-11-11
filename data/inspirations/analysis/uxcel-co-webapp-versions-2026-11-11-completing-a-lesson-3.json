@@ -1,0 +1,157 @@
+{
+  "screenId": "uxcel-co-webapp-versions-2026-11-11-completing-a-lesson-3",
+  "screen_id": "uxcel-co-webapp-versions-2026-11-11-completing-a-lesson-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:50:41.153Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Completing a lesson",
+  "flow_position": 76,
+  "name": "Cognitive Biases dialog",
+  "description": "Dialog over a dimmed screen, on top of Lesson complete. Dark theme, 9 text elements.",
+  "text": "SHARE LESSON\nCognitive Biases\nShare this lesson with your friends, colleagues, manager and\nanyone who will benefit.\nCopy link\nin\nX\nShare lesson\nLink copied to clipboard!",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Cognitive Biases”",
+        "Dialog over a dimmed background, covering 39% of the height from 31% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Lesson complete. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 76 of 96 in “Opening settings”",
+        "Reached from “Lesson complete”",
+        "Leads to “Cognitive Biases toast”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 7:01 in the recording",
+        "Frame 1411 of 3626 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151923",
+      "role": "background",
+      "share": 0.93
+    },
+    {
+      "hex": "#3b3c46",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#5e5d75",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#a79bff",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#736db1",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3626,
+    "frame": 1411,
+    "atSeconds": 421.2,
+    "endSeconds": 423.6,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.3125,
+        "w": 0.3125,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Cognitive Biases",
+    "headline": "Cognitive Biases"
+  },
+  "crawler": {
+    "nodeId": "s159",
+    "depth": 162,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s158",
+        "via": "Tap “Nice job reaching your goal!”",
+        "name": "Lesson complete"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s160",
+        "via": "Back to Cognitive Biases toast",
+        "name": "Cognitive Biases toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

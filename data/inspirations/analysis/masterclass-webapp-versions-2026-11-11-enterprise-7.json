@@ -1,0 +1,146 @@
+{
+  "screenId": "masterclass-webapp-versions-2026-11-11-enterprise-7",
+  "screen_id": "masterclass-webapp-versions-2026-11-11-enterprise-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:08:10.060Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Enterprise",
+  "flow_position": 1,
+  "name": "Phone number entry",
+  "description": "Login screen with 7 input fields. Dark theme, 27 text elements.",
+  "text": "MasterClass at Work\nMenu =\nSkills Library\nHow It Works\nPurchase Now\nCONNECT WITH US\nBring out your people's best.\nFirst Name*\nLast Name*\nLast Name\nFirst Name\nEmail Address*\nCompany Name*\nEmail Address\nCompany Name\nJob Title (Optional)\nPhone Number (Optional)\nJob Title\nPhone Number\nWhat product are you interested in purchasing?*\nTell us about your interest in MasterClass at Work...\nNumber of Licenses Requested*\nSelect Number of Learners\nWhen are you looking to purchase?*\nSelect a timeframe for your purchase\nBusiness Region*\nSelect your business region",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Skills Library”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 7 input fields. Dark theme, 27 text elements.",
+        "27 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Entering phone number”",
+        "Reached from “Skills Library”",
+        "Leads to “Phone number entry — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:22 in the recording",
+        "Frame 676 of 1209 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#08080a",
+      "role": "background",
+      "share": 0.713
+    },
+    {
+      "hex": "#1c2027",
+      "role": "surface",
+      "share": 0.254
+    },
+    {
+      "hex": "#3d3e40",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#5a5a5c",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#7d7d7e",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1209,
+    "frame": 676,
+    "atSeconds": 202.5,
+    "endSeconds": 203.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Skills Library",
+    "headline": "Bring out your people's best"
+  },
+  "crawler": {
+    "nodeId": "s090",
+    "depth": 89,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s089",
+        "via": "Open Skills Library",
+        "name": "Skills Library"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s091",
+        "via": "Scroll",
+        "name": "Phone number entry — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

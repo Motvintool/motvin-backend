@@ -1,0 +1,154 @@
+{
+  "screenId": "podia-webapp-versions-2026-11-11-editing-account-settings-9",
+  "screen_id": "podia-webapp-versions-2026-11-11-editing-account-settings-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:25:22.569Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": null,
+  "flow": "settings",
+  "flow_name": "Editing account settings",
+  "flow_position": 5,
+  "name": "Account",
+  "description": "Settings screen with 2 input fields and a primary action labelled “Confirm new password”. Light theme, 34 text elements.",
+  "text": "Account\nEmail\nmotvintool@gmail.com\nEdit\nPassword\nPassword\nYour new password should be at least 6 characters\nCurrent password\n•••... . d\nNew password\n.....\nConfirm new password\n......\nDiscard\nSave\nLanguage\nEnglish\nEdit\nTimezone\n(GMT+05:30) Asia/Calcutta\nEdit\nSecurity\nEnabled\n• 1 session\nEdit\nProfile\nManage profile details\nEdit\nNotifications\nManage web and email notifications\nEdit\nDelete my account...\nEmail updated X\nhttps://my.podia.com/account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "notification",
+    "settings",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 2 input fields and a primary action labelled “Confirm new password”. Light theme, 34 text elements.",
+        "Calls to action: “Confirm new password”, “Save”",
+        "34 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “Email”",
+        "Reached from “Account”",
+        "Leads to “Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 26:14 in the recording",
+        "Frame 5252 of 5337 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfcfc",
+      "role": "background",
+      "share": 0.961
+    },
+    {
+      "hex": "#dfdfdf",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#bebec0",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#2d2e33",
+      "role": "text",
+      "share": 0.004
+    },
+    {
+      "hex": "#88888d",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Podia.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5337,
+    "frame": 5252,
+    "atSeconds": 1574.1,
+    "endSeconds": 1575.9,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm new password",
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Language",
+    "walkTab": "Email"
+  },
+  "crawler": {
+    "nodeId": "s461",
+    "depth": 464,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s460",
+        "via": "Open Account",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s462",
+        "via": "Wait 1.8s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

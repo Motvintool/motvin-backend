@@ -1,0 +1,163 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-logging-in-5",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:43.872Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 25,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen, on top of Sign in with email with a primary action labelled “Sign in”. Dark theme, 14 text elements.",
+  "text": "Login\nOR\nThe email, username, and/or password you\nspecified are not correct. If you forgot your\npassword or never set one, you can reset it easily. If\nyou signed up with Google or another third-party\nservice, choose to sign in with that method\ninstead.\nmotvintool@gmail.com\n....\nSuccess!\nCLOUDFLARE\nPrivacy • Help\nSign in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Login”",
+        "Dialog over a dimmed background, covering 20% of the height from 28% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Sign in with email with a primary action labelled “Sign in”. Dark theme, 14 text elements.",
+        "Calls to action: “Sign in”",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 57 in “Entering phone number”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 1:21 in the recording",
+        "Frame 298 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121412",
+      "role": "background",
+      "share": 0.869
+    },
+    {
+      "hex": "#373937",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#ac4e4a",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#7f312c",
+      "role": "accent",
+      "share": 0.022
+    },
+    {
+      "hex": "#a8a9a8",
+      "role": "text",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 298,
+    "atSeconds": 81.9,
+    "endSeconds": 82.8,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.28125,
+        "w": 0.3125,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Login",
+    "headline": "The email, username, and/or password you"
+  },
+  "crawler": {
+    "nodeId": "s026",
+    "depth": 25,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Tap “Login”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s027",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

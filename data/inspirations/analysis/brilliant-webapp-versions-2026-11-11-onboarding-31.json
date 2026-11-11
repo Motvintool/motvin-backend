@@ -1,0 +1,159 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-onboarding-31",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-onboarding-31",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:48.510Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 55,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Dialog with a primary action labelled “Continue”. Dark theme, 4 text elements.",
+  "text": "Earn XP to get ahead\nEarn XP by correctly answering problems.\n• • •\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Dialog with a primary action labelled “Continue”. Dark theme, 4 text elements.",
+        "Calls to action: “Continue”",
+        "4 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 55 of 57 in “Entering phone number”",
+        "Reached from “Dialog”",
+        "Leads to “Toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:41 in the recording",
+        "Frame 544 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121412",
+      "role": "background",
+      "share": 0.95
+    },
+    {
+      "hex": "#353a33",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#cecece",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#5d6d25",
+      "role": "accent",
+      "share": 0.007
+    },
+    {
+      "hex": "#838483",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 544,
+    "atSeconds": 161.7,
+    "endSeconds": 163.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.046875,
+        "w": 0.25,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Earn XP to get ahead"
+  },
+  "crawler": {
+    "nodeId": "s062",
+    "depth": 61,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s061",
+        "via": "Tap “weekly leaderboard.”",
+        "name": "Dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s063",
+        "via": "Tap “Earn XP to get ahead”",
+        "name": "Toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "masterclass-webapp-versions-2026-11-11-onboarding-6",
+  "screen_id": "masterclass-webapp-versions-2026-11-11-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:07:54.682Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "MasterClass",
+  "description": "Onboarding screen with a primary action labelled “Next”. Dark theme, 9 text elements.",
+  "text": "-V MasterClass\nClasses For You\nInterests\nGoals\nHow much time do you want to spend learning every week?\n30 minutes or less\n• 1-2 hours\nMore than 2 hours\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “MasterClass”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with a primary action labelled “Next”. Dark theme, 9 text elements.",
+        "Calls to action: “Next”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 51 in “Onboarding”",
+        "Reached from “Welcome tip”",
+        "Leads to “MasterClass”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:13 in the recording",
+        "Frame 50 of 1209 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#000000",
+      "role": "background",
+      "share": 0.893
+    },
+    {
+      "hex": "#191d23",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#4e1219",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#5a5b5b",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#393d42",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1209,
+    "frame": 50,
+    "atSeconds": 13.8,
+    "endSeconds": 15.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "MasterClass",
+    "headline": "30 minutes or less"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open MasterClass",
+        "name": "Welcome tip"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Wait 1.5s",
+        "name": "MasterClass"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,160 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-learning-activity-2",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-learning-activity-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:56.854Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Learning activity",
+  "flow_position": 53,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen. Dark theme, 29 text elements.",
+  "text": "Brilliant\n14\n8 You\n0 5\nGo Premium\nTopics\nHome\nYour learning activity\nWeekly summary\n• You practiced on 1 day so far this week.\nNov 9 - Nov 10, 2026\nWeek of Nov 9-10, 2026\nAll time\nWeek\nMonth\nYear\nAssessment accuracy\nActivities completed\nA 66.7%\n66.7%\nFrom last week\nProblems solved\nNov 9 - Nov 10, 2026\n8\n6\n4\n2\nMon\nTue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "paywall",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Mon”",
+        "Toast over a dimmed background, covering 13% of the height from 86% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen. Dark theme, 29 text elements.",
+        "29 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 53 of 94 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans — scrolled”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 5:42 in the recording",
+        "Frame 1152 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131814",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#2f392f",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#0c4c11",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#536553",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#3d56a7",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 1152,
+    "atSeconds": 342.9,
+    "endSeconds": 345.9,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.859375,
+        "w": 0.875,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Mon",
+    "headline": "Weekly summary"
+  },
+  "crawler": {
+    "nodeId": "s119",
+    "depth": 119,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s118",
+        "via": "Tap “Week”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s120",
+        "via": "Dismiss",
+        "name": "Subscription plans — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

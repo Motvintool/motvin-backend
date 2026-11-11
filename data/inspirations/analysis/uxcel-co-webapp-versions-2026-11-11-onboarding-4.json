@@ -1,0 +1,140 @@
+{
+  "screenId": "uxcel-co-webapp-versions-2026-11-11-onboarding-4",
+  "screen_id": "uxcel-co-webapp-versions-2026-11-11-onboarding-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:50:17.797Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Continue with Google”. Dark theme, 11 text elements.",
+  "text": "Welcome back to Uxcel\nContinue with Google\nSee other options\nor\nEmail address\nmotvintool@gmail.com\nPassword\n.....\nForgot my_password\nContinue\nDon't have an account? Sign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back to Uxcel”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Continue with Google”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue with Google”, “Continue”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 8 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:23 in the recording",
+        "Frame 88 of 3626 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272933",
+      "role": "background",
+      "share": 0.969
+    },
+    {
+      "hex": "#484a52",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#696b71",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3626,
+    "frame": 88,
+    "atSeconds": 23.7,
+    "endSeconds": 26.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome back to Uxcel",
+    "headline": "Welcome back to Uxcel"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Tap “Welcome back to Uxcel”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

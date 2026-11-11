@@ -1,0 +1,160 @@
+{
+  "screenId": "podia-webapp-versions-2026-11-11-website-1",
+  "screen_id": "podia-webapp-versions-2026-11-11-website-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:24:26.059Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Website",
+  "flow_position": 1,
+  "name": "Checkout",
+  "description": "Checkout screen with a sidebar and a row of 3 category chips. Light theme, 26 text elements.",
+  "text": "< Admin\nQ\nдо\nPlease confirm that motvintool@gmail.com is your email address. Change email • Resend confirmation\n** Overview\nYour trial expires in 14 days. Upgrade now\n• Website\n• Products\n• New page\n& Edit site\nWebsite\n• Plans\n# Events\n5 pages\nUpdated\nType\n88 Spaces\nHomepage\nToday\nCustom\nM Blog\nSample course\nProduct\nToday\n• Email\nToday\n83 Audience\nCheckout success\nSuccess\nis Affiliates\nPrivacy Policy\nToday\nLegal\nSales\nToday\nTerms of Service\nLegal\n• Files\n@Settings\n• Billing\nRefer-a-friend\n* Podia Agent\nHi there, Join the next live Podia...\nPodia • 3m\nGet help\nW What's new\nhttps://app.podia.com/editor/pages",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "address",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Website”",
+        "Category strip: Homepage, Today, Custom",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a sidebar and a row of 3 category chips. Light theme, 26 text elements.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Placing an order”",
+        "Reached from “Subscription plans”",
+        "Leads to “Checkout”",
+        "Returned to 14 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 3:27 in the recording",
+        "Frame 719 of 5337 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f8f9",
+      "role": "background",
+      "share": 0.91
+    },
+    {
+      "hex": "#dedcdb",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#333534",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#565757",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#c4c4c5",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Podia.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5337,
+    "frame": 719,
+    "atSeconds": 207,
+    "endSeconds": 208.2,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 14
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [
+      "Homepage",
+      "Today",
+      "Custom"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Admin",
+      "Overview",
+      "Website",
+      "Products",
+      "Plans",
+      "Events",
+      "Spaces"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Website",
+    "headline": "Homepage"
+  },
+  "crawler": {
+    "nodeId": "s073",
+    "depth": 73,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s072",
+        "via": "Tap “Homepage”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s074",
+        "via": "Wait 7.8s",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

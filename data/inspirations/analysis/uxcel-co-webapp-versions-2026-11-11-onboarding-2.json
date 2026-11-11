@@ -1,0 +1,150 @@
+{
+  "screenId": "uxcel-co-webapp-versions-2026-11-11-onboarding-2",
+  "screen_id": "uxcel-co-webapp-versions-2026-11-11-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:50:17.545Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Continue with Google”. Dark theme, 15 text elements.",
+  "text": "Create your free account\nLevel up your product career with industry-recognized\ninteractive learning - UX, PM, Al and more.\nContinue with Google\nSee other options\nor\nEmail Address\njane@example.com\nContinue\nAlready have an account? Login\nTrusted by teams at\nFUjiTSU\nPaysafe +›\nDeloitte.\nmaze",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "address",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your free account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Continue with Google”. Dark theme, 15 text elements.",
+        "Calls to action: “Continue with Google”, “Continue”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 8 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 0:05 in the recording",
+        "Frame 29 of 3626 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282a33",
+      "role": "background",
+      "share": 0.951
+    },
+    {
+      "hex": "#4a4b56",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5e5d75",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#a499ff",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#736db3",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3626,
+    "frame": 29,
+    "atSeconds": 5.1,
+    "endSeconds": 9,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your free account",
+    "headline": "Create your free account"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Open Create your free account",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Open Welcome back to Uxcel",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

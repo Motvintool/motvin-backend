@@ -1,0 +1,161 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-previewing-a-course-1",
+  "screen_id": "udemy-webapp-versions-2026-11-11-previewing-a-course-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:39:36.715Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Previewing a course",
+  "flow_position": 30,
+  "name": "Free Sample Videos dialog",
+  "description": "Dialog over a dimmed screen, on top of Subscription plans. Dark theme, 12 text elements.",
+  "text": "Course Preview\nX\nAl Engineer Agentic Track: The Complete Agent & MCP Course\nFree Sample Videos:\nAl Engineer Agentic Track: The Complete Agent & MCP Course\nap0-\nDay 1 - Build Your First Autonomous Al Agent with n8n (No-Code\n14:30\nDemo)\nDay 1 - Course Roadmap: 6 Weeks, 8 Projects in Agentic Al\n13:00\nEngineering",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "map",
+    "video",
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Free Sample Videos”",
+        "Dialog over a dimmed background, covering 75% of the height from 13% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Subscription plans. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 30 of 159 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Course Preview”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:37 in the recording",
+        "Frame 531 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#5b5c6d",
+      "role": "background",
+      "share": 0.392
+    },
+    {
+      "hex": "#323145",
+      "role": "surface",
+      "share": 0.339
+    },
+    {
+      "hex": "#191a23",
+      "role": "surface",
+      "share": 0.252
+    },
+    {
+      "hex": "#4b3d5d",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#9b6b7d",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 531,
+    "atSeconds": 157.8,
+    "endSeconds": 159.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.125,
+        "w": 0.875,
+        "h": 0.75
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Free Sample Videos",
+    "headline": "Free Sample Videos"
+  },
+  "crawler": {
+    "nodeId": "s045",
+    "depth": 44,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s044",
+        "via": "Open Free Sample Videos",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s046",
+        "via": "Tap “Course Preview”",
+        "name": "Course Preview"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

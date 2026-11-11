@@ -1,0 +1,161 @@
+{
+  "screenId": "podia-webapp-versions-2026-11-11-events-1",
+  "screen_id": "podia-webapp-versions-2026-11-11-events-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:24:31.426Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Events",
+  "flow_position": 2,
+  "name": "Create account",
+  "description": "Sign up screen with a sidebar, a search bar, 1 input field and a primary action labelled “Save”. Light theme, 41 text elements.",
+  "text": "Products / Course / Edit\nQ\n* Admin\nDone\nPublish\nSaved\nSample course\n* Overview\nIncluded events\nB Website\nGrant access to events when customers sign up\nEvents\nProducts\nfor this product. Learn more\nQ Search events\n@ Plans\nYou can't add draft events. Their included products will be excluded.\n# Events\nSpaces\n88 Spaces\nGrant customers access to private spaces to\nSpaces\nencourage discussion. Learn more\nM Blog\nQ Search private spaces\nEmail\n8 Audience\nNew space\nis Affiliates\nCreate a private space for customers to discuss this product. Learn more\n฿ Sales\nName and icon\ne.g. Random\n• Files\nImage\n@Settings\n• Choose image\n• Billing\nPNG, JPEG, GIF, or WEBP up to 5 MB.\nI9 Refer-a-friend\nDescription\ne.g. Share your random thought and links!\nDiscard\nSave\nCertificate\nSend customers a certificate when they\nProvide certificates for this course.\nPreview\nEdit\n* Podia Agent\ncomplete all lessons in your course.\nHi there, Join the next live Podia...\nComments\nGethelp\nPodia • 4m\nAllow you and your members to leave comments\nO Active\nF What's new\non your product. Learn more\nEveryone can view and respond to comments.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "review",
+    "signup",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Events”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a sidebar, a search bar, 1 input field and a primary action labelled “Save”. Light theme, 41 text elements.",
+        "Calls to action: “Save”",
+        "41 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Events”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 5:10 in the recording",
+        "Frame 1044 of 5337 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f8",
+      "role": "background",
+      "share": 0.93
+    },
+    {
+      "hex": "#dbdcdc",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#c1c1c3",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#656567",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#36353b",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Podia.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5337,
+    "frame": 1044,
+    "atSeconds": 310.2,
+    "endSeconds": 313.5,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Admin",
+      "Overview",
+      "Website",
+      "Products",
+      "Plans",
+      "Events",
+      "Spaces"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Events",
+    "headline": "Spaces"
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Tap “* Admin”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Wait 3.3s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

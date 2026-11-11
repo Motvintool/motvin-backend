@@ -1,0 +1,153 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-onboarding-5",
+  "screen_id": "udemy-webapp-versions-2026-11-11-onboarding-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:39:29.727Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a search bar and a primary action labelled “Log in”. Light theme, 22 text elements.",
+  "text": "ûdemy\nSearch for anything\nSubscribe\nSign up\nExplore\nQ\nUdemy Business\nTeach on Udemy\nLog in\nCheck your inbox\nEnter the 6-digit code we sent to motvintool@gmail.com\n*\n**\nto finish your login.\nThe code you entered is invalid. Please try\nagain.\n6-digit code\n620588\nLog in\nDidn't receive the code? Resend code in 15\nHaving trouble logging in? View troubleshooting guide\nLog in to a different account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "login",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search for anything”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a search bar and a primary action labelled “Log in”. Light theme, 22 text elements.",
+        "Calls to action: “Log in”",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 14 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:31 in the recording",
+        "Frame 112 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfcfc",
+      "role": "background",
+      "share": 0.832
+    },
+    {
+      "hex": "#dcd7de",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#b5b5b5",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#676564",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#7639d5",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 112,
+    "atSeconds": 31.5,
+    "endSeconds": 33.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search for anything",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Tap “Log in”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “to finish your login.”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}
