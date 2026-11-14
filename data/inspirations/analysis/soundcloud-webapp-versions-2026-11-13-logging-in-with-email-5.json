@@ -1,0 +1,154 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-5",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:53.663Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 13,
+  "name": "Sign in with email",
+  "description": "Login screen with a search bar and a primary action labelled “Send reset link”. Light theme, 22 text elements.",
+  "text": "SOUNDCLOUD\nSearch for artists, bands, tracks, podcasts\nCreate account\nSign in\nHome\nFeed\nLibrary\nUpload\nReset password\nYour email address\nmotvintool@gmail.com\nA reset link will be sent if this email is registered.\nSend reset link\nOr\nSign in without password\nNeed help? Visit our Help Center\nDownload our apps\nGET IT ON\nDownoae onune\nGoogle Play\nApp Store\nOr learn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Reset password”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar and a primary action labelled “Send reset link”. Light theme, 22 text elements.",
+        "Calls to action: “Send reset link”, “Sign in without password”",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 23 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 12:24 in the recording",
+        "Frame 2530 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7c7d7c",
+      "role": "background",
+      "share": 0.667
+    },
+    {
+      "hex": "#0f0f0f",
+      "role": "text",
+      "share": 0.068
+    },
+    {
+      "hex": "#a39694",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#c2bdbb",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#2d2d2d",
+      "role": "surface",
+      "share": 0.049
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 2530,
+    "atSeconds": 744.3,
+    "endSeconds": 747.6,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send reset link",
+      "Sign in without password"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Reset password",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s274",
+    "depth": 276,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s273",
+        "via": "Tap “Download our apps”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s275",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

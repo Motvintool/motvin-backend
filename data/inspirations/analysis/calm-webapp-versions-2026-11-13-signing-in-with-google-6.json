@@ -1,0 +1,156 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-signing-in-with-google-6",
+  "screen_id": "calm-webapp-versions-2026-11-13-signing-in-with-google-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:21.952Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 13,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Continue with Email”. Dark theme, 11 text elements.",
+  "text": "Create a free Calm account\nContinue with Email\nf Continue with Facebook\nContin\nth Apple\nG Continue with Google\nBy tapping Continue or logging into an existing Calm\naccount, you agree to our Terms and acknowledge that\nyou have read our Privacy Policy, which explains how to\nopt out of offers and promos.\nAlready have an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "login",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "legal-text",
+    "banner",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Facebook”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Continue with Email”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue with Email”",
+        "11 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 15 in “Verifying OTP”",
+        "Reached from “Splash”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:00 in the recording",
+        "Frame 1203 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020306",
+      "role": "background",
+      "share": 0.772
+    },
+    {
+      "hex": "#353535",
+      "role": "surface",
+      "share": 0.225
+    },
+    {
+      "hex": "#5b5b5b",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#a2a3a2",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#717171",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 1203,
+    "atSeconds": 360,
+    "endSeconds": 361.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Email"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Facebook",
+    "headline": "Continue with Facebook"
+  },
+  "crawler": {
+    "nodeId": "s117",
+    "depth": 116,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s116",
+        "via": "Open Continue with Facebook",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s118",
+        "via": "Wait 1.2s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

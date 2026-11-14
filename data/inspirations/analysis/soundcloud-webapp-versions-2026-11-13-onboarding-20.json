@@ -1,0 +1,164 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-onboarding-20",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-onboarding-20",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:13.160Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success"
+  ],
+  "category": "entertainment",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Success",
+  "description": "Success toast over a dimmed screen, on top of Loading state with 1 input field and a primary action labelled “Continue to SoundCloud”. Dark theme, 11 text elements.",
+  "text": "SOUNDCLOUD\nEmail verified\nYou're all set. Start exploring\nContinue to SoundCloud\nStay signed in\nDownload the SoundCloud app for iOS and Android\nGET IT ON\nDownload on the\nGoogle Play\nApp Store\nLegal Privacy Cookies Imprint",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "confirmation",
+    "success",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Legal Privacy Cookies Imprint”",
+        "Toast over a dimmed background, covering 3% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success toast over a dimmed screen, on top of Loading state with 1 input field and a primary action labelled “Continue to SoundCloud”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue to SoundCloud”",
+        "11 text elements recognised",
+        "State: success"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 226 in “Reading messages”",
+        "Reached from “Success — loading”",
+        "Leads to “Artist Studio”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:56 in the recording",
+        "Frame 198 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0f0f",
+      "role": "background",
+      "share": 0.919
+    },
+    {
+      "hex": "#474747",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#747373",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#d5d5d5",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#292929",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 198,
+    "atSeconds": 56.4,
+    "endSeconds": 59.7,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.953125,
+        "w": 0.125,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue to SoundCloud"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Legal Privacy Cookies Imprint",
+    "headline": "Stay signed in"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Wait 0.6s",
+        "name": "Success — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Open Artist Studio",
+        "name": "Artist Studio"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

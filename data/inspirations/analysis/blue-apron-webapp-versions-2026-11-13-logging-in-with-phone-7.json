@@ -1,0 +1,169 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-logging-in-with-phone-7",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-logging-in-with-phone-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:57:12.744Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Logging in with phone",
+  "flow_position": 152,
+  "name": "Subscription plans",
+  "description": "Paywall bottom sheet, on top of Subscription plans with 1 input field, a primary action labelled “NEXT WEEK” and prices. Light theme, 33 text elements.",
+  "text": "Blue Apron\nBlue Apron+\nSubscribe & Save\nLogin Sign Up\nMenun\nBlue Apron\nNO SUBSCRIPTION NEEDED\n$25 off your first 2 orders\n+ FREE SHIPPING\nWITH CODE W\nX\nWelcome back!\nDon't have an account? Get started\nNEXT WEEK\nDEC 14-20\nPhone number\nEARLIEST DELIVERY BY\n63821 02514\n+91 (IN)\n60005\n30g+ Protein\nUnder 600 Cals\nUnder 30 Mins\nMon, Nov 16\nMEAL KITS\nMeal Kits\nStep-by-step recipes perfectly portioned\nDISH BY\nBLUE APRON\nLogin with email\nFAMILY\nSTYLE\nChili Crisp-Panko Salmon & Rice\nCreamy Romesco Chicken\nGreek Chickpea & Couscous Bowl\nTortellini Alla No Vodka\nwith Spinach & Calabrian Chile\nwith Bok Choy, Peanuts & Hoisin Mayo\nwith Parmesan Potatoes & Balsamic\nwith Lemon, Feta & Tzatziki",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "subscription",
+    "delivery",
+    "paywall",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back!”",
+        "Bottom sheet, covering 58% of the height from 36% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall bottom sheet, on top of Subscription plans with 1 input field, a primary action labelled “NEXT WEEK” and prices. Light theme, 33 text elements.",
+        "Calls to action: “NEXT WEEK”, “Login with email”",
+        "33 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 152 of 167 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 8:43 in the recording",
+        "Frame 1755 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#8d8b88",
+      "role": "background",
+      "share": 0.472
+    },
+    {
+      "hex": "#73685e",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#fdfdfc",
+      "role": "text",
+      "share": 0.112
+    },
+    {
+      "hex": "#5a493a",
+      "role": "accent",
+      "share": 0.084
+    },
+    {
+      "hex": "#b9b8b5",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 1755,
+    "atSeconds": 523.2,
+    "endSeconds": 526.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.359375,
+        "w": 0.90625,
+        "h": 0.578125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "NEXT WEEK",
+      "Login with email"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": true,
+    "title": "Welcome back!",
+    "headline": "25 off your first 2 orders"
+  },
+  "crawler": {
+    "nodeId": "s185",
+    "depth": 187,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s184",
+        "via": "Tap “Welcome back!”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s186",
+        "via": "Tap “$25 off your first 2 orders”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

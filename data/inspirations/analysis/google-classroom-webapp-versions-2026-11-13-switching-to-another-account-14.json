@@ -1,0 +1,150 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-14",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:41.601Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Switching to another account",
+  "flow_position": 20,
+  "name": "Google Account",
+  "description": "Other screen, scrolled further down with a primary action labelled “Confirm your recovery email”. Dark theme, 22 text elements.",
+  "text": "Google Account\nYou have inactive devices\nReview devices that you haven't used in a while and remove old ones\nMac OS\nInactive for 155 days\nReview devices\nWhere you're signed in\nSign-in and recovery\nConfirm your recovery email\nYour saved passwords\nV\nCheck your passwords\nSafe Browsing\nV\nTurn on Enhanced Safe Browsing\nRecent securityactivity\nV\nNo activity in the last 28 days\nContinue\nGoogle\nTerms & Privacy\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "other",
+    "scrolled",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Google Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen, scrolled further down with a primary action labelled “Confirm your recovery email”. Dark theme, 22 text elements.",
+        "Calls to action: “Confirm your recovery email”, “Continue”",
+        "22 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 22 in “Recently due detail”",
+        "Reached from “Sign in with email”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 12:42 in the recording",
+        "Frame 2541 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2024",
+      "role": "background",
+      "share": 0.958
+    },
+    {
+      "hex": "#383b3d",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#6a6c6f",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#515355",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2541,
+    "atSeconds": 762,
+    "endSeconds": 762.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm your recovery email",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Google Account",
+    "headline": "Safe Browsing"
+  },
+  "crawler": {
+    "nodeId": "s224",
+    "depth": 225,
+    "path": [],
+    "visits": 2,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s223",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s225",
+        "via": "Back to Google sign-in",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

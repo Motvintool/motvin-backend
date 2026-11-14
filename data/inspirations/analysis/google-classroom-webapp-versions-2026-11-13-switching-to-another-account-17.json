@@ -1,0 +1,148 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-17",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-17",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:42.947Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 4,
+  "name": "Due soon",
+  "description": "Detail screen with a sidebar. Light theme, 8 text elements.",
+  "text": "=\nClassroom\nA\nHome\nDue soon\nCalendar\nClasses\nEnrolled\n^\n+ Add class\nTo do\nDeveloper Meeting,..\nDeveloper Meeting\nD\nAbout developer\nAbout developer\nUnknown user\nArchived classes\nSettings\n:\nhttps://classroom.google.com/u/1/h?hl=en_GB",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Due soon”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a sidebar. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Opening a page (Developer Meeting)”",
+        "Reached from “Due soon”",
+        "Leads to “Sign in”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 13:14 in the recording",
+        "Frame 2749 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9fbfd",
+      "role": "background",
+      "share": 0.955
+    },
+    {
+      "hex": "#d5dfe0",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#b8c1bf",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#565959",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#303331",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2749,
+    "atSeconds": 794.1,
+    "endSeconds": 796.2,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Enrolled",
+      "Developer Meeting",
+      "About developer"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Due soon",
+    "headline": "Developer Meeting"
+  },
+  "crawler": {
+    "nodeId": "s234",
+    "depth": 236,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s233",
+        "via": "Tap “Due soon”",
+        "name": "Due soon"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s235",
+        "via": "Back to Sign in",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

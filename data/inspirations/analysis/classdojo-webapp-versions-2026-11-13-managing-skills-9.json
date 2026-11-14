@@ -1,0 +1,152 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-managing-skills-9",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-managing-skills-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:03.909Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Managing skills",
+  "flow_position": 63,
+  "name": "Loading state",
+  "description": "Loading state with a search bar. Light theme, 12 text elements.",
+  "text": "Edit Ms. Tool's class\nTeachers\nSkills\nFamilies\nDisplay\nInfo\nPupils\nSettings\nImport skills\n<\nQ Search classes\nDemo Class",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "other",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "search-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Import skills”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a search bar. Light theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 63 of 79 in “Settings”",
+        "Reached from “Import skills”",
+        "Leads to “Edit Ms. Tool's class (error)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 13:37 in the recording",
+        "Frame 2725 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7a7a79",
+      "role": "background",
+      "share": 0.737
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.19
+    },
+    {
+      "hex": "#d2d2d2",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#63605a",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#a4a4a5",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 2725,
+    "atSeconds": 817.2,
+    "endSeconds": 817.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Import skills",
+    "headline": "Import skills",
+    "walkTab": "Skills"
+  },
+  "crawler": {
+    "nodeId": "s192",
+    "depth": 192,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s191",
+        "via": "Tap “+ Import skills”",
+        "name": "Import skills"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s193",
+        "via": "Wait 0.6s",
+        "name": "Edit Ms. Tool's class (error)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

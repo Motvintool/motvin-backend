@@ -1,0 +1,164 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-7",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:40.633Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 12,
+  "name": "OTP verification",
+  "description": "Verification code dialog over a dimmed screen, on top of That it's really you with a primary action labelled “Next”. Dark theme, 15 text elements.",
+  "text": "Account recovery\nAn email with a verification code was just sent to\nSur.........•@gmail.com\nTo help keep your account safe, Google wants to make sure\nEnter code\nthat it's really you trying to sign in\n217935\n)\nsurendarv638@gmail.com\nTry another way\nNext\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Surendarv638@gmail.com”",
+        "Dialog over a dimmed background, covering 19% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code dialog over a dimmed screen, on top of That it's really you with a primary action labelled “Next”. Dark theme, 15 text elements.",
+        "Calls to action: “Next”",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 22 in “Recently due detail”",
+        "Reached from “That it's really you”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 15.9s at 11:31 in the recording",
+        "Frame 2487 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202223",
+      "role": "background",
+      "share": 0.778
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.204
+    },
+    {
+      "hex": "#3c3e3f",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#5c5f63",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#b8d0f6",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2487,
+    "atSeconds": 691.2,
+    "endSeconds": 695.7,
+    "holdSeconds": 15.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.5,
+        "w": 0.5625,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Surendarv638@gmail.com",
+    "headline": "Account recovery"
+  },
+  "crawler": {
+    "nodeId": "s216",
+    "depth": 217,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s215",
+        "via": "Tap “surendarv638@gmail.com”",
+        "name": "That it's really you"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s217",
+        "via": "Tap “Account recovery”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,158 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-deleting-a-canvas-3",
+  "screen_id": "subframe-webapp-versions-2026-11-13-deleting-a-canvas-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:56.842Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Deleting a canvas",
+  "flow_position": 14,
+  "name": "Loading state",
+  "description": "Loading state with a sidebar, a search bar and a primary action labelled “Send a message, @for context”. Dark theme, 20 text elements.",
+  "text": "Pages 0\nNew chat v\nX\n+ New canvas\nVT By canvas\nQ\nSearch pages...\nAgent\nsite v\nProject\nPages\nQ\nProject\nPages\nTheme\nComponents\nSnippets\nDocs\nNew canvas\nWhat's next?\nNo designs yet\nDesign and build with your agent\nStart by designing pages on a canvas\nGenerate designs...\n+ Create blank canvas\nContinue conversation from another agent...\n5Pages\nSend a message, @for context\n\"Untitled Canvas\" deleted\n• Opus 5.5 Medium\nGet the desktop app",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "message",
+    "login",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New chat”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a sidebar, a search bar and a primary action labelled “Send a message, @for context”. Dark theme, 20 text elements.",
+        "Calls to action: “Send a message, @for context”",
+        "20 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 75 in “Subscribing”",
+        "Reached from “Support chat”",
+        "Leads to “Support chat”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 10:55 in the recording",
+        "Frame 2193 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191919",
+      "role": "background",
+      "share": 0.964
+    },
+    {
+      "hex": "#383939",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#515151",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 2193,
+    "atSeconds": 655.8,
+    "endSeconds": 658.2,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send a message, @for context"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Site",
+      "Project",
+      "Pages",
+      "Project",
+      "Pages",
+      "Theme",
+      "Components",
+      "Snippets"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New chat",
+    "headline": "No designs yet"
+  },
+  "crawler": {
+    "nodeId": "s145",
+    "depth": 147,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s144",
+        "via": "Open New chat",
+        "name": "Support chat"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s146",
+        "via": "Wait 2.4s",
+        "name": "Support chat"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

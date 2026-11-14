@@ -1,0 +1,147 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-reading-a-help-article-1",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-reading-a-help-article-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:57:07.597Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Reading a help article",
+  "flow_position": 123,
+  "name": "Sign in",
+  "description": "Login screen with a search bar. Light theme, 35 text elements.",
+  "text": "Blue Apron\n• Search\nBlue Apron Support > Get in Touch > Contact\nor Contact Us\nRelated articles\nHow do I contact customer\nWhat should I do if\nservice?\nan ingredient is\nmissing or not\nusable?\nCan | cancel my\nTo contact our customer service team:\nBlue Apron+\nmembership at any\ntime?\n• Submit a Request\nFill out our online request form anytime\nHow do | log in to\n• Text Us\nmy Blue Apron\n(929) 799-8354\naccount?\nHours: Monday-Friday, 8:00 AM - 11:00 PM EST | Saturday-Sunday, 8:00 AM - 9:00 PM\nWhat should I do if\nEST\nmy delivery is late?\n• Call Us\nLocal: (646) 891-4349\nHow do I cancel an\n• Toll-Free: 1 (888) 278-4349\norder?\nHours: Monday-Friday, 9:00 AM - 9:00 PM EST | Saturday, 11:00 AM - 6:00 PM EST\n(Phone lines are closed on Thanksgiving and Christmas Day)\nArticles in this section",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "delivery",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Blue Apron”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar. Light theme, 35 text elements.",
+        "35 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 123 of 167 in “Subscribing”",
+        "Reached from “Splash”",
+        "Leads to “Sign in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:07 in the recording",
+        "Frame 1432 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f4f2eb",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#d5d3cd",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#b9b7b5",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#6a8ee6",
+      "role": "accent",
+      "share": 0.001
+    },
+    {
+      "hex": "#8f8fa9",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 1432,
+    "atSeconds": 427.8,
+    "endSeconds": 429.9,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Blue Apron",
+    "headline": "Service?"
+  },
+  "crawler": {
+    "nodeId": "s156",
+    "depth": 158,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s155",
+        "via": "Open Blue Apron",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s157",
+        "via": "Wait 2.1s",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

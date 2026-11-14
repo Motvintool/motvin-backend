@@ -1,0 +1,158 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-changing-advanced-settings-2",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-changing-advanced-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:53.999Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Changing advanced settings",
+  "flow_position": 2,
+  "name": "(Emal adress dialog",
+  "description": "Dialog over a dimmed screen, on top of Account settings. Dark theme, 5 text elements.",
+  "text": "Delete your account?\nType your email address to confirm.\n(Emal adress\nCancel\nDelete your account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “(Emal adress”",
+        "Dialog over a dimmed background, covering 28% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Account settings. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Account settings options”",
+        "Reached from “Account settings”",
+        "Leads to “Account settings”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 29:14 in the recording",
+        "Frame 5854 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#39393a",
+      "role": "background",
+      "share": 0.576
+    },
+    {
+      "hex": "#777677",
+      "role": "surface",
+      "share": 0.236
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.07
+    },
+    {
+      "hex": "#605e60",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#1f123a",
+      "role": "accent",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 5854,
+    "atSeconds": 1754.1,
+    "endSeconds": 1756.5,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.359375,
+        "w": 0.34375,
+        "h": 0.28125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "(Emal adress",
+    "headline": "(Emal adress"
+  },
+  "crawler": {
+    "nodeId": "s508",
+    "depth": 515,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s507",
+        "via": "Open (Emal adress",
+        "name": "Account settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s509",
+        "via": "Dismiss",
+        "name": "Account settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

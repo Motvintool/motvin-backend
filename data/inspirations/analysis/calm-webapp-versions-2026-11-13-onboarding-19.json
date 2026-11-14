@@ -1,0 +1,144 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-onboarding-19",
+  "screen_id": "calm-webapp-versions-2026-11-13-onboarding-19",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:03.617Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 8,
+  "name": "Onboarding step",
+  "description": "Onboarding screen. Dark theme, 4 text elements.",
+  "text": "Special welcome offer!\nGet 40% off - Today only\n72,399.00 71,439.40\nGet discount",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "discount",
+    "onboarding",
+    "webapp"
+  ],
+  "elements": [
+    "banner"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen. Dark theme, 4 text elements.",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 27 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Mindful Productivity”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 1:19 in the recording",
+        "Frame 276 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c1523",
+      "role": "background",
+      "share": 0.762
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "text",
+      "share": 0.076
+    },
+    {
+      "hex": "#34373a",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#d4d5d7",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#432512",
+      "role": "accent",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 276,
+    "atSeconds": 79.2,
+    "endSeconds": 83.1,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Get 40% off - Today only"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Wait 0.6s",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Open Mindful Productivity",
+        "name": "Mindful Productivity"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

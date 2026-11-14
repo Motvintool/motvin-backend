@@ -1,0 +1,168 @@
+{
+  "screenId": "coursera-webapp-versions-2026-11-13-help-center-3",
+  "screen_id": "coursera-webapp-versions-2026-11-13-help-center-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:27:18.147Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Help center",
+  "flow_position": 63,
+  "name": "Feature tip",
+  "description": "Coach mark dialog over a dimmed screen, on top of Settings with a search bar. Light theme, 26 text elements.",
+  "text": "coursera\nLearner Help Center\nLearner Help Center\na\nSearch for help\nNew! Search with Al\nAsk a question and get an instant answer.\nEnrollment\nAccount & notifications\nPayments & subscriptions\nAccount settings, login issues, and\nFind courses to take and learn about\nHelp with payments, subscription\nnotification preferences\noptions, and financial aid\nenrollment options\nV-\nGrades & assignments\nCertificates & verification\nCoursera policies\nLearn about our policies and\nGrades, peer reviews, assignments,\nHow to get and share a Course\nCertificate\nprogram terms\nand Labs",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "payment",
+    "review",
+    "notification",
+    "login",
+    "coach-mark",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "legal-text",
+    "modal",
+    "coach-mark"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Learner Help Center”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 69% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark dialog over a dimmed screen, on top of Settings with a search bar. Light theme, 26 text elements.",
+        "26 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 63 of 245 in “Opening settings”",
+        "Reached from “Settings”",
+        "Leads to “View all notes”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 5:54 in the recording",
+        "Frame 1188 of 3137 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfcfc",
+      "role": "background",
+      "share": 0.49
+    },
+    {
+      "hex": "#1e63d7",
+      "role": "accent",
+      "share": 0.404
+    },
+    {
+      "hex": "#d9dadb",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#6694e1",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#9cb9e9",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3137,
+    "frame": 1188,
+    "atSeconds": 354.6,
+    "endSeconds": 356.7,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Learner Help Center",
+    "headline": "Learner Help Center"
+  },
+  "crawler": {
+    "nodeId": "s113",
+    "depth": 112,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s112",
+        "via": "Wait 0.6s",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s114",
+        "via": "Back to View all notes",
+        "name": "View all notes"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

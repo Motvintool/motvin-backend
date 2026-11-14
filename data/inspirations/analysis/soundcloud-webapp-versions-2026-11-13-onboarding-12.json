@@ -1,0 +1,159 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-onboarding-12",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-onboarding-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:11.383Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 15,
+  "name": "Create account",
+  "description": "Sign up screen with a row of 3 category chips, a search bar and a primary action labelled “Explore Artist Pro”. Light theme, 35 text elements.",
+  "text": "Now available: Get heard by up to 100 listeners on your next upload with Artist or Artist Pro. Learn More\nX\nFor artists\nSign in\nCreate account\nSOUNDCLOUD\nTell us more about you\nDisplay name\nITALLSTAR\nMotvintool\nYour display name can be anything you like. Your name or artist name\nare good choices.\nAN UPLOAD\nDate of birth (required)\nYear\nMonth\nDay\nSoundCloud is where you define what's nexi\n4\n2004\nDecember\nJust hit upload.\nYour date of birth is used to verify your age and is not shared publicly.\nFemale\n1900Rugrat\nUpload\nExplore Artist Pro\nAscending Artist\nMale\nCustom\nPreter not to say\nSearch for artists, bands, tracks, podcasts\nor\nUpload your own\nHear what's trending",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "signup",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Tell us more about you”",
+        "Category strip: For artists, Sign in, SOUNDCLOUD",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a row of 3 category chips, a search bar and a primary action labelled “Explore Artist Pro”. Light theme, 35 text elements.",
+        "Calls to action: “Explore Artist Pro”",
+        "35 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 22 in “Creating an account”",
+        "Reached from “Sign in”",
+        "Leads to “Sign in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:31 in the recording",
+        "Frame 110 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7e7d",
+      "role": "background",
+      "share": 0.528
+    },
+    {
+      "hex": "#c2cac8",
+      "role": "surface",
+      "share": 0.18
+    },
+    {
+      "hex": "#333433",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#969898",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#0f0f0f",
+      "role": "text",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 110,
+    "atSeconds": 31.8,
+    "endSeconds": 33.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [
+      "For artists",
+      "Sign in",
+      "SOUNDCLOUD"
+    ],
+    "ctas": [
+      "Explore Artist Pro"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "For artists",
+    "listedInSidebar": false,
+    "title": "Tell us more about you",
+    "headline": "AN UPLOAD",
+    "walkTab": "For artists"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “Create account”",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Tap “Female”",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

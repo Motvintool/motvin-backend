@@ -1,0 +1,163 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-onboarding-7",
+  "screen_id": "subframe-webapp-versions-2026-11-13-onboarding-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:38.538Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "You're trying Subframe? dialog",
+  "description": "Dialog over a dimmed screen with a primary action labelled “Next”. Dark theme, 14 text elements.",
+  "text": "motvintool@gmail.com\nWhat's the main reason\nyou're trying Subframe?\nPick the one that matters most.\nPrecise design control in code\nBetter designs with Al\nPrototyping ideas quickly\nC\nDesigns connected to my codebase\nImproving design-to-code handoff\nSomething else...\nSkip\nBack\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You're trying Subframe?”",
+        "Dialog over a dimmed background, covering 47% of the height from 28% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a primary action labelled “Next”. Dark theme, 14 text elements.",
+        "Calls to action: “Next”",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Logging in”",
+        "Reached from “Google search”",
+        "Leads to “What's the main reason”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 0:45 in the recording",
+        "Frame 165 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d0d",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#373837",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#525252",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#252525",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#696a69",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 165,
+    "atSeconds": 45.6,
+    "endSeconds": 49.8,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.28125,
+        "w": 0.25,
+        "h": 0.46875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You're trying Subframe?",
+    "headline": "You're trying Subframe?"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open You're trying Subframe?",
+        "name": "Google search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Dismiss",
+        "name": "What's the main reason"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

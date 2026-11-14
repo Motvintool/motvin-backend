@@ -1,0 +1,143 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-downloading-the-desktop-app-1",
+  "screen_id": "subframe-webapp-versions-2026-11-13-downloading-the-desktop-app-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:58.768Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Downloading the desktop app",
+  "flow_position": 29,
+  "name": "Sign in",
+  "description": "Login screen. Light theme, 12 text elements.",
+  "text": "Subframe\nLog in\nDownload\nYour download has started\nOpen the.dmg and drag Subtrame to Applications.\nDidn't start?\nApple Silicon\nIntel Mac? Download here\nWindows\nWindows (64-bit)\nLinux coming soon.\nOpen in web →",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your download has started”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 29 of 75 in “Subscribing”",
+        "Reached from “Splash”",
+        "Leads to “Agents”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 12:17 in the recording",
+        "Frame 2473 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f7f7",
+      "role": "background",
+      "share": 0.953
+    },
+    {
+      "hex": "#d7d8d7",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#b6b7b6",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#9b9c9b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#7a7a7a",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 2473,
+    "atSeconds": 737.7,
+    "endSeconds": 742.2,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your download has started",
+    "headline": "Your download has started"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 163,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Open Your download has started",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Back to Agents",
+        "name": "Agents"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

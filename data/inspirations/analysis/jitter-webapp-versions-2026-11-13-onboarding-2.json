@@ -1,0 +1,142 @@
+{
+  "screenId": "jitter-webapp-versions-2026-11-13-onboarding-2",
+  "screen_id": "jitter-webapp-versions-2026-11-13-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:31:44.548Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign-in options",
+  "description": "Login screen. Light theme, 8 text elements.",
+  "text": "Jitter\nWe'll sign you in, or create an\naccount if you don't have one yet.\nG Continue with Google\nmotvintool@gmail.com\nJ\nBy clicking \"Continue\", you agree to the\nTerms of Service and Privacy policy.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Google”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Logging in”",
+        "Reached from “Create account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.5s at 0:03 in the recording",
+        "Frame 45 of 2122 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfefe",
+      "role": "background",
+      "share": 0.961
+    },
+    {
+      "hex": "#d9d9d9",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#2caffe",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#aeaeb1",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#505050",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Jitter.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2122,
+    "frame": 45,
+    "atSeconds": 3.3,
+    "endSeconds": 13.8,
+    "holdSeconds": 10.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Google",
+    "headline": "Jitter"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Jitter”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Open Check your email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,161 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-onboarding-2",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:57:35.165Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a row of 3 category chips and a primary action labelled “Get started as a...”. Light theme, 19 text elements.",
+  "text": "ClassDojo\n9 *\nSign up\nLog in\nSign up for ClassDojo as a...\nTeacher\nParent\nSchool Leader\nStudent\nLovea by more Tnan 45 milllon students ana parents.\nFree for teachers, forever.\nGet started as a...\nParent\nStudent\nSchool Leader\nTeacher\nGet the\nClassDojo app\n2 million+ reviews",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "signup",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign up”",
+        "Category strip: Teacher, Parent, Student",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 3 category chips and a primary action labelled “Get started as a...”. Light theme, 19 text elements.",
+        "Calls to action: “Get started as a...”",
+        "19 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 16 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:03 in the recording",
+        "Frame 15 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#5d5973",
+      "role": "background",
+      "share": 0.82
+    },
+    {
+      "hex": "#fdfdfc",
+      "role": "text",
+      "share": 0.112
+    },
+    {
+      "hex": "#d8dadf",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#a19faf",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#bcc3bc",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 15,
+    "atSeconds": 3,
+    "endSeconds": 4.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [
+      "Teacher",
+      "Parent",
+      "Student"
+    ],
+    "ctas": [
+      "Get started as a..."
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign up",
+    "headline": "Free for teachers, forever"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Tap “Free for teachers, forever.”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

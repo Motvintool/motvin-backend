@@ -1,0 +1,142 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-onboarding-9",
+  "screen_id": "subframe-webapp-versions-2026-11-13-onboarding-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:38.800Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": null,
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 8,
+  "name": "Download the desktop app",
+  "description": "Onboarding screen. Dark theme, 7 text elements.",
+  "text": "motvintool@gmail.com\nDownload the desktop app.\nUse Subframe with your codebase & coding agent.\nAvailable for macOS and Windows\nDownload for macoS\nSkip\nBack",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Download the desktop app”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 9 in “Logging in”",
+        "Reached from “What's the main reason”",
+        "Leads to “Splash”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.9s at 0:51 in the recording",
+        "Frame 193 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0d0c",
+      "role": "background",
+      "share": 0.963
+    },
+    {
+      "hex": "#2e3131",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#606160",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#969fa3",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#e6e6e6",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 193,
+    "atSeconds": 51.3,
+    "endSeconds": 58.2,
+    "holdSeconds": 6.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Download the desktop app",
+    "headline": "Download the desktop app"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Wait 1.5s",
+        "name": "What's the main reason"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Open Splash screen",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

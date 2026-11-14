@@ -1,0 +1,154 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-onboarding-17",
+  "screen_id": "calm-webapp-versions-2026-11-13-onboarding-17",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:03.191Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "healthcare",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 5,
+  "name": "Payment method",
+  "description": "Payment screen with a row of 3 category chips and 2 input fields. Light theme, 29 text elements.",
+  "text": "Included in basic membership\n2. Choose your payment method\nLimited access to content\nPay securely with >link\nYour premium membership includes\nPayPal\n• 50,000+ minutes of premium content\nSleep Stories, Meditations, Nature sounds, Sleep\nCard\nsoundscapes, Relaxing music, and more\n• New content daily\nCard number\nVISA\nDaily guided content to help with any of life's stressors, from\nDISC VER\nwork, parenting, finances, and more.\n• Cancel anytime\nExpiry date\nSecurity code\nCountry/Territory\nPIN\nIndia\nBy subscribing, you authorise Calm.com, Inc. to charge you according to the terms\nuntil you cancel.\nSave my information for faster checkout\nStart Your Trial\n• All transactions are secure and encrypted.\nBy clicking \"Start Your Trial\", you agree to be automatically billed for Calm Premium at\n72,399.00 after your trial ends and every year until cancelled. Cancel anytime.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "payment",
+    "premium",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "chip",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your premium membership includes”",
+        "Category strip: Card number, VISA, DISC VER",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with a row of 3 category chips and 2 input fields. Light theme, 29 text elements.",
+        "29 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 27 in “Subscribing”",
+        "Reached from “Payment method”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:15 in the recording",
+        "Frame 253 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f8",
+      "role": "background",
+      "share": 0.868
+    },
+    {
+      "hex": "#dededf",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#c5c6c6",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#fbcc4b",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#48db89",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 253,
+    "atSeconds": 75.6,
+    "endSeconds": 76.2,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [
+      "Card number",
+      "VISA",
+      "DISC VER"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your premium membership includes",
+    "headline": "Cancel anytime"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 18,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Tap “Your premium membership includes”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Wait 0.6s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

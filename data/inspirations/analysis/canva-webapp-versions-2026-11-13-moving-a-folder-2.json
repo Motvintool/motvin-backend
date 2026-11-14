@@ -1,0 +1,160 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-moving-a-folder-2",
+  "screen_id": "canva-webapp-versions-2026-11-13-moving-a-folder-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:53:13.305Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Moving a folder",
+  "flow_position": 74,
+  "name": "Move \"my works\" dialog",
+  "description": "Dialog over a dimmed screen with a search bar. Light theme, 11 text elements.",
+  "text": "CreateCopy of my works\"\nOpen\nAll projects\nMove \"my works\"\nCurrently saved in: E Your Projects\nQ\nSearch all folders\nAll > Your Projects > Copy of my works\nMove here or create a folder\n+ Create new\nMove",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Move \"my works\"”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 63% of the height from 19% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a search bar. Light theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 74 of 365 in “Try Canva Pro Lite”",
+        "Reached from “All projects”",
+        "Leads to “All projects”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.1s at 6:01 in the recording",
+        "Frame 1231 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#abafb8",
+      "role": "background",
+      "share": 0.686
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "surface",
+      "share": 0.224
+    },
+    {
+      "hex": "#d9dbde",
+      "role": "surface",
+      "share": 0.062
+    },
+    {
+      "hex": "#767f89",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#212730",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 1231,
+    "atSeconds": 361.5,
+    "endSeconds": 369.6,
+    "holdSeconds": 8.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.28125,
+        "y": 0.1875,
+        "w": 0.4375,
+        "h": 0.625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Move \"my works\"",
+    "headline": "Move \"my works\""
+  },
+  "crawler": {
+    "nodeId": "s085",
+    "depth": 87,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s084",
+        "via": "Tap “Move \"my works\"”",
+        "name": "All projects"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s086",
+        "via": "Dismiss",
+        "name": "All projects"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

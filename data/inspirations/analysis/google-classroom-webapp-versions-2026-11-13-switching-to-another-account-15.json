@@ -1,0 +1,145 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-15",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:41.732Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 21,
+  "name": "Google sign-in",
+  "description": "A third-party sign-in page, not the app's own design. Light theme, 22 text elements.",
+  "text": "Classroom\nHome\nJoin class\nCalendar\nYou're currently signed in as\nArchived classes\nsurendarv\nsurendarv638@gmail.com\nSettings\nSwitch account\nClass code\nAsk your teacher for the class code, then enter it here.\nClass code\nn home\nTo sign in with a class code\n• Use an authorised account\n• Use a class code with 5-8 letters or numbers, and no spaces or\nsymbols\nIif you have trouble joining the class, go to the Help Centre article\nCancel\nJoin\nhttps://accounts.google.com/AccountChooser?continue=https%3A%2F%2Fclassroom.google.com%2Fh%2Ftv%3Fhl%3Den_GB%26ojcd%3D",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "calendar",
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Join class”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Light theme, 22 text elements.",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 22 in “Recently due detail”",
+        "Reached from “Google Account”",
+        "Leads to “Sign in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 12:44 in the recording",
+        "Frame 2555 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#b0b2b3",
+      "role": "background",
+      "share": 0.678
+    },
+    {
+      "hex": "#e3e9ef",
+      "role": "surface",
+      "share": 0.27
+    },
+    {
+      "hex": "#c6cdd4",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#353736",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#515352",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2555,
+    "atSeconds": 764.4,
+    "endSeconds": 766.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Join class",
+    "headline": "To sign in with a class code"
+  },
+  "crawler": {
+    "nodeId": "s225",
+    "depth": 227,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s224",
+        "via": "Back to Google sign-in",
+        "name": "Google Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s226",
+        "via": "Tap “Classroom”",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

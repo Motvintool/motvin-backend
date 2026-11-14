@@ -1,0 +1,153 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-10",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:40.996Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code dialog over a dimmed screen, on top of OTP verification. Dark theme, 16 text elements.",
+  "text": "G\nAccount recovery\nChoose how you want to sign in:\nTo help keep your account safe, Google wants to make sure\nTap Yes on the device that your recovery email is signed\nthat it's really you trying to sign in\nin to\n)\n• surendarv638@gmail.com -\nGet a verification code at sur•.......•@gmail.com\nGet a verification code at sur.........•@gmail.com\nTry another way to sign in\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Try another way to sign in”",
+        "Dialog over a dimmed background, covering 23% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code dialog over a dimmed screen, on top of OTP verification. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 22 in “Recently due detail”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 12:05 in the recording",
+        "Frame 2429 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202223",
+      "role": "background",
+      "share": 0.724
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.249
+    },
+    {
+      "hex": "#424343",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#565859",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2429,
+    "atSeconds": 725.1,
+    "endSeconds": 729,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.5,
+        "w": 0.5625,
+        "h": 0.234375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Try another way to sign in",
+    "headline": "Account recovery"
+  },
+  "crawler": {
+    "nodeId": "s219",
+    "depth": 220,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s218",
+        "via": "Tap “Account recovery”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s220",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

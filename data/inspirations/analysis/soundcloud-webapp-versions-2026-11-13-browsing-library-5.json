@@ -1,0 +1,161 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-browsing-library-5",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-browsing-library-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:30.779Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Browsing library",
+  "flow_position": 99,
+  "name": "OTP verification",
+  "description": "Verification code screen with a row of 7 category chips, a search bar and a paged carousel. Dark theme, 41 text elements.",
+  "text": "Q\nArtist Studio\nTry Artist Pro\nMlll\nHome\nFeed\nLibrary\nSearch\nUpload\nV\n•••\nUploading tracks just got way easier: upload, get heard, and get paid in one seamless experience. Try it out\nHistory\nPlaylists\nAlbums\nStations\nLikes\nOverview\nFollowing\nRecently played:\nClear all history\nFilter\nHear the tracks you've played:\n8 years ago\nElectric Universe\nMama India - Outside the Universe Remix\n#Psytrance\n'3:34\n6:15\nele\"*\nVerify your email to write comments.\n÷ 591\n• 676K\n21.1K\n654\nElectric Universe\nP\n8:34\n6:15\nMama India - Outside t...\nhttps://soundcloud.com",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "filter",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “History”",
+        "Category strip: History, Playlists, Albums, Stations, Likes, Overview, Following",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a row of 7 category chips, a search bar and a paged carousel. Dark theme, 41 text elements.",
+        "41 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 99 of 226 in “Reading messages”",
+        "Reached from “Settings”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:35 in the recording",
+        "Frame 1323 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121111",
+      "role": "background",
+      "share": 0.593
+    },
+    {
+      "hex": "#353534",
+      "role": "surface",
+      "share": 0.306
+    },
+    {
+      "hex": "#595654",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#c34e09",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#816f69",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 1323,
+    "atSeconds": 395.4,
+    "endSeconds": 397.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [],
+    "chipLabels": [
+      "History",
+      "Playlists",
+      "Albums",
+      "Stations",
+      "Likes",
+      "Overview",
+      "Following"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "History",
+    "listedInSidebar": false,
+    "title": "History",
+    "headline": "Recently played",
+    "walkTab": "History"
+  },
+  "crawler": {
+    "nodeId": "s123",
+    "depth": 122,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s122",
+        "via": "Back to OTP verification",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s124",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

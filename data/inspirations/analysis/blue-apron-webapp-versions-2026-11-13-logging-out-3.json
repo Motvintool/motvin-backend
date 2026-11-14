@@ -1,0 +1,155 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-logging-out-3",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-logging-out-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:57:09.367Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Logging out",
+  "flow_position": 134,
+  "name": "Subscription plans",
+  "description": "Paywall bottom sheet, on top of Subscription plans with a primary action labelled “NEXT WEEK”. Light theme, 20 text elements.",
+  "text": "Blue Apron\nSubscribe & Save\nSign Up\nMenu\nLogin\nBlue Apron+\nDEC 7-13\nNEXT WEEK\nNOV 23-29\nNOV 30-DEC 6\nDEC 14-20\nEARLIEST DELIVERY BY\n9 60005\n30g+ Protein\nUnder 600 Cals\nUnder 30 Mins\nMon, Nov 16\nMeal Kits\nStep-by-step recipes perfectly portioned.\nChili Crisp-Panko Salmon & Rice\nCreamy Romesco Chicken\nGreek Chickpea & Couscous Bowl\nTortellini Alla No Vodka\nwith Parmesan Potatoes & Balsamic\nwith Bok Choy, Peanuts & Hoisin Mayo\nwith Lemon, Feta & Tzatziki\nwith Spinach & Calabrian Chile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "delivery",
+    "paywall",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Creamy Romesco Chicken”",
+        "Bottom sheet, covering 53% of the height from 39% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall bottom sheet, on top of Subscription plans with a primary action labelled “NEXT WEEK”. Light theme, 20 text elements.",
+        "Calls to action: “NEXT WEEK”",
+        "20 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 134 of 167 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:42 in the recording",
+        "Frame 1541 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f2ec",
+      "role": "background",
+      "share": 0.758
+    },
+    {
+      "hex": "#d8d8d8",
+      "role": "surface",
+      "share": 0.241
+    },
+    {
+      "hex": "#9e9fb7",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 1541,
+    "atSeconds": 462,
+    "endSeconds": 462.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.390625,
+        "w": 0.84375,
+        "h": 0.53125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "NEXT WEEK"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Creamy Romesco Chicken",
+    "headline": "30g+ Protein"
+  },
+  "crawler": {
+    "nodeId": "s167",
+    "depth": 169,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s166",
+        "via": "Wait 1.5s",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s168",
+        "via": "Open Blue Apron",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,157 @@
+{
+  "screenId": "jitter-webapp-versions-2026-11-13-opening-editor-menus-2",
+  "screen_id": "jitter-webapp-versions-2026-11-13-opening-editor-menus-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:31:47.715Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Opening editor menus",
+  "flow_position": 21,
+  "name": "Duration sheet",
+  "description": "Bottom sheet, on top of New file. Light theme, 27 text elements.",
+  "text": "* Export\n100% v\nShare\nNew file v\nInvite\nAnimate\nQ\nLayers\nDesign\n• Scene 1\n• Scene 1\nLayout\nFormat\nSize preset\nPosition\n360\nSize\n640\nScene 1•4s\nFill\nFFFFFF\nColor\nDuration\n45\nUpgrade now\n• T 000 O *\n+",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Duration”",
+        "Bottom sheet, covering 38% of the height from 50% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of New file. Light theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 38 in “Event detail”",
+        "Reached from “New file”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 1:09 in the recording",
+        "Frame 241 of 2122 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f9",
+      "role": "background",
+      "share": 0.895
+    },
+    {
+      "hex": "#1b171d",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#454249",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#dedddf",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#8a61ed",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Jitter.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2122,
+    "frame": 241,
+    "atSeconds": 69.9,
+    "endSeconds": 72.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.5,
+        "w": 0.9375,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Duration",
+    "headline": "Layout"
+  },
+  "crawler": {
+    "nodeId": "s026",
+    "depth": 25,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Wait 3.9s",
+        "name": "New file"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s027",
+        "via": "Open New file",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

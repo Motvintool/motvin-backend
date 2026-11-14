@@ -1,0 +1,150 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-onboarding-22",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-onboarding-22",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:57:35.463Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Sign up”. Light theme, 18 text elements.",
+  "text": "ClassDojo\nSign up\nLog in\nCreate Your Teacher\nAccount\nIS\nAlready have an account?Log in here\nEmal\nmotvintool@gmail.con\nTitle\nMs.\nPassword\nTeacher\nBy signing up, you agree to ClassDojo's Terms of\nGet the\nService and Privacy Policy.\nClassDojo app\nSign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign up”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Sign up”. Light theme, 18 text elements.",
+        "Calls to action: “Sign up”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 16 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 12.3s at 0:18 in the recording",
+        "Frame 102 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#5c5973",
+      "role": "background",
+      "share": 0.615
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.262
+    },
+    {
+      "hex": "#cbcacf",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#e3e1ef",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#a09eab",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 102,
+    "atSeconds": 18.6,
+    "endSeconds": 30.9,
+    "holdSeconds": 12.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign up",
+    "headline": "Account"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Tap “Student”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Tap “Create Your Teacher”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

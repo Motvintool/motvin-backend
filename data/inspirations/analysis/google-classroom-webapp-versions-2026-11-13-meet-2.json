@@ -1,0 +1,158 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-meet-2",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-meet-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:30.898Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Meet",
+  "flow_position": 7,
+  "name": "Third-party sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a row of 9 category chips. Light theme, 33 text elements.",
+  "text": "X\nmeet.google.com wants to\nS\nUpgrade\nEnter a code or link\nFK New\nMeet\nJoin\nShow notifications\nWED\nFRI\nSAT\nSUN\nMON\nTUE\nTHU\nAllow\nBlock\n13\n14\n15\n9\n10\n11\n12\nMeetings\nUnlock premium Meet features\nExplore plan\nEnjoy longer group video calls, noise cancellation and more with a Google Al Plus 2 TB plan.\nCalls\nNo meetings scheduled for today\nSchedule a meeting or enjoy the free time\n+K New",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "notification",
+    "premium",
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter a code or link”",
+        "Category strip: WED, FRI, SAT, SUN, MON, TUE, THU, Allow, Block",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a row of 9 category chips. Light theme, 33 text elements.",
+        "33 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 8 in “Choosing a date”",
+        "Reached from “Notifications permission”",
+        "Leads to “Recently due”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:57 in the recording",
+        "Frame 1594 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.903
+    },
+    {
+      "hex": "#dadfdf",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#212324",
+      "role": "text",
+      "share": 0.02
+    },
+    {
+      "hex": "#45484a",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#baccc7",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 1594,
+    "atSeconds": 477,
+    "endSeconds": 478.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [
+      "WED",
+      "FRI",
+      "SAT",
+      "SUN",
+      "MON",
+      "TUE",
+      "THU",
+      "Allow",
+      "Block"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter a code or link",
+    "headline": "No meetings scheduled for today"
+  },
+  "crawler": {
+    "nodeId": "s146",
+    "depth": 145,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s145",
+        "via": "Wait 2.4s",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s147",
+        "via": "Wait 1.5s",
+        "name": "Recently due"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

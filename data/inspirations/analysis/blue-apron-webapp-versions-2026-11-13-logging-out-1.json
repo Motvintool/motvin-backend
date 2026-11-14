@@ -1,0 +1,164 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-logging-out-1",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-logging-out-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:57:08.718Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Logging out",
+  "flow_position": 130,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with a sidebar. Light theme, 29 text elements.",
+  "text": "Blue Apron\nSubscribe & Save\nRefer & Earn Orders\nBlue Apron+\nMenu\nMT\nSubscribe & Save\nACCOUNT\nProfile\nGet ahead of meal planning with a level of flexibility\nyou won't get anywhere else.\nProtein Preferences\nYou save 5% on every order\nPayment\nBlue Apron+\nX\nSubscribe & Save\ne Apron\nAre you sure you want\nto sign out?\nCredits\nGift Cards\nSettings\nYes\nRefer & Earn\nNo\nSupport\n2. Create your delivery\n3. Make changes anytime\n1. Set your schedule\nLogout\nYou get to decide how often you\nChoose your proteins and the\nEvery order is pre-filled with\nwant deliveries and what day of\ntypes of menu items you want,\nmeals we recommend, but you\nfrom classic meal kits to our new\ncan add, swap, or remove\nthe week you want them.\npre-made meals.\nanything before shipping.\nSAVE 5%\nGet ahead of meal planning\nith Subscribe & Save\nupdate, or cancel anytime. Learn more\nSkip, update, or cancel anytime. No",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "delivery",
+    "paywall",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Apron”",
+        "Dialog over a dimmed background, covering 38% of the height from 31% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with a sidebar. Light theme, 29 text elements.",
+        "29 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 130 of 167 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:34 in the recording",
+        "Frame 1520 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#88898e",
+      "role": "background",
+      "share": 0.781
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "text",
+      "share": 0.083
+    },
+    {
+      "hex": "#655e57",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#6b7079",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#b2b3b6",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 1520,
+    "atSeconds": 454.2,
+    "endSeconds": 456.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.3125,
+        "w": 0.375,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "SAVE 5%",
+      "Get ahead of meal planning",
+      "Ith Subscribe & Save"
+    ],
+    "activeTab": null,
+    "listedInSidebar": true,
+    "title": "Apron",
+    "headline": "Apron"
+  },
+  "crawler": {
+    "nodeId": "s163",
+    "depth": 165,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s162",
+        "via": "Open Apron",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s164",
+        "via": "Tap “to sign out?”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

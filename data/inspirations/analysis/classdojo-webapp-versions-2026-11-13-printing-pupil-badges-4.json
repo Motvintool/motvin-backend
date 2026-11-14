@@ -1,0 +1,158 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-printing-pupil-badges-4",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-printing-pupil-badges-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:57:59.159Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Printing pupil badges",
+  "flow_position": 32,
+  "name": "DATO dialog",
+  "description": "Dialog over a dimmed screen, on top of At home login. Light theme, 17 text elements.",
+  "text": "Print pupil badges\nChoose a print layout\nMultiple per page\nOne per page\nMultiple pupils per page. Best\nOne pupil per page, with step-\nfor quick printing and cutting\nby-step instructions for\nfamilies.\nClassDojo\nClassDojo\nDATO\nRoger M\nClassDojo\nClassDojo\nPrint now\nФ Download pupil badges",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “DATO”",
+        "Dialog over a dimmed background, covering 75% of the height from 13% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of At home login. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 79 in “Settings”",
+        "Reached from “At home login”",
+        "Leads to “Printouts downloaded”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 11:54 in the recording",
+        "Frame 2387 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#393939",
+      "role": "background",
+      "share": 0.589
+    },
+    {
+      "hex": "#faf9fa",
+      "role": "text",
+      "share": 0.223
+    },
+    {
+      "hex": "#696969",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#b4b4b4",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#d8d7db",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 2387,
+    "atSeconds": 714.3,
+    "endSeconds": 716.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.28125,
+        "y": 0.125,
+        "w": 0.4375,
+        "h": 0.75
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "DATO",
+    "headline": "DATO"
+  },
+  "crawler": {
+    "nodeId": "s161",
+    "depth": 161,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s160",
+        "via": "Back to DATO dialog",
+        "name": "At home login"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s162",
+        "via": "Back to Printouts downloaded",
+        "name": "Printouts downloaded"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

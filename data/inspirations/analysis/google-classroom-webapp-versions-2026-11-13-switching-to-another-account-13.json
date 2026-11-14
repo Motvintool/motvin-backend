@@ -1,0 +1,150 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-13",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-13",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:41.464Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 19,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Confirm your recovery email”. Dark theme, 22 text elements.",
+  "text": "Google Account\nSign in to Chrome in a new profile?\nSurendar is already signed in. To keep\nyour browsing separate, sign in to Chrome\nin your own profile as\nsurendarv638@gmail.com.\nThis new profile will be managed by\nyour organisation. Learn more\nSecurity Check-Up\nNo, thanks\nOK\nYou have security tips\nYour devices\nYou have inactive devices\n:\nReview devices that you haven't used in a while and remove old ones\nMac OS\nInactive for 155 days\nReview devices\nWhere you're signed in\nSign-in and recovery\nConfirm your recovery email",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "review",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Google Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Confirm your recovery email”. Dark theme, 22 text elements.",
+        "Calls to action: “Confirm your recovery email”",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 22 in “Recently due detail”",
+        "Reached from “Sign in with email”",
+        "Leads to “Google Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 12:36 in the recording",
+        "Frame 2527 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1f22",
+      "role": "background",
+      "share": 0.926
+    },
+    {
+      "hex": "#3d4445",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#5b6165",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#417492",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#a8c1ed",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2527,
+    "atSeconds": 756.6,
+    "endSeconds": 758.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm your recovery email"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Google Account",
+    "headline": "Security Check-Up"
+  },
+  "crawler": {
+    "nodeId": "s223",
+    "depth": 224,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s222",
+        "via": "Wait 0.9s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s224",
+        "via": "Wait 1.8s",
+        "name": "Google Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

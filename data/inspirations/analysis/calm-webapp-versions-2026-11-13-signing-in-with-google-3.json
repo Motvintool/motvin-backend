@@ -1,0 +1,166 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-signing-in-with-google-3",
+  "screen_id": "calm-webapp-versions-2026-11-13-signing-in-with-google-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:21.282Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen, on top of Create account with a primary action labelled “Continue with Apple”. Dark theme, 10 text elements.",
+  "text": "Create a free Calm account\n• Continue with Email\nf Continue with Facebook\nContinue with Apple\nContinue with Google\nBy tapping Continue or logging into an existing Calm\naccount, you agree to our Terms and acknowledge that\nyou have read our Privacy Policy, which explains how to\nopt out of offers and promos.\nAlready have an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "login",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "legal-text",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Facebook”",
+        "Dialog over a dimmed background, covering 66% of the height from 17% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Create account with a primary action labelled “Continue with Apple”. Dark theme, 10 text elements.",
+        "Calls to action: “Continue with Apple”, “Continue with Google”",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 15 in “Verifying OTP”",
+        "Reached from “Create account”",
+        "Leads to “Splash”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 5:43 in the recording",
+        "Frame 1151 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a1323",
+      "role": "background",
+      "share": 0.632
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.119
+    },
+    {
+      "hex": "#474c51",
+      "role": "surface",
+      "share": 0.102
+    },
+    {
+      "hex": "#d6d7d8",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#2e3641",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 1151,
+    "atSeconds": 343.5,
+    "endSeconds": 345.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.171875,
+        "w": 0.375,
+        "h": 0.65625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Facebook",
+    "headline": "Continue with Facebook"
+  },
+  "crawler": {
+    "nodeId": "s112",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s111",
+        "via": "Open Continue with Facebook",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s113",
+        "via": "Back to Splash screen",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

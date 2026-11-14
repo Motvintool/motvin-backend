@@ -1,0 +1,152 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-signing-in-with-google-5",
+  "screen_id": "calm-webapp-versions-2026-11-13-signing-in-with-google-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:21.680Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 11,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Sign in to Calm”. Dark theme, 20 text elements.",
+  "text": "Sign in with Google\nCalm\nGoogle will allow Calm to access this info about\nyou\nSign in to Calm\nSurendar\nName and profile picture\nmotvintool@gmail.com\nmotvintool@gmail.com\nEmail address\nReview Calm's privacy policy and Terms of Service to understand how\nCalm will process and protect your data.\nTo make changes at any time, go to your Google Account.\nLearn more about Sign in with Google.\nContinue\nCancel\nEnglish (United Kingdom) -\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in to Calm”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Sign in to Calm”. Dark theme, 20 text elements.",
+        "Calls to action: “Sign in to Calm”, “Continue”",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 15 in “Verifying OTP”",
+        "Reached from “Choose an account”",
+        "Leads to “Splash”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:53 in the recording",
+        "Frame 1181 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2223",
+      "role": "background",
+      "share": 0.684
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.295
+    },
+    {
+      "hex": "#3b3e41",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#3a5f82",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#585958",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 1181,
+    "atSeconds": 353.1,
+    "endSeconds": 354.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in to Calm",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in to Calm",
+    "headline": "Calm"
+  },
+  "crawler": {
+    "nodeId": "s115",
+    "depth": 114,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s114",
+        "via": "Dismiss",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s116",
+        "via": "Wait 1.5s",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,163 @@
+{
+  "screenId": "jitter-webapp-versions-2026-11-13-onboarding-4",
+  "screen_id": "jitter-webapp-versions-2026-11-13-onboarding-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:31:44.780Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 1,
+  "name": "OTP verification",
+  "description": "Verification code screen with a sidebar, a search bar and a primary action labelled “Confirm your email”. Light theme, 27 text elements.",
+  "text": "= S\n= M Gmail\nQ\nUpgrade\nSearch mail\n:\n2 of 516\n‹ > 31\n/ Compose\nVerify your email on Jitter Inboxx\nInbox\n:\nStarred\nJitter < info@jitter.video>\n08:08 (1 minute ago)\nto me -\nSnoozed\nSent\nDrafts\nJitter\nPurchases\n+\nMore\nConfirm your email\n+\nLabels\nHi there,\nThank you for signing up to Jitter!\nPlease confirm your email address below to access your account:\nConfirm my email\nX\nYou've received this email because you signed up to Jitter.\n• Forward\n* Reply\nEnable desktop notifications for Gmail.\nOK\nNo, thanks X\ntps://jitter.video/login/code/?code=2a902cbc-dda3-4bae-b13b-6aad4e83b95b",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "video",
+    "login",
+    "address",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search mail”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a sidebar, a search bar and a primary action labelled “Confirm your email”. Light theme, 27 text elements.",
+        "Calls to action: “Confirm your email”, “Confirm my email”",
+        "27 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 38 in “Event detail”",
+        "Reached from “Sign in with email”",
+        "Leads to “Splash”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:19 in the recording",
+        "Frame 70 of 2122 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcfd",
+      "role": "background",
+      "share": 0.916
+    },
+    {
+      "hex": "#d6dadd",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#32363b",
+      "role": "text",
+      "share": 0.015
+    },
+    {
+      "hex": "#946ef2",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#5c5e61",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Jitter.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2122,
+    "frame": 70,
+    "atSeconds": 19.8,
+    "endSeconds": 21.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm your email",
+      "Confirm my email"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Inbox",
+      "Starred",
+      "Snoozed",
+      "Sent",
+      "Drafts",
+      "Purchases",
+      "More"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search mail",
+    "headline": "Jitter"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Tap “Jitter”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Wait 1.5s",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

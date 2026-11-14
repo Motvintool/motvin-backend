@@ -1,0 +1,154 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-3",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:53.167Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login screen with a search bar and a primary action labelled “Continue”. Light theme, 18 text elements.",
+  "text": "SOUNDCLOUD\nSearch for artists, bands, tracks, podcasts\nSign in\nCreate account\nHome\nFeed\nLibrary\nUpload\nCreate an account or sign in\nYour email address or profile URL\nContinue\nNeed help?\nDownload our apps\nGET IT ON\nDownoae onune\nGoogle Play\nApp Store\nOr learn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar and a primary action labelled “Continue”. Light theme, 18 text elements.",
+        "Calls to action: “Continue”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 23 in “Logging in with email”",
+        "Reached from “OTP verification”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:14 in the recording",
+        "Frame 2452 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7d7c",
+      "role": "background",
+      "share": 0.675
+    },
+    {
+      "hex": "#a59996",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#c8c0bd",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#f6efec",
+      "role": "text",
+      "share": 0.05
+    },
+    {
+      "hex": "#2f2f2f",
+      "role": "surface",
+      "share": 0.039
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 2452,
+    "atSeconds": 734.4,
+    "endSeconds": 735.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "Need help?"
+  },
+  "crawler": {
+    "nodeId": "s271",
+    "depth": 273,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s270",
+        "via": "Tap “Sign in”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s272",
+        "via": "Tap “Need help?”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

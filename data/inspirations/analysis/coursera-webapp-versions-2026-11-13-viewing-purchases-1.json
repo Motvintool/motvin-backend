@@ -1,0 +1,150 @@
+{
+  "screenId": "coursera-webapp-versions-2026-11-13-viewing-purchases-1",
+  "screen_id": "coursera-webapp-versions-2026-11-13-viewing-purchases-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:27:47.599Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Viewing purchases",
+  "flow_position": 4,
+  "name": "Loading state",
+  "description": "Loading state. Light theme, 16 text elements.",
+  "text": "For Individuals\nFor Businesses\nFor Universities\nFor Governments\ncoursera\nWhat do you want to learn?\nExplore v\nDegrees\nMy Learning\nPurchases\nNeed more help? Check out our Learner Help Center and Terms of Use.\nPayment History\ncoursera PLUs\nTry out different courses to see which one fits your needs\nGet a 7-day free trial that includes courses, Specializations, Projects, and Professional Certificates.\nLearn More →",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "paywall",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “For Individuals”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Light theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Good evening, Motvin”",
+        "Reached from “Settings”",
+        "Leads to “For Individuals (empty)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 14:26 in the recording",
+        "Frame 2891 of 3137 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#eff4fb",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#0a0e12",
+      "role": "text",
+      "share": 0.042
+    },
+    {
+      "hex": "#bec3cb",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#2b6dd9",
+      "role": "accent",
+      "share": 0.01
+    },
+    {
+      "hex": "#89aee9",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3137,
+    "frame": 2891,
+    "atSeconds": 866.1,
+    "endSeconds": 867.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "For Individuals",
+    "headline": "Coursera PLUs"
+  },
+  "crawler": {
+    "nodeId": "s300",
+    "depth": 303,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s299",
+        "via": "Wait 1.8s",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s301",
+        "via": "Wait 1.5s",
+        "name": "For Individuals (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}
