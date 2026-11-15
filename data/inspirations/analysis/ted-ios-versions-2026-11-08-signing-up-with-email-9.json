@@ -1,0 +1,164 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-signing-up-with-email-9",
+  "screen_id": "ted-ios-versions-2026-11-08-signing-up-with-email-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:23.919Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 14,
+  "name": "Create account",
+  "description": "Sign up bottom sheet over a dimmed screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "9:41(\n\"ll\nCreate your account\nSign up as motvintool@gmail.com\nFirst name\nMotvin\nLast name\nTool\nCreate a password\nContinue\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your account”",
+        "Bottom sheet over a dimmed background, covering 44% of the height from 53% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up bottom sheet over a dimmed screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 20 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 0:35 in the recording",
+        "Frame 136 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121314",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#25282d",
+      "role": "surface",
+      "share": 0.114
+    },
+    {
+      "hex": "#424141",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#575859",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#929292",
+      "role": "text",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 136,
+    "atSeconds": 35.1,
+    "endSeconds": 41.1,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.53125,
+        "w": 0.84375,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your account",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Tap “Create your account”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Dismiss",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

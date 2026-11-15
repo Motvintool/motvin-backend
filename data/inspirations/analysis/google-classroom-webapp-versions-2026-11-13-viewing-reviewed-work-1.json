@@ -1,0 +1,149 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-viewing-reviewed-work-1",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-viewing-reviewed-work-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:13.935Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Viewing reviewed work",
+  "flow_position": 1,
+  "name": "To review",
+  "description": "Other screen with a sidebar. Light theme, 8 text elements.",
+  "text": "Classroom › To review\nTo review\nReviewed\nHome\nCalendar\ndesign meeting\n¿ Teaching\n^\nTo review\nE\ndesign meeting\nD\nabout design\nArchived classes\nSettings\nNothing to review right now\nThis is where you can track assignments\nand other work across all your classes",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "other",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “To review”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with a sidebar. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 17 in “Opening a page (To review)”",
+        "Reached from “Settings”",
+        "Leads to “Loading state”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 2:05 in the recording",
+        "Frame 424 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcfd",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#d8dfe5",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#c5c8c5",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a6a9ac",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#8e9195",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 424,
+    "atSeconds": 125.1,
+    "endSeconds": 127.5,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Teaching",
+      "To review",
+      "Design meeting",
+      "About design"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "To review",
+    "headline": "Design meeting"
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Tap “Classroom >”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Wait 2.4s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

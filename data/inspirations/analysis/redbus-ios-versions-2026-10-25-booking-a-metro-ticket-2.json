@@ -1,0 +1,162 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-booking-a-metro-ticket-2",
+  "screen_id": "redbus-ios-versions-2026-10-25-booking-a-metro-ticket-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:40.222Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Booking a metro ticket",
+  "flow_position": 106,
+  "name": "Home home",
+  "description": "Feed screen with a 5-item tab bar and a row of 3 category chips. Light theme, 26 text elements.",
+  "text": "9:41 C\n(<300 Off\nUPTO\nGet 20% of\nredBus\nredRajl)\n45%\nOFF\nBus Tickets\nTrain Tickets\nHotels\nMetro Ticke1\nChennai Metro\nGet 20% off on all booking\nChange city.\nOneway\nRound trip\nBookings close in 21m: 20s\nFrom\nAnna Nagar East Metro\nTo\n+\nPassengers\n1\nBook ticket\nPart of ONDC NETWORK T&C\nMust know before you book\n• Ticket valid till 2:00\nOffers\nHome\nMy Bookings\nHelp\nMy Account\nnot allowed",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Bus Tickets”",
+        "Category strip: OFF, Bus Tickets, Hotels",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar and a row of 3 category chips. Light theme, 26 text elements.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 106 of 200 in “Home”",
+        "Reached from “AG-DMS Metro toast”",
+        "Leads to “To Station”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:16 in the recording",
+        "Frame 1657 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fb",
+      "role": "background",
+      "share": 0.722
+    },
+    {
+      "hex": "#e1d9db",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#d2bcbb",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#d63741",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#d69e84",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1657,
+    "atSeconds": 496.5,
+    "endSeconds": 497.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [
+      "OFF",
+      "Bus Tickets",
+      "Hotels"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Bus Tickets",
+    "headline": "Change city"
+  },
+  "crawler": {
+    "nodeId": "s430",
+    "depth": 430,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s428",
+        "via": "Back to Home home",
+        "name": "AG-DMS Metro toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s433",
+        "via": "Open To Station",
+        "name": "To Station"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

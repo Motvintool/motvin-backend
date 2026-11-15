@@ -1,0 +1,154 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-home-1",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-home-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:29.443Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "empty"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Home",
+  "flow_position": 3,
+  "name": "Recently due (empty)",
+  "description": "Empty state screen with a sidebar. Light theme, 10 text elements, an empty state.",
+  "text": "Classroom\nHome\nRecently due\nView work in progress\nCalendar\n¿ Teaching\n^\nE\nTo review\nDeveloper Meeting\nD\nAbout developer\nNo recent assignments to review\nArchived classes\nSee assignments from the past seven days that need review\nSettings\n+ Add class\nClasses\nDeveloper Meeting,\nAbout developer\nD\nhttps://classroom.google.com/ta/not-reviewed/all",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "empty-state",
+    "empty",
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "empty-state"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Recently due”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a sidebar. Light theme, 10 text elements, an empty state.",
+        "10 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Recently due detail”",
+        "Reached from “Recently due”",
+        "Leads to “To review”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 7:19 in the recording",
+        "Frame 1474 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafcfd",
+      "role": "background",
+      "share": 0.944
+    },
+    {
+      "hex": "#d9e1e3",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#c4c8c2",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#595c5c",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#313332",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 1474,
+    "atSeconds": 439.5,
+    "endSeconds": 442.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Teaching",
+      "To review",
+      "Developer Meeting",
+      "About developer"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Recently due",
+    "headline": "Developer Meeting"
+  },
+  "crawler": {
+    "nodeId": "s136",
+    "depth": 135,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s135",
+        "via": "Tap “Recently due”",
+        "name": "Recently due"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s137",
+        "via": "Wait 3s",
+        "name": "To review"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

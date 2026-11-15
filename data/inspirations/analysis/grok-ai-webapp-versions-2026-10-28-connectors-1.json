@@ -1,0 +1,160 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-connectors-1",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-connectors-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:11.622Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Connectors",
+  "flow_position": 36,
+  "name": "(https://mcpexample.com/ase dialog",
+  "description": "Dialog over a dimmed screen with 1 input field. Light theme, 16 text elements.",
+  "text": "Q\nB Chal\n6 Urery\nyou today?\n• Atoma\n< 2/2\n‹ Custom Connector\neeting Exchang\nEnter a custom name and an MCP server URL\nreeting Exchang\nName\nMy Connector\nServer URL\n(https://mcpexample.com/ase\nAdd Connector\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “(https://mcpexample.com/ase”",
+        "Dialog over a dimmed background, covering 34% of the height from 33% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with 1 input field. Light theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 143 in “Opening a page”",
+        "Reached from “Breeting Excharg”",
+        "Leads to “Hi! How can I help you today?”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 4:57 in the recording",
+        "Frame 999 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cdcccc",
+      "role": "background",
+      "share": 0.871
+    },
+    {
+      "hex": "#f3f3f3",
+      "role": "surface",
+      "share": 0.103
+    },
+    {
+      "hex": "#e5e4e3",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#b1afae",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#939491",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 999,
+    "atSeconds": 297.6,
+    "endSeconds": 300,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.328125,
+        "w": 0.375,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "(https://mcpexample.com/ase",
+    "headline": "(https://mcpexample.com/ase"
+  },
+  "crawler": {
+    "nodeId": "s042",
+    "depth": 44,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s041",
+        "via": "Open (https://mcpexample.com/ase",
+        "name": "Breeting Excharg"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s043",
+        "via": "Dismiss",
+        "name": "Hi! How can I help you today?"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

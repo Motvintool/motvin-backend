@@ -1,0 +1,169 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-opening-settings-4",
+  "screen_id": "kahoot-ios-versions-2026-11-06-opening-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:40.569Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Opening settings",
+  "flow_position": 3,
+  "name": "Child Activity Dashboard dialog",
+  "description": "Dialog over a dimmed screen, on top of Activate student pass with a row of 3 category chips and a primary action labelled “Done”. Dark theme, 13 text elements.",
+  "text": "9:41 €\n<\nKahoot!\nm\nkids\nMotvin\nAdd child\nmotvintool\nParents only\nWhat year were you born?\nOK\nClose\nChild Activity Dashboard\nDone",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Child Activity Dashboard”",
+        "Category strip: Motvin, Add child, motvintool",
+        "Dialog over a dimmed background, covering 31% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Activate student pass with a row of 3 category chips and a primary action labelled “Done”. Dark theme, 13 text elements.",
+        "Calls to action: “Done”",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 10 in “Activate student pass”",
+        "Reached from “Activate student pass”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 14:31 in the recording",
+        "Frame 2914 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0c0c",
+      "role": "background",
+      "share": 0.725
+    },
+    {
+      "hex": "#2d2d2d",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#4d4d4d",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#1463c4",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#1e5393",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2914,
+    "atSeconds": 871.8,
+    "endSeconds": 874.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.390625,
+        "w": 0.875,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [
+      "Motvin",
+      "Add child",
+      "motvintool"
+    ],
+    "ctas": [
+      "Done"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Child Activity Dashboard",
+    "headline": "Kahoot!"
+  },
+  "crawler": {
+    "nodeId": "s435",
+    "depth": 436,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s434",
+        "via": "Back to Child Activity Dashboard dialog",
+        "name": "Activate student pass"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s436",
+        "via": "Open Settings",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

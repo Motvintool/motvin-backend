@@ -1,0 +1,142 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-account-8",
+  "screen_id": "redbus-ios-versions-2026-10-25-account-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:50.985Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Account",
+  "flow_position": 4,
+  "name": "Payment method",
+  "description": "Payment screen. Light theme, 5 text elements.",
+  "text": "9:41 €\n<\nPayment methods\nNo payment methods saved\nOnce you make a transaction, your payment methods\nwill appear here.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Payment methods”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Light theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Opening RedBus wallet”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 11:11 in the recording",
+        "Frame 2241 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfbfd",
+      "role": "background",
+      "share": 0.841
+    },
+    {
+      "hex": "#468af7",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#dfdde0",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#b8b6b9",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#2c5fb7",
+      "role": "accent",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2241,
+    "atSeconds": 671.4,
+    "endSeconds": 672.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Payment methods",
+    "headline": "No payment methods saved"
+  },
+  "crawler": {
+    "nodeId": "s549",
+    "depth": 551,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s548",
+        "via": "Tap “Payment methods”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s550",
+        "via": "Back to Payment method",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

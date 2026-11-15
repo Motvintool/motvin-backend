@@ -1,0 +1,149 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-9",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:40.872Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 14,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Next”. Dark theme, 17 text elements.",
+  "text": "Account recovery\nA text message with a 6-digit verification code was just sent to •...•.\n•••14\nTo help keep your account safe, Google wants to make sure\nEnter the code\nthat it's really you trying to sign in\nG-\n626544\n)\n• surendarv638@gmail.com\nResend it\nTry another way\nNext\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account recovery”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Next”. Dark theme, 17 text elements.",
+        "Calls to action: “Next”",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 22 in “Recently due detail”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 15.6s at 11:45 in the recording",
+        "Frame 2403 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2223",
+      "role": "background",
+      "share": 0.725
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.256
+    },
+    {
+      "hex": "#3e4040",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#575a5f",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#bcd3fb",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2403,
+    "atSeconds": 705.6,
+    "endSeconds": 721.2,
+    "holdSeconds": 15.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account recovery",
+    "headline": "Account recovery"
+  },
+  "crawler": {
+    "nodeId": "s218",
+    "depth": 219,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s217",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s219",
+        "via": "Tap “Account recovery”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

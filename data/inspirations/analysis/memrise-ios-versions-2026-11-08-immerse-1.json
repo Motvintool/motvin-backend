@@ -1,0 +1,151 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-immerse-1",
+  "screen_id": "memrise-ios-versions-2026-11-08-immerse-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:08.903Z",
+  "screen_type": "player",
+  "published_as": "player",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Immerse",
+  "flow_position": 1,
+  "name": "Player",
+  "description": "Player screen with a 3-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41(\noll\nCC\nGood cod! A bitesize history of fi\nBBC\nBBC Ideas\nB BC\n0:01 / 3:25\nThe popularity of fish chips\nA BRIEF HISTORY\nOF CURRY\nYouTube\ncent\npulation",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "of curry",
+    "cent",
+    "youtube",
+    "player",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: OF CURRY, cent, YouTube",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Player screen with a 3-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “OF CURRY”",
+        "Reached from “Loading state”",
+        "Leads to “Player”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:07 in the recording",
+        "Frame 1227 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.67
+    },
+    {
+      "hex": "#af8a6f",
+      "role": "surface",
+      "share": 0.128
+    },
+    {
+      "hex": "#896852",
+      "role": "accent",
+      "share": 0.061
+    },
+    {
+      "hex": "#4c3b34",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#c2a28a",
+      "role": "text",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1227,
+    "atSeconds": 367.2,
+    "endSeconds": 368.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "OF CURRY",
+      "cent",
+      "YouTube"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Good cod! A bitesize history of fi"
+  },
+  "crawler": {
+    "nodeId": "s212",
+    "depth": 211,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s211",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s213",
+        "via": "Switch to sayt",
+        "name": "Player"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

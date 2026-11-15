@@ -1,0 +1,145 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-sharing-an-artwork-2",
+  "screen_id": "dailyart-ios-versions-2026-11-06-sharing-an-artwork-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:35.531Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Sharing an artwork",
+  "flow_position": 2,
+  "name": "Picture",
+  "description": "Home screen with a 4-item tab bar. Dark theme, 4 text elements.",
+  "text": "9:41€\nShare\nX\nSCailkebolle.\n1875\nf\nPicture\nPicture\nLink\nLink",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "picture",
+    "link",
+    "home",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar. Dark theme, 4 text elements.",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Browsing a category (DailyArt)”",
+        "Reached from “Picture home — loading”",
+        "Leads to “DailyArt home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 1:29 in the recording",
+        "Frame 303 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b181c",
+      "role": "background",
+      "share": 0.422
+    },
+    {
+      "hex": "#474139",
+      "role": "surface",
+      "share": 0.227
+    },
+    {
+      "hex": "#6e695e",
+      "role": "surface",
+      "share": 0.198
+    },
+    {
+      "hex": "#060005",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#ccc3aa",
+      "role": "text",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 303,
+    "atSeconds": 89.4,
+    "endSeconds": 91.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "SCailkebolle",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 47,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Wait 0.6s",
+        "name": "Picture home — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Switch to DailyArt",
+        "name": "DailyArt home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

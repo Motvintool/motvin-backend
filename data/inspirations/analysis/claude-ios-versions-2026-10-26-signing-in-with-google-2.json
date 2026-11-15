@@ -1,0 +1,162 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-signing-in-with-google-2",
+  "screen_id": "claude-ios-versions-2026-10-26-signing-in-with-google-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:24.344Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 5,
+  "name": "Permission request",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Continue”. Dark theme, 10 text elements.",
+  "text": "9:41(\nClaude\nMG)\n\"Claude\" Wants to Use\n\"google.com\" to Sign In\nThis allows the app and website to\nshare information about you.\nContinue\nCancel\n• Continue with Apple\nPersonal or work email\nBy continuing, you agree to Anthropic's Consumer Terms and\nUsage Policy, and acknowledge their Privacy Policy.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Apple”",
+        "Dialog over a dimmed background, covering 31% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Continue”. Dark theme, 10 text elements.",
+        "Calls to action: “Continue”",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 13 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:30 in the recording",
+        "Frame 1502 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0d10",
+      "role": "background",
+      "share": 0.773
+    },
+    {
+      "hex": "#302d2f",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#817f81",
+      "role": "text",
+      "share": 0.079
+    },
+    {
+      "hex": "#4f4d50",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#646264",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 1502,
+    "atSeconds": 450,
+    "endSeconds": 450.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.4375,
+        "w": 0.5625,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Apple",
+    "headline": "\"google.com\" to Sign In"
+  },
+  "crawler": {
+    "nodeId": "s152",
+    "depth": 152,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s151",
+        "via": "Tap “é Continue with Apple”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s153",
+        "via": "Open Google sign-in",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

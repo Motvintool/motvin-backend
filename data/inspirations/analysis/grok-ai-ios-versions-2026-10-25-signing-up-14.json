@@ -1,0 +1,156 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-signing-up-14",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-signing-up-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:53.135Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 16,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Confirm email”. Dark theme, 37 text elements.",
+  "text": "9:41€\noUl\naccounts.x.ai\nVerify your email\nWe've emailed a one time security code to\nmotvintool@gmail.com. It should arrive in the next\nfew minutes. If you don't see it in your inbox, please\ncheck your spam/junk folder. Please enter it below:\n3\n9\n7\n6\n7\n8\n-\nThat code is invalid or has expired. Request a new\none.\nDidn't receive a code? Resend (8)\nConfirm email\nV\n.AL\nD.\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nTUV\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Verify your email”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Confirm email”. Dark theme, 37 text elements.",
+        "Calls to action: “Confirm email”",
+        "37 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 25 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:52 in the recording",
+        "Frame 184 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151315",
+      "role": "background",
+      "share": 0.71
+    },
+    {
+      "hex": "#3a383a",
+      "role": "surface",
+      "share": 0.226
+    },
+    {
+      "hex": "#5b595b",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#fbfafc",
+      "role": "text",
+      "share": 0.021
+    },
+    {
+      "hex": "#cccacd",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 184,
+    "atSeconds": 52.8,
+    "endSeconds": 55.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm email"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Verify your email",
+    "headline": "Didn't receive a code? Resend (8)"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Tap “Verify your email”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,150 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-logging-in-with-email-7",
+  "screen_id": "ted-ios-versions-2026-11-08-logging-in-with-email-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:37.396Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 9,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41(\nWelcome back!\nEmail address\nmotvintool@gmail.com\nSomething went wrong. Please try again.\nPassword\nContinue\nForgot your password?\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "cancel",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 10 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:19 in the recording",
+        "Frame 1269 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121212",
+      "role": "background",
+      "share": 0.897
+    },
+    {
+      "hex": "#26292d",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#1688ba",
+      "role": "accent",
+      "share": 0.033
+    },
+    {
+      "hex": "#424242",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#9b9b9b",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 1269,
+    "atSeconds": 379.2,
+    "endSeconds": 381,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Welcome back!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Tap “Welcome back!”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

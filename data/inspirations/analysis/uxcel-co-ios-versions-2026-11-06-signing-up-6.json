@@ -1,0 +1,167 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-signing-up-6",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-signing-up-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:25.040Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 11,
+  "name": "Sign in with email",
+  "description": "Login toast, on top of Sign in with email with a primary action labelled “Create account”. Dark theme, 15 text elements.",
+  "text": "9:41C\nCreate an acount\nPassword\nAt least 8 characters\nAt least 1 uppercase letter\nAt least 1 lowercase letter\nAt least 1 number\nCreate account\nBy creating an account, you agree to the\nTerms of Service and Privacy Policy.\nor\nContinue with Google\nContinue with Apple\nf\nContinue with Facebook\nContinue with SSO",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with SSO”",
+        "Toast, covering 6% of the height from 77% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast, on top of Sign in with email with a primary action labelled “Create account”. Dark theme, 15 text elements.",
+        "Calls to action: “Create account”, “Continue with Google”, “Continue with Apple”, “Continue with Facebook”",
+        "15 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 42 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:23 in the recording",
+        "Frame 80 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#25272e",
+      "role": "background",
+      "share": 0.77
+    },
+    {
+      "hex": "#3f4148",
+      "role": "surface",
+      "share": 0.141
+    },
+    {
+      "hex": "#513de6",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#6e6f74",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#2f2c64",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 80,
+    "atSeconds": 23.7,
+    "endSeconds": 24.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.765625,
+        "w": 0.9375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Create account",
+      "Continue with Google",
+      "Continue with Apple",
+      "Continue with Facebook"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with SSO",
+    "headline": "By creating an account, you agree to the"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Tap “Continue with SSO”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Tap “Create an acount”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

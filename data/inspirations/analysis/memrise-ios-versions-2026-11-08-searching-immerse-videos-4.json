@@ -1,0 +1,159 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-searching-immerse-videos-4",
+  "screen_id": "memrise-ios-versions-2026-11-08-searching-immerse-videos-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:07.349Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success",
+    "loading"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Searching Immerse videos",
+  "flow_position": 10,
+  "name": "Loading state",
+  "description": "Loading state with a row of 3 category chips and a search bar. Dark theme, 11 text elements.",
+  "text": "9:41(\n•ll\nO\nImmerse\nAll\nYouTube\nMemrise\nUnwatched\nSearch\nQ\nCongratulations!\nYou've watched all videos for this language. Why\nnot practice the videos you didn't fully\nunderstand?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "video",
+    "confirmation",
+    "success",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: All, YouTube, Memrise",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 3 category chips and a search bar. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: success, loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 22 in “Searching Home”",
+        "Reached from “Learn words”",
+        "Leads to “Learn words”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:40 in the recording",
+        "Frame 1138 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222d3c",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#47515e",
+      "role": "surface",
+      "share": 0.102
+    },
+    {
+      "hex": "#666e7d",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#8c929b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#b0b5be",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1138,
+    "atSeconds": 340.5,
+    "endSeconds": 342,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [
+      "All",
+      "YouTube",
+      "Memrise"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Congratulations!"
+  },
+  "crawler": {
+    "nodeId": "s199",
+    "depth": 198,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s198",
+        "via": "Open Loading state",
+        "name": "Learn words"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s200",
+        "via": "Wait 1.5s",
+        "name": "Learn words"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

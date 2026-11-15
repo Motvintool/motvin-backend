@@ -1,0 +1,158 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-playing-a-game-12",
+  "screen_id": "elevate-ios-versions-2026-11-08-playing-a-game-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:11.450Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Playing a game",
+  "flow_position": 15,
+  "name": "Progress of something toast",
+  "description": "Toast over a dimmed screen, on top of Error. Dark theme, 12 text elements.",
+  "text": "• 1126\nstymie\nto prevent or obstruct the\nprogress of something\nPronunciation\nIncorrect\nSTIM-ee\n•PLAY\nCorrect\nSTY-me\nPLAYING\nERROI\nRETURN TO GAME",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "return to game",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Progress of something”",
+        "Toast over a dimmed background, covering 11% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Error. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 17 in “Opening a page (Today)”",
+        "Reached from “Error”",
+        "Leads to “You lost all your lives — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:23 in the recording",
+        "Frame 1480 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030304",
+      "role": "background",
+      "share": 0.918
+    },
+    {
+      "hex": "#202a27",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#434345",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#4b0224",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#717072",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1480,
+    "atSeconds": 443.4,
+    "endSeconds": 444.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.09375,
+        "w": 0.53125,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Progress of something",
+    "headline": "Stymie",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s228",
+    "depth": 227,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s227",
+        "via": "Back to Progress of something toast",
+        "name": "Error"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s229",
+        "via": "Open You lost all your lives — loading",
+        "name": "You lost all your lives — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

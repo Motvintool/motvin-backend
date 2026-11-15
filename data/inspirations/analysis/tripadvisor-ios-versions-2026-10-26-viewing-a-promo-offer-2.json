@@ -1,0 +1,166 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-viewing-a-promo-offer-2",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-viewing-a-promo-offer-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:39.547Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Viewing a promo offer",
+  "flow_position": 2,
+  "name": "Where to? dialog",
+  "description": "Dialog over a dimmed screen, on top of Explore home with a primary action labelled “Explore now”. Light theme, 9 text elements.",
+  "text": "Where to?\nQ Places to go, things to do, hotels...\nThings to do in India\n@loganc\n-10%\nSurprise! 10% off Things to Do\nSave on experiences with code APP102026. Offer\nends 31 October-only in the app.\nExplore now\nTerms apply",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "terms apply",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Where to?”",
+        "Dialog over a dimmed background, covering 66% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Explore home with a primary action labelled “Explore now”. Light theme, 9 text elements.",
+        "Calls to action: “Explore now”",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening Explore home options”",
+        "Reached from “Explore home”",
+        "Leads to “Explore home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 2:28 in the recording",
+        "Frame 508 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#040907",
+      "role": "background",
+      "share": 0.285
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.268
+    },
+    {
+      "hex": "#027f32",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#dbdbda",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#828a86",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 508,
+    "atSeconds": 148.5,
+    "endSeconds": 152.7,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0,
+        "w": 0.9375,
+        "h": 0.65625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Explore now"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Where to?",
+    "headline": "Surprise! 10% off Things to Do",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s049",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s048",
+        "via": "Tap “Where to?”",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s050",
+        "via": "Dismiss",
+        "name": "Explore home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

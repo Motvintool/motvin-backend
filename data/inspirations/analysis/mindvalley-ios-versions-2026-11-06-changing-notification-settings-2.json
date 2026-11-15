@@ -1,0 +1,156 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-changing-notification-settings-2",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-changing-notification-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:57.461Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Changing notification settings",
+  "flow_position": 3,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Settings — scrolled — scrolled — scrolled. Dark theme, 9 text elements.",
+  "text": "9:41 €\noll\nMake the commitment\nI, commit to:\nLearning something new on\nMindvalley every day\nScheduling 20 mins daily for my\nlessons\nPeople who make a commitment are\n10x more likely to experience a strong\ntransformation in their lives.\nYes, Continue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Transformation in their lives”",
+        "Dialog over a dimmed background, covering 22% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Settings — scrolled — scrolled — scrolled. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 8 in “Checking notifications”",
+        "Reached from “Settings — scrolled — scrolled — scrolled”",
+        "Leads to “Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:24 in the recording",
+        "Frame 2088 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f131d",
+      "role": "background",
+      "share": 0.823
+    },
+    {
+      "hex": "#373941",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#fdfcfe",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#555860",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#76787e",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 2088,
+    "atSeconds": 624.9,
+    "endSeconds": 626.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.5625,
+        "w": 0.5625,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Transformation in their lives",
+    "headline": "I, commit to"
+  },
+  "crawler": {
+    "nodeId": "s276",
+    "depth": 275,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s275",
+        "via": "Open Transformation in their lives",
+        "name": "Settings — scrolled — scrolled — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s277",
+        "via": "Dismiss",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

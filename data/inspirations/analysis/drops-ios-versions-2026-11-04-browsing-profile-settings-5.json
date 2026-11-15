@@ -1,0 +1,145 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-browsing-profile-settings-5",
+  "screen_id": "drops-ios-versions-2026-11-04-browsing-profile-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:59.476Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Browsing profile settings",
+  "flow_position": 14,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Dark theme, 13 text elements.",
+  "text": "lalk Along\nPause after the second repetition\nX\nSreak Slower\nSlow down the second repetition\nAuto-play\nAutomatically plays the next available\ntopic. Premium only.\nSupport\nRestore purchase\nReset all progress\nRefunds\nHelp\nDelete Account\nSuggest feature/language\nTerms & Conditions",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "premium",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sreak Slower”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 16 in “Choosing a date”",
+        "Reached from “X tings”",
+        "Leads to “Subscription plans — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:43 in the recording",
+        "Frame 1746 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1369",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#765592",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#5b3380",
+      "role": "accent",
+      "share": 0.032
+    },
+    {
+      "hex": "#8d739f",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#918063",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1746,
+    "atSeconds": 523.5,
+    "endSeconds": 524.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sreak Slower",
+    "headline": "Support"
+  },
+  "crawler": {
+    "nodeId": "s187",
+    "depth": 188,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s186",
+        "via": "Open Sreak Slower",
+        "name": "X tings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s188",
+        "via": "Scroll",
+        "name": "Subscription plans — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

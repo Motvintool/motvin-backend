@@ -1,0 +1,154 @@
+{
+  "screenId": "jitter-webapp-versions-2026-11-13-viewing-account-details-3",
+  "screen_id": "jitter-webapp-versions-2026-11-13-viewing-account-details-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:32:13.407Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Viewing account details",
+  "flow_position": 48,
+  "name": "Sign in with email",
+  "description": "Login screen with a search bar, 1 input field and a primary action labelled “Get started”. Light theme, 30 text elements.",
+  "text": "Jitter\nMy files\nM\nEmail\nYou are logged in as motvintool@gmail.com.\nChange my email\nSearch\nGet started\nPassword\n• Drafts\nYou can set a password if you don't want to use temporary login links.\nÉ Templates\nSet a password\nWorkspace\nMotvin's Work...\nAll files\nDelete account\nBrand Kit\nIf you want to permanently delete your account and all of its data, including\nNew folder\n+\nbut not limited to files and personal information, you can do so below.\nUpgrade your plan\nDelete my account\nInvite members\nWorkspace settings\n203\nTrash\n?\nhttps://jitter.video/templates/all/",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "video",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My files”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar, 1 input field and a primary action labelled “Get started”. Light theme, 30 text elements.",
+        "Calls to action: “Get started”",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 48 of 64 in “Browsing a category”",
+        "Reached from “Profile form”",
+        "Leads to “My files”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.9s at 9:54 in the recording",
+        "Frame 2005 of 2122 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f3f2f5",
+      "role": "background",
+      "share": 0.927
+    },
+    {
+      "hex": "#d7d6db",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#b1b0b5",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#575558",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#88878a",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Jitter.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2122,
+    "frame": 2005,
+    "atSeconds": 594.9,
+    "endSeconds": 601.8,
+    "holdSeconds": 6.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My files",
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s210",
+    "depth": 211,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s209",
+        "via": "Wait 1.5s",
+        "name": "Profile form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s211",
+        "via": "Back to My files",
+        "name": "My files"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

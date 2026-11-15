@@ -1,0 +1,146 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-changing-account-settings-3",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-changing-account-settings-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:30:26.601Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Changing account settings",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field. Light theme, 30 text elements.",
+  "text": "in\nSettings\nVisibility of your profile & network\nVisibility when viewing other profiles\nPrivate mode →\n• Account preferences\nOn →\nPage visit visibility\n& Sign in & security\nPublic profile settings\n→\nEmail visibility\n→\n• Visibility\nConnection visibility\nOn →\n• Data privacy\nFollow visibility\nAnyone on Linkedln →\nLast name visibility\n→\nAdvertising data\nOn →\nRepresent your organizations and interests\n• Notifications\nPage owners exporting your data\nOff →\n→\nOff-Linkedln visibility\nDiscoverability by email\nAnyone →\nEveryone →\nDiscoverability by phone number\nBlocked members\n→\nBlocked Pages\n→\nVisibility of vour Linkedln activitv",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Visibility when viewing other profiles”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Light theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 31 in “Entering phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “How Linkedin uses your data”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 17:01 in the recording",
+        "Frame 3414 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9f8",
+      "role": "background",
+      "share": 0.933
+    },
+    {
+      "hex": "#d5d6d5",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#b1b2b1",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#8b9e92",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#a1c0e2",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 3414,
+    "atSeconds": 1021.5,
+    "endSeconds": 1024.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Visibility when viewing other profiles",
+    "headline": "Follow visibility"
+  },
+  "crawler": {
+    "nodeId": "s328",
+    "depth": 331,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s327",
+        "via": "Tap “• Visibility”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s329",
+        "via": "Open How Linkedin uses your data",
+        "name": "How Linkedin uses your data"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

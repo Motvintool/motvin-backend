@@ -1,0 +1,163 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-creating-an-account-6",
+  "screen_id": "preply-ios-versions-2026-11-07-creating-an-account-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:19.377Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Creating an account",
+  "flow_position": 9,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state with a primary action labelled “Save Password?”. Light theme, 11 text elements.",
+  "text": "9:41(\nNot now\nON\nStay connected with vour tutor\nGe\nup\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nSave\nNot Now\nAllow notifications",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Stay connected with vour tutor”",
+        "Dialog over a dimmed background, covering 33% of the height from 33% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state with a primary action labelled “Save Password?”. Light theme, 11 text elements.",
+        "Calls to action: “Save Password?”, “Save”",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 11 in “Creating an account”",
+        "Reached from “Dialog — loading”",
+        "Leads to “Detail”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:24 in the recording",
+        "Frame 284 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#ceccce",
+      "role": "background",
+      "share": 0.671
+    },
+    {
+      "hex": "#efeff1",
+      "role": "surface",
+      "share": 0.192
+    },
+    {
+      "hex": "#bd6989",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#afacaf",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#8b898c",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 284,
+    "atSeconds": 84,
+    "endSeconds": 85.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.328125,
+        "w": 0.8125,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Stay connected with vour tutor",
+    "headline": "Stay connected with vour tutor"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s042",
+        "via": "Wait 1.2s",
+        "name": "Dialog — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Dismiss",
+        "name": "Detail"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

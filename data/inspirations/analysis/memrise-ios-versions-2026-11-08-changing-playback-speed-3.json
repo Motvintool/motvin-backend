@@ -1,0 +1,152 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-changing-playback-speed-3",
+  "screen_id": "memrise-ios-versions-2026-11-08-changing-playback-speed-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:09.930Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Changing playback speed",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 13 text elements.",
+  "text": "9:41(\n•0l\nC\nGood cod! A bitesize history of fi\nBBC\nBBC Ideas\nDEAS\n1x\n+\n1.5x\n1.75x\n0.5X\n1x\n1.25x\n2x\nNormal",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "normal",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Opening More options”",
+        "Reached from “More options toast”",
+        "Leads to “Player”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:18 in the recording",
+        "Frame 1265 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080207",
+      "role": "background",
+      "share": 0.511
+    },
+    {
+      "hex": "#2f261f",
+      "role": "surface",
+      "share": 0.445
+    },
+    {
+      "hex": "#4a4038",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#5a585c",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#6c727e",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1265,
+    "atSeconds": 378.9,
+    "endSeconds": 379.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Good cod! A bitesize history of fi",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s221",
+    "depth": 220,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s220",
+        "via": "Tap “Normal >”",
+        "name": "More options toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s222",
+        "via": "Wait 0.9s",
+        "name": "Player"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

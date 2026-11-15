@@ -1,0 +1,145 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-account-6",
+  "screen_id": "apple-books-ios-versions-2026-11-06-account-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:19.116Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Account",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 1 text element.",
+  "text": "9:41€\nLoading...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Account”",
+        "Leads to “Account”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 4:42 in the recording",
+        "Frame 1065 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.937
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#38373a",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#585759",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#a4a2a4",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 1065,
+    "atSeconds": 282.3,
+    "endSeconds": 284.4,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Loading"
+  },
+  "crawler": {
+    "nodeId": "s138",
+    "depth": 137,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s137",
+        "via": "Open Loading state",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s139",
+        "via": "Wait 5.4s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

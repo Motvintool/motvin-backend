@@ -1,0 +1,153 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-viewing-history-6",
+  "screen_id": "uptime-ios-versions-2026-11-06-viewing-history-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:18.354Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Viewing history",
+  "flow_position": null,
+  "name": "Discover home — loading",
+  "description": "Loading state of Discover home with a row of 3 category chips. Dark theme, 5 text elements.",
+  "text": "9:41(\nMy history\nFinished\nAll history\nUnfinished\nYou haven't finished any Hacks yet.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My history”",
+        "Category strip: Finished, All history, Unfinished",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Discover home with a row of 3 category chips. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “My history”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 5:41 in the recording",
+        "Frame 1141 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080a1e",
+      "role": "background",
+      "share": 0.966
+    },
+    {
+      "hex": "#303243",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#4f515e",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#64581d",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a58f1c",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1141,
+    "atSeconds": 341.4,
+    "endSeconds": 342.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [
+      "Finished",
+      "All history",
+      "Unfinished"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My history",
+    "headline": "You haven't finished any Hacks yet"
+  },
+  "crawler": {
+    "nodeId": "s141",
+    "depth": 140,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s140",
+        "via": "Tap “My history”",
+        "name": "My history"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s142",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

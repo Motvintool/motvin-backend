@@ -1,0 +1,162 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-profile-2",
+  "screen_id": "masterclass-ios-versions-2026-11-04-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:52:04.201Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Profile",
+  "flow_position": 3,
+  "name": "Profile",
+  "description": "Profile bottom sheet over a dimmed screen, on top of App Settings with 1 input field and a paged carousel. Dark theme, 12 text elements.",
+  "text": "9:41(\n•ll\nSAVE\nEdit Profile\nPrivate to you\nA\nEDIT\nName*\nLocation\nAbout Me\n1 am a life-long learner, and 1 am passionately\ncurious about a variety of subjects.\n84/150\nHide mature content\nIf selected, this hides classes labeled as having\nmature content with sexual content and/or themes.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "location",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “1 am a life-long learner, and 1 am”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile bottom sheet over a dimmed screen, on top of App Settings with 1 input field and a paged carousel. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 14 in “Creating an account”",
+        "Reached from “App Settings”",
+        "Leads to “App Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 3:44 in the recording",
+        "Frame 756 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#030305",
+      "role": "background",
+      "share": 0.718
+    },
+    {
+      "hex": "#18181d",
+      "role": "surface",
+      "share": 0.19
+    },
+    {
+      "hex": "#3a393e",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#febff0",
+      "role": "text",
+      "share": 0.016
+    },
+    {
+      "hex": "#7e6276",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 756,
+    "atSeconds": 224.7,
+    "endSeconds": 227.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.546875,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "1 am a life-long learner, and 1 am",
+    "headline": "Edit Profile"
+  },
+  "crawler": {
+    "nodeId": "s090",
+    "depth": 90,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s089",
+        "via": "Tap “EDIT”",
+        "name": "App Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s091",
+        "via": "Dismiss",
+        "name": "App Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

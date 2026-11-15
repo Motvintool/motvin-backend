@@ -1,0 +1,157 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-inbox-2",
+  "screen_id": "asana-ios-versions-2026-11-04-inbox-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:09.396Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Inbox",
+  "flow_position": 2,
+  "name": "Choose view",
+  "description": "Messages dialog over a dimmed screen, on top of Inbox. Dark theme, 5 text elements.",
+  "text": "9:41(\nInbox\nChoose view\nAll activity\nBookmarks\nArchived",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose view”",
+        "Dialog over a dimmed background, covering 17% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Inbox. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Reading messages”",
+        "Reached from “Inbox”",
+        "Leads to “Inbox”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:19 in the recording",
+        "Frame 1667 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151619",
+      "role": "background",
+      "share": 0.946
+    },
+    {
+      "hex": "#3a3a3d",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#7b7073",
+      "role": "text",
+      "share": 0.014
+    },
+    {
+      "hex": "#615254",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#722824",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1667,
+    "atSeconds": 499.5,
+    "endSeconds": 500.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.34375,
+        "w": 0.5,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose view",
+    "headline": "All activity"
+  },
+  "crawler": {
+    "nodeId": "s208",
+    "depth": 208,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s207",
+        "via": "Tap “All activity”",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s209",
+        "via": "Dismiss",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

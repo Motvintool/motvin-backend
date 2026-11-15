@@ -1,0 +1,159 @@
+{
+  "screenId": "masterclass-webapp-versions-2026-11-11-viewing-a-class-3",
+  "screen_id": "masterclass-webapp-versions-2026-11-11-viewing-a-class-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:08:04.960Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Viewing a class",
+  "flow_position": 27,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen, on top of Create account. Dark theme, 19 text elements.",
+  "text": "Enterprise\nView Plans\nMasterClass\nBrowse\nGifts\nMenu\nX\nogies\nTrailer for Achieve More With GenAl\nFinish Sign Up\nAchieve More With GenAI\nOriginal Series Trailer\nSubscribe to MasterClass to continue watching\nStarting at 7999/month (billed annually) for all classes. 30-day money back\nguaranteed.\nFinish Sign Up\n[»)\n0:22 /1:11\n1x",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Finish Sign Up”",
+        "Toast over a dimmed background, covering 6% of the height from 84% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen, on top of Create account. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 51 in “Onboarding”",
+        "Reached from “Create account”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 2:24 in the recording",
+        "Frame 489 of 1209 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2d2928",
+      "role": "background",
+      "share": 0.413
+    },
+    {
+      "hex": "#020202",
+      "role": "surface",
+      "share": 0.388
+    },
+    {
+      "hex": "#414143",
+      "role": "surface",
+      "share": 0.172
+    },
+    {
+      "hex": "#5f5c5b",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#a63443",
+      "role": "accent",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1209,
+    "frame": 489,
+    "atSeconds": 144.9,
+    "endSeconds": 147,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.84375,
+        "w": 0.8125,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Finish Sign Up",
+    "headline": "Original Series Trailer"
+  },
+  "crawler": {
+    "nodeId": "s062",
+    "depth": 61,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s061",
+        "via": "Tap “Finish Sign Up”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s063",
+        "via": "Tap “MasterClass”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

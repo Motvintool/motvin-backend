@@ -1,0 +1,150 @@
+{
+  "screenId": "lovi-ios-versions-2026-10-25-creating-an-account-14",
+  "screen_id": "lovi-ios-versions-2026-10-25-creating-an-account-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:11:35.224Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 11,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Light theme, 25 text elements.",
+  "text": "9:41(\nEnter the code\nfrom email\nCode sent to your email\nResend in 00:40\n136699\nNeed help? Email us: care@lovi.care\nFrom Gmail\n136699\n2\n3\n1\nABC\nDEF\n4\n5\n6\nJKL\nMNO\nGHI\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “From email”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Light theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 17 in “Scans & Diary - October”",
+        "Reached from “OTP verification”",
+        "Leads to “Scans & Diary”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:21 in the recording",
+        "Frame 1076 of 2036 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafc",
+      "role": "background",
+      "share": 0.681
+    },
+    {
+      "hex": "#e3e3e6",
+      "role": "surface",
+      "share": 0.222
+    },
+    {
+      "hex": "#b3b4b0",
+      "role": "surface",
+      "share": 0.069
+    },
+    {
+      "hex": "#a4adc1",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#cacacd",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "mvo4xs70-rj1rpy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2036,
+    "frame": 1076,
+    "atSeconds": 321.6,
+    "endSeconds": 323.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "From email",
+    "headline": "Code sent to your email"
+  },
+  "crawler": {
+    "nodeId": "s115",
+    "depth": 114,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s114",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s116",
+        "via": "Open Scans & Diary - October — loading",
+        "name": "Scans & Diary"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

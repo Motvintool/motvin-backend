@@ -1,0 +1,141 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-onboarding-4",
+  "screen_id": "subframe-webapp-versions-2026-11-13-onboarding-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:38.176Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue to”. Dark theme, 9 text elements.",
+  "text": "Continue to\nSubframe.\nEnter code sent to motvintool@gmail.com\n3\n3\n7\nU\nBack to login\nToken has expired or is invalid",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue to”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue to”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 9 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “Google search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 0:33 in the recording",
+        "Frame 129 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222222",
+      "role": "background",
+      "share": 0.982
+    },
+    {
+      "hex": "#464645",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#777777",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#5f5f5e",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 129,
+    "atSeconds": 33.3,
+    "endSeconds": 39,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue to"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Subframe"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Tap “Subframe.”",
+        "name": "Google search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,163 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-booking-an-airport-cab-6",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-booking-an-airport-cab-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:39.584Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Booking an airport cab",
+  "flow_position": 10,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Item detail with a search bar. Light theme, 35 text elements.",
+  "text": "9:41(\nooll\nCab Search\nAirport\nOutstation\nHourly Rentals\nRide Guarantee\nReach airport on-time or get *5000* refund\n•\nFROM\n•O\nChennai Domestic Airport\nTO\nChennai International Airport\nTRIP START\nSelect trip start date and time\nSat\nSun\nMon\nAM\n15\n20\n7\nToday\nPM\n8\nWed 7 Oct\n25\n9\n30\nThu 8 Oct\n10\nFri 9 Oct\n35\n• Book up to 180 days in advance\nTRIP START\nTue, 06 Oct, 07:20 PM\nCONFIRM",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "confirm",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select trip start date and time”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 59% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Item detail with a search bar. Light theme, 35 text elements.",
+        "35 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 14 in “Cab Search”",
+        "Reached from “Item detail”",
+        "Leads to “Airport Trips”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 9:46 in the recording",
+        "Frame 1960 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfc",
+      "role": "background",
+      "share": 0.474
+    },
+    {
+      "hex": "#7c7a7e",
+      "role": "surface",
+      "share": 0.371
+    },
+    {
+      "hex": "#e3e1e4",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#605e61",
+      "role": "text",
+      "share": 0.036
+    },
+    {
+      "hex": "#4e9cfb",
+      "role": "accent",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 1960,
+    "atSeconds": 586.5,
+    "endSeconds": 588.3,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select trip start date and time",
+    "headline": "Today",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s269",
+    "depth": 268,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s268",
+        "via": "Open Select trip start date and time",
+        "name": "Item detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s270",
+        "via": "Dismiss",
+        "name": "Airport Trips"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

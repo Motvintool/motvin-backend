@@ -1,0 +1,148 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-settings-2",
+  "screen_id": "netflix-ios-versions-2026-10-25-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:25.898Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "loading"
+  ],
+  "category": "entertainment",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 4,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 12 text elements.",
+  "text": "9:41C\nProfiles\nSurendar\nto SurendarV\nMotvin\nRakeshh\nMalini\nAngu\nDonege P\nApp Settings\nAccount\nHelp\nSign Out\nVersion: 26.0.0 (6142) 5.0.1-001",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 28 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Edit Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 6:10 in the recording",
+        "Frame 1235 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2a2729",
+      "role": "background",
+      "share": 0.842
+    },
+    {
+      "hex": "#070508",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#4d4749",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#781c21",
+      "role": "accent",
+      "share": 0.018
+    },
+    {
+      "hex": "#736b6f",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1235,
+    "atSeconds": 370.5,
+    "endSeconds": 373.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Surendar"
+  },
+  "crawler": {
+    "nodeId": "s381",
+    "depth": 380,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s380",
+        "via": "Tap “Surendar”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s383",
+        "via": "Wait 3s",
+        "name": "Edit Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

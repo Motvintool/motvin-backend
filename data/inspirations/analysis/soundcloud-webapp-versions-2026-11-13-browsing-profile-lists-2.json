@@ -1,0 +1,156 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-browsing-profile-lists-2",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-browsing-profile-lists-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:21.609Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "entertainment",
+  "flow": "settings",
+  "flow_name": "Browsing profile lists",
+  "flow_position": 49,
+  "name": "Profile",
+  "description": "Profile screen with a row of 3 category chips, a search bar and a paged carousel. Dark theme, 38 text elements.",
+  "text": "Artist Studio\nTry Artist Pro\nHome\nFeed\nLibrary\nSearch\nUpload\n•••\nFollowers of Electric Universe\nFollowers\nLikes\nFollowing\n518\namir pirhadi\nMotvintool\ntainá\nMarco\nOliver\nROSA LUNA\n• 7 followers\n& 120 followers\n• 1 follower\nZEN-DY\nYannou Le Guillou\nErnie\nDekevionne Buie\nRosen Yankov\nHuber Sascha\n• 66 followers\n• 3 followers\n• 4 followers\n• 12 followers\n• 7 followers\nElectric Universe\n8:34\n3:30\nMama India - Outside t...\nhttps://soundcloud.com/electricuniverse/following",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Followers of Electric Universe”",
+        "Category strip: Followers, Likes, Following",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a row of 3 category chips, a search bar and a paged carousel. Dark theme, 38 text elements.",
+        "38 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 49 of 226 in “Reading messages”",
+        "Reached from “OTP verification”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 3:47 in the recording",
+        "Frame 773 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#101010",
+      "role": "background",
+      "share": 0.625
+    },
+    {
+      "hex": "#393734",
+      "role": "surface",
+      "share": 0.138
+    },
+    {
+      "hex": "#5b5550",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#a6918e",
+      "role": "text",
+      "share": 0.042
+    },
+    {
+      "hex": "#78716f",
+      "role": "surface",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 773,
+    "atSeconds": 227.7,
+    "endSeconds": 232.2,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [
+      "Followers",
+      "Likes",
+      "Following"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "Followers",
+    "listedInSidebar": false,
+    "title": "Followers of Electric Universe",
+    "headline": "Followers",
+    "walkTab": "Followers"
+  },
+  "crawler": {
+    "nodeId": "s073",
+    "depth": 72,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s072",
+        "via": "Tap “Followers”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s074",
+        "via": "Open Electric Universe is following",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

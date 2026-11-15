@@ -1,0 +1,162 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-filtering-bus-results-2",
+  "screen_id": "redbus-ios-versions-2026-10-25-filtering-bus-results-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:12.146Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "travel",
+  "flow": "search",
+  "flow_name": "Filtering bus results",
+  "flow_position": 36,
+  "name": "Search results",
+  "description": "Search results bottom sheet, on top of Search results. Light theme, 28 text elements.",
+  "text": "9:41(\n•ll\nClose\nFilter Buses\n06:00-12:00\nAl Smart filter\n22\nMorning\nSortby\n12:00-18:00\n31\nAfternoon\nDeparture Time\nfrom Source\n18:00-24:00\n154\nEvening\nBus Type\n00:00-06:00\n21\nNight\nSingle Window\nSleeper/Seater\nBoarding Points\nDropping Points\nRTC Bus\nService Type\nAmenities\nBus Operator\nSpecial Features\nClear All\nApply",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "clear all",
+    "apply",
+    "search-results",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Dropping Points”",
+        "Bottom sheet, covering 27% of the height from 56% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results bottom sheet, on top of Search results. Light theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 103 in “Chennai → Bengaluru”",
+        "Reached from “Search results”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:45 in the recording",
+        "Frame 554 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf9fc",
+      "role": "background",
+      "share": 0.779
+    },
+    {
+      "hex": "#c8c8c9",
+      "role": "surface",
+      "share": 0.117
+    },
+    {
+      "hex": "#e1dfe4",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#d73b45",
+      "role": "accent",
+      "share": 0.024
+    },
+    {
+      "hex": "#e89da4",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 554,
+    "atSeconds": 165.3,
+    "endSeconds": 166.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.5625,
+        "w": 0.9375,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Dropping Points",
+    "headline": "Morning",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s144",
+    "depth": 143,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s143",
+        "via": "Back to Search results",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s152",
+        "via": "Tap “Filter Buses”",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

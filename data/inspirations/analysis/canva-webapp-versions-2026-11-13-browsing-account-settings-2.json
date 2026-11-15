@@ -1,0 +1,147 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-browsing-account-settings-2",
+  "screen_id": "canva-webapp-versions-2026-11-13-browsing-account-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:54:41.829Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "entertainment",
+  "flow": "checkout",
+  "flow_name": "Browsing account settings",
+  "flow_position": 42,
+  "name": "Payment method",
+  "description": "Payment screen with a sidebar. Light theme, 20 text elements.",
+  "text": "Canva\n• Try it free for 30 days\nPeople management\nBilling\nCreate\n8 People\nPayments and plans\nHome\nBilling\nProjects\nPlan\nOrders and invoices\nCanva Free\nTemplates\nDomains\nWant access to all of our best templates?\nWeb domains\nBrand\n· Try it free for 30 days\nCanva Al\nAl usage\nGet more\nPrint Shop\nYour monthly usage • Resets on Dec 1\n30% used\nDream Lab\nWhich features use up my Al allowance?\n•••\nMore\nPayment method\nBilling details\nAdd\nAdd\nAdd a payment method to use for purchases.\nAdd billing details to keep your invoices up to date.\nM\nhttps://www.canva.com/settings/purchase-history",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Canva Free”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with a sidebar. Light theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 42 of 72 in “Logging in”",
+        "Reached from “Form”",
+        "Leads to “Orders and invoices (empty)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 36:10 in the recording",
+        "Frame 7244 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafc",
+      "role": "background",
+      "share": 0.926
+    },
+    {
+      "hex": "#d9dde8",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#b387fa",
+      "role": "accent",
+      "share": 0.01
+    },
+    {
+      "hex": "#c2c3c4",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#565857",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 7244,
+    "atSeconds": 2170.5,
+    "endSeconds": 2173.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "People management",
+      "Create",
+      "People"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Canva Free",
+    "headline": "Canva Free"
+  },
+  "crawler": {
+    "nodeId": "s613",
+    "depth": 616,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s612",
+        "via": "Open Canva Free",
+        "name": "Form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s614",
+        "via": "Tap “Billing”",
+        "name": "Orders and invoices (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

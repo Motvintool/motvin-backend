@@ -1,0 +1,170 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-inbox-1",
+  "screen_id": "asana-ios-versions-2026-11-04-inbox-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:07.081Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Inbox",
+  "flow_position": 8,
+  "name": "Inbox",
+  "description": "Messages dialog over a dimmed screen, on top of Home home with a 5-item tab bar. Dark theme, 4 text elements.",
+  "text": "9:41(\nInbox\nHooray, you're up to date!\nCheck back later for updates on your team's work\nAll activity\nInbox\nMy tasks\nSearch\nAccount\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "my tasks",
+    "inbox",
+    "search",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Inbox”",
+        "Dialog over a dimmed background, covering 14% of the height from 3% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Home home with a 5-item tab bar. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 49 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Inbox”",
+        "Returned to 11 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:14 in the recording",
+        "Frame 1453 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1f22",
+      "role": "background",
+      "share": 0.878
+    },
+    {
+      "hex": "#3e3f43",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#f5ebf1",
+      "role": "text",
+      "share": 0.019
+    },
+    {
+      "hex": "#6a666a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#ecd1d8",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1453,
+    "atSeconds": 434.1,
+    "endSeconds": 436.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.03125,
+        "w": 0.78125,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 11
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "Hooray, you're up to date!"
+  },
+  "crawler": {
+    "nodeId": "s178",
+    "depth": 178,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s177",
+        "via": "Open Inbox",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s179",
+        "via": "Back to Inbox",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,146 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-logging-in-3",
+  "screen_id": "canva-webapp-versions-2026-11-13-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:54:46.210Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 71,
+  "name": "Sign in",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+  "text": "Canva\nWant to log in faster?\nAdd a passkey to log in instantly using your\nfingerprint, face or screen lock.\nContinue\nSkip for now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+        "Calls to action: “Continue”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 71 of 72 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “Search anything”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 37:41 in the recording",
+        "Frame 7545 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161925",
+      "role": "background",
+      "share": 0.884
+    },
+    {
+      "hex": "#272051",
+      "role": "surface",
+      "share": 0.089
+    },
+    {
+      "hex": "#45494f",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#8d54e9",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#4b387f",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 7545,
+    "atSeconds": 2261.4,
+    "endSeconds": 2263.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Want to log in faster?"
+  },
+  "crawler": {
+    "nodeId": "s642",
+    "depth": 646,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s641",
+        "via": "Open Sign in",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s643",
+        "via": "Wait 2.4s",
+        "name": "Search anything"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,159 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-scanning-a-book-cover-1",
+  "screen_id": "headway-ios-versions-2026-11-04-scanning-a-book-cover-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:02.332Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Scanning a book cover",
+  "flow_position": 16,
+  "name": "Home home",
+  "description": "Feed screen with a 4-item tab bar and a primary action labelled “Continue 1”. Dark theme, 15 text elements.",
+  "text": "9:41(\n•ll\nLibrary\nSummaries 1\nRepetition 1 Highlights O\nScan a cover to\nfind summaries\nContinue 1\nSee all\nStephen\nHawking\nA Brief\nHistory\nГime\nStephen Hawking, P...\nA Brief History of Time\norTima\nShorts\nLibrary\nHome\nPlan",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "plan",
+    "shorts",
+    "library",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Plan, Shorts, Library",
+        "Navigation title reads “Library”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar and a primary action labelled “Continue 1”. Dark theme, 15 text elements.",
+        "Calls to action: “Continue 1”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 26 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Camera permission”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 8:02 in the recording",
+        "Frame 1619 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#252326",
+      "role": "background",
+      "share": 0.755
+    },
+    {
+      "hex": "#444050",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#030204",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#635e6d",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#372259",
+      "role": "accent",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1619,
+    "atSeconds": 482.7,
+    "endSeconds": 486,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Home",
+      "Plan",
+      "Shorts",
+      "Library"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Continue 1"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Library",
+    "headline": "Brief"
+  },
+  "crawler": {
+    "nodeId": "s199",
+    "depth": 199,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s198",
+        "via": "Open Library",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s200",
+        "via": "Open \"Headway\" would like to access",
+        "name": "Camera permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

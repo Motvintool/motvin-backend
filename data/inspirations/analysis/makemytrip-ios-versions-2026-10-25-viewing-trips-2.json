@@ -1,0 +1,173 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-viewing-trips-2",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-viewing-trips-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:44.945Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Viewing trips",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code dialog over a dimmed screen with a 4-item tab bar and a primary action labelled “Send OTP”. Light theme, 12 text elements.",
+  "text": "9:41(\n+ Add Booking\nMy Trips\nNo bookings yet\nStart exploring for your next trip\nAdd Booking\nView and manage a booking by entering the\nbooking ID here. For verifying the details, an OTP\nwill be sent to the customer who has made the\nbooking.\nBooking ID O\nEnter a Booking ID\nSend OTP\nnew\nту\nCredit Card\nBe A Host\nHome\nMy Trips\nWhere2Go",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "home",
+    "my trips",
+    "credit card",
+    "be a host",
+    "otp",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, My Trips, Credit Card, Be A Host",
+        "Navigation title reads “Add Booking”",
+        "Dialog over a dimmed background, covering 56% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code dialog over a dimmed screen with a 4-item tab bar and a primary action labelled “Send OTP”. Light theme, 12 text elements.",
+        "Calls to action: “Send OTP”",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 33 in “Home”",
+        "Reached from “My Trips (empty)”",
+        "Leads to “My Trips (empty)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:18 in the recording",
+        "Frame 2466 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf9fb",
+      "role": "background",
+      "share": 0.48
+    },
+    {
+      "hex": "#9b9da0",
+      "role": "surface",
+      "share": 0.31
+    },
+    {
+      "hex": "#dddcdf",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#c8c5c7",
+      "role": "surface",
+      "share": 0.062
+    },
+    {
+      "hex": "#848384",
+      "role": "text",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 2466,
+    "atSeconds": 738.6,
+    "endSeconds": 740.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.5625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Home",
+      "My Trips",
+      "Credit Card",
+      "Be A Host"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Send OTP"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add Booking",
+    "headline": "Add Booking"
+  },
+  "crawler": {
+    "nodeId": "s324",
+    "depth": 323,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s323",
+        "via": "Tap “+ Add Booking”",
+        "name": "My Trips (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s325",
+        "via": "Dismiss",
+        "name": "My Trips (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

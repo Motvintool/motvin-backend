@@ -1,0 +1,160 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-4",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-logging-in-with-google-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:57.428Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 5,
+  "name": "Choose an account",
+  "description": "A third-party sign-in page, not the app's own design. Dark theme, 15 text elements.",
+  "text": "9:411\naccounts.google.com\nG\nSign in with Google\nChoose an account\nto continue to Tripadvisor\nsurendarv\nsurendarv638@gmail.com\nSurendar V\nsurendarv.uxui@gmail.com\nSurendar\nS\nmotvintool@gmail.com\ng Use another account\nBefore using this app, you can review Tripadvisor's\nPrivacy Policy and Terms of Service.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "external-auth",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Privacy Policy and Terms of Service”",
+        "Toast over a dimmed background, covering 11% of the height from 86% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 9 in “Logging in”",
+        "Reached from “Choose an account”",
+        "Leads to “Google sign-in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:50 in the recording",
+        "Frame 1769 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#110f12",
+      "role": "background",
+      "share": 0.928
+    },
+    {
+      "hex": "#2b2e32",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#4e4c4f",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#1b574a",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#636263",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1769,
+    "atSeconds": 530.4,
+    "endSeconds": 531,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.859375,
+        "w": 0.84375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Privacy Policy and Terms of Service",
+    "headline": "Choose an account"
+  },
+  "crawler": {
+    "nodeId": "s241",
+    "depth": 241,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s240",
+        "via": "Back to Choose an account",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s242",
+        "via": "Open Sign in to Tripadvisor",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

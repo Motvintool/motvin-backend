@@ -1,0 +1,166 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-sending-a-voice-message-2",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-sending-a-voice-message-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:59.254Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Sending a voice message",
+  "flow_position": 13,
+  "name": "Permission prompt",
+  "description": "Permission toast over a dimmed screen, on top of Problems with a primary action labelled “Allow”. Dark theme, 23 text elements.",
+  "text": "9:41€\n•dll\nO'\nAsk\n=\nImagine\nBuild\n• Analyze data, files, or text you share\n• Help plan, brainstorm, or organize ideas\n• Draft emails, reports, scripts, or creative\nwriting\n• Debug code or walk through technical\nproblems\nConvercation\nI'm\n\"Grok\" would like to access the\nMicrophone.\nan\nCU\nGrok uses your microphone to\ntranscibe your voice\nDon't Allow\nAllow\nAllow\nDictation in Grok\nAllow microphone access to use dictation\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Convercation”",
+        "Toast over a dimmed background, covering 5% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen, on top of Problems with a primary action labelled “Allow”. Dark theme, 23 text elements.",
+        "Calls to action: “Allow”, “Allow”",
+        "23 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 25 in “Documents & files detail”",
+        "Reached from “Problems”",
+        "Leads to “ISIS & fronaclivity”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:06 in the recording",
+        "Frame 823 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0a0c",
+      "role": "background",
+      "share": 0.769
+    },
+    {
+      "hex": "#292729",
+      "role": "surface",
+      "share": 0.141
+    },
+    {
+      "hex": "#49474a",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#898789",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#676568",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 823,
+    "atSeconds": 246.3,
+    "endSeconds": 247.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.359375,
+        "w": 0.65625,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Convercation",
+    "headline": "Microphone",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s091",
+    "depth": 94,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s090",
+        "via": "Open Convercation",
+        "name": "Problems"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s092",
+        "via": "Open ISIS & fronaclivity",
+        "name": "ISIS & fronaclivity"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

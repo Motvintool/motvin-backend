@@ -1,0 +1,167 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-setting-up-a-profile-9",
+  "screen_id": "drops-ios-versions-2026-11-04-setting-up-a-profile-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:40.002Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting up a profile",
+  "flow_position": 12,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 15 text elements.",
+  "text": "When will you practice?\nSet a time to learn Ainu daily\n11.00\n\"Drops\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\n12:00\n06:00\n18:00\n24:00\nContinue\nChange this anytime in the Profile settings",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Drops\" Would Like to Send You”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Notifications permission with a primary action labelled “Allow”. Dark theme, 15 text elements.",
+        "Calls to action: “Allow”, “Continue”",
+        "15 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 70 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “Select all that apply”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:30 in the recording",
+        "Frame 106 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#230d37",
+      "role": "background",
+      "share": 0.821
+    },
+    {
+      "hex": "#43324b",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#747a31",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#524b38",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#6a5e74",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 106,
+    "atSeconds": 30.6,
+    "endSeconds": 32.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.65625,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Drops\" Would Like to Send You",
+    "headline": "\"Drops\" Would Like to Send You"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Tap “\"Drops\" Would Like to Send You”",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Open Select all that apply",
+        "name": "Select all that apply"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

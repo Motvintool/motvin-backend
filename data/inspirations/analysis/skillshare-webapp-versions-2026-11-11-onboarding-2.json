@@ -1,0 +1,159 @@
+{
+  "screenId": "skillshare-webapp-versions-2026-11-11-onboarding-2",
+  "screen_id": "skillshare-webapp-versions-2026-11-11-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:14:32.448Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 5,
+  "name": "Loading state",
+  "description": "Loading state with 2 input fields and a primary action labelled “Sign in”. Light theme, 15 text elements.",
+  "text": "Skillshare\nWelcome\nLog in to Skillshare.\nEmail address*\nmotvintool@gmail.com\nPassword*\nV I'm not a robot\nreCAPTCHA\nForgot password?\nSign in\nDon't have an account? Sign up\nOR\nContinue with Google\nf Continue with Facebook\né Continue with Apple",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “I'm not a robot”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 2 input fields and a primary action labelled “Sign in”. Light theme, 15 text elements.",
+        "Calls to action: “Sign in”, “Continue with Google”",
+        "15 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 212 in “Subscribing”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign-in options”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 17.1s at 0:04 in the recording",
+        "Frame 105 of 1821 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f6f6",
+      "role": "background",
+      "share": 0.967
+    },
+    {
+      "hex": "#cad4d4",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#68d9a2",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#92d1c0",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#b1b4b5",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Skillshare.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1821,
+    "frame": 105,
+    "atSeconds": 4.2,
+    "endSeconds": 7.8,
+    "holdSeconds": 17.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in",
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "I'm not a robot",
+    "headline": "I'm not a robot"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Scroll",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Wait 17.1s",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

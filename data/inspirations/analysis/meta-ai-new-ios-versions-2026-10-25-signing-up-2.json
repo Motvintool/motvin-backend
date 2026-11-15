@@ -1,0 +1,149 @@
+{
+  "screenId": "meta-ai-new-ios-versions-2026-10-25-signing-up-2",
+  "screen_id": "meta-ai-new-ios-versions-2026-10-25-signing-up-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:11:15.473Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with a primary action labelled “Next”. Dark theme, 9 text elements.",
+  "text": "9:41C\n<\nWhat's your mobile number or\nemail address?\nEnter your mobile number or email address to\nlog in to a Meta account or create a new one.\nMobile number or email address\nBy using your mobile number, you may receive SMS\nnotifications from us. Learn more\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Next”. Dark theme, 9 text elements.",
+        "Calls to action: “Next”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 46 in “Entering phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Hide or share email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:12 in the recording",
+        "Frame 50 of 1568 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#221f23",
+      "role": "background",
+      "share": 0.873
+    },
+    {
+      "hex": "#3f3d41",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#14396a",
+      "role": "accent",
+      "share": 0.042
+    },
+    {
+      "hex": "#69676a",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#535154",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvns6ile-0xuatd.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1568,
+    "frame": 50,
+    "atSeconds": 12.6,
+    "endSeconds": 15.3,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Notifications from us. Learn more"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Open Hide or share email",
+        "name": "Hide or share email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

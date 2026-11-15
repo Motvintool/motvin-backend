@@ -1,0 +1,139 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-getting-help-1",
+  "screen_id": "remind-ios-versions-2026-11-07-getting-help-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:12.983Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Getting help",
+  "flow_position": 2,
+  "name": "Help",
+  "description": "Other screen. Light theme, 3 text elements.",
+  "text": "Help\nView FAQS\nContact Remind Support\nVersion: 17.0.1.6161226",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Help”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Light theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Help”",
+        "Reached from “Account settings”",
+        "Leads to “Help — scrolled”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 7:27 in the recording",
+        "Frame 1494 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.898
+    },
+    {
+      "hex": "#cccacc",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#e4e3e5",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#b4b3b6",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1494,
+    "atSeconds": 447.9,
+    "endSeconds": 450.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Help",
+    "headline": "Contact Remind Support"
+  },
+  "crawler": {
+    "nodeId": "s183",
+    "depth": 185,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s182",
+        "via": "Tap “Help”",
+        "name": "Account settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s184",
+        "via": "Scroll",
+        "name": "Help — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

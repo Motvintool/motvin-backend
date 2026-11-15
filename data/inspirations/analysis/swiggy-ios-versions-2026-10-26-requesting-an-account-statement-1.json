@@ -1,0 +1,143 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-26-requesting-an-account-statement-1",
+  "screen_id": "swiggy-ios-versions-2026-10-26-requesting-an-account-statement-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:49:55.616Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "food",
+  "flow": "settings",
+  "flow_name": "Requesting an account statement",
+  "flow_position": 2,
+  "name": "Account",
+  "description": "Settings screen. Light theme, 10 text elements.",
+  "text": "9:41 4\nAccount\nStatements\nInvoices for reimbursements\nor record-keeping\nSelect Duration\nSelect Category\nGet Report\nYou will receive your statement within next 3 hours at\nthunderbirds0202@gmail.com\nHow account statements works?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Settings”",
+        "Reached from “Create account”",
+        "Leads to “Account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:14 in the recording",
+        "Frame 453 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf8f9",
+      "role": "background",
+      "share": 0.765
+    },
+    {
+      "hex": "#e9dcd6",
+      "role": "surface",
+      "share": 0.188
+    },
+    {
+      "hex": "#c4c1c1",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#aaa5a3",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#e7b495",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "mvo4xws5-rihcb2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 453,
+    "atSeconds": 134.4,
+    "endSeconds": 136.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Statements"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Open Account",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Wait 1.8s",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

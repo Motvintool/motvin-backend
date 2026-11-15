@@ -1,0 +1,165 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-managing-a-video-4",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-managing-a-video-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:27.330Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Managing a video",
+  "flow_position": 106,
+  "name": "Send dialog",
+  "description": "Dialog over a dimmed screen, on top of Toast with a sidebar and a primary action labelled “Send”. Light theme, 8 text elements.",
+  "text": "& Chal\n& Utrery\n• Atoma\nReport content\nReason\nD Mywon\nSelect a reason\nNo chats yet\nWon\nTell us what is wrong\nOreeting Exchang\nAttachments (0/5)\nDrag and drop or click to select\nSend\nbird fhy vid",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Send”",
+        "Dialog over a dimmed background, covering 73% of the height from 8% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Toast with a sidebar and a primary action labelled “Send”. Light theme, 8 text elements.",
+        "Calls to action: “Send”",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 106 of 143 in “Opening a page”",
+        "Reached from “Toast”",
+        "Leads to “Send dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 9:35 in the recording",
+        "Frame 1923 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cac9ca",
+      "role": "background",
+      "share": 0.711
+    },
+    {
+      "hex": "#f6f5f3",
+      "role": "surface",
+      "share": 0.204
+    },
+    {
+      "hex": "#a9abad",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#696f70",
+      "role": "text",
+      "share": 0.019
+    },
+    {
+      "hex": "#8d918e",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 1923,
+    "atSeconds": 575.4,
+    "endSeconds": 577.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.078125,
+        "w": 0.65625,
+        "h": 0.734375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Mywon",
+      "No chats yet",
+      "Won"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Send",
+    "headline": "Attachments (0/5)"
+  },
+  "crawler": {
+    "nodeId": "s112",
+    "depth": 114,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s111",
+        "via": "Open Send",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s113",
+        "via": "Tap “Tell us what is wrong”",
+        "name": "Send dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

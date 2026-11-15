@@ -1,0 +1,161 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-managing-a-session-4",
+  "screen_id": "claude-ios-versions-2026-10-26-managing-a-session-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:19.699Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast",
+    "keyboard"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Managing a session",
+  "flow_position": 22,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen with the keyboard open. Dark theme, 35 text elements.",
+  "text": "9:41(\n•0l\n5 Motvin\n+\n•..\nHey\nRename\nHe\nEnter a new name\nGreeting\nCla\nCancel\nOK\nHey Claude.\nSonnet 5.5 Medium\n\"Greeting\"\nGood\nGot\ni\nW\nt\ne\nO\nh\nk\nf\nd\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n123\nA",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Toast over a dimmed background, covering 8% of the height from 89% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen with the keyboard open. Dark theme, 35 text elements.",
+        "35 text elements recognised",
+        "State: toast, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 22 of 50 in “Choosing a date”",
+        "Reached from “Hey Claude sheet”",
+        "Leads to “Hey! What can I help you with tonight?”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:08 in the recording",
+        "Frame 1031 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151316",
+      "role": "background",
+      "share": 0.718
+    },
+    {
+      "hex": "#323033",
+      "role": "surface",
+      "share": 0.214
+    },
+    {
+      "hex": "#575658",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#6e6c6e",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#6b3729",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 1031,
+    "atSeconds": 308.1,
+    "endSeconds": 309.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.890625,
+        "w": 0.8125,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Hey Claude"
+  },
+  "crawler": {
+    "nodeId": "s094",
+    "depth": 93,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s093",
+        "via": "Type “5 Motvin”",
+        "name": "Hey Claude sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s095",
+        "via": "Dismiss",
+        "name": "Hey! What can I help you with tonight?"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

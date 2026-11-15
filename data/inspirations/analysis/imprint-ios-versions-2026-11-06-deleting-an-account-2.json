@@ -1,0 +1,168 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-deleting-an-account-2",
+  "screen_id": "imprint-ios-versions-2026-11-06-deleting-an-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:15.012Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Deleting an account",
+  "flow_position": 26,
+  "name": "Settings",
+  "description": "Settings toast over a dimmed screen, on top of Settings with a 3-item tab bar and 1 input field. Dark theme, 21 text elements.",
+  "text": "9:41(\nSettings\nAre you sure?\nWhen you delete your account, your\nE\nlibrary, progress, saved cards, and\nother data will be removed from our\nT\nservers. This action is irreversible and\ncannot be undone.\nP\nDeleting your account will not cancel\nT\n• /\nyour subscription if you have one. To\ncancel a subscription, click 'Manage\nSubscription' for instructions.\nEnter your password and click\n'Delete' to delete your account.\nPassword\nCancel\nDelete\nExplore\nMe\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "subscription",
+    "home",
+    "explore",
+    "me",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "text-field",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Explore, Me",
+        "Navigation title reads “Settings”",
+        "Toast over a dimmed background, covering 3% of the height from 77% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings toast over a dimmed screen, on top of Settings with a 3-item tab bar and 1 input field. Dark theme, 21 text elements.",
+        "21 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 41 in “Home”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:13 in the recording",
+        "Frame 1246 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0e09",
+      "role": "background",
+      "share": 0.794
+    },
+    {
+      "hex": "#292a28",
+      "role": "surface",
+      "share": 0.195
+    },
+    {
+      "hex": "#515351",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#66312f",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#656865",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 1246,
+    "atSeconds": 373.2,
+    "endSeconds": 374.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.765625,
+        "w": 0.4375,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [
+      "Home",
+      "Explore",
+      "Me"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Deleting your account will not cancel"
+  },
+  "crawler": {
+    "nodeId": "s161",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s160",
+        "via": "Tap “Settings”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s162",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

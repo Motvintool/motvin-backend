@@ -1,0 +1,149 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-going-through-the-daily-artwork-tutorial-5",
+  "screen_id": "dailyart-ios-versions-2026-11-06-going-through-the-daily-artwork-tutorial-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:31.245Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Going through the daily artwork tutorial",
+  "flow_position": 1,
+  "name": "Earch home",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41(\n.ll\nSwipe right for the\npast artworks\n1398\nOut a Candle\nX\nski\n1893\nQ\nSettings\nearch\nFavourites",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "earch",
+    "favourites",
+    "settings",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: earch, Favourites, Settings",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Earch”",
+        "Reached from “Dialog”",
+        "Leads to “Feature tip”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:18 in the recording",
+        "Frame 67 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1516",
+      "role": "background",
+      "share": 0.63
+    },
+    {
+      "hex": "#49352f",
+      "role": "surface",
+      "share": 0.166
+    },
+    {
+      "hex": "#9f493b",
+      "role": "accent",
+      "share": 0.096
+    },
+    {
+      "hex": "#625551",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#807570",
+      "role": "text",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 67,
+    "atSeconds": 18.9,
+    "endSeconds": 20.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "earch",
+      "Favourites",
+      "Settings"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Swipe right for the"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Switch to earch",
+        "name": "Dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Back to Feature tip",
+        "name": "Feature tip"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,164 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-viewing-past-events-1",
+  "screen_id": "luma-ios-versions-2026-10-19-viewing-past-events-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.833Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "lifestyle",
+  "flow": "discovery",
+  "flow_name": "Viewing past events",
+  "flow_position": 32,
+  "name": "Past events",
+  "description": "Empty state toast over a dimmed screen, on top of Loading state with a 3-item tab bar. Dark theme, 6 text elements, an empty state.",
+  "text": "9:41\nodll\n<\nUpcoming\nPast\nNo Past Events\nYou have not hosted or attended\nany events.\nHome\nDiscover\nChat",
+  "purpose": "To show the user their past events, indicating none have been hosted or attended.",
+  "primary_action": null,
+  "tags": [
+    "home",
+    "discover",
+    "chat",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "toast",
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Discover, Chat",
+        "Navigation title reads “Upcoming”",
+        "Toast over a dimmed background, covering 6% of the height from 3% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state toast over a dimmed screen, on top of Loading state with a 3-item tab bar. Dark theme, 6 text elements, an empty state.",
+        "6 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 69 in “Home”",
+        "Reached from “Upcoming (empty) — loading”",
+        "Leads to “View on Map (empty)”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:42 in the recording",
+        "Frame 1145 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020103",
+      "role": "background",
+      "share": 0.904
+    },
+    {
+      "hex": "#201e21",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#3f3d40",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#5c5b5d",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#8b898b",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 1145,
+    "atSeconds": 342.3,
+    "endSeconds": 343.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.03125,
+        "w": 0.59375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Home",
+      "Discover",
+      "Chat"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Upcoming",
+    "headline": "No Past Events"
+  },
+  "crawler": {
+    "nodeId": "s125",
+    "depth": 124,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s124",
+        "via": "Wait 1.5s",
+        "name": "Upcoming (empty) — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s126",
+        "via": "Open View on Map",
+        "name": "View on Map (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

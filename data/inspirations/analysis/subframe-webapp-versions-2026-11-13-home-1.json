@@ -1,0 +1,150 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-home-1",
+  "screen_id": "subframe-webapp-versions-2026-11-13-home-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:55.230Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Home",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a sidebar and a search bar. Dark theme, 22 text elements.",
+  "text": "Subframe\nProjects 1\nmotvintool@gmail.com's..\nV\n88 New group\nQ Search projects...\nRecent\nFree\nProjects\nFree project limit reached. To keep building, delete your project or upgrade.\nUpgrade to Pro\n→\nTeam\nBilling\nAgents\nOpen local codebase...\nStart from scratch...\nAuth\ndemo\n•..\nNew project\nCreate or drag a project here...\nRename\nDelete...\n1\nMy work\nEdited 2 minutes ago\ncode\nEdited 2 minutes ago\nGet the desktop app\nmotvintool@gmail.c..v\nG",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search projects”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a sidebar and a search bar. Dark theme, 22 text elements.",
+        "22 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 1 in “Home”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 11.7s at 9:20 in the recording",
+        "Frame 1905 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1a",
+      "role": "background",
+      "share": 0.966
+    },
+    {
+      "hex": "#3a3b3a",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#595959",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#757575",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 1905,
+    "atSeconds": 560.1,
+    "endSeconds": 571.8,
+    "holdSeconds": 11.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Motvintool@gmail.com's",
+      "Free",
+      "Projects",
+      "Team",
+      "Billing",
+      "Agents",
+      "Auth"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search projects",
+    "headline": "My work"
+  },
+  "crawler": {
+    "nodeId": "s132",
+    "depth": 134,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Open Search projects",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s133",
+        "via": "Tap “Billing”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

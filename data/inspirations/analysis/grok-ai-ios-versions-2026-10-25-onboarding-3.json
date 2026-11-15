@@ -1,0 +1,163 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-onboarding-3",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:51.566Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "productivity",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+  "text": "9:41€\nC\n\"Grok\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications may include alerts”",
+        "Dialog over a dimmed background, covering 27% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 7 text elements.",
+        "Calls to action: “Allow”",
+        "7 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:03 in the recording",
+        "Frame 14 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060608",
+      "role": "background",
+      "share": 0.722
+    },
+    {
+      "hex": "#25262a",
+      "role": "surface",
+      "share": 0.223
+    },
+    {
+      "hex": "#414245",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#5e5e61",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#757679",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 14,
+    "atSeconds": 3.3,
+    "endSeconds": 4.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.40625,
+        "w": 1,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications may include alerts",
+    "headline": "Notifications may include alerts"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Wait 1.5s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Open Understand the Universe",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

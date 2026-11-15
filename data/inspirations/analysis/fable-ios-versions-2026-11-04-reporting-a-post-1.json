@@ -1,0 +1,163 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-reporting-a-post-1",
+  "screen_id": "fable-ios-versions-2026-11-04-reporting-a-post-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:58.141Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Reporting a post",
+  "flow_position": 7,
+  "name": "Posts",
+  "description": "Detail dialog over a dimmed screen, on top of When the Night — scrolled with a paged carousel. Dark theme, 25 text elements.",
+  "text": "9:41 (\n•0l\nWant to Read\n••\nPosts\nAbout Reviews\nClubs Editions\nMost popular -\nKendra 1w\nPosted about a book\nWhen life hands you a misprint...\nSCION\nSTEPHANIE\nSIMMOT\nSIMMONS\nGARBER\nENDYMION\nJAMES ISLINGTON\nALCHEMY OF SECRETSO\nMION\nWHEN THE NIGHT COMES KNOCKING\nKATHERINE\nDANIEL\nReport this post\nFlag spoiler\nO\nMute Kendra\nDon't show me posts about this book",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "detail",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Posts”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 17% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail dialog over a dimmed screen, on top of When the Night — scrolled with a paged carousel. Dark theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 52 in “SaueurnIo vurnur detail”",
+        "Reached from “When the Night — scrolled”",
+        "Leads to “Want to Read”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:26 in the recording",
+        "Frame 890 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b090c",
+      "role": "background",
+      "share": 0.434
+    },
+    {
+      "hex": "#201d20",
+      "role": "surface",
+      "share": 0.316
+    },
+    {
+      "hex": "#443f42",
+      "role": "surface",
+      "share": 0.122
+    },
+    {
+      "hex": "#716359",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#978978",
+      "role": "text",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 890,
+    "atSeconds": 266.1,
+    "endSeconds": 267.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.09375,
+        "w": 0.71875,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Posts",
+    "headline": "ALCHEMY OF SECRETSO"
+  },
+  "crawler": {
+    "nodeId": "s102",
+    "depth": 101,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s101",
+        "via": "Tap “Posts”",
+        "name": "When the Night — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s103",
+        "via": "Dismiss",
+        "name": "Want to Read"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-onboarding-2",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:13.194Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "travel",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Notifications permission",
+  "description": "Permission screen with a primary action labelled “Send You Notifications”. Light theme, 7 text elements.",
+  "text": "9:41€\n\"MakeMyTrip\" Would Like to\nSend You Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Send You Notifications”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Send You Notifications”. Light theme, 7 text elements.",
+        "Calls to action: “Send You Notifications”, “Allow”",
+        "7 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Sign in”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:01 in the recording",
+        "Frame 8 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#868486",
+      "role": "background",
+      "share": 0.792
+    },
+    {
+      "hex": "#444142",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#746e6f",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 8,
+    "atSeconds": 1.5,
+    "endSeconds": 2.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send You Notifications",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Send You Notifications",
+    "headline": "\"MakeMyTrip\" Would Like to"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Send You Notifications",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Wait 1.2s",
+        "name": "Sign in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

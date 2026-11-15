@@ -1,0 +1,166 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-connecting-an-account-4",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-connecting-an-account-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:10.536Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Connecting an account",
+  "flow_position": 31,
+  "name": "Phone number entry",
+  "description": "Login dialog over a dimmed screen, on top of Detail with 1 input field and a primary action labelled “Continue”. Light theme, 33 text elements.",
+  "text": "888 PLAID\nX\nF\necting...\n&8\nF\nSecurely\ns about\nGrok uses Plaid to connect\nyour spel\nyour account\nAbout thi\n+1\nPhone number\n• SE\nA:\nUse your phone number to log in or sign up\nin\nwith Plaid to go faster next time.\nLearn more\nÔ Y\ncr\n© RE\nA\nTerms apply. By continuing, you agree to Plaid's\nus\nPrivacy Policy.\nContinue\nThird-par\n7 when\ngranting a\nconnectin\nContinue without phone number",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your account”",
+        "Dialog over a dimmed background, covering 69% of the height from 17% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Detail with 1 input field and a primary action labelled “Continue”. Light theme, 33 text elements.",
+        "Calls to action: “Continue”",
+        "33 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 31 of 143 in “Opening a page”",
+        "Reached from “Detail”",
+        "Leads to “Detail”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 4:48 in the recording",
+        "Frame 970 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#949293",
+      "role": "background",
+      "share": 0.746
+    },
+    {
+      "hex": "#f6f7f8",
+      "role": "text",
+      "share": 0.15
+    },
+    {
+      "hex": "#bbbcbc",
+      "role": "surface",
+      "share": 0.062
+    },
+    {
+      "hex": "#d9d9d8",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#7d7d7c",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 970,
+    "atSeconds": 288.9,
+    "endSeconds": 291.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.171875,
+        "w": 0.25,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your account",
+    "headline": "Your account"
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Open Your account",
+        "name": "Detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s038",
+        "via": "Tap “Learn more”",
+        "name": "Detail"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

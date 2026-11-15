@@ -1,0 +1,156 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-logging-in-again-7",
+  "screen_id": "uptime-ios-versions-2026-11-06-logging-in-again-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:27.974Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Logging in again",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state with a 4-item tab bar. Dark theme, 2 text elements.",
+  "text": "9:41(\n71h left\n*uptime\nQ\nYou\nDiscover\nBrowse\nPremium",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "discover",
+    "browse",
+    "you",
+    "premium",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Discover, Browse, You, Premium",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 4-item tab bar. Dark theme, 2 text elements.",
+        "2 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Bottom sheet”",
+        "Leads to “Discover home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:24 in the recording",
+        "Frame 1881 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181f3a",
+      "role": "background",
+      "share": 0.731
+    },
+    {
+      "hex": "#080a1e",
+      "role": "accent",
+      "share": 0.23
+    },
+    {
+      "hex": "#3d4359",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#858997",
+      "role": "text",
+      "share": 0.007
+    },
+    {
+      "hex": "#606578",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1881,
+    "atSeconds": 564,
+    "endSeconds": 564.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [
+      "Discover",
+      "Browse",
+      "You",
+      "Premium"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s253",
+    "depth": 252,
+    "path": [],
+    "visits": 2,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s252",
+        "via": "Open Loading state",
+        "name": "Bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s254",
+        "via": "Wait 0.9s",
+        "name": "Discover home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "brilliant-ios-versions-2026-11-04-setting-up-a-learning-plan-12",
+  "screen_id": "brilliant-ios-versions-2026-11-04-setting-up-a-learning-plan-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:20.172Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up a learning plan",
+  "flow_position": 13,
+  "name": "ABC sheet",
+  "description": "Bottom sheet, on top of Your age form with the keyboard open and a primary action labelled “Continue”. Dark theme, 20 text elements.",
+  "text": "9:41 €\nHow old are you?\n25|\nContinue\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nTUV\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ABC”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet, covering 42% of the height from 42% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Your age form with the keyboard open and a primary action labelled “Continue”. Dark theme, 20 text elements.",
+        "Calls to action: “Continue”",
+        "20 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 26 in “Onboarding”",
+        "Reached from “Your age form”",
+        "Leads to “L've seen, but (error)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:23 in the recording",
+        "Frame 82 of 2138 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181519",
+      "role": "background",
+      "share": 0.673
+    },
+    {
+      "hex": "#393639",
+      "role": "surface",
+      "share": 0.225
+    },
+    {
+      "hex": "#cececf",
+      "role": "text",
+      "share": 0.036
+    },
+    {
+      "hex": "#575457",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#9c9c9b",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2138,
+    "frame": 82,
+    "atSeconds": 23.7,
+    "endSeconds": 25.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.421875,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "ABC",
+    "headline": "How old are you?"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “GHI”",
+        "name": "Your age form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Open L've seen, but",
+        "name": "L've seen, but (error)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

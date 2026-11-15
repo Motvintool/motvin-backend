@@ -1,0 +1,156 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-setting-up-a-profile-2",
+  "screen_id": "claude-ios-versions-2026-10-26-setting-up-a-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:13.629Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "ai",
+  "flow": "creation",
+  "flow_name": "Setting up a profile",
+  "flow_position": 17,
+  "name": "Profile form",
+  "description": "Form screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 35 text elements.",
+  "text": "9:41 €\n•\n•\n•\nWhat's your name?\nClaude will use this to refer to you.\nEnter your full name\nContinue\nEmail verified as motvintool@gmail.com\nUse a different email\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your full name”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 35 text elements.",
+        "Calls to action: “Continue”",
+        "35 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 19 in “Logging in”",
+        "Reached from “Loading state”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:33 in the recording",
+        "Frame 319 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c191b",
+      "role": "background",
+      "share": 0.71
+    },
+    {
+      "hex": "#393434",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#5f5b5c",
+      "role": "surface",
+      "share": 0.077
+    },
+    {
+      "hex": "#949292",
+      "role": "text",
+      "share": 0.04
+    },
+    {
+      "hex": "#7b7979",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 319,
+    "atSeconds": 93.9,
+    "endSeconds": 96,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter your full name",
+    "headline": "What's your name?"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 18,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Wait 0.9s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Tap “What's your name?”",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

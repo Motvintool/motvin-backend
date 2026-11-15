@@ -1,0 +1,160 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-setting-swipe-actions-2",
+  "screen_id": "asana-ios-versions-2026-11-04-setting-swipe-actions-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:07.380Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "saas",
+  "flow": "onboarding",
+  "flow_name": "Setting swipe actions",
+  "flow_position": 4,
+  "name": "Feature tip",
+  "description": "Coach mark toast over a dimmed screen, on top of Inbox. Dark theme, 9 text elements.",
+  "text": "9:41 €\nInbox\nGestures\nSwipe right\nUnfollow >\n→\n- Swipe left\nArchive >\nManage notifications\nExpand threads\nArchive all",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "archive all",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast",
+    "coach-mark"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Inbox”",
+        "Toast over a dimmed background, covering 6% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark toast over a dimmed screen, on top of Inbox. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Swipe right action”",
+        "Reached from “Inbox”",
+        "Leads to “Swipe left action”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:22 in the recording",
+        "Frame 1480 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151518",
+      "role": "background",
+      "share": 0.896
+    },
+    {
+      "hex": "#3a3a3d",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#807679",
+      "role": "text",
+      "share": 0.029
+    },
+    {
+      "hex": "#695254",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#7d2722",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1480,
+    "atSeconds": 442.8,
+    "endSeconds": 444.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.34375,
+        "w": 0.75,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Inbox",
+    "headline": "Swipe left",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s182",
+    "depth": 182,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s181",
+        "via": "Tap “Inbox”",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s183",
+        "via": "Back to Swipe left action",
+        "name": "Swipe left action"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

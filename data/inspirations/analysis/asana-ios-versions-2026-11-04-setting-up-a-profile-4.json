@@ -1,0 +1,163 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-setting-up-a-profile-4",
+  "screen_id": "asana-ios-versions-2026-11-04-setting-up-a-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:56.748Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "saas",
+  "flow": "onboarding",
+  "flow_name": "Setting up a profile",
+  "flow_position": 41,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 16 text elements.",
+  "text": "9:41C\nWhat's your primary role?\nUsed to personalize your Asana experience. You may receive\nproduct suggestions.\nChoose one or more\nTeam member / individual contributor\nMar\n\"Asana\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nFreelancer\nStudent\nContinue\no asana\nPrefer not to answer",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "o asana",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Asana\" Would Like to Send You”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 16 text elements.",
+        "Calls to action: “Allow”, “Continue”",
+        "16 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 41 of 47 in “External sign-in”",
+        "Reached from “Notifications permission — loading”",
+        "Leads to “Manager”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:48 in the recording",
+        "Frame 365 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161619",
+      "role": "background",
+      "share": 0.908
+    },
+    {
+      "hex": "#333334",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#545456",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#6f6f70",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 365,
+    "atSeconds": 108.9,
+    "endSeconds": 109.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.6875,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Asana\" Would Like to Send You",
+    "headline": "\"Asana\" Would Like to Send You",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s045",
+    "depth": 44,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s044",
+        "via": "Wait 0.9s",
+        "name": "Notifications permission — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s046",
+        "via": "Open Other",
+        "name": "Manager"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

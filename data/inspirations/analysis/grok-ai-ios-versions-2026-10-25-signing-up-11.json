@@ -1,0 +1,168 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-signing-up-11",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-signing-up-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:52.782Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 12,
+  "name": "OTP verification",
+  "description": "Verification code dialog over a dimmed screen, on top of OTP verification with the keyboard open and a primary action labelled “Confirm email”. Dark theme, 29 text elements.",
+  "text": "9:41 €\naccounts.x.ai\nVerify your email\nWe've emailed a one time security code to\nmotvintool@gmail.com. It should arrive in the next\nfew minutes. If you don't see it in your inbox, please\ncheck your spam/junk folder. Please enter it below:\n-\n3\nDidn't receive a code? Resend (17)\nConfirm email\nGo back\nCoOKTe roncy. rour privacy cnorces\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “We've emailed a one time security code”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 30% of the height from 22% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code dialog over a dimmed screen, on top of OTP verification with the keyboard open and a primary action labelled “Confirm email”. Dark theme, 29 text elements.",
+        "Calls to action: “Confirm email”",
+        "29 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 25 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 0:42 in the recording",
+        "Frame 154 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141315",
+      "role": "background",
+      "share": 0.721
+    },
+    {
+      "hex": "#3a393b",
+      "role": "surface",
+      "share": 0.201
+    },
+    {
+      "hex": "#5e5c5f",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.023
+    },
+    {
+      "hex": "#a6a4a6",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 154,
+    "atSeconds": 42.9,
+    "endSeconds": 46.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.21875,
+        "w": 0.875,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 29,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm email"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "We've emailed a one time security code",
+    "headline": "Didn't receive a code? Resend (17)"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Open We've emailed a one time security code",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Tap “Verify your email”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

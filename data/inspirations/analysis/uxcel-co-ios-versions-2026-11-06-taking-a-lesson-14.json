@@ -1,0 +1,171 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-taking-a-lesson-14",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-taking-a-lesson-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:29.930Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Taking a lesson",
+  "flow_position": 23,
+  "name": "Checkout",
+  "description": "Checkout dialog over a dimmed screen, on top of Checkout with a paged carousel and a primary action labelled “Log In”. Light theme, 12 text elements.",
+  "text": "9:41 €\n•ll\nX\n•••\nWhich login form is more user-friendly for\nnew customers?\nLog In to checkout\nLog In\nLog In to checkout\nGuest checkout\nContinue as Guest\nLog In\nCorrect!\nContinue\nView theory",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "login",
+    "view theory",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log In to checkout”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 30% of the height from 23% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout dialog over a dimmed screen, on top of Checkout with a paged carousel and a primary action labelled “Log In”. Light theme, 12 text elements.",
+        "Calls to action: “Log In”, “Log In to checkout”, “Continue as Guest”, “Log In”",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 88 in “UX Design Foundations detail”",
+        "Reached from “Checkout”",
+        "Leads to “Category page”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:54 in the recording",
+        "Frame 584 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#273530",
+      "role": "background",
+      "share": 0.395
+    },
+    {
+      "hex": "#929397",
+      "role": "surface",
+      "share": 0.157
+    },
+    {
+      "hex": "#f9fbf9",
+      "role": "text",
+      "share": 0.125
+    },
+    {
+      "hex": "#306080",
+      "role": "accent",
+      "share": 0.052
+    },
+    {
+      "hex": "#5a585f",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 584,
+    "atSeconds": 174.6,
+    "endSeconds": 175.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.234375,
+        "w": 0.9375,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log In",
+      "Log In to checkout",
+      "Continue as Guest",
+      "Log In"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log In to checkout",
+    "headline": "New customers?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s071",
+    "depth": 70,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s070",
+        "via": "Tap “new customers?”",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s072",
+        "via": "Back to Category page",
+        "name": "Category page"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

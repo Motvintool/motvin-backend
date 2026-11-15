@@ -1,0 +1,156 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-logging-in-3",
+  "screen_id": "nibble-ios-versions-2026-11-07-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:12.333Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 7,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Continue”. Light theme, 23 text elements.",
+  "text": "9:41 €\nContinue with password\nEnter the code we've sent to\nmotvintool@gmail.com\nContinue\nCan't find it? Check your Spam folder.\nResend the code in 0:52\n1\n2\n3\nABC\nDEF\n4\n5\n6\nJKL\nGHI\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with password”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Continue”. Light theme, 23 text elements.",
+        "Calls to action: “Continue”",
+        "23 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 17 in “Replace scrolling”",
+        "Reached from “Sign in”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 10:28 in the recording",
+        "Frame 2123 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f6f9",
+      "role": "background",
+      "share": 0.76
+    },
+    {
+      "hex": "#d4d5db",
+      "role": "surface",
+      "share": 0.211
+    },
+    {
+      "hex": "#b1afb5",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#96959b",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#5a595b",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 2123,
+    "atSeconds": 628.8,
+    "endSeconds": 637.2,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with password",
+    "headline": "Can't find it? Check your Spam folder"
+  },
+  "crawler": {
+    "nodeId": "s294",
+    "depth": 298,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s293",
+        "via": "Open Continue with password",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s295",
+        "via": "Tap “Continue with password”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

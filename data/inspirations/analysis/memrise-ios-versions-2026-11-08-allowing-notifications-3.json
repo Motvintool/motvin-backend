@@ -1,0 +1,152 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-allowing-notifications-3",
+  "screen_id": "memrise-ios-versions-2026-11-08-allowing-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:21.918Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Allowing notifications",
+  "flow_position": 3,
+  "name": "Notifications permission",
+  "description": "Permission screen with 1 input field and a primary action labelled “Allow”. Dark theme, 20 text elements.",
+  "text": "9:41C\n•0l\nSettings\nSave\nUsername\nmotvintool\nEmail\nmotvintool@gmail.com\nChange Password\nMembership\n\"Memrise\" Would Like to Send\nYou Notifications\n>\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nDARK MODE\nUse device settings\nAUDIO PREFERENCES\nSound effects\n?\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "help",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with 1 input field and a primary action labelled “Allow”. Dark theme, 20 text elements.",
+        "Calls to action: “Allow”",
+        "20 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Notification settings”",
+        "Reached from “Notification settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 9:58 in the recording",
+        "Frame 1996 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171b23",
+      "role": "background",
+      "share": 0.913
+    },
+    {
+      "hex": "#363a40",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#54565c",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#6d7076",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1996,
+    "atSeconds": 598.5,
+    "endSeconds": 599.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "\"Memrise\" Would Like to Send",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s343",
+    "depth": 342,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s342",
+        "via": "Wait 1.5s",
+        "name": "Notification settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s344",
+        "via": "Wait 1.2s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

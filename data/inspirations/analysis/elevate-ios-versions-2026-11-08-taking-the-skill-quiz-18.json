@@ -1,0 +1,156 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-taking-the-skill-quiz-18",
+  "screen_id": "elevate-ios-versions-2026-11-08-taking-the-skill-quiz-18",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:30:53.089Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Taking the skill quiz",
+  "flow_position": 33,
+  "name": "Above Average",
+  "description": "Detail bottom sheet, on top of Below Average. Dark theme, 6 text elements.",
+  "text": "Rate your ability to recall\ndetails of conversations.\nExcellent\nAbove Average\nAverage\nBelow Average",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Above Average”",
+        "Bottom sheet, covering 50% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail bottom sheet, on top of Below Average. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 33 of 147 in “Onboarding”",
+        "Reached from “Below Average”",
+        "Leads to “Preparing your results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:16 in the recording",
+        "Frame 257 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#323660",
+      "role": "background",
+      "share": 0.392
+    },
+    {
+      "hex": "#151343",
+      "role": "surface",
+      "share": 0.386
+    },
+    {
+      "hex": "#1b7f88",
+      "role": "surface",
+      "share": 0.135
+    },
+    {
+      "hex": "#0451c7",
+      "role": "accent",
+      "share": 0.041
+    },
+    {
+      "hex": "#4e9ba3",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 257,
+    "atSeconds": 76.8,
+    "endSeconds": 77.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.4375,
+        "w": 0.84375,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Above Average",
+    "headline": "Rate your ability to recall"
+  },
+  "crawler": {
+    "nodeId": "s036",
+    "depth": 35,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s035",
+        "via": "Dismiss",
+        "name": "Below Average"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s037",
+        "via": "Open Other",
+        "name": "Preparing your results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

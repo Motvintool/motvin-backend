@@ -1,0 +1,162 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-logging-in-with-email-5",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-logging-in-with-email-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:25:00.048Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 18,
+  "name": "Sign in with email",
+  "description": "Login toast over a dimmed screen, on top of Sign in with email — scrolled — scrolled with a primary action labelled “Log In”. Dark theme, 9 text elements.",
+  "text": "9:41(\nooll\n• conunue witn Googre\nf\nContinue with Facebook\nmotvintool@gmail.com\nLog In\nForgot Password? Recover it\nEmail and password doesn't match.\nPlease try again. Contact Support if the problem\nstill persists.\nNew to Mindvalley? Create a FREE account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Forgot Password? Recover it”",
+        "Toast over a dimmed background, covering 13% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Sign in with email — scrolled — scrolled with a primary action labelled “Log In”. Dark theme, 9 text elements.",
+        "Calls to action: “Log In”",
+        "9 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 23 in “Logging in with email”",
+        "Reached from “Sign in with email — scrolled — scrolled”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 11:24 in the recording",
+        "Frame 2281 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11141b",
+      "role": "background",
+      "share": 0.825
+    },
+    {
+      "hex": "#0f1e6b",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#4f5357",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.033
+    },
+    {
+      "hex": "#323037",
+      "role": "surface",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 2281,
+    "atSeconds": 684,
+    "endSeconds": 684.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.4375,
+        "w": 0.8125,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log In"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Forgot Password? Recover it",
+    "headline": "Forgot Password? Recover it"
+  },
+  "crawler": {
+    "nodeId": "s308",
+    "depth": 307,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s307",
+        "via": "Tap “Forgot Password? Recover it”",
+        "name": "Sign in with email — scrolled — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s309",
+        "via": "Tap “Forgot Password? Recover it”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

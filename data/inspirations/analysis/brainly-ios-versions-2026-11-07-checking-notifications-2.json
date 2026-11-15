@@ -1,0 +1,145 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-checking-notifications-2",
+  "screen_id": "brainly-ios-versions-2026-11-07-checking-notifications-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:38.691Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Checking notifications",
+  "flow_position": 2,
+  "name": "Notifications",
+  "description": "Notifications screen. Dark theme, 6 text elements.",
+  "text": "9:41 C\n•0l\n<\nNotifications\nMessages\nTodays notifications\nYou gained a new rank: Helping Hand\n6 minutes ago",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "notification",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Checking notifications”",
+        "Reached from “Home home”",
+        "Leads to “Messages (empty)”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:02 in the recording",
+        "Frame 1413 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282d36",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#444a53",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5f646c",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#4d799c",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#9fabb8",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 1413,
+    "atSeconds": 422.4,
+    "endSeconds": 423,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "Messages"
+  },
+  "crawler": {
+    "nodeId": "s207",
+    "depth": 208,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s206",
+        "via": "Open Notifications",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s208",
+        "via": "Wait 1.5s",
+        "name": "Messages (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

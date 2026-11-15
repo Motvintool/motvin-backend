@@ -1,0 +1,166 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-signing-in-with-google-2",
+  "screen_id": "calm-webapp-versions-2026-11-13-signing-in-with-google-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:21.075Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "toast"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 7,
+  "name": "Create account",
+  "description": "Sign up toast over a dimmed screen, on top of Create account with a primary action labelled “Sign up or Log in”. Dark theme, 9 text elements.",
+  "text": "Calm\nTry Calm for Free\nLog In\nHome\n(221)\n6d\nMeditate\nCreate an account to save your progress and\nSleep\nsee your stats\nMusic\nSign up or Log in\nFor Work\nWisdom\nCalm Kids\nMovement\nProfile\nSign up today\nGet notified of new Calm content, special offers, helpful tips, and more.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "signup",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "banner",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Try Calm for Free”",
+        "Toast over a dimmed background, covering 11% of the height from 0% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up toast over a dimmed screen, on top of Create account with a primary action labelled “Sign up or Log in”. Dark theme, 9 text elements.",
+        "Calls to action: “Sign up or Log in”, “Sign up today”",
+        "9 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 15 in “Verifying OTP”",
+        "Reached from “Create account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 5:39 in the recording",
+        "Frame 1144 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2d4b79",
+      "role": "background",
+      "share": 0.765
+    },
+    {
+      "hex": "#e3edf6",
+      "role": "text",
+      "share": 0.097
+    },
+    {
+      "hex": "#203359",
+      "role": "accent",
+      "share": 0.073
+    },
+    {
+      "hex": "#c2cde1",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#5f7c9a",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 1144,
+    "atSeconds": 339.6,
+    "endSeconds": 343.5,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up or Log in",
+      "Sign up today"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Try Calm for Free",
+    "headline": "See your stats"
+  },
+  "crawler": {
+    "nodeId": "s111",
+    "depth": 110,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s110",
+        "via": "Tap “Try Calm for Free”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s112",
+        "via": "Open Continue with Facebook",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-onboarding-4",
+  "screen_id": "canva-webapp-versions-2026-11-13-onboarding-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:52:59.335Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "Create account",
+  "description": "Sign up screen with 1 input field and a primary action labelled “Continue”. Light theme, 8 text elements.",
+  "text": "Wh\nay?\n‹ Create your account\nYou're creating a Canva account with\nmotvintool@gmail.com\nFull name\nMotvintool\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 1 input field and a primary action labelled “Continue”. Light theme, 8 text elements.",
+        "Calls to action: “Continue”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 11 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:16 in the recording",
+        "Frame 60 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#6645bb",
+      "role": "background",
+      "share": 0.237
+    },
+    {
+      "hex": "#97a8b9",
+      "role": "surface",
+      "share": 0.187
+    },
+    {
+      "hex": "#fbfcfd",
+      "role": "text",
+      "share": 0.137
+    },
+    {
+      "hex": "#2a719c",
+      "role": "accent",
+      "share": 0.101
+    },
+    {
+      "hex": "#a4e6f8",
+      "role": "surface",
+      "share": 0.044
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 60,
+    "atSeconds": 16.2,
+    "endSeconds": 18.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your account",
+    "headline": "Create your account"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Back to Create account",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

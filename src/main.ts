@@ -6,6 +6,7 @@ import {
 import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import compression from '@fastify/compress';
+import { registerUploadBodyParser } from './modules/inspirations/upload-body';
 
 async function bootstrap() {
   // Create NestJS app with Fastify adapter
@@ -19,13 +20,21 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
 
-  // Enable CORS
+  // Enable CORS. The write methods and the Authorization header are allowed
+  // because the admin UI is served from a different origin than this API;
+  // access itself is decided by AdminGuard, not by CORS.
   app.enableCors({
     origin: configService.get('CORS_ORIGIN') || '*',
-    methods: ['GET', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Accept'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Accept', 'Authorization'],
     maxAge: 86400,
   });
+
+  // Screenshot uploads arrive as raw bodies on the admin API, so Fastify is
+  // told to hand image bytes through untouched instead of trying to parse
+  // them. The cap is enforced again in the service, which also checks that the
+  // bytes really are an image.
+  registerUploadBodyParser(app.getHttpAdapter().getInstance());
 
   // Enable gzip/brotli compression for all responses
   await app.register(compression, { encodings: ['gzip', 'deflate'] });

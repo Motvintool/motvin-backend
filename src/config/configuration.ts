@@ -6,6 +6,21 @@ export default () => ({
   // Data paths
   dataRoot: process.env.DATA_ROOT || './data',
 
+  // Firebase project whose ID tokens the admin API accepts. Must match the
+  // NEXT_PUBLIC_FIREBASE_PROJECT_ID the web app signs in against.
+  firebase: {
+    projectId: process.env.FIREBASE_PROJECT_ID || 'motvin-prod',
+  },
+
+  // Who may write to the Inspirations store. Comma-separated, lower-cased.
+  // An empty list disables the admin API entirely rather than opening it up.
+  admin: {
+    emails: (process.env.INSPIRATIONS_ADMIN_EMAILS || 'surendarv638@gmail.com')
+      .split(',')
+      .map((email) => email.trim().toLowerCase())
+      .filter(Boolean),
+  },
+
   // Cache configuration
   cache: {
     maxCollections: parseInt(process.env.CACHE_MAX_COLLECTIONS, 10) || 50,

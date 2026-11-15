@@ -1,0 +1,750 @@
+import { Injectable, Logger, OnApplicationBootstrap, OnModuleDestroy } from '@nestjs/common';
+import { createScheduler, createWorker, Scheduler } from 'tesseract.js';
+import {
+  InspirationApp,
+  InspirationFlow,
+  InspirationPattern,
+  InspirationScreen,
+  LoaderService,
+} from './loader.service';
+import { DEFAULT_SETTINGS } from './manifest.builder';
+
+/**
+ * Query layer over the manifest. Everything here reads stored records — there
+ * is no generated content, so an empty store yields empty results rather than
+ * filler.
+ */
+
+export interface ScreenQuery {
+  platform?: string[];
+  screenType?: string[];
+  state?: string[];
+  industry?: string[];
+  style?: string[];
+  element?: string[];
+  app?: string;
+  q?: string;
+  limit?: number;
+  offset?: number;
+  sort?: 'newest' | 'oldest' | 'app' | 'curated';
+}
+
+/** A vocabulary with nothing in it: every query word is then free text. */
+const LITERAL_TAXONOMY = { platforms: [], screenTypes: [], industries: [], styles: [], states: [] };
+
+/** Narrowing for search results: the screen-list dimensions plus a set of apps. */
+export interface SearchFilters {
+  platform?: string[];
+  screenType?: string[];
+  state?: string[];
+  industry?: string[];
+  style?: string[];
+  element?: string[];
+  apps?: string[];
+}
+
+export interface Page<T> {
+  items: T[];
+  total: number;
+  limit: number;
+  offset: number;
+  nextOffset: number | null;
+}
+
+type TextHighlight = { left: number; top: number; width: number; height: number };
+type RecognizedScreenshot = { text: string; words: Array<TextHighlight & { text: string }> };
+
+/** Words that map onto the taxonomy, so plain-language queries still land. */
+const SYNONYMS: Record<string, string[]> = {
+  bank: ['fintech'], banking: ['fintech'], payments: ['fintech'], wallet: ['fintech'],
+  invest: ['finance'], investing: ['finance'], stocks: ['finance'], portfolio: ['finance'],
+  health: ['healthcare'], fitness: ['healthcare'], medical: ['healthcare'],
+  shop: ['ecommerce'], shopping: ['ecommerce'], store: ['ecommerce'], retail: ['ecommerce'],
+  learn: ['education'], course: ['education'], courses: ['education'],
+  trip: ['travel'], hotel: ['travel'], booking: ['travel'], flights: ['travel'],
+  tasks: ['productivity'], notes: ['productivity'], todo: ['productivity'],
+  assistant: ['ai'], copilot: ['ai'], llm: ['ai'],
+  food: ['food'], restaurant: ['food'], grocery: ['food'], delivery: ['food'],
+  entertainment: ['entertainment'], streaming: ['entertainment'], movies: ['entertainment'],
+  lifestyle: ['lifestyle'], dating: ['lifestyle'], wellness: ['lifestyle'],
+  community: ['social'], creators: ['social'],
+  b2b: ['saas'], software: ['saas'], analytics: ['saas', 'dashboard'],
+  home: ['landing', 'feed'], homepage: ['landing'], hero: ['landing'], marketing: ['landing'],
+  signin: ['login'], auth: ['login', 'signup'], register: ['signup'],
+  overview: ['dashboard'], kpi: ['dashboard'], metrics: ['dashboard'], reports: ['dashboard'],
+  results: ['search'], browse: ['search'], explore: ['search'],
+  plans: ['pricing'], subscription: ['pricing'], billing: ['pricing'],
+  payment: ['checkout'], cart: ['checkout'], order: ['checkout'],
+  preferences: ['settings'], account: ['settings', 'profile'],
+  welcome: ['onboarding'], intro: ['onboarding'], splash: ['splash'], launch: ['splash'],
+  tutorial: ['onboarding'], tip: ['onboarding'], tips: ['onboarding'], walkthrough: ['onboarding'],
+  timeline: ['feed'], activity: ['feed'],
+  detail: ['detail', 'product'], listing: ['product'],
+  empty: ['empty'], blank: ['empty'], nothing: ['empty'],
+  loading: ['loading'], spinner: ['loading'], skeleton: ['loading'], loader: ['loading'],
+  error: ['error'], errors: ['error'], failed: ['error'], offline: ['error'],
+  success: ['success'], confirmation: ['success'], confirmed: ['success'], done: ['success'],
+  modal: ['modal'], dialog: ['modal'], popup: ['modal'], sheet: ['modal'], alert: ['modal'], toast: ['modal'],
+  permission: ['permission'], permissions: ['permission'], prompt: ['permission'],
+  otp: ['login'], verification: ['login'], verify: ['login'], code: ['login'],
+  chat: ['messages', 'ai'], chats: ['messages'], inbox: ['messages'], messaging: ['messages'],
+  notifications: ['notifications'], alerts: ['notifications'],
+  map: ['map'], maps: ['map'], location: ['map'], directions: ['map'],
+  calendar: ['calendar'], dates: ['calendar'], schedule: ['calendar'],
+  player: ['player'], video: ['player'], music: ['player'], podcast: ['player'],
+  form: ['form'], input: ['form'], fields: ['form'],
+  keyboard: ['keyboard'], scrolled: ['scrolled'],
+  mobile: ['ios'], iphone: ['ios'], desktop: ['web'], website: ['web'], webapp: ['webapp'],
+  clean: ['minimal'], simple: ['minimal'], black: ['dark'], white: ['light'],
+  enterprise: ['corporate'], professional: ['corporate'],
+};
+
+const STOP = new Set([
+  'a', 'an', 'the', 'and', 'or', 'for', 'of', 'with', 'in', 'on', 'to', 'beautiful',
+  'nice', 'best', 'good', 'great', 'ui', 'ux', 'design', 'designs', 'screen',
+  'screens', 'page', 'pages', 'example', 'examples', 'inspiration',
+]);
+
+const OCR_WORKERS = 4;
+@Injectable()
+export class InspirationsService implements OnModuleDestroy, OnApplicationBootstrap {
+  private readonly logger = new Logger(InspirationsService.name);
+  private readonly screenshotText = new Map<string, Promise<RecognizedScreenshot>>();
+  private ocrScheduler: Promise<Scheduler> | null = null;
+  private backfill: Promise<void> | null = null;
+  private stopping = false;
+
+  constructor(private readonly loader: LoaderService) {}
+
+  /**
+   * After start-up, fill in the word positions of any screen that has none saved yet, one at a time in the
+   * background — so the screenshot-text highlights are ready before anyone searches. Off in tests and when
+   * INSPIRATIONS_WORDS_BACKFILL=off.
+   */
+  onApplicationBootstrap() {
+    if (process.env.NODE_ENV === 'test' || process.env.INSPIRATIONS_WORDS_BACKFILL === 'off') return;
+    setTimeout(() => void this.backfillWords(), 3000).unref?.();
+  }
+
+  async onModuleDestroy() {
+    this.stopping = true;
+    await (await this.ocrScheduler)?.terminate();
+  }
+
+  /**
+   * Saves word positions for every screen that lacks them, a few at a time (one per OCR worker). Safe to call any
+   * time: only one run happens at once, and screens already done are skipped.
+   */
+  backfillWords(): Promise<void> {
+    this.backfill ??= (async () => {
+      try {
+        const screens = await this.loader.getScreens();
+        const missing: InspirationScreen[] = [];
+        for (const screen of screens) if (!(await this.loader.getWords(screen.id))) missing.push(screen);
+        if (!missing.length) return;
+        this.logger.log(`Saving word positions for ${missing.length} screen(s) in the background`);
+        let done = 0;
+        for (let i = 0; i < missing.length; i += OCR_WORKERS) {
+          if (this.stopping) return;
+          const batch = missing.slice(i, i + OCR_WORKERS);
+          await Promise.all(batch.map((screen) => this.textInScreenshot(screen)));
+          const before = done;
+          done += batch.length;
+          if (Math.floor(done / 100) > Math.floor(before / 100)) this.logger.log(`Word positions: ${done}/${missing.length}`);
+        }
+        this.logger.log(`Word positions saved for ${done} screen(s)`);
+      } catch (error) {
+        this.logger.warn(`Word-position backfill stopped: ${(error as Error).message}`);
+      } finally {
+        this.backfill = null;
+      }
+    })();
+    return this.backfill;
+  }
+
+  // One pool for the process: starting a worker loads the language model, which
+  // cost more than recognising the screenshot itself when done per image.
+  private scheduler(): Promise<Scheduler> {
+    this.ocrScheduler ??= (async () => {
+      const scheduler = createScheduler();
+      const workers = await Promise.all(Array.from({ length: OCR_WORKERS }, () => createWorker('eng')));
+      workers.forEach((worker) => scheduler.addWorker(worker));
+      return scheduler;
+    })();
+    return this.ocrScheduler;
+  }
+
+  /**
+   * Counts and the taxonomy present in the store — for the whole library, or,
+   * given `platforms`, for just what exists on those platforms. A visitor
+   * browsing Web should be offered Web's own screen types, categories, UI
+   * elements and flow categories, not the union of every platform's, so each
+   * list is narrowed to values some screen (or flow) on the chosen platforms
+   * actually carries. The manifest's own ordering is kept.
+   *
+   * Patterns are not platform-scoped anywhere in the UI (their page lists
+   * every pattern), so their count stays the library's, which keeps a tab's
+   * number equal to what the page behind it shows.
+   */
+  async getCounts(platforms?: string[]) {
+    const manifest = await this.loader.getManifest();
+    if (!platforms?.length) {
+      const allScreens = await this.loader.getScreens();
+      const allFlows = await this.loader.getFlows();
+      return {
+        counts: manifest.counts,
+        taxonomy: manifest.taxonomy,
+        usage: this.usageOf(allScreens, allFlows),
+        settings: manifest.settings ?? DEFAULT_SETTINGS,
+        generatedAt: manifest.generatedAt,
+      };
+    }
+
+    const on = new Set(platforms);
+    const screens = (await this.loader.getScreens()).filter((s) => on.has(s.platform));
+    const flows = (await this.loader.getFlows()).filter((f) => on.has(f.platform));
+    const apps = (await this.loader.getApps()).filter((a) => a.platforms.some((p) => on.has(p)));
+
+    const screenIds = new Set(screens.map((s) => s.id));
+    const screenTypes = new Set(screens.flatMap((s) => s.screenTypes ?? [s.screenType]));
+    const industries = new Set(screens.map((s) => s.industry));
+    const states = new Set(screens.flatMap((s) => s.states));
+    const styles = new Set(screens.flatMap((s) => s.style));
+    const elementCounts = new Map<string, number>();
+    for (const s of screens) for (const e of s.elements) elementCounts.set(e, (elementCounts.get(e) ?? 0) + 1);
+
+    return {
+      counts: {
+        ...manifest.counts,
+        apps: apps.length,
+        screens: screens.length,
+        flows: flows.length,
+        // Screens that show at least one element — each screen once, as the UI Elements page lists them.
+        'ui-elements': screens.filter((s) => s.elements.length > 0).length,
+        // Patterns with at least one screen on these platforms.
+        patterns: (manifest.patterns ?? []).filter((p) => (p.screenIds ?? []).some((id) => screenIds.has(id))).length,
+      },
+      taxonomy: {
+        // Which platforms exist stays global: it is the switch itself.
+        platforms: manifest.taxonomy.platforms,
+        screenTypes: manifest.taxonomy.screenTypes.filter((t) => screenTypes.has(t)),
+        states: manifest.taxonomy.states.filter((v) => states.has(v)),
+        industries: manifest.taxonomy.industries.filter((i) => industries.has(i)),
+        styles: manifest.taxonomy.styles.filter((v) => styles.has(v)),
+        elements: Array.from(elementCounts.keys()).sort(),
+        flowCategories: Array.from(new Set(flows.map((f) => f.category).filter(Boolean))).sort(),
+      },
+      usage: this.usageOf(screens, flows),
+      settings: manifest.settings ?? DEFAULT_SETTINGS,
+      generatedAt: manifest.generatedAt,
+    };
+  }
+
+  /**
+   * How much of the library each taxonomy value holds — screens per screen type,
+   * per UI element and per category, flows per flow category. The taxonomy lists
+   * themselves stay in a fixed order (they back filters); this is what lets the
+   * Explore page lead with what the library actually has most of, instead of
+   * whichever five values come first alphabetically.
+   */
+  private usageOf(screens: InspirationScreen[], flows: { category?: string }[]) {
+    const tally = (values: Iterable<string | undefined | null>) => {
+      const out: Record<string, number> = {};
+      for (const v of values) if (v) out[v] = (out[v] ?? 0) + 1;
+      return out;
+    };
+    return {
+      screenTypes: tally(screens.flatMap((s) => s.screenTypes ?? [s.screenType])),
+      elements: tally(screens.flatMap((s) => s.elements)),
+      industries: tally(screens.map((s) => s.industry)),
+      flowCategories: tally(flows.map((f) => f.category)),
+    };
+  }
+
+  /** The screen-list filters (platform, type, state, industry, style, element, apps), shared with search. */
+  private filterScreens(screens: InspirationScreen[], query: SearchFilters): InspirationScreen[] {
+    let out = screens;
+    if (query.apps?.length) out = out.filter((s) => query.apps.includes(s.appId));
+    if (query.platform?.length) out = out.filter((s) => query.platform.includes(s.platform));
+    // A screen is under every type it is, not only its main one.
+    if (query.screenType?.length) out = out.filter((s) => (s.screenTypes ?? [s.screenType]).some((t) => query.screenType.includes(t)));
+    if (query.state?.length) out = out.filter((s) => query.state.some((v) => s.states.includes(v)));
+    if (query.industry?.length) out = out.filter((s) => query.industry.includes(s.industry));
+    if (query.style?.length) out = out.filter((s) => query.style.some((v) => s.style.includes(v)));
+    if (query.element?.length) out = out.filter((s) => query.element.some((v) => s.elements.includes(v)));
+    return out;
+  }
+
+  async getScreens(query: ScreenQuery): Promise<Page<InspirationScreen>> {
+    // `app` is one app id, or several comma-separated (the web's colour filter: every app of one brand colour).
+    const appIds = query.app?.split(',').map((id) => id.trim()).filter(Boolean);
+    let screens = this.filterScreens(await this.loader.getScreens(), { ...query, apps: appIds?.length ? appIds : undefined });
+
+    if (query.q?.trim()) {
+      const apps = await this.loader.getApps();
+      const ranked = this.rankScreens(screens, query.q, apps);
+      screens = ranked;
+    } else {
+      screens = this.sortScreens(screens, query.sort || 'curated');
+    }
+
+    return this.paginate(screens, query.limit, query.offset);
+  }
+
+  async getApps(industry?: string, sort?: 'newest' | 'oldest' | 'az' | 'rating'): Promise<InspirationApp[]> {
+    let apps = await this.loader.getApps();
+    if (industry) apps = apps.filter((a) => a.industry === industry);
+
+    if (sort === 'az') {
+      apps = [...apps].sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === 'newest' || sort === 'oldest') {
+      // An app has no timestamp of its own — "newest"/"oldest" go by the
+      // latest/earliest capturedAt among its own screens, the same signal
+      // getScreens' own newest/oldest sort already orders by. Apps with no
+      // dated screens have no ordering signal either way, so they sort last
+      // regardless of direction rather than jumping to the front for "oldest".
+      const screens = await this.loader.getScreens();
+      const timesByApp = new Map<string, number[]>();
+      for (const screen of screens) {
+        if (!screen.capturedAt) continue;
+        const ms = new Date(screen.capturedAt).getTime();
+        if (Number.isNaN(ms)) continue;
+        if (!timesByApp.has(screen.appId)) timesByApp.set(screen.appId, []);
+        timesByApp.get(screen.appId)!.push(ms);
+      }
+      const metric = (id: string) => {
+        const times = timesByApp.get(id);
+        if (!times?.length) return null;
+        return sort === 'newest' ? Math.max(...times) : Math.min(...times);
+      };
+      apps = [...apps].sort((a, b) => {
+        const ma = metric(a.id);
+        const mb = metric(b.id);
+        if (ma === null || mb === null) return ma === mb ? 0 : ma === null ? 1 : -1;
+        return sort === 'newest' ? mb - ma : ma - mb;
+      });
+    } else if (sort === 'rating') {
+      // Unrated apps (both fields null) sort last, ordered by score then by
+      // how many ratings back it up.
+      apps = [...apps].sort((a, b) => {
+        if (a.rating === null || b.rating === null) return a.rating === b.rating ? 0 : a.rating === null ? 1 : -1;
+        return b.rating - a.rating || (b.ratingCount ?? 0) - (a.ratingCount ?? 0);
+      });
+    }
+
+    return apps;
+  }
+
+  async getApp(slug: string) {
+    const app = await this.loader.getApp(slug);
+    if (!app) return null;
+    const screens = (await this.loader.getScreens()).filter((s) => s.appId === app.id);
+    const flows = (await this.loader.getFlows()).filter((f) => f.appId === app.id);
+    const patterns = (await this.loader.getPatterns()).filter((p) =>
+      p.screenIds.some((id) => screens.some((s) => s.id === id)),
+    );
+    return { app, screens, flows, patterns };
+  }
+
+  async getScreen(id: string) {
+    const screen = await this.loader.getScreen(id);
+    if (!screen) return null;
+    const app = await this.loader.getApp(screen.appId);
+    const flows = (await this.loader.getFlows()).filter((f) => f.screenIds.includes(id));
+    const patterns = (await this.loader.getPatterns()).filter((p) => p.screenIds.includes(id));
+    return { screen, app, flows, patterns };
+  }
+
+  async getFlows(category?: string, platform?: string): Promise<InspirationFlow[]> {
+    let flows = await this.loader.getFlows();
+    if (category) flows = flows.filter((f) => f.category === category);
+    if (platform) flows = flows.filter((f) => f.platform === platform);
+    return flows;
+  }
+
+  async getFlow(id: string) {
+    const flow = await this.loader.getFlow(id);
+    if (!flow) return null;
+    const screens = await this.resolveScreens(flow.screenIds);
+    const app = await this.loader.getApp(flow.appId);
+    return { flow, screens, app };
+  }
+
+  async getPatterns(category?: string): Promise<InspirationPattern[]> {
+    const patterns = await this.loader.getPatterns();
+    return category ? patterns.filter((p) => p.category === category) : patterns;
+  }
+
+  async getPattern(slug: string) {
+    const pattern = await this.loader.getPattern(slug);
+    if (!pattern) return null;
+    return { pattern, screens: await this.resolveScreens(pattern.screenIds) };
+  }
+
+  async getElements(platforms?: string[]) {
+    // Unscoped, the manifest already holds the library-wide counts. Scoped, count the
+    // screens on those platforms — the same numbers the Explore lists use.
+    if (platforms?.length) {
+      const on = new Set(platforms);
+      const counts: Record<string, number> = {};
+      for (const s of await this.loader.getScreens()) {
+        if (!on.has(s.platform)) continue;
+        for (const e of s.elements) counts[e] = (counts[e] ?? 0) + 1;
+      }
+      return Object.entries(counts)
+        .map(([kind, count]) => ({ kind, count }))
+        .sort((a, b) => b.count - a.count || a.kind.localeCompare(b.kind));
+    }
+    const manifest = await this.loader.getManifest();
+    return Object.entries(manifest.elementCounts)
+      .map(([kind, count]) => ({ kind, count }))
+      .sort((a, b) => b.count - a.count);
+  }
+
+  async resolveScreens(ids: string[]): Promise<InspirationScreen[]> {
+    const out: InspirationScreen[] = [];
+    for (const id of ids) {
+      const screen = await this.loader.getScreen(id);
+      if (screen) out.push(screen);
+    }
+    return out;
+  }
+
+  async getAnalysis(screenId: string) {
+    return this.loader.getAnalysis(screenId);
+  }
+
+  /**
+   * Similar screens, scored on the facets we actually store. This is a
+   * metadata neighbourhood, not a visual embedding — the response says so, so
+   * the UI can label it honestly.
+   */
+  async getSimilar(screenId: string, limit = 12) {
+    const screen = await this.loader.getScreen(screenId);
+    if (!screen) return null;
+    const screens = await this.loader.getScreens();
+    const items = screens
+      .filter((s) => s.id !== screenId)
+      .map((s) => {
+        let score = 0;
+        if (s.screenType === screen.screenType) score += 5;
+        if (s.fineType && s.fineType === screen.fineType && s.fineType !== s.screenType) score += 2;
+        score += (s.states || []).filter((v) => (screen.states || []).includes(v)).length * 2;
+        if (s.industry === screen.industry) score += 3;
+        if (s.platform === screen.platform) score += 2;
+        score += s.style.filter((v) => screen.style.includes(v)).length * 1.5;
+        score += s.elements.filter((v) => screen.elements.includes(v)).length * 0.5;
+        score += s.tags.filter((v) => screen.tags.includes(v)).length * 0.25;
+        if (s.appId === screen.appId) score -= 2;
+        return { s, score };
+      })
+      .filter((r) => r.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map((r) => r.s);
+    return { basis: 'metadata', items };
+  }
+
+  /**
+   * `literal` reads every word as plain text: nothing is taken to mean a screen type, category, style or state.
+   * The search page uses it once it has turned what a query names into visible filters, so the words don't keep
+   * narrowing the results behind those filters' backs.
+   */
+  async search(q: string, limit = 50, offset = 0, filters: SearchFilters = {}, literal = false) {
+    const [allScreens, allApps, allFlows, patterns] = await Promise.all([
+      this.loader.getScreens(),
+      this.loader.getApps(),
+      this.loader.getFlows(),
+      this.loader.getPatterns(),
+    ]);
+
+    const intent = this.interpret(q, literal ? { taxonomy: LITERAL_TAXONOMY } : await this.loader.getManifest());
+    if (!intent.terms.length) {
+      return { intent, apps: [], screens: [], flows: [], patterns: [], total: 0 };
+    }
+
+    // Rank every screen first, so how the query is read doesn't depend on which screens the filters leave in;
+    // then the filters narrow the ranked list. Filters also narrow apps (platform, industry, app set) and flows
+    // (platform, app set).
+    const rankedAll = this.rankScreens(allScreens, q, allApps, literal);
+    const apps = allApps.filter(
+      (a) =>
+        (!filters.apps?.length || filters.apps.includes(a.id)) &&
+        (!filters.platform?.length || filters.platform.some((p) => a.platforms.includes(p))) &&
+        (!filters.industry?.length || filters.industry.includes(a.industry)),
+    );
+    const flows = allFlows.filter(
+      (f) => (!filters.apps?.length || filters.apps.includes(f.appId)) && (!filters.platform?.length || filters.platform.includes(f.platform)),
+    );
+
+    const rankedScreens = this.filterScreens(rankedAll, filters);
+    // Counts per filter value among the matches, each dimension counted with every *other* filter applied — so
+    // a pill lists every value the results hold (new ones included) and how many screens picking it would show.
+    const facets = {
+      screenTypes: this.tally(this.filterScreens(rankedAll, { ...filters, screenType: undefined }).map((s) => s.screenTypes ?? [s.screenType])),
+      states: this.tally(this.filterScreens(rankedAll, { ...filters, state: undefined }).map((s) => s.states)),
+      industries: this.tally(this.filterScreens(rankedAll, { ...filters, industry: undefined }).map((s) => [s.industry])),
+      styles: this.tally(this.filterScreens(rankedAll, { ...filters, style: undefined }).map((s) => s.style)),
+      elements: this.tally(this.filterScreens(rankedAll, { ...filters, element: undefined }).map((s) => s.elements)),
+    };
+    const matchedApps = apps.filter((a) => {
+      if (intent.industries.length && !intent.industries.includes(a.industry)) return false;
+      const hay = `${a.name} ${a.tagline || ''}`.toLowerCase();
+      return intent.industries.includes(a.industry) || intent.free.some((t) => hay.includes(t));
+    });
+    const screenIds = new Set(rankedScreens.map((s) => s.id));
+    const matchedFlows = flows.filter(
+      (f) =>
+        f.screenIds.some((id) => screenIds.has(id)) ||
+        intent.free.some((t) => f.name.toLowerCase().includes(t)),
+    );
+    const matchedPatterns = patterns.filter((p) => {
+      const hay = `${p.name} ${p.category} ${p.tags.join(' ')}`.toLowerCase();
+      return intent.free.some((t) => hay.includes(t)) || intent.screenTypes.some((t) => p.tags.includes(t));
+    });
+
+    return {
+      intent,
+      apps: matchedApps,
+      screens: rankedScreens.slice(offset, offset + limit),
+      flows: matchedFlows,
+      patterns: matchedPatterns,
+      total:
+        matchedApps.length + rankedScreens.length + matchedFlows.length + matchedPatterns.length,
+      screenTotal: rankedScreens.length,
+      facets,
+    };
+  }
+
+  /** How many screens carry each value, counting a screen once per value. */
+  private tally(valuesPerScreen: (string[] | undefined)[]): Record<string, number> {
+    const out: Record<string, number> = {};
+    for (const values of valuesPerScreen) for (const v of new Set(values ?? [])) if (v) out[v] = (out[v] ?? 0) + 1;
+    return out;
+  }
+
+  /** OCR-backed search is opt-in: the regular search remains metadata-only. */
+  async searchScreenshotText(q: string, limit = 50, offset = 0, appId?: string) {
+    const [allScreens, manifest] = await Promise.all([this.loader.getScreens(), this.loader.getManifest()]);
+    const screens = appId ? allScreens.filter((screen) => screen.appId === appId) : allScreens;
+    const intent = this.interpret(q, manifest);
+    const query = q.trim().toLocaleLowerCase();
+    const queryTerms = query.split(/\s+/).filter(Boolean);
+    if (!query) {
+      return { intent, apps: [], screens: [], flows: [], patterns: [], total: 0, screenTotal: 0 };
+    }
+
+    // The text was read when the screen was ingested and lives in its analysis
+    // record, so finding matches is only a string comparison.
+    const texts = await Promise.all(screens.map((screen) => this.screenText(screen)));
+    const matchedScreens = screens.filter((_, index) => texts[index].includes(query));
+
+    // Word boxes are only worth working out for the page about to be shown.
+    const page = matchedScreens.slice(offset, offset + limit);
+    const textHighlights: Record<string, TextHighlight[]> = {};
+    await Promise.all(
+      page.map(async (screen) => {
+        const { words } = await this.textInScreenshot(screen);
+        textHighlights[screen.id] = words
+          .filter(({ text }) => queryTerms.some((term) => text.includes(term)))
+          .map(({ text: _text, ...highlight }) => highlight);
+      }),
+    );
+
+    return {
+      intent,
+      apps: [],
+      screens: page,
+      flows: [],
+      patterns: [],
+      total: matchedScreens.length,
+      screenTotal: matchedScreens.length,
+      textHighlights,
+    };
+  }
+
+  // ─── internals ────────────────────────────────────────────────────────────
+
+  /** The words on a screen: from its analysis record, else read from the image. */
+  private async screenText(screen: InspirationScreen): Promise<string> {
+    const analysis = await this.loader.getAnalysis(screen.id);
+    if (typeof analysis?.text === 'string') return analysis.text.toLocaleLowerCase();
+    return (await this.textInScreenshot(screen)).text;
+  }
+
+  // The words on a screen with their positions: saved once (data/inspirations/words), so the image is only read
+  // the first time — for word positions, and for screens whose analysis record carries no text.
+  private textInScreenshot(screen: InspirationScreen): Promise<RecognizedScreenshot> {
+    const cached = this.screenshotText.get(screen.id);
+    if (cached) return cached;
+
+    const extraction = (async (): Promise<RecognizedScreenshot> => {
+      const stored = await this.loader.getWords(screen.id);
+      if (stored) return { text: stored.text, words: stored.words };
+      const recognized = await this.recognize(screen);
+      // An empty result from a failed read isn't saved, so the screen is tried again next time.
+      if (recognized.text || recognized.words.length) await this.loader.saveWords(screen.id, recognized.words, recognized.text);
+      return recognized;
+    })();
+    this.screenshotText.set(screen.id, extraction);
+    return extraction;
+  }
+
+  private recognize(screen: InspirationScreen): Promise<RecognizedScreenshot> {
+    return (async (): Promise<RecognizedScreenshot> => {
+      const file = await this.loader.resolveServableFile(`screens/${screen.file}`);
+      if (!file) return { text: '', words: [] };
+      try {
+        const scheduler = await this.scheduler();
+        const { data } = await scheduler.addJob('recognize', file, {}, { text: true, tsv: true });
+        return {
+          text: data.text.toLocaleLowerCase(),
+          words: this.ocrWords(data.tsv ?? '', screen),
+        };
+      } catch {
+        return { text: '', words: [] };
+      }
+    })();
+  }
+
+  private ocrWords(tsv: string, screen: InspirationScreen): RecognizedScreenshot['words'] {
+    return tsv.split('\n').slice(1).flatMap((line) => {
+      const [level, , , , , , left, top, width, height, , text] = line.split('\t');
+      if (level !== '5' || !text?.trim()) return [];
+      const x = Number(left);
+      const y = Number(top);
+      const w = Number(width);
+      const h = Number(height);
+      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) return [];
+      return [{
+        text: text.toLocaleLowerCase(),
+        left: (x / screen.width) * 100,
+        top: (y / screen.height) * 100,
+        width: (w / screen.width) * 100,
+        height: (h / screen.height) * 100,
+      }];
+    });
+  }
+
+  private interpret(raw: string, manifest: { taxonomy: any }) {
+    const { platforms, screenTypes, industries, styles } = manifest.taxonomy;
+    const states: string[] = manifest.taxonomy.states || [];
+    const terms = raw
+      .toLowerCase()
+      .split(/\s+/)
+      .map((t) => t.replace(/[^a-z0-9-]/g, ''))
+      .filter((t) => t && !STOP.has(t));
+
+    const intent = {
+      raw: raw.trim(),
+      terms,
+      industries: [] as string[],
+      screenTypes: [] as string[],
+      platforms: [] as string[],
+      styles: [] as string[],
+      states: [] as string[],
+      free: [] as string[],
+    };
+
+    const add = (list: string[], value: string) => {
+      if (!list.includes(value)) list.push(value);
+    };
+
+    for (const term of terms) {
+      const candidates = [term, ...(SYNONYMS[term] || [])];
+      let matched = false;
+      for (const c of candidates) {
+        if (industries.includes(c)) { add(intent.industries, c); matched = true; }
+        if (screenTypes.includes(c)) { add(intent.screenTypes, c); matched = true; }
+        if (platforms.includes(c)) { add(intent.platforms, c); matched = true; }
+        if (styles.includes(c)) { add(intent.styles, c); matched = true; }
+        if (states.includes(c)) { add(intent.states, c); matched = true; }
+      }
+      if (!matched || term.length > 3) intent.free.push(term);
+    }
+    return intent;
+  }
+
+  private rankScreens(screens: InspirationScreen[], q: string, apps: InspirationApp[], literal = false) {
+    const appNames = new Map(apps.map((a) => [a.id, a.name.toLowerCase()]));
+    const taxonomy = literal ? LITERAL_TAXONOMY : {
+      platforms: Array.from(new Set(screens.map((s) => s.platform))),
+      screenTypes: Array.from(new Set(screens.map((s) => s.screenType))),
+      industries: Array.from(new Set(screens.map((s) => s.industry))),
+      styles: Array.from(new Set(screens.flatMap((s) => s.style))),
+      states: Array.from(new Set(screens.flatMap((s) => s.states || []))),
+    };
+    const intent = this.interpret(q, { taxonomy });
+
+    return screens
+      .map((screen) => {
+        if (intent.industries.length && !intent.industries.includes(screen.industry)) return null;
+        if (intent.screenTypes.length && !intent.screenTypes.includes(screen.screenType)) return null;
+        if (intent.platforms.length && !intent.platforms.includes(screen.platform)) return null;
+        if (intent.styles.length && !intent.styles.some((s) => screen.style.includes(s))) return null;
+        if (intent.states.length && !intent.states.some((s) => (screen.states || []).includes(s))) return null;
+
+        let score = 0;
+        if (intent.industries.includes(screen.industry)) score += 3;
+        if (intent.screenTypes.includes(screen.screenType)) score += 4;
+        if (intent.platforms.includes(screen.platform)) score += 2;
+        score += intent.styles.filter((s) => screen.style.includes(s)).length * 2;
+        score += intent.states.filter((s) => (screen.states || []).includes(s)).length * 4;
+
+        const hay = `${screen.name} ${screen.description || ''} ${screen.fineType || ''} ${screen.tags.join(' ')} ${appNames.get(screen.appId) || ''}`.toLowerCase();
+        score += intent.free.filter((t) => hay.includes(t)).length;
+
+        return score > 0 ? { screen, score } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score || a.screen.id.localeCompare(b.screen.id))
+      .map((r) => r.screen);
+  }
+
+  private sortScreens(screens: InspirationScreen[], sort: string) {
+    const list = [...screens];
+    const byDate = (a: InspirationScreen, b: InspirationScreen) =>
+      (b.capturedAt || '').localeCompare(a.capturedAt || '') || a.id.localeCompare(b.id);
+
+    if (sort === 'newest') return list.sort(byDate);
+    if (sort === 'oldest') return list.sort((a, b) => -byDate(a, b));
+    if (sort === 'app') return list.sort((a, b) => a.appId.localeCompare(b.appId) || a.id.localeCompare(b.id));
+    return this.interleaveByApp(list.sort(byDate));
+  }
+
+  /** Spreads consecutive cards across apps so a gallery reads as curated. */
+  private interleaveByApp(screens: InspirationScreen[]) {
+    const buckets = new Map<string, InspirationScreen[]>();
+    for (const s of screens) {
+      if (!buckets.has(s.appId)) buckets.set(s.appId, []);
+      buckets.get(s.appId).push(s);
+    }
+    const lists = Array.from(buckets.values());
+    const out: InspirationScreen[] = [];
+    let remaining = screens.length;
+    let i = 0;
+    while (remaining > 0) {
+      const list = lists[i % lists.length];
+      if (list.length) {
+        out.push(list.shift());
+        remaining--;
+      }
+      i++;
+    }
+    return out;
+  }
+
+  private paginate<T>(items: T[], limit = 30, offset = 0): Page<T> {
+    const safeLimit = Math.min(Math.max(Number(limit) || 30, 1), 200);
+    const safeOffset = Math.max(Number(offset) || 0, 0);
+    const page = items.slice(safeOffset, safeOffset + safeLimit);
+    const next = safeOffset + safeLimit;
+    return {
+      items: page,
+      total: items.length,
+      limit: safeLimit,
+      offset: safeOffset,
+      nextOffset: next < items.length ? next : null,
+    };
+  }
+}

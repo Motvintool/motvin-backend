@@ -1,0 +1,157 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-browsing-home-3",
+  "screen_id": "apple-books-ios-versions-2026-11-06-browsing-home-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:03.642Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Browsing Home",
+  "flow_position": 3,
+  "name": "Home home",
+  "description": "Feed screen with a 3-item tab bar and a row of 3 category chips. Dark theme, 25 text elements.",
+  "text": "9:41(\n•0l\nHome\n5\nMore to Explore\nA Tale of\nPride and\nTwo Cities\nPrejudice\nJane Austen\nCharles Dicken\nFiction &\nLiterature\nThe Art of War\nSun Tzi\nThe R\nATre\nHumal\nNon-Fiction\nP\nDavic\nAll-Time Bestsellers >\nPride and\nPrejudice\nJane Austen\nA Pocket\nDictionary\nleh\nHome\nLibrary\nBook Store\nWilliam Richarde",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "library",
+    "book store",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Library, Book Store",
+        "Navigation title reads “Home”",
+        "Category strip: A Tale of, Pride and, Two Cities",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a row of 3 category chips. Dark theme, 25 text elements.",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 53 in “Home”",
+        "Reached from “Lah sheet”",
+        "Leads to “Two Cities home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:03 in the recording",
+        "Frame 19 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282629",
+      "role": "background",
+      "share": 0.325
+    },
+    {
+      "hex": "#0a080b",
+      "role": "surface",
+      "share": 0.277
+    },
+    {
+      "hex": "#076928",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#504e50",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#68d2b2",
+      "role": "text",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 19,
+    "atSeconds": 3,
+    "endSeconds": 6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [
+      "Home",
+      "Library",
+      "Book Store"
+    ],
+    "chipLabels": [
+      "A Tale of",
+      "Pride and",
+      "Two Cities"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home",
+    "headline": "Fiction"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Home”",
+        "name": "Lah sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Switch to Two Cities",
+        "name": "Two Cities home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

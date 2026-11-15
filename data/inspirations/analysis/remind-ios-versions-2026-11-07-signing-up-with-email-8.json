@@ -1,0 +1,150 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-signing-up-with-email-8",
+  "screen_id": "remind-ios-versions-2026-11-07-signing-up-with-email-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:51:57.928Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Light theme, 26 text elements.",
+  "text": "9:41 C\n.ll\nX\nCheck your email\nTo confirm your account, enter the 4-digit code\nsent to motvintool@gmail.com\n2\n3\nDidn't get the code? See other options\nFrom Gmail\n3209\n2\n3\n1\nABC\nDEF\n5\n6\n4\nJKL\nGHI\nMNO\n8\n9\n7\nTUV\nPQRS\nWXYZ",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your email”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Light theme, 26 text elements.",
+        "26 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 50 in “Entering phone number”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:48 in the recording",
+        "Frame 168 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfafc",
+      "role": "background",
+      "share": 0.692
+    },
+    {
+      "hex": "#e3e3e7",
+      "role": "surface",
+      "share": 0.221
+    },
+    {
+      "hex": "#c8c6c4",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#999695",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#bddaf4",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 168,
+    "atSeconds": 48,
+    "endSeconds": 50.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your email",
+    "headline": "Sent to motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Wait 1.5s",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,173 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-scanning-a-book-cover-2",
+  "screen_id": "headway-ios-versions-2026-11-04-scanning-a-book-cover-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:02.419Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "healthcare",
+  "flow": "onboarding",
+  "flow_name": "Scanning a book cover",
+  "flow_position": 17,
+  "name": "Camera permission",
+  "description": "Permission dialog over a dimmed screen, on top of Home home with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 15 text elements.",
+  "text": "9:41(\nLibrary\nSummaries 1\nRepetition 1 Highlights O\nScan a cover to\nfind summaries\nConti\nre all\n\"Headway\" would like to access\nthe Camera.\nScan a book cover to find its\nsummary and add it to your Library\nDon't Allow\nAllow\nStephen Hawking, P...\nA Brief History of Time\nShorts\nLibrary\nHome\nPlan",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "plan",
+    "shorts",
+    "library",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Plan, Shorts, Library",
+        "Navigation title reads “\"Headway\" would like to access”",
+        "Dialog over a dimmed background, covering 28% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Home home with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 15 text elements.",
+        "Calls to action: “Allow”",
+        "15 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 26 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Allow camera access dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 8:06 in the recording",
+        "Frame 1632 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141316",
+      "role": "background",
+      "share": 0.815
+    },
+    {
+      "hex": "#322f35",
+      "role": "surface",
+      "share": 0.123
+    },
+    {
+      "hex": "#514d56",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#716a78",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#115889",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1632,
+    "atSeconds": 486.3,
+    "endSeconds": 489.9,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.34375,
+        "w": 0.28125,
+        "h": 0.28125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Home",
+      "Plan",
+      "Shorts",
+      "Library"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Headway\" would like to access",
+    "headline": "\"Headway\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s200",
+    "depth": 200,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s199",
+        "via": "Open \"Headway\" would like to access",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s201",
+        "via": "Tap “find summaries”",
+        "name": "Allow camera access dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

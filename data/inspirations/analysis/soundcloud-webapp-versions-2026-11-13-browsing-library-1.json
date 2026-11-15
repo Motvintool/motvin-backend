@@ -1,0 +1,160 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-browsing-library-1",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-browsing-library-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:29.756Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Browsing library",
+  "flow_position": 92,
+  "name": "OTP verification",
+  "description": "Verification code screen with a row of 7 category chips, a search bar and a paged carousel. Dark theme, 43 text elements.",
+  "text": "Q\nTry Artist Pro\nArtist Studio\nHome\nFeed\nLibrary\nSearch\nUpload\n•••\nUploading tracks just got way easier: upload, get heard, and get paid in one seamless experience. Try it out\nX\nHistory\nFollowing\nOverview\nPlaylists\nAlbums\nStations\nLikes\nHear the tracks you've liked:\nView\nFilter\n8 years ago\nElectric Universe\nMama India - Outside the Universe Remix\n#Psytrance\n6:00\n8:34\nmnfmihmh\n!\nVerify your email to write comments.\n21.1K\n• 676K\nE 591\n654\n• ••\nLegal • Privacy • Cookie Policy • Cookie Manager • Imprint • Artist Resources • Newsroom • Topics • Charts • Transparency Reports\nLanguage: English (US)\nK\nElectric Universe\nP\n8:34\n6:00\nMama India - Outside t...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "filter",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “History”",
+        "Category strip: History, Following, Overview, Playlists, Albums, Stations, Likes",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a row of 7 category chips, a search bar and a paged carousel. Dark theme, 43 text elements.",
+        "43 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 92 of 226 in “Reading messages”",
+        "Reached from “Search results”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.2s at 6:12 in the recording",
+        "Frame 1275 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111111",
+      "role": "background",
+      "share": 0.736
+    },
+    {
+      "hex": "#383735",
+      "role": "surface",
+      "share": 0.164
+    },
+    {
+      "hex": "#575554",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#a2705f",
+      "role": "text",
+      "share": 0.017
+    },
+    {
+      "hex": "#c74d0a",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 1275,
+    "atSeconds": 372.6,
+    "endSeconds": 382.8,
+    "holdSeconds": 10.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 43,
+    "tabLabels": [],
+    "chipLabels": [
+      "History",
+      "Following",
+      "Overview",
+      "Playlists",
+      "Albums",
+      "Stations",
+      "Likes"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "History",
+    "headline": "Hear the tracks you've liked"
+  },
+  "crawler": {
+    "nodeId": "s116",
+    "depth": 115,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s115",
+        "via": "Tap “History”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s117",
+        "via": "Tap “History”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,167 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-viewing-a-user-profile-5",
+  "screen_id": "mimo-ios-versions-2026-11-06-viewing-a-user-profile-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:19:04.298Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Viewing a user profile",
+  "flow_position": 19,
+  "name": "Report profile dialog",
+  "description": "Dialog over a dimmed screen, on top of Learn home with a 4-item tab bar. Dark theme, 12 text elements.",
+  "text": "9:41 €\nUser Profile\nPRO\nMax\nWe don't know anything about Max\nUnfollow\nReport profile\nAre you sure you want to report a\nconcern about this user?\nCancel\nReport\nPlaygrounds\nThere are no Playgrounds on Max's profile\nProfile\nPractice\nLearn\nLeaderboard",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "learn",
+    "practice",
+    "leaderboard",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Learn, Practice, Leaderboard, Profile",
+        "Navigation title reads “Report profile”",
+        "Dialog over a dimmed background, covering 16% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Learn home with a 4-item tab bar. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 48 in “Learn”",
+        "Reached from “Learn home”",
+        "Leads to “Learn home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:41 in the recording",
+        "Frame 1543 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18192b",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#353548",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#50307d",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#595864",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#735a0e",
+      "role": "accent",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 1543,
+    "atSeconds": 461.1,
+    "endSeconds": 463.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.40625,
+        "w": 0.71875,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Learn",
+      "Practice",
+      "Leaderboard",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Report profile",
+    "headline": "Playgrounds"
+  },
+  "crawler": {
+    "nodeId": "s179",
+    "depth": 178,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s178",
+        "via": "Tap “Playgrounds”",
+        "name": "Learn home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s180",
+        "via": "Dismiss",
+        "name": "Learn home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

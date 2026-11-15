@@ -1,0 +1,147 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-12",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-switching-to-another-account-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:41.237Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Switching to another account",
+  "flow_position": 17,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "You can update your password now if you've forgotten it.\nWelcome back\n( surendarv638@gmail.com ×\nUpdate password\nContinue\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 22 in “Recently due detail”",
+        "Reached from “OTP verification”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 12:30 in the recording",
+        "Frame 2515 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2223",
+      "role": "background",
+      "share": 0.741
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.242
+    },
+    {
+      "hex": "#3d3f41",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#66696f",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#92a3bf",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 2515,
+    "atSeconds": 750.3,
+    "endSeconds": 754.8,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome back",
+    "headline": "Welcome back"
+  },
+  "crawler": {
+    "nodeId": "s221",
+    "depth": 222,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s220",
+        "via": "Open Welcome back",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s222",
+        "via": "Tap “Welcome back”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-account-1",
+  "screen_id": "apple-books-ios-versions-2026-11-06-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:19.012Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": null,
+  "flow": "settings",
+  "flow_name": "Account",
+  "flow_position": 1,
+  "name": "Account",
+  "description": "Settings screen. Dark theme, 16 text elements.",
+  "text": "9:41(\nosll\nX\nAccount\nSurendar V\n916382102514\nMY PURCHASES\n0 >\nUpdates\n3 >\nBooks\nAudiobooksR\n0 >\nNotifications\n>\nManage Hidden Purchases\nUnhide books you have hidden.\nRedeem Gift Card or Code\nAccount Settings\nCinnOut",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "cinnout",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 8 in “Settings”",
+        "Reached from “Nhadaa Minlren home”",
+        "Leads to “Loading state”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 4:39 in the recording",
+        "Frame 940 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262428",
+      "role": "background",
+      "share": 0.86
+    },
+    {
+      "hex": "#030204",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#49474b",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#615f63",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#86838e",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 940,
+    "atSeconds": 279,
+    "endSeconds": 282.3,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Updates",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s136",
+        "via": "Open Account",
+        "name": "Nhadaa Minlren home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s138",
+        "via": "Open Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

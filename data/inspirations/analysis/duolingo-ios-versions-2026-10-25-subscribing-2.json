@@ -1,0 +1,161 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-25-subscribing-2",
+  "screen_id": "duolingo-ios-versions-2026-10-25-subscribing-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T11:23:01.676Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Subscribing",
+  "flow_position": 67,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Feed dialog. Dark theme, 14 text elements.",
+  "text": "9:41(\nO\nSubscription\nCOMPARE PLANS\nRECOMMENDED\nIndividual\nLearn without distractions\nUnlimited energy\nNo ads\nTRY 1 MONTH FOR 7O\nFamily\nLearn with friends for less\nAll Individual benefits\nFor you and 5 others\nOnly 763 more per month\nTRY 1 MONTH FOR &O",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "subscription",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Family”",
+        "Dialog over a dimmed background, covering 20% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Feed dialog. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 67 of 95 in “Success”",
+        "Reached from “Feed dialog”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 7:10 in the recording",
+        "Frame 1445 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#152129",
+      "role": "background",
+      "share": 0.554
+    },
+    {
+      "hex": "#193a7c",
+      "role": "accent",
+      "share": 0.183
+    },
+    {
+      "hex": "#3f449a",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#354149",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#fef7ff",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvnq9fwt-k5ul67.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1445,
+    "atSeconds": 430.2,
+    "endSeconds": 433.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.515625,
+        "w": 0.75,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Family",
+    "headline": "Family"
+  },
+  "crawler": {
+    "nodeId": "s182",
+    "depth": 181,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s181",
+        "via": "Tap “Subscription”",
+        "name": "Feed dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s183",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

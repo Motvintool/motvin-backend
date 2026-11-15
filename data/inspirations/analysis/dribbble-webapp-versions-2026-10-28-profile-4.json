@@ -1,0 +1,148 @@
+{
+  "screenId": "dribbble-webapp-versions-2026-10-28-profile-4",
+  "screen_id": "dribbble-webapp-versions-2026-10-28-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:22:37.309Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Profile",
+  "flow_position": 10,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “Continue 1”. Light theme, 14 text elements.",
+  "text": "Select all squares with\nmotorcycles\nDribbble\nIf there are none, click skip\nWelcom\nContinue 1\nOr\nmotvintool@gmail.c\nC\nVERIFY\nConti\nBy continuing, you agree to our Terms and Privacy Policy.\nDon't have an account? Sign up\n@glebich",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Continue 1”. Light theme, 14 text elements.",
+        "Calls to action: “Continue 1”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 28 in “Logging in”",
+        "Reached from “Create account”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:17 in the recording",
+        "Frame 68 of 2302 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.53
+    },
+    {
+      "hex": "#9394ac",
+      "role": "surface",
+      "share": 0.169
+    },
+    {
+      "hex": "#e1d8dd",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#8f7b6a",
+      "role": "text",
+      "share": 0.058
+    },
+    {
+      "hex": "#ccb6bd",
+      "role": "surface",
+      "share": 0.044
+    }
+  ],
+  "capture": {
+    "source": "mvrjdbna-gkxlnf.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2302,
+    "frame": 68,
+    "atSeconds": 17.7,
+    "endSeconds": 20.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue 1"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Welcom"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Tap “Welcom”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Back to Create account",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

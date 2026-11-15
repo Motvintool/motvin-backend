@@ -1,0 +1,161 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-browsing-the-help-center-2",
+  "screen_id": "headway-ios-versions-2026-11-04-browsing-the-help-center-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:07.476Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "healthcare",
+  "flow": "search",
+  "flow_name": "Browsing the help center",
+  "flow_position": 3,
+  "name": "Search",
+  "description": "Search bottom sheet, on top of Search with a search bar. Light theme, 6 text elements.",
+  "text": "9:41(\nheadway.zendesk.com\nHeadway\nSearch\nBusiness\nSubscriptions\nPayments\nContent & Reading Experience",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "payment",
+    "subscription",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subscriptions”",
+        "Search bar present",
+        "Bottom sheet, covering 47% of the height from 44% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search bottom sheet, on top of Search with a search bar. Light theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Searching”",
+        "Reached from “Search”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:08 in the recording",
+        "Frame 2032 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf9fb",
+      "role": "background",
+      "share": 0.639
+    },
+    {
+      "hex": "#fe7903",
+      "role": "text",
+      "share": 0.135
+    },
+    {
+      "hex": "#ffa14f",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#fec201",
+      "role": "accent",
+      "share": 0.026
+    },
+    {
+      "hex": "#d1d6d8",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 2032,
+    "atSeconds": 608.1,
+    "endSeconds": 609.9,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.4375,
+        "w": 1,
+        "h": 0.46875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Subscriptions",
+    "headline": "Business"
+  },
+  "crawler": {
+    "nodeId": "s260",
+    "depth": 260,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s259",
+        "via": "Wait 1.5s",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s261",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

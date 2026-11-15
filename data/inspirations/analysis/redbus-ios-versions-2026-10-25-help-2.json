@@ -1,0 +1,162 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-help-2",
+  "screen_id": "redbus-ios-versions-2026-10-25-help-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:46.658Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Help",
+  "flow_position": 159,
+  "name": "Help (empty)",
+  "description": "Empty state screen with a 5-item tab bar and a search bar. Light theme, 13 text elements, an empty state.",
+  "text": "9:41(\nHelp\nNeed help with this trip?\nView all\nNo recent trips\nRecent issues\nView all\nNo recent issues\nFAQ\nQ Search\nredBus\nredRail\nBus FAQ\nTrain FAQ\nHotels FAO\nMetro FAO\nHome\nMy Account\nOffers\nMy Bookings\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "empty-state"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Help”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a 5-item tab bar and a search bar. Light theme, 13 text elements, an empty state.",
+        "13 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 159 of 200 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Help (empty)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 9:50 in the recording",
+        "Frame 1982 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfd",
+      "role": "background",
+      "share": 0.865
+    },
+    {
+      "hex": "#dbd7dd",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#d2bdc0",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#a3a7a9",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#687091",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1982,
+    "atSeconds": 590.1,
+    "endSeconds": 594.9,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Help",
+    "headline": "Need help with this trip?"
+  },
+  "crawler": {
+    "nodeId": "s498",
+    "depth": 498,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s497",
+        "via": "Tap “Help”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s499",
+        "via": "Tap “No recent issues”",
+        "name": "Help (empty)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

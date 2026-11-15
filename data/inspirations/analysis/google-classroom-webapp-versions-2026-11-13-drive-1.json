@@ -1,0 +1,158 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-drive-1",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-drive-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:27.454Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "education",
+  "flow": "search",
+  "flow_name": "Drive",
+  "flow_position": 3,
+  "name": "Search",
+  "description": "Search screen with a sidebar and a search bar. Light theme, 7 text elements.",
+  "text": "Drive\nSearch in Drive\nUpgrade\n+ New\nMy Drive > Classroom › Developer Meeting About developer -\n(Type →) (People • (Modified •) (source •)\n• Ask Gemini\nHome\nProjects\nE\nMy Drive\n• L0\nComputers\n& Shared with me\nRecent\nStarred\n• Spam\n• Bin\n• Storage\nDrop files here\n21.6 MB of 15 GB used\nor use the New button.\nGet more storage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search in Drive”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a sidebar and a search bar. Light theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Event detail”",
+        "Reached from “Splash”",
+        "Leads to “Search in Drive”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:48 in the recording",
+        "Frame 1366 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcfd",
+      "role": "background",
+      "share": 0.949
+    },
+    {
+      "hex": "#d9e0e1",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#c1c5c4",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#ecd485",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#baceef",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 1366,
+    "atSeconds": 408.3,
+    "endSeconds": 410.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Home",
+      "Projects",
+      "Drive",
+      "Computers",
+      "Shared with me",
+      "Recent",
+      "Starred",
+      "Spam",
+      "Bin",
+      "Storage",
+      "MB of 15 GB used",
+      "Get more storage"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search in Drive",
+    "headline": "Drop files here"
+  },
+  "crawler": {
+    "nodeId": "s122",
+    "depth": 121,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s121",
+        "via": "Open Search in Drive",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s123",
+        "via": "Wait 1.8s",
+        "name": "Search in Drive"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

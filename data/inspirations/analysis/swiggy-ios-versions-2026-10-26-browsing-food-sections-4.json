@@ -1,0 +1,156 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-26-browsing-food-sections-4",
+  "screen_id": "swiggy-ios-versions-2026-10-26-browsing-food-sections-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:50:14.392Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Browsing food sections",
+  "flow_position": 15,
+  "name": "Checkout",
+  "description": "Checkout screen with a 4-item tab bar. Dark theme, 25 text elements.",
+  "text": "9:41 4\n•il\n'gourmet.\nPremium\nGreat\nExceptional\nIngredients\npackaging\nTaste\nExquisite Taste, Exceptional Value\nUPTO+\nFLAT+\nP/\n60% OFF O\n·200 OFF •\nO\nBolt5 Food in 15 mins\nSort By\nFilter\nRc\nV\nRestaurants to explore\nAd\nKFC\nCheckout\nView full menu\n1ltem • {399\n=4\nSave\n15 MIN\nNEW\nBig\nNow!\nEatRight\nGourmet\nFood\nBolt",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "checkout",
+    "premium",
+    "food",
+    "bolt",
+    "gourmet",
+    "eatright",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Food, Bolt, Gourmet, EatRight",
+        "Navigation title reads “Exquisite Taste, Exceptional Value”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a 4-item tab bar. Dark theme, 25 text elements.",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 27 in “Food”",
+        "Reached from “Checkout — loading”",
+        "Leads to “Checkout”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:04 in the recording",
+        "Frame 1618 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c1717",
+      "role": "background",
+      "share": 0.671
+    },
+    {
+      "hex": "#21322d",
+      "role": "surface",
+      "share": 0.157
+    },
+    {
+      "hex": "#454842",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#b2c084",
+      "role": "text",
+      "share": 0.022
+    },
+    {
+      "hex": "#b58410",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xws5-rihcb2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 1618,
+    "atSeconds": 484.5,
+    "endSeconds": 485.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [
+      "Food",
+      "Bolt",
+      "Gourmet",
+      "EatRight"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Exquisite Taste, Exceptional Value",
+    "headline": "'gourmet"
+  },
+  "crawler": {
+    "nodeId": "s241",
+    "depth": 240,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s240",
+        "via": "Wait 0.9s",
+        "name": "Checkout — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s242",
+        "via": "Tap “'gourmet.”",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

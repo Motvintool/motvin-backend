@@ -1,0 +1,145 @@
+{
+  "screenId": "notion-ios-versions-2026-10-24-logging-in-with-email-3",
+  "screen_id": "notion-ios-versions-2026-10-24-logging-in-with-email-3",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T09:42:00.185Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 3,
+  "name": "Email sign-in",
+  "description": "Sign up screen with 2 input fields. Dark theme, 13 text elements.",
+  "text": "ChatGPT\n9.21c\n•ll\nApple\nMicrosoft\nPasskey\nSSO\nEmail\nEmail\nmotvintool@gmail.com\nUse an organization email to easily collaborate with\nteammates\n• Continue\nNew user? Sign up\nBy continuing, you acknowledge that you understand\nand agree to the Terms & Conditions and Privacy Policy\nPrivacy & terms Need help?\n© 2026 Notion Labs, Inc.",
+  "purpose": "Allow the user to sign in with an email or a social account.",
+  "primary_action": "Enter email and tap Continue",
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 2 input fields. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 9 in “Logging in with email”",
+        "Reached from “Sign in with email — scrolled”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:23 in the recording",
+        "Frame 82 of 1550 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1b1e",
+      "role": "background",
+      "share": 0.912
+    },
+    {
+      "hex": "#1f4062",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#383638",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#535052",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#686669",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Notion.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1550,
+    "frame": 82,
+    "atSeconds": 23.4,
+    "endSeconds": 24.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Open Create account",
+        "name": "Sign in with email — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Wait 1.5s",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

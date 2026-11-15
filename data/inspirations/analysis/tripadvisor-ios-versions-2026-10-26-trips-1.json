@@ -1,0 +1,154 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-trips-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-trips-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:49.900Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Trips",
+  "flow_position": 1,
+  "name": "Explore home",
+  "description": "Home screen with a 5-item tab bar. Dark theme, 8 text elements.",
+  "text": "9:414\noll\nMy trips\nTrip to India\n:\nt Add dates/days\n• 2 saves\nCompleted trips\nYour completed trips will appear here.\n+\nAccount\nExplore\nMap\nTrips\nReview",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “My trips”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 5-item tab bar. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Deleting”",
+        "Reached from “Explore home”",
+        "Leads to “My trips toast”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:02 in the recording",
+        "Frame 1219 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020102",
+      "role": "background",
+      "share": 0.865
+    },
+    {
+      "hex": "#212022",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#3d3b3d",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#5a585a",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#9c9894",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1219,
+    "atSeconds": 362.7,
+    "endSeconds": 366,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My trips",
+    "headline": "Completed trips"
+  },
+  "crawler": {
+    "nodeId": "s147",
+    "depth": 146,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s146",
+        "via": "Open My trips",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s148",
+        "via": "Tap “My trips”",
+        "name": "My trips toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

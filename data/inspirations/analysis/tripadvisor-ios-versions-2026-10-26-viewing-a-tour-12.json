@@ -1,0 +1,155 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-viewing-a-tour-12",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-viewing-a-tour-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:42.432Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "travel",
+  "flow": "onboarding",
+  "flow_name": "Viewing a tour",
+  "flow_position": 5,
+  "name": "Location permission",
+  "description": "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 13 text elements.",
+  "text": "9:414\nX\nSelect photos\n\"Tripadvisor\" would like full\naccess to your Photo Library.\nTripadvisor uses your photo library to\nallow you to select photos when\ndeciding to upload to the community.\n4,541 Photos, 395 Videos\nPhotos may contain data associated with\nlocation, depth information, captions and audio.\nLimit Access...\nAllow Full Access\nDon't Allow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "video",
+    "location",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select photos”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 13 text elements.",
+        "Calls to action: “Allow Full Access”",
+        "13 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 7 in “Opening a page (Explore)”",
+        "Reached from “Operator 24”",
+        "Leads to “Select photos”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 3:27 in the recording",
+        "Frame 693 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080709",
+      "role": "background",
+      "share": 0.617
+    },
+    {
+      "hex": "#282629",
+      "role": "surface",
+      "share": 0.196
+    },
+    {
+      "hex": "#4a4647",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#6b6b67",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#7d8381",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 693,
+    "atSeconds": 207.3,
+    "endSeconds": 208.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Full Access"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select photos",
+    "headline": "\"Tripadvisor\" would like full"
+  },
+  "crawler": {
+    "nodeId": "s076",
+    "depth": 75,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s075",
+        "via": "Open Select photos",
+        "name": "Operator 24"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s077",
+        "via": "Tap “Select photos”",
+        "name": "Select photos"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

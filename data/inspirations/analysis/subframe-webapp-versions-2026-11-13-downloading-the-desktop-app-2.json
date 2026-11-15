@@ -1,0 +1,142 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-downloading-the-desktop-app-2",
+  "screen_id": "subframe-webapp-versions-2026-11-13-downloading-the-desktop-app-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:19:02.523Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Downloading the desktop app",
+  "flow_position": 59,
+  "name": "Sign in",
+  "description": "Login screen. Light theme, 12 text elements.",
+  "text": "Subframe\nLog in\nDownload\nSubframe Desktop\nVersion 0.0.284\nmacOS\nApple Silicon\nIntel\nWindows\nWindows (64-bit)\nLinux coming soon.\nOpen in web →",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subframe Desktop”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Light theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 59 of 75 in “Subscribing”",
+        "Reached from “Agents”",
+        "Leads to “Agents”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 14:11 in the recording",
+        "Frame 2843 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f7f6",
+      "role": "background",
+      "share": 0.965
+    },
+    {
+      "hex": "#b3b4b3",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#d7d8d7",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#979897",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#7f7f7f",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 2843,
+    "atSeconds": 851.1,
+    "endSeconds": 853.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Subframe Desktop",
+    "headline": "Subframe Desktop"
+  },
+  "crawler": {
+    "nodeId": "s190",
+    "depth": 193,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s189",
+        "via": "Wait 6.9s",
+        "name": "Agents"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s191",
+        "via": "Back to Agents",
+        "name": "Agents"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

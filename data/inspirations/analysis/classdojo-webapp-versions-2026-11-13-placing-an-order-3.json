@@ -1,0 +1,152 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-placing-an-order-3",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-placing-an-order-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:45.847Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Placing an order",
+  "flow_position": 5,
+  "name": "Checkout",
+  "description": "Checkout screen with 6 input fields and prices. Light theme, 36 text elements.",
+  "text": "ClassDojo Shop\nExpress checkout\nKatie Plushie\n$31.99\nEDU-MOJO($15,99)\n$16.00\nOR\nDiscount code\nApply\nContact\nSign in\n• EDU-MOJO X\nEmail\n$16.00\nSubtotal\nV Email me with news and offers\nEnter shipping address\nShipping\nUSD $16.00\nTotal\nDelivery\nO) TOTAL SAVINGS $15.99\nCountry/Region\nUnited States\nFirst name (optional)\nLast name\nCompany (optional)\nAddress\nQ\nApartment, suite, etc. (optional)\nCity\nState\nZIP code\nPhone\nSave this information for next time\nChinnina mothod",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "delivery",
+    "offer",
+    "discount",
+    "address",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "price",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ClassDojo Shop”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with 6 input fields and prices. Light theme, 36 text elements.",
+        "36 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 13 in “Placing an order”",
+        "Reached from “Splash”",
+        "Leads to “Payment method”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 26:54 in the recording",
+        "Frame 5391 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f9f9",
+      "role": "background",
+      "share": 0.961
+    },
+    {
+      "hex": "#dbdbdc",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#bcbbb7",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#8a8d8a",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#a3a3a3",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 5391,
+    "atSeconds": 1614,
+    "endSeconds": 1617.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "ClassDojo Shop",
+    "headline": "Contact"
+  },
+  "crawler": {
+    "nodeId": "s457",
+    "depth": 462,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s456",
+        "via": "Open ClassDojo Shop",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s458",
+        "via": "Tap “State”",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

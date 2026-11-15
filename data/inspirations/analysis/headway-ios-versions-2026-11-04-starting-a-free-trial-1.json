@@ -1,0 +1,146 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-starting-a-free-trial-1",
+  "screen_id": "headway-ios-versions-2026-11-04-starting-a-free-trial-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:47.690Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "healthcare",
+  "flow": "checkout",
+  "flow_name": "Starting a free trial",
+  "flow_position": 35,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Dark theme, 10 text elements.",
+  "text": "9:41 €\nFree trial guide\nTODAY\nNo payment now, just full access to\nthe Premium experience\nDAY 5\nGet a reminder about the end date\nof your free trial\nDAY 7\nCancel in advance to\navoid payment\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "premium",
+    "continue",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Free trial guide”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 35 of 46 in “Success”",
+        "Reached from “Great job!”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:44 in the recording",
+        "Frame 352 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#252325",
+      "role": "background",
+      "share": 0.825
+    },
+    {
+      "hex": "#484647",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#039cff",
+      "role": "accent",
+      "share": 0.052
+    },
+    {
+      "hex": "#184d72",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#694329",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 352,
+    "atSeconds": 104.7,
+    "endSeconds": 106.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Free trial guide",
+    "headline": "No payment now, just full access to",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Open Free trial guide",
+        "name": "Great job!"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s042",
+        "via": "Open Before your free trial ends",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

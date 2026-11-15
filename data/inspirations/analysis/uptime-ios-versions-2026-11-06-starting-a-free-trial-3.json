@@ -1,0 +1,162 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-starting-a-free-trial-3",
+  "screen_id": "uptime-ios-versions-2026-11-06-starting-a-free-trial-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:09.511Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Starting a free trial",
+  "flow_position": 4,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with prices. Dark theme, 16 text elements.",
+  "text": "TRYPREMIUM\nFOR 1 WEEK\nGet 75% OFF if you continue\nApp Store\nUptime Premium\nUptime: Get smarter, stand out\n18+\nSubscription\n1-week free trial\nStarting today\n$ 999 per year\nStarting on 13 Nov 2026\nNo commitment. Cancel at any time in Settings ›\nApple Account at least one day before each renewal date.\nPlan automatically renews until cancelled.\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "premium",
+    "subscription",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "price",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get 75% OFF if you continue”",
+        "Dialog over a dimmed background, covering 36% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with prices. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Success”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:22 in the recording",
+        "Frame 278 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d14",
+      "role": "background",
+      "share": 0.61
+    },
+    {
+      "hex": "#343336",
+      "role": "surface",
+      "share": 0.29
+    },
+    {
+      "hex": "#524f52",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#4e0321",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#6c6a6c",
+      "role": "text",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 278,
+    "atSeconds": 82.2,
+    "endSeconds": 83.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.078125,
+        "w": 0.78125,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get 75% OFF if you continue",
+    "headline": "TRYPREMIUM"
+  },
+  "crawler": {
+    "nodeId": "s035",
+    "depth": 34,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s034",
+        "via": "Tap “TRYPREMIUM”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s036",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

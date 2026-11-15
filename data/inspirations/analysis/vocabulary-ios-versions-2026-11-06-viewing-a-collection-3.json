@@ -1,0 +1,169 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-viewing-a-collection-3",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-viewing-a-collection-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:10.715Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Viewing a collection",
+  "flow_position": 16,
+  "name": "OTP verification",
+  "description": "Verification code bottom sheet, on top of OTP verification with a 5-item tab bar. Dark theme, 14 text elements.",
+  "text": "9:41(\nNewest first\nOldest first\nveracious\n(adj.) Always t\nA-Z\n(She is known fc\nWed, 4 Nov 2026\npetulant\npetfalant ()\n(adj.) Easily annoyed or irritated, especially when\nthings don't go your way\n(The petulant child threw a tantrum when he didn't get\nwhat he wanted.)\nWed, 4 Nov 2026\nNew\nPractice\nTopics\nProfile\nWords\nJourney",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "words",
+    "topics",
+    "journey",
+    "practice",
+    "otp",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Words, Topics, Journey, Practice, Profile",
+        "Navigation title reads “Topics”",
+        "Bottom sheet, covering 16% of the height from 78% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code bottom sheet, on top of OTP verification with a 5-item tab bar. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 96 in “Words”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:32 in the recording",
+        "Frame 910 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#292729",
+      "role": "background",
+      "share": 0.74
+    },
+    {
+      "hex": "#464446",
+      "role": "surface",
+      "share": 0.205
+    },
+    {
+      "hex": "#605e60",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#85999b",
+      "role": "text",
+      "share": 0.004
+    },
+    {
+      "hex": "#787a7c",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 910,
+    "atSeconds": 272.1,
+    "endSeconds": 273.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.3125,
+        "y": 0.78125,
+        "w": 0.59375,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [
+      "Words",
+      "Topics",
+      "Journey",
+      "Practice",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Topics",
+    "headline": "Petulant"
+  },
+  "crawler": {
+    "nodeId": "s122",
+    "depth": 122,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s121",
+        "via": "Tap “New”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s123",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

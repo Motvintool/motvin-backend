@@ -1,0 +1,143 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-adding-a-calendar-2",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-adding-a-calendar-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:13.560Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Adding a calendar",
+  "flow_position": 2,
+  "name": "Choose an account",
+  "description": "A third-party sign-in page, not the app's own design. Dark theme, 16 text elements.",
+  "text": "Sign in with Google\nSigned out\nsurendarv\nsurendarv638@gmail.com\nChoose an account\nSurendar\nmotvintool@gmail.com\nto continue to ClassDojo\nUse another account\ng\nBefore using this app, you can review ClassDojo's Privacy Policy and\nTerms of Service.\nEnglish (United Kingdom)\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose an account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design. Dark theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 7 in “Choosing a date”",
+        "Reached from “Calendar”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 16:56 in the recording",
+        "Frame 3390 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202323",
+      "role": "background",
+      "share": 0.752
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.23
+    },
+    {
+      "hex": "#3d4141",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#596158",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#235056",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 3390,
+    "atSeconds": 1016.1,
+    "endSeconds": 1017.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose an account",
+    "headline": "Choose an account"
+  },
+  "crawler": {
+    "nodeId": "s255",
+    "depth": 255,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s254",
+        "via": "Open Choose an account",
+        "name": "Calendar"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s256",
+        "via": "Wait 1.2s",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

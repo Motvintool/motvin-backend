@@ -1,0 +1,143 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-changing-app-settings-4",
+  "screen_id": "netflix-ios-versions-2026-10-25-changing-app-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:27.074Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Changing app settings",
+  "flow_position": 2,
+  "name": "Video Quality",
+  "description": "Other screen. Dark theme, 8 text elements.",
+  "text": "9:41(\n<\nX\nVideo Quality\nStandard\nV\nDownloads faster and uses less storage\nHigher\nUses more storage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Video Quality”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Video Quality”",
+        "Reached from “App Settings”",
+        "Leads to “App Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:24 in the recording",
+        "Frame 1283 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#19171a",
+      "role": "background",
+      "share": 0.931
+    },
+    {
+      "hex": "#010102",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#38373a",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#69676a",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#4f4e50",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1283,
+    "atSeconds": 384.6,
+    "endSeconds": 385.2,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Video Quality",
+    "headline": "Higher"
+  },
+  "crawler": {
+    "nodeId": "s396",
+    "depth": 395,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s394",
+        "via": "Tap “Video Quality”",
+        "name": "App Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s398",
+        "via": "Wait 0.6s",
+        "name": "App Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

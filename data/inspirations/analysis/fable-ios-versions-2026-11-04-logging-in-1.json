@@ -1,0 +1,162 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-logging-in-1",
+  "screen_id": "fable-ios-versions-2026-11-04-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:18.877Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen, on top of Settings with a primary action labelled “Continue with email”. Dark theme, 6 text elements.",
+  "text": "9:41(\nJoin or sign in\nTrack your books, hit your goals, and\nconnect with millions of fellow readers\nG Continue with Google\n Continue with Apple\nContinue with email\nBy continuing, you agree to Fable's Terms of Service and\nPrivacy Policy.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Join or sign in”",
+        "Bottom sheet over a dimmed background, covering 73% of the height from 23% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen, on top of Settings with a primary action labelled “Continue with email”. Dark theme, 6 text elements.",
+        "Calls to action: “Continue with email”",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 8 in “Logging in with email”",
+        "Reached from “Settings”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 13:54 in the recording",
+        "Frame 2791 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#064a37",
+      "role": "background",
+      "share": 0.507
+    },
+    {
+      "hex": "#1e1c1f",
+      "role": "surface",
+      "share": 0.199
+    },
+    {
+      "hex": "#2d6857",
+      "role": "accent",
+      "share": 0.046
+    },
+    {
+      "hex": "#444245",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#eeebed",
+      "role": "text",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2791,
+    "atSeconds": 834.9,
+    "endSeconds": 837.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.234375,
+        "w": 0.8125,
+        "h": 0.734375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Join or sign in",
+    "headline": "Join or sign in"
+  },
+  "crawler": {
+    "nodeId": "s328",
+    "depth": 329,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s327",
+        "via": "Back to Sign in with email",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s329",
+        "via": "Open Create account",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

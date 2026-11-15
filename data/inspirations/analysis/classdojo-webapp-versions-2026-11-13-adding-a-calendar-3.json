@@ -1,0 +1,149 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-adding-a-calendar-3",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-adding-a-calendar-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:13.678Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Adding a calendar",
+  "flow_position": 3,
+  "name": "Sign-in options",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 19 text elements.",
+  "text": "Sign in with Google\nWhen you allow this access, ClassDojo will be able\nto\nClassDojo wants access to\nMake secondary Google Calendars and see, create,\nchange and delete events on them. See access details\nyour Google Account\nMake sure that you trust ClassDojo\nmotvintool@gmail.com\nReview ClassDojo's privacy policy and Terms of Service to understand\nhow ClassDojo will process and protect your data.\nTo make changes at any time, go to your Google Account.\nLearn how Google helps you share data safely.\nContinue\nCancel\nPrivacy\nTerms\nEnglish (United Kingdom)\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "calendar",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Google Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 19 text elements.",
+        "Calls to action: “Continue”",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 7 in “Choosing a date”",
+        "Reached from “Choose an account”",
+        "Leads to “Splash”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 17:00 in the recording",
+        "Frame 3407 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2223",
+      "role": "background",
+      "share": 0.701
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.263
+    },
+    {
+      "hex": "#3e4143",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#5f645f",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#758d54",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 3407,
+    "atSeconds": 1020.6,
+    "endSeconds": 1022.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your Google Account",
+    "headline": "Your Google Account"
+  },
+  "crawler": {
+    "nodeId": "s256",
+    "depth": 256,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s255",
+        "via": "Wait 1.2s",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s257",
+        "via": "Wait 1.8s",
+        "name": "Splash"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

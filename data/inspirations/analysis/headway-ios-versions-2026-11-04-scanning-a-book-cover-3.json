@@ -1,0 +1,174 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-scanning-a-book-cover-3",
+  "screen_id": "headway-ios-versions-2026-11-04-scanning-a-book-cover-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:02.507Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Scanning a book cover",
+  "flow_position": 18,
+  "name": "Allow camera access dialog",
+  "description": "Dialog over a dimmed screen with a 4-item tab bar and a primary action labelled “Allow camera access”. Dark theme, 17 text elements.",
+  "text": "9:41(\n•ll\nLibrary\nSummaries 1\nRepetition 1 Highlights O\nScan a cover to\nfind summaries\nCor\ne all\nSte\nHa\nAllow camera access\nCamera access lets you scan book\ncovers and find their summaries\nOpen Settings\nCancel\nStepl\nA Brief History of Time\n•\nShorts\nHome\nPlan\nLibrary",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "home",
+    "plan",
+    "shorts",
+    "library",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Plan, Shorts, Library",
+        "Navigation title reads “Allow camera access”",
+        "Dialog over a dimmed background, covering 36% of the height from 31% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a 4-item tab bar and a primary action labelled “Allow camera access”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow camera access”",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 26 in “Home”",
+        "Reached from “Camera permission”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:10 in the recording",
+        "Frame 1636 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1a1e",
+      "role": "background",
+      "share": 0.609
+    },
+    {
+      "hex": "#3e3d40",
+      "role": "surface",
+      "share": 0.238
+    },
+    {
+      "hex": "#020103",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#0597f6",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#59575a",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1636,
+    "atSeconds": 490.2,
+    "endSeconds": 491.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.3125,
+        "w": 0.71875,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Home",
+      "Plan",
+      "Shorts",
+      "Library"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow camera access"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow camera access",
+    "headline": "Find summaries"
+  },
+  "crawler": {
+    "nodeId": "s201",
+    "depth": 201,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s200",
+        "via": "Tap “find summaries”",
+        "name": "Camera permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s202",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

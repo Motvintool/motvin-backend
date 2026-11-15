@@ -1,0 +1,160 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-upgrading-to-pro-3",
+  "screen_id": "memrise-ios-versions-2026-11-08-upgrading-to-pro-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:32:53.377Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Upgrading to Pro",
+  "flow_position": 5,
+  "name": "Checkout",
+  "description": "Checkout dialog over a dimmed screen, on top of Unlock even. Dark theme, 20 text elements.",
+  "text": "Unlock even\nmore features\nJoin 370,000 learners committed\nto PRO\nDouble-Click\nto Pay\nAll languages, always\nLessons to get you speaking\nTargeted Word Lists to fit\nyour goals\nX\nApp Store\nLifetime Plan Offer\nMEM\nMemrise: Language Learning App 4+\nRiSE\nIn-App Purchase\n· 9,000\nOne-time charge\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "checkout",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Unlock even”",
+        "Dialog over a dimmed background, covering 25% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout dialog over a dimmed screen, on top of Unlock even. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “More features”",
+        "Reached from “Unlock even”",
+        "Leads to “More features”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:06 in the recording",
+        "Frame 425 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121113",
+      "role": "background",
+      "share": 0.746
+    },
+    {
+      "hex": "#353333",
+      "role": "surface",
+      "share": 0.215
+    },
+    {
+      "hex": "#525050",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#7e6928",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#a18020",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 425,
+    "atSeconds": 126.6,
+    "endSeconds": 127.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.84375,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Unlock even",
+    "headline": "Join 370,000 learners committed"
+  },
+  "crawler": {
+    "nodeId": "s066",
+    "depth": 65,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s065",
+        "via": "Tap “Unlock even”",
+        "name": "Unlock even"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s067",
+        "via": "Back to More features",
+        "name": "More features"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

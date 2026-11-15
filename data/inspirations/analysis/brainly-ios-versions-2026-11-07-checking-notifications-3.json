@@ -1,0 +1,150 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-checking-notifications-3",
+  "screen_id": "brainly-ios-versions-2026-11-07-checking-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:38.769Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Checking notifications",
+  "flow_position": 3,
+  "name": "Messages (empty)",
+  "description": "Empty state screen. Dark theme, 4 text elements, an empty state.",
+  "text": "9:41C\nMessages\nYou have no messages.\nTo reach out to someone, use the \"Send a\nMessage\" button on their profile.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "message",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Messages”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen. Dark theme, 4 text elements, an empty state.",
+        "4 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Checking notifications”",
+        "Reached from “Notifications”",
+        "Leads to “Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 7:04 in the recording",
+        "Frame 1420 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272c35",
+      "role": "background",
+      "share": 0.96
+    },
+    {
+      "hex": "#454a53",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#676a71",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#b0b8c1",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#7d8085",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 1420,
+    "atSeconds": 424.5,
+    "endSeconds": 426.3,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Messages",
+    "headline": "To reach out to someone, use the \"Send a"
+  },
+  "crawler": {
+    "nodeId": "s208",
+    "depth": 209,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s207",
+        "via": "Wait 1.5s",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s209",
+        "via": "Back to Notifications",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

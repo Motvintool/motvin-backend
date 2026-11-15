@@ -1,0 +1,160 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-creating-a-kahoot-from-a-template-3",
+  "screen_id": "kahoot-ios-versions-2026-11-06-creating-a-kahoot-from-a-template-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:26.401Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Creating a kahoot from a template",
+  "flow_position": 5,
+  "name": "Enter title dialog",
+  "description": "Dialog over a dimmed screen, on top of Add a title. Dark theme, 16 text elements.",
+  "text": "9:41(\nCreate kahoot\nSave\nCancel\nFix\nAdd a title\nTitle\nEnter title\nTheme\nNew\nStandard\nQuestions (12)\n1- True or False\nInsert a true statement here: Ex. The\nauthor mentions that the protagonist\nsucceeds in her mission.\n2 - True or False\nInsert a false state\nAdd Question\n15th president was\n3 - True or False",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "add question",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter title”",
+        "Dialog over a dimmed background, covering 19% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Add a title. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 10 in “Study with True/ detail”",
+        "Reached from “Add a title”",
+        "Leads to “Dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:13 in the recording",
+        "Frame 2049 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2a2627",
+      "role": "background",
+      "share": 0.573
+    },
+    {
+      "hex": "#494241",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#c51834",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#6e222e",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#135aaf",
+      "role": "accent",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 2049,
+    "atSeconds": 613.8,
+    "endSeconds": 615,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.40625,
+        "w": 0.5,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter title",
+    "headline": "Standard",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s297",
+    "depth": 297,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s296",
+        "via": "Tap “Enter title”",
+        "name": "Add a title"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s298",
+        "via": "Open Make sure your questions are complete",
+        "name": "Dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

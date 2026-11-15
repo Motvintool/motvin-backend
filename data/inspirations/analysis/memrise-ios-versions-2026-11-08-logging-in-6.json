@@ -1,0 +1,159 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-logging-in-6",
+  "screen_id": "memrise-ios-versions-2026-11-08-logging-in-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:24.388Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Logging in",
+  "flow_position": 14,
+  "name": "Error",
+  "description": "Error dialog over a dimmed screen, on top of Sign in with email with 1 input field. Dark theme, 10 text elements.",
+  "text": "9:41 €\n•0\nMEM\nRiSE\nEmail\nOopsie, wrong password. Or\nmot\nusername. Maybe it was the\nemail. Let's try again.\nPassv\nOK\nI forgot my password\nSign in now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "sign in now",
+    "error",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Username. Maybe it was the”",
+        "Dialog over a dimmed background, covering 36% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error dialog over a dimmed screen, on top of Sign in with email with 1 input field. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 19 in “Why is Memrise”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:51 in the recording",
+        "Frame 2174 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161d27",
+      "role": "background",
+      "share": 0.74
+    },
+    {
+      "hex": "#363738",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#585a5d",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#797a7a",
+      "role": "text",
+      "share": 0.042
+    },
+    {
+      "hex": "#815e02",
+      "role": "accent",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 2174,
+    "atSeconds": 651.3,
+    "endSeconds": 652.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.375,
+        "w": 0.9375,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Username. Maybe it was the",
+    "headline": "Username. Maybe it was the",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s372",
+    "depth": 371,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s371",
+        "via": "Tap “Sign in now”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s373",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

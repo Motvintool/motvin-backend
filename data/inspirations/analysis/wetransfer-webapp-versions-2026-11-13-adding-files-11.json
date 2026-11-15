@@ -1,0 +1,171 @@
+{
+  "screenId": "wetransfer-webapp-versions-2026-11-13-adding-files-11",
+  "screen_id": "wetransfer-webapp-versions-2026-11-13-adding-files-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:27:45.750Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Adding files",
+  "flow_position": 93,
+  "name": "Payment method",
+  "description": "Payment dialog over a dimmed screen, on top of Payment method with a row of 3 category chips and a search bar. Dark theme, 54 text elements.",
+  "text": "we\nmotvintool@gmail.com\nBranding Contacts\n4 Upgrade\nTransfers Pricing\nFree plan\nClose preview\nSend\naccour\n• docs\nQ Search\nJ) Recents\nRequest\n=0 Shared\n• audit-motvin.md\n• motvin-scripts\ndocs\nPlugin\nreview-motvin.md\nfix-names.py\nexpires in 3 days\nFavourites\nCOSLO\nAlbums\nscreens-review.md\nrecords\nfix-round2.py\n* Applications\nlaunch-video\nTransfer settings\nDesktop\nmotvin-backend\nmotvin-scripts\nDocuments\nShowcase\n• Expiry\no All settings\nmotvin-web\nDraft\n• motvin-web-recorder\ndemo\ni scratch\n!i\nT Name\nscripts-tmp\nSign\nvideos\n• tmp-scripts\nrecords\nDownloads\nLocations\nCancel\niCloud Drive\nOpen\n→ docs\naccount-outreach\n+ Add file\nSelect all items\n• Add folder\nEdit mode",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "review",
+    "video",
+    "location",
+    "payment",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “ICloud Drive”",
+        "Category strip: Plugin, Favourites, COSLO",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 14% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment dialog over a dimmed screen, on top of Payment method with a row of 3 category chips and a search bar. Dark theme, 54 text elements.",
+        "54 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 93 of 301 in “Close panel”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 9:21 in the recording",
+        "Frame 1872 of 4027 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181c1d",
+      "role": "background",
+      "share": 0.597
+    },
+    {
+      "hex": "#2d3437",
+      "role": "surface",
+      "share": 0.225
+    },
+    {
+      "hex": "#777a7b",
+      "role": "text",
+      "share": 0.144
+    },
+    {
+      "hex": "#474f52",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#0d5ab7",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "WeTransfer.mov",
+    "fps": 3.3333333333333335,
+    "frames": 4027,
+    "frame": 1872,
+    "atSeconds": 561,
+    "endSeconds": 562.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.21875,
+        "y": 0.546875,
+        "w": 0.46875,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 54,
+    "tabLabels": [],
+    "chipLabels": [
+      "Plugin",
+      "Favourites",
+      "COSLO"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "ICloud Drive",
+    "headline": "Accour"
+  },
+  "crawler": {
+    "nodeId": "s164",
+    "depth": 164,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s163",
+        "via": "Open ICloud Drive",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s165",
+        "via": "Dismiss",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

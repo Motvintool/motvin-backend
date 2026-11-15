@@ -1,0 +1,163 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-chatting-with-an-ai-tutor-7",
+  "screen_id": "nibble-ios-versions-2026-11-07-chatting-with-an-ai-tutor-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:05.361Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Chatting with an AI tutor",
+  "flow_position": 9,
+  "name": "Permission prompt",
+  "description": "Permission toast over a dimmed screen with a primary action labelled “Allow”. Light theme, 18 text elements.",
+  "text": "9:41(\nAl Tutor\nX\nDecode the sneakiest detail in Renaissance...\nLooks like an ordinary wedding portrait... but it's\ncloser to a signed contract, with two strangers\nhidden inside. Before I show you — do you think\nyou could spot them?\n\"Nibble\" would like to access\nthe Microphone.\nAllow microphone access to speak to\nyour tutor instead of typing.\nHe\nhic\nDon't Allow\nAllow\nclo\nstart 100....•3\nHold to speak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hic”",
+        "Toast over a dimmed background, covering 5% of the height from 59% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen with a primary action labelled “Allow”. Light theme, 18 text elements.",
+        "Calls to action: “Allow”",
+        "18 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 16 in “Al Tutor”",
+        "Reached from “Al Tutor — scrolled”",
+        "Leads to “Al Tutor”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:36 in the recording",
+        "Frame 1524 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#817f81",
+      "role": "background",
+      "share": 0.636
+    },
+    {
+      "hex": "#434143",
+      "role": "surface",
+      "share": 0.212
+    },
+    {
+      "hex": "#676367",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#1f1a17",
+      "role": "text",
+      "share": 0.024
+    },
+    {
+      "hex": "#430973",
+      "role": "accent",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 1524,
+    "atSeconds": 456.6,
+    "endSeconds": 457.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.59375,
+        "w": 0.1875,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hic",
+    "headline": "\"Nibble\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s224",
+    "depth": 226,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s223",
+        "via": "Open Hic",
+        "name": "Al Tutor — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s225",
+        "via": "Dismiss",
+        "name": "Al Tutor"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

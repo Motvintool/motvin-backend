@@ -1,0 +1,148 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-exploring-the-tasks-menu-3",
+  "screen_id": "asana-ios-versions-2026-11-04-exploring-the-tasks-menu-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:57.799Z",
+  "screen_type": "category",
+  "published_as": "feed",
+  "states": [],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Exploring the tasks menu",
+  "flow_position": 2,
+  "name": "Complete",
+  "description": "Feed screen with a 3-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41(\n•Il\nMy tasks\nCancel\n• Recently assigned\n...\n• Do today\n•..\n• Do next week\n...\n• Do later\n..•\n+= Add a custom section\nLT Move\n2 Assignee\nComplete\nDate",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "complete",
+    "lt move",
+    "date",
+    "feed",
+    "category",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My tasks”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “My tasks”",
+        "Reached from “Home home”",
+        "Leads to “Home home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.3s at 2:23 in the recording",
+        "Frame 498 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1f22",
+      "role": "background",
+      "share": 0.948
+    },
+    {
+      "hex": "#3c3e41",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#505154",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#717275",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#adadaf",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 498,
+    "atSeconds": 143.4,
+    "endSeconds": 149.7,
+    "holdSeconds": 6.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My tasks",
+    "headline": "Do today",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s059",
+    "depth": 58,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s058",
+        "via": "Switch to Complete",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s060",
+        "via": "Tap “• Recently assigned”",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

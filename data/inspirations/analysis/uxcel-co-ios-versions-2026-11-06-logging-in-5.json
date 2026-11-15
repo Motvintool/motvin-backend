@@ -1,0 +1,172 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-logging-in-5",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:42.862Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet over a dimmed screen, on top of Sign in with email with 1 input field, a paged carousel and a primary action labelled “Continue”. Dark theme, 14 text elements.",
+  "text": "9:41 €\n•ll\nLog in\nEmail address\nmotvintool@gmail.com\nPassword\n•••\n•••\nForgot my_password\nContinue\nOr\nContinue with Google\nContinue with Apple\nf\nContinue with Facebook\nContinue with SSO",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Google”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet over a dimmed background, covering 59% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet over a dimmed screen, on top of Sign in with email with 1 input field, a paged carousel and a primary action labelled “Continue”. Dark theme, 14 text elements.",
+        "Calls to action: “Continue”, “Continue with Google”, “Continue with Apple”, “Continue with Facebook”",
+        "14 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 19 in “Logging in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Forgot password”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 8:41 in the recording",
+        "Frame 1833 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272630",
+      "role": "background",
+      "share": 0.769
+    },
+    {
+      "hex": "#414048",
+      "role": "surface",
+      "share": 0.186
+    },
+    {
+      "hex": "#6b6a71",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#476ea5",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#66a8fd",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1833,
+    "atSeconds": 521.1,
+    "endSeconds": 522.9,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.390625,
+        "w": 0.9375,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Continue with Google",
+      "Continue with Apple",
+      "Continue with Facebook"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Google",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s234",
+    "depth": 233,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s233",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s235",
+        "via": "Open Forgot password",
+        "name": "Forgot password"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

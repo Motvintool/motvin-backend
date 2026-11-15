@@ -1,0 +1,146 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-contacting-support-2",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-contacting-support-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:50.414Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Contacting support",
+  "flow_position": 2,
+  "name": "OTP verification",
+  "description": "Verification code screen. Light theme, 18 text elements.",
+  "text": "9:41€\n•il\nCustomer Support\nHi Surendarv,\nWe are here to help you at every\nstep. Please browse through the\noptions below and tap on what\nyou're looking for.\nNeed help with your trip?\nView and manage all your bookings.\nYou havent made any bookings with us.\nOnce you book.you can view your bookings\nfrom here or by going to MyTrips from home\nAdd Booking\nView and manage a booking by entering the\nbooking ID here. For verifying the details, an\nOTP will be sent to the customer who has made\nthe booking.\nBooking ID O\nEnter a Booking ID\nSend OTP",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "send otp",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Customer Support”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Verifying OTP”",
+        "Reached from “Myna home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 14:15 in the recording",
+        "Frame 2856 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf8fa",
+      "role": "background",
+      "share": 0.82
+    },
+    {
+      "hex": "#dedddf",
+      "role": "surface",
+      "share": 0.109
+    },
+    {
+      "hex": "#c5c4c6",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#9f9ea0",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#878688",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 2856,
+    "atSeconds": 855.3,
+    "endSeconds": 857.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Customer Support",
+    "headline": "Add Booking",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s380",
+    "depth": 379,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s379",
+        "via": "Tap “Customer Support”",
+        "name": "Myna home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s381",
+        "via": "Back to Home home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

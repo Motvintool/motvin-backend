@@ -1,0 +1,150 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-onboarding-15",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-onboarding-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:29:31.881Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 17 text elements.",
+  "text": "Linked in\nSign in\nNew to Linkedln? Join now\nSign in with Apple\nBy continuing, you agree to Linkedln's User Agreement, Privacy\nPolicy, and Cookie Policy.\nor\nEmail or phone\nmotvintool@gmail.com\nPassword\n•....•.••.\n— Wrong email or password.\nForgot password?\nKeep me signed in\nSign in\nLinkedln Corporation © 2026\nUser Agreement Privacy Policy Community Guidelines Cookie Policy Copyright Policy Send Feedback Language -",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 17 text elements.",
+        "Calls to action: “Sign in”",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 79 in “Logging in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:17 in the recording",
+        "Frame 60 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.95
+    },
+    {
+      "hex": "#d7e1e8",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#0269cb",
+      "role": "accent",
+      "share": 0.007
+    },
+    {
+      "hex": "#9dc4e3",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#217fd1",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 60,
+    "atSeconds": 17.1,
+    "endSeconds": 18.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Password"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Wait 0.6s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Scroll",
+        "name": "Sign in with email — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

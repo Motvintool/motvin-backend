@@ -1,0 +1,156 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-logging-in-with-email-2",
+  "screen_id": "ted-ios-versions-2026-11-08-logging-in-with-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:36.850Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "Hide or share email",
+  "description": "A third-party sign-in page, not the app's own design with the keyboard open and a primary action labelled “Continue”. Dark theme, 33 text elements.",
+  "text": "9:41 C\noll\nSign in to TED\nGet a personalized TED experience across all\nyour devices, from Web to apps to TV\nContinue with Apple\nContinue with Google\nOr use your email\nEmail address\nexample@ted.com\nContinue\nHide My Email\ni\nW\nt\ne\nr\ny\nO\nk\nf\nh\nd\ng\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "external-auth",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in to TED”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with the keyboard open and a primary action labelled “Continue”. Dark theme, 33 text elements.",
+        "Calls to action: “Continue”",
+        "33 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 10 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:52 in the recording",
+        "Frame 1175 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18171b",
+      "role": "background",
+      "share": 0.635
+    },
+    {
+      "hex": "#343235",
+      "role": "surface",
+      "share": 0.203
+    },
+    {
+      "hex": "#5b595b",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#f9f8f9",
+      "role": "text",
+      "share": 0.033
+    },
+    {
+      "hex": "#d5d4d5",
+      "role": "surface",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 1175,
+    "atSeconds": 352.2,
+    "endSeconds": 352.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in to TED",
+    "headline": "Example@ted.com"
+  },
+  "crawler": {
+    "nodeId": "s153",
+    "depth": 153,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s152",
+        "via": "Back to Hide or share email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s154",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,163 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-setting-an-alarm-1",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-setting-an-alarm-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:18.523Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting an alarm",
+  "flow_position": 56,
+  "name": "Permission prompt",
+  "description": "Permission screen with a 5-item tab bar and a primary action labelled “Allow”. Dark theme, 14 text elements.",
+  "text": "9:41(\n•00 5\nAlarm\nSet an alarm that reminds you to practice\nwords every day\nAlarm\nAllow \"Vocabulary\" to schedule\nalarms and timers?\nThis will allow the app to schedule\nalarms and timers that can play\nsounds and appear onscreen even if a\nFocus is active.\nWe'll schedule alarms for reminders\nyou create in the app.\nDon't Allow\nAllow\n88\nTopics\nPractice\nProfile\nWords\nJourney",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "words",
+    "topics",
+    "journey",
+    "practice",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Words, Topics, Journey, Practice, Profile",
+        "Navigation title reads “Words every day”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a 5-item tab bar and a primary action labelled “Allow”. Dark theme, 14 text elements.",
+        "Calls to action: “Allow”",
+        "14 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 56 of 96 in “Words”",
+        "Reached from “Words home”",
+        "Leads to “Words home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:29 in the recording",
+        "Frame 1500 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181518",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#323134",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#515052",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#10a0fd",
+      "role": "accent",
+      "share": 0.013
+    },
+    {
+      "hex": "#154061",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 1500,
+    "atSeconds": 449.1,
+    "endSeconds": 450.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [
+      "Words",
+      "Topics",
+      "Journey",
+      "Practice",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Words every day",
+    "headline": "Sounds and appear onscreen even if a"
+  },
+  "crawler": {
+    "nodeId": "s215",
+    "depth": 215,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s214",
+        "via": "Open Words every day",
+        "name": "Words home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s216",
+        "via": "Wait 1.2s",
+        "name": "Words home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

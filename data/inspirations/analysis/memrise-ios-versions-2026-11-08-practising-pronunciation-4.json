@@ -1,0 +1,162 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-practising-pronunciation-4",
+  "screen_id": "memrise-ios-versions-2026-11-08-practising-pronunciation-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:12.322Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Practising pronunciation",
+  "flow_position": 5,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Onboarding step with a primary action labelled “Allow”. Dark theme, 17 text elements.",
+  "text": "9:41C\nTr\n\"Memrise\" would like to access\nthe Microphone.\nre\nMemrise uses your microphone so\nm\nthat you can practice speaking. For\nexample, for dictation in conversation\nYd\nun\npractice or to get feedback on your\nde\npronunciation.\ndo\nDon't Allow\nAllow\nGive microphone access\nDon't use pronunciation",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Example, for dictation in conversation”",
+        "Dialog over a dimmed background, covering 36% of the height from 31% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Onboarding step with a primary action labelled “Allow”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow”",
+        "17 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 36 in “Pronounce words you know”",
+        "Reached from “Onboarding step”",
+        "Leads to “Try pronouncing this word”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:49 in the recording",
+        "Frame 1367 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1e24",
+      "role": "background",
+      "share": 0.835
+    },
+    {
+      "hex": "#373838",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#825f05",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#5b460e",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#585a5d",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1367,
+    "atSeconds": 409.8,
+    "endSeconds": 410.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.3125,
+        "w": 0.6875,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Example, for dictation in conversation",
+    "headline": "Example, for dictation in conversation"
+  },
+  "crawler": {
+    "nodeId": "s242",
+    "depth": 241,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s241",
+        "via": "Open Example, for dictation in conversation",
+        "name": "Onboarding step"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s243",
+        "via": "Open Try pronouncing this word",
+        "name": "Try pronouncing this word"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

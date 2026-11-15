@@ -1,0 +1,156 @@
+{
+  "screenId": "google-gemini-ios-versions-2026-10-25-talking-with-gemini-live-6",
+  "screen_id": "google-gemini-ios-versions-2026-10-25-talking-with-gemini-live-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:09:23.761Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Talking with Gemini Live",
+  "flow_position": 34,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Choose Gemini's voice. Dark theme, 1 text element.",
+  "text": "•\n9:41C\n..•",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 6% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Choose Gemini's voice. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 34 of 40 in “Gemini Auto”",
+        "Reached from “Choose Gemini's voice”",
+        "Leads to “Success”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 2:59 in the recording",
+        "Frame 615 of 1604 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e0207",
+      "role": "background",
+      "share": 0.963
+    },
+    {
+      "hex": "#44252b",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#5f505d",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#2d4990",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#1b1f48",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvo4xrid-u0twnj.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1604,
+    "frame": 615,
+    "atSeconds": 179.1,
+    "endSeconds": 184.8,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.21875,
+        "y": 0.0625,
+        "w": 0.65625,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s058",
+    "depth": 58,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s057",
+        "via": "Open Toast",
+        "name": "Choose Gemini's voice"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s059",
+        "via": "Dismiss",
+        "name": "Success"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

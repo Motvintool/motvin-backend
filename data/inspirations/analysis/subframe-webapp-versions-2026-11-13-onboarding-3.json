@@ -1,0 +1,158 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-onboarding-3",
+  "screen_id": "subframe-webapp-versions-2026-11-13-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:38.065Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "OTP verification",
+  "description": "Verification code dialog over a dimmed screen, on top of Sign-in options with a primary action labelled “Continue to”. Dark theme, 8 text elements.",
+  "text": "Continue to\nSubframe.\nEnter code sent to motvintool@gmail.com\n7\n3\n3\nU\nBack to login",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "otp",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Subframe”",
+        "Dialog over a dimmed background, covering 34% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code dialog over a dimmed screen, on top of Sign-in options with a primary action labelled “Continue to”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue to”",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Logging in”",
+        "Reached from “Sign-in options”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 17.1s at 0:16 in the recording",
+        "Frame 110 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222222",
+      "role": "background",
+      "share": 0.985
+    },
+    {
+      "hex": "#454545",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#838383",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#646463",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 110,
+    "atSeconds": 16.2,
+    "endSeconds": 33.3,
+    "holdSeconds": 17.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.34375,
+        "w": 0.25,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue to"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Subframe",
+    "headline": "Subframe"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Tap “Continue with Google”",
+        "name": "Sign-in options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

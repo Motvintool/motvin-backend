@@ -1,0 +1,161 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-browsing-programs-1",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-browsing-programs-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:45.797Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Browsing programs",
+  "flow_position": 15,
+  "name": "Loading state",
+  "description": "Loading state with a 5-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:41C\n#Sale\nPrograms\nDiscover\nMasteries\nEnglish (EN)\nBrowse by language\nPrograms\nEve Al\nShorts\nToday\nMeditations",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "today",
+    "programs",
+    "eve al",
+    "meditations",
+    "home",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Today, Programs, Eve Al, Meditations, Shorts",
+        "Navigation title reads “Discover”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 5-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 60 in “Today”",
+        "Reached from “Today home”",
+        "Leads to “MEDETATa home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:52 in the recording",
+        "Frame 1176 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141822",
+      "role": "background",
+      "share": 0.921
+    },
+    {
+      "hex": "#353943",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#5b5c65",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#9b9aa2",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#e8e6e9",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 1176,
+    "atSeconds": 352.2,
+    "endSeconds": 353.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Today",
+      "Programs",
+      "Eve Al",
+      "Meditations",
+      "Shorts"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Discover",
+    "headline": "Discover"
+  },
+  "crawler": {
+    "nodeId": "s162",
+    "depth": 161,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s161",
+        "via": "Open Discover",
+        "name": "Today home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s163",
+        "via": "Wait 0.9s",
+        "name": "MEDETATa home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,154 @@
+{
+  "screenId": "jitter-webapp-versions-2026-11-13-reviewing-workspace-settings-1",
+  "screen_id": "jitter-webapp-versions-2026-11-13-reviewing-workspace-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:32:11.054Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Reviewing workspace settings",
+  "flow_position": 30,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a search bar, a primary action labelled “Get started” and prices. Light theme, 44 text elements.",
+  "text": "Jitter\nMy files\nM\nSettings\nSearch\nGet started\nYour plan\n• Drafts\nTemplates\nThe my team workspace is on the Free Plan.\nWorkspace\nmy team\nPro\nEnterprise\nPro\nMax\nUltra\n$15pored antumgh\nAll files\nbilled annually\nBrand Kits\nYearly -21%\nBilling cycle\nMonthly\nFor individuals and freelancers.\nNew folder\n+\nUnlock unlimited files and HD export.\n$180\nJitter Pro\nV Everything in Free\n$228\nUpgrade your plan\n$15 x 1 editor × 12 months\nV Unlimited files & folders\nInvite members\n1080p, 60fps export\nWorkspace settings\n203\nUpgrade to Pro\nV ProRes, WebM export\nTrash\nV Image → Video\nhttps://jitter.video/teams/?id=ba4efd1b-4b11-4123-96e7-a15fd4eb08ad",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "video",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "price",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My files”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a search bar, a primary action labelled “Get started” and prices. Light theme, 44 text elements.",
+        "Calls to action: “Get started”",
+        "44 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 30 of 64 in “Browsing a category”",
+        "Reached from “Brand Kits”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:10 in the recording",
+        "Frame 1840 of 2122 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f3f3f5",
+      "role": "background",
+      "share": 0.9
+    },
+    {
+      "hex": "#d4d4d6",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#656467",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#110d13",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#adacb0",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Jitter.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2122,
+    "frame": 1840,
+    "atSeconds": 550.8,
+    "endSeconds": 552.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 44,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My files",
+    "headline": "Settings"
+  },
+  "crawler": {
+    "nodeId": "s192",
+    "depth": 192,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s191",
+        "via": "Open My files",
+        "name": "Brand Kits"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s193",
+        "via": "Wait 1.5s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

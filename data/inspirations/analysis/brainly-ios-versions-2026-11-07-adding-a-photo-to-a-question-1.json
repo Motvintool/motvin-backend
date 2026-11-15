@@ -1,0 +1,168 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-adding-a-photo-to-a-question-1",
+  "screen_id": "brainly-ios-versions-2026-11-07-adding-a-photo-to-a-question-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:25.787Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Adding a photo to a question",
+  "flow_position": 23,
+  "name": "Camera permission",
+  "description": "Permission dialog over a dimmed screen, on top of Ask question form with the keyboard open and a primary action labelled “Allow”. Dark theme, 24 text elements.",
+  "text": "9:41€\n.o0l\nC\nAsk question\nCBSE BOARD XII\nHey\n\"Brainly\" would like to access\nthe Camera.\nThis lets you scan questions, set up\nyour avatar, and add pictures to your\ncontent\nDon't Allow\nAllow\nW\nПЧУЧЛ\nh\nd\nj\nS\ng\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Brainly\" would like to access”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 33% of the height from 33% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Ask question form with the keyboard open and a primary action labelled “Allow”. Dark theme, 24 text elements.",
+        "Calls to action: “Allow”",
+        "24 text elements recognised",
+        "State: permission, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 48 in “Filling in a form”",
+        "Reached from “Ask question form”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:37 in the recording",
+        "Frame 527 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#18191d",
+      "role": "background",
+      "share": 0.862
+    },
+    {
+      "hex": "#333437",
+      "role": "surface",
+      "share": 0.102
+    },
+    {
+      "hex": "#545457",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#b9b7bc",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#6d6d71",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 527,
+    "atSeconds": 157.8,
+    "endSeconds": 158.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.328125,
+        "w": 0.65625,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Brainly\" would like to access",
+    "headline": "\"Brainly\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s075",
+    "depth": 75,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s074",
+        "via": "Open \"Brainly\" would like to access",
+        "name": "Ask question form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s076",
+        "via": "Open Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,157 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-getting-directions-5",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-getting-directions-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:49.941Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Getting directions",
+  "flow_position": 19,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field and a primary action labelled “Continue”. Light theme, 10 text elements.",
+  "text": "ChatGPT\nLog in or sign up\nG Continue with Google\n• Continue with Apple\n& Continue with phone\nOR\nEmail address\nContinue\nTerms of use\nPrivacy_policy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "address",
+    "login",
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "cta",
+    "button",
+    "legal-text",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in or sign up”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field and a primary action labelled “Continue”. Light theme, 10 text elements.",
+        "Calls to action: “Continue”",
+        "10 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 26 in “Reading messages”",
+        "Reached from “Free offer”",
+        "Leads to “Free offer”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 11:09 in the recording",
+        "Frame 2241 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfcfb",
+      "role": "background",
+      "share": 0.962
+    },
+    {
+      "hex": "#dddedd",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#bdbebd",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#6f6f6f",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 2241,
+    "atSeconds": 669.6,
+    "endSeconds": 672.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log in or sign up",
+    "headline": "Continue with phone"
+  },
+  "crawler": {
+    "nodeId": "s128",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s127",
+        "via": "Open Log in or sign up",
+        "name": "Free offer"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s129",
+        "via": "Wait 3s",
+        "name": "Free offer"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

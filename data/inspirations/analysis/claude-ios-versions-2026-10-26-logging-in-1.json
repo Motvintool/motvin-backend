@@ -1,0 +1,147 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-logging-in-1",
+  "screen_id": "claude-ios-versions-2026-10-26-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:12.293Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Loading state — scrolled",
+  "description": "Login screen, scrolled further down from Loading state. Dark theme, 5 text elements.",
+  "text": "9:41C\nClaude\nThe AI for problem solvers\nG Continue with Google\né Continue with Apple\nPersonal or work email\nBy continuing, you agree to Anthropic's Consumer Terms and\nUsage Policy, and acknowledge their Privacy Policy.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Loading state. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 19 in “Logging in”",
+        "Reached from “Loading state — scrolled — loading”",
+        "Leads to “Sign-in options”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:02 in the recording",
+        "Frame 11 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191719",
+      "role": "background",
+      "share": 0.806
+    },
+    {
+      "hex": "#3d393b",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#f9f8f9",
+      "role": "text",
+      "share": 0.042
+    },
+    {
+      "hex": "#dddbdd",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#8b8789",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 11,
+    "atSeconds": 2.1,
+    "endSeconds": 3.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "The AI for problem solvers"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Scroll",
+        "name": "Loading state — scrolled — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “The AI for problem solvers”",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

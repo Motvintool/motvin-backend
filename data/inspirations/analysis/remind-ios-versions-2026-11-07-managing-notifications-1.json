@@ -1,0 +1,140 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-managing-notifications-1",
+  "screen_id": "remind-ios-versions-2026-11-07-managing-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:12.078Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Managing notifications",
+  "flow_position": 2,
+  "name": "Notifications",
+  "description": "Notifications screen with 1 input field. Light theme, 11 text elements.",
+  "text": "Notifications\nSet your notification preferences and manage the\ndevices on your account.\nYour notifications\nmotvintool@gmail.com\n:\nEmail\niPhone\n:\nApp notifications\nAdd phone or email",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen with 1 input field. Light theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Checking notifications”",
+        "Reached from “Account settings”",
+        "Leads to “Notifications”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:03 in the recording",
+        "Frame 1416 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.876
+    },
+    {
+      "hex": "#cccbcd",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#dfe3e9",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#a4aeb9",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1416,
+    "atSeconds": 423.6,
+    "endSeconds": 425.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s172",
+    "depth": 174,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s171",
+        "via": "Tap “Notifications”",
+        "name": "Account settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s173",
+        "via": "Wait 1.5s",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

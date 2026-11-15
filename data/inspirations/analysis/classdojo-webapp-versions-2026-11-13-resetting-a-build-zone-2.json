@@ -1,0 +1,157 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-resetting-a-build-zone-2",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-resetting-a-build-zone-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:22.187Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Resetting a build zone",
+  "flow_position": 21,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Reset zone. Dark theme, 9 text elements.",
+  "text": "Snap\n2+ 2\n6\nRESET ZONE\nClears all builds by pupils in the zone.\nBUILD ZONE\nACTIVITY ZONE\nRESET\nRESET",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Clears all builds by pupils in the zone”",
+        "Dialog over a dimmed background, covering 33% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Reset zone. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 49 in “Opening a page (Calendar)”",
+        "Reached from “Reset zone”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 19:36 in the recording",
+        "Frame 3928 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#373566",
+      "role": "background",
+      "share": 0.921
+    },
+    {
+      "hex": "#5b567d",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#9298af",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#bdbbcd",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#797892",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 3928,
+    "atSeconds": 1176,
+    "endSeconds": 1178.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.34375,
+        "w": 0.25,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Clears all builds by pupils in the zone",
+    "headline": "RESET ZONE"
+  },
+  "crawler": {
+    "nodeId": "s302",
+    "depth": 302,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s301",
+        "via": "Tap “Reset zone”",
+        "name": "Reset zone"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s303",
+        "via": "Open Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

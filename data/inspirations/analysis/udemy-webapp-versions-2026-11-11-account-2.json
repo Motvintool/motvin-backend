@@ -1,0 +1,152 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-account-2",
+  "screen_id": "udemy-webapp-versions-2026-11-11-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:40:20.762Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Account",
+  "flow_position": 132,
+  "name": "Sign in with email",
+  "description": "Login screen with a search bar and a primary action labelled “Log In”. Light theme, 17 text elements.",
+  "text": "üdemy\nBack to Udemy\nLog In\nWe've upgraded our Help Center and the tools behind Udemy Support to make it easier and faster for you to get the help you need! As part of this update, you'll notice a few key changes:\nA\na smarter login flow, a more personalized experience once you're logged in, and a new, state-of-the-art virtual assistant. Learn more.\n+\nHow may we help you?\nLog in for customized support and faster solutions\nLog In\nQ\nSearch for solutions\nFrequently asked questions\nTroubleshooting login and email Issues\nTroubleshooting payment failures\nSSO login troubleshooting\nHow to find your missing course",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "payment",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Back to Udemy”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a search bar and a primary action labelled “Log In”. Light theme, 17 text elements.",
+        "Calls to action: “Log In”",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 132 of 138 in “Opening a page”",
+        "Reached from “Sign in with email — loading”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 13:00 in the recording",
+        "Frame 2605 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f7f6f9",
+      "role": "background",
+      "share": 0.455
+    },
+    {
+      "hex": "#a94fea",
+      "role": "surface",
+      "share": 0.183
+    },
+    {
+      "hex": "#913bcc",
+      "role": "accent",
+      "share": 0.087
+    },
+    {
+      "hex": "#dfc08f",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#d8d8db",
+      "role": "surface",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 2605,
+    "atSeconds": 780.6,
+    "endSeconds": 781.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log In"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Back to Udemy",
+    "headline": "How may we help you?"
+  },
+  "crawler": {
+    "nodeId": "s312",
+    "depth": 311,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s311",
+        "via": "Wait 0.9s",
+        "name": "Sign in with email — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s313",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

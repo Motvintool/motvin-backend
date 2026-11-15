@@ -1,0 +1,172 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-watching-a-course-video-9",
+  "screen_id": "udemy-webapp-versions-2026-11-11-watching-a-course-video-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:39:42.973Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Watching a course video",
+  "flow_position": 64,
+  "name": "Description (error)",
+  "description": "Error screen with a sidebar. Dark theme, 23 text elements.",
+  "text": "1 agents.yaml M\n1 tasks.yaml M •\nfind_trending_companies:\n• AGENTS\ndescription: >\n2\n› venv\nFind the top trending companies in the news in (sector) by searching the latest news.\n> 1_foundations\nFind new companies that you've not found before.\n› 2_openai\nexpected_output: >\nA list of trending companies in {sector)\nv 3_crew\nagent: trending_company_finder\n> debate\noutput_file: output/trending_companies.json\n› financial_rese...\n› other\nv stock_picker\n> knowledge\nv src/stock_p...•\nv config\nl agents.yaml M\ntasks.yaml M\n› tools\n_init_Py\n• crew.py\nM\nmain.py\nM\n› tests\nVideo quality\nenv\nAuto play\n@ New update avallable\nContent information\nUpdate now\nReport abuse\nudemy\nQ\nІnд CAlk\nSnarae 2\nШTF R\n1X\n1:01/ 2:15",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "video",
+    "error",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Description”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen with a sidebar. Dark theme, 23 text elements.",
+        "23 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 64 of 159 in “Subscribing”",
+        "Reached from “Langouph”",
+        "Leads to “Agents.yami M (error)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:52 in the recording",
+        "Frame 777 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1b1b",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#3d363c",
+      "role": "surface",
+      "share": 0.092
+    },
+    {
+      "hex": "#5e5251",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#4f5b80",
+      "role": "accent",
+      "share": 0.01
+    },
+    {
+      "hex": "#9f8976",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 777,
+    "atSeconds": 232.8,
+    "endSeconds": 233.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "AGENTS",
+      "Venv",
+      "1_foundations",
+      "2_openai",
+      "V 3_crew",
+      "Debate",
+      "Financial_rese",
+      "Other",
+      "V stock_picker",
+      "Knowledge",
+      "V src/stock_p...•",
+      "V config",
+      "L agents.yaml M",
+      "Tasks.yaml M",
+      "Tools",
+      "Init_Py",
+      "Crew.py",
+      "Main.py",
+      "Tests",
+      "Env",
+      "New update avallable",
+      "Update now"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Description",
+    "headline": "A list of trending companies in {sector)"
+  },
+  "crawler": {
+    "nodeId": "s079",
+    "depth": 78,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s078",
+        "via": "Open Description",
+        "name": "Langouph"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s080",
+        "via": "Wait 0.6s",
+        "name": "Agents.yami M (error)"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

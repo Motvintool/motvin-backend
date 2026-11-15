@@ -1,0 +1,145 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-logging-in-7",
+  "screen_id": "remind-ios-versions-2026-11-07-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:14.251Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 11,
+  "name": "Phone number entry",
+  "description": "Login screen. Dark theme, 9 text elements.",
+  "text": "9:41(\nall\nX\nForgot your password?\nEnter the email address or phone number you use\nto log in.\nEmail or phone number\nCheck your email\nIf an account is found, you'll receive\npassword reset instructions shortly.\nOK\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "continue",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your email”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 21 in “Creating an account”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:21 in the recording",
+        "Frame 1676 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171819",
+      "role": "background",
+      "share": 0.715
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "text",
+      "share": 0.162
+    },
+    {
+      "hex": "#bcbbbb",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#e0e3e5",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#8c8c8c",
+      "role": "surface",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1676,
+    "atSeconds": 501.9,
+    "endSeconds": 503.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your email",
+    "headline": "Check your email",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s198",
+    "depth": 200,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s197",
+        "via": "Open Check your email",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s199",
+        "via": "Tap “Email or phone number”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

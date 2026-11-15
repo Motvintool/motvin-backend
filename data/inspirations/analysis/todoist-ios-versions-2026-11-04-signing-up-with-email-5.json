@@ -1,0 +1,147 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-signing-up-with-email-5",
+  "screen_id": "todoist-ios-versions-2026-11-04-signing-up-with-email-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:00.748Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 8,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “Sign Up”. Dark theme, 6 text elements.",
+  "text": "9:41(\n•1l\nSign Up\nAdd your email and password.\nYour email\nmotvintool@gmail.com\nYour password\nSign Up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign Up”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Sign Up”. Dark theme, 6 text elements.",
+        "Calls to action: “Sign Up”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 41 in “Logging in with email”",
+        "Reached from “Create account”",
+        "Leads to “Check your email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.2s at 0:21 in the recording",
+        "Frame 103 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262525",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#463a3b",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#cd4347",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#595959",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#dd7d80",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 103,
+    "atSeconds": 21,
+    "endSeconds": 31.2,
+    "holdSeconds": 10.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign Up"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign Up",
+    "headline": "Add your email and password"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Wait 1.5s",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Open Check your email",
+        "name": "Check your email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

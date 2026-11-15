@@ -1,0 +1,161 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-changing-preferences-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-changing-preferences-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:54.589Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "settings",
+  "flow_name": "Changing preferences",
+  "flow_position": 6,
+  "name": "Settings",
+  "description": "Settings dialog over a dimmed screen, on top of Settings. Light theme, 18 text elements.",
+  "text": "•ll -\n9:41(\n>\nKnow about redBus\n* Rate app\n>\nHelp\n>\n2* Account settings\nPreferences\nCountry\n>\n=\nIndia\nBooking for women\nProviding helpful details to smartly choose\nbus travel for women\nKnow more\nYes\nNo\nConfirm",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "booking",
+    "confirm",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Rate app”",
+        "Dialog over a dimmed background, covering 45% of the height from 2% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings. Light theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 11 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:17 in the recording",
+        "Frame 2463 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cdcacc",
+      "role": "background",
+      "share": 0.563
+    },
+    {
+      "hex": "#fdfbfd",
+      "role": "surface",
+      "share": 0.323
+    },
+    {
+      "hex": "#a9a7a9",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#d33841",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#eddee1",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2463,
+    "atSeconds": 737.7,
+    "endSeconds": 739.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Rate app",
+    "headline": "Booking for women",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s591",
+    "depth": 594,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s589",
+        "via": "Open Rate app",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s592",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

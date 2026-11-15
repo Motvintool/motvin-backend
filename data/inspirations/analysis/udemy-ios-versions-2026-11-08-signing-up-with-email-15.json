@@ -1,0 +1,163 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-signing-up-with-email-15",
+  "screen_id": "udemy-ios-versions-2026-11-08-signing-up-with-email-15",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:07.768Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 20,
+  "name": "OTP verification",
+  "description": "Verification code toast, on top of OTP verification with a primary action labelled “Sign up”. Dark theme, 7 text elements.",
+  "text": "9:41€\nodll\n#‡‡\nCheck your inbox\nEnter the 6-character code we sent to motvintool@gmail.com to\nfinish your sign-up.\n246065\nSign up\nDidn't receive the code? Resend in 13 sec\nThe code you entered is invalid. Please try again.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Odll”",
+        "Toast, covering 6% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code toast, on top of OTP verification with a primary action labelled “Sign up”. Dark theme, 7 text elements.",
+        "Calls to action: “Sign up”",
+        "7 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 24 in “Logging in with email”",
+        "Reached from “OTP verification”",
+        "Leads to “Check your inbox”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:43 in the recording",
+        "Frame 156 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020203",
+      "role": "background",
+      "share": 0.782
+    },
+    {
+      "hex": "#242325",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#504647",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#e39d91",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#ac3af9",
+      "role": "accent",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 156,
+    "atSeconds": 43.8,
+    "endSeconds": 47.1,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.046875,
+        "w": 1,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Odll",
+    "headline": "Check your inbox"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Tap “Check your inbox”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Back to Check your inbox",
+        "name": "Check your inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

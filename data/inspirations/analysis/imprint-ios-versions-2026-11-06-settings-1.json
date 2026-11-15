@@ -1,0 +1,153 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-settings-1",
+  "screen_id": "imprint-ios-versions-2026-11-06-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:14.835Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 24,
+  "name": "Settings",
+  "description": "Settings screen with a 3-item tab bar. Dark theme, 10 text elements.",
+  "text": "9:41(\n•0l\n<\nSettings\nAccount\nManage subscription\nGoal settings\nNotifications\nReport a problem\nInvite a friend\nLog out\nVersion 6.0.7\nExplore\nMe\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "subscription",
+    "home",
+    "explore",
+    "me",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Explore, Me",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a 3-item tab bar. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 41 in “Home”",
+        "Reached from “Profile”",
+        "Leads to “Settings”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 6:09 in the recording",
+        "Frame 1259 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#11140d",
+      "role": "background",
+      "share": 0.881
+    },
+    {
+      "hex": "#30332d",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#4a4c47",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#5d6a66",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#747a72",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 1259,
+    "atSeconds": 369,
+    "endSeconds": 369.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Home",
+      "Explore",
+      "Me"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Goal settings"
+  },
+  "crawler": {
+    "nodeId": "s159",
+    "depth": 158,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s158",
+        "via": "Open Settings",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s160",
+        "via": "Tap “Settings”",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

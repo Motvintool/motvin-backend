@@ -1,0 +1,152 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-logging-in-with-google-2",
+  "screen_id": "brainly-ios-versions-2026-11-07-logging-in-with-google-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:19.412Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with Google",
+  "flow_position": 3,
+  "name": "Sign-in options",
+  "description": "Login screen with a primary action labelled “CONTINUE WITH APPLE”. Dark theme, 13 text elements.",
+  "text": "9:41(\n•0l\nLOG IN\nJoin Brainly Community\nGet instant answers, scan your homework to solve it,\nand ace your exams with Al-powered features tailored\nto your learning style!\nCONTINUE WITH APPLE\nG\nCONTINUE WITH GOOGLE\nCONTINUE WITH FACEBOOK\nWe never share anything on your behalf.\nTo make Brainly work, we log user data and share it with service\nproviders. Click \"Sign up\" above to accept Brainly Terms of\nservice & Privacy Policy.\nYou're joining brainly.in Change here",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Join Brainly Community”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “CONTINUE WITH APPLE”. Dark theme, 13 text elements.",
+        "Calls to action: “CONTINUE WITH APPLE”, “CONTINUE WITH GOOGLE”, “CONTINUE WITH FACEBOOK”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 11 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Permission request”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:11 in the recording",
+        "Frame 44 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282d36",
+      "role": "background",
+      "share": 0.719
+    },
+    {
+      "hex": "#424851",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#15171c",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#eeedef",
+      "role": "text",
+      "share": 0.031
+    },
+    {
+      "hex": "#195db6",
+      "role": "accent",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 44,
+    "atSeconds": 11.4,
+    "endSeconds": 13.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "CONTINUE WITH APPLE",
+      "CONTINUE WITH GOOGLE",
+      "CONTINUE WITH FACEBOOK"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Join Brainly Community",
+    "headline": "Join Brainly Community"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Open Join Brainly Community",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Open \"google.com\" to Sign In",
+        "name": "Permission request"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

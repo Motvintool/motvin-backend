@@ -1,0 +1,150 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-logging-in-with-email-1",
+  "screen_id": "coursera-ios-versions-2026-11-06-logging-in-with-email-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:49.494Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Log in or Sign up”. Dark theme, 15 text elements.",
+  "text": "9:41(\n•dll\nSign Up Later\ncoursera\nTake the world's best courses online\nfrom top universities and industry\npartners.\nLog in or Sign up\nApple\nG\nf\nFacebook\nGoogle\nOт Log in with your organization (SSO)\nLog In with Email\nor\nNew to Coursera? Create an Account!\nBy creating an account under any method above, you accept Coursera's\nTerms of Use and Privacy Notice",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign Up Later”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or Sign up”. Dark theme, 15 text elements.",
+        "Calls to action: “Log in or Sign up”, “Log In with Email”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 16 in “Logging in with email”",
+        "Reached from “Explore home”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 9:26 in the recording",
+        "Frame 1901 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080208",
+      "role": "background",
+      "share": 0.67
+    },
+    {
+      "hex": "#89b8fc",
+      "role": "text",
+      "share": 0.116
+    },
+    {
+      "hex": "#769edb",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#27252d",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#055be0",
+      "role": "accent",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 1901,
+    "atSeconds": 566.1,
+    "endSeconds": 570.6,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or Sign up",
+      "Log In with Email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign Up Later",
+    "headline": "Coursera"
+  },
+  "crawler": {
+    "nodeId": "s244",
+    "depth": 243,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s243",
+        "via": "Back to Sign in with email",
+        "name": "Explore home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s245",
+        "via": "Open Email (Required)",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

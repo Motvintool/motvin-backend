@@ -1,0 +1,152 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-browsing-account-settings-4",
+  "screen_id": "canva-webapp-versions-2026-11-13-browsing-account-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:54:42.134Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "entertainment",
+  "flow": "checkout",
+  "flow_name": "Browsing account settings",
+  "flow_position": 44,
+  "name": "Payment method",
+  "description": "Payment screen with a sidebar, a search bar and 1 input field. Light theme, 17 text elements.",
+  "text": "Canva\nTry it free for 30 days\n+\nPeople management\nWeb domains\nCreate\n8 People\nManage domains where your Canva websites are published, through Canva or a connected third-party provider.\nPayments and plans\nHome\nBilling\nProjects\nDefault domain\nOrders and invoices\nNone\nWhen publishing, this domain will be selected by default. Team members\ncan still choose a different domain if they prefer.\nTemplates\nDomains\nQ Search domains\nWeb domains\nAdd new web domain\nAll\nBrand\nDomain\nManaged by\nExpiry\nCanva Al\nNo domains yet\nPrint Shop\nDream Lab\n...\nMore\nM",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "payment",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Web domains”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with a sidebar, a search bar and 1 input field. Light theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 44 of 72 in “Logging in”",
+        "Reached from “Orders and invoices (empty)”",
+        "Leads to “Payment method”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 36:15 in the recording",
+        "Frame 7261 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafd",
+      "role": "background",
+      "share": 0.942
+    },
+    {
+      "hex": "#dbdeeb",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#a979fa",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#c4c5c5",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#d2bbfc",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 7261,
+    "atSeconds": 2175.6,
+    "endSeconds": 2178.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "People management",
+      "Create",
+      "People"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Web domains",
+    "headline": "Managed by"
+  },
+  "crawler": {
+    "nodeId": "s615",
+    "depth": 618,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s614",
+        "via": "Tap “Web domains”",
+        "name": "Orders and invoices (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s616",
+        "via": "Tap “Web domains”",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

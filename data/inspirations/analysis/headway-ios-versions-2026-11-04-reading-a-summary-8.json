@@ -1,0 +1,158 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-reading-a-summary-8",
+  "screen_id": "headway-ios-versions-2026-11-04-reading-a-summary-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:57.142Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Reading a summary",
+  "flow_position": 40,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Listen. Dark theme, 23 text elements.",
+  "text": "9:41€\nN Listen\n= Read\nAA\nV\nSky (read \"universe\") is the limit\nEinstein's legendary equation E=mc'\ndemonstrated that mass and energy are\nequivalent and can convert into each other.\nHis theory of relativity revealed that as\nobjects approach the speed oflight, they\nneed more and more energy to accelerate\nfurther, making it impossible to reach light\nspeed itself. His revolutionary findings also\nshowed that space and time can be warped,\nso light does not always move straight. Its\ndirection can be changed by large objects\nbending light's path with their gravity.\nImagine dropping a stone in the sand. It\nwill create an indentation. Now if you shine\na light onto the rock — you will see how it\nbends into the hole. Light does the same in\nspace, curving due to the planet's weight.\nConsequently, massive objects also slow\nBackground Color\nText size - 100%\n+\nA\n-",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sky (read \"universe\") is the limit”",
+        "Dialog over a dimmed background, covering 16% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Listen. Dark theme, 23 text elements.",
+        "23 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 40 of 41 in “History”",
+        "Reached from “Listen”",
+        "Leads to “Listen”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 5:58 in the recording",
+        "Frame 1201 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f22",
+      "role": "background",
+      "share": 0.679
+    },
+    {
+      "hex": "#39373a",
+      "role": "surface",
+      "share": 0.281
+    },
+    {
+      "hex": "#555355",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#9e9c9d",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#fdfbfa",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1201,
+    "atSeconds": 358.5,
+    "endSeconds": 360.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0,
+        "w": 0.9375,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sky (read \"universe\") is the limit",
+    "headline": "Demonstrated that mass and energy are"
+  },
+  "crawler": {
+    "nodeId": "s145",
+    "depth": 144,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s144",
+        "via": "Open Sky (read \"universe\") is the limit",
+        "name": "Listen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s146",
+        "via": "Dismiss",
+        "name": "Listen"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

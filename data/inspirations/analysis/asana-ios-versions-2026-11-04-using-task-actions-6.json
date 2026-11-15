@@ -1,0 +1,164 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-using-task-actions-6",
+  "screen_id": "asana-ios-versions-2026-11-04-using-task-actions-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:02.677Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "toast"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Using task actions",
+  "flow_position": 24,
+  "name": "Add description",
+  "description": "Detail toast over a dimmed screen, on top of Mark complete with a row of 3 category chips. Dark theme, 14 text elements.",
+  "text": "9:41(\nV Mark complete\n• • •\nMO\nTomorrow\nMotvin\nMy tasks\nWork V\nProjects\n+ Add to project\nDescription\n+ Add description\nMark as\nMark as milestone\nMark as approval",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add description”",
+        "Category strip: MO, Tomorrow, Motvin",
+        "Toast over a dimmed background, covering 8% of the height from 38% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail toast over a dimmed screen, on top of Mark complete with a row of 3 category chips. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 77 in “Filling in Hi, I'm Dash”",
+        "Reached from “Mark complete”",
+        "Leads to “Mark complete”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:59 in the recording",
+        "Frame 1001 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#16171a",
+      "role": "background",
+      "share": 0.97
+    },
+    {
+      "hex": "#373a3e",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#545557",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#6a696c",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a9a9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1001,
+    "atSeconds": 299.1,
+    "endSeconds": 300.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.375,
+        "w": 0.28125,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [
+      "MO",
+      "Tomorrow",
+      "Motvin"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add description",
+    "headline": "Add description"
+  },
+  "crawler": {
+    "nodeId": "s122",
+    "depth": 121,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s121",
+        "via": "Tap “+ Add description”",
+        "name": "Mark complete"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s123",
+        "via": "Tap “+ Add description”",
+        "name": "Mark complete"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

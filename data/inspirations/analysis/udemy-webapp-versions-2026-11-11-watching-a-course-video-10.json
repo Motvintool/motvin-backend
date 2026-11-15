@@ -1,0 +1,160 @@
+{
+  "screenId": "udemy-webapp-versions-2026-11-11-watching-a-course-video-10",
+  "screen_id": "udemy-webapp-versions-2026-11-11-watching-a-course-video-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:39:43.146Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Watching a course video",
+  "flow_position": 65,
+  "name": "Agents.yami M (error)",
+  "description": "Error screen with a sidebar. Dark theme, 19 text elements.",
+  "text": "! tasks.yaml M •\n!\nagents.yami M\nfind_trending_companies:\nAGENTS\ndescription: >\n› venv\nFind the top trending companies in the news in (sector) by searching the latest news.\n› 1_foundations\nFind new companies that you've not found before.\n› 2_openai\nexpected_output: >\nA List of trending companies in {sector)\n/ 3_crew\nagent: trending_company_finder\n> debate\noutput_file: output/trending_companies.json\n› financial_rese....\n› other\n1\nFesearch_companies:\n10\nv stock_picker\n> knowledge\nVideo quality\nAuto play\nContent information\nReport abuse\n1:03 / 2:15\n1X",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "video",
+    "error",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Agents.yami M”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen with a sidebar. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 65 of 159 in “Subscribing”",
+        "Reached from “Description (error)”",
+        "Leads to “Success_criterias str”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:53 in the recording",
+        "Frame 783 of 2676 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1d1e",
+      "role": "background",
+      "share": 0.558
+    },
+    {
+      "hex": "#3a3d3f",
+      "role": "surface",
+      "share": 0.142
+    },
+    {
+      "hex": "#797d70",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#535459",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#a0a08e",
+      "role": "text",
+      "share": 0.052
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2676,
+    "frame": 783,
+    "atSeconds": 233.7,
+    "endSeconds": 235.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "AGENTS",
+      "Venv",
+      "1_foundations",
+      "2_openai",
+      "3_crew",
+      "Debate",
+      "Financial_rese",
+      "Other",
+      "V stock_picker",
+      "Knowledge"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Agents.yami M",
+    "headline": "Expected_output"
+  },
+  "crawler": {
+    "nodeId": "s080",
+    "depth": 79,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s079",
+        "via": "Wait 0.6s",
+        "name": "Description (error)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s081",
+        "via": "Open Success_criterias str",
+        "name": "Success_criterias str"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

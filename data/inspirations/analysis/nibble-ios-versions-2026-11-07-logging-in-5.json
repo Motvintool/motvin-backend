@@ -1,0 +1,163 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-logging-in-5",
+  "screen_id": "nibble-ios-versions-2026-11-07-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:12.687Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 11,
+  "name": "OTP verification",
+  "description": "Verification code toast over a dimmed screen, on top of OTP verification with a primary action labelled “Continue”. Light theme, 12 text elements.",
+  "text": "9:41 €\n•all\nContinue with password\nEnter the code we've sent to\nmotvintool@gmail.com\n3\n9\n3\n7\n4\n9\nContinue\nCan't find it? Check your Spam folder.\nResend the code in 0:32",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with password”",
+        "Toast over a dimmed background, covering 8% of the height from 61% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code toast over a dimmed screen, on top of OTP verification with a primary action labelled “Continue”. Light theme, 12 text elements.",
+        "Calls to action: “Continue”",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 17 in “Replace scrolling”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 10:47 in the recording",
+        "Frame 2189 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c8c5c8",
+      "role": "background",
+      "share": 0.951
+    },
+    {
+      "hex": "#a5a3a7",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#88868b",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#dedde1",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#727177",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 2189,
+    "atSeconds": 647.1,
+    "endSeconds": 648,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.609375,
+        "w": 0.9375,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with password",
+    "headline": "Can't find it? Check your Spam folder"
+  },
+  "crawler": {
+    "nodeId": "s298",
+    "depth": 302,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s297",
+        "via": "Tap “Continue with password”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s299",
+        "via": "Tap “Continue with password”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

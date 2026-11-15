@@ -1,0 +1,151 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-creating-a-project-5",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-creating-a-project-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:13:07.402Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Creating a project",
+  "flow_position": 73,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of New Project. Dark theme, 4 text elements.",
+  "text": "9:41€\n+\nProjects\nX\nWork",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of New Project. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 73 of 77 in “Detail”",
+        "Reached from “New Project”",
+        "Leads to “New Project”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:37 in the recording",
+        "Frame 1528 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131114",
+      "role": "background",
+      "share": 0.978
+    },
+    {
+      "hex": "#373538",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#5b595b",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a4a3a4",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 1528,
+    "atSeconds": 457.2,
+    "endSeconds": 458.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Work"
+  },
+  "crawler": {
+    "nodeId": "s177",
+    "depth": 183,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s176",
+        "via": "Wait 0.9s",
+        "name": "New Project"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s178",
+        "via": "Type “New Project”",
+        "name": "New Project"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

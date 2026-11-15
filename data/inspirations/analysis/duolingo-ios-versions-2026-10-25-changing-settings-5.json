@@ -1,0 +1,148 @@
+{
+  "screenId": "duolingo-ios-versions-2026-10-25-changing-settings-5",
+  "screen_id": "duolingo-ios-versions-2026-10-25-changing-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T11:23:04.109Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Changing settings",
+  "flow_position": 1,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “SUBMIT”. Dark theme, 15 text elements.",
+  "text": "9:41(\nDuolingo for Schools\nJoin a Classroom\nEnter the code shared by your teacher! This lets your te\nsee your progress, send assignments, and control your\nes\naccount on Duolingo.\n00000\nons\nSUBMIT\nfor Schi\nounts\nttings\nION\nplan\nRESTOR",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Duolingo for Schools”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “SUBMIT”. Dark theme, 15 text elements.",
+        "Calls to action: “SUBMIT”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Verifying OTP”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:05 in the recording",
+        "Frame 1620 of 1830 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#152027",
+      "role": "background",
+      "share": 0.91
+    },
+    {
+      "hex": "#3e4a52",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#616a70",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#2a353c",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#6c6521",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvnq9fwt-k5ul67.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1830,
+    "frame": 1620,
+    "atSeconds": 485.1,
+    "endSeconds": 486.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "SUBMIT"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Duolingo for Schools",
+    "headline": "Ttings"
+  },
+  "crawler": {
+    "nodeId": "s212",
+    "depth": 211,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s211",
+        "via": "Tap “Duolingo for Schools”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s213",
+        "via": "Wait 1.2s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

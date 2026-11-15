@@ -1,0 +1,164 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-searching-for-an-answer-13",
+  "screen_id": "brainly-ios-versions-2026-11-07-searching-for-an-answer-13",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:29.688Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Searching for an answer",
+  "flow_position": 5,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Other with a search bar and a primary action labelled “Allow”. Dark theme, 6 text elements.",
+  "text": "9:41€\n\"Brainly\" would like to access\nthe Microphone.\nThis lets you search answers and ask\nquestions just by speaking\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "search-bar",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Brainly\" would like to access”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 30% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Other with a search bar and a primary action labelled “Allow”. Dark theme, 6 text elements.",
+        "Calls to action: “Allow”",
+        "6 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 26 in “Opening a page (Home)”",
+        "Reached from “What do you need to know?”",
+        "Leads to “What do you need to know?”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:08 in the recording",
+        "Frame 830 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#16181d",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#31363b",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#4e5053",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#20445f",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#646568",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 830,
+    "atSeconds": 248.4,
+    "endSeconds": 249.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.34375,
+        "w": 0.6875,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Brainly\" would like to access",
+    "headline": "\"Brainly\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s117",
+    "depth": 118,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s116",
+        "via": "Open \"Brainly\" would like to access",
+        "name": "What do you need to know?"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s118",
+        "via": "Dismiss",
+        "name": "What do you need to know?"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

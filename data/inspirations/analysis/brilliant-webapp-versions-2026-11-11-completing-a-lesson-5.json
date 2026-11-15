@@ -1,0 +1,160 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-completing-a-lesson-5",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-completing-a-lesson-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:47.763Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Completing a lesson",
+  "flow_position": 51,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Dialog with a primary action labelled “Continue”. Dark theme, 3 text elements.",
+  "text": "You earned a Streak Charge!\nCharges save your streak if you miss a day\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 36% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Dialog with a primary action labelled “Continue”. Dark theme, 3 text elements.",
+        "Calls to action: “Continue”",
+        "3 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 51 of 57 in “Entering phone number”",
+        "Reached from “Dialog”",
+        "Leads to “Other — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:31 in the recording",
+        "Frame 505 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121412",
+      "role": "background",
+      "share": 0.953
+    },
+    {
+      "hex": "#3b3d30",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#ebebea",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#6d6e69",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#b9b9b8",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 505,
+    "atSeconds": 151.2,
+    "endSeconds": 151.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.359375,
+        "w": 0.25,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "You earned a Streak Charge!"
+  },
+  "crawler": {
+    "nodeId": "s056",
+    "depth": 55,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s055",
+        "via": "Tap “You earned a Streak Charge!”",
+        "name": "Dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s057",
+        "via": "Tap “You earned a Streak Charge!”",
+        "name": "Other — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

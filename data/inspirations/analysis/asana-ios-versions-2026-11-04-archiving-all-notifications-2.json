@@ -1,0 +1,168 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-archiving-all-notifications-2",
+  "screen_id": "asana-ios-versions-2026-11-04-archiving-all-notifications-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:08.637Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "toast"
+  ],
+  "category": "saas",
+  "flow": "discovery",
+  "flow_name": "Archiving all notifications",
+  "flow_position": 19,
+  "name": "Messages",
+  "description": "Messages toast over a dimmed screen, on top of Inbox with a 5-item tab bar. Dark theme, 8 text elements.",
+  "text": "9:41(\nC\nInbox\nArchive all\nArchive all\nCancel\nHooray, you're up to date!\nCheck back later for updates on your team's work\n+\nAll activity\nInbox\nMy tasks\nAccount\nHome\nSearch",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "my tasks",
+    "inbox",
+    "search",
+    "messages",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Hooray, you're up to date!”",
+        "Toast over a dimmed background, covering 13% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages toast over a dimmed screen, on top of Inbox with a 5-item tab bar. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 49 in “Home”",
+        "Reached from “Inbox”",
+        "Leads to “Inbox”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 7:59 in the recording",
+        "Frame 1608 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131317",
+      "role": "background",
+      "share": 0.869
+    },
+    {
+      "hex": "#353336",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#5d5255",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#7b6f72",
+      "role": "text",
+      "share": 0.02
+    },
+    {
+      "hex": "#722e2d",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1608,
+    "atSeconds": 479.7,
+    "endSeconds": 482.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.4375,
+        "w": 0.34375,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hooray, you're up to date!",
+    "headline": "Hooray, you're up to date!"
+  },
+  "crawler": {
+    "nodeId": "s198",
+    "depth": 198,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s197",
+        "via": "Tap “Hooray, you're up to date!”",
+        "name": "Inbox"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s199",
+        "via": "Dismiss",
+        "name": "Inbox"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

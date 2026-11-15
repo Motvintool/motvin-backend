@@ -1,0 +1,157 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-train-tickets-8",
+  "screen_id": "redbus-ios-versions-2026-10-25-train-tickets-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:26.887Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Train tickets",
+  "flow_position": 83,
+  "name": "Home home",
+  "description": "Feed screen with a 5-item tab bar and a search bar. Light theme, 19 text elements.",
+  "text": "9:41(\n7300 Off\nUPTO\nGet 20% of\nredBus\nedRail\n45%\nOFF\nBus Tickets\nTrain Tickets\nHotels\nMetro Ticke1\nFrom Station\nTo Station\nDate of journey\nTomorrow\nDay After\n06 Oct, Tue\nQ Search Trains\nIRCTC Authorised Partner\nHome\nOffers\nMy Bookings\nHelp\nMy Account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Bus Tickets”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar and a search bar. Light theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 83 of 200 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Diwali dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:35 in the recording",
+        "Frame 1118 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf9fb",
+      "role": "background",
+      "share": 0.834
+    },
+    {
+      "hex": "#e4d8d8",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#d8414a",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#bfbbbb",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#e68f97",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1118,
+    "atSeconds": 335.1,
+    "endSeconds": 335.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Bus Tickets",
+    "headline": "From Station"
+  },
+  "crawler": {
+    "nodeId": "s289",
+    "depth": 288,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s288",
+        "via": "Tap “Bus Tickets”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s292",
+        "via": "Open Diwali",
+        "name": "Diwali dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

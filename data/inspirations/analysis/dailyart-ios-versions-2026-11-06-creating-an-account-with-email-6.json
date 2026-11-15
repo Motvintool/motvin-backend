@@ -1,0 +1,165 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-creating-an-account-with-email-6",
+  "screen_id": "dailyart-ios-versions-2026-11-06-creating-an-account-with-email-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:42.375Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Creating an account with email",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen with 2 input fields and a primary action labelled “Login”. Dark theme, 11 text elements.",
+  "text": "9:41(\n•ll\nSign In\nLog in to your existing account to restore\nyour purchases.\nE-mail\nPassword\nLogin\nForgot Password?\nOR\nContinue with Apple\nG Continue with Google\nLf Continue with Facebook\nDon't have an account? Register here",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Google”",
+        "Dialog over a dimmed background, covering 41% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen with 2 input fields and a primary action labelled “Login”. Dark theme, 11 text elements.",
+        "Calls to action: “Login”, “Continue with Apple”",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 10 in “Logging in with email”",
+        "Reached from “DailyArt home”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:12 in the recording",
+        "Frame 646 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100f14",
+      "role": "background",
+      "share": 0.621
+    },
+    {
+      "hex": "#2b2e34",
+      "role": "surface",
+      "share": 0.136
+    },
+    {
+      "hex": "#f9f8f9",
+      "role": "text",
+      "share": 0.05
+    },
+    {
+      "hex": "#c5012f",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#294074",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 646,
+    "atSeconds": 192.6,
+    "endSeconds": 194.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.34375,
+        "w": 0.9375,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login",
+      "Continue with Apple"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Google",
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s100",
+    "depth": 99,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s099",
+        "via": "Tap “Sign in”",
+        "name": "DailyArt home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s101",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

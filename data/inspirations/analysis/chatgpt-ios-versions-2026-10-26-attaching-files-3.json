@@ -1,0 +1,154 @@
+{
+  "screenId": "chatgpt-ios-versions-2026-10-26-attaching-files-3",
+  "screen_id": "chatgpt-ios-versions-2026-10-26-attaching-files-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T09:44:00.730Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Attaching files",
+  "flow_position": 40,
+  "name": "Loading state",
+  "description": "Loading state with a paged carousel. Dark theme, 7 text elements.",
+  "text": "9:41(\nO\n•ll\nX\nAdd files\n•••\nAdd your files\nAsk questions, get summaries, and\nmore with your files.\nAdd files\nQ\nSearch",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add files”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a paged carousel. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 40 of 40 in “Onboarding”",
+        "Reached from “Upgrade”",
+        "Leads to “Recents home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 2:45 in the recording",
+        "Frame 562 of 2282 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.057
+    },
+    {
+      "hex": "#3d3b3f",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#aba9ab",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#5a585c",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "mvp29bl1-i0r732.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2282,
+    "frame": 562,
+    "atSeconds": 165.9,
+    "endSeconds": 168.9,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add files",
+    "headline": "Add your files",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 43,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "Open Add files",
+        "name": "Upgrade"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Wait 3s",
+        "name": "Recents home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

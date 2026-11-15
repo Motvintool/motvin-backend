@@ -1,0 +1,158 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-logging-in-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:31:59.836Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field, a paged carousel and a primary action labelled “Continue”. Light theme, 15 text elements.",
+  "text": "•15O\n9:41\nSkip\n1/3\n20 Years of happy journeys!\n• 56+ million satisfied travellers\n• 5200+ bus operators\n• 7.3 lakh+ bus routes\nLog in or create a new account\nCountry Code\nMobile number\n+91(IND) V\nContinue\n& Sign in with Passkey\nor\nG sign in with Google\nSign in with Apple\nHave a referral code?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field, a paged carousel and a primary action labelled “Continue”. Light theme, 15 text elements.",
+        "Calls to action: “Continue”, “Sign in with Apple”",
+        "15 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 47 in “Logging in”",
+        "Reached from “Choose your language”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:14 in the recording",
+        "Frame 50 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafb",
+      "role": "background",
+      "share": 0.487
+    },
+    {
+      "hex": "#fde98f",
+      "role": "surface",
+      "share": 0.334
+    },
+    {
+      "hex": "#e1d5d8",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#d33841",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#dac77c",
+      "role": "surface",
+      "share": 0.03
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 50,
+    "atSeconds": 14.4,
+    "endSeconds": 15.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Sign in with Apple"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Sign in with Passkey"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Open Loading state",
+        "name": "Choose your language"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s014",
+        "via": "Wait 0.9s",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

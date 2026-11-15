@@ -1,0 +1,153 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-adding-a-show-to-a-list-2",
+  "screen_id": "fable-ios-versions-2026-11-04-adding-a-show-to-a-list-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:10.090Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Adding a show to a list",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a search bar. Dark theme, 12 text elements.",
+  "text": "9:41(\nodll\nSearch\nTV Shows\nBooks\nAll Seasons\nBy Baek Mi-kyoung\nWant to\nCurrently\nWatched\nWatching\nWatch\n+\nCreate list\nConfirm",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "confirm",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a search bar. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Search”",
+        "Reached from “Search”",
+        "Leads to “Search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:03 in the recording",
+        "Frame 2015 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a080b",
+      "role": "background",
+      "share": 0.853
+    },
+    {
+      "hex": "#2c2a2d",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#cccacd",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#fbf9fc",
+      "role": "text",
+      "share": 0.021
+    },
+    {
+      "hex": "#514e50",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2015,
+    "atSeconds": 603,
+    "endSeconds": 604.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "All Seasons",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s228",
+    "depth": 229,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s227",
+        "via": "Tap “Search”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s229",
+        "via": "Wait 1.8s",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

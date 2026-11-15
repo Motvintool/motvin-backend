@@ -1,0 +1,159 @@
+{
+  "screenId": "lovi-ios-versions-2026-10-25-changing-the-skin-goal-5",
+  "screen_id": "lovi-ios-versions-2026-10-25-changing-the-skin-goal-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:11:33.915Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Changing the skin goal",
+  "flow_position": 5,
+  "name": "My Skin Profile toast",
+  "description": "Toast, on top of My Skin Profile with 1 input field. Light theme, 23 text elements.",
+  "text": "9:41(\nX\nMy Skin Profile\nUpdate it to refresh your skincare\nrecommendations and content.\nMain Skin Goal\nWrinkles and Fine Lines\n>\nAdditional\nRedness or rosacea, Fine\nSkin Concerns\nlines and wrinkles\nName\nSelect... ›\nMale >\nGender\nAge\nUnder 25 ›\nSkin Type\nOily >\nSkin Sensitivity\nSensitive >\nSkin Conditions\nRosacea, Psoriasis >",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My Skin Profile”",
+        "Toast, covering 2% of the height from 8% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast, on top of My Skin Profile with 1 input field. Light theme, 23 text elements.",
+        "23 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 9 in “Searching Today”",
+        "Reached from “My Skin Profile”",
+        "Leads to “Let's pick the main”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:29 in the recording",
+        "Frame 899 of 2036 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf7fa",
+      "role": "background",
+      "share": 0.819
+    },
+    {
+      "hex": "#d9d7da",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#6775ff",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#bebcbd",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#c6cbfe",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "mvo4xs70-rj1rpy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2036,
+    "frame": 899,
+    "atSeconds": 269.4,
+    "endSeconds": 270.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.46875,
+        "y": 0.078125,
+        "w": 0.09375,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My Skin Profile",
+    "headline": "My Skin Profile"
+  },
+  "crawler": {
+    "nodeId": "s100",
+    "depth": 99,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s099",
+        "via": "Tap “Skin Sensitivity”",
+        "name": "My Skin Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s101",
+        "via": "Open Let's pick the main",
+        "name": "Let's pick the main"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,154 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-library-2",
+  "screen_id": "fable-ios-versions-2026-11-04-library-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:10.606Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Library",
+  "flow_position": 22,
+  "name": "Home home",
+  "description": "Feed screen with a 5-item tab bar. Dark theme, 17 text elements.",
+  "text": "9:41(\noll\nLibrary\nWatch Lists\nReading Lists\nYour Ebooks\nImport your Netflix watch list\nCurrently\nwatching\nO shows\nWant to Watch\nWatched\nDid Not Finish\nO shows\n1 show\nO shows\n+\nCreate list\nQ Add show\nSearch\nClubs\nProfile\nHome\nLibrary",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "clubs",
+    "search",
+    "library",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, Clubs, Search, Library, Profile",
+        "Navigation title reads “Library”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 22 of 41 in “Home”",
+        "Reached from “Add book toast”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:14 in the recording",
+        "Frame 2053 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0a0d",
+      "role": "background",
+      "share": 0.643
+    },
+    {
+      "hex": "#302d30",
+      "role": "surface",
+      "share": 0.171
+    },
+    {
+      "hex": "#4e4a4e",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#645f63",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#b38f99",
+      "role": "text",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2053,
+    "atSeconds": 614.7,
+    "endSeconds": 616.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [
+      "Home",
+      "Clubs",
+      "Search",
+      "Library",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Library",
+    "headline": "Currently"
+  },
+  "crawler": {
+    "nodeId": "s233",
+    "depth": 234,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s232",
+        "via": "Tap “Library”",
+        "name": "Add book toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s234",
+        "via": "Tap “Library”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

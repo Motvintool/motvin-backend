@@ -1,0 +1,166 @@
+{
+  "screenId": "craft-ios-versions-2026-10-25-turning-on-notifications-3",
+  "screen_id": "craft-ios-versions-2026-10-25-turning-on-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T11:15:45.894Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Turning on notifications",
+  "flow_position": 32,
+  "name": "Activity (empty)",
+  "description": "Empty state bottom sheet, on top of Notifications (empty) with a primary action labelled “Enable Push Notifications”. Dark theme, 14 text elements, an empty state.",
+  "text": "9:41€\n<\nNo\nMark all as read\nReload Notifications\nActivity\nEnable Push\nNotifications\nNo notifications yet\nYou'll be notified here when someone mentions\nyou, writes a comment on your document or\nreplies to your comments.\nTo get push notifications on your device, go to\nsettings and enable Push Notifications.\nEnable Push Notifications",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet",
+    "empty-state"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Activity”",
+        "Bottom sheet, covering 19% of the height from 75% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state bottom sheet, on top of Notifications (empty) with a primary action labelled “Enable Push Notifications”. Dark theme, 14 text elements, an empty state.",
+        "Calls to action: “Enable Push Notifications”",
+        "14 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 38 in “Onboarding”",
+        "Reached from “Notifications (empty)”",
+        "Leads to “Notifications permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:56 in the recording",
+        "Frame 390 of 1127 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#050305",
+      "role": "background",
+      "share": 0.818
+    },
+    {
+      "hex": "#211e21",
+      "role": "surface",
+      "share": 0.089
+    },
+    {
+      "hex": "#413e41",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#585558",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#6d6b6d",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvnq9f8i-9kp2ct.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1127,
+    "frame": 390,
+    "atSeconds": 116.1,
+    "endSeconds": 117.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.3125,
+        "y": 0.75,
+        "w": 0.625,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Enable Push Notifications"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Activity",
+    "headline": "No notifications yet"
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 36,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Tap “Enable Push Notifications”",
+        "name": "Notifications (empty)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s038",
+        "via": "Tap “Enable Push Notifications”",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

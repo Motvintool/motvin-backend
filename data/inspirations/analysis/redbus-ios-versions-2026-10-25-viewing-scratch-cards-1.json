@@ -1,0 +1,147 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-viewing-scratch-cards-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-viewing-scratch-cards-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:48.257Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Viewing scratch cards",
+  "flow_position": null,
+  "name": "Payment method — loading",
+  "description": "Loading state of Payment method. Light theme, 1 text element.",
+  "text": "9:41 C\nScratch Cards",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Scratch Cards”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Payment method. Light theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:26 in the recording",
+        "Frame 2089 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f7fc",
+      "role": "background",
+      "share": 0.967
+    },
+    {
+      "hex": "#dddcde",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#c7c5c8",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#7b7888",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#a3a1a4",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2089,
+    "atSeconds": 626.7,
+    "endSeconds": 628.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Scratch Cards",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s517",
+    "depth": 518,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s515",
+        "via": "Tap “Scratch Card”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s518",
+        "via": "Wait 1.8s",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

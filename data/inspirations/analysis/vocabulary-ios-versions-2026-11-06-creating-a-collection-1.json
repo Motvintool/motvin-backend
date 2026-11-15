@@ -1,0 +1,154 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-creating-a-collection-1",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-creating-a-collection-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:11.353Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Creating a collection",
+  "flow_position": 1,
+  "name": "Words home",
+  "description": "Home screen with a 5-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41(\n<\nCollections\nAdd new\nStudy new\n2 words\nWant to learn\n1 word\nNew\nPractice\nTopics\nProfile\nWords\nJourney",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "words",
+    "topics",
+    "journey",
+    "practice",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Words, Topics, Journey, Practice, Profile",
+        "Navigation title reads “Study new”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 5-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Filling in New collection”",
+        "Reached from “OTP verification”",
+        "Leads to “New collection form”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:46 in the recording",
+        "Frame 958 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e2c2e",
+      "role": "background",
+      "share": 0.84
+    },
+    {
+      "hex": "#454345",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#676567",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#838a8c",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#80a1a3",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 958,
+    "atSeconds": 286.2,
+    "endSeconds": 287.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Words",
+      "Topics",
+      "Journey",
+      "Practice",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Study new",
+    "headline": "Want to learn"
+  },
+  "crawler": {
+    "nodeId": "s130",
+    "depth": 130,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s129",
+        "via": "Tap “Study new”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s131",
+        "via": "Wait 1.5s",
+        "name": "New collection form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

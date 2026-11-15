@@ -1,0 +1,152 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-signing-up-5",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-signing-up-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:52.270Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 6,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Sign up with email”. Dark theme, 13 text elements.",
+  "text": "9:41€\n•0l\naccounts.x.ai\nGrok v\nYou are signing into\nCreate your account\nBy continuing, you agree to xAl's\nTerms of Service, Privacy Policy, and\nCookie Policy. Your privacy choices\nX Sign up with X\nSign up with email\nSign up with Apple\nSign up with Google\nSign up with GitHub\nAlready have an account? Sign in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Sign up with email”. Dark theme, 13 text elements.",
+        "Calls to action: “Sign up with email”, “Sign up with Apple”, “Sign up with Google”, “Sign up with GitHub”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 25 in “Logging in”",
+        "Reached from “Sign in with email — scrolled”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:15 in the recording",
+        "Frame 60 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0e10",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#2c2a2e",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#515052",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#fcfcfc",
+      "role": "text",
+      "share": 0.02
+    },
+    {
+      "hex": "#b1afb2",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 60,
+    "atSeconds": 15.9,
+    "endSeconds": 18.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up with email",
+      "Sign up with Apple",
+      "Sign up with Google",
+      "Sign up with GitHub"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your account",
+    "headline": "Create your account"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Open Create your account",
+        "name": "Sign in with email — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Type “Sign up with your email”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

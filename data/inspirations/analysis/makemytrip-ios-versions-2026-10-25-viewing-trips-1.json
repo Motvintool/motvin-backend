@@ -1,0 +1,159 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-viewing-trips-1",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-viewing-trips-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:44.840Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Viewing trips",
+  "flow_position": 14,
+  "name": "My Trips (empty)",
+  "description": "Empty state screen with a 4-item tab bar. Light theme, 6 text elements, an empty state.",
+  "text": "9:41(\nMy Trips\n+ Add Booking\nNo bookings yet\nStart exploring for your next trip\nHONE\nROMANTIC\nnew\nту\nWhere2Go\nBe A Host\nHome\nMy Trips\nCredit Card",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "home",
+    "my trips",
+    "credit card",
+    "be a host",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "empty-state"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, My Trips, Credit Card, Be A Host",
+        "Navigation title reads “My Trips”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen with a 4-item tab bar. Light theme, 6 text elements, an empty state.",
+        "6 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 33 in “Home”",
+        "Reached from “Search results”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 12:16 in the recording",
+        "Frame 2459 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#e4e9f0",
+      "role": "background",
+      "share": 0.496
+    },
+    {
+      "hex": "#fefcfe",
+      "role": "surface",
+      "share": 0.141
+    },
+    {
+      "hex": "#c6cad0",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#979691",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#4a5756",
+      "role": "text",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 2459,
+    "atSeconds": 736.2,
+    "endSeconds": 738,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Home",
+      "My Trips",
+      "Credit Card",
+      "Be A Host"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My Trips",
+    "headline": "No bookings yet"
+  },
+  "crawler": {
+    "nodeId": "s323",
+    "depth": 322,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s322",
+        "via": "Open My Trips",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s324",
+        "via": "Tap “+ Add Booking”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

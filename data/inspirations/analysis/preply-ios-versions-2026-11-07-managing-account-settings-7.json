@@ -1,0 +1,144 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-managing-account-settings-7",
+  "screen_id": "preply-ios-versions-2026-11-07-managing-account-settings-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:28.225Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Managing account settings",
+  "flow_position": 1,
+  "name": "Account",
+  "description": "Settings screen. Light theme, 17 text elements.",
+  "text": "•ll S\n9:41€\nAccount\nTime zone\nGMT +5:30 ›\nMore settings\nHelp\nF.A.Q.\nFind answers about how Preply works\nCustomer support\n>\nResolve a specific issue\nMore\nLegal center\n>\nRefer your company\nLet your company pay for your lessons\nRefer a friend\nit You get 4702 INR, your friend saves\n<] Log out\nApp version 6.148.0 (ota.ios.09b93602)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Send us a message”",
+        "Reached from “Hello, how can we help”",
+        "Leads to “Send us a message — loading”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 5:17 in the recording",
+        "Frame 1083 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#dcdadd",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#bdbbbe",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a3a1a4",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#5c5b5c",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 1083,
+    "atSeconds": 317.4,
+    "endSeconds": 318.9,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Help"
+  },
+  "crawler": {
+    "nodeId": "s150",
+    "depth": 150,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s149",
+        "via": "Open Account",
+        "name": "Hello, how can we help"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s151",
+        "via": "Wait 3s",
+        "name": "Send us a message — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

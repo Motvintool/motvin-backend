@@ -1,0 +1,154 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-logging-in-with-email-8",
+  "screen_id": "mimo-ios-versions-2026-11-06-logging-in-with-email-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:19:09.113Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Logging in with email",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state with a paged carousel and a primary action labelled “Log in”. Dark theme, 5 text elements.",
+  "text": "9:41€\n2/2\nBack\nEnter your password\nOne moment please...\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your password”",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a paged carousel and a primary action labelled “Log in”. Dark theme, 5 text elements.",
+        "Calls to action: “Log in”",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Sign in with email”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 9:44 in the recording",
+        "Frame 1964 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262746",
+      "role": "background",
+      "share": 0.904
+    },
+    {
+      "hex": "#484860",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#9265e6",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#6948b0",
+      "role": "accent",
+      "share": 0.026
+    },
+    {
+      "hex": "#696a7f",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 1964,
+    "atSeconds": 584.7,
+    "endSeconds": 589.5,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter your password",
+    "headline": "Enter your password"
+  },
+  "crawler": {
+    "nodeId": "s236",
+    "depth": 235,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s235",
+        "via": "Wait 0.9s",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s237",
+        "via": "Wait 4.8s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

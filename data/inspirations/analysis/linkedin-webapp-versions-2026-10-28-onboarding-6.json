@@ -1,0 +1,150 @@
+{
+  "screenId": "linkedin-webapp-versions-2026-10-28-onboarding-6",
+  "screen_id": "linkedin-webapp-versions-2026-10-28-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:29:32.147Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "saas",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 5,
+  "name": "OTP verification",
+  "description": "Verification code screen with 1 input field and a primary action labelled “Next”. Light theme, 13 text elements.",
+  "text": "Linked in\nSign in\nJoin now\nForgot password\nEmail or Phone\nmotvintool@gmail.com\nWe'll send a verification code to this email or phone\nnumber if it matches an existing Linkedln account.\nNext\nBack\nLinked in © 2026\nUser Agreement Privacy Policy Community Guidelines Cookie Policy Copyright Policy Send Feedback\nLanguage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Join now”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with 1 input field and a primary action labelled “Next”. Light theme, 13 text elements.",
+        "Calls to action: “Next”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 79 in “Logging in”",
+        "Reached from “Sign in with email — scrolled”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 9s at 0:21 in the recording",
+        "Frame 101 of 3616 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfe",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#dcdfe0",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#3870a7",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#b4b8bc",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#06478f",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "mvrjdd59-619pz4.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3616,
+    "frame": 101,
+    "atSeconds": 21.6,
+    "endSeconds": 30.6,
+    "holdSeconds": 9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Join now",
+    "headline": "Forgot password"
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Tap “Linked in”",
+        "name": "Sign in with email — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Tap “Forgot password”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

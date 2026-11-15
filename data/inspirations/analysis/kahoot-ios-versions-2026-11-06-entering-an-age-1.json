@@ -1,0 +1,149 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-entering-an-age-1",
+  "screen_id": "kahoot-ios-versions-2026-11-06-entering-an-age-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:21:57.663Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "creation",
+  "flow_name": "Entering an age",
+  "flow_position": 7,
+  "name": "Form",
+  "description": "Form screen with the keyboard open. Light theme, 19 text elements.",
+  "text": "9:41 €\nHow old are you?\n25\nOK\n2\n3\nABC\nDEF\n5\n4\n6\nJKL\nMNO\nGHI\n7\n8\n9\nWXYZ\nTUV\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Light theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 10 in “Onboarding”",
+        "Reached from “Choose your account type”",
+        "Leads to “How old are you?”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:09 in the recording",
+        "Frame 38 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.465
+    },
+    {
+      "hex": "#484648",
+      "role": "text",
+      "share": 0.223
+    },
+    {
+      "hex": "#626062",
+      "role": "surface",
+      "share": 0.126
+    },
+    {
+      "hex": "#d8dfdf",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#1267cf",
+      "role": "accent",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 38,
+    "atSeconds": 9.6,
+    "endSeconds": 11.7,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "How old are you?"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Open Form",
+        "name": "Choose your account type"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Tap “How old are you?”",
+        "name": "How old are you?"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

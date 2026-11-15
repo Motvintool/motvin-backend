@@ -1,0 +1,170 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-creating-an-account-3",
+  "screen_id": "headway-ios-versions-2026-11-04-creating-an-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:51.002Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 4,
+  "name": "Hide or share email",
+  "description": "A third-party sign-in page, not the app's own design with the keyboard open and a primary action labelled “Continue”. Dark theme, 34 text elements.",
+  "text": "9:41 €\noll\nX Create account\nLog in\nAchieve your goals\nwith Headway\nEnter your email\nEmail\nSingle sign-on enabled\nContinue\nBy continuing I agree with the Privacy Policy.,\nTerms & Conditions\nHide My Email\ni\nW\nt\ne\nr\ny\nO\nk\nf\nh\nd\ng\nJ\nà\nS\nb\nZ\nm\nC\nV\nn\n123\na",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Achieve your goals”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 34% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with the keyboard open and a primary action labelled “Continue”. Dark theme, 34 text elements.",
+        "Calls to action: “Continue”",
+        "34 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 25 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 3:12 in the recording",
+        "Frame 647 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242225",
+      "role": "background",
+      "share": 0.724
+    },
+    {
+      "hex": "#2f3f4c",
+      "role": "surface",
+      "share": 0.129
+    },
+    {
+      "hex": "#5f5d5e",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#019cff",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#184d72",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 647,
+    "atSeconds": 192.6,
+    "endSeconds": 194.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.03125,
+        "w": 0.9375,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Achieve your goals",
+    "headline": "With Headway"
+  },
+  "crawler": {
+    "nodeId": "s078",
+    "depth": 77,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s077",
+        "via": "Type “X Create account”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s079",
+        "via": "Type “motvint”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

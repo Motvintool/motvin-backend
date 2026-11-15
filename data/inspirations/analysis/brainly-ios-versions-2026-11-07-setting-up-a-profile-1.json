@@ -1,0 +1,146 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-setting-up-a-profile-1",
+  "screen_id": "brainly-ios-versions-2026-11-07-setting-up-a-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:20.376Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Setting up a profile",
+  "flow_position": 1,
+  "name": "Profile",
+  "description": "Profile screen with a primary action labelled “NEXT”. Dark theme, 4 text elements.",
+  "text": "9:41C\n•0l\nFirst, we need to know what to call you\nYou'll see this name on your profile\nmotvintool\nNEXT",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a primary action labelled “NEXT”. Dark theme, 4 text elements.",
+        "Calls to action: “NEXT”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 11 in “Tell us about yourself detail”",
+        "Reached from “Sign-in options”",
+        "Leads to “Tell us about yourself”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 0:27 in the recording",
+        "Frame 101 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272c35",
+      "role": "background",
+      "share": 0.868
+    },
+    {
+      "hex": "#15171c",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#44484f",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#5e6269",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 101,
+    "atSeconds": 27,
+    "endSeconds": 30.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "NEXT"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "First, we need to know what to call you"
+  },
+  "crawler": {
+    "nodeId": "s019",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s018",
+        "via": "Open Profile",
+        "name": "Sign-in options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s020",
+        "via": "Open Tell us about yourself",
+        "name": "Tell us about yourself"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

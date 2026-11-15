@@ -1,0 +1,156 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-browsing-new-hot-1",
+  "screen_id": "netflix-ios-versions-2026-10-25-browsing-new-hot-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:10.792Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Browsing New & Hot",
+  "flow_position": null,
+  "name": "Home home — loading",
+  "description": "Loading state of Home home with a 4-item tab bar. Dark theme, 1 text element.",
+  "text": "9:41(\nall\nO\nNew & Hot\nSearch\nMy Netflix\nHome\nClips",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "clips",
+    "search",
+    "my netflix",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Clips, Search, My Netflix",
+        "Navigation title reads “New & Hot”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Home home with a 4-item tab bar. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:10 in the recording",
+        "Frame 838 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100d11",
+      "role": "background",
+      "share": 0.959
+    },
+    {
+      "hex": "#2c282b",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#575658",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#5f2327",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 838,
+    "atSeconds": 250.5,
+    "endSeconds": 251.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [
+      "Home",
+      "Clips",
+      "Search",
+      "My Netflix"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New & Hot",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s236",
+    "depth": 235,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s235",
+        "via": "Tap “New & Hot”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s238",
+        "via": "Wait 1.2s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-setting-up-reminders-4",
+  "screen_id": "dailyart-ios-versions-2026-11-06-setting-up-reminders-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:30.844Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up reminders",
+  "flow_position": 7,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 6 text elements.",
+  "text": "9:41 €\nWhen do you want to get your daily\nart reminder?\n09:00\n12:00\n17:00\nOther time\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 8 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “Add your Widget”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:09 in the recording",
+        "Frame 38 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131116",
+      "role": "background",
+      "share": 0.869
+    },
+    {
+      "hex": "#474549",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#c3012f",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#4e0b1e",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#656165",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 38,
+    "atSeconds": 9.3,
+    "endSeconds": 11.7,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "When do you want to get your daily",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Open Loading state",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Wait 2.4s",
+        "name": "Add your Widget"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

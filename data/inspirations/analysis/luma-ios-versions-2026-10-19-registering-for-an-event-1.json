@@ -1,0 +1,141 @@
+{
+  "screenId": "luma-ios-versions-2026-10-19-registering-for-an-event-1",
+  "screen_id": "luma-ios-versions-2026-10-19-registering-for-an-event-1",
+  "analyzer": "ollama/qwen3-vl:30b-a3b-instruct",
+  "analyzedAt": "2026-10-24T04:10:29.855Z",
+  "screen_type": "login",
+  "published_as": "form",
+  "states": [],
+  "category": "lifestyle",
+  "flow": "authentication",
+  "flow_name": "Registering for an event",
+  "flow_position": 3,
+  "name": "Registration form",
+  "description": "Login screen with 1 input field. Dark theme, 9 text elements.",
+  "text": "9:41(\n•0\nX\nRegistration\nSecondlnnings -Meet up\nSaturday, 3:00 PM\nYour Info\nPhone Number *\n+91 63821 02514\nRegistration Question\nWhat is your career looking like now\nRegister",
+  "purpose": "To collect user information for event registration",
+  "primary_action": "Enter phone number and registration question",
+  "tags": [
+    "register",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Secondlnnings -Meet up”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Secondinnings -Meet up”",
+        "Reached from “Create account (2)”",
+        "Leads to “Create account (3)”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 3:51 in the recording",
+        "Frame 781 of 1580 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#35374b",
+      "role": "background",
+      "share": 0.738
+    },
+    {
+      "hex": "#5f4c4e",
+      "role": "surface",
+      "share": 0.113
+    },
+    {
+      "hex": "#f2f5fa",
+      "role": "text",
+      "share": 0.036
+    },
+    {
+      "hex": "#713c3c",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#5f6a77",
+      "role": "surface",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Luma.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1580,
+    "frame": 781,
+    "atSeconds": 231.9,
+    "endSeconds": 234.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "title": "Secondlnnings -Meet up",
+    "headline": "Registration Question",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s071",
+    "depth": 70,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s070",
+        "via": "Tap “Secondlnnings -Meet up”",
+        "name": "Create account (2)"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s072",
+        "via": "Back to Create account",
+        "name": "Create account (3)"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-19",
+  "capturedBy": "motvin-ios-crawler"
+}

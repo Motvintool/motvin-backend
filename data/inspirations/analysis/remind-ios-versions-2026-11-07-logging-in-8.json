@@ -1,0 +1,149 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-logging-in-8",
+  "screen_id": "remind-ios-versions-2026-11-07-logging-in-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:14.648Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 16,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open. Light theme, 22 text elements.",
+  "text": "9:41 C\nX\nThis looks like a new device\nTo verify it's you, enter the 4-digit code sent to\nmotvintool@gmail.com\nDidn't get the code? See other options\n2\n3\n1\nABC\nDEF\n4\n5\n6\nJKL\nMNO\nGHI\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open. Light theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 21 in “Creating an account”",
+        "Reached from “Phone number entry”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 8:34 in the recording",
+        "Frame 1728 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbfbfc",
+      "role": "background",
+      "share": 0.716
+    },
+    {
+      "hex": "#e0e2e6",
+      "role": "surface",
+      "share": 0.207
+    },
+    {
+      "hex": "#c8c5c1",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#969490",
+      "role": "text",
+      "share": 0.004
+    },
+    {
+      "hex": "#acadb1",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1728,
+    "atSeconds": 514.8,
+    "endSeconds": 518.7,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Didn't get the code? See other options"
+  },
+  "crawler": {
+    "nodeId": "s203",
+    "depth": 205,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s202",
+        "via": "Back to OTP verification",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s204",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

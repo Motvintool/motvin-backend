@@ -1,0 +1,168 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-logging-in-7",
+  "screen_id": "memrise-ios-versions-2026-11-08-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:24.542Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 16,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen, on top of Sign in with email with the keyboard open and a primary action labelled “Sign in now”. Dark theme, 37 text elements.",
+  "text": "9:41 C\n•0\nMEM\nRiSE\nEmail\nReset password\nFor reset instructions, enter the email\nmot\nyou used to create your account.\nPassv\nCancel\nReset\nI forgot my password\nSign in now\nt\nW\nU\na\ne\nr\nO\ny\nh\nf\nd\ng\nK\na\nS\nb\nX\nZ\nC\nn\nm\nV\n123\ngo\nspace",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “RiSE”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 73% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Sign in with email with the keyboard open and a primary action labelled “Sign in now”. Dark theme, 37 text elements.",
+        "Calls to action: “Sign in now”",
+        "37 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 19 in “Why is Memrise”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 10:54 in the recording",
+        "Frame 2193 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d232b",
+      "role": "background",
+      "share": 0.552
+    },
+    {
+      "hex": "#4b4d50",
+      "role": "surface",
+      "share": 0.232
+    },
+    {
+      "hex": "#7f8183",
+      "role": "text",
+      "share": 0.076
+    },
+    {
+      "hex": "#473c17",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#836001",
+      "role": "accent",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 2193,
+    "atSeconds": 654,
+    "endSeconds": 658.2,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.734375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in now"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "RiSE",
+    "headline": "I forgot my password"
+  },
+  "crawler": {
+    "nodeId": "s374",
+    "depth": 373,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s373",
+        "via": "Type “Reset password”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s375",
+        "via": "Tap “I forgot my password”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

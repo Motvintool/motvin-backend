@@ -1,0 +1,147 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-connecting-gmail-4",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-connecting-gmail-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:55.742Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Connecting Gmail",
+  "flow_position": 13,
+  "name": "Detail",
+  "description": "Detail screen with a search bar. Dark theme, 15 text elements.",
+  "text": "9:41 €\noll\nX\nGmail\nConnect\nGive Grok access to search your emails.\nAbout this Connector\nQ\nSearch your emails\nSearch your inbox, summarize unread\nemails, and find messages from specific\npeople.\nWe never train on your data\nXAI does not train on your Gmail data.\nYour emails stay in Gmail\nWe don't store your emails. Grok searches\nGmail in real-time when you ask questions.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "detail",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a search bar. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 13 in “Subscribing”",
+        "Reached from “Search”",
+        "Leads to “Permission request”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 2:04 in the recording",
+        "Frame 497 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181618",
+      "role": "background",
+      "share": 0.749
+    },
+    {
+      "hex": "#363336",
+      "role": "surface",
+      "share": 0.142
+    },
+    {
+      "hex": "#010002",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#fbfafb",
+      "role": "text",
+      "share": 0.022
+    },
+    {
+      "hex": "#545053",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 497,
+    "atSeconds": 124.5,
+    "endSeconds": 126.9,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Gmail"
+  },
+  "crawler": {
+    "nodeId": "s050",
+    "depth": 49,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s049",
+        "via": "Tap “Gmail”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s051",
+        "via": "Open \"google.com\" to Sign In",
+        "name": "Permission request"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

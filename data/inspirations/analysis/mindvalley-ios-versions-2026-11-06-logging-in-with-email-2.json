@@ -1,0 +1,167 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-logging-in-with-email-2",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-logging-in-with-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:58.702Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login toast over a dimmed screen, on top of Settings with 2 input fields and a primary action labelled “Continue with Google”. Dark theme, 10 text elements.",
+  "text": "9:41 €\nLog In\nLog in to your Mindvalley account\nContinue with Apple\nContinue with Google\nContinue with Facebook\nOr\nEmail\nPassword\nLog In\nForgot Password? Recover it\nNew to Mindvalley? Create a FREE account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log In”",
+        "Toast over a dimmed background, covering 6% of the height from 16% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Settings with 2 input fields and a primary action labelled “Continue with Google”. Dark theme, 10 text elements.",
+        "Calls to action: “Continue with Google”, “Continue with Facebook”, “Log In”",
+        "10 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 23 in “Logging in with email”",
+        "Reached from “Settings”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:58 in the recording",
+        "Frame 2197 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#10141e",
+      "role": "background",
+      "share": 0.813
+    },
+    {
+      "hex": "#101e6c",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#32353e",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#f9f8f9",
+      "role": "text",
+      "share": 0.032
+    },
+    {
+      "hex": "#4d5058",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 2197,
+    "atSeconds": 658.2,
+    "endSeconds": 659.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.15625,
+        "w": 0.875,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google",
+      "Continue with Facebook",
+      "Log In"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log In",
+    "headline": "Email"
+  },
+  "crawler": {
+    "nodeId": "s292",
+    "depth": 291,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s291",
+        "via": "Tap “Billing & Subscriptions”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s293",
+        "via": "Tap “Continue with Apple”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

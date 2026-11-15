@@ -1,0 +1,152 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-reading-a-book-3",
+  "screen_id": "apple-books-ios-versions-2026-11-06-reading-a-book-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:04.707Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "search",
+  "flow_name": "Reading a book",
+  "flow_position": 4,
+  "name": "Search",
+  "description": "Search screen with a search bar and the keyboard open. Dark theme, 28 text elements.",
+  "text": "9:41 C\nSearch Book\nX\nIn this book\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nH\nA\nS\nD\nG\nJ\nK\nL\nF\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search Book”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 21 in “The Adventures of Sherlock Holmes”",
+        "Reached from “And hereditary King of Bohemia.\"”",
+        "Leads to “\"Why, indeed?\" murmured Holmes. \"Your”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:24 in the recording",
+        "Frame 84 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e21",
+      "role": "background",
+      "share": 0.792
+    },
+    {
+      "hex": "#3f3d3f",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#030204",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#5e5c5e",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#7b797b",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 84,
+    "atSeconds": 24.3,
+    "endSeconds": 25.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search Book",
+    "headline": "In this book"
+  },
+  "crawler": {
+    "nodeId": "s012",
+    "depth": 11,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s011",
+        "via": "Tap “Search Book”",
+        "name": "And hereditary King of Bohemia.\""
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s013",
+        "via": "Back to Other",
+        "name": "\"Why, indeed?\" murmured Holmes. \"Your"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,141 @@
+{
+  "screenId": "duolingo-webapp-versions-2026-11-09-onboarding-61",
+  "screen_id": "duolingo-webapp-versions-2026-11-09-onboarding-61",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:57.527Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Continue”. Light theme, 19 text elements.",
+  "text": "Sign in with Google\nGoogle will allow Duolingo to access this info\nSign in to Duolingo\nabout you\ng surendarv\nsurendarv638@gmail.com\nName and profile picture\nsurendarv638@gmail.com\nEmail address\nReview Duolingo's privacy policy and Terms of Service to understand\nhow Duolingo will process and protect your data.\nTo make changes at any time, go to your Google Account.\nLearn more about Sign in with Google.\nContinue\nCancel\nEnglish (United Kingdom)-\nHelp\nPrivacy\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign in to Duolingo”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Continue”. Light theme, 19 text elements.",
+        "Calls to action: “Continue”",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 9 in “Logging in”",
+        "Reached from “Choose an account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 6:33 in the recording",
+        "Frame 1315 of 2572 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5f8fa",
+      "role": "background",
+      "share": 0.962
+    },
+    {
+      "hex": "#d5d8dd",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#b6b7b7",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2572,
+    "frame": 1315,
+    "atSeconds": 393,
+    "endSeconds": 394.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign in to Duolingo",
+    "headline": "G surendarv"
+  },
+  "crawler": {
+    "nodeId": "s051",
+    "depth": 50,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s050",
+        "via": "Wait 1.5s",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s052",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

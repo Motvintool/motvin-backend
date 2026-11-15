@@ -1,0 +1,169 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-creating-an-account-8",
+  "screen_id": "headway-ios-versions-2026-11-04-creating-an-account-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:51.917Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 15,
+  "name": "Create account",
+  "description": "Sign up dialog over a dimmed screen, on top of Create account with a paged carousel and a primary action labelled “Save Password?”. Dark theme, 15 text elements.",
+  "text": "9:41(\nActivity\n1 STEP LEFT TO START LEARNING\nFinalize your account\n2/3\nCreate an account\nPass personalizing quiz\nDa\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nNot Now\nSave\nO DAILY MISSIONS COMPLETED\nWeekly growth\nScan the cover\nGet relevant summaries.IENDCO",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "scan the cover",
+    "signup",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Save Password?”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 27% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up dialog over a dimmed screen, on top of Create account with a paged carousel and a primary action labelled “Save Password?”. Dark theme, 15 text elements.",
+        "Calls to action: “Save Password?”, “Save”",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 25 in “Logging in with email”",
+        "Reached from “Create account”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 3:40 in the recording",
+        "Frame 739 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1a1d",
+      "role": "background",
+      "share": 0.879
+    },
+    {
+      "hex": "#333438",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#555656",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#6e6376",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#1e526f",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 739,
+    "atSeconds": 220.8,
+    "endSeconds": 222,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.359375,
+        "w": 0.6875,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Save Password?",
+    "headline": "Finalize your account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s089",
+    "depth": 88,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s088",
+        "via": "Tap “Finalize your account”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s090",
+        "via": "Dismiss",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

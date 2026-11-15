@@ -1,0 +1,162 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-onboarding-30",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-onboarding-30",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:48.389Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 54,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state with a primary action labelled “Continue”. Dark theme, 5 text elements.",
+  "text": "Welcome to Leagues\nTrack your progress with other learners on a\nweekly leaderboard.\n• • •\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome to Leagues”",
+        "Dialog over a dimmed background, covering 41% of the height from 39% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state with a primary action labelled “Continue”. Dark theme, 5 text elements.",
+        "Calls to action: “Continue”",
+        "5 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 54 of 57 in “Entering phone number”",
+        "Reached from “Dialog — loading”",
+        "Leads to “Toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:41 in the recording",
+        "Frame 538 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121412",
+      "role": "background",
+      "share": 0.946
+    },
+    {
+      "hex": "#2e332e",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#cecece",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#505150",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#898b8a",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 538,
+    "atSeconds": 161.1,
+    "endSeconds": 161.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.390625,
+        "w": 0.25,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome to Leagues",
+    "headline": "Welcome to Leagues"
+  },
+  "crawler": {
+    "nodeId": "s061",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s060",
+        "via": "Wait 1.5s",
+        "name": "Dialog — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s062",
+        "via": "Tap “weekly leaderboard.”",
+        "name": "Toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

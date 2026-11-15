@@ -1,0 +1,152 @@
+{
+  "screenId": "podia-webapp-versions-2026-11-11-editing-the-course-homepage-24",
+  "screen_id": "podia-webapp-versions-2026-11-11-editing-the-course-homepage-24",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:24:24.049Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Editing the course homepage",
+  "flow_position": 50,
+  "name": "Checkout",
+  "description": "Checkout screen with a row of 3 category chips. Light theme, 18 text elements.",
+  "text": "= Checkout success\nHelp\ng\nDesign\nDone\nPublish\nMotvin's Podia\nJoin\nCart\nLogin\nThank you!\nYou've now got access to {{ product.name }}.\nView community\n+\nPrivacy Policy\nTerms of Service\nPoweredby Podia\napp.podia.com/editor/pages/21030573/checkout/.../edit",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "cart",
+    "checkout",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Motvin's Podia”",
+        "Category strip: Join, Cart, Login",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with a row of 3 category chips. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 50 of 62 in “Detail”",
+        "Reached from “Motvin's Podia”",
+        "Leads to “Checkout”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 3:00 in the recording",
+        "Frame 605 of 5337 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f9f8",
+      "role": "background",
+      "share": 0.66
+    },
+    {
+      "hex": "#0d1d33",
+      "role": "text",
+      "share": 0.156
+    },
+    {
+      "hex": "#294fe6",
+      "role": "accent",
+      "share": 0.068
+    },
+    {
+      "hex": "#cad0e8",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#4a5767",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "Podia.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5337,
+    "frame": 605,
+    "atSeconds": 180,
+    "endSeconds": 181.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [
+      "Join",
+      "Cart",
+      "Login"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Motvin's Podia",
+    "headline": "Thank you!"
+  },
+  "crawler": {
+    "nodeId": "s060",
+    "depth": 60,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s059",
+        "via": "Tap “Motvin's Podia”",
+        "name": "Motvin's Podia"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s061",
+        "via": "Tap “Cart”",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

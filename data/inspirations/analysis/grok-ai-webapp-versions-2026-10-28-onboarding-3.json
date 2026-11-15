@@ -1,0 +1,152 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-onboarding-3",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:03.826Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Log in with your email”. Light theme, 15 text elements.",
+  "text": "Grok v\nYou are signing into\nLog in with your email\nEmail\nmotvintool@gmail.com\nNext\nGo back\nDon't have an account? Sign up\nEssential cookies keep the site working and stay on. Optional cookies help\nwith performance and advertising - accept, reject, or manage them. Learn\nmore in our Cookie Policy,Privacy Policy, and Terms of Service.\nCookie Settings\nReject All\nAccept All Cookies\nYour privacy choices",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You are signing into”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Log in with your email”. Light theme, 15 text elements.",
+        "Calls to action: “Log in with your email”, “Next”",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 6 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 0:06 in the recording",
+        "Frame 50 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.959
+    },
+    {
+      "hex": "#dddddd",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#212121",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#6e6e6e",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#b1b1b1",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 50,
+    "atSeconds": 6.9,
+    "endSeconds": 15.3,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in with your email",
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You are signing into",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “X Login with X”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Email”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

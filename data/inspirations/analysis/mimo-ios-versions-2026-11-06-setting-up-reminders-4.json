@@ -1,0 +1,146 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-setting-up-reminders-4",
+  "screen_id": "mimo-ios-versions-2026-11-06-setting-up-reminders-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:18:51.073Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Setting up reminders",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 10 text elements.",
+  "text": "9:41C\nHow long do you want to\nlearn each day?\nYou can always change this goal later\n5 min\nCa:\nOne moment please...\n10 min\nReg\nSerious\n20 min\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Allow \"Mimo\" to track your dialog”",
+        "Leads to “Onboarding step”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:30 in the recording",
+        "Frame 106 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#282949",
+      "role": "background",
+      "share": 0.849
+    },
+    {
+      "hex": "#464469",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#9568e9",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#6a48b2",
+      "role": "accent",
+      "share": 0.027
+    },
+    {
+      "hex": "#6b6b82",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 106,
+    "atSeconds": 30,
+    "endSeconds": 32.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "How long do you want to",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s018",
+    "depth": 17,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s017",
+        "via": "Dismiss",
+        "name": "Allow \"Mimo\" to track your dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s019",
+        "via": "Wait 2.1s",
+        "name": "Onboarding step"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

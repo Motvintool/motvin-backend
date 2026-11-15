@@ -1,0 +1,161 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-filtering-tasks-4",
+  "screen_id": "asana-ios-versions-2026-11-04-filtering-tasks-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:59.440Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "toast"
+  ],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Filtering tasks",
+  "flow_position": 5,
+  "name": "Search results",
+  "description": "Search results toast over a dimmed screen. Dark theme, 20 text elements.",
+  "text": "9:41(\n•ll\nMy tasks\n• .•\n• Recently assigned\n...\nDo today\n• Do next week\n•.•\nDo later\n••.\nWork\n1\n• • •\nFilters\nReset\nCompletion status\nIncomplete tasks\nCompleted tasks\nDates and people\nDue before today ›\nDue date\nApply",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "apply",
+    "search-results",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My tasks”",
+        "Toast over a dimmed background, covering 13% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results toast over a dimmed screen. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Searching Home”",
+        "Reached from “Search results”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 3:18 in the recording",
+        "Frame 670 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#17181b",
+      "role": "background",
+      "share": 0.89
+    },
+    {
+      "hex": "#33363b",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#3a74e3",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#325bb0",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#595a5c",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 670,
+    "atSeconds": 198.9,
+    "endSeconds": 201.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.03125,
+        "w": 0.75,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My tasks",
+    "headline": "Do today",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s080",
+    "depth": 79,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s079",
+        "via": "Wait 1.5s",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s081",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

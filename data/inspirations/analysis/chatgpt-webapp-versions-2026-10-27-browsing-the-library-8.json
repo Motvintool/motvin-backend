@@ -1,0 +1,164 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-browsing-the-library-8",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-browsing-the-library-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:44.922Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "ai",
+  "flow": "settings",
+  "flow_name": "Browsing the library",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen with a sidebar, a row of 5 category chips and a search bar. Light theme, 21 text elements.",
+  "text": "Q\nChatGPT\nLibrary\nQ Search library\nNew\nC New chat\nSettings\nSuggested\nFavorites\nFolders\nImages\nAll\nD Images\nManage\n• Tasks\nModified\nName\n• Storage\nUD Library\nYesterday\nwork\nW Trash\n@ Plugins\n7:42 AM\nUntitled notes :\n1B\n& Codex\n••• Explore\nPinned\nWelcome\nProjects\nNo projects\nRecents\nWeekly Article Recommendations\nChennai IT Job Listings\nCreate Poster Brief\nSurendar V\nFree\n# Claim offer",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "offer",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Library”",
+        "Category strip: Suggested, Favorites, Folders, Images, All",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a sidebar, a row of 5 category chips and a search bar. Light theme, 21 text elements.",
+        "21 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening Claim offer”",
+        "Reached from “Storage”",
+        "Leads to “Claim offer sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 9:10 in the recording",
+        "Frame 1841 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafbfa",
+      "role": "background",
+      "share": 0.978
+    },
+    {
+      "hex": "#dcdddc",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#bebebe",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#8a8b8a",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#383838",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 1841,
+    "atSeconds": 550.5,
+    "endSeconds": 552.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [
+      "Suggested",
+      "Favorites",
+      "Folders",
+      "Images",
+      "All"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "New chat",
+      "Images",
+      "Tasks",
+      "Library",
+      "Plugins",
+      "Codex",
+      "Explore"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Library",
+    "headline": "Storage"
+  },
+  "crawler": {
+    "nodeId": "s096",
+    "depth": 96,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s095",
+        "via": "Wait 4.5s",
+        "name": "Storage"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s097",
+        "via": "Open Claim offer",
+        "name": "Claim offer sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

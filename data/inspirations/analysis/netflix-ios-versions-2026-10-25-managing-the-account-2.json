@@ -1,0 +1,146 @@
+{
+  "screenId": "netflix-ios-versions-2026-10-25-managing-the-account-2",
+  "screen_id": "netflix-ios-versions-2026-10-25-managing-the-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T02:57:28.024Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "entertainment",
+  "flow": "checkout",
+  "flow_name": "Managing the account",
+  "flow_position": 6,
+  "name": "Payment method",
+  "description": "Payment screen with 1 input field. Light theme, 16 text elements.",
+  "text": "9:41(\nall\nNETFLIX\nYou have got options!\n• Change plan\n• Manage payment method\n• Cancel and more\nGo to netflix.com/more\nAccount\nMembership details\nMember since July 2024\nBasic plan\nNext payment: 11 October 2026\nso.•@axi\n>\nView payment history\nSecurity\nPassword\nEmail\n>\nsurendarv638@gmail.com\nMobile phone",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "email",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen with 1 input field. Light theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 6 in “Opening a page (Settings)”",
+        "Reached from “Payment method — loading”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:38 in the recording",
+        "Frame 1330 of 1701 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fbf8fb",
+      "role": "background",
+      "share": 0.726
+    },
+    {
+      "hex": "#020102",
+      "role": "accent",
+      "share": 0.106
+    },
+    {
+      "hex": "#d9d8dd",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#3d3c3e",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#b9b7ba",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Netflix.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1701,
+    "frame": 1330,
+    "atSeconds": 398.1,
+    "endSeconds": 399.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s409",
+    "depth": 408,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s407",
+        "via": "Wait 1.8s",
+        "name": "Payment method — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s411",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

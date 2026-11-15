@@ -1,0 +1,150 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-searching-immerse-videos-2",
+  "screen_id": "memrise-ios-versions-2026-11-08-searching-immerse-videos-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:06.510Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "education",
+  "flow": "search",
+  "flow_name": "Searching Immerse videos",
+  "flow_position": 2,
+  "name": "Search",
+  "description": "Search screen with a row of 3 category chips and a search bar. Dark theme, 7 text elements.",
+  "text": "9:41 (\n•l\nO\nImmerse\nYouTube\nAll\nMemrise\nUnwatched\nSearch\nQ",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: YouTube, All, Memrise",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a row of 3 category chips and a search bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 22 in “Searching Home”",
+        "Reached from “Home home”",
+        "Leads to “Search”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:28 in the recording",
+        "Frame 1099 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#293547",
+      "role": "background",
+      "share": 0.957
+    },
+    {
+      "hex": "#4d545d",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#636c7a",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#524b2d",
+      "role": "accent",
+      "share": 0.001
+    },
+    {
+      "hex": "#758192",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1099,
+    "atSeconds": 328.5,
+    "endSeconds": 330,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [
+      "YouTube",
+      "All",
+      "Memrise"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Unwatched"
+  },
+  "crawler": {
+    "nodeId": "s191",
+    "depth": 190,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s190",
+        "via": "Open Search",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s192",
+        "via": "Tap “Unwatched”",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

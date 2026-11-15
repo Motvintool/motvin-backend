@@ -1,0 +1,150 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-signing-up-4",
+  "screen_id": "fable-ios-versions-2026-11-04-signing-up-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:50.124Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 10,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Continue with email”. Dark theme, 11 text elements.",
+  "text": "9:41(\nC\n•ll\n<\nSign in\nCreate account\nDisplay name\nMotvin Tool\nEmail\nmotvintool@gmail.com\nPassword\nContinue with email\nBy continuing, you agree to Fable's Terms of Service and\nPrivacy Policy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Continue with email”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue with email”",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 26 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Activity acros — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 10.2s at 0:23 in the recording",
+        "Frame 112 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191c",
+      "role": "background",
+      "share": 0.846
+    },
+    {
+      "hex": "#060407",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#e5e5e5",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#5b5a5c",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 112,
+    "atSeconds": 23.7,
+    "endSeconds": 33.9,
+    "holdSeconds": 10.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Tap “Sign in”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Open Activity acros — loading",
+        "name": "Activity acros — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,159 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-viewing-the-learning-ladder-4",
+  "screen_id": "drops-ios-versions-2026-11-04-viewing-the-learning-ladder-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:49.712Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Viewing the Learning Ladder",
+  "flow_position": 6,
+  "name": "Leaderboard dialog",
+  "description": "Dialog over a dimmed screen, on top of Learning Ladder. Dark theme, 6 text elements.",
+  "text": "i\nLearnii\nGive us feedback\nExit Learning Ladder\nComplete sessions to earn XP and climb the\nleaderboard",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Leaderboard”",
+        "Dialog over a dimmed background, covering 19% of the height from 66% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Learning Ladder. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 15 in “How it works”",
+        "Reached from “Learning Ladder”",
+        "Leads to “Learning Ladder form”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 4:53 in the recording",
+        "Frame 984 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#200a34",
+      "role": "background",
+      "share": 0.795
+    },
+    {
+      "hex": "#582088",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#3c1560",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#69033e",
+      "role": "accent",
+      "share": 0.031
+    },
+    {
+      "hex": "#8f66b6",
+      "role": "text",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 984,
+    "atSeconds": 293.7,
+    "endSeconds": 295.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.65625,
+        "w": 0.6875,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Leaderboard",
+    "headline": "Learnii"
+  },
+  "crawler": {
+    "nodeId": "s101",
+    "depth": 100,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s100",
+        "via": "Tap “leaderboard”",
+        "name": "Learning Ladder"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s102",
+        "via": "Type “Learning Ladder”",
+        "name": "Learning Ladder form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

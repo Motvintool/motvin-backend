@@ -1,0 +1,167 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-sharing-a-video-1",
+  "screen_id": "ted-ios-versions-2026-11-08-sharing-a-video-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:25.935Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Sharing a video",
+  "flow_position": 1,
+  "name": "Messages sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Home home with a 4-item tab bar. Dark theme, 9 text elements.",
+  "text": "9:41(\nTED\nNew on TED\nted.com\nSelvam\nLavanya\nMessages\nAirDrop\nNotes\nMail\nСopy\nAdd to New\nAsk ChatGPT\nView More\nQuick Note",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "add to new",
+    "quick note",
+    "ask chatgpt",
+    "view more",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Add to New, Quick Note, Ask ChatGPT, View More",
+        "Navigation title reads “Messages”",
+        "Bottom sheet over a dimmed background, covering 33% of the height from 64% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Home home with a 4-item tab bar. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Add to New”",
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:33 in the recording",
+        "Frame 313 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191518",
+      "role": "background",
+      "share": 0.642
+    },
+    {
+      "hex": "#372d3d",
+      "role": "surface",
+      "share": 0.142
+    },
+    {
+      "hex": "#635658",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#544a49",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#f4f3f7",
+      "role": "text",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 313,
+    "atSeconds": 93,
+    "endSeconds": 94.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.640625,
+        "w": 0.9375,
+        "h": 0.328125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [
+      "Add to New",
+      "Quick Note",
+      "Ask ChatGPT",
+      "View More"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Messages",
+    "headline": "Ted.com"
+  },
+  "crawler": {
+    "nodeId": "s038",
+    "depth": 37,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s037",
+        "via": "Switch to Add to New",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s039",
+        "via": "Switch to Home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

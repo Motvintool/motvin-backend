@@ -1,0 +1,162 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-onboarding-3",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:09.327Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login screen with a row of 3 category chips, a search bar and a primary action labelled “Continue”. Light theme, 25 text elements.",
+  "text": "Now available: Get heard by up to 100 listeners on your next upload with Artist or Artist Pro. Learn More\nX\nSign in\nCreate account\nFor artists\nSOUNDCLOUD\nCreate an account\nYour email address\nDISCOVER-\nmotvintool@gmail.com\nGET DISCOV\nChoose a password (min. 8 characters)\nDiscover your next obsession, or become sc\nContinue\nSoundCloud is the only community where fe\ntogether to discover and connect through n\nNeed help?\nDC the Don\nGet started\nSoundCloud Artist Pro\n•• O\nSearch for artists, bands, tracks, podcasts\nor\nUpload your own\nHear what's trending",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create an account”",
+        "Category strip: Sign in, For artists, SOUNDCLOUD",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a row of 3 category chips, a search bar and a primary action labelled “Continue”. Light theme, 25 text elements.",
+        "Calls to action: “Continue”, “Get started”",
+        "25 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 22 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:04 in the recording",
+        "Frame 59 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7e7f7d",
+      "role": "background",
+      "share": 0.592
+    },
+    {
+      "hex": "#9d9f9b",
+      "role": "surface",
+      "share": 0.12
+    },
+    {
+      "hex": "#bcbfb9",
+      "role": "surface",
+      "share": 0.093
+    },
+    {
+      "hex": "#e3e1dd",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#0f1010",
+      "role": "text",
+      "share": 0.056
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 59,
+    "atSeconds": 4.5,
+    "endSeconds": 6,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [
+      "Sign in",
+      "For artists",
+      "SOUNDCLOUD"
+    ],
+    "ctas": [
+      "Continue",
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "SOUNDCLOUD",
+    "listedInSidebar": false,
+    "title": "Create an account",
+    "headline": "GET DISCOV",
+    "walkTab": "SOUNDCLOUD"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Sign in”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Sign in”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

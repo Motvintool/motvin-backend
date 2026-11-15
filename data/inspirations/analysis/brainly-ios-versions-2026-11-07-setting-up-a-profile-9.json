@@ -1,0 +1,147 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-setting-up-a-profile-9",
+  "screen_id": "brainly-ios-versions-2026-11-07-setting-up-a-profile-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:21.242Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Setting up a profile",
+  "flow_position": 10,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “SIGN UP”. Dark theme, 7 text elements.",
+  "text": "9:41\n•ll\n<\nFinally, tell us how you identify\nDon't worry, it's safe space.\nI'm a student\nI'm a parent\nI agree to the Terms of Use and Privacy Policy.\nSIGN UP",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “SIGN UP”. Dark theme, 7 text elements.",
+        "Calls to action: “SIGN UP”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Tell us about yourself detail”",
+        "Reached from “Tell us about yourself”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:52 in the recording",
+        "Frame 182 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272c35",
+      "role": "background",
+      "share": 0.87
+    },
+    {
+      "hex": "#3d4458",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#15171c",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#46548a",
+      "role": "accent",
+      "share": 0.028
+    },
+    {
+      "hex": "#61646a",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 182,
+    "atSeconds": 52.8,
+    "endSeconds": 54.9,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "SIGN UP"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Finally, tell us how you identify"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 28,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s027",
+        "via": "Open Create account",
+        "name": "Tell us about yourself"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Wait 2.1s",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

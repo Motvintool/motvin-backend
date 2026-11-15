@@ -1,0 +1,149 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-logging-in-7",
+  "screen_id": "preply-ios-versions-2026-11-07-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:30.115Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 9,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 8 text elements.",
+  "text": "9:41 €\nSign in\nEmail\nmotvintool@gmail.com\nPassword\nPlease enter a correct username and password. Note\nthat both fields may be case-sensitive.\nSign in\nForgot your password?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Sign in”. Light theme, 8 text elements.",
+        "Calls to action: “Sign in”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 18 in “Find the right tutor”",
+        "Reached from “Sign in with email”",
+        "Leads to “Save Password? sheet”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 6:29 in the recording",
+        "Frame 1367 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.824
+    },
+    {
+      "hex": "#e8dce0",
+      "role": "surface",
+      "share": 0.1
+    },
+    {
+      "hex": "#ec82ab",
+      "role": "accent",
+      "share": 0.052
+    },
+    {
+      "hex": "#c3c2c3",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#a5a3a4",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 1367,
+    "atSeconds": 389.4,
+    "endSeconds": 390.9,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Forgot your password?"
+  },
+  "crawler": {
+    "nodeId": "s173",
+    "depth": 173,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s172",
+        "via": "Tap “Sign in”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s174",
+        "via": "Open Save Password?",
+        "name": "Save Password? sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

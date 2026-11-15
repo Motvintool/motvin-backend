@@ -1,0 +1,163 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-opening-a-task-2",
+  "screen_id": "todoist-ios-versions-2026-11-04-opening-a-task-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:10.137Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Opening a task",
+  "flow_position": 2,
+  "name": "Today",
+  "description": "Detail toast over a dimmed screen, on top of Inbox home with a paged carousel. Dark theme, 20 text elements.",
+  "text": "9:41(\nE\n000\nToday\n2 tasks\n29 Oct • Thursday\nFor you: Switching to Todoist (Watch)\nGetting Started\n• Capture: add your first task\nX\n•••\nFor you: Switching to Todoist\n(Watch)\n# Getting Started\nToday\nO Reminders\n= Description\nPriority\n+\nSub-tasks\n+ Add Sub-task\nComment",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "comment",
+    "detail",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Today”",
+        "Paged carousel with a page indicator",
+        "Toast over a dimmed background, covering 5% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail toast over a dimmed screen, on top of Inbox home with a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Detail”",
+        "Reached from “Inbox home”",
+        "Leads to “Inbox home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 6:35 in the recording",
+        "Frame 1324 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c1e",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#3f3e3f",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#5a585a",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#7c6430",
+      "role": "accent",
+      "share": 0.001
+    },
+    {
+      "hex": "#787678",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 1324,
+    "atSeconds": 395.4,
+    "endSeconds": 397.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.0625,
+        "w": 0.6875,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Today",
+    "headline": "Getting Started",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s126",
+    "depth": 128,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s125",
+        "via": "Tap “Today”",
+        "name": "Inbox home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s127",
+        "via": "Dismiss",
+        "name": "Inbox home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

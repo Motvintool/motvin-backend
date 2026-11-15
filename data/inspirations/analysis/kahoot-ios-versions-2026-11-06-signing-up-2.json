@@ -1,0 +1,161 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-signing-up-2",
+  "screen_id": "kahoot-ios-versions-2026-11-06-signing-up-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:22:01.499Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 21,
+  "name": "Create account",
+  "description": "Sign up dialog over a dimmed screen, on top of Create account. Dark theme, 5 text elements.",
+  "text": "9:41 €\nooll\nChild Activity Report\nSign up to get monthly insights\ninto Motvin's learning and\nprogress.\nSaving profile...\nSign up\nMaybe later",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "maybe later",
+    "sign up",
+    "signup",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Saving profile”",
+        "Dialog over a dimmed background, covering 16% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up dialog over a dimmed screen, on top of Create account. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 89 in “Opening Play to collect”",
+        "Reached from “Create account”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 1:33 in the recording",
+        "Frame 314 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222023",
+      "role": "background",
+      "share": 0.894
+    },
+    {
+      "hex": "#575456",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#3e3b3f",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#145bb1",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#2b0e62",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 314,
+    "atSeconds": 93.3,
+    "endSeconds": 94.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.40625,
+        "w": 0.375,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Saving profile",
+    "headline": "Into Motvin's learning and",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 47,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Tap “progress.”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Open To you",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

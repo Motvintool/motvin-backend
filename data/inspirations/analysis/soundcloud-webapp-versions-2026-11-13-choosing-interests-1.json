@@ -1,0 +1,157 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-choosing-interests-1",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-choosing-interests-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:36.908Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Choosing interests",
+  "flow_position": 136,
+  "name": "Upload dialog",
+  "description": "Dialog over a dimmed screen. Dark theme, 8 text elements.",
+  "text": "What are you looking to do on SoundCloud?\nDistribute\nListen\nUpload\nDJ\nShare my tracks with the\nworld and get heard\nPick at least one to continue.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Upload”",
+        "Dialog over a dimmed background, covering 23% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 136 of 226 in “Reading messages”",
+        "Reached from “Subscription plans”",
+        "Leads to “Onboarding step”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 7:57 in the recording",
+        "Frame 1595 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#101010",
+      "role": "background",
+      "share": 0.929
+    },
+    {
+      "hex": "#313132",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#858687",
+      "role": "text",
+      "share": 0.011
+    },
+    {
+      "hex": "#545557",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#676767",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 1595,
+    "atSeconds": 477,
+    "endSeconds": 478.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.4375,
+        "w": 0.75,
+        "h": 0.234375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Upload",
+    "headline": "Upload"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Open Upload",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Dismiss",
+        "name": "Onboarding step"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

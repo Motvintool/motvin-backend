@@ -1,0 +1,147 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-settings-1",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:56.629Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Settings",
+  "flow_position": 10,
+  "name": "Settings — scrolled",
+  "description": "Paywall screen, scrolled further down from Settings. Dark theme, 11 text elements.",
+  "text": "9:41 C\n•0l\nAccount\nChange password\nPicture-in-picture\nBlocked Users\n>\nManage Account\nRestore purchase\nMindvalley ID\nautho|6aeae...\n10.0.13 (712)\nApp Version",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen, scrolled further down from Settings. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 16 in “Subscribing”",
+        "Reached from “Settings”",
+        "Leads to “Passwo flange password sheet”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:02 in the recording",
+        "Frame 2012 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121620",
+      "role": "background",
+      "share": 0.914
+    },
+    {
+      "hex": "#2c303a",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#4b5158",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#a7b3b7",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#ffffff",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 2012,
+    "atSeconds": 602.7,
+    "endSeconds": 603.9,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Restore purchase"
+  },
+  "crawler": {
+    "nodeId": "s265",
+    "depth": 264,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s264",
+        "via": "Scroll",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s266",
+        "via": "Open Passwo flange password",
+        "name": "Passwo flange password sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

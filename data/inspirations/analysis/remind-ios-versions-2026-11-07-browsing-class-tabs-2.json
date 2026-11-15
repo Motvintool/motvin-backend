@@ -1,0 +1,168 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-browsing-class-tabs-2",
+  "screen_id": "remind-ios-versions-2026-11-07-browsing-class-tabs-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:06.028Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Browsing class tabs",
+  "flow_position": 5,
+  "name": "Settings",
+  "description": "Settings dialog over a dimmed screen, on top of Settings with a row of 4 category chips. Light theme, 17 text elements.",
+  "text": "•l =\n9:41(\nMath\nMessages\nSettings\nPeople\nFiles\nANNOUNCEMENTS\nMath7\nSend your first announcement\nCONVERSATIONS\nStart a conversation\nMessage one person or a group\nX\nNew message\nAnnouncement\nSends separately; members cannot see\nother replies\nConversation\nSends as one group; members can see\nall replies",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "all replies",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Send your first announcement”",
+        "Category strip: Messages, Settings, People, Files",
+        "Dialog over a dimmed background, covering 36% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings with a row of 4 category chips. Light theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 18 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:33 in the recording",
+        "Frame 914 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7b7d",
+      "role": "background",
+      "share": 0.6
+    },
+    {
+      "hex": "#fbfafc",
+      "role": "text",
+      "share": 0.32
+    },
+    {
+      "hex": "#dbdadc",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#636360",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#c1c2c6",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 914,
+    "atSeconds": 273.3,
+    "endSeconds": 274.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [
+      "Messages",
+      "Settings",
+      "People",
+      "Files"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Send your first announcement",
+    "headline": "New message",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s102",
+    "depth": 102,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s101",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s103",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,150 @@
+{
+  "screenId": "perplexity-ios-versions-2026-10-26-browsing-the-news-feed-1",
+  "screen_id": "perplexity-ios-versions-2026-10-26-browsing-the-news-feed-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:31:31.810Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Browsing the news feed",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state with a row of 3 category chips. Dark theme, 6 text elements.",
+  "text": "9:41 C\nDiscover\nQ\nTech & Science\nTop Stories\nFor You\nBusines",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Tech & Science”",
+        "Category strip: Top Stories, For You, Busines",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a row of 3 category chips. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 43 in “Tech & Science”",
+        "Reached from “Space home — scrolled”",
+        "Leads to “Jio TR”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:01 in the recording",
+        "Frame 1007 of 1873 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1e1e",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#3c3a3b",
+      "role": "surface",
+      "share": 0.267
+    },
+    {
+      "hex": "#605e5f",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#acabab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvo4xudd-dcft1b.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1873,
+    "frame": 1007,
+    "atSeconds": 301.8,
+    "endSeconds": 302.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [
+      "Top Stories",
+      "For You",
+      "Busines"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Tech & Science",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s113",
+    "depth": 112,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s112",
+        "via": "Open Tech & Science",
+        "name": "Space home — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s114",
+        "via": "Wait 0.6s",
+        "name": "Jio TR"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

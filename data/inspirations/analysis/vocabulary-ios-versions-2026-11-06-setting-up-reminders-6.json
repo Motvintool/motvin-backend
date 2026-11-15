@@ -1,0 +1,163 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-setting-up-reminders-6",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-setting-up-reminders-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:02.417Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting up reminders",
+  "flow_position": 18,
+  "name": "Notifications permission",
+  "description": "Permission dialog over a dimmed screen, on top of Get words with a primary action labelled “Send You Notifications”. Dark theme, 16 text elements.",
+  "text": "9:41C\n•ll\nGet words\nthroughout the day\nAllow notifications to get daily words\nVocabulary\nNow\nSalubrious (adj.) - clean, conducive\nto health\n\"Vocabulary\" Would Like to\nSend You Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\n10:00 PM\nEnd at\nAllow and Save",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "allow and save",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications may include alerts”",
+        "Dialog over a dimmed background, covering 20% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Get words with a primary action labelled “Send You Notifications”. Dark theme, 16 text elements.",
+        "Calls to action: “Send You Notifications”, “Allow”",
+        "16 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 40 in “Onboarding”",
+        "Reached from “Get words”",
+        "Leads to “Get words”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:35 in the recording",
+        "Frame 120 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191b",
+      "role": "background",
+      "share": 0.819
+    },
+    {
+      "hex": "#393a3d",
+      "role": "surface",
+      "share": 0.13
+    },
+    {
+      "hex": "#536265",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#767474",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 120,
+    "atSeconds": 35.4,
+    "endSeconds": 36.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.6875,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Send You Notifications",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications may include alerts",
+    "headline": "Throughout the day",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s018",
+    "depth": 17,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s017",
+        "via": "Tap “•ll”",
+        "name": "Get words"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s019",
+        "via": "Dismiss",
+        "name": "Get words"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

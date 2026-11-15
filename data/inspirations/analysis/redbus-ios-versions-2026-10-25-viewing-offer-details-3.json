@@ -1,0 +1,161 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-viewing-offer-details-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-viewing-offer-details-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:43.372Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Viewing offer details",
+  "flow_position": 127,
+  "name": "OTP verification",
+  "description": "Verification code screen with a 5-item tab bar, 1 input field and prices. Light theme, 18 text elements.",
+  "text": "9:41(\n•1/\nOffers\nSave up to Rs. 300 in AP,\nTelangana routes\nValid till 31 Oct 2026\nSUPERHIT\nTerms & conditions\n1. Use code SUPERHIT to get 5% Discount upto Rs\n300 off on Andhra Pradesh & Telangana routes.\n2. redBus offer (SUPERHIT) applicable for minimum\nticket value of Rs 200.\n3. Offer valid only for bus ticket bookings.\n4. redBus offer is valid only for logged-in users who\nverify their mobile number with OTP (one time\npassword).\n5. Redbus offer codes have an overall limit of once\nper customer email or mobile number. redBus offer is\napplicable on all channels.\nCopy offer code and book\nHome\nOffers\nMy Bookings\nHelp\nMy Account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "offer",
+    "discount",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "text-field",
+    "price",
+    "list",
+    "legal-text",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Offers”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a 5-item tab bar, 1 input field and prices. Light theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 127 of 200 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 9:19 in the recording",
+        "Frame 1864 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf7f9",
+      "role": "background",
+      "share": 0.527
+    },
+    {
+      "hex": "#e7d6d7",
+      "role": "surface",
+      "share": 0.304
+    },
+    {
+      "hex": "#cfbbbc",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#d73d44",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#df7678",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1864,
+    "atSeconds": 559.2,
+    "endSeconds": 561.6,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Offers",
+    "headline": "Terms & conditions"
+  },
+  "crawler": {
+    "nodeId": "s465",
+    "depth": 465,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s464",
+        "via": "Tap “Offers”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s466",
+        "via": "Back to Home home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

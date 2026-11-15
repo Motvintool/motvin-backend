@@ -1,0 +1,148 @@
+{
+  "screenId": "duolingo-webapp-versions-2026-11-09-onboarding-58",
+  "screen_id": "duolingo-webapp-versions-2026-11-09-onboarding-58",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:56.979Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in",
+  "description": "Login screen with 1 input field and a paged carousel. Light theme, 9 text elements.",
+  "text": "LOGIN\nCreate your profile\nName (optional)\nmotvintool@gmail.com\n••\nBy signing in to Duolingo, you agree to our Terms and Privacy\nPolicy.\nThis site is protected by reCAPTCHA Enterprise and the Google\nPrivacy Policy and Terms of Service apply.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "carousel",
+    "page-indicator",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your profile”",
+        "Paged carousel with a page indicator",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a paged carousel. Light theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 9 in “Logging in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 26.7s at 5:49 in the recording",
+        "Frame 1252 of 2572 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.979
+    },
+    {
+      "hex": "#46b9f5",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#7bcef8",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#cccccc",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#e7e7e7",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Duolingo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2572,
+    "frame": 1252,
+    "atSeconds": 349.2,
+    "endSeconds": 375.9,
+    "holdSeconds": 26.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your profile",
+    "headline": "Create your profile"
+  },
+  "crawler": {
+    "nodeId": "s047",
+    "depth": 46,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s046",
+        "via": "Open Create your profile",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s048",
+        "via": "Tap “Policy.”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,158 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-browsing-library-2",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-browsing-library-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:29.902Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Browsing library",
+  "flow_position": 93,
+  "name": "OTP verification",
+  "description": "Verification code screen with a row of 7 category chips and a search bar. Dark theme, 41 text elements.",
+  "text": "Q\n...\nTry Artist Pro\nArtist Studio\nMllI\nHome\nFeed\nLibrary\nSearch\nUpload\nV\nUploading tracksjust got way easier: upload, get heard, and get paid in one seamless experience. Try it out\nPlaylists\nHistory\nStations\nOverview\nAlbums\nLikes\nFollowing\nRecently played\nLikes\nBrowse trending playlists\n8 years ago\nElectric Universe\nMama India - Outside the Universe Remix\n#Psytrance\nLESCET\nJNVET\n6:03\nMRKARO Bimmalimill\n:333333333333333 Devi Divine\nVerify your email to write comments.\n21.1K\n• 676K\n654\nKON\nElectric Universe\nP\n8:34\n6:03\nMama India - Outside t...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “History”",
+        "Category strip: Playlists, History, Stations, Overview, Albums, Likes, Following",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a row of 7 category chips and a search bar. Dark theme, 41 text elements.",
+        "41 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 93 of 226 in “Reading messages”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 6:23 in the recording",
+        "Frame 1285 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#101010",
+      "role": "background",
+      "share": 0.563
+    },
+    {
+      "hex": "#333332",
+      "role": "surface",
+      "share": 0.336
+    },
+    {
+      "hex": "#5b5754",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#c44d09",
+      "role": "accent",
+      "share": 0.011
+    },
+    {
+      "hex": "#ac6348",
+      "role": "text",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 1285,
+    "atSeconds": 383.1,
+    "endSeconds": 385.8,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [],
+    "chipLabels": [
+      "Playlists",
+      "History",
+      "Stations",
+      "Overview",
+      "Albums",
+      "Likes",
+      "Following"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "History",
+    "headline": "Recently played"
+  },
+  "crawler": {
+    "nodeId": "s117",
+    "depth": 116,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s116",
+        "via": "Tap “History”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s118",
+        "via": "Open Try Artist Pro",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,169 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-onboarding-5",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-onboarding-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:56:42.377Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 9,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with 1 input field and a primary action labelled “Submit”. Light theme, 38 text elements.",
+  "text": "Blue Apron\nMenu\nSubscribe & Save\nLogin Sign Up\nBlue Apron+\nX\nCreate an account\nHave an account? Login\nNO SUBSCRIPTION NEEDED\nPass the Comfort\nFirst Name\nX\nCozy dinners, festive favorites, and weeknight v\nEnter the code\ntall.\nEnter the 6-digit code sent to +91 63821 02514.\nSee All Recipes\nResend\n7\n7\n5\n9\n5\nSubmit\n20 MIN\nOR LESS\nFAMILY STYLE\nMobile phone number\n+91 (IN)\n63821 02514\nBy creatingan account, you agree to the Terms of\nService and Privacy Policy.\nContinue\nFast, flavorful recip‹\n1ix & match, family-\nready in 20 minutes\nized mains & sides.\nless.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "subscription",
+    "paywall",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter the code”",
+        "Dialog over a dimmed background, covering 41% of the height from 30% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with 1 input field and a primary action labelled “Submit”. Light theme, 38 text elements.",
+        "Calls to action: “Submit”, “Continue”",
+        "38 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 30 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 18.6s at 0:35 in the recording",
+        "Frame 180 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#514f4d",
+      "role": "background",
+      "share": 0.498
+    },
+    {
+      "hex": "#939393",
+      "role": "surface",
+      "share": 0.148
+    },
+    {
+      "hex": "#2c231a",
+      "role": "accent",
+      "share": 0.118
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.111
+    },
+    {
+      "hex": "#6f6f71",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 180,
+    "atSeconds": 35.7,
+    "endSeconds": 54.3,
+    "holdSeconds": 18.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.296875,
+        "w": 0.34375,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Submit",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter the code",
+    "headline": "Pass the Comfort"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Tap “Pass the Comfort”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Tap “Enter the code”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

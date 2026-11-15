@@ -1,0 +1,162 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-starting-a-new-chat-2",
+  "screen_id": "quizlet-ios-versions-2026-11-04-starting-a-new-chat-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:56:00.746Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Starting a new chat",
+  "flow_position": 61,
+  "name": "Hey dialog",
+  "description": "Dialog over a dimmed screen, on top of Support chat. Dark theme, 13 text elements.",
+  "text": "9:41 €\nX\nBeta\n• . •\nHey\nHello! I'm your Quizlet Al Coach. I'm here to help\nyou study more effectively.\nWhat are you working on today? Whether you're\nprepping for your IELTS exam or studying\nsomething else, let me know how I can help!\nStart a new chat?\nThis will permanently delete your\ncurrent chat.\nYes, start new chat\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "cancel",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hey”",
+        "Dialog over a dimmed background, covering 16% of the height from 5% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Support chat. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 61 of 76 in “Subscribing”",
+        "Reached from “Support chat”",
+        "Leads to “Onboarding step”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:17 in the recording",
+        "Frame 2061 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b091f",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#27294a",
+      "role": "surface",
+      "share": 0.233
+    },
+    {
+      "hex": "#4658fa",
+      "role": "accent",
+      "share": 0.043
+    },
+    {
+      "hex": "#67687b",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#454c63",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 2061,
+    "atSeconds": 617.4,
+    "endSeconds": 618.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.046875,
+        "w": 0.78125,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hey",
+    "headline": "Start a new chat?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s280",
+    "depth": 279,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s279",
+        "via": "Tap “Hey”",
+        "name": "Support chat"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s281",
+        "via": "Back to Onboarding step",
+        "name": "Onboarding step"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

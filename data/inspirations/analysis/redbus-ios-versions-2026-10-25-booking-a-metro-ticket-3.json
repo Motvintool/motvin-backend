@@ -1,0 +1,162 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-booking-a-metro-ticket-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-booking-a-metro-ticket-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:40.651Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Booking a metro ticket",
+  "flow_position": 107,
+  "name": "Home home",
+  "description": "Feed screen with a 5-item tab bar and a row of 3 category chips. Light theme, 26 text elements.",
+  "text": "9:41 C\n(<300 Off\nUPTO\nGet 20% of\nredBus\nredRajl)\n45%\nOFF\nBus Tickets\nTrain Tickets\nHotels\nMetro Ticke1\nChennai Metro\nGet 20% off on all booking\nChange city.\nRound trip\nOneway\nBookings close in 21m : 15s\nFrom\nAnna Nagar East Metro\nTo\nArumbakkam Metro\n+\n1\nPassengers\nPart of ONDC NETWORK T&C\nMust know before you book\n• Ticket valid till 2:00\nHome\nMy Bookings\nOffers\nHelp\nMy Account\nnot allowed",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Bus Tickets”",
+        "Category strip: OFF, Bus Tickets, Hotels",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar and a row of 3 category chips. Light theme, 26 text elements.",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 107 of 200 in “Home”",
+        "Reached from “To Station”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 8:20 in the recording",
+        "Frame 1675 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fb",
+      "role": "background",
+      "share": 0.716
+    },
+    {
+      "hex": "#e1d9db",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#d0bcbb",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#d63641",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#a7a6a6",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 1675,
+    "atSeconds": 500.4,
+    "endSeconds": 502.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [
+      "OFF",
+      "Bus Tickets",
+      "Hotels"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Bus Tickets",
+    "headline": "Change city"
+  },
+  "crawler": {
+    "nodeId": "s435",
+    "depth": 435,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s433",
+        "via": "Back to Home home",
+        "name": "To Station"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s437",
+        "via": "Tap “Bus Tickets”",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,146 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-sending-a-welcome-message-4",
+  "screen_id": "remind-ios-versions-2026-11-07-sending-a-welcome-message-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:00.942Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Sending a welcome message",
+  "flow_position": 47,
+  "name": "New Message",
+  "description": "Messages screen. Light theme, 7 text elements.",
+  "text": "9:41 C\n.ll\n<\nNew Message\nMath\nTo:\nWelcome to Math! I'm looking forward to using\nRemind to share updates, notes, and more. Thanks\nfor joining!\nSend\n33",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "send",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New Message”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Light theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 47 of 50 in “Entering phone number”",
+        "Reached from “Select Recipients”",
+        "Leads to “New Message”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:21 in the recording",
+        "Frame 478 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#d0ced0",
+      "role": "surface",
+      "share": 0.101
+    },
+    {
+      "hex": "#e0e2e7",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#a09ea0",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#878587",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 478,
+    "atSeconds": 141.9,
+    "endSeconds": 143.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New Message",
+    "headline": "For joining!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 48,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Open New Message",
+        "name": "Select Recipients"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Wait 1.8s",
+        "name": "New Message"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

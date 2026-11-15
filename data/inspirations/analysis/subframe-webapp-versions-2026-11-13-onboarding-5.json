@@ -1,0 +1,142 @@
+{
+  "screenId": "subframe-webapp-versions-2026-11-13-onboarding-5",
+  "screen_id": "subframe-webapp-versions-2026-11-13-onboarding-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:18:38.285Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 4,
+  "name": "Google search",
+  "description": "Detail screen with a search bar and a primary action labelled “Next”. Dark theme, 16 text elements.",
+  "text": "motvintool@gmail.com\nHow did you hear about us?\nx\nGemini\nYouTube\nGoogle search\nReddit\nInstagram\nCursor /Grok\nClaude\nLinkedln\nChatGPT\nFriend/ coworker\nOther\nSkip\nNext",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "detail",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Google search”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a search bar and a primary action labelled “Next”. Dark theme, 16 text elements.",
+        "Calls to action: “Next”",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 9 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “Google search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 0:39 in the recording",
+        "Frame 142 of 3095 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d0d",
+      "role": "background",
+      "share": 0.97
+    },
+    {
+      "hex": "#2f2f2f",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#505050",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Subframe.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3095,
+    "frame": 142,
+    "atSeconds": 39,
+    "endSeconds": 42.9,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Google search",
+    "headline": "How did you hear about us?"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Tap “Subframe.”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “How did you hear about us?”",
+        "name": "Google search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

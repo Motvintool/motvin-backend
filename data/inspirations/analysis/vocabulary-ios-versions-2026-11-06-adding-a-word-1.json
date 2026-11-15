@@ -1,0 +1,164 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-adding-a-word-1",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-adding-a-word-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:11.981Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Adding a word",
+  "flow_position": 1,
+  "name": "Loading state",
+  "description": "Loading state with a 5-item tab bar and a primary action labelled “Save”. Dark theme, 10 text elements.",
+  "text": "9:41(\n•ll\nAdd a word\nAdd your own word. It will only be visible\nto you.\nWord\nDefinition\nAdj.\nVerb\nAdv.\nNoun\nSave\nNew\nPractice\nTopics\nProfile\nJourney\nWords",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "words",
+    "topics",
+    "journey",
+    "practice",
+    "home",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Words, Topics, Journey, Practice, Profile",
+        "Navigation title reads “Add a word”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 5-item tab bar and a primary action labelled “Save”. Dark theme, 10 text elements.",
+        "Calls to action: “Save”",
+        "10 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Filling in Add a word”",
+        "Reached from “Words home”",
+        "Leads to “Add a word form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 4:58 in the recording",
+        "Frame 1004 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2f2d2f",
+      "role": "background",
+      "share": 0.8
+    },
+    {
+      "hex": "#464547",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#c2d4d1",
+      "role": "text",
+      "share": 0.048
+    },
+    {
+      "hex": "#5e5e60",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#78787c",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 1004,
+    "atSeconds": 298.8,
+    "endSeconds": 301.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Words",
+      "Topics",
+      "Journey",
+      "Practice",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add a word",
+    "headline": "Word"
+  },
+  "crawler": {
+    "nodeId": "s138",
+    "depth": 138,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s137",
+        "via": "Open Add a word",
+        "name": "Words home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s139",
+        "via": "Wait 2.7s",
+        "name": "Add a word form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

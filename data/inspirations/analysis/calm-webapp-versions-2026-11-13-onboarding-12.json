@@ -1,0 +1,153 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-onboarding-12",
+  "screen_id": "calm-webapp-versions-2026-11-13-onboarding-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:02.285Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 5,
+  "name": "Sign in with email",
+  "description": "Login screen with 3 input fields and a primary action labelled “Continue below”. Dark theme, 14 text elements.",
+  "text": "Calm\nCreate your Calm account\nContinue below\nFirst Name*\nMotvin\nEmail address*\nmotvintool@gmail.com\nPassword*\n........\nThe password is too weak\nYour password must contain:\n• At least 8 characters\nSign Up\nAlready have a Calm account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your Calm account”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields and a primary action labelled “Continue below”. Dark theme, 14 text elements.",
+        "Calls to action: “Continue below”, “Sign Up”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 6 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 0:56 in the recording",
+        "Frame 199 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e4d8c",
+      "role": "background",
+      "share": 0.835
+    },
+    {
+      "hex": "#276b9d",
+      "role": "accent",
+      "share": 0.125
+    },
+    {
+      "hex": "#1e3761",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#c3cbd9",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#7084a6",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 199,
+    "atSeconds": 56.4,
+    "endSeconds": 60,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue below",
+      "Sign Up"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your Calm account",
+    "headline": "Create your Calm account"
+  },
+  "crawler": {
+    "nodeId": "s013",
+    "depth": 12,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s012",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s014",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

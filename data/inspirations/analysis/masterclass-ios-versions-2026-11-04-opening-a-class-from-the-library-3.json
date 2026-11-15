@@ -1,0 +1,156 @@
+{
+  "screenId": "masterclass-ios-versions-2026-11-04-opening-a-class-from-the-library-3",
+  "screen_id": "masterclass-ios-versions-2026-11-04-opening-a-class-from-the-library-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:52:03.033Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Opening a class from the library",
+  "flow_position": 12,
+  "name": "Start Watching toast",
+  "description": "Toast over a dimmed screen, on top of Loading state. Dark theme, 11 text elements.",
+  "text": "9:41C\nBECOME THE PERSON\nEVERYONE TRUSTS\nWith Robin Dreeke\nStart Watching\nStart Watching\nBecome The Person\nEveryone Trusts\n52:09\nFormer FBI counterintelligence agent Robin Dreeke\nteaches you the system he used to catch spies. L...\nWatch Now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Start Watching”",
+        "Toast over a dimmed background, covering 6% of the height from 47% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Loading state. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 13 in “Creating an account”",
+        "Reached from “Loading state”",
+        "Leads to “Loading state”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 3:12 in the recording",
+        "Frame 652 of 871 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060506",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#272426",
+      "role": "surface",
+      "share": 0.201
+    },
+    {
+      "hex": "#484243",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#f7f5f7",
+      "role": "text",
+      "share": 0.022
+    },
+    {
+      "hex": "#625c5f",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "MasterClass.mov",
+    "fps": 3.3333333333333335,
+    "frames": 871,
+    "frame": 652,
+    "atSeconds": 192.6,
+    "endSeconds": 195.9,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.4375,
+        "y": 0.46875,
+        "w": 0.09375,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Start Watching",
+    "headline": "Start Watching"
+  },
+  "crawler": {
+    "nodeId": "s077",
+    "depth": 77,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Wait 0.6s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s078",
+        "via": "Dismiss",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

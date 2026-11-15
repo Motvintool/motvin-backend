@@ -1,0 +1,152 @@
+{
+  "screenId": "lensa-ios-versions-2026-10-27-logging-in-with-email-10",
+  "screen_id": "lensa-ios-versions-2026-10-27-logging-in-with-email-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T02:49:10.089Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "entertainment",
+  "flow": "checkout",
+  "flow_name": "Logging in with email",
+  "flow_position": 5,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a primary action labelled “Save Photos”. Dark theme, 18 text elements.",
+  "text": "X\nRestore\nLensa Pro\nUnlock full access\nW Pro\nFree\nUnlimited\n1 per day\nSave Photos\nIncluded\nPro Features\nAl Tokens\n300*\n76,900.00 71,499.00/year\n-78% off\n*25 Al Tokens available during free trial\nTry 7 days and decide\nStart Trial\nBy continuing to use Lensa, you agree to the\nPrivacy Policy and Terms of Use",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Lensa Pro”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a primary action labelled “Save Photos”. Dark theme, 18 text elements.",
+        "Calls to action: “Save Photos”, “Start Trial”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Photos home”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 0:42 in the recording",
+        "Frame 154 of 414 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#09070a",
+      "role": "background",
+      "share": 0.478
+    },
+    {
+      "hex": "#282528",
+      "role": "surface",
+      "share": 0.385
+    },
+    {
+      "hex": "#474641",
+      "role": "surface",
+      "share": 0.05
+    },
+    {
+      "hex": "#fffeff",
+      "role": "text",
+      "share": 0.033
+    },
+    {
+      "hex": "#c5c3c5",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "mvq35075-9kvdgf.mov",
+    "fps": 3.3333333333333335,
+    "frames": 414,
+    "frame": 154,
+    "atSeconds": 42.6,
+    "endSeconds": 46.5,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Photos",
+      "Start Trial"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Lensa Pro",
+    "headline": "Pro"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Open Photos",
+        "name": "Photos home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

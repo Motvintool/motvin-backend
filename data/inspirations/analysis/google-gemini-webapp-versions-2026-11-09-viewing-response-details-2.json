@@ -1,0 +1,148 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-viewing-response-details-2",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-viewing-response-details-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:50.290Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Viewing response details",
+  "flow_position": 70,
+  "name": "Response details",
+  "description": "Detail screen with a sidebar. Dark theme, 9 text elements.",
+  "text": "Q\nGemini\nResponse details\nNew chat\nHello, can you hear me?\nUsed 3.6 Flash with auto selection\nLibrary\nImages\nScheduled\nYes, I can! How can I help you today?\nCustomise\nNotebooks\n- 3 From Initial Greeting and Connection Check\n+New notebook\nAll\nA Friendly Greeting\nBranch • Initial Greeting and Connecti...\nInitial Greeting and Connection Check\nAnalyzing Classic Novel Structure and T...\nBranch • A Friendly Greeting\n+ Ask Gemini\nGemini Auto\nSurendar\nGemini is Al and can make mistakes.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Response details”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a sidebar. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 70 of 130 in “Choose an account”",
+        "Reached from “Ing and Connection Check”",
+        "Leads to “I want help”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 4:30 in the recording",
+        "Frame 910 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131314",
+      "role": "background",
+      "share": 0.94
+    },
+    {
+      "hex": "#333435",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#4a4c4d",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#3f676c",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 910,
+    "atSeconds": 270.3,
+    "endSeconds": 273.3,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "New chat",
+      "Library",
+      "Images",
+      "Scheduled",
+      "Customise",
+      "Notebooks",
+      "New notebook",
+      "All",
+      "Friendly Greeting",
+      "Branch • A Friendly Greeting"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Response details",
+    "headline": "Yes, I can! How can I help you today?"
+  },
+  "crawler": {
+    "nodeId": "s071",
+    "depth": 70,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s070",
+        "via": "Open Response details",
+        "name": "Ing and Connection Check"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s072",
+        "via": "Back to Other",
+        "name": "I want help"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

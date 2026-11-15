@@ -1,0 +1,158 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-editing-profile-2",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-editing-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:13:07.958Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Editing profile",
+  "flow_position": 3,
+  "name": "Birth Year sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Profile with 1 input field. Dark theme, 20 text elements.",
+  "text": "9:41 (\n•0l\n1994\n<\n1995\n1996\n1997\n1998\n1999\nMotvin\nv 2000\n2001\nTool\n2002\n2003\nBirth Year\n2004\n2005\nEmail\n2006\nManage Account\nSigned in with Email account.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Birth Year”",
+        "Bottom sheet over a dimmed background, covering 70% of the height from 27% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Profile with 1 input field. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 10 in “Profile”",
+        "Reached from “Profile”",
+        "Leads to “Motvintool@gmail.com sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:54 in the recording",
+        "Frame 1583 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181619",
+      "role": "background",
+      "share": 0.887
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.053
+    },
+    {
+      "hex": "#373537",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#535154",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#a4a3a4",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 1583,
+    "atSeconds": 474,
+    "endSeconds": 475.2,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.265625,
+        "w": 0.84375,
+        "h": 0.703125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Birth Year",
+    "headline": "Birth Year"
+  },
+  "crawler": {
+    "nodeId": "s184",
+    "depth": 190,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s183",
+        "via": "Tap “Birth Year”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s185",
+        "via": "Dismiss",
+        "name": "Motvintool@gmail.com sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

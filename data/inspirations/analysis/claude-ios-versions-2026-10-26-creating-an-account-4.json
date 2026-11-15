@@ -1,0 +1,159 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-creating-an-account-4",
+  "screen_id": "claude-ios-versions-2026-10-26-creating-an-account-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:13.466Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 15,
+  "name": "Create account",
+  "description": "Sign up dialog over a dimmed screen, on top of Create account. Dark theme, 10 text elements.",
+  "text": "9:41C\n•\nC\nC\nLet's create your account\nA few things to review before getting started\nlagree to Anthropic's Consumer Terms\nand Usage Policy.\nI consent to collection and use of my\npersonal information in accordance with\nthe Privacy Policy.-\nEmail verified as motvintool@gmail.com\nUse a different email",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "signup",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “I consent to collection and use of my”",
+        "Dialog over a dimmed background, covering 17% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up dialog over a dimmed screen, on top of Create account. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 19 in “Logging in”",
+        "Reached from “Create account”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:32 in the recording",
+        "Frame 308 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201a1b",
+      "role": "background",
+      "share": 0.864
+    },
+    {
+      "hex": "#3f3939",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#989595",
+      "role": "text",
+      "share": 0.04
+    },
+    {
+      "hex": "#66605f",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#7f7d7e",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 308,
+    "atSeconds": 92.1,
+    "endSeconds": 92.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.484375,
+        "w": 0.75,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "I consent to collection and use of my",
+    "headline": "Let's create your account"
+  },
+  "crawler": {
+    "nodeId": "s017",
+    "depth": 16,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s016",
+        "via": "Back to Create account",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s018",
+        "via": "Open Loading state",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

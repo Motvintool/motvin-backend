@@ -1,0 +1,147 @@
+{
+  "screenId": "memrise-ios-versions-2026-11-08-allowing-notifications-1",
+  "screen_id": "memrise-ios-versions-2026-11-08-allowing-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:33:21.757Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Allowing notifications",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen with 1 input field. Dark theme, 17 text elements.",
+  "text": "9:41(\n•ll\nSettings\nSave\nUsername\nmotvintool\nEmail\nmotvintool@gmail.com\nChange Password\n* Upgrade\nFREE Membership\nLearning & sound settings\nChange your learning focus\n>\nNotification settings\nDARK MODE\nUse device settings\nAUDIO PREFERENCES\nSound effects\n?\nHelp",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "help",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with 1 input field. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Notification settings”",
+        "Reached from “Loading state”",
+        "Leads to “Notification settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:55 in the recording",
+        "Frame 1989 of 2260 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#283446",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#4d5967",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#66707d",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#bb8b23",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#c0c6ca",
+      "role": "text",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Memrise.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2260,
+    "frame": 1989,
+    "atSeconds": 595.5,
+    "endSeconds": 597,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Upgrade",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s341",
+    "depth": 340,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s340",
+        "via": "Wait 2.1s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s342",
+        "via": "Tap “Notification settings”",
+        "name": "Notification settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

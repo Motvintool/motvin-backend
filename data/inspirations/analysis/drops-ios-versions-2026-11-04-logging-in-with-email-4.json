@@ -1,0 +1,162 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-logging-in-with-email-4",
+  "screen_id": "drops-ios-versions-2026-11-04-logging-in-with-email-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:29:00.625Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 7,
+  "name": "Create account",
+  "description": "Sign up toast, on top of Create account with a primary action labelled “Log in”. Dark theme, 4 text elements.",
+  "text": "Log in\nNo account? Sign up\nmotvintool@gmail.com\nLog in\nForgot password",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Log in”",
+        "Toast, covering 8% of the height from 13% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up toast, on top of Create account with a primary action labelled “Log in”. Dark theme, 4 text elements.",
+        "Calls to action: “Log in”",
+        "4 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 7 in “Logging in with email”",
+        "Reached from “Create account”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 9:16 in the recording",
+        "Frame 1865 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1469",
+      "role": "background",
+      "share": 0.682
+    },
+    {
+      "hex": "#5c2d88",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#cc0a78",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#dfea5b",
+      "role": "text",
+      "share": 0.033
+    },
+    {
+      "hex": "#a2985f",
+      "role": "surface",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1865,
+    "atSeconds": 556.5,
+    "endSeconds": 559.8,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.125,
+        "w": 0.8125,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Log in",
+    "headline": "No account? Sign up"
+  },
+  "crawler": {
+    "nodeId": "s197",
+    "depth": 199,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s196",
+        "via": "Tap “Log in”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s198",
+        "via": "Back to Home home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

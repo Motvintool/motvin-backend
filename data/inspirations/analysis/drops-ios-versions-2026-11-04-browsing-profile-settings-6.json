@@ -1,0 +1,143 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-browsing-profile-settings-6",
+  "screen_id": "drops-ios-versions-2026-11-04-browsing-profile-settings-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:59.586Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Browsing profile settings",
+  "flow_position": 15,
+  "name": "Subscription plans — scrolled",
+  "description": "Paywall screen, scrolled further down from Subscription plans. Dark theme, 9 text elements.",
+  "text": "Support\nRestore purchase\nReset all progress\nRefunds\nHelp\nDelete Account\nSuggest feature/language\nTerms & Conditions\nPrivacy policy\nVersion: 39.19.6",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "legal-text"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Restore purchase”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen, scrolled further down from Subscription plans. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 16 in “Choosing a date”",
+        "Reached from “Subscription plans”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 8:45 in the recording",
+        "Frame 1767 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3e1268",
+      "role": "background",
+      "share": 0.934
+    },
+    {
+      "hex": "#644085",
+      "role": "accent",
+      "share": 0.054
+    },
+    {
+      "hex": "#7e5f9b",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#967fac",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1767,
+    "atSeconds": 525.3,
+    "endSeconds": 530.4,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Restore purchase",
+    "headline": "Reset all progress"
+  },
+  "crawler": {
+    "nodeId": "s188",
+    "depth": 189,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s187",
+        "via": "Scroll",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s189",
+        "via": "Open Profile",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

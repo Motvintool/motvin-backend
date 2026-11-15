@@ -1,0 +1,164 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-starting-a-free-trial-6",
+  "screen_id": "headway-ios-versions-2026-11-04-starting-a-free-trial-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:48.456Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "checkout",
+  "flow_name": "Starting a free trial",
+  "flow_position": 45,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Subscription plans with a primary action labelled “SAVE 31%”. Dark theme, 18 text elements.",
+  "text": "9:41(\nX\nPick your plan\nListen & read 2000+ summaries\nPersonalized recommendations\nProgress tracking\nX Free trial\nBEST VALUE • SAVE 62%\nAnnually\n· 5,500\n71,209.00 7458.33/month\nSAVE 31%\n3 Months\n· 2,499\n71,209.00 7833.00/month\nMonthly\n·1,209\n71,209.00/month\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Pick your plan”",
+        "Dialog over a dimmed background, covering 20% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Subscription plans with a primary action labelled “SAVE 31%”. Dark theme, 18 text elements.",
+        "Calls to action: “SAVE 31%”, “Continue”",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 45 of 46 in “Success”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:04 in the recording",
+        "Frame 421 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3b3a3d",
+      "role": "background",
+      "share": 0.491
+    },
+    {
+      "hex": "#141215",
+      "role": "surface",
+      "share": 0.366
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#0496f7",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#7d7b7d",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 421,
+    "atSeconds": 124.8,
+    "endSeconds": 126.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.046875,
+        "w": 0.9375,
+        "h": 0.203125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "SAVE 31%",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Pick your plan",
+    "headline": "Listen & read 2000+ summaries"
+  },
+  "crawler": {
+    "nodeId": "s051",
+    "depth": 50,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s050",
+        "via": "Tap “9:41 C”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s052",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

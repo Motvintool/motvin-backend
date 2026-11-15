@@ -1,0 +1,164 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-creating-an-account-6",
+  "screen_id": "nibble-ios-versions-2026-11-07-creating-an-account-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:55:11.362Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Creating an account",
+  "flow_position": 29,
+  "name": "Create account",
+  "description": "Sign up toast over a dimmed screen, on top of Create account with a primary action labelled “Get started”. Light theme, 5 text elements.",
+  "text": "9:41 C\nX Create account\nmotvintool@gmail.com\nGet started\nBy continuing I agree with the Privacy Policy..\nTerms & Conditions",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Toast over a dimmed background, covering 8% of the height from 58% down",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up toast over a dimmed screen, on top of Create account with a primary action labelled “Get started”. Light theme, 5 text elements.",
+        "Calls to action: “Get started”",
+        "5 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 29 of 29 in “Profile”",
+        "Reached from “Create account”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 9:53 in the recording",
+        "Frame 1991 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#c5c5c6",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#a2a2a2",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#060606",
+      "role": "text",
+      "share": 0.057
+    },
+    {
+      "hex": "#8c8c8c",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#4d4d4d",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 1991,
+    "atSeconds": 593.1,
+    "endSeconds": 597.6,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.578125,
+        "w": 0.9375,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s283",
+    "depth": 287,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s282",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s284",
+        "via": "Open Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

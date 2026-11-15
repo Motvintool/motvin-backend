@@ -1,0 +1,150 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-upgrading-to-premium-4",
+  "screen_id": "calm-webapp-versions-2026-11-13-upgrading-to-premium-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:07.589Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Upgrading to Premium",
+  "flow_position": 1,
+  "name": "Create account",
+  "description": "Sign up screen with a primary action labelled “Sign up today”. Dark theme, 4 text elements.",
+  "text": "Calm\nTry Calm for Free\nLog In\nHome\nMeditate\nSleep\nMusic\nFor Work\nWisdom\nCalm Kids\nMovement\nProfile\nGet notified of new Calm content, special offers, helpful tips, and more.\nSign up today\nhttps://www.calm.com/app/search",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "offer",
+    "signup",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Try Calm for Free”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a primary action labelled “Sign up today”. Dark theme, 4 text elements.",
+        "Calls to action: “Sign up today”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Creating an account”",
+        "Reached from “Subscription plans”",
+        "Leads to “Use Mobile App”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:30 in the recording",
+        "Frame 505 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2c4e7e",
+      "role": "background",
+      "share": 0.777
+    },
+    {
+      "hex": "#1f3458",
+      "role": "accent",
+      "share": 0.103
+    },
+    {
+      "hex": "#e1ecf7",
+      "role": "text",
+      "share": 0.081
+    },
+    {
+      "hex": "#c2cee2",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#a4b4c2",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 505,
+    "atSeconds": 150.9,
+    "endSeconds": 151.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up today"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Try Calm for Free",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s042",
+        "via": "Tap “Try Calm for Free”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Open Use Mobile App",
+        "name": "Use Mobile App"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

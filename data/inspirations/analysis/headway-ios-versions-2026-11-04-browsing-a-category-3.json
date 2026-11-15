@@ -1,0 +1,164 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-browsing-a-category-3",
+  "screen_id": "headway-ios-versions-2026-11-04-browsing-a-category-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:58.610Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Browsing a category",
+  "flow_position": 3,
+  "name": "Leadership toast",
+  "description": "Toast over a dimmed screen, on top of Loading state with a row of 3 category chips. Dark theme, 31 text elements.",
+  "text": "9:41(\n•0\nLeadership\nQUES-\nThe\nUnfair\nTIONS\nAdvantage\nARE THE\nHow you already\nANSWER\nhave what it takes\nto succeed\nA breakthrough\napproachto\nyour most\nvexing problems\nat work and in life\nAsh Ali, Hasan Kubba\nHal B. Gregersen\nWOLF-\nSeeing\nPACK\nAround\nHow to come together,\nCorners\nunleash our power,\nand change the game\nHow to spot inflection\npoints in business\nbefore they happen\nRita McGrath\nAbby Wambach\nA Briet...\nGET.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Leadership”",
+        "Category strip: QUES-, The, Unfair",
+        "Toast over a dimmed background, covering 6% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Loading state with a row of 3 category chips. Dark theme, 31 text elements.",
+        "31 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 7 in “Searching for “Gretch””",
+        "Reached from “Leadership toast — loading”",
+        "Leads to “The Unfair Advantage”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:25 in the recording",
+        "Frame 1290 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#252326",
+      "role": "background",
+      "share": 0.322
+    },
+    {
+      "hex": "#3a0969",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#4b4541",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#f15c0c",
+      "role": "accent",
+      "share": 0.029
+    },
+    {
+      "hex": "#010101",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1290,
+    "atSeconds": 385.8,
+    "endSeconds": 387.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.03125,
+        "w": 0.8125,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [
+      "QUES-",
+      "The",
+      "Unfair"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Leadership",
+    "headline": "PACK"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 159,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Wait 0.6s",
+        "name": "Leadership toast — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Open Other",
+        "name": "The Unfair Advantage"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

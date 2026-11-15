@@ -1,0 +1,144 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-setting-up-a-profile-7",
+  "screen_id": "brainly-ios-versions-2026-11-07-setting-up-a-profile-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:21.055Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "search",
+  "flow_name": "Setting up a profile",
+  "flow_position": 8,
+  "name": "Loading state",
+  "description": "Loading state with a search bar. Dark theme, 7 text elements.",
+  "text": "9:41(\n•Іl\nHow did you hear about Brainly?\nTV ad\nFriends\nSocial media\nFamily\nSearch engine\nOther",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a search bar. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 11 in “Tell us about yourself detail”",
+        "Reached from “Tell us about yourself”",
+        "Leads to “Tell us about yourself”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:47 in the recording",
+        "Frame 169 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#23252c",
+      "role": "background",
+      "share": 0.963
+    },
+    {
+      "hex": "#424248",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#5e6167",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#ababae",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 169,
+    "atSeconds": 47.7,
+    "endSeconds": 51,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Family"
+  },
+  "crawler": {
+    "nodeId": "s026",
+    "depth": 26,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s025",
+        "via": "Open Loading state",
+        "name": "Tell us about yourself"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s027",
+        "via": "Wait 3.3s",
+        "name": "Tell us about yourself"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

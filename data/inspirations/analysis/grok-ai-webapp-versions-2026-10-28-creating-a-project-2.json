@@ -1,0 +1,162 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-creating-a-project-2",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-creating-a-project-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:36.582Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Creating a project",
+  "flow_position": 5,
+  "name": "New project dialog",
+  "description": "Dialog over a dimmed screen, on top of Upload files with a sidebar. Light theme, 11 text elements.",
+  "text": "Q\n!!!!\nMedaPr\n•\nелей рrojed\nwated 3\n10s 0\n© Unetted proje\n6 ON\nD My wonh\nCreate Project\nNo chate\nO Work\nProject name\nNew project\nCt Add\nCreate",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New project”",
+        "Dialog over a dimmed background, covering 22% of the height from 39% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Upload files with a sidebar. Light theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 12 in “Upload files”",
+        "Reached from “Upload files”",
+        "Leads to “Ct Add”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 13:20 in the recording",
+        "Frame 2673 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#cccbcb",
+      "role": "background",
+      "share": 0.899
+    },
+    {
+      "hex": "#f4f5f6",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#acb0b5",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#e2e3e3",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#6c9cca",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 2673,
+    "atSeconds": 800.4,
+    "endSeconds": 802.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.390625,
+        "w": 0.375,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Unetted proje",
+      "My wonh",
+      "No chate",
+      "Work"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New project",
+    "headline": "New project"
+  },
+  "crawler": {
+    "nodeId": "s161",
+    "depth": 163,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s160",
+        "via": "Back to New project dialog",
+        "name": "Upload files"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s162",
+        "via": "Tap “10s 0”",
+        "name": "Ct Add"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,158 @@
+{
+  "screenId": "arts-culture-ios-versions-2026-11-07-reading-culture-weekly-8",
+  "screen_id": "arts-culture-ios-versions-2026-11-07-reading-culture-weekly-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:54:16.914Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Reading Culture Weekly",
+  "flow_position": 12,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen. Dark theme, 8 text elements.",
+  "text": "9:41 €\n•ll\n<\nFavorites\nGalleries\nCreate a gallery\nGroup your favorited artworks into galleries\nby artist, object, or whatever topic you\nchoose\nCreate gallery",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “By artist, object, or whatever topic you”",
+        "Dialog over a dimmed background, covering 25% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 15 in “Culture Weekly”",
+        "Reached from “Culture Weekly”",
+        "Leads to “All favorites”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 6:46 in the recording",
+        "Frame 1363 of 1897 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222225",
+      "role": "background",
+      "share": 0.664
+    },
+    {
+      "hex": "#6598f0",
+      "role": "text",
+      "share": 0.174
+    },
+    {
+      "hex": "#020103",
+      "role": "accent",
+      "share": 0.103
+    },
+    {
+      "hex": "#496597",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5a84ce",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Arts & Culture.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1897,
+    "frame": 1363,
+    "atSeconds": 406.5,
+    "endSeconds": 409.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.4375,
+        "w": 0.53125,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "By artist, object, or whatever topic you",
+    "headline": "Create a gallery"
+  },
+  "crawler": {
+    "nodeId": "s190",
+    "depth": 191,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s189",
+        "via": "Open By artist, object, or whatever topic you",
+        "name": "Culture Weekly"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s191",
+        "via": "Dismiss",
+        "name": "All favorites"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

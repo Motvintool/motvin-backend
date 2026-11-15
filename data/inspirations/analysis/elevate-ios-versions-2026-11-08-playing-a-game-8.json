@@ -1,0 +1,146 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-playing-a-game-8",
+  "screen_id": "elevate-ios-versions-2026-11-08-playing-a-game-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:10.747Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Playing a game",
+  "flow_position": 9,
+  "name": "Opposing view (error)",
+  "description": "Error screen. Dark theme, 6 text elements.",
+  "text": "• 0\nto express an\nopposing view\ntap to repeat\n* ERROR\nV VALID",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "error",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Opposing view”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 17 in “Opening a page (Today)”",
+        "Reached from “Progress ot (error) — loading”",
+        "Leads to “Kept out of sight (error) — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:14 in the recording",
+        "Frame 1449 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#081c27",
+      "role": "background",
+      "share": 0.625
+    },
+    {
+      "hex": "#096e79",
+      "role": "surface",
+      "share": 0.201
+    },
+    {
+      "hex": "#0c4551",
+      "role": "surface",
+      "share": 0.168
+    },
+    {
+      "hex": "#0a9ba5",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#69727a",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1449,
+    "atSeconds": 434.1,
+    "endSeconds": 435,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Opposing view",
+    "headline": "Opposing view"
+  },
+  "crawler": {
+    "nodeId": "s221",
+    "depth": 220,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s220",
+        "via": "Wait 0.9s",
+        "name": "Progress ot (error) — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s222",
+        "via": "Open Kept out of sight (error) — loading",
+        "name": "Kept out of sight (error) — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,165 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-connecting-gmail-5",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-connecting-gmail-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:55.824Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Connecting Gmail",
+  "flow_position": 1,
+  "name": "Permission request",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Continue”. Dark theme, 14 text elements.",
+  "text": "9:41(\nX\nM\nGmail\n\"GrokApp\" Wants to Use\n\"google.com\" to Sign In\nThis allows the app and website to\nshare information about you.\nContinue\nCancel\nWe never train on your data\nXAI does not train on your Gmail data.\nYour emails stay in Gmail\nWe don't store your emails. Grok searches\nGmail in real-time when you ask questions.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "external-auth",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"google.com\" to Sign In”",
+        "Toast over a dimmed background, covering 5% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Continue”. Dark theme, 14 text elements.",
+        "Calls to action: “Continue”",
+        "14 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 28 in “External sign-in”",
+        "Reached from “Detail”",
+        "Leads to “Google sign-in”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:06 in the recording",
+        "Frame 426 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0d10",
+      "role": "background",
+      "share": 0.85
+    },
+    {
+      "hex": "#2d2a2d",
+      "role": "surface",
+      "share": 0.09
+    },
+    {
+      "hex": "#878587",
+      "role": "text",
+      "share": 0.025
+    },
+    {
+      "hex": "#4b494b",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#605e60",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 426,
+    "atSeconds": 126.9,
+    "endSeconds": 128.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.40625,
+        "w": 0.65625,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"google.com\" to Sign In",
+    "headline": "\"google.com\" to Sign In"
+  },
+  "crawler": {
+    "nodeId": "s051",
+    "depth": 50,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s050",
+        "via": "Open \"google.com\" to Sign In",
+        "name": "Detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s052",
+        "via": "Back to Google sign-in",
+        "name": "Google sign-in"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

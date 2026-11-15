@@ -1,0 +1,168 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-onboarding-4",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-onboarding-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:56:42.043Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Subscription plans",
+  "description": "Paywall toast, on top of Subscription plans with 4 input fields and a primary action labelled “Continue”. Light theme, 37 text elements.",
+  "text": "Blue Apron\nBlue Apron+\nLogin Sign Up\nMenu\nSubscribe & Save\nX\nCreate an account\nHave an account? Login\nNO SUBSCRIPTION NEEDED\nPass the Comfort\nFirst Name\nMotvin\nCozy dinners, festive favorites, and weeknight v\nLast Name\nfall.\nTool\nSee All Recipes\nEmail\nmotvintool@gmail.com\nPassword\n.....\nPassword must be 8 to 25 characters and include\nnumbers and letters.\n20 MIN\nOR LESS\nFAMILY STYLE\nMobile phone number\n+91 (IN)\n63821 02514\nBy creating an account, you agree to the Terms of\nService and Privacy Policy.\nContinue\nFast, flavorful recipe\n1ix & match, family-\nready in 20 minutes\nized mains & sides.\nless.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "subscription",
+    "paywall",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create an account”",
+        "Toast, covering 6% of the height from 6% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast, on top of Subscription plans with 4 input fields and a primary action labelled “Continue”. Light theme, 37 text elements.",
+        "Calls to action: “Continue”",
+        "37 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 30 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 0:30 in the recording",
+        "Frame 111 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#91908d",
+      "role": "background",
+      "share": 0.372
+    },
+    {
+      "hex": "#fbfbfb",
+      "role": "text",
+      "share": 0.259
+    },
+    {
+      "hex": "#7e746c",
+      "role": "surface",
+      "share": 0.129
+    },
+    {
+      "hex": "#4f4134",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#b5b2b0",
+      "role": "surface",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 111,
+    "atSeconds": 30.6,
+    "endSeconds": 33.6,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.375,
+        "y": 0.0625,
+        "w": 0.25,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create an account",
+    "headline": "Pass the Comfort"
+  },
+  "crawler": {
+    "nodeId": "s007",
+    "depth": 6,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s006",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s008",
+        "via": "Dismiss",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

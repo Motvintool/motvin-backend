@@ -1,0 +1,152 @@
+{
+  "screenId": "brilliant-webapp-versions-2026-11-11-changing-preferences-1",
+  "screen_id": "brilliant-webapp-versions-2026-11-11-changing-preferences-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:11:59.328Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Changing preferences",
+  "flow_position": 70,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a row of 4 category chips. Dark theme, 28 text elements.",
+  "text": "Brilliant\n14\n8 You\n0 5\nGo Premium\n• Home\n• Topics\nAppearance\nAccount\nPremium\nChoose your preferred color mode\nAuto\nLight\nDark\nPreferences\nReduce motion\nOn\nOff\nAuto\nSounds\nEnable Koji narration in lessons\nMelodic\nChoose Koji's Voice\nDeep\nEnable sound effects in lessons\nEmail notifications\nStreaks\nReminders (during the day)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "premium",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Appearance”",
+        "Category strip: Premium, Auto, Light, Dark",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a row of 4 category chips. Dark theme, 28 text elements.",
+        "28 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 70 of 94 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:24 in the recording",
+        "Frame 1285 of 1480 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141614",
+      "role": "background",
+      "share": 0.938
+    },
+    {
+      "hex": "#343534",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#515853",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#777777",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#8ecd9b",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Brilliant.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1480,
+    "frame": 1285,
+    "atSeconds": 384.6,
+    "endSeconds": 385.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [
+      "Premium",
+      "Auto",
+      "Light",
+      "Dark"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Appearance",
+    "headline": "Sounds"
+  },
+  "crawler": {
+    "nodeId": "s136",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s135",
+        "via": "Wait 1.5s",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s137",
+        "via": "Scroll",
+        "name": "Subscription plans — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,169 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-signing-out-2",
+  "screen_id": "ted-ios-versions-2026-11-08-signing-out-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:36.613Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Signing out",
+  "flow_position": 101,
+  "name": "Settings",
+  "description": "Settings toast over a dimmed screen, on top of Settings with a 4-item tab bar. Dark theme, 16 text elements.",
+  "text": "9:41€\n< Library\nMotvin Tool\nFeedback\nAbout TED\nPrivacy\nSign out?\nTerms\nSign out\nCancel\nDelete my TED account\nSign out\nVersion: 8.0.12 (5921)\nData version: 1794100190547\nHumanity's planet-\nX\nshaping powers -- and...\nTED\nLibrary\nHome\nBrowse\nSurprise Me!\nPodcasts",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "browse",
+    "podcasts",
+    "library",
+    "settings",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Home, Browse, Podcasts, Library",
+        "Navigation title reads “Library”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings toast over a dimmed screen, on top of Settings with a 4-item tab bar. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 101 of 102 in “Home”",
+        "Reached from “Settings”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 5:45 in the recording",
+        "Frame 1152 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0e11",
+      "role": "background",
+      "share": 0.902
+    },
+    {
+      "hex": "#26282d",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#4b474b",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#656468",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#a9a7a9",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 1152,
+    "atSeconds": 345.3,
+    "endSeconds": 345.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [
+      "Home",
+      "Browse",
+      "Podcasts",
+      "Library"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Library",
+    "headline": "Sign out?"
+  },
+  "crawler": {
+    "nodeId": "s150",
+    "depth": 150,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s149",
+        "via": "Tap “< Library”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s151",
+        "via": "Tap “Privacy”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

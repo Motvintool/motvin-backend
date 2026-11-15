@@ -1,0 +1,164 @@
+{
+  "screenId": "perplexity-webapp-versions-2026-11-09-connecting-a-plugin-4",
+  "screen_id": "perplexity-webapp-versions-2026-11-09-connecting-a-plugin-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:10:37.362Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Connecting a plugin",
+  "flow_position": 12,
+  "name": "Google sign-in",
+  "description": "A third-party sign-in page, not the app's own design with a primary action labelled “Next”. Dark theme, 13 text elements.",
+  "text": "Sign in with Google\nEnter your password\nHi Surendar\nmotvintool@gmail.com\nShow password\nBefore using this app, you can review Perplexity Connector's Privacy\nPolicy and Terms of Service.\nTry another way\nNext\nPrivacy\nEnglish (United States)\nHelp\nTerms",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "external-auth",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Policy and Terms of Service”",
+        "Toast over a dimmed background, covering 11% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with a primary action labelled “Next”. Dark theme, 13 text elements.",
+        "Calls to action: “Next”",
+        "13 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 13 in “Choosing a date”",
+        "Reached from “Choose an account”",
+        "Leads to “Calendar”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 12:45 in the recording",
+        "Frame 2560 of 3384 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2223",
+      "role": "background",
+      "share": 0.725
+    },
+    {
+      "hex": "#0b0b0b",
+      "role": "surface",
+      "share": 0.262
+    },
+    {
+      "hex": "#373d42",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#5d6165",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#93b0d5",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Perplexity.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3384,
+    "frame": 2560,
+    "atSeconds": 765.3,
+    "endSeconds": 768.3,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.5,
+        "w": 0.40625,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Policy and Terms of Service",
+    "headline": "Hi Surendar"
+  },
+  "crawler": {
+    "nodeId": "s162",
+    "depth": 161,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s161",
+        "via": "Tap “Policy and Terms of Service.”",
+        "name": "Choose an account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s163",
+        "via": "Back to Calendar",
+        "name": "Calendar"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

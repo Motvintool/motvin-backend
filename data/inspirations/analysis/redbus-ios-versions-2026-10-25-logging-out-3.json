@@ -1,0 +1,146 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-logging-out-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-logging-out-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:55.040Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "travel",
+  "flow": "settings",
+  "flow_name": "Logging out",
+  "flow_position": 10,
+  "name": "Account Settings",
+  "description": "Settings screen. Light theme, 8 text elements.",
+  "text": "9:41(\nAccount Settings\n>\n[ Log out\nDelete account\nAre you sure you want to\nlog out?\nTicket booking is faster when you are logged in\nYes, Log out\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "booking",
+    "cancel",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account Settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Settings”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 12:25 in the recording",
+        "Frame 2493 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#807e80",
+      "role": "background",
+      "share": 0.673
+    },
+    {
+      "hex": "#fcfbfd",
+      "role": "text",
+      "share": 0.203
+    },
+    {
+      "hex": "#d2ced0",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#e06b73",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#d53640",
+      "role": "accent",
+      "share": 0.023
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2493,
+    "atSeconds": 745.2,
+    "endSeconds": 748.2,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account Settings",
+    "headline": "Delete account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s597",
+    "depth": 600,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s594",
+        "via": "Tap “Account Settings”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s598",
+        "via": "Tap “[ Log out”",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

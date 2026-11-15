@@ -1,0 +1,157 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-changing-preferences-7",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-changing-preferences-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:55.796Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Changing preferences",
+  "flow_position": 3,
+  "name": "Payment method",
+  "description": "Payment bottom sheet, on top of Other. Light theme, 9 text elements.",
+  "text": "9:414\nTripadvisor\n.••\nPayment Options\nBook Faster!\nBook trips with one easy\nclick when you save a\npayment method to your\nTripadvisor account.\n+ Add Payment Method",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Tripadvisor account”",
+        "Bottom sheet, covering 50% of the height from 44% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment bottom sheet, on top of Other. Light theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Opening a page (Explore)”",
+        "Reached from “Other”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:02 in the recording",
+        "Frame 1612 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfd",
+      "role": "background",
+      "share": 0.675
+    },
+    {
+      "hex": "#020102",
+      "role": "accent",
+      "share": 0.207
+    },
+    {
+      "hex": "#b4b8b7",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#dcdddd",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#393739",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1612,
+    "atSeconds": 482.1,
+    "endSeconds": 483.9,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.4375,
+        "w": 0.9375,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Tripadvisor account",
+    "headline": "Book trips with one easy"
+  },
+  "crawler": {
+    "nodeId": "s220",
+    "depth": 220,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s219",
+        "via": "Back to Payment method",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s221",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

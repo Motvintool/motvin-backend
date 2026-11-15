@@ -1,0 +1,157 @@
+{
+  "screenId": "canva-webapp-versions-2026-11-13-onboarding-2",
+  "screen_id": "canva-webapp-versions-2026-11-13-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T08:52:58.706Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen, on top of Create account. Light theme, 9 text elements.",
+  "text": "ay?\nWh\n‹ Continue with phone\nnumber or email\nWe'll check if you have an account, and help\ncreate one if you don't.\nPhone/Email (personal or work)\nmotvintool@gmail.coml\nUse Passkey from another device",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "webapp"
+  ],
+  "elements": [
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Number or email”",
+        "Dialog over a dimmed background, covering 67% of the height from 17% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Create account. Light theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 11 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “OTP verification”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 7.8s at 0:02 in the recording",
+        "Frame 47 of 7563 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#6644bb",
+      "role": "background",
+      "share": 0.23
+    },
+    {
+      "hex": "#97a8b8",
+      "role": "surface",
+      "share": 0.179
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.132
+    },
+    {
+      "hex": "#2a719c",
+      "role": "accent",
+      "share": 0.1
+    },
+    {
+      "hex": "#a4e7f8",
+      "role": "surface",
+      "share": 0.043
+    }
+  ],
+  "capture": {
+    "source": "Canva.mov",
+    "fps": 3.3333333333333335,
+    "frames": 7563,
+    "frame": 47,
+    "atSeconds": 2.7,
+    "endSeconds": 4.5,
+    "holdSeconds": 7.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.21875,
+        "y": 0.171875,
+        "w": 0.59375,
+        "h": 0.671875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Number or email",
+    "headline": "Number or email"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Number or email",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Tap “Use Passkey from another device”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

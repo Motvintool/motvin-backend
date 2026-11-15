@@ -1,0 +1,157 @@
+{
+  "screenId": "airbnb-ios-versions-2026-10-24-wishlists-3",
+  "screen_id": "airbnb-ios-versions-2026-10-24-wishlists-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-24T17:10:23.124Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Wishlists",
+  "flow_position": null,
+  "name": "Recently viewed — loading",
+  "description": "Loading state of Recently viewed with a 5-item tab bar. Light theme, 3 text elements.",
+  "text": "9:41 1\nWishlists\nRecently viewed\nToday\nWishlists\nExplore\nMessages\nTrips\nProfile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "explore",
+    "wishlists",
+    "trips",
+    "messages",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Wishlists, Trips, Messages, Profile",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Recently viewed with a 5-item tab bar. Light theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Feature tip”",
+        "Leads to “Recently viewed”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:18 in the recording",
+        "Frame 1460 of 2389 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfbfe",
+      "role": "background",
+      "share": 0.864
+    },
+    {
+      "hex": "#e0dbdd",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#cdc4bf",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#6d6663",
+      "role": "text",
+      "share": 0.011
+    },
+    {
+      "hex": "#898687",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Airbnb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2389,
+    "frame": 1460,
+    "atSeconds": 438,
+    "endSeconds": 439.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Explore",
+      "Wishlists",
+      "Trips",
+      "Messages",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Recently viewed"
+  },
+  "crawler": {
+    "nodeId": "s306",
+    "depth": 311,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s304",
+        "via": "Dismiss",
+        "name": "Feature tip"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s310",
+        "via": "Wait 1.5s",
+        "name": "Recently viewed"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-24",
+  "capturedBy": "motvin-ios-crawler"
+}

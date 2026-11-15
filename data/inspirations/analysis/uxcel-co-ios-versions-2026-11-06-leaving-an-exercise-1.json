@@ -1,0 +1,163 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-leaving-an-exercise-1",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-leaving-an-exercise-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:40.062Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Leaving an exercise",
+  "flow_position": 57,
+  "name": "Search dialog",
+  "description": "Dialog over a dimmed screen, on top of Sleep toast with a search bar. Dark theme, 13 text elements.",
+  "text": "9:41(\n•ll\nSearch Categories\nSearch\nBuy\nHouses\nPlaces t.\nBevera...\nGroceries\nButterfield\n1150 Mao\nHold it right there!\nYou're doing exceptionally well. However, if you\nquit now, you'll lose all your progress.\nKeep learning\nExit exercise",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "exit exercise",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 42% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Sleep toast with a search bar. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 57 of 66 in “UX Design Foundations detail”",
+        "Reached from “Sleep toast”",
+        "Leads to “Search Categories”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:18 in the recording",
+        "Frame 1465 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#22202a",
+      "role": "background",
+      "share": 0.608
+    },
+    {
+      "hex": "#828288",
+      "role": "surface",
+      "share": 0.207
+    },
+    {
+      "hex": "#45434c",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#9d8cff",
+      "role": "accent",
+      "share": 0.027
+    },
+    {
+      "hex": "#5d5589",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1465,
+    "atSeconds": 438.6,
+    "endSeconds": 439.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "Hold it right there!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s198",
+    "depth": 197,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s197",
+        "via": "Tap “Search”",
+        "name": "Sleep toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s199",
+        "via": "Back to Search Categories",
+        "name": "Search Categories"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

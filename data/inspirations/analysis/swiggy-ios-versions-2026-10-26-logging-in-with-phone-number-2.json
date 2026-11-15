@@ -1,0 +1,151 @@
+{
+  "screenId": "swiggy-ios-versions-2026-10-26-logging-in-with-phone-number-2",
+  "screen_id": "swiggy-ios-versions-2026-10-26-logging-in-with-phone-number-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:49:50.518Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "food",
+  "flow": "authentication",
+  "flow_name": "Logging in with phone number",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open. Light theme, 26 text elements.",
+  "text": "9:41 €\nSkip\nOne app for food, grocery, dining &\nmore in minutes!\nEnter your number\nMobile Number\n+91 v 6382102514\nCantiniin\nBy clicking in, l accept the Privacy Policy.\nSwiggy Terms of Use and Instamart Terms of Use\n2\n3\n1\nABC\nDEF\n6\n4\n5\nJKL\nGHI\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your number”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Light theme, 26 text elements.",
+        "26 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 7 in “Entering phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 0:02 in the recording",
+        "Frame 11 of 1967 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f7f9",
+      "role": "background",
+      "share": 0.514
+    },
+    {
+      "hex": "#fe5103",
+      "role": "accent",
+      "share": 0.189
+    },
+    {
+      "hex": "#e3e3e6",
+      "role": "surface",
+      "share": 0.171
+    },
+    {
+      "hex": "#f7a17a",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#fc7b3f",
+      "role": "surface",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "mvo4xws5-rihcb2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1967,
+    "frame": 11,
+    "atSeconds": 2.4,
+    "endSeconds": 3.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter your number",
+    "headline": "Enter your number"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Enter your number”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Open Enter verification code",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

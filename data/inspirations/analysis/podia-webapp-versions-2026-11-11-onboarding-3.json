@@ -1,0 +1,148 @@
+{
+  "screenId": "podia-webapp-versions-2026-11-11-onboarding-3",
+  "screen_id": "podia-webapp-versions-2026-11-11-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-11T02:24:14.701Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with 3 input fields and a primary action labelled “Sign up for an account”. Light theme, 12 text elements.",
+  "text": "Podia\nSign up for an account\nStart a free 14-day trial. No credit card required.\nName\nMotvin\nEmail\nmotvintool@gmail.com\nPassword\n........\nMinimum 6 characters.\nCreate account\nLog in if you already have an account.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields and a primary action labelled “Sign up for an account”. Light theme, 12 text elements.",
+        "Calls to action: “Sign up for an account”, “Create account”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:24 in the recording",
+        "Frame 92 of 5337 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f6f6f5",
+      "role": "background",
+      "share": 0.469
+    },
+    {
+      "hex": "#ffcb38",
+      "role": "accent",
+      "share": 0.177
+    },
+    {
+      "hex": "#2c5fa8",
+      "role": "text",
+      "share": 0.056
+    },
+    {
+      "hex": "#9cc3fd",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#4eaaad",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Podia.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5337,
+    "frame": 92,
+    "atSeconds": 24.6,
+    "endSeconds": 27.9,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up for an account",
+      "Create account"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Podia"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Tap “Sign up for an account”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Sign up for an account”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-11",
+  "capturedBy": "motvin-ios-crawler"
+}

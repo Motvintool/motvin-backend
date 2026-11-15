@@ -1,0 +1,164 @@
+{
+  "screenId": "ted-ios-versions-2026-11-08-logging-in-with-email-5",
+  "screen_id": "ted-ios-versions-2026-11-08-logging-in-with-email-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:59:37.257Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 7,
+  "name": "Sign in with email",
+  "description": "Login dialog over a dimmed screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41 €\noil\nWelcome back!\nEmail address\nmotvintool@gmail.com\nPassword\nContinue\nForgot your password?\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dialog over a dimmed background, covering 22% of the height from 63% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen with 2 input fields and a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 10 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.1s at 6:07 in the recording",
+        "Frame 1242 of 1289 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121313",
+      "role": "background",
+      "share": 0.929
+    },
+    {
+      "hex": "#282c2f",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#484849",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#969696",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#626262",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "TED.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1289,
+    "frame": 1242,
+    "atSeconds": 367.8,
+    "endSeconds": 372.9,
+    "holdSeconds": 5.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.28125,
+        "y": 0.625,
+        "w": 0.59375,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s158",
+    "depth": 158,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s157",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s159",
+        "via": "Dismiss",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

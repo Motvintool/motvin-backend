@@ -1,0 +1,161 @@
+{
+  "screenId": "uptime-ios-versions-2026-11-06-discover-1",
+  "screen_id": "uptime-ios-versions-2026-11-06-discover-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:31:09.992Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": null,
+  "flow": "checkout",
+  "flow_name": "Discover",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a 4-item tab bar, 1 input field and a primary action labelled “Save 75% today”. Dark theme, 42 text elements.",
+  "text": "9:41(\n71h left\nGreat choice of topics! Check out a few of our\ntop summaries - we call them, 'Hacks'\nJump in to get started\nMel Robbins\nThe most important book 've read in years. Life changing'\nTHE NEW YORK TIMES BESTS\nSALIHUGHES\nInternational Best-Selling Author of\nThe 5 Second Rule\nTINKIN\nHOW TO\nThe\nFASTAND SL\nBREAK UP\nHigh 5\nWITH YOUR\nDANIEI\nHabit\nKAHNEM\nPHONE\nTake control of your life\nwith one simple habil\nCATHERINE PRIC\nBook Hack\nBook Hack\nBook Hack\nThinking, Fas\nHow to Break up\nThe High 5 Habit\nby Mel Robbins\nand Slow by\nWith Your Phone\nby Catherine Price\nDaniel Kahnel\nUptime\nUptime\nUptime\n•77°)\nUpgrade to access\nthousands of Hacks\nSave 75% today\nDiscover\nPremium\nBrowse\nYou",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "price",
+    "discover",
+    "browse",
+    "you",
+    "premium",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "banner"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Discover, Browse, You, Premium",
+        "Navigation title reads “Jump in to get started”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a 4-item tab bar, 1 input field and a primary action labelled “Save 75% today”. Dark theme, 42 text elements.",
+        "Calls to action: “Save 75% today”",
+        "42 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 32 in “Discover”",
+        "Reached from “Loading state”",
+        "Leads to “The High 5 Habit by Mel”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 1:37 in the recording",
+        "Frame 337 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0e18",
+      "role": "background",
+      "share": 0.368
+    },
+    {
+      "hex": "#282e47",
+      "role": "accent",
+      "share": 0.176
+    },
+    {
+      "hex": "#4e5368",
+      "role": "surface",
+      "share": 0.118
+    },
+    {
+      "hex": "#f6f3f1",
+      "role": "text",
+      "share": 0.061
+    },
+    {
+      "hex": "#737689",
+      "role": "surface",
+      "share": 0.048
+    }
+  ],
+  "capture": {
+    "source": "Uptime.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 337,
+    "atSeconds": 97.8,
+    "endSeconds": 101.4,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [
+      "Discover",
+      "Browse",
+      "You",
+      "Premium"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Save 75% today"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Jump in to get started",
+    "headline": "High 5"
+  },
+  "crawler": {
+    "nodeId": "s041",
+    "depth": 40,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s040",
+        "via": "Wait 1.5s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s042",
+        "via": "Switch to Spark card",
+        "name": "The High 5 Habit by Mel"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

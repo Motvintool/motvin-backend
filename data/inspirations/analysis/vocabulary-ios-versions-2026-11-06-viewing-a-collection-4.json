@@ -1,0 +1,169 @@
+{
+  "screenId": "vocabulary-ios-versions-2026-11-06-viewing-a-collection-4",
+  "screen_id": "vocabulary-ios-versions-2026-11-06-viewing-a-collection-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T15:00:10.953Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Viewing a collection",
+  "flow_position": 1,
+  "name": "OTP verification",
+  "description": "Verification code bottom sheet over a dimmed screen, on top of OTP verification with a 4-item tab bar. Dark theme, 21 text elements.",
+  "text": "9:41(\n<\nStudy new\n• • •\nveracious\n(vareiJas\n(adj.) Always telling the truth\n(She is known for being veracious.)\nWed, 4 Nov 2026\npetulant\npetfalant )\n(adj.) Easily annoyed or irritated, especially when\nthings don't go your way\n(The petulant child threw a tantrum when he didn't get\nAI\nStudy new:\nSree\nLavanya\nMail\nMessages\nNotes\nAirDrop\nСopy\nNew Quick\nSave to Files\nView More\nNote",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "new quick",
+    "note",
+    "save to files",
+    "view more",
+    "otp",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: New Quick, Note, Save to Files, View More",
+        "Navigation title reads “Messages”",
+        "Bottom sheet over a dimmed background, covering 47% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code bottom sheet over a dimmed screen, on top of OTP verification with a 4-item tab bar. Dark theme, 21 text elements.",
+        "21 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “New Quick”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:36 in the recording",
+        "Frame 924 of 1857 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222222",
+      "role": "background",
+      "share": 0.648
+    },
+    {
+      "hex": "#444344",
+      "role": "surface",
+      "share": 0.217
+    },
+    {
+      "hex": "#5f5e5f",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#f7f6f9",
+      "role": "text",
+      "share": 0.011
+    },
+    {
+      "hex": "#dbdadb",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Vocabulary.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1857,
+    "frame": 924,
+    "atSeconds": 276.3,
+    "endSeconds": 277.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.515625,
+        "w": 0.9375,
+        "h": 0.46875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [
+      "New Quick",
+      "Note",
+      "Save to Files",
+      "View More"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Messages",
+    "headline": "Petulant"
+  },
+  "crawler": {
+    "nodeId": "s125",
+    "depth": 125,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s124",
+        "via": "Tap “New”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s126",
+        "via": "Dismiss",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,160 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-browsing-profile-settings-1",
+  "screen_id": "drops-ios-versions-2026-11-04-browsing-profile-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:58.428Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Browsing profile settings",
+  "flow_position": 5,
+  "name": "Motvin Tool — scrolled",
+  "description": "Login screen, scrolled further down from Motvin Tool with 1 input field and a primary action labelled “Login & save progress”. Dark theme, 19 text elements.",
+  "text": "Profile\nImage\nM\nPick an image for your profile\nName\nMotvin Tool\nChoose a name for your\nprofile\nAccount\nLogin & save progress\nLog out\nConnected with Email:\nmotvintool@gmail.com\nStatistics\nLast Backed Up\n2026-11-02 07:05:31\nSettings\nWidget\nShow how to add widget tutorial.\nSkill level\nBeginner\nArabic",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "login",
+    "skill level",
+    "beginner",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Motvin Tool with 1 input field and a primary action labelled “Login & save progress”. Dark theme, 19 text elements.",
+        "Calls to action: “Login & save progress”",
+        "19 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 16 in “Choosing a date”",
+        "Reached from “Motvin Tool”",
+        "Leads to “Take photo”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 8:18 in the recording",
+        "Frame 1709 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1369",
+      "role": "background",
+      "share": 0.919
+    },
+    {
+      "hex": "#5e397d",
+      "role": "accent",
+      "share": 0.046
+    },
+    {
+      "hex": "#7c5d98",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#3b6755",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#6c4f64",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1709,
+    "atSeconds": 498,
+    "endSeconds": 499.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login & save progress"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Profile",
+    "headline": "Account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s177",
+    "depth": 178,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s176",
+        "via": "Scroll",
+        "name": "Motvin Tool"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s178",
+        "via": "Open Other",
+        "name": "Take photo"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

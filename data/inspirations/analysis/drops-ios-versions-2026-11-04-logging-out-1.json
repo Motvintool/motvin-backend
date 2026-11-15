@@ -1,0 +1,155 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-logging-out-1",
+  "screen_id": "drops-ios-versions-2026-11-04-logging-out-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:59.683Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging out",
+  "flow_position": 16,
+  "name": "Sign in with email",
+  "description": "Login screen with 1 input field and a primary action labelled “Login & save progress”. Dark theme, 18 text elements.",
+  "text": "Profile\nImage\nM\nPick an image for your profile\nName\nMotvin Tool\nChoose a name for your\nprofile\nAccount\nLogin & save progress\nLog out\nConnected with Email:\nmotvintool@gmail.com\nStatistics\nLast Backed Up\n2026-11-02 07:05:31\nSettings\nWidget\nShow how to add widget tutorial.\nSkill level\nBeginner",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "login",
+    "skill level",
+    "beginner",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field and a primary action labelled “Login & save progress”. Dark theme, 18 text elements.",
+        "Calls to action: “Login & save progress”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 16 in “Choosing a date”",
+        "Reached from “Subscription plans — scrolled”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 8:51 in the recording",
+        "Frame 1771 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#3f1369",
+      "role": "background",
+      "share": 0.916
+    },
+    {
+      "hex": "#613d7e",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#81639e",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#9b84b0",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#429a53",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 1771,
+    "atSeconds": 531,
+    "endSeconds": 531.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login & save progress"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Profile",
+    "headline": "Account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s189",
+    "depth": 190,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s188",
+        "via": "Open Profile",
+        "name": "Subscription plans — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s190",
+        "via": "Back to Profile",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,157 @@
+{
+  "screenId": "coursera-ios-versions-2026-11-06-logging-in-with-email-3",
+  "screen_id": "coursera-ios-versions-2026-11-06-logging-in-with-email-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:58:49.576Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state with 3 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+  "text": "9:41 €\noll\n<\ncoursera\nEmail\nEmail (Required)\nPassword\nPassword (Required)\nForgot password?\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email (Required)”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 3 input fields and a primary action labelled “Log in”. Dark theme, 8 text elements.",
+        "Calls to action: “Log in”",
+        "8 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 16 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 9:32 in the recording",
+        "Frame 1914 of 2052 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.908
+    },
+    {
+      "hex": "#202331",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#4a648c",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#404554",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#5e7faf",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Coursera.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2052,
+    "frame": 1914,
+    "atSeconds": 572.4,
+    "endSeconds": 574.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email (Required)",
+    "headline": "Email (Required)"
+  },
+  "crawler": {
+    "nodeId": "s245",
+    "depth": 244,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s244",
+        "via": "Open Email (Required)",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s246",
+        "via": "Wait 2.1s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

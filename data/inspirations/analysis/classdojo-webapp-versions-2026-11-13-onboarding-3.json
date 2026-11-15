@@ -1,0 +1,166 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-onboarding-3",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-onboarding-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:57:35.315Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Sign in with email",
+  "description": "Login bottom sheet, on top of Loading state with 1 input field and a primary action labelled “Continue”. Light theme, 19 text elements.",
+  "text": "* ClassDojo\nLog in\nSign up\nGet started as a teacher\nEmail address\nmotvintool@gmail.com\nb\nIS\nContinue\nOR\nG Continue with Google\n- Continue with Microsoft\nStudent\nTeacher\nParent\nSchool Leader\nGet the\nClassDojo app\n2 million+ reviews",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "address",
+    "login",
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Google”",
+        "Bottom sheet, covering 59% of the height from 38% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login bottom sheet, on top of Loading state with 1 input field and a primary action labelled “Continue”. Light theme, 19 text elements.",
+        "Calls to action: “Continue”",
+        "19 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 16 in “Creating an account”",
+        "Reached from “Loading state”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 13.2s at 0:04 in the recording",
+        "Frame 59 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#5c5973",
+      "role": "background",
+      "share": 0.736
+    },
+    {
+      "hex": "#fcfcfd",
+      "role": "text",
+      "share": 0.172
+    },
+    {
+      "hex": "#ceccd3",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#6b3cd7",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#a1a0af",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 59,
+    "atSeconds": 4.8,
+    "endSeconds": 18,
+    "holdSeconds": 13.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.25,
+        "y": 0.375,
+        "w": 0.5,
+        "h": 0.59375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Google",
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Wait 1.8s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Student”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

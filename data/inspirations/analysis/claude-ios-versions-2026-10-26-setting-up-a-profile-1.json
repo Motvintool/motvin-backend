@@ -1,0 +1,152 @@
+{
+  "screenId": "claude-ios-versions-2026-10-26-setting-up-a-profile-1",
+  "screen_id": "claude-ios-versions-2026-10-26-setting-up-a-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-26T06:05:13.548Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "ai",
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 16,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+  "text": "9:41C\n•\n•\n•\nWhat's your name?\nClaude will use this to refer to you.\nEnter your full name\nContinue\nEmail verified as motvintool@gmail.com\nUse a different email",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Continue”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue”",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 19 in “Logging in”",
+        "Reached from “Create account”",
+        "Leads to “Profile form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:32 in the recording",
+        "Frame 311 of 1595 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f191a",
+      "role": "background",
+      "share": 0.887
+    },
+    {
+      "hex": "#3e3534",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#979595",
+      "role": "text",
+      "share": 0.038
+    },
+    {
+      "hex": "#635e5e",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#4b4a4c",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "mvouk0py-epq2ip.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1595,
+    "frame": 311,
+    "atSeconds": 92.7,
+    "endSeconds": 93.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "What's your name?"
+  },
+  "crawler": {
+    "nodeId": "s018",
+    "depth": 17,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s017",
+        "via": "Open Loading state",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s019",
+        "via": "Wait 0.9s",
+        "name": "Profile form"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,151 @@
+{
+  "screenId": "perplexity-ios-versions-2026-10-26-logging-in-with-email-10",
+  "screen_id": "perplexity-ios-versions-2026-10-26-logging-in-with-email-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:31:23.875Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "loading"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Logging in with email",
+  "flow_position": 18,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 8 text elements.",
+  "text": "9:41(\nperplexity\nED\nM\nPerplexity Computer is now available\nResearch, build and ship complete projects\nfrom a single prompt\nUpgrade to Pro\nType @ for connectors and sources\n+\nQ\noll'\nModel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "model",
+    "paywall",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 99 in “Onboarding”",
+        "Reached from “Loading state”",
+        "Leads to “Subscription plans”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 1:04 in the recording",
+        "Frame 312 of 1873 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1919",
+      "role": "background",
+      "share": 0.922
+    },
+    {
+      "hex": "#393939",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#535354",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#bebcbd",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#6d7376",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "mvo4xudd-dcft1b.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1873,
+    "frame": 312,
+    "atSeconds": 64.8,
+    "endSeconds": 65.4,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Perplexity Computer is now available",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Wait 3.9s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Wait 5.7s",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

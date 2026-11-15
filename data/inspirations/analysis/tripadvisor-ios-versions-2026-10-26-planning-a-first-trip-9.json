@@ -1,0 +1,165 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-planning-a-first-trip-9",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-planning-a-first-trip-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:35.618Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Planning a first trip",
+  "flow_position": 2,
+  "name": "Sign-in options",
+  "description": "Login dialog over a dimmed screen with a primary action labelled “Allow”. Dark theme, 17 text elements.",
+  "text": "9:41 C\nO\nSkip\nDubai Self-Drive Quad Bike, Camels,\nStargazing & 5* BBQ AI Khayma\n5.0\n(22,566)\nDubai, United Arab Emirates\nAllow \"Tripadvisor\" to track your\nactivity across other companies'\napps and websites?\nYour data will be used for analytics\nand personalisation purposes,\nincluding to tailor the ads you see.\nAsk App Not to Track\nAllow\nContinue with Google\nHave an account? Log in\nBy proceeding, you agree to our Terms of Use and confirm you have\nread our Privacy and Cookie Statement.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Apps and websites?”",
+        "Dialog over a dimmed background, covering 22% of the height from 47% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen with a primary action labelled “Allow”. Dark theme, 17 text elements.",
+        "Calls to action: “Allow”, “Continue with Google”",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 45 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:01 in the recording",
+        "Frame 8 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#343839",
+      "role": "background",
+      "share": 0.351
+    },
+    {
+      "hex": "#0d0909",
+      "role": "surface",
+      "share": 0.286
+    },
+    {
+      "hex": "#58595a",
+      "role": "surface",
+      "share": 0.159
+    },
+    {
+      "hex": "#1d2c20",
+      "role": "surface",
+      "share": 0.112
+    },
+    {
+      "hex": "#7e7978",
+      "role": "surface",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 8,
+    "atSeconds": 1.2,
+    "endSeconds": 2.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.46875,
+        "w": 0.65625,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "Continue with Google"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Apps and websites?",
+    "headline": "Apps and websites?"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Apps and websites?",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Dismiss",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

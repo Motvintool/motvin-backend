@@ -1,0 +1,163 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-account-3",
+  "screen_id": "redbus-ios-versions-2026-10-25-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:49.770Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "scrolled"
+  ],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Account",
+  "flow_position": 181,
+  "name": "Payment method — scrolled",
+  "description": "Payment screen, scrolled further down from Payment method with a 5-item tab bar. Light theme, 22 text elements.",
+  "text": "9:41 0\n•ll S\nPayments\nGift Card\n>\nNEW\n>\nredBus Wallet\n• Payment methods\n>\nGST details\nMore\nOffers\n>\nReferrals\n>\nKnow about redBus\n>\n*\nRate app\n>\nHelp\n>\n2a Account settings\nOffers\nHome\nMy Bookings\nHelp\nMy Account\nPreference‹",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "payment",
+    "offer",
+    "wallet",
+    "home",
+    "my bookings",
+    "offers",
+    "help",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "banner"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My Bookings, Offers, Help, My Account",
+        "Navigation title reads “Payments”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen, scrolled further down from Payment method with a 5-item tab bar. Light theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 181 of 200 in “Home”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”",
+        "Returned to 12 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 10:48 in the recording",
+        "Frame 2222 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfd",
+      "role": "background",
+      "share": 0.898
+    },
+    {
+      "hex": "#dedbdd",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#c4c1c4",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#a5a4a6",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#818082",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2222,
+    "atSeconds": 648.9,
+    "endSeconds": 650.1,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 12
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [
+      "Home",
+      "My Bookings",
+      "Offers",
+      "Help",
+      "My Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Payments",
+    "headline": "More"
+  },
+  "crawler": {
+    "nodeId": "s535",
+    "depth": 537,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s531",
+        "via": "Scroll",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s537",
+        "via": "Open Redeem gift card",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

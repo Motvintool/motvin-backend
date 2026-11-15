@@ -1,0 +1,166 @@
+{
+  "screenId": "dailyart-ios-versions-2026-11-06-going-through-the-daily-artwork-tutorial-1",
+  "screen_id": "dailyart-ios-versions-2026-11-06-going-through-the-daily-artwork-tutorial-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:54:31.141Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Going through the daily artwork tutorial",
+  "flow_position": 1,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state with a 5-item tab bar. Dark theme.",
+  "text": "9:41C\nSettings\nDailyArt\nDiscover\nSearch\nFavourites",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dailyart",
+    "discover",
+    "search",
+    "favourites",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: DailyArt, Discover, Search, Favourites, Settings",
+        "Dialog over a dimmed background, covering 19% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state with a 5-item tab bar. Dark theme.",
+        "0 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 71 in “DailyArt”",
+        "Reached from “Dialog — loading”",
+        "Leads to “Earch home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:18 in the recording",
+        "Frame 61 of 1073 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#120e0f",
+      "role": "background",
+      "share": 0.933
+    },
+    {
+      "hex": "#413518",
+      "role": "accent",
+      "share": 0.062
+    },
+    {
+      "hex": "#555559",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#252428",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#a6a4a6",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "DailyArt.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1073,
+    "frame": 61,
+    "atSeconds": 18,
+    "endSeconds": 18.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.546875,
+        "w": 0.5625,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 0,
+    "tabLabels": [
+      "DailyArt",
+      "Discover",
+      "Search",
+      "Favourites",
+      "Settings"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Wait 0.6s",
+        "name": "Dialog — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Switch to earch",
+        "name": "Earch home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

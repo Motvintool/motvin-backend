@@ -1,0 +1,160 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-sorting-library-books-2",
+  "screen_id": "headway-ios-versions-2026-11-04-sorting-library-books-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:27:03.249Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "search",
+  "flow_name": "Sorting library books",
+  "flow_position": 2,
+  "name": "Search results",
+  "description": "Search results dialog over a dimmed screen, on top of Loading state. Dark theme, 11 text elements.",
+  "text": "9:41(\nContinue 1\nA Brief History of Time\nStephen\nHawking\n...\nStephen Hawking, PhD\nA Brief\nHistory\nof Time\nSort by\nLast opened\n• Name\nProgress",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "progress",
+    "search-results",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue 1”",
+        "Dialog over a dimmed background, covering 14% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results dialog over a dimmed screen, on top of Loading state. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Searching Home”",
+        "Reached from “Search results — loading”",
+        "Leads to “Home home”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:30 in the recording",
+        "Frame 1706 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b191c",
+      "role": "background",
+      "share": 0.733
+    },
+    {
+      "hex": "#3b393c",
+      "role": "surface",
+      "share": 0.243
+    },
+    {
+      "hex": "#625f65",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#82778c",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#285676",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1706,
+    "atSeconds": 510.6,
+    "endSeconds": 512.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.03125,
+        "w": 0.875,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue 1",
+    "headline": "Stephen Hawking, PhD",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s210",
+    "depth": 210,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s209",
+        "via": "Wait 3s",
+        "name": "Search results — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s211",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

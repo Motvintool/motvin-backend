@@ -1,0 +1,160 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-quests-2",
+  "screen_id": "elevate-ios-versions-2026-11-08-quests-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:11.744Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Quests",
+  "flow_position": 17,
+  "name": "Daily Quests update toast",
+  "description": "Toast over a dimmed screen, on top of You lost all your lives with a paged carousel. Dark theme, 3 text elements.",
+  "text": "9:41C\no0ll\nDaily Quests update\nPlay 5 games\n0/5\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "carousel",
+    "page-indicator",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Daily Quests update”",
+        "Paged carousel with a page indicator",
+        "Toast over a dimmed background, covering 8% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of You lost all your lives with a paged carousel. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 17 in “Opening a page (Today)”",
+        "Reached from “You lost all your lives”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:26 in the recording",
+        "Frame 1491 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.852
+    },
+    {
+      "hex": "#09c6fc",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#474345",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#1094be",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#156985",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1491,
+    "atSeconds": 446.7,
+    "endSeconds": 447.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.90625,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Daily Quests update",
+    "headline": "Daily Quests update",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s231",
+    "depth": 230,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s230",
+        "via": "Open Daily Quests update",
+        "name": "You lost all your lives"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s232",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

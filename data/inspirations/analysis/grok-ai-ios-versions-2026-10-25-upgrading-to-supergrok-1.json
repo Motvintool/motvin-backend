@@ -1,0 +1,162 @@
+{
+  "screenId": "grok-ai-ios-versions-2026-10-25-upgrading-to-supergrok-1",
+  "screen_id": "grok-ai-ios-versions-2026-10-25-upgrading-to-supergrok-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T12:12:59.770Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "productivity",
+  "flow": "checkout",
+  "flow_name": "Upgrading to SuperGrok",
+  "flow_position": 19,
+  "name": "Subscription plans",
+  "description": "Paywall bottom sheet over a dimmed screen, on top of Loading state with a paged carousel. Dark theme, 28 text elements.",
+  "text": "9:41(\noll\n=\nAsk\nBuild\nImagine\n•••\nHey, how are you?\nHey! I'm doing great, thanks for asking. How\nabout you?\n0.91s\n...\n→ What are you good at?\n→ Can vou heln me write an email?\nS SuperGrok\nTry for 70.00\nAr\nUnlock all capabilities\nHeavy\nTeam of Experts • Grok 4.7\nExpert\nThinks hard • Grok 4.7\nAuto\nChooses Fast or Expert\nBuild\n(BETA\nBuild apps and sites • Grok 4.7\nFast\nQuick responses\nAsk \\\n\"|l' Speak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Expert”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet over a dimmed background, covering 45% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall bottom sheet over a dimmed screen, on top of Loading state with a paged carousel. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 25 in “Documents & files detail”",
+        "Reached from “Loading state”",
+        "Leads to “Subscription plans”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 4:21 in the recording",
+        "Frame 880 of 1890 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080709",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#262427",
+      "role": "surface",
+      "share": 0.205
+    },
+    {
+      "hex": "#434144",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#59575a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#cdcbcd",
+      "role": "text",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "mvns6hz3-vomy5m.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1890,
+    "frame": 880,
+    "atSeconds": 261.3,
+    "endSeconds": 264.3,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.515625,
+        "w": 0.875,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Expert",
+    "headline": "SuperGrok"
+  },
+  "crawler": {
+    "nodeId": "s097",
+    "depth": 100,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s096",
+        "via": "Wait 4.8s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s098",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

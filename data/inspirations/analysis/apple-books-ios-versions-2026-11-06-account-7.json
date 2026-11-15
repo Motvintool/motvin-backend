@@ -1,0 +1,148 @@
+{
+  "screenId": "apple-books-ios-versions-2026-11-06-account-7",
+  "screen_id": "apple-books-ios-versions-2026-11-06-account-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:55:20.934Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Account",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 7 text elements.",
+  "text": "9:41 €\n:Apple Account\nSV\nReset Password\nReset Surendar V's (+91 6382-102514)\npassword or use this iPhone to help someone\nelse reset their password.\nReset My Password\nHelp Someone Else",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Apple Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Apple Account”",
+        "Reached from “Account”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 5:30 in the recording",
+        "Frame 1113 of 1143 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.752
+    },
+    {
+      "hex": "#030402",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#4b494d",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#2b3744",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#0594fe",
+      "role": "accent",
+      "share": 0.032
+    }
+  ],
+  "capture": {
+    "source": "Apple Books.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1143,
+    "frame": 1113,
+    "atSeconds": 330.3,
+    "endSeconds": 334.2,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Apple Account",
+    "headline": "Reset Password"
+  },
+  "crawler": {
+    "nodeId": "s157",
+    "depth": 156,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s156",
+        "via": "Tap “Account”",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s158",
+        "via": "Wait 3.9s",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

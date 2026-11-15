@@ -1,0 +1,149 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-logging-in-3",
+  "screen_id": "remind-ios-versions-2026-11-07-logging-in-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:13.675Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 4,
+  "name": "Phone number entry",
+  "description": "Login screen with 2 input fields and a primary action labelled “Continue”. Light theme, 6 text elements.",
+  "text": "9:41 €\nEmail or phone number\nmotvintool@gmail.com\nPassword\nPassword\nForgot password?\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email or phone number”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Continue”. Light theme, 6 text elements.",
+        "Calls to action: “Continue”",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 21 in “Creating an account”",
+        "Reached from “Sign in with email”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 8:07 in the recording",
+        "Frame 1631 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f6ef",
+      "role": "background",
+      "share": 0.916
+    },
+    {
+      "hex": "#81b6e8",
+      "role": "accent",
+      "share": 0.041
+    },
+    {
+      "hex": "#d3dbde",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#c3c0b9",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a4a29c",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1631,
+    "atSeconds": 487.2,
+    "endSeconds": 489.6,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email or phone number",
+    "headline": "Motvintool@gmail.com"
+  },
+  "crawler": {
+    "nodeId": "s191",
+    "depth": 193,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s190",
+        "via": "Tap “motvintool@gmail.com”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s192",
+        "via": "Tap “Email or phone number”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

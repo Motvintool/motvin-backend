@@ -1,0 +1,142 @@
+{
+  "screenId": "dribbble-webapp-versions-2026-10-28-creating-a-proposal-2",
+  "screen_id": "dribbble-webapp-versions-2026-10-28-creating-a-proposal-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:22:38.199Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Creating a proposal",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code screen. Light theme, 8 text elements.",
+  "text": "Dribbble\nCreate your account\nWe've sent you a passcode.\nPlease check your inbox at m********@g***.com.\n4 3 |\nInvalid verification code.\nResend code\n@glebich",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Light theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 28 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.4s at 0:36 in the recording",
+        "Frame 137 of 2302 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefefe",
+      "role": "background",
+      "share": 0.671
+    },
+    {
+      "hex": "#0c0f32",
+      "role": "text",
+      "share": 0.08
+    },
+    {
+      "hex": "#09178c",
+      "role": "accent",
+      "share": 0.05
+    },
+    {
+      "hex": "#dadbe3",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#2322c1",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "mvrjdbna-gkxlnf.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2302,
+    "frame": 137,
+    "atSeconds": 36,
+    "endSeconds": 41.4,
+    "holdSeconds": 5.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your account",
+    "headline": "Create your account"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Tap “Create your account”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Tap “Create your account”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

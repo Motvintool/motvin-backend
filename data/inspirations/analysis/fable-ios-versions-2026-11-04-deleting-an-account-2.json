@@ -1,0 +1,148 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-deleting-an-account-2",
+  "screen_id": "fable-ios-versions-2026-11-04-deleting-an-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:15.978Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Deleting an account",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "9:41(\nodll\nNETFLIX\nEnter your info to sign\nin\nOr get started with a new account.\nEmail or mobile number\nContinue\nGet Help V\nThis page is protected by Google reCAPTCHA to ensure\nyou're not a bot.\nX",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Enter your info to sign”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 12:46 in the recording",
+        "Frame 2565 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c0c0e",
+      "role": "background",
+      "share": 0.624
+    },
+    {
+      "hex": "#491b1f",
+      "role": "surface",
+      "share": 0.182
+    },
+    {
+      "hex": "#fefcfe",
+      "role": "text",
+      "share": 0.093
+    },
+    {
+      "hex": "#e90a16",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#9f989a",
+      "role": "surface",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 2565,
+    "atSeconds": 766.8,
+    "endSeconds": 769.8,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Enter your info to sign",
+    "headline": "Enter your info to sign"
+  },
+  "crawler": {
+    "nodeId": "s293",
+    "depth": 294,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s292",
+        "via": "Tap “Remove Goodreads import”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s294",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

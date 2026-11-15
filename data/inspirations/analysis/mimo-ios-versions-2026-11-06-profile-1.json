@@ -1,0 +1,156 @@
+{
+  "screenId": "mimo-ios-versions-2026-11-06-profile-1",
+  "screen_id": "mimo-ios-versions-2026-11-06-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:19:04.917Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Profile",
+  "flow_position": null,
+  "name": "Learn home — loading",
+  "description": "Loading state of Learn home with a 4-item tab bar. Dark theme, 2 text elements.",
+  "text": "9:41\nProfile\nLoading Profile...\nProfile\nLearn\nPractice\nLeaderboard",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "learn",
+    "practice",
+    "leaderboard",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Learn, Practice, Leaderboard, Profile",
+        "Navigation title reads “Profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Learn home with a 4-item tab bar. Dark theme, 2 text elements.",
+        "2 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Learn home”",
+        "Leads to “Learn home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 7:55 in the recording",
+        "Frame 1585 of 2003 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#28294a",
+      "role": "background",
+      "share": 0.89
+    },
+    {
+      "hex": "#5d5e96",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#404369",
+      "role": "accent",
+      "share": 0.044
+    },
+    {
+      "hex": "#8e8fb1",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#d5d6e6",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Mimo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2003,
+    "frame": 1585,
+    "atSeconds": 475.2,
+    "endSeconds": 475.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [
+      "Learn",
+      "Practice",
+      "Leaderboard",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Profile",
+    "headline": "Loading Profile"
+  },
+  "crawler": {
+    "nodeId": "s186",
+    "depth": 185,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s185",
+        "via": "Open Profile",
+        "name": "Learn home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s187",
+        "via": "Wait 0.6s",
+        "name": "Learn home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

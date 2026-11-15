@@ -1,0 +1,151 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-signing-up-1",
+  "screen_id": "quizlet-ios-versions-2026-11-04-signing-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:36.804Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 14,
+  "name": "Create account",
+  "description": "Sign up screen with 2 input fields and a primary action labelled “Create account”. Dark theme, 7 text elements.",
+  "text": "9:41€\n•ll\nCreate account\nDate of birth\nEmail\nPassword\nBy signing up, you accept Quizlet's Terms of\nservice and Privacy policy\nCreate account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create account”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with 2 input fields and a primary action labelled “Create account”. Dark theme, 7 text elements.",
+        "Calls to action: “Create account”",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 56 in “Onboarding”",
+        "Reached from “Sign in with email”",
+        "Leads to “Create account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:39 in the recording",
+        "Frame 141 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0b2f",
+      "role": "background",
+      "share": 0.737
+    },
+    {
+      "hex": "#2d3353",
+      "role": "accent",
+      "share": 0.242
+    },
+    {
+      "hex": "#4e5370",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#7f7f94",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#9a99aa",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 141,
+    "atSeconds": 39.9,
+    "endSeconds": 42.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Create account"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create account",
+    "headline": "Email"
+  },
+  "crawler": {
+    "nodeId": "s014",
+    "depth": 13,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s013",
+        "via": "Open Create account",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s015",
+        "via": "Tap “Create account”",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,149 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-editing-profile-1",
+  "screen_id": "preply-ios-versions-2026-11-07-editing-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:26.317Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Editing profile",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with 3 input fields. Light theme, 9 text elements.",
+  "text": "l =\n9:41 0\nEdit profile\nSave\nM\nEdit photo\nFirst name\nMotvin\nLast name\nPhone number\nY +1\nDelete account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "delete account",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Edit profile”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields. Light theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Logging in with phone number”",
+        "Reached from “Your settings”",
+        "Leads to “Phone number entry — scrolled”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 4:32 in the recording",
+        "Frame 916 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.93
+    },
+    {
+      "hex": "#d4d2d5",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#484758",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#706e7d",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#b4b0b4",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 916,
+    "atSeconds": 272.7,
+    "endSeconds": 275.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Edit profile",
+    "headline": "Edit photo",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s125",
+    "depth": 124,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s124",
+        "via": "Tap “Edit profile”",
+        "name": "Your settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s126",
+        "via": "Scroll",
+        "name": "Phone number entry — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

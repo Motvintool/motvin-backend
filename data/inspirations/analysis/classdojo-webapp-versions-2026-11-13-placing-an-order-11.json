@@ -1,0 +1,165 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-placing-an-order-11",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-placing-an-order-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:58:45.976Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "scrolled"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Placing an order",
+  "flow_position": 6,
+  "name": "Payment method",
+  "description": "Payment screen, scrolled further down with a row of 4 category chips, 3 input fields, a primary action labelled “Pay now” and prices. Light theme, 35 text elements.",
+  "text": "Q\nAddress\nKatie Plushie\n$31.99\n• EDU-MOJO (-$15.99)\n$16.00\nApartment, suite, etc. (optional)\nDiscount code\nApply\nZIP code\nCity\nState\n• EDU-MOJO X\nPhone\nSubtotal\n$16.00\nSave this information for next time\nEnter shipping address\nShipping\nShipping method\nUSD $16.00\nTotal\n• TOTAL SAVINGS $15.99\nEnter your shipping address to view available shipping methods.\nPay with credit card\nAX+5\nVISA\nAll transactions are secure and encrypted.\nCard number\nExpiration date (MM / YY)\nSecurity code\nName on card\nJ Use shipping address as billing address\nPay now\nTerms and policies",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "discount",
+    "address",
+    "payment",
+    "scrolled",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "price",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Katie Plushie”",
+        "Category strip: Apply, ZIP code, City, State",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen, scrolled further down with a row of 4 category chips, 3 input fields, a primary action labelled “Pay now” and prices. Light theme, 35 text elements.",
+        "Calls to action: “Pay now”",
+        "35 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 13 in “Placing an order”",
+        "Reached from “Checkout”",
+        "Leads to “Checkout”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 26:58 in the recording",
+        "Frame 5399 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9f9f9",
+      "role": "background",
+      "share": 0.909
+    },
+    {
+      "hex": "#e0e1e1",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#c6c4c0",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#1763d4",
+      "role": "accent",
+      "share": 0.008
+    },
+    {
+      "hex": "#77a2e3",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 5399,
+    "atSeconds": 1618.5,
+    "endSeconds": 1620,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 35,
+    "tabLabels": [],
+    "chipLabels": [
+      "Apply",
+      "ZIP code",
+      "City",
+      "State"
+    ],
+    "ctas": [
+      "Pay now"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Katie Plushie",
+    "headline": "Pay with credit card"
+  },
+  "crawler": {
+    "nodeId": "s458",
+    "depth": 463,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s457",
+        "via": "Tap “State”",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s459",
+        "via": "Scroll",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

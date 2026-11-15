@@ -1,0 +1,153 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-logging-in-11",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-logging-in-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:14.350Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "travel",
+  "flow": "onboarding",
+  "flow_name": "Logging in",
+  "flow_position": 13,
+  "name": "Tracking permission",
+  "description": "Permission screen with a primary action labelled “Allow \"MakeMyTrip\" to track”. Light theme, 12 text elements.",
+  "text": "9:41€\nX\nAllow \"MakeMyTrip\" to track\nyour activity across other\ncompanies' apps and websites?\nAllow us to personalize your travel\nrecommendations for a seamless\nexperience. We prioritize your privacy\nand ensure secure data handling.\nAsk App Not to Track\nAllow\nCREATE PASSKEY\nNOT NOW",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow \"MakeMyTrip\" to track”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow \"MakeMyTrip\" to track”. Light theme, 12 text elements.",
+        "Calls to action: “Allow \"MakeMyTrip\" to track”, “Allow”",
+        "12 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 15 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “Tracking permission”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:36 in the recording",
+        "Frame 124 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#808184",
+      "role": "background",
+      "share": 0.556
+    },
+    {
+      "hex": "#414243",
+      "role": "surface",
+      "share": 0.23
+    },
+    {
+      "hex": "#57575a",
+      "role": "surface",
+      "share": 0.133
+    },
+    {
+      "hex": "#2f5583",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#626b78",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 124,
+    "atSeconds": 36,
+    "endSeconds": 37.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow \"MakeMyTrip\" to track",
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow \"MakeMyTrip\" to track",
+    "headline": "Companies' apps and websites?"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Wait 0.9s",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Back to Tracking permission",
+        "name": "Tracking permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

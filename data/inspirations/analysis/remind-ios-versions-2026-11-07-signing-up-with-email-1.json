@@ -1,0 +1,147 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-signing-up-with-email-1",
+  "screen_id": "remind-ios-versions-2026-11-07-signing-up-with-email-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:51:56.540Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up with email",
+  "flow_position": 1,
+  "name": "Phone number entry",
+  "description": "Login screen with a primary action labelled “Log in or sign up”. Light theme, 4 text elements.",
+  "text": "9:41(\n• a C\nRemind\nLog in or sign up\nEmail or phone number\nOR\nContinue with Google",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Log in or sign up”. Light theme, 4 text elements.",
+        "Calls to action: “Log in or sign up”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 50 in “Entering phone number”",
+        "Reached from “Splash”",
+        "Leads to “Sign in with email”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 0:03 in the recording",
+        "Frame 27 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcf7f3",
+      "role": "background",
+      "share": 0.868
+    },
+    {
+      "hex": "#dbd7dd",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#b4c4d3",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#d374cf",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#76b1eb",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 27,
+    "atSeconds": 3.6,
+    "endSeconds": 8.4,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in or sign up"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Phone number entry",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,162 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-browsing-today-5",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-browsing-today-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:33.017Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Browsing Today",
+  "flow_position": 7,
+  "name": "Loading state",
+  "description": "Loading state with a 6-item tab bar. Dark theme, 13 text elements.",
+  "text": "9:41(\n•1l\n#Sale\nHi, Motvin\nO\nYour free masterclass\nClasses are free to attend and air for a limited time.\nMal\nMASTERING ALTERED STATES\nEI\nFOR\nPROBLEM SOLVING\n€\n& PERFORMANCE\nVISHEN LAKHIANI\n60\nMeditations\nShorts\nPrograms\nEve Al\nToday\nEn\nVishen\nJe",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "today",
+    "programs",
+    "eve al",
+    "meditations",
+    "feed",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "banner",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 6 items: Today, Programs, Eve Al, Meditations, Shorts, En",
+        "Navigation title reads “Hi, Motvin”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 6-item tab bar. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 60 in “Today”",
+        "Reached from “Subscription plans”",
+        "Leads to “Today home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:25 in the recording",
+        "Frame 286 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131422",
+      "role": "background",
+      "share": 0.565
+    },
+    {
+      "hex": "#272737",
+      "role": "surface",
+      "share": 0.289
+    },
+    {
+      "hex": "#4d4262",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#300f57",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#e0081c",
+      "role": "accent",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 286,
+    "atSeconds": 85.2,
+    "endSeconds": 86.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [
+      "Today",
+      "Programs",
+      "Eve Al",
+      "Meditations",
+      "Shorts",
+      "En"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hi, Motvin",
+    "headline": "Your free masterclass"
+  },
+  "crawler": {
+    "nodeId": "s037",
+    "depth": 36,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s036",
+        "via": "Open Hi, Motvin",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s038",
+        "via": "Wait 0.9s",
+        "name": "Today home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

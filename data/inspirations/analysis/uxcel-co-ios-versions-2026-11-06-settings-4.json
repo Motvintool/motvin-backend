@@ -1,0 +1,164 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-settings-4",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:41.445Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 5,
+  "name": "Settings",
+  "description": "Settings dialog over a dimmed screen, on top of Settings with a primary action labelled “Done”. Dark theme, 15 text elements.",
+  "text": "9:41 C\n•ll\nSettings\nAPP SETTINGS\nSystem\nTheme\nSound Effects\nTopic snippets\n• Learning Goal\n5 min / day\nNOTIFICATIONS\nDaily Reminder\nL Reminder Time\n12:00 PM\nCancel\nDone\n5 min / day\n10 min / day\n15 min / day\n20 min / day",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “System”",
+        "Dialog over a dimmed background, covering 31% of the height from 0% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings dialog over a dimmed screen, on top of Settings with a primary action labelled “Done”. Dark theme, 15 text elements.",
+        "Calls to action: “Done”",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 13 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:00 in the recording",
+        "Frame 1606 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1b23",
+      "role": "background",
+      "share": 0.637
+    },
+    {
+      "hex": "#3a3941",
+      "role": "surface",
+      "share": 0.34
+    },
+    {
+      "hex": "#5e5c67",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#b4b1bb",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#6b5dbc",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1606,
+    "atSeconds": 480.9,
+    "endSeconds": 482.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Done"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "System",
+    "headline": "Learning Goal"
+  },
+  "crawler": {
+    "nodeId": "s216",
+    "depth": 215,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s215",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s217",
+        "via": "Dismiss",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

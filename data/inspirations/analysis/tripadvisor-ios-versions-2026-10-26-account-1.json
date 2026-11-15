@@ -1,0 +1,156 @@
+{
+  "screenId": "tripadvisor-ios-versions-2026-10-26-account-1",
+  "screen_id": "tripadvisor-ios-versions-2026-10-26-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T19:04:54.571Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "travel",
+  "flow": "settings",
+  "flow_name": "Account",
+  "flow_position": 77,
+  "name": "Account",
+  "description": "Settings screen with a 5-item tab bar. Dark theme, 10 text elements.",
+  "text": "9:414\nAccount\n>\nBookings\nProfile\nNotifications\nPreferences\nSupport\nSign out\nVersion: v70.2.0 build 261005000\nDevice ID: E13EBFF8-4A25-44C7-A55A-0434CFFBEAB7\nExplore\nReview\nAccount\nMap\nTrips",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "notification",
+    "booking",
+    "explore",
+    "map",
+    "trips",
+    "review",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Explore, Map, Trips, Review, Account",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a 5-item tab bar. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 77 of 96 in “Explore”",
+        "Reached from “Bookings”",
+        "Leads to “Explore home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:33 in the recording",
+        "Frame 1513 of 1816 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#020203",
+      "role": "background",
+      "share": 0.83
+    },
+    {
+      "hex": "#15251d",
+      "role": "accent",
+      "share": 0.12
+    },
+    {
+      "hex": "#3e3e3f",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#5d5c5e",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#7c7776",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvo4xxsu-tummtb.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1816,
+    "frame": 1513,
+    "atSeconds": 453.3,
+    "endSeconds": 454.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Explore",
+      "Map",
+      "Trips",
+      "Review",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Sign out"
+  },
+  "crawler": {
+    "nodeId": "s204",
+    "depth": 204,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s203",
+        "via": "Back to Account",
+        "name": "Bookings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s205",
+        "via": "Back to Explore home",
+        "name": "Explore home"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

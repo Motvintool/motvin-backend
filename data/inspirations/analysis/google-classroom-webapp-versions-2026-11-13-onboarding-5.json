@@ -1,0 +1,154 @@
+{
+  "screenId": "google-classroom-webapp-versions-2026-11-13-onboarding-5",
+  "screen_id": "google-classroom-webapp-versions-2026-11-13-onboarding-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T18:29:14.215Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 3,
+  "name": "Recently due",
+  "description": "Detail screen with a sidebar and a primary action labelled “Got it”. Light theme, 13 text elements.",
+  "text": "Classroom\nHome\nRecently due\nCalendar\n2° Teaching\nClasses\n^\n+ Add class\nE\nTo review\ndesign meeting\ndesign meeting\nabout design\nabout design\nArchived classes\nSettings\nWelcome to the new Google\nClassroom home\nThe revamped homepage helps you stay on top\nof student work and up to date on the newest\ntools, features and resources.\nGot it\nLearn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Recently due”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with a sidebar and a primary action labelled “Got it”. Light theme, 13 text elements.",
+        "Calls to action: “Got it”",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 17 in “Opening a page (To review)”",
+        "Reached from “Loading state”",
+        "Leads to “Recently due”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 2:08 in the recording",
+        "Frame 430 of 2775 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#b1b3b3",
+      "role": "background",
+      "share": 0.874
+    },
+    {
+      "hex": "#e0e7ec",
+      "role": "surface",
+      "share": 0.107
+    },
+    {
+      "hex": "#919998",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#c3cdd2",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#6e8b8c",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Google Classroom.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2775,
+    "frame": 430,
+    "atSeconds": 128.1,
+    "endSeconds": 129.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Got it"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Teaching",
+      "To review",
+      "Design meeting",
+      "About design"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Recently due",
+    "headline": "Design meeting"
+  },
+  "crawler": {
+    "nodeId": "s033",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s032",
+        "via": "Wait 0.6s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s034",
+        "via": "Tap “Recently due”",
+        "name": "Recently due"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

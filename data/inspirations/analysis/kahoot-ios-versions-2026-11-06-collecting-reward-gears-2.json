@@ -1,0 +1,143 @@
+{
+  "screenId": "kahoot-ios-versions-2026-11-06-collecting-reward-gears-2",
+  "screen_id": "kahoot-ios-versions-2026-11-06-collecting-reward-gears-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:21:59.825Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Collecting reward gears",
+  "flow_position": 3,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Dark theme, 12 text elements.",
+  "text": "9:41(\n•0\nCogwork\nJoin New Season\nReward\nVault\nUpgrade to unlock\n400 Gears\n400 Gears\nClaim\n8\nUU\n200 Gears\nAccessory",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Join New Season”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 89 in “Opening Play to collect”",
+        "Reached from “Play to collect toast”",
+        "Leads to “Other”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.6s at 0:55 in the recording",
+        "Frame 206 of 3047 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#392e26",
+      "role": "background",
+      "share": 0.377
+    },
+    {
+      "hex": "#5c534d",
+      "role": "surface",
+      "share": 0.106
+    },
+    {
+      "hex": "#20130d",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#f0e0cd",
+      "role": "text",
+      "share": 0.044
+    },
+    {
+      "hex": "#7e5615",
+      "role": "accent",
+      "share": 0.043
+    }
+  ],
+  "capture": {
+    "source": "Kahoot.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3047,
+    "frame": 206,
+    "atSeconds": 55.5,
+    "endSeconds": 62.1,
+    "holdSeconds": 6.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Join New Season",
+    "headline": "Reward"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Open Join New Season",
+        "name": "Play to collect toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Open Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

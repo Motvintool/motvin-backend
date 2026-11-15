@@ -1,0 +1,145 @@
+{
+  "screenId": "preply-ios-versions-2026-11-07-managing-account-settings-2",
+  "screen_id": "preply-ios-versions-2026-11-07-managing-account-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T16:16:26.240Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "education",
+  "flow": "settings",
+  "flow_name": "Managing account settings",
+  "flow_position": 1,
+  "name": "Your settings",
+  "description": "Settings screen. Light theme, 16 text elements.",
+  "text": "9:41(\nM\nMotvin\nEdit profile\nYour settings\nCurrency\nINR, INR ›\nEnglish >\nApp language\n• Time zone\nGMT +5:30 ›\n>\n• More settings\nHelp\nF.A.Q.\n>\nFind answers about how Preply works\nCustomer support\n>\nResolve a specific issue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your settings”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Light theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Logging in with phone number”",
+        "Reached from “Success”",
+        "Leads to “Phone number entry”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 4:30 in the recording",
+        "Frame 908 of 1430 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.891
+    },
+    {
+      "hex": "#dedce0",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#c2c0c4",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#494758",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#6e6c7b",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Preply.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1430,
+    "frame": 908,
+    "atSeconds": 270,
+    "endSeconds": 272.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your settings",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s124",
+    "depth": 123,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s123",
+        "via": "Open Your settings",
+        "name": "Success"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s125",
+        "via": "Tap “Edit profile”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

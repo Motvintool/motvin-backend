@@ -1,0 +1,149 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-logging-in-1",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:42.143Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 1,
+  "name": "Sign-in options",
+  "description": "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 4 text elements.",
+  "text": "9:41C\nC\nuxcel\nContinue with Apple\nG Continue with Google\nSign up\nLog in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "log in",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 4 text elements.",
+        "Calls to action: “Continue with Apple”, “Sign up”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 19 in “Logging in”",
+        "Reached from “Settings”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:18 in the recording",
+        "Frame 1666 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080711",
+      "role": "background",
+      "share": 0.847
+    },
+    {
+      "hex": "#25242e",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#47464e",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#f6f5f6",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#c7c6c9",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1666,
+    "atSeconds": 498,
+    "endSeconds": 500.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Sign up"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Uxcel",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s225",
+    "depth": 224,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s224",
+        "via": "Back to Sign-in options",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s226",
+        "via": "Open Email address",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

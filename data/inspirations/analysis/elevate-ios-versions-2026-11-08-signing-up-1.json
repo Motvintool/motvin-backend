@@ -1,0 +1,151 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-signing-up-1",
+  "screen_id": "elevate-ios-versions-2026-11-08-signing-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:30:53.441Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 37,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 9 text elements.",
+  "text": "9:41(\nCreate a profile to save\nyour progress\nContinue with Apple\nG\nContinue with Google\nf\nContinue with Facebook\nOR\nContinue with Email\nBy creating your account, you agree to Elevate's\nTerms & Conditions and Privacy Policy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create a profile to save”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with Apple”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue with Apple”, “Continue with Google”, “Continue with Facebook”, “Continue with Email”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 37 of 147 in “Onboarding”",
+        "Reached from “Your starting scores toast”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6.6s at 1:27 in the recording",
+        "Frame 312 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222022",
+      "role": "background",
+      "share": 0.92
+    },
+    {
+      "hex": "#474547",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#666466",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#1b3f5c",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#0ba3d5",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 312,
+    "atSeconds": 87.3,
+    "endSeconds": 93.9,
+    "holdSeconds": 6.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Continue with Google",
+      "Continue with Facebook",
+      "Continue with Email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create a profile to save",
+    "headline": "Your progress"
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "Open Create a profile to save",
+        "name": "Your starting scores toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Tap “Continue with Email”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

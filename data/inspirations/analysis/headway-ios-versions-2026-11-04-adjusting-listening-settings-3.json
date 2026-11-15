@@ -1,0 +1,160 @@
+{
+  "screenId": "headway-ios-versions-2026-11-04-adjusting-listening-settings-3",
+  "screen_id": "headway-ios-versions-2026-11-04-adjusting-listening-settings-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:26:56.346Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Adjusting listening settings",
+  "flow_position": 32,
+  "name": "History dialog",
+  "description": "Dialog over a dimmed screen, on top of D. Listen. Dark theme, 17 text elements.",
+  "text": "9:41C\nn Listen\n= Read\nAl Voices\nStephen\nHawking\nA Brief\nHistory\nof Time\nKEY POINT 1 OF 8\nBig Bang, or how the universe began\nol Henry\nG Sleep timer\n1x speed\nWho do you want to listen to?\nHenry • Male • Featured\n•|\"0\nBelinda • Female\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "continue",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “History”",
+        "Dialog over a dimmed background, covering 34% of the height from 2% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of D. Listen. Dark theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 41 in “History”",
+        "Reached from “D. Listen”",
+        "Leads to “D. Listen”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 5:36 in the recording",
+        "Frame 1127 of 2081 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.561
+    },
+    {
+      "hex": "#36363f",
+      "role": "surface",
+      "share": 0.299
+    },
+    {
+      "hex": "#039dff",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#706874",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#1c3c52",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Headway.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2081,
+    "frame": 1127,
+    "atSeconds": 336,
+    "endSeconds": 338.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.34375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "History",
+    "headline": "History",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s137",
+    "depth": 136,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s136",
+        "via": "Tap “History”",
+        "name": "D. Listen"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s138",
+        "via": "Dismiss",
+        "name": "D. Listen"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

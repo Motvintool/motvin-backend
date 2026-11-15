@@ -1,0 +1,168 @@
+{
+  "screenId": "google-gemini-webapp-versions-2026-11-09-connecting-google-apps-2",
+  "screen_id": "google-gemini-webapp-versions-2026-11-09-connecting-google-apps-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-09T11:16:43.403Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Connecting Google apps",
+  "flow_position": 21,
+  "name": "Phone number entry",
+  "description": "Login screen with a sidebar, a search bar and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+  "text": "Q\nGemini\nL Get app\nUpgrade\nNew chat\nConnect these Google apps to Gemini?\nLibrary\nImages\nThe connected apps that you can connect here include Google Workspace\nScheduled\n(includes services like Gmail, Calendar and Drive), Search services (includes\nservices like Search and Maps), Google Photos, Contacts (includes Google\nCustomise\nContacts and contact info from your signed-in devices) and YouTube.\nNotebooks\nIf you connected Google Photos or Google Workspace before, they've been\ndisconnected. You can reconnect them here or in settings.\n+ New notebook\nYour data from Connected Apps and your Google Account is used to:\nAll\n• personalise your Gemini experience with insights about you, your\nA Friendly Greeting\nrelationships and people in your world\nAnalyzing Classic Novel Structure and T...\n• do things for you, like make recommendations based on your preferences or\ncreate a tailored itinerary\nBranch • A Friendly Greeting\n• Improve Google services, including training generative Al models, for\nemini Auto\neveryone\nThings to know\nData shared between Gemini and Connected Apps includes things like your\nsaved data from Search services and YouTube, emails, files, events, photos,\nvideos, info about your contacts (such as phone numbers, addresses and\nbirthdays) and location info (from your IP address, device, saved history and\ncontent), as well as insights drawn from them. Data shared may relate to topics\nthat you find sensitive.\nData from connected apps is used and human reviewed as per the Gemini Apps\nPrivacy.Notice. Data that Gemini shares with other Google services is used per\nthe Google Privacy Policy, including for product improvement.\nYour choices here don't change other settings, whether other services\nContinue\nSurendar",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "review",
+    "map",
+    "calendar",
+    "photo",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get app”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a sidebar, a search bar and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+        "Calls to action: “Continue”",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 21 of 130 in “Choose an account”",
+        "Reached from “Getapp dialog”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:23 in the recording",
+        "Frame 281 of 3659 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151413",
+      "role": "background",
+      "share": 0.771
+    },
+    {
+      "hex": "#393938",
+      "role": "surface",
+      "share": 0.188
+    },
+    {
+      "hex": "#4c330e",
+      "role": "accent",
+      "share": 0.023
+    },
+    {
+      "hex": "#5d513a",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#2a3d7c",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Google Gemini.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3659,
+    "frame": 281,
+    "atSeconds": 83.7,
+    "endSeconds": 84.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "New chat",
+      "Library",
+      "Images",
+      "Scheduled",
+      "Customise",
+      "Notebooks",
+      "New notebook",
+      "All",
+      "Friendly Greeting",
+      "Branch • A Friendly Greeting"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get app",
+    "headline": "Things to know"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Dismiss",
+        "name": "Getapp dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Tap “Things to know”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-09",
+  "capturedBy": "motvin-ios-crawler"
+}

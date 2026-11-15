@@ -1,0 +1,158 @@
+{
+  "screenId": "makemytrip-ios-versions-2026-10-25-logging-in-7",
+  "screen_id": "makemytrip-ios-versions-2026-10-25-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:16:14.027Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "travel",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 9,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Login Via Password”. Light theme, 30 text elements.",
+  "text": "9:41 C\n•ll S\nSKIP\nVerify Mobile Number\nOTP has been sent to MOBILE\n837000\n00:21\nResend OTP on\nLogin Via Password\nSMS & WhatsApp\nBy pressing this, l agree to receiving critical messages such as\nOTP, booking details on WhatsApp\nVERIFY\nFrom Messages\n837009\n2\n3\n1\nABC\nDEF\n4\n5\n6\nJKL\nMNO\nGHI\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "login",
+    "booking",
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Verify Mobile Number”",
+        "Keyboard is open, so the lower half is input",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Login Via Password”. Light theme, 30 text elements.",
+        "Calls to action: “Login Via Password”",
+        "30 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 15 in “Logging in”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 0:23 in the recording",
+        "Frame 91 of 3090 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafc",
+      "role": "background",
+      "share": 0.701
+    },
+    {
+      "hex": "#e3e3e7",
+      "role": "surface",
+      "share": 0.211
+    },
+    {
+      "hex": "#469bfc",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#c4c3c6",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#adcbf7",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "mvo4xt0x-b24jtk.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3090,
+    "frame": 91,
+    "atSeconds": 23.4,
+    "endSeconds": 27.6,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login Via Password"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Verify Mobile Number",
+    "headline": "VERIFY"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Tap “Verify Mobile Number”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Tap “Verify Mobile Number”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

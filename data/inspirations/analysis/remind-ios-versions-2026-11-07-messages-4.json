@@ -1,0 +1,160 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-messages-4",
+  "screen_id": "remind-ios-versions-2026-11-07-messages-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:11.034Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Messages",
+  "flow_position": 45,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Loading state. Light theme, 10 text elements.",
+  "text": "9:41(\nAll conversations\nCONVERSATIONS\nStart a conversation\nMessage one person or a group\nX\nNew message\nAnnouncement\nSends separately; members cannot see\nother replies\nConversation\nSends as one group; members can see\nall replies",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "all replies",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Message one person or a group”",
+        "Dialog over a dimmed background, covering 36% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Loading state. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 45 of 49 in “Reading messages”",
+        "Reached from “Dialog — loading”",
+        "Leads to “All conversations”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:43 in the recording",
+        "Frame 1346 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7d7b7d",
+      "role": "background",
+      "share": 0.611
+    },
+    {
+      "hex": "#fbfafc",
+      "role": "text",
+      "share": 0.32
+    },
+    {
+      "hex": "#dbdadc",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#626163",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#c1c2c6",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1346,
+    "atSeconds": 403.5,
+    "endSeconds": 404.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Message one person or a group",
+    "headline": "New message",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 161,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Wait 4.5s",
+        "name": "Dialog — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Dismiss",
+        "name": "All conversations"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

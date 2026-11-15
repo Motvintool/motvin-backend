@@ -1,0 +1,161 @@
+{
+  "screenId": "imprint-ios-versions-2026-11-06-setting-a-daily-goal-4",
+  "screen_id": "imprint-ios-versions-2026-11-06-setting-a-daily-goal-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T13:56:02.191Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Setting a daily goal",
+  "flow_position": 29,
+  "name": "Notifications permission",
+  "description": "Permission toast over a dimmed screen with a primary action labelled “Allow”. Light theme, 9 text elements.",
+  "text": "9:41€\nI'll remind you to\nreach your goal.\n\"Imprint\" Would Like to Send\nYou Notifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Reach your goal”",
+        "Toast over a dimmed background, covering 6% of the height from 58% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen with a primary action labelled “Allow”. Light theme, 9 text elements.",
+        "Calls to action: “Allow”",
+        "9 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 29 of 30 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:11 in the recording",
+        "Frame 240 of 1447 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#838183",
+      "role": "background",
+      "share": 0.717
+    },
+    {
+      "hex": "#424346",
+      "role": "surface",
+      "share": 0.137
+    },
+    {
+      "hex": "#5b5b5e",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#2d467a",
+      "role": "accent",
+      "share": 0.05
+    }
+  ],
+  "capture": {
+    "source": "Imprint.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1447,
+    "frame": 240,
+    "atSeconds": 71.4,
+    "endSeconds": 72.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.578125,
+        "w": 0.71875,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Reach your goal",
+    "headline": "Reach your goal",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Wait 1.2s",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Dismiss",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

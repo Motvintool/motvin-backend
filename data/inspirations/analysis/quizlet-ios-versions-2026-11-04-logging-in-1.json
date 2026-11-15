@@ -1,0 +1,152 @@
+{
+  "screenId": "quizlet-ios-versions-2026-11-04-logging-in-1",
+  "screen_id": "quizlet-ios-versions-2026-11-04-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:55:35.565Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Sign up for free.”. Dark theme, 8 text elements.",
+  "text": "9:41 €\nThe best way to study.\nSign up for free.\nBy signing up, you accept Quizlet's Terms of\nservice and Privacy policy\nG Continue with Google\nContinue with Apple\nSign up with WhatsApp\nSign up with email\nHave an account? Log in",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sign up for free”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Sign up for free.”. Dark theme, 8 text elements.",
+        "Calls to action: “Sign up for free.”, “Continue with Apple”, “Sign up with WhatsApp”, “Sign up with email”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 56 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Sign in with email”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 0:01 in the recording",
+        "Frame 20 of 2206 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b0b2f",
+      "role": "background",
+      "share": 0.604
+    },
+    {
+      "hex": "#2d3252",
+      "role": "surface",
+      "share": 0.129
+    },
+    {
+      "hex": "#475afe",
+      "role": "accent",
+      "share": 0.03
+    },
+    {
+      "hex": "#4f5068",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Quizlet.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2206,
+    "frame": 20,
+    "atSeconds": 1.8,
+    "endSeconds": 6.3,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign up for free.",
+      "Continue with Apple",
+      "Sign up with WhatsApp",
+      "Sign up with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sign up for free",
+    "headline": "Continue with Google"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Sign up for free",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,162 @@
+{
+  "screenId": "fable-ios-versions-2026-11-04-muting-a-user-1",
+  "screen_id": "fable-ios-versions-2026-11-04-muting-a-user-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:54:59.039Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "modal"
+  ],
+  "category": null,
+  "flow": "discovery",
+  "flow_name": "Muting a user",
+  "flow_position": 16,
+  "name": "Posts",
+  "description": "Detail dialog over a dimmed screen, on top of Detail with a paged carousel. Dark theme, 25 text elements.",
+  "text": "9:41 (\n•0l\nWant to Read\n••\nPosts\nAbout Reviews\nClubs Editions\nMost popular -\nKendra 1w\nPosted about a book\nWhen life hands you a misprint...\nSCION\nSTEPHANIE\nSIMMOT\nSIMMONS\nGARBER\nENDYMIOM\nJAMES ISLINGTON\nALCHEMY OF SECRETS\nMION\nWHEN THE NIGHT COMES KNOCKING\nKATHERINE\nDANIEL\nReport this post\nFlag spoiler\nO\nMute Kendra\nDon't show me posts about this book",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "detail",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Posts”",
+        "Paged carousel with a page indicator",
+        "Dialog over a dimmed background, covering 17% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail dialog over a dimmed screen, on top of Detail with a paged carousel. Dark theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 52 in “SaueurnIo vurnur detail”",
+        "Reached from “Detail”",
+        "Leads to “Want to Read”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 4:38 in the recording",
+        "Frame 932 of 2901 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b090c",
+      "role": "background",
+      "share": 0.434
+    },
+    {
+      "hex": "#201d20",
+      "role": "surface",
+      "share": 0.317
+    },
+    {
+      "hex": "#443f42",
+      "role": "surface",
+      "share": 0.122
+    },
+    {
+      "hex": "#716359",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#978978",
+      "role": "text",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "Fable.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2901,
+    "frame": 932,
+    "atSeconds": 278.4,
+    "endSeconds": 279.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.09375,
+        "w": 0.71875,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Posts",
+    "headline": "ALCHEMY OF SECRETS"
+  },
+  "crawler": {
+    "nodeId": "s111",
+    "depth": 110,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s110",
+        "via": "Back to Posts",
+        "name": "Detail"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s112",
+        "via": "Tap “Want to Read”",
+        "name": "Want to Read"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

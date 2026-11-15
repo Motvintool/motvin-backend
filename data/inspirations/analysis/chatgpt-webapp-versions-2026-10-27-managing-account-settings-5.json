@@ -1,0 +1,157 @@
+{
+  "screenId": "chatgpt-webapp-versions-2026-10-27-managing-account-settings-5",
+  "screen_id": "chatgpt-webapp-versions-2026-10-27-managing-account-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-27T12:50:50.975Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Managing account settings",
+  "flow_position": 26,
+  "name": "OTP verification",
+  "description": "Verification code screen with a sidebar and 1 input field. Light theme, 24 text elements.",
+  "text": "Security and login\n< Back to app\nSecurity recommendations\nQ Search\nAdd a passkey\nPersonal\nLog in faster and more securely.\nGeneral\nReview where you're logged in\n>\nLog out of any devices you don't recognize.\nO Appearance\n• Notifications\n@ Profile\nHow you log in\n& Security and login\nPasskeys and security keys\nAdd >\ng Account\nUse a phishing-resistant alternative to passwords\nE Archived chats\nPassword\nAdd >\nManage the password you use to log in\ng Parental controls\n& Trusted contact\nO Voice\nMulti-factor authentication (MFA)\n• Storage\nAuthenticator app\nC Personalization\nUse one-time codes from an authenticator app\n• Pets\nText message\nGet 6-digit verification codes by SMS or WhatsApp based on your country code\n• Keyboard\n(ơ) Usage\ne Billing\nSessions\n• Data controls\nActive sessions\nView all devices that have accessed your account. You can review active sessions, remove trusted devices, or use Log\nIntegrations\nout all to end all sessions.\n@ Plugins\nSecurity history",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "review",
+    "login",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Security and login”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a sidebar and 1 input field. Light theme, 24 text elements.",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 26 in “Reading messages”",
+        "Reached from “Notifications”",
+        "Leads to “Account”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 11:35 in the recording",
+        "Frame 2329 of 2736 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f9faf9",
+      "role": "background",
+      "share": 0.941
+    },
+    {
+      "hex": "#dbdbdb",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#c7c7c7",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvqo7vsb-p4olvq.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2736,
+    "frame": 2329,
+    "atSeconds": 695.7,
+    "endSeconds": 699,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [
+      "Search",
+      "Personal",
+      "General",
+      "Appearance",
+      "Notifications",
+      "Profile",
+      "Security and login",
+      "Account",
+      "Archived chats",
+      "Parental controls",
+      "Trusted contact",
+      "Voice",
+      "Storage",
+      "Personalization",
+      "Pets",
+      "Keyboard",
+      "Usage",
+      "Billing",
+      "Data controls"
+    ],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Security and login",
+    "headline": "Multi-factor authentication (MFA)"
+  },
+  "crawler": {
+    "nodeId": "s135",
+    "depth": 135,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s134",
+        "via": "Tap “& Security and login”",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s136",
+        "via": "Open Account",
+        "name": "Account"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-27",
+  "capturedBy": "motvin-ios-crawler"
+}

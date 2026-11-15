@@ -1,0 +1,158 @@
+{
+  "screenId": "udemy-ios-versions-2026-11-08-subscribing-to-a-plan-5",
+  "screen_id": "udemy-ios-versions-2026-11-08-subscribing-to-a-plan-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:55:08.639Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Subscribing to a plan",
+  "flow_position": 5,
+  "name": "Subscription plans",
+  "description": "Paywall toast over a dimmed screen, on top of Loading state. Dark theme, 12 text elements.",
+  "text": "Double-Click\nto Subscribe\nApp Store\nPersonal Plan - Yearly\nU\nUdemy Online Video Courses (9+)\nSubscription\nF 10,199 per year\nCancel at any time in Settings > Apple Account at least\none day before each renewal date. Plan automatically\nrenews until cancelled.\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "video",
+    "subscription",
+    "paywall",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 13% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall toast over a dimmed screen, on top of Loading state. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 153 in “Subscribing”",
+        "Reached from “Subscription plans — loading”",
+        "Leads to “Subscription plans”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:10 in the recording",
+        "Frame 240 of 1607 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100e11",
+      "role": "background",
+      "share": 0.727
+    },
+    {
+      "hex": "#343335",
+      "role": "surface",
+      "share": 0.213
+    },
+    {
+      "hex": "#535153",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#737274",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#bab8ba",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Udemy.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1607,
+    "frame": 240,
+    "atSeconds": 70.8,
+    "endSeconds": 72.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.125,
+        "w": 0.875,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "App Store"
+  },
+  "crawler": {
+    "nodeId": "s031",
+    "depth": 30,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s030",
+        "via": "Wait 0.6s",
+        "name": "Subscription plans — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s032",
+        "via": "Back to Subscription plans",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

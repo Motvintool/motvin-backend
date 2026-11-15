@@ -1,0 +1,174 @@
+{
+  "screenId": "capwords-ios-versions-2026-11-08-speak-1",
+  "screen_id": "capwords-ios-versions-2026-11-08-speak-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:29:45.632Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "education",
+  "flow": "onboarding",
+  "flow_name": "Speak",
+  "flow_position": 3,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Capture home with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 15 text elements.",
+  "text": "9:41\nCapWords\n•oll\nSpeak\nGood Morning\nLet's talk about\nyour day\n8\n\"CapWords\" would like to\naccess the Microphone.\nWe need access to your microphone\nso you can recognize and remember\nwords through voice.\nDon't Allow\nAllow\nStart a sample chat\nor\nSCENARIO PRACTICE\n•0f0\nProfile\nReview\nCapture\nSpeak",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "capture",
+    "speak",
+    "review",
+    "profile",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Capture, Speak, Review, Profile",
+        "Navigation title reads “\"CapWords\" would like to”",
+        "Dialog over a dimmed background, covering 31% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Capture home with a 4-item tab bar and a primary action labelled “Allow”. Dark theme, 15 text elements.",
+        "Calls to action: “Allow”",
+        "15 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 35 in “Capture”",
+        "Reached from “Capture home”",
+        "Leads to “Capture home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 4:10 in the recording",
+        "Frame 846 of 1802 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141214",
+      "role": "background",
+      "share": 0.797
+    },
+    {
+      "hex": "#373231",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#7f7c7e",
+      "role": "text",
+      "share": 0.035
+    },
+    {
+      "hex": "#5d5656",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#6f4e1c",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "CapWords.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1802,
+    "frame": 846,
+    "atSeconds": 250.5,
+    "endSeconds": 254.1,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.21875,
+        "y": 0.34375,
+        "w": 0.53125,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Capture",
+      "Speak",
+      "Review",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"CapWords\" would like to",
+    "headline": "Your day"
+  },
+  "crawler": {
+    "nodeId": "s115",
+    "depth": 116,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s114",
+        "via": "Tap “your day”",
+        "name": "Capture home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s116",
+        "via": "Dismiss",
+        "name": "Capture home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

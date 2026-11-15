@@ -1,0 +1,171 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-logging-out-1",
+  "screen_id": "asana-ios-versions-2026-11-04-logging-out-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:13.690Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Logging out",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings bottom sheet with a 5-item tab bar. Dark theme, 20 text elements.",
+  "text": "9:41(\nMy profile\n+\nAdd accol\nInvite to Asana\nrr+\nShare profile\nSettings\nLog out\nPush notificauuro\nXA\nLanguage\nSupport\nHelp center\n• Contact support\nMore\nRate the app\nTerms of service\nPrivacy policy\nApp version\n26.42.0\nSearch\nMy tasks\nInbox\nAccount\nHome",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "home",
+    "my tasks",
+    "inbox",
+    "search",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "legal-text",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, My tasks, Inbox, Search, Account",
+        "Navigation title reads “Privacy policy”",
+        "Bottom sheet, covering 22% of the height from 70% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings bottom sheet with a 5-item tab bar. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Track progress to keep work”",
+        "Reached from “Account”",
+        "Leads to “Track progress to keep work”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:45 in the recording",
+        "Frame 2157 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f2023",
+      "role": "background",
+      "share": 0.907
+    },
+    {
+      "hex": "#414246",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#636367",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#acacaf",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#838288",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 2157,
+    "atSeconds": 645.9,
+    "endSeconds": 647.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.34375,
+        "y": 0.703125,
+        "w": 0.375,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "Home",
+      "My tasks",
+      "Inbox",
+      "Search",
+      "Account"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Privacy policy",
+    "headline": "Rate the app"
+  },
+  "crawler": {
+    "nodeId": "s262",
+    "depth": 263,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s261",
+        "via": "Wait 1.8s",
+        "name": "Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s263",
+        "via": "Back to Track progress to keep work",
+        "name": "Track progress to keep work"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,152 @@
+{
+  "screenId": "perplexity-ios-versions-2026-10-26-logging-in-with-email-6",
+  "screen_id": "perplexity-ios-versions-2026-10-26-logging-in-with-email-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:31:23.425Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "scrolled",
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 14,
+  "name": "Loading state — scrolled",
+  "description": "Verification code screen, scrolled further down from Loading state with the keyboard open and a primary action labelled “Continue”. Dark theme, 25 text elements.",
+  "text": "9:41C\n<\nCheck your email\nEnter the verification code or click the link we\nsent to motvintool@gmail.com\n86'\nContinue\nFrom Gmail\n864335\n2\n3\n1\nABC\nDEF\n5\n6\n4\nGHI\nJKL\nMNO\n7\n8\n9\nTUV\nWXYZ\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "scrolled",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your email”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen, scrolled further down from Loading state with the keyboard open and a primary action labelled “Continue”. Dark theme, 25 text elements.",
+        "Calls to action: “Continue”",
+        "25 text elements recognised",
+        "State: scrolled, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 99 in “Onboarding”",
+        "Reached from “Loading state — scrolled — loading”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 12s at 0:42 in the recording",
+        "Frame 179 of 1873 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a191a",
+      "role": "background",
+      "share": 0.792
+    },
+    {
+      "hex": "#3d3b3d",
+      "role": "surface",
+      "share": 0.188
+    },
+    {
+      "hex": "#5c5b5c",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#a8a7a8",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "mvo4xudd-dcft1b.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1873,
+    "frame": 179,
+    "atSeconds": 42,
+    "endSeconds": 54,
+    "holdSeconds": 12,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your email",
+    "headline": "Check your email"
+  },
+  "crawler": {
+    "nodeId": "s016",
+    "depth": 15,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s015",
+        "via": "Scroll",
+        "name": "Loading state — scrolled — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s017",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

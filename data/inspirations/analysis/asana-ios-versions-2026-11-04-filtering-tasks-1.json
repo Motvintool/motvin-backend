@@ -1,0 +1,146 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-filtering-tasks-1",
+  "screen_id": "asana-ios-versions-2026-11-04-filtering-tasks-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:58:59.208Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "saas",
+  "flow": "search",
+  "flow_name": "Filtering tasks",
+  "flow_position": 2,
+  "name": "Search results",
+  "description": "Search results screen. Dark theme, 24 text elements.",
+  "text": "9:41(\n•ll\nMy tasks\n• .•\n• Recently assigned\n...\n• Do today\n• Do next week\n•.•\nDo later\n...\nWork\n1\n. • °\nManage view\nReset\nList\nChange view\nCompact mode\nSettings\nFilters\n=\nCustom sections\nGroup\nSort\nFields",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "filter",
+    "settings",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My tasks”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen. Dark theme, 24 text elements.",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Searching Home”",
+        "Reached from “Home home”",
+        "Leads to “Search results”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 3:11 in the recording",
+        "Frame 647 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#17181b",
+      "role": "background",
+      "share": 0.893
+    },
+    {
+      "hex": "#33353a",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#505256",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#b7b6b9",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#3b5890",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 647,
+    "atSeconds": 191.7,
+    "endSeconds": 194.4,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My tasks",
+    "headline": "Do today"
+  },
+  "crawler": {
+    "nodeId": "s077",
+    "depth": 76,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Tap “My tasks”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s078",
+        "via": "Wait 2.7s",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

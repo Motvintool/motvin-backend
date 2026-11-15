@@ -1,0 +1,148 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-entering-guest-details-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-entering-guest-details-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:18.275Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [],
+  "category": "travel",
+  "flow": "checkout",
+  "flow_name": "Entering guest details",
+  "flow_position": 99,
+  "name": "Checkout",
+  "description": "Checkout screen with 1 input field and prices. Light theme, 30 text elements.",
+  "text": "9:41(\n•ll\nBack to bus\nGuest information\nEssotto Business Hotel -\nWhitefield, Bengaluru\nBangalore\n1 Room • 1 Adult\nCheck-in\nCheck-out\nFri, 09 Oct\nThu, 08 Oct\n1 night\n1:30 PM\n11:00 AM\n1 x Executive Pod - Male\nRoom Only\nX Non refundable\nView details\nNo hidden\nSuperfast\n24x7\nRefunds\nsupport\ncharges\nBooking for\nTitle\nFirst name\nMrV\nCongratulations! You are saving 71,959\nTotal for 1 night\n$2,559 7600\nIncl. taxes & fees\nPay now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "booking",
+    "pay now",
+    "checkout",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "price",
+    "list"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Back to bus”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout screen with 1 input field and prices. Light theme, 30 text elements.",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 99 of 103 in “Chennai → Bengaluru”",
+        "Reached from “Booking confirmed”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 4:06 in the recording",
+        "Frame 834 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafc",
+      "role": "background",
+      "share": 0.745
+    },
+    {
+      "hex": "#dfdddd",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#bdd1bd",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#d63742",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#f0b0b6",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 834,
+    "atSeconds": 246.9,
+    "endSeconds": 250.5,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Back to bus",
+    "headline": "Booking for",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s207",
+    "depth": 206,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s206",
+        "via": "Tap “Back to bus”",
+        "name": "Booking confirmed"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s208",
+        "via": "Tap “Back to bus”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

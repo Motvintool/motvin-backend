@@ -1,0 +1,157 @@
+{
+  "screenId": "nibble-ios-versions-2026-11-07-reading-a-lesson-14",
+  "screen_id": "nibble-ios-versions-2026-11-07-reading-a-lesson-14",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:54:58.820Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Reading a lesson",
+  "flow_position": 16,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Other. Light theme, 10 text elements.",
+  "text": "9:41 C\nWhat bonding actually looks like\nThe signals that look like bonding - an excited\ngreeting at the door, a cat sleeping on your\nchest — are real. But they're not always what\nthey seem.\nWait! You're close to\na new insight. Finish the\nlesson to unlock it.\nKeep learning\nQuit anyway",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “A new insight. Finish the”",
+        "Dialog over a dimmed background, covering 64% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Other. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 17 in “How to read the bond”",
+        "Reached from “What bonding actually looks like”",
+        "Leads to “What bonding actually looks like”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:27 in the recording",
+        "Frame 1095 of 2220 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfbfd",
+      "role": "background",
+      "share": 0.458
+    },
+    {
+      "hex": "#c3c2c4",
+      "role": "surface",
+      "share": 0.313
+    },
+    {
+      "hex": "#a4a4a5",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#7802da",
+      "role": "accent",
+      "share": 0.037
+    },
+    {
+      "hex": "#a350e3",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Nibble.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2220,
+    "frame": 1095,
+    "atSeconds": 327.3,
+    "endSeconds": 328.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.640625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "A new insight. Finish the",
+    "headline": "A new insight. Finish the"
+  },
+  "crawler": {
+    "nodeId": "s163",
+    "depth": 164,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s162",
+        "via": "Open A new insight. Finish the",
+        "name": "What bonding actually looks like"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s164",
+        "via": "Dismiss",
+        "name": "What bonding actually looks like"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

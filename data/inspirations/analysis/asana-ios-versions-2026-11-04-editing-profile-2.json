@@ -1,0 +1,158 @@
+{
+  "screenId": "asana-ios-versions-2026-11-04-editing-profile-2",
+  "screen_id": "asana-ios-versions-2026-11-04-editing-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:59:10.866Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "saas",
+  "flow": "settings",
+  "flow_name": "Editing profile",
+  "flow_position": 2,
+  "name": "Profile",
+  "description": "Profile bottom sheet over a dimmed screen, on top of Edit profile. Dark theme, 10 text elements.",
+  "text": "9:41 €\nX\nEdit profile\nTake a Photo\nChoose from Library\nMotvin\nRole\nDepartment\nPronouns\nThird-person pronouns (e.g. she/her/hers)\nAbout Me",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose from Library”",
+        "Bottom sheet over a dimmed background, covering 69% of the height from 28% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile bottom sheet over a dimmed screen, on top of Edit profile. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Profile”",
+        "Reached from “Edit profile”",
+        "Leads to “Edit profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 9:12 in the recording",
+        "Frame 1850 of 2183 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1e20",
+      "role": "background",
+      "share": 0.9
+    },
+    {
+      "hex": "#314043",
+      "role": "surface",
+      "share": 0.049
+    },
+    {
+      "hex": "#6ac0d3",
+      "role": "accent",
+      "share": 0.019
+    },
+    {
+      "hex": "#405a60",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#617175",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Asana.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2183,
+    "frame": 1850,
+    "atSeconds": 552.6,
+    "endSeconds": 555.3,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.28125,
+        "w": 0.90625,
+        "h": 0.6875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose from Library",
+    "headline": "Choose from Library"
+  },
+  "crawler": {
+    "nodeId": "s227",
+    "depth": 227,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s226",
+        "via": "Open Choose from Library",
+        "name": "Edit profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s228",
+        "via": "Dismiss",
+        "name": "Edit profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,151 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-8",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-logging-in-with-email-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:54.137Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Logging in with email",
+  "flow_position": 16,
+  "name": "OTP verification",
+  "description": "Verification code screen with a search bar and a primary action labelled “Sign in”. Light theme, 24 text elements.",
+  "text": "SOUNDCLOUD\nSearch for artists, bands, tracks, podcasts\nCreate account\nSign in\nHome\nFeed\nLibrary\nUpload\nCheck your email\n*\n*\n*\n*\nEnter the 6-digit code we sent to\nmotvintool@gmail.com\n8\n3\n1\n3\n9\nOpen Gmail\nSign in\nNo email in your inbox or spam folder? Send again\nNeed help? Contact support",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Check your email”",
+        "Search bar present",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a search bar and a primary action labelled “Sign in”. Light theme, 24 text elements.",
+        "Calls to action: “Sign in”",
+        "24 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 16 of 23 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 12.9s at 12:39 in the recording",
+        "Frame 2573 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7c7d7c",
+      "role": "background",
+      "share": 0.614
+    },
+    {
+      "hex": "#0f0f0f",
+      "role": "text",
+      "share": 0.124
+    },
+    {
+      "hex": "#292829",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#a59492",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#c0bbba",
+      "role": "surface",
+      "share": 0.045
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 2573,
+    "atSeconds": 759.3,
+    "endSeconds": 772.2,
+    "holdSeconds": 12.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Check your email",
+    "headline": "Open Gmail"
+  },
+  "crawler": {
+    "nodeId": "s277",
+    "depth": 279,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s276",
+        "via": "Back to OTP verification",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s278",
+        "via": "Tap “Check your email”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

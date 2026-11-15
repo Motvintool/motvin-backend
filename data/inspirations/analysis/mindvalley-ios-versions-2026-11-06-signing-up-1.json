@@ -1,0 +1,153 @@
+{
+  "screenId": "mindvalley-ios-versions-2026-11-06-signing-up-1",
+  "screen_id": "mindvalley-ios-versions-2026-11-06-signing-up-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:24:30.026Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Signing up",
+  "flow_position": 1,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Continue with Apple”. Dark theme, 7 text elements.",
+  "text": "9:41C\nLet's get you started\nCreate your account to build a\npersonalized journey towards your goals.\nContinue with Apple\nG Continue with Google\nContinue with email\nAlready have an account? Log in\nBy signing up, you agree to our Privacy Policy and Terms\nof Use.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Let's get you started”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Continue with Apple”. Dark theme, 7 text elements.",
+        "Calls to action: “Continue with Apple”, “Continue with email”",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 14 in “Logging in”",
+        "Reached from “Search results”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 0:12 in the recording",
+        "Frame 51 of 2332 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f131d",
+      "role": "background",
+      "share": 0.921
+    },
+    {
+      "hex": "#2c303b",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#4d5058",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#86888d",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#686a70",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Mindvalley.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2332,
+    "frame": 51,
+    "atSeconds": 12.9,
+    "endSeconds": 15.6,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Apple",
+      "Continue with email"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Let's get you started",
+    "headline": "Let's get you started"
+  },
+  "crawler": {
+    "nodeId": "s008",
+    "depth": 7,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s007",
+        "via": "Open Let's get you started",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s009",
+        "via": "Wait 2.7s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

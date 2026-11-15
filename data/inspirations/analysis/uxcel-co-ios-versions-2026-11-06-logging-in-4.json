@@ -1,0 +1,157 @@
+{
+  "screenId": "uxcel-co-ios-versions-2026-11-06-logging-in-4",
+  "screen_id": "uxcel-co-ios-versions-2026-11-06-logging-in-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-06T14:49:42.700Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 8,
+  "name": "Sign in with email",
+  "description": "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+  "text": "9:41 C\n•ll\nLog in\nEmail address\nmotvintool@gmail.com\nPassword\nForgot my_password\nContinue\nor\nContinue with Google\nQ Passwords\ni\nW\nt\ne\ny\nO\nk\nf\nh\nd\nà\nS\nJ\nb\nZ\nm\nC\nV\nn\n123\n@",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email address”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 30 text elements.",
+        "Calls to action: “Continue”, “Continue with Google”",
+        "30 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 19 in “Logging in”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:33 in the recording",
+        "Frame 1712 of 1917 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242329",
+      "role": "background",
+      "share": 0.668
+    },
+    {
+      "hex": "#45444a",
+      "role": "surface",
+      "share": 0.22
+    },
+    {
+      "hex": "#636266",
+      "role": "surface",
+      "share": 0.037
+    },
+    {
+      "hex": "#4133a5",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#5841f4",
+      "role": "accent",
+      "share": 0.025
+    }
+  ],
+  "capture": {
+    "source": "Uxcel Co.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1917,
+    "frame": 1712,
+    "atSeconds": 513,
+    "endSeconds": 513.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue",
+      "Continue with Google"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email address",
+    "headline": "Passwords"
+  },
+  "crawler": {
+    "nodeId": "s232",
+    "depth": 231,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s231",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s233",
+        "via": "Tap “Email address”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-06",
+  "capturedBy": "motvin-ios-crawler"
+}

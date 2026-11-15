@@ -1,0 +1,150 @@
+{
+  "screenId": "dribbble-webapp-versions-2026-10-28-creating-a-shot-1",
+  "screen_id": "dribbble-webapp-versions-2026-10-28-creating-a-shot-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:22:36.240Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": null,
+  "flow": "authentication",
+  "flow_name": "Creating a shot",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with Google”. Light theme, 10 text elements.",
+  "text": "Dribbble\nWelcome back\nG\nContinue with Google\nor\nEnter email or username\nContinue\nBy continuing, you agree to our Terms and Privacy Policy.\nDon't have an account? Sign up\nebich",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome back”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with Google”. Light theme, 10 text elements.",
+        "Calls to action: “Continue with Google”, “Continue”",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 28 in “Logging in”",
+        "Reached from “Sign in”",
+        "Leads to “Sign-in options”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 0:04 in the recording",
+        "Frame 27 of 2302 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefdfe",
+      "role": "background",
+      "share": 0.667
+    },
+    {
+      "hex": "#060a38",
+      "role": "accent",
+      "share": 0.095
+    },
+    {
+      "hex": "#11137e",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#d9dbe5",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#2922b4",
+      "role": "surface",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "mvrjdbna-gkxlnf.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2302,
+    "frame": 27,
+    "atSeconds": 4.2,
+    "endSeconds": 8.4,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google",
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome back",
+    "headline": "Welcome back"
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Open Welcome back",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Tap “Welcome back”",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

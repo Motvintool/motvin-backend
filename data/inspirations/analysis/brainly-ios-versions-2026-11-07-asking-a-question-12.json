@@ -1,0 +1,159 @@
+{
+  "screenId": "brainly-ios-versions-2026-11-07-asking-a-question-12",
+  "screen_id": "brainly-ios-versions-2026-11-07-asking-a-question-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:53:28.264Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Asking a question",
+  "flow_position": 46,
+  "name": "You asked this question toast",
+  "description": "Toast over a dimmed screen, on top of Loading state. Dark theme, 6 text elements.",
+  "text": "9:41 C\nAnswer\nQuestion: Hey need UX design for learning\nAsked by motvintool\n• • •\nYou asked this question\nOk\nANSWER",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "answer",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You asked this question”",
+        "Toast over a dimmed background, covering 11% of the height from 44% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 46 of 48 in “Filling in a form”",
+        "Reached from “You asked this question toast — loading”",
+        "Leads to “Asked by motvintool”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:37 in the recording",
+        "Frame 729 of 1782 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#17191e",
+      "role": "background",
+      "share": 0.874
+    },
+    {
+      "hex": "#323438",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#6d6c6f",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#898789",
+      "role": "text",
+      "share": 0.021
+    },
+    {
+      "hex": "#4c4e51",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Brainly.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1782,
+    "frame": 729,
+    "atSeconds": 217.5,
+    "endSeconds": 219,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.125,
+        "y": 0.4375,
+        "w": 0.71875,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You asked this question",
+    "headline": "You asked this question",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s102",
+    "depth": 103,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s101",
+        "via": "Wait 2.7s",
+        "name": "You asked this question toast — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s103",
+        "via": "Dismiss",
+        "name": "Asked by motvintool"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

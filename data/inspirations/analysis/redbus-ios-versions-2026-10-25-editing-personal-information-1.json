@@ -1,0 +1,147 @@
+{
+  "screenId": "redbus-ios-versions-2026-10-25-editing-personal-information-1",
+  "screen_id": "redbus-ios-versions-2026-10-25-editing-personal-information-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T04:32:48.511Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "travel",
+  "flow": "discovery",
+  "flow_name": "Editing personal information",
+  "flow_position": null,
+  "name": "Phone number entry — loading",
+  "description": "Loading state of Phone number entry. Light theme, 1 text element.",
+  "text": "9:41 C\n•ll F\nPersonal information",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Personal information”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Phone number entry. Light theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Payment method”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 10:29 in the recording",
+        "Frame 2099 of 2523 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#faf9fc",
+      "role": "background",
+      "share": 0.963
+    },
+    {
+      "hex": "#dddcde",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#c7c5c8",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#827f8e",
+      "role": "text",
+      "share": 0.005
+    },
+    {
+      "hex": "#a4a2a5",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "redBus.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2523,
+    "frame": 2099,
+    "atSeconds": 629.7,
+    "endSeconds": 630.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Personal information",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s520",
+    "depth": 521,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s518",
+        "via": "Tap “Personal information”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s521",
+        "via": "Wait 0.6s",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-25",
+  "capturedBy": "motvin-ios-crawler"
+}

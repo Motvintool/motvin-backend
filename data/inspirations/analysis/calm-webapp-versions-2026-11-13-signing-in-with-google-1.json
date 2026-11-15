@@ -1,0 +1,148 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-signing-in-with-google-1",
+  "screen_id": "calm-webapp-versions-2026-11-13-signing-in-with-google-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:19.982Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "healthcare",
+  "flow": "authentication",
+  "flow_name": "Signing in with Google",
+  "flow_position": 1,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+  "text": "Calm\nVerify your identity. Enter the code sent to:\nmotvintool@gmail.com\n6-digit Access Code (Required)\nTip: If you do not see the email, check your spam folder.\nContinue\nResend Code\nContact support@calm.com to update your email address.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "otp",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 15 in “Verifying OTP”",
+        "Reached from “Splash”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 5:19 in the recording",
+        "Frame 1077 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2e5090",
+      "role": "background",
+      "share": 0.819
+    },
+    {
+      "hex": "#296c9d",
+      "role": "accent",
+      "share": 0.148
+    },
+    {
+      "hex": "#5580ac",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.008
+    },
+    {
+      "hex": "#8ba2c3",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 1077,
+    "atSeconds": 319.2,
+    "endSeconds": 323.4,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "6-digit Access Code (Required)"
+  },
+  "crawler": {
+    "nodeId": "s105",
+    "depth": 104,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s104",
+        "via": "Open OTP verification",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s106",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

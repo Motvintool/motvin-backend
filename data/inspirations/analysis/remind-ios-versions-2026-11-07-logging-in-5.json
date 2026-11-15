@@ -1,0 +1,146 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-logging-in-5",
+  "screen_id": "remind-ios-versions-2026-11-07-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:13.914Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 7,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field. Dark theme, 6 text elements.",
+  "text": "9:41 C\n• | 9\nEmail or phone number\nmotvintool@gmail.com\nPassword\nSorry!\nInvalid email address or password\nOK\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "continue",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email or phone number”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 21 in “Creating an account”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 8:16 in the recording",
+        "Frame 1658 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171818",
+      "role": "background",
+      "share": 0.74
+    },
+    {
+      "hex": "#fdfefe",
+      "role": "text",
+      "share": 0.152
+    },
+    {
+      "hex": "#b6b5b5",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#036fdb",
+      "role": "accent",
+      "share": 0.021
+    },
+    {
+      "hex": "#5ca5e8",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 1658,
+    "atSeconds": 496.8,
+    "endSeconds": 498,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email or phone number",
+    "headline": "Sorry!",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s194",
+    "depth": 196,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s193",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s195",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

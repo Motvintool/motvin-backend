@@ -1,0 +1,151 @@
+{
+  "screenId": "grok-ai-webapp-versions-2026-10-28-onboarding-2",
+  "screen_id": "grok-ai-webapp-versions-2026-10-28-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-28T03:31:03.630Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "ai",
+  "flow": "authentication",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Login with GitHub”. Light theme, 18 text elements.",
+  "text": "Grok v\nYou are signing into\nLog into your account\nBy continuing, you agree to the SpaceXSI\nTerms of Service, Privacy Policy, and\nCookie Policy. Your privacy_choices\nC Login with Google\nX Login with X\né Login with Apple\nLogin with GitHub\nLogin with email\nDon't have an account? Sign up\nEssential cookies keep the site working and stay on. Optional cookies help\nwith performance and advertising - accept, reject, or manage them. Learn\nmore in our Cookie Policy, Privacy Policy, and Terms of Service.\nReject All\nCookie Settings\nAccept All Cookies",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You are signing into”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Login with GitHub”. Light theme, 18 text elements.",
+        "Calls to action: “Login with GitHub”, “Login with email”",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Creating an account”",
+        "Reached from “Create account”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:04 in the recording",
+        "Frame 22 of 3314 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.968
+    },
+    {
+      "hex": "#dcdcdc",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#b6b6b6",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#9a9a9a",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#797979",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "mvrjdckm-p4nmzo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 3314,
+    "frame": 22,
+    "atSeconds": 4.5,
+    "endSeconds": 6.9,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login with GitHub",
+      "Login with email"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You are signing into",
+    "headline": "Log into your account"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open You are signing into",
+        "name": "Create account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Tap “X Login with X”",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-28",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,146 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-onboarding-8",
+  "screen_id": "calm-webapp-versions-2026-11-13-onboarding-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:01.374Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "healthcare",
+  "flow": "discovery",
+  "flow_name": "Onboarding",
+  "flow_position": 6,
+  "name": "I rely on sleeping aids sheet",
+  "description": "Bottom sheet, on top of Skip for now sheet. Light theme, 9 text elements.",
+  "text": "Calm\nQuestion 2 of 3\nHave you tried to improve your sleep?\nYou've come to the right place for help!\nI don't know how to\nI try different mindfulness techniques\nI rely on sleeping aids\nNone of the above\nSkip for now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “I rely on sleeping aids”",
+        "Bottom sheet, covering 52% of the height from 38% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Skip for now sheet. Light theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 9 in “Onboarding”",
+        "Reached from “Skip for now sheet”",
+        "Leads to “Energized and alert”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:18 in the recording",
+        "Frame 69 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f8f8f8",
+      "role": "background",
+      "share": 0.947
+    },
+    {
+      "hex": "#cbced3",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#d9dcf4",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 69,
+    "atSeconds": 18.6,
+    "endSeconds": 21,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.25,
+        "y": 0.375,
+        "w": 0.40625,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "I rely on sleeping aids",
+    "headline": "Have you tried to improve your sleep?"
+  },
+  "crawler": {
+    "nodeId": "s006",
+    "depth": 5,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s005",
+        "via": "Dismiss",
+        "name": "Skip for now sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s007",
+        "via": "Tap “None of the above”",
+        "name": "Energized and alert"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

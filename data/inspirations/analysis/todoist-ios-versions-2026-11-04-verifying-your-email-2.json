@@ -1,0 +1,164 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-verifying-your-email-2",
+  "screen_id": "todoist-ios-versions-2026-11-04-verifying-your-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:00.899Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Verifying your email",
+  "flow_position": 10,
+  "name": "Save Password? dialog",
+  "description": "Dialog over a dimmed screen, on top of Check your email with a primary action labelled “Save Password?”. Dark theme, 13 text elements.",
+  "text": "9:41\nCheck your email\nClick the link we sent to your email\nmotvintool@gmail.com to verify your account and\nstart using Todoist.\nCheck your spam folder if it doesn't show up!\nSave Password?\nSecurely store your password so it's\nfilled automatically the next time you\nneed it.\nNot Now\nSave\nAlreday venneabakerresn\nChange Account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Save Password?”",
+        "Dialog over a dimmed background, covering 14% of the height from 36% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Check your email with a primary action labelled “Save Password?”. Dark theme, 13 text elements.",
+        "Calls to action: “Save Password?”, “Save”",
+        "13 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 41 in “Logging in with email”",
+        "Reached from “Check your email”",
+        "Leads to “Check your email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:39 in the recording",
+        "Frame 137 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b181a",
+      "role": "background",
+      "share": 0.896
+    },
+    {
+      "hex": "#3e3635",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#565352",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#716465",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#652125",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 137,
+    "atSeconds": 39.6,
+    "endSeconds": 41.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.359375,
+        "w": 0.6875,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save Password?",
+      "Save"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Save Password?",
+    "headline": "Securely store your password so it's"
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Open Save Password?",
+        "name": "Check your email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Dismiss",
+        "name": "Check your email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

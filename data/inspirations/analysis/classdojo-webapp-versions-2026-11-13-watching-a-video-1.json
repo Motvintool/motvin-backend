@@ -1,0 +1,144 @@
+{
+  "screenId": "classdojo-webapp-versions-2026-11-13-watching-a-video-1",
+  "screen_id": "classdojo-webapp-versions-2026-11-13-watching-a-video-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-14T01:57:50.114Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "education",
+  "flow": "discovery",
+  "flow_name": "Watching a video",
+  "flow_position": null,
+  "name": "Player — loading",
+  "description": "Loading state of Player. Light theme, 1 text element.",
+  "text": "How do Portfolios work?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "webapp"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Player. Light theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Ms. Tool's class”",
+        "Leads to “Player”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:01 in the recording",
+        "Frame 1806 of 6187 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7a7a7a",
+      "role": "background",
+      "share": 0.698
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.201
+    },
+    {
+      "hex": "#dbdadb",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#4b357e",
+      "role": "accent",
+      "share": 0.036
+    },
+    {
+      "hex": "#635f5c",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "ClassDojo.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 6187,
+    "frame": 1806,
+    "atSeconds": 541.2,
+    "endSeconds": 542.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "How do Portfolios work?"
+  },
+  "crawler": {
+    "nodeId": "s104",
+    "depth": 103,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s103",
+        "via": "Open Player — loading",
+        "name": "Ms. Tool's class"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s105",
+        "via": "Wait 0.9s",
+        "name": "Player"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

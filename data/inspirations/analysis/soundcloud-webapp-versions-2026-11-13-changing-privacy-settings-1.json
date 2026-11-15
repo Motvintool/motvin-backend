@@ -1,0 +1,163 @@
+{
+  "screenId": "soundcloud-webapp-versions-2026-11-13-changing-privacy-settings-1",
+  "screen_id": "soundcloud-webapp-versions-2026-11-13-changing-privacy-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T19:14:49.751Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "entertainment",
+  "flow": "authentication",
+  "flow_name": "Changing privacy settings",
+  "flow_position": 221,
+  "name": "Sign in with email",
+  "description": "Login screen with a row of 5 category chips, a search bar and a primary action labelled “Send password-reset link”. Dark theme, 31 text elements.",
+  "text": "Q\nTry Artist Pro\nArtist Studio\nHome\nMlliL\nFeed\nLibrary\nSearch\nUpload\nSettings\nAccount\nPrivacy\nNotifications\nContent\nAdvertising\nSecurity\nChange theme\n• Light\n• Dark\n• Automatic\nEmail addresses\nmotvintool@gmail.com (Primary)\nAdd an email address\nSign in with other social networks •\nYou have not linked social accounts to your SoundCloud account.\nAdd Apple account\nAdd Facebook account\nAdd Google account\nPassword\nSend password-reset link\nK\nx\nElectric Universe\n•\n0:00\n8:34\nMama India - Outside ....",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "notification",
+    "address",
+    "login",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Privacy”",
+        "Category strip: Account, Privacy, Content, Advertising, Security",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a row of 5 category chips, a search bar and a primary action labelled “Send password-reset link”. Dark theme, 31 text elements.",
+        "Calls to action: “Send password-reset link”",
+        "31 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 221 of 226 in “Reading messages”",
+        "Reached from “Settings”",
+        "Leads to “Sign in with email — scrolled”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 11:22 in the recording",
+        "Frame 2283 of 2647 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0f0f",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#343434",
+      "role": "surface",
+      "share": 0.106
+    },
+    {
+      "hex": "#585756",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#6e6e6e",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#cccdcc",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "SoundCloud.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 2647,
+    "frame": 2283,
+    "atSeconds": 682.5,
+    "endSeconds": 685.2,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [
+      "Account",
+      "Privacy",
+      "Content",
+      "Advertising",
+      "Security"
+    ],
+    "ctas": [
+      "Send password-reset link"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": "Account",
+    "listedInSidebar": false,
+    "title": "Privacy",
+    "headline": "Light",
+    "walkTab": "Account"
+  },
+  "crawler": {
+    "nodeId": "s246",
+    "depth": 248,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s245",
+        "via": "Open Privacy",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s247",
+        "via": "Scroll",
+        "name": "Sign in with email — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-14",
+  "capturedBy": "motvin-ios-crawler"
+}

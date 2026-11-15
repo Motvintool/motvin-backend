@@ -1,0 +1,168 @@
+{
+  "screenId": "remind-ios-versions-2026-11-07-adding-people-to-a-class-2",
+  "screen_id": "remind-ios-versions-2026-11-07-adding-people-to-a-class-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-07T15:52:03.330Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "modal"
+  ],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Adding people to a class",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login dialog over a dimmed screen, on top of Settings with a row of 4 category chips. Light theme, 18 text elements.",
+  "text": "9:41(\nMath\nFiles\nPeople\nSettings\nMessages\nWAYS TO ADD PEOPLE\nO+\nAdd people\nShare a link\nShow people how to join\n9 1\nFIRST, LAST V\nMotvin\nM\nYou\nAdd people\nMath\nEnter phone numbers or emails\nPick from contacts",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "login",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add people”",
+        "Category strip: Files, People, Settings, Messages",
+        "Dialog over a dimmed background, covering 31% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login dialog over a dimmed screen, on top of Settings with a row of 4 category chips. Light theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 9 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Phone number entry”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 3:16 in the recording",
+        "Frame 664 of 1865 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#7e7c7e",
+      "role": "background",
+      "share": 0.652
+    },
+    {
+      "hex": "#fdfbfd",
+      "role": "text",
+      "share": 0.264
+    },
+    {
+      "hex": "#e0dfe1",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#626165",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#c4c3c6",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Remind.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1865,
+    "frame": 664,
+    "atSeconds": 196.5,
+    "endSeconds": 199.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [
+      "Files",
+      "People",
+      "Settings",
+      "Messages"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add people",
+    "headline": "Add people"
+  },
+  "crawler": {
+    "nodeId": "s072",
+    "depth": 72,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s071",
+        "via": "Tap “Add people”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s073",
+        "via": "Tap “Add people”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-07",
+  "capturedBy": "motvin-ios-crawler"
+}

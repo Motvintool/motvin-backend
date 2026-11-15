@@ -1,0 +1,162 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-upgrading-to-premium-3",
+  "screen_id": "calm-webapp-versions-2026-11-13-upgrading-to-premium-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:07.037Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [
+    "toast"
+  ],
+  "category": "healthcare",
+  "flow": "checkout",
+  "flow_name": "Upgrading to Premium",
+  "flow_position": 25,
+  "name": "Payment method",
+  "description": "Payment toast, on top of Subscription plans with 1 input field. Light theme, 31 text elements.",
+  "text": "Calm\nHere's Your Plan.\nDon't worry, you can cancel at any time.\nPLAYLIST\nAmbient with Brown\nYearly Plan\n72,399.00/yr.\nNoise (8D)\n40% Discount\n-·959.60\nTotal due today*\nR1,439.40\nChill Palm\nThis yearly membership gives you unlimited access to Calm's entire library of content. You\nwill be charged 71,439.40 for a 1 year subscription that will renew at 72,399.00, billed\nannually.\nGet 40% off - Today Only!\nAvoid the overwhelm\nQuiet your mind, reduce stress, and experience instant relief\nwith easy-to-follow meditations.\n2. Choose your payment method\nLeave the all-nighters for sleep\nRelax before bed with soundscapes, breathing exercises, and\nSleep Stories narrated by Harry Styles, Camila Cabello, and\nmore.\nPrioritize self-care\nCard\nLearn how to create a daily practice to build mental strength\nand resilience with tools that works for your schedule.\nCard number\nVISA",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "payment",
+    "subscription",
+    "discount",
+    "toast",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "banner",
+    "toast"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Calm”",
+        "Toast, covering 11% of the height from 8% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment toast, on top of Subscription plans with 1 input field. Light theme, 31 text elements.",
+        "31 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 25 of 27 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 2:20 in the recording",
+        "Frame 473 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fafafa",
+      "role": "background",
+      "share": 0.635
+    },
+    {
+      "hex": "#09111b",
+      "role": "accent",
+      "share": 0.161
+    },
+    {
+      "hex": "#d9dadc",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#888b8f",
+      "role": "surface",
+      "share": 0.059
+    },
+    {
+      "hex": "#423f37",
+      "role": "surface",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 473,
+    "atSeconds": 140.4,
+    "endSeconds": 142.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.46875,
+        "y": 0.078125,
+        "w": 0.34375,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Calm",
+    "headline": "Get 40% off - Today Only!"
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "Back to Payment method",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Dismiss",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

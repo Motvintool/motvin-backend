@@ -1,0 +1,162 @@
+{
+  "screenId": "elevate-ios-versions-2026-11-08-playing-a-game-1",
+  "screen_id": "elevate-ios-versions-2026-11-08-playing-a-game-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-08T07:31:09.747Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "education",
+  "flow": "checkout",
+  "flow_name": "Playing a game",
+  "flow_position": 1,
+  "name": "Subscription plans",
+  "description": "Paywall screen with a 5-item tab bar and a row of 5 category chips. Dark theme, 19 text elements.",
+  "text": "9:41(\n•0l\nGames\nSPEAKING\nALL\nA-Z\nWRITING\nRE\nPOPULAR\nGAME OF THE WEEK\nnotorious\n((•))\n-+\nPronunciation\nConnota\nPronounce words accurately\nClassify words\nFAVORITE GAMES\nBrevity\nWRITING\nUnlock all 40+ games\nToday\nLeagues\nQuests\nGames\nMe",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "today",
+    "quests",
+    "leagues",
+    "games",
+    "paywall",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Today, Quests, Leagues, Games, Me",
+        "Category strip: SPEAKING, ALL, A-Z, WRITING, RE",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with a 5-item tab bar and a row of 5 category chips. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 17 in “Opening a page (Today)”",
+        "Reached from “Subscription plans — loading”",
+        "Leads to “Pronunciation”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 6:51 in the recording",
+        "Frame 1378 of 1903 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232224",
+      "role": "background",
+      "share": 0.547
+    },
+    {
+      "hex": "#454648",
+      "role": "surface",
+      "share": 0.128
+    },
+    {
+      "hex": "#0d5660",
+      "role": "accent",
+      "share": 0.112
+    },
+    {
+      "hex": "#09323f",
+      "role": "surface",
+      "share": 0.053
+    },
+    {
+      "hex": "#67686a",
+      "role": "surface",
+      "share": 0.046
+    }
+  ],
+  "capture": {
+    "source": "Elevate.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1903,
+    "frame": 1378,
+    "atSeconds": 411.3,
+    "endSeconds": 413.7,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "Today",
+      "Quests",
+      "Leagues",
+      "Games",
+      "Me"
+    ],
+    "chipLabels": [
+      "SPEAKING",
+      "ALL",
+      "A-Z",
+      "WRITING",
+      "RE"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Connota"
+  },
+  "crawler": {
+    "nodeId": "s211",
+    "depth": 210,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s210",
+        "via": "Wait 0.6s",
+        "name": "Subscription plans — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s212",
+        "via": "Tap “FAVORITE GAMES”",
+        "name": "Pronunciation"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-08",
+  "capturedBy": "motvin-ios-crawler"
+}

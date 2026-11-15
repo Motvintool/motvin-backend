@@ -1,0 +1,144 @@
+{
+  "screenId": "calm-webapp-versions-2026-11-13-onboarding-18",
+  "screen_id": "calm-webapp-versions-2026-11-13-onboarding-18",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:51:03.482Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "healthcare",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 7,
+  "name": "Subscription plans",
+  "description": "Paywall screen. Light theme, 5 text elements.",
+  "text": "Use Mobile App\nTry Calm for Free\nHome\nMeditate\nYou're missing out on the full Calm experience. Subscribe with 40% off to unlock 50,000+ minutes of content.\nU\nSleep\nGood Morning, Motvin\nMusic\nFor Work\nWisdom\nCalm Kids\nMovement\nProfile\n8\nPrivacy Policy",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "banner"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Use Mobile App”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen. Light theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 27 in “Subscribing”",
+        "Reached from “Subscription plans”",
+        "Leads to “Onboarding step”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 1:18 in the recording",
+        "Frame 262 of 1234 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#d4d5d4",
+      "role": "background",
+      "share": 0.812
+    },
+    {
+      "hex": "#9e9e9e",
+      "role": "surface",
+      "share": 0.158
+    },
+    {
+      "hex": "#b1b2b1",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#ececec",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#95c3c7",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Calm.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1234,
+    "frame": 262,
+    "atSeconds": 78.3,
+    "endSeconds": 78.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Use Mobile App",
+    "headline": "Good Morning, Motvin"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Open Use Mobile App",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Wait 0.6s",
+        "name": "Onboarding step"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}

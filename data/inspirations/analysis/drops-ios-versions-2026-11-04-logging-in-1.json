@@ -1,0 +1,151 @@
+{
+  "screenId": "drops-ios-versions-2026-11-04-logging-in-1",
+  "screen_id": "drops-ios-versions-2026-11-04-logging-in-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T01:28:42.895Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "education",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 42,
+  "name": "Sign in with email",
+  "description": "Login screen with a primary action labelled “Continue with Google”. Dark theme, 8 text elements.",
+  "text": "Start learning with Drops\nTrack your learning progress, personalize your\nexperience, and earn achievements.\nG\nContinue with Google\nContinue with Apple\nContinue with Facebook f\nContinue with Email V\nNew to Drops? Sign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Start learning with Drops”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Continue with Google”. Dark theme, 8 text elements.",
+        "Calls to action: “Continue with Google”, “Continue with Apple”, “Continue with Facebook f”, “Continue with Email V”",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 42 of 70 in “Onboarding”",
+        "Reached from “Look at you go!”",
+        "Leads to “Create account”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.4s at 1:46 in the recording",
+        "Frame 382 of 1906 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#42166b",
+      "role": "background",
+      "share": 0.54
+    },
+    {
+      "hex": "#593284",
+      "role": "accent",
+      "share": 0.136
+    },
+    {
+      "hex": "#020204",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#3f5999",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#fbfafc",
+      "role": "text",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Drops.mov",
+    "fps": 3.3333333333333335,
+    "frames": 1906,
+    "frame": 382,
+    "atSeconds": 106.5,
+    "endSeconds": 114.9,
+    "holdSeconds": 8.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue with Google",
+      "Continue with Apple",
+      "Continue with Facebook f",
+      "Continue with Email V"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Start learning with Drops",
+    "headline": "Start learning with Drops"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s042",
+        "via": "Open Start learning with Drops",
+        "name": "Look at you go!"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Open Create account",
+        "name": "Create account"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,177 @@
+{
+  "screenId": "spotify-ios-versions-2026-10-26-scanning-a-code-1",
+  "screen_id": "spotify-ios-versions-2026-10-26-scanning-a-code-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-10-25T18:45:24.289Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "entertainment",
+  "flow": "discovery",
+  "flow_name": "Scanning a code",
+  "flow_position": 66,
+  "name": "Spotify Codes dialog",
+  "description": "Dialog over a dimmed screen, on top of Home home with a 5-item tab bar, a row of 3 category chips and a search bar. Dark theme, 22 text elements.",
+  "text": "9:41(\n•0\nSearch\nM\nWhat do you want to listen to?\nMusic\nPodcasts\nSCIENC\nToday\nop Hit:\n••ll-I|u•\nSpotify Codes\nEverything on Spotify has a code for sharing. Scan it\nwith your phone and you'll be sent straight to that\nsong, podcast, artist or playlist.\nScan\nAIYARA, THAAKKA\n#kollywood\n#tamil dance\n#peppy\nNew Releases\nUpcomina\nAathi (From \"Kaththi\")\nhander, Vishal Dadlani, Yugabh\n1ID\nSearch\nYour Library\nCreate\nHome\nPremium",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "home",
+    "your library",
+    "premium",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Home, Search, Your Library, Premium, Create",
+        "Navigation title reads “Spotify Codes”",
+        "Category strip: Music, Podcasts, SCIENC",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 45% of the height from 28% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Home home with a 5-item tab bar, a row of 3 category chips and a search bar. Dark theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 66 of 164 in “Home”",
+        "Reached from “Home home”",
+        "Leads to “Camera permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:36 in the recording",
+        "Frame 1524 of 2732 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#181619",
+      "role": "background",
+      "share": 0.626
+    },
+    {
+      "hex": "#657a6d",
+      "role": "surface",
+      "share": 0.084
+    },
+    {
+      "hex": "#a4c4aa",
+      "role": "text",
+      "share": 0.072
+    },
+    {
+      "hex": "#303633",
+      "role": "surface",
+      "share": 0.062
+    },
+    {
+      "hex": "#455049",
+      "role": "surface",
+      "share": 0.04
+    }
+  ],
+  "capture": {
+    "source": "mvo4xv1s-wrdlq2.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2732,
+    "frame": 1524,
+    "atSeconds": 456,
+    "endSeconds": 457.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.28125,
+        "w": 0.875,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [
+      "Home",
+      "Search",
+      "Your Library",
+      "Premium",
+      "Create"
+    ],
+    "chipLabels": [
+      "Music",
+      "Podcasts",
+      "SCIENC"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Spotify Codes",
+    "headline": "SCIENC"
+  },
+  "crawler": {
+    "nodeId": "s194",
+    "depth": 193,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s193",
+        "via": "Tap “Made For You”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s195",
+        "via": "Tap “op Hit:”",
+        "name": "Camera permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-10-26",
+  "capturedBy": "motvin-ios-crawler"
+}

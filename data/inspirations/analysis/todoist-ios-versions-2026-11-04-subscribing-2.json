@@ -1,0 +1,170 @@
+{
+  "screenId": "todoist-ios-versions-2026-11-04-subscribing-2",
+  "screen_id": "todoist-ios-versions-2026-11-04-subscribing-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-04T02:17:12.723Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "productivity",
+  "flow": "discovery",
+  "flow_name": "Subscribing",
+  "flow_position": 2,
+  "name": "Upcoming",
+  "description": "Messages dialog over a dimmed screen, on top of Inbox home with a row of 4 category chips and the keyboard open. Dark theme, 72 text elements.",
+  "text": "9:41 (\n•ll\nUpcoming\n000\nNov 2026 v\nF\nM\nS\nS\nNov\n26\n29\n27\n28\n30\n31\n1\n2\n3\n5\n6\n7\n8\n10\n11\n12\n13\n14\n15\n9\n19\n22\n16\n17\n18\n20\n21\n^-\ne.g., Submit essay on Al by Thursday...\n+\n• Inbox\nThursday\nDICTATE\n6 Iru.\nThe\nI'm\nQ\nW\nR\nT\nU\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n#\n123\n@",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "messages",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Upcoming”",
+        "Category strip: F, M, S, S",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 31% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Inbox home with a row of 4 category chips and the keyboard open. Dark theme, 72 text elements.",
+        "72 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Reading messages”",
+        "Reached from “Inbox home”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 7:44 in the recording",
+        "Frame 1561 of 2596 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a181a",
+      "role": "background",
+      "share": 0.753
+    },
+    {
+      "hex": "#353134",
+      "role": "surface",
+      "share": 0.175
+    },
+    {
+      "hex": "#595658",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#716e70",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#8c393d",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Todoist.mov",
+    "fps": 3.3333333333333335,
+    "frames": 2596,
+    "frame": 1561,
+    "atSeconds": 464.1,
+    "endSeconds": 468.6,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.03125,
+        "w": 0.90625,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 72,
+    "tabLabels": [],
+    "chipLabels": [
+      "F",
+      "M",
+      "S",
+      "S"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Upcoming",
+    "headline": "E.g., Submit essay on Al by Thursday"
+  },
+  "crawler": {
+    "nodeId": "s157",
+    "depth": 159,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s156",
+        "via": "Back to Upcoming",
+        "name": "Inbox home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s158",
+        "via": "Back to Search results",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-04",
+  "capturedBy": "motvin-ios-crawler"
+}

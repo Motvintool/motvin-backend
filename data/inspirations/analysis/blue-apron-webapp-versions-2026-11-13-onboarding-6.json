@@ -1,0 +1,153 @@
+{
+  "screenId": "blue-apron-webapp-versions-2026-11-13-onboarding-6",
+  "screen_id": "blue-apron-webapp-versions-2026-11-13-onboarding-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-13T17:56:42.539Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [],
+  "category": "food",
+  "flow": "checkout",
+  "flow_name": "Onboarding",
+  "flow_position": 10,
+  "name": "Subscription plans",
+  "description": "Paywall screen with 1 input field and a primary action labelled “Continue”. Light theme, 38 text elements.",
+  "text": "Blue Apron\nMenu\nLogin Sign Up\nBlue Apron+\nSubscribe & Save\nX\nCreate an account\nHave an account? Login\nNO SUBSCRIPTION NEEDED\nPass the Comfort\nFirst Name\nX\nCozy dinners, festive favorites, and weeknight v\nEnter the code\ntall.\nEnter the 6-digit code sent to +91 63821 02514.\nSee All Recipes\nResend\n7\n7\n5\n9\n5\n3\n20 MIN\nOR LESS\nFAMILY STYLE\nMobile phone number\n+91 (IN)\n63821 02514\nBy creating an account, you agree to the Terms of\nService and Privacy Policy.\nContinue\nFast, flavorful recipe\n1ix & match, family-\nready in 20 minutes\nized mains & sides.\nless.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "subscription",
+    "paywall",
+    "webapp"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Blue Apron”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall screen with 1 input field and a primary action labelled “Continue”. Light theme, 38 text elements.",
+        "Calls to action: “Continue”",
+        "38 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 30 in “Onboarding”",
+        "Reached from “Subscription plans”",
+        "Leads to “Subscription plans”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 0:54 in the recording",
+        "Frame 234 of 1955 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#514f4d",
+      "role": "background",
+      "share": 0.502
+    },
+    {
+      "hex": "#939393",
+      "role": "surface",
+      "share": 0.151
+    },
+    {
+      "hex": "#2d231a",
+      "role": "accent",
+      "share": 0.129
+    },
+    {
+      "hex": "#fcfdfd",
+      "role": "text",
+      "share": 0.102
+    },
+    {
+      "hex": "#706f71",
+      "role": "surface",
+      "share": 0.033
+    }
+  ],
+  "capture": {
+    "source": "Blue Apron.mp4",
+    "fps": 3.3333333333333335,
+    "frames": 1955,
+    "frame": 234,
+    "atSeconds": 54.3,
+    "endSeconds": 56.4,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "desktop",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Blue Apron",
+    "headline": "Pass the Comfort"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 9,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Tap “Enter the code”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Tap “Resend”",
+        "name": "Subscription plans"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-13",
+  "capturedBy": "motvin-ios-crawler"
+}
