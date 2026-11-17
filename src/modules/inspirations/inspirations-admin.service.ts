@@ -23,6 +23,8 @@ import {
   SCREEN_TYPES,
   STYLES,
   MAX_FRESH_DAYS,
+  MAX_NEW_THIS_WEEK_IDS,
+  sectionLists,
   readLibrarySettings,
   titleCase,
   VERSION_DIR_RE,
@@ -333,12 +335,16 @@ export class InspirationsAdminService {
   // ─── Settings ─────────────────────────────────────────────────────────────
 
   /**
-   * Saves the library's general settings — for now how long the "Latest"
-   * and "Updated" app tags last — and rebuilds, so the public pages pick them
+   * Saves the library's general settings — how long the "Latest" and
+   * "Updated" app tags last, and which apps the "New this week" page shows,
+   * in each section and in what order — and rebuilds, so the public pages pick them
    * up. Only the fields sent change; the rest keep their saved values.
    */
   saveSettings(input: unknown) {
-    const body = (input && typeof input === 'object' ? input : {}) as { freshness?: Record<string, unknown> };
+    const body = (input && typeof input === 'object' ? input : {}) as {
+      freshness?: Record<string, unknown>;
+      newThisWeek?: Record<string, unknown>;
+    };
     const current = readLibrarySettings(this.root);
     const days = (key: 'newDays' | 'updatedDays', label: string) => {
       const value = body.freshness?.[key];
@@ -349,9 +355,19 @@ export class InspirationsAdminService {
       }
       return n;
     };
+    const lists = (key: 'added' | 'order') => {
+      const value = body.newThisWeek?.[key];
+      if (value === undefined) return current.newThisWeek[key];
+      const parsed = sectionLists(value);
+      if (!parsed) {
+        throw new BadRequestException(`"New this week" ${key} must be { ios, webs }, each a list of at most ${MAX_NEW_THIS_WEEK_IDS} app ids`);
+      }
+      return parsed;
+    };
     const settings = {
       ...current,
       freshness: { newDays: days('newDays', '"Latest"'), updatedDays: days('updatedDays', '"Updated"') },
+      newThisWeek: { added: lists('added'), order: lists('order') },
     };
     this.writeJson(join(this.root, 'settings.json'), settings);
     return { settings, report: this.rebuild() };

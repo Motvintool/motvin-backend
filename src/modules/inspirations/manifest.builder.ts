@@ -312,9 +312,39 @@ function readAvifDimensions(buf: Buffer) {
 export interface LibrarySettings {
   /** How many days an app card shows "Latest" after its first version, and "Updated" after a newer one. */
   freshness: { newDays: number; updatedDays: number };
+  /**
+   * The "New this week" page: the apps the admin picked for it (`added`), for each section apart (Apps (iOS)
+   * and Webs never mix), and the order they put them in (`order`; picks not in it follow).
+   */
+  newThisWeek: { added: SectionLists; order: SectionLists };
 }
 
-export const DEFAULT_SETTINGS: LibrarySettings = { freshness: { newDays: 14, updatedDays: 14 } };
+export const DEFAULT_SETTINGS: LibrarySettings = {
+  freshness: { newDays: 14, updatedDays: 14 },
+  newThisWeek: { added: { ios: [], webs: [] }, order: { ios: [], webs: [] } },
+};
+
+/** App ids for each section of the library. */
+export type SectionLists = { ios: string[]; webs: string[] };
+
+/** Most app ids each "New this week" list keeps. */
+export const MAX_NEW_THIS_WEEK_IDS = 500;
+const APP_ID = /^[a-z0-9][a-z0-9-]{0,63}$/;
+
+/** A list of app ids for each section (`{ ios, webs }`), or null when the value isn't that. */
+export function sectionLists(value: unknown): SectionLists | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
+  const { ios = [], webs = [] } = value as Record<string, unknown>;
+  const lists = { ios: appIdList(ios), webs: appIdList(webs) };
+  return lists.ios && lists.webs ? { ios: lists.ios, webs: lists.webs } : null;
+}
+
+/** A list of distinct app ids, or null when the value isn't one. */
+export function appIdList(value: unknown): string[] | null {
+  if (!Array.isArray(value) || value.length > MAX_NEW_THIS_WEEK_IDS) return null;
+  if (!value.every((id) => typeof id === 'string' && APP_ID.test(id))) return null;
+  return [...new Set(value as string[])];
+}
 
 /** Longest a tag can last, in days. */
 export const MAX_FRESH_DAYS = 365;
@@ -326,12 +356,20 @@ function freshDays(value: unknown, fallback: number): number {
 
 /** The store's settings, with defaults for anything missing or out of range. */
 export function readLibrarySettings(root: string): LibrarySettings {
-  const file = readJson<Partial<{ freshness: Record<string, unknown> }>>(join(root, 'settings.json'), {});
+  const file = readJson<Partial<{ freshness: Record<string, unknown>; newThisWeek: Record<string, unknown> }>>(
+    join(root, 'settings.json'),
+    {},
+  );
   const fresh = file.freshness ?? {};
+  const week = file.newThisWeek ?? {};
   return {
     freshness: {
       newDays: freshDays(fresh.newDays, DEFAULT_SETTINGS.freshness.newDays),
       updatedDays: freshDays(fresh.updatedDays, DEFAULT_SETTINGS.freshness.updatedDays),
+    },
+    newThisWeek: {
+      added: sectionLists(week.added) ?? { ios: [], webs: [] },
+      order: sectionLists(week.order) ?? { ios: [], webs: [] },
     },
   };
 }

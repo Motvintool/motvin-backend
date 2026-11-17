@@ -43,7 +43,7 @@ export class InspirationsAdminController {
     return { success: true, data: this.admin.getState() };
   }
 
-  /** Saves general settings: body `{ freshness?: { newDays?, updatedDays? } }`. */
+  /** Saves general settings: body `{ freshness?: { newDays?, updatedDays? }, newThisWeek?: { added?, order? } }`. */
   @Put('settings')
   saveSettings(@Body() body: unknown) {
     return { success: true, data: this.admin.saveSettings(body) };

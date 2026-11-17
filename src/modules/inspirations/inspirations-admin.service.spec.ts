@@ -56,16 +56,39 @@ describe('InspirationsAdminService', () => {
 
   describe('settings', () => {
     it('defaults the app tag durations, saves new ones and publishes them with the library', () => {
-      expect(service.getState().settings).toEqual({ freshness: { newDays: 14, updatedDays: 14 } });
+      const none = { ios: [], webs: [] };
+      const week = { added: none, order: none };
+      expect(service.getState().settings).toEqual({ freshness: { newDays: 14, updatedDays: 14 }, newThisWeek: week });
       service.saveSettings({ freshness: { newDays: 30 } });
-      expect(service.getState().settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 } });
-      expect(readManifest(store).settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 } });
+      expect(service.getState().settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 }, newThisWeek: week });
+      expect(readManifest(store).settings).toEqual({ freshness: { newDays: 30, updatedDays: 14 }, newThisWeek: week });
+    });
+
+    it('saves the "New this week" picks per section, keeping what is not sent', () => {
+      service.saveSettings({ freshness: { newDays: 30 } });
+      service.saveSettings({ newThisWeek: { order: { ios: ['notion', 'uber', 'notion'] } } });
+      service.saveSettings({ newThisWeek: { added: { webs: ['spotify'] } } });
+      expect(readManifest(store).settings).toEqual({
+        freshness: { newDays: 30, updatedDays: 14 },
+        newThisWeek: {
+          added: { ios: [], webs: ['spotify'] },
+          order: { ios: ['notion', 'uber'], webs: [] },
+        },
+      });
     });
 
     it('refuses durations that are not whole days in range', () => {
       expect(() => service.saveSettings({ freshness: { newDays: 2.5 } })).toThrow();
       expect(() => service.saveSettings({ freshness: { updatedDays: -1 } })).toThrow();
       expect(() => service.saveSettings({ freshness: { updatedDays: 400 } })).toThrow();
+      expect(existsSync(join(store, 'settings.json'))).toBe(false);
+    });
+
+    it('refuses "New this week" choices that are not app ids for each section', () => {
+      expect(() => service.saveSettings({ newThisWeek: { added: ['canva'] } })).toThrow();
+      expect(() => service.saveSettings({ newThisWeek: { order: { ios: ['Not An Id'] } } })).toThrow();
+      expect(() => service.saveSettings({ newThisWeek: { added: { webs: [42] } } })).toThrow();
+      expect(() => service.saveSettings({ newThisWeek: { added: { ios: ['../etc'] } } })).toThrow();
       expect(existsSync(join(store, 'settings.json'))).toBe(false);
     });
   });
