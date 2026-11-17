@@ -10,8 +10,9 @@ import { FastifyReply } from 'fastify';
 import { createReadStream } from 'fs';
 import { stat } from 'fs/promises';
 import { extname } from 'path';
+import { appCardScreens } from './app-cards';
 import { InspirationsService } from './inspirations.service';
-import { LoaderService } from './loader.service';
+import { InspirationScreen, LoaderService } from './loader.service';
 
 /**
  * Read-only API over data/inspirations.
@@ -30,6 +31,9 @@ const CONTENT_TYPES: Record<string, string> = {
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
 };
+
+/** The most apps one /app-cards request answers for. */
+const MAX_APP_CARDS = 100;
 
 function splitList(value?: string): string[] | undefined {
   if (!value) return undefined;
@@ -113,6 +117,59 @@ export class InspirationsController {
   @Get('apps')
   async getApps(@Query('industry') industry?: string, @Query('sort') sort?: 'newest' | 'oldest' | 'az' | 'rating') {
     return { success: true, data: await this.service.getApps(industry, sort) };
+  }
+
+  // GET /api/inspirations/app-cards?ids=a,b&platform=ios — the few screens
+  // each app's grid card shows, keyed by app id: a grid's cards without every
+  // app's full screen list. `platform` keeps each card to those platforms'
+  // screens. Unknown ids are left out.
+  @Get('app-cards')
+  async getAppCards(@Query('ids') ids?: string, @Query('platform') platform?: string) {
+    const wanted = new Set((splitList(ids) ?? []).slice(0, MAX_APP_CARDS));
+    const platforms = splitList(platform);
+    const byApp = new Map<string, InspirationScreen[]>();
+    for (const screen of await this.loader.getScreens()) {
+      if (!wanted.has(screen.appId) || (platforms && !platforms.includes(screen.platform))) continue;
+      const list = byApp.get(screen.appId);
+      if (list) list.push(screen);
+      else byApp.set(screen.appId, [screen]);
+    }
+    const data: Record<string, InspirationScreen[]> = {};
+    for (const app of await this.loader.getApps()) {
+      if (wanted.has(app.id)) data[app.id] = appCardScreens(app, byApp.get(app.id) ?? []);
+    }
+    return { success: true, data };
+  }
+
+  // GET /api/inspirations/app-facets?platform=ios — what each app holds on
+  // those platforms, keyed by app id, for the apps Filters panel: its screen
+  // types, UI elements, flow categories and styles. One small answer instead
+  // of every app's full screen list.
+  @Get('app-facets')
+  async getAppFacets(@Query('platform') platform?: string) {
+    const platforms = splitList(platform);
+    const on = (p: string) => !platforms || platforms.includes(p);
+    const facets = new Map<string, { screens: Set<string>; ui: Set<string>; flows: Set<string>; looks: Set<string> }>();
+    const of = (appId: string) => {
+      let f = facets.get(appId);
+      if (!f) facets.set(appId, (f = { screens: new Set(), ui: new Set(), flows: new Set(), looks: new Set() }));
+      return f;
+    };
+    for (const s of await this.loader.getScreens()) {
+      if (!on(s.platform)) continue;
+      const f = of(s.appId);
+      if (s.screenType !== 'other') f.screens.add(s.screenType);
+      for (const e of s.elements ?? []) f.ui.add(e);
+      for (const v of s.style ?? []) f.looks.add(v);
+    }
+    for (const flow of await this.loader.getFlows()) {
+      if (on(flow.platform) && flow.category) of(flow.appId).flows.add(flow.category);
+    }
+    const data: Record<string, Record<'screens' | 'ui' | 'flows' | 'looks', string[]>> = {};
+    for (const [appId, f] of facets) {
+      data[appId] = { screens: [...f.screens], ui: [...f.ui], flows: [...f.flows], looks: [...f.looks] };
+    }
+    return { success: true, data };
   }
 
   // GET /api/inspirations/app/:slug
