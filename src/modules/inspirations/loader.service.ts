@@ -143,7 +143,7 @@ export interface InspirationsManifest {
   patterns: InspirationPattern[];
   elementCounts: Record<string, number>;
   /** General settings from `settings.json`; missing in a manifest built before they existed. */
-  settings?: { freshness: { newDays: number; updatedDays: number } };
+  settings?: { freshness: { newDays: number; updatedDays: number }; newThisWeek?: Record<'added' | 'order', { ios: string[]; webs: string[] }> };
 }
 
 const EMPTY_MANIFEST: InspirationsManifest = {
