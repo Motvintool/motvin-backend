@@ -724,7 +724,7 @@ export class McpToolsService {
     // at runtime by the SDK from `inputSchema` either way.
     (server.registerTool as (name: string, config: unknown, cb: unknown) => unknown)(
       name,
-      { ...config, annotations: { readOnlyHint: true, openWorldHint: false } },
+      { ...config, annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false } },
       async (args: z.infer<z.ZodObject<Args>>) => {
         const started = Date.now();
         const asked = args as { query?: unknown; text?: unknown };

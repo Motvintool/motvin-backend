@@ -541,6 +541,15 @@ describe('Motvin MCP over HTTP', () => {
       expect(res.isError).toBe(true);
     });
 
+    it('labels every tool read-only, non-destructive and closed-world, as the ChatGPT directory requires', async () => {
+      const listed = await rpc(token, 'tools/list', {});
+      const tools = listed.json().result.tools as { name: string; annotations?: Record<string, unknown> }[];
+      expect(tools.length).toBeGreaterThan(0);
+      for (const tool of tools) {
+        expect(tool.annotations).toMatchObject({ readOnlyHint: true, destructiveHint: false, openWorldHint: false });
+      }
+    });
+
     it('does not offer the standalone stream', async () => {
       const res = await inject({ method: 'GET', url: '/api/mcp', headers: { authorization: `Bearer ${token}` } });
       expect(res.statusCode).toBe(405);
