@@ -10,6 +10,7 @@ import { LoaderService } from './loader.service';
 @Module({
   controllers: [InspirationsAdminController, InspirationsController],
   providers: [InspirationsService, InspirationsAdminService, InspirationsWatcherService, LoaderService, AdminGuard],
-  exports: [InspirationsService],
+  // AdminGuard is shared so MCP's admin-only usage report uses the same check.
+  exports: [InspirationsService, LoaderService, AdminGuard],
 })
 export class InspirationsModule {}
