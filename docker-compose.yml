@@ -8,10 +8,20 @@ services:
       - "3000:3000"
     volumes:
       - ./data:/app/data:ro    # Read-only mount for data
+      # MCP keeps a few small files it must write (connected tools, disconnects,
+      # usage, today's call counts). They live outside the read-only data mount
+      # and survive rebuilds and redeploys.
+      - ./mcp-state:/app/mcp-state
+    env_file:
+      - .env                   # MCP_TOKEN_SECRET and other secrets; never commit .env
     environment:
       - NODE_ENV=production
       - PORT=3000
       - DATA_ROOT=/app/data
+      - MCP_REVOCATION_FILE=/app/mcp-state/.mcp-revocations.json
+      - MCP_CONNECTIONS_FILE=/app/mcp-state/.mcp-connections.json
+      - MCP_USAGE_FILE=/app/mcp-state/.mcp-usage.json
+      - MCP_RATE_LIMIT_FILE=/app/mcp-state/.mcp-rate-limits.json
       - CACHE_MAX_COLLECTIONS=50
       - CACHE_MAX_SIZE_MB=500
       - CACHE_COLLECTION_TTL_HOURS=1

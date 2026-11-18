@@ -43,3 +43,16 @@ data/reviews/.frame-cache/
 data/reviews/**/recording.mov
 data/reviews/**/frames/
 data/.library.lock
+# MCP: tools a person disconnected (kept until their tokens would expire)
+data/.mcp-revocations.json
+data/.mcp-revocations.json.tmp
+# MCP: each person's connected AI tools, and usage counts
+data/.mcp-connections.json
+data/.mcp-connections.json.tmp
+data/.mcp-usage.json
+data/.mcp-usage.json.tmp
+data/.mcp-rate-limits.json
+data/.mcp-rate-limits.json.tmp
+
+# MCP state written on the server (see docker-compose.yml)
+mcp-state/

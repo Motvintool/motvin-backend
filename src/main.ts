@@ -39,8 +39,9 @@ async function bootstrap() {
   // Enable gzip/brotli compression for all responses
   await app.register(compression, { encodings: ['gzip', 'deflate'] });
 
-  // Global prefix
-  app.setGlobalPrefix('api');
+  // Global prefix. OAuth discovery documents must sit at the origin root
+  // (/.well-known/…), where MCP clients look for them, so they are excluded.
+  app.setGlobalPrefix('api', { exclude: ['.well-known/(.*)'] });
 
   // Health check endpoint (without prefix)
   app.getHttpAdapter().get('/health', (req, res) => {

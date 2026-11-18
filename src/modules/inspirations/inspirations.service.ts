@@ -8,6 +8,7 @@ import {
   LoaderService,
 } from './loader.service';
 import { DEFAULT_SETTINGS } from './manifest.builder';
+import { SemanticIndex } from './semantic-search';
 
 /**
  * Query layer over the manifest. Everything here reads stored records — there
@@ -665,7 +666,50 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     return intent;
   }
 
+  /**
+   * The search's screen ranking with each screen's score, for a caller that
+   * orders equal scores itself — the MCP server mixes apps and prefers fuller
+   * screens among equals. Same matching and filters as `search`.
+   */
+  async rankedScreens(q: string, filters: SearchFilters = {}): Promise<{ screen: InspirationScreen; score: number }[]> {
+    const [allScreens, allApps] = await Promise.all([this.loader.getScreens(), this.loader.getApps()]);
+    // Meaning-based relevance (word forms, same-meaning words, field weights),
+    // scaled to 0–5 points against the best match and added to the usual score.
+    const semantic = this.semanticIndex(allScreens, allApps).score(q);
+    let best = 0;
+    for (const value of semantic.values()) if (value > best) best = value;
+    const boost = new Map<string, number>();
+    if (best > 0) {
+      for (const [id, value] of semantic) {
+        const points = Math.round((5 * value) / best);
+        if (points > 0) boost.set(id, points);
+      }
+    }
+    // Soft: a word that hints at a type ("account" → settings) adds points but
+    // does not throw other screens out — "create an account" is a sign-up. The
+    // MCP tools have explicit filters for when a caller really means one type.
+    const scored = this.scoreScreens(allScreens, q, allApps, false, boost, true);
+    const kept = new Set(this.filterScreens(scored.map((r) => r.screen), filters).map((screen) => screen.id));
+    return scored.filter((r) => kept.has(r.screen.id));
+  }
+
   private rankScreens(screens: InspirationScreen[], q: string, apps: InspirationApp[], literal = false) {
+    return this.scoreScreens(screens, q, apps, literal).map((r) => r.screen);
+  }
+
+  /** One index per loaded screen list; rebuilt when the library reloads. */
+  private readonly semanticIndexes = new WeakMap<InspirationScreen[], SemanticIndex>();
+
+  private semanticIndex(screens: InspirationScreen[], apps: InspirationApp[]): SemanticIndex {
+    let index = this.semanticIndexes.get(screens);
+    if (!index) {
+      index = new SemanticIndex(screens, apps);
+      this.semanticIndexes.set(screens, index);
+    }
+    return index;
+  }
+
+  private scoreScreens(screens: InspirationScreen[], q: string, apps: InspirationApp[], literal = false, boost?: Map<string, number>, soft = false) {
     const appNames = new Map(apps.map((a) => [a.id, a.name.toLowerCase()]));
     const taxonomy = literal ? LITERAL_TAXONOMY : {
       platforms: Array.from(new Set(screens.map((s) => s.platform))),
@@ -678,11 +722,14 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
 
     return screens
       .map((screen) => {
-        if (intent.industries.length && !intent.industries.includes(screen.industry)) return null;
-        if (intent.screenTypes.length && !intent.screenTypes.includes(screen.screenType)) return null;
-        if (intent.platforms.length && !intent.platforms.includes(screen.platform)) return null;
-        if (intent.styles.length && !intent.styles.some((s) => screen.style.includes(s))) return null;
-        if (intent.states.length && !intent.states.some((s) => (screen.states || []).includes(s))) return null;
+        // Soft mode treats these as hints (scored below) rather than filters.
+        if (!soft) {
+          if (intent.industries.length && !intent.industries.includes(screen.industry)) return null;
+          if (intent.screenTypes.length && !intent.screenTypes.includes(screen.screenType)) return null;
+          if (intent.platforms.length && !intent.platforms.includes(screen.platform)) return null;
+          if (intent.styles.length && !intent.styles.some((s) => screen.style.includes(s))) return null;
+          if (intent.states.length && !intent.states.some((s) => (screen.states || []).includes(s))) return null;
+        }
 
         let score = 0;
         if (intent.industries.includes(screen.industry)) score += 3;
@@ -693,12 +740,12 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
 
         const hay = `${screen.name} ${screen.description || ''} ${screen.fineType || ''} ${screen.tags.join(' ')} ${appNames.get(screen.appId) || ''}`.toLowerCase();
         score += intent.free.filter((t) => hay.includes(t)).length;
+        score += boost?.get(screen.id) ?? 0;
 
         return score > 0 ? { screen, score } : null;
       })
       .filter(Boolean)
-      .sort((a, b) => b.score - a.score || a.screen.id.localeCompare(b.screen.id))
-      .map((r) => r.screen);
+      .sort((a, b) => b.score - a.score || a.screen.id.localeCompare(b.screen.id));
   }
 
   private sortScreens(screens: InspirationScreen[], sort: string) {

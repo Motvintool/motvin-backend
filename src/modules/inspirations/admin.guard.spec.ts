@@ -58,8 +58,9 @@ function makeGuard(emails: string[] = [ADMIN_EMAIL]) {
 
   const guard = new AdminGuard(config);
   // Prime the cert cache so no network call happens during the test.
-  (guard as unknown as { certs: Record<string, string>; certsExpireAt: number }).certs = { [KID]: CERT_PEM };
-  (guard as unknown as { certsExpireAt: number }).certsExpireAt = Date.now() + 60_000;
+  const verifier = (guard as unknown as { verifier: { certs: Record<string, string>; certsExpireAt: number } }).verifier;
+  verifier.certs = { [KID]: CERT_PEM };
+  verifier.certsExpireAt = Date.now() + 60_000;
   return guard;
 }
 
