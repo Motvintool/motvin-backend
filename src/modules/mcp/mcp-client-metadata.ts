@@ -98,9 +98,12 @@ export function readClientMetadata(
   if (!uris.length) return { error: 'client metadata lists no redirect_uris' };
   const bad = uris.find((uri) => !acceptRedirect(uri));
   if (bad) return { error: `client metadata redirect_uri is not acceptable: ${bad}` };
-  // Only public clients (PKCE, no secret) can use a metadata document here.
-  if (doc.token_endpoint_auth_method !== undefined && doc.token_endpoint_auth_method !== 'none') {
-    return { error: 'client metadata must use token_endpoint_auth_method "none"' };
+  // This server only has public clients (PKCE, no secret), so the client must be able to
+  // use "none" — as its chosen method, or among the ones it lists as supported (ChatGPT
+  // prefers private_key_jwt but lists "none" too, and uses it with servers that only offer it).
+  const supported = Array.isArray(doc.token_endpoint_auth_methods_supported) ? doc.token_endpoint_auth_methods_supported : [];
+  if (doc.token_endpoint_auth_method !== undefined && doc.token_endpoint_auth_method !== 'none' && !supported.includes('none')) {
+    return { error: 'client metadata must allow token_endpoint_auth_method "none"' };
   }
   if (Array.isArray(doc.grant_types) && !doc.grant_types.includes('authorization_code')) {
     return { error: 'client metadata must allow the authorization_code grant' };
