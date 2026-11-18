@@ -32,6 +32,18 @@ describe('client ID metadata documents', () => {
     expect(readClientMetadata(URL_ID, ['not', 'an', 'object'], acceptAll)).toHaveProperty('error');
   });
 
+  it('accepts a client that prefers a signed key but also supports "none" (ChatGPT)', () => {
+    const chatgpt = {
+      client_id: URL_ID,
+      client_name: 'ChatGPT',
+      redirect_uris: ['https://chatgpt.com/connector/oauth/abc'],
+      token_endpoint_auth_method: 'private_key_jwt',
+      token_endpoint_auth_methods_supported: ['none', 'private_key_jwt'],
+      grant_types: ['authorization_code', 'refresh_token'],
+    };
+    expect(readClientMetadata(URL_ID, chatgpt, acceptAll)).toMatchObject({ client_name: 'ChatGPT' });
+  });
+
   it('applies the server’s own redirect rule', () => {
     const result = readClientMetadata(URL_ID, { client_id: URL_ID, redirect_uris: ['javascript:alert(1)'] }, (uri) => !uri.startsWith('javascript:'));
     expect(result).toHaveProperty('error');
