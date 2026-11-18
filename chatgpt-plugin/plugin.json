@@ -1,0 +1,103 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "motvin",
+  "version": "1.0.0",
+  "description": "Search real product UI from shipped apps: screens and step-by-step flows from iOS apps, web apps and marketing websites.",
+  "author": {
+    "name": "Motvin",
+    "email": "motvintool@gmail.com",
+    "url": "https://motvin.com"
+  },
+  "homepage": "https://motvin.com/mcp",
+  "keywords": ["design", "ui", "ux", "screens", "flows", "inspiration"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Motvin",
+        "shortDescription": "Real app screens and flows",
+        "longDescription": "Motvin is a library of real product UI — screens and step-by-step flows captured from shipped iOS apps, web apps and marketing websites. Ask in plain words, such as \"paywalls with an annual toggle\" or \"fintech onboarding\", and ChatGPT finds matching screens, shows a preview of each, walks through whole flows, and compares how real apps solve the same problem. Every search stays on one platform (iOS, web app or website) so results are never mixed. Motvin only reads the design library; it never changes anything in your account. A free Motvin account is needed, and you sign in once in the browser when you connect.",
+        "developerName": "Motvin",
+        "category": "Design",
+        "capabilities": [
+          "Search app screens by description",
+          "Search step-by-step user flows",
+          "Find screens by the words printed on them",
+          "Show a screen's full details and preview",
+          "Find screens similar to one you like",
+          "Browse apps and UI patterns"
+        ],
+        "websiteURL": "https://motvin.com/mcp",
+        "supportURL": "https://motvin.com/mcp/clients/chatgpt",
+        "privacyPolicyURL": "https://motvin.com/privacy",
+        "termsOfServiceURL": "https://motvin.com/terms",
+        "defaultPrompt": [
+          "Search Motvin for onboarding screens from fintech apps on iOS",
+          "Show me 5 paywalls and tell me what they have in common",
+          "How do food apps handle checkout? Walk me through a real flow"
+        ],
+        "brandColor": "#874FFF",
+        "brandColorDark": "#A98BFF",
+        "composerIcon": "./assets/logo.png",
+        "composerIconDark": "./assets/logo-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Search screens by description on one platform",
+              "prompt": "Search Motvin for paywall screens on iOS",
+              "tools_triggered": "search_screens",
+              "expected_behavior": "Returns iOS paywall screens from several apps, each with a preview image, the app name and a link to the screen on motvin.com."
+            },
+            {
+              "description": "Walk through a recorded flow",
+              "prompt": "Show me a real onboarding flow from an iOS app on Motvin, step by step",
+              "tools_triggered": "search_flows, get_flow",
+              "expected_behavior": "Finds an iOS onboarding flow and lists its steps in order with a preview of each step."
+            },
+            {
+              "description": "Find screens by the words on them",
+              "prompt": "Find web app screens on Motvin that say \"cancel anytime\"",
+              "tools_triggered": "search_screen_text",
+              "expected_behavior": "Returns web app screens whose visible text contains \"cancel anytime\", with the app name and a preview."
+            },
+            {
+              "description": "Open one screen's details",
+              "prompt": "Search Motvin for login screens on iOS and show me the full details of the first one",
+              "tools_triggered": "search_screens, get_screen",
+              "expected_behavior": "Returns iOS login screens, then the first screen's description, UI elements and a larger preview."
+            },
+            {
+              "description": "Browse the apps in the library",
+              "prompt": "Which iOS apps does Motvin have?",
+              "tools_triggered": "list_apps",
+              "expected_behavior": "Lists iOS apps in the Motvin library with their names and how many screens and flows each has."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated request that needs no Motvin tool",
+              "prompt": "What is the weather in Paris tomorrow?"
+            },
+            {
+              "description": "Asks to change or delete data, which Motvin cannot do",
+              "prompt": "Delete all my saved Motvin collections"
+            },
+            {
+              "description": "General writing task with no design reference needed",
+              "prompt": "Write a short poem about the ocean"
+            }
+          ]
+        },
+        "demo_recording_url": "REPLACE_WITH_DEMO_VIDEO_URL",
+        "commerce": false,
+        "commerce_description": "Motvin does not sell products or process payments in ChatGPT."
+      },
+      "publication": {
+        "release_notes": "First release: search screens and flows from real iOS apps, web apps and websites."
+      }
+    }
+  }
+}
