@@ -402,6 +402,29 @@ describe('Motvin MCP over HTTP', () => {
       expect(res.headers.location).toBeUndefined();
     });
 
+    const authorizeTo = (clientId: string, redirectUri: string) =>
+      inject({
+        method: 'GET',
+        url:
+          `/api/mcp/oauth/authorize?response_type=code&client_id=${encodeURIComponent(clientId)}` +
+          `&redirect_uri=${encodeURIComponent(redirectUri)}&code_challenge=${'a'.repeat(43)}&code_challenge_method=S256&state=xyz`,
+      });
+
+    it('lets a native app pick its own port on a loopback redirect_uri, as Codex does', async () => {
+      documents = { [CLIENT_URL]: { client_id: CLIENT_URL, redirect_uris: ['http://127.0.0.1/callback/abc', 'http://localhost/callback/abc'] } };
+      oauth['metadataClients'].clear();
+      expect((await authorizeTo(CLIENT_URL, 'http://127.0.0.1:62955/callback/abc')).statusCode).toBe(302);
+      expect((await authorizeTo(CLIENT_URL, 'http://localhost:4100/callback/abc')).statusCode).toBe(302);
+      expect((await authorizeTo(CLIENT_URL, 'http://127.0.0.1:62955/callback/other')).statusCode).toBe(400);
+      expect((await authorizeTo(CLIENT_URL, 'http://localhost:4100/callback/abc?x=1')).statusCode).toBe(400);
+    });
+
+    it('still wants an exact match for anything that is not loopback http', async () => {
+      documents = { [CLIENT_URL]: { client_id: CLIENT_URL, redirect_uris: ['https://tool.example/callback'] } };
+      oauth['metadataClients'].clear();
+      expect((await authorizeTo(CLIENT_URL, 'https://tool.example:8443/callback')).statusCode).toBe(400);
+    });
+
     it('refuses a document it cannot fetch', async () => {
       documents = {};
       oauth['metadataClients'].clear();
@@ -548,6 +571,13 @@ describe('Motvin MCP over HTTP', () => {
       for (const tool of tools) {
         expect(tool.annotations).toMatchObject({ readOnlyHint: true, destructiveHint: false, openWorldHint: false });
       }
+    });
+
+    it('introduces itself with a title and a logo, so tools can show both', async () => {
+      const res = await rpc(token, 'initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'test', version: '1' } });
+      const info = res.json().result.serverInfo;
+      expect(info).toMatchObject({ name: 'motvin', title: 'Motvin' });
+      expect(info.icons[0].src).toMatch(/\/apple-touch-icon\.png$/);
     });
 
     it('does not offer the standalone stream', async () => {

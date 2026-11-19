@@ -111,7 +111,17 @@ export class McpToolsService {
 
   /** A server with every tool registered, bound to the person calling. */
   createServer(identity: McpIdentity): McpServer {
-    const server = new McpServer({ name: 'motvin', version: '1.0.0' }, { instructions: INSTRUCTIONS });
+    // title, websiteUrl and icons let tools such as VS Code show "Motvin" with its logo.
+    const server = new McpServer(
+      {
+        name: 'motvin',
+        title: 'Motvin',
+        version: '1.0.0',
+        websiteUrl: this.siteUrl,
+        icons: [{ src: `${this.siteUrl}/apple-touch-icon.png`, mimeType: 'image/png', sizes: ['180x180'] }],
+      },
+      { instructions: INSTRUCTIONS },
+    );
     this.registerSearchScreens(server, identity);
     this.registerSearchFlows(server, identity);
     this.registerSearchScreenText(server, identity);

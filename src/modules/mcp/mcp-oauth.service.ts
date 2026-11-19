@@ -353,6 +353,31 @@ export class McpOAuthService implements OnModuleDestroy {
     return true;
   }
 
+  /**
+   * Whether a requested redirect_uri matches one the client registered. Exact
+   * match, except that an http loopback address may use any port: native apps
+   * pick a free port at sign-in time (RFC 8252 §7.3) — Codex registers
+   * http://127.0.0.1/callback/… and then asks for http://127.0.0.1:62955/callback/….
+   */
+  private isRegisteredRedirectUri(registered: string[], requested: string): boolean {
+    if (registered.includes(requested)) return true;
+    let asked: URL;
+    try {
+      asked = new URL(requested);
+    } catch {
+      return false;
+    }
+    if (asked.protocol !== 'http:' || !this.isAcceptableRedirectUri(requested)) return false;
+    return registered.some((uri) => {
+      try {
+        const known = new URL(uri);
+        return known.protocol === 'http:' && known.hostname === asked.hostname && known.pathname === asked.pathname && known.search === asked.search;
+      } catch {
+        return false;
+      }
+    });
+  }
+
   // ----------------------------------------------------------- authorization
 
   /**
@@ -370,7 +395,7 @@ export class McpOAuthService implements OnModuleDestroy {
     if (!redirectUri) {
       if (client.redirect_uris.length !== 1) throw new OAuthError('invalid_request', 'redirect_uri is required');
       redirectUri = client.redirect_uris[0];
-    } else if (!client.redirect_uris.includes(redirectUri)) {
+    } else if (!this.isRegisteredRedirectUri(client.redirect_uris, redirectUri)) {
       throw new OAuthError('invalid_request', 'redirect_uri was not registered by this client');
     }
 
