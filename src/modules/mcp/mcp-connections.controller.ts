@@ -1,4 +1,4 @@
-import { Controller, Delete, Get, Param, Req, Res } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Post, Req, Res } from '@nestjs/common';
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import { McpOAuthService, OAuthError } from './mcp-oauth.service';
 import { McpRateLimitService } from './mcp-rate-limit.service';
@@ -12,6 +12,8 @@ import { McpUsageService } from './mcp-usage.service';
  *                                      calls per day this week, recent searches
  *   DELETE /api/mcp/connections/:id    disconnect one (takes effect immediately)
  *   DELETE /api/mcp/connections        disconnect every tool at once
+ *   POST   /api/mcp/connections/forget disconnect every tool and erase their usage
+ *                                      history, for when they delete their account
  *
  * Authenticated with the person's Firebase ID token (Authorization: Bearer),
  * the same sign-in the rest of motvin.com uses. Answers in the API's usual
@@ -55,6 +57,17 @@ export class McpConnectionsController {
     return this.respond(reply, async () => {
       const person = await this.oauth.identifyPerson(bearer(request));
       return reply.send({ success: true, data: { disconnected: this.oauth.disconnectAll(person.uid) } });
+    });
+  }
+
+  @Post('forget')
+  forget(@Req() request: FastifyRequest, @Res() reply: FastifyReply) {
+    return this.respond(reply, async () => {
+      const person = await this.oauth.identifyPerson(bearer(request));
+      const disconnected = this.oauth.disconnectAll(person.uid);
+      this.usage.forget(person.uid);
+      this.limits.forget(person.uid);
+      return reply.code(200).send({ success: true, data: { disconnected } });
     });
   }
 

@@ -100,6 +100,12 @@ export class McpRateLimitService implements OnModuleDestroy {
     return { used: current.count, limit, resetsAt: current.resetAt };
   }
 
+  /** Forgets a person's counters, for when they delete their account. */
+  forget(uid: string): void {
+    for (const key of [`call:m:${uid}`, `call:d:${uid}`, `preview:${uid}`]) this.windows.delete(key);
+    this.markDirty();
+  }
+
   /** One screen preview for this person. */
   takePreview(uid: string): LimitResult {
     return this.take(`preview:${uid}`, this.limits.previewsPerMinute, MINUTE, 'minute');
