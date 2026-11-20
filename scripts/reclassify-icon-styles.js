@@ -34,6 +34,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const sharp = require("sharp");
 
 const dataRoot = path.join(__dirname, "../data/icons");
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -293,7 +294,39 @@ function detectThemeVariants(icons) {
     if (last === "light") light++;
     else if (last === "dark") dark++;
   }
-  return dark > 0 && dark >= light * 0.5;
+  if (dark > 0 && dark >= light * 0.5) return true;
+  // A colored set has no weights to speak of, so its `-light` is a theme even
+  // without the matching darks: Material Theme ships 49 grey `cursor-light`
+  // style logos beside the coloured originals, and they were landing in Thin.
+  // Every genuine weight set (Fluent, Stash, Letsicons, Iconamoon) is 0% colour.
+  const colored = icons.filter((icon) => isColoredArtwork(icon.svg || "")).length;
+  return light > 0 && colored / icons.length >= 0.5;
+}
+
+/**
+ * Material Symbols ships each icon twice per weight: `10k` (filled) beside
+ * `10k-outline`, and likewise `10k-rounded` / `10k-outline-rounded`. Its thin
+ * weight is declared "thin" as a whole, so without this the filled half - 6,397
+ * solid shapes - filled the Thin chip next to the hairline icons. A bare name
+ * counts as the filled twin only where its outline sibling exists; icons with
+ * no fill variant (`123`, arrows) ship once and stay where they are.
+ */
+const TWIN_SHAPES = ["-rounded", "-sharp"];
+
+function outlineTwinName(name) {
+  const shape = TWIN_SHAPES.find((s) => name.endsWith(s)) || "";
+  return `${name.slice(0, name.length - shape.length)}-outline${shape}`;
+}
+
+function detectFilledTwins(icons) {
+  const names = new Set(icons.map((icon) => icon.name || icon.id));
+  const filled = new Set();
+  for (const name of names) {
+    if (splitTokens(name).includes("outline")) continue;
+    if (names.has(outlineTwinName(name))) filled.add(name);
+  }
+  // Covers a set, not a stray pair.
+  return filled.size >= 25 && filled.size / names.size >= 0.1 ? filled : new Set();
 }
 
 /**
@@ -422,6 +455,15 @@ function classify(icon, info, ctx) {
   // adjust. That is why Thin does not get the same override as Duotone.
   if (info.adjustableStroke) return "outline";
 
+  // A thin-weight icon drawn as a filled shape does not read as thin; the
+  // artwork decides, as for every other fill.
+  if (
+    variant === "thin" &&
+    (ctx.filledTwins.has(icon.name || icon.id) || ctx.filledThin.has(icon.id))
+  ) {
+    return byArtwork(info);
+  }
+
   if (variant) return variant;
 
   if (ctx.prefixPartition) return byArtwork(info);
@@ -479,7 +521,112 @@ const writeJson = (file, value) => {
   }
 };
 
-function main() {
+// --------------------------------------------------------------------
+// Filled area
+//
+// A thin weight is a promise about lines, but Material Symbols, Fluent and
+// Atlas also draw filled badges, dots, hearts and half-filled shapes inside
+// their thin and light weights (`business-chip-outline`, `star-rate-half`,
+// `signal-cellular-4-bar`). The name cannot reveal them and the paths are all
+// fills, so look at the picture: render it, erode away anything line-thick,
+// and measure the solid area that survives.
+// --------------------------------------------------------------------
+
+const FILL_RENDER_SIZE = 128;
+// An 11px window clears every thin/light line (Phosphor light is 6px at this
+// size, Iconamoon light ~8px) while a notification dot or badge (15px+) stays.
+const FILL_ERODE_RADIUS = 5;
+// Checked by eye against every band: above 0.4% the filled part is plainly
+// visible (badges, filled hearts, half stars); below it, at most a tiny dot
+// such as the eyes of a face.
+const FILLED_AREA_LIMIT = 0.004;
+
+/** Share of the canvas that stays inked after eroding by FILL_ERODE_RADIUS. */
+/** The icon's coverage mask (alpha channel) rendered at S x S, or null. */
+async function renderAlpha(icon, S) {
+  const svg =
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${icon.viewBox || "0 0 24 24"}" ` +
+    `width="${S}" height="${S}" color="#000" fill="currentColor">${icon.svg || ""}</svg>`;
+  try {
+    return await sharp(Buffer.from(svg))
+      .resize(S, S)
+      .ensureAlpha()
+      .extractChannel(3)
+      .raw()
+      .toBuffer();
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Inked pixels that survive an erosion of radius R. Separable: a pixel
+ * survives when its whole row window is inked (pass 1) and every row in its
+ * column window survived (pass 2).
+ */
+function erodedCount(alpha, S, R) {
+  const rows = new Uint8Array(S * S);
+  for (let y = 0; y < S; y++) {
+    let run = 0;
+    for (let x = 0; x < S; x++) {
+      run = alpha[y * S + x] > 128 ? run + 1 : 0;
+      if (run >= 2 * R + 1) rows[y * S + x - R] = 1;
+    }
+  }
+  let count = 0;
+  for (let x = 0; x < S; x++) {
+    let run = 0;
+    for (let y = 0; y < S; y++) {
+      run = rows[y * S + x] ? run + 1 : 0;
+      if (run >= 2 * R + 1) count++;
+    }
+  }
+  return count;
+}
+
+/** Share of the canvas that stays inked after eroding by FILL_ERODE_RADIUS. */
+async function solidAreaShare(icon) {
+  const S = FILL_RENDER_SIZE;
+  const alpha = await renderAlpha(icon, S);
+  if (!alpha) return 0; // unrenderable artwork is left to the other rules
+  return erodedCount(alpha, S, FILL_ERODE_RADIUS) / (S * S);
+}
+
+// --------------------------------------------------------------------
+// Line weight
+//
+// Thin mixes true hairlines (Carbon Pictograms, Phosphor thin, Linea) with
+// sets whose "thin" is really a light weight (Material Symbols, Atlas,
+// Phosphor light), and Phosphor ships both under the same names. The API
+// lists hairlines first, so it needs a weight per icon: render at 96px and
+// take the share of ink that survives a 3x3 erosion. A ~1px line leaves
+// nothing behind; heavier lines keep their core. Typical values: hairline
+// sets 0.01-0.24, light weights 0.45+.
+// --------------------------------------------------------------------
+
+const WEIGHT_RENDER_SIZE = 96;
+
+async function lineWeight(icon) {
+  const S = WEIGHT_RENDER_SIZE;
+  const alpha = await renderAlpha(icon, S);
+  if (!alpha) return null;
+  let ink = 0;
+  for (let p = 0; p < S * S; p++) if (alpha[p] > 128) ink++;
+  if (!ink) return null;
+  return Math.round((erodedCount(alpha, S, 1) / ink) * 1000) / 1000;
+}
+
+/** Thin-weight icons whose artwork carries a visible filled area. */
+async function detectFilledThin(icons, ctx) {
+  const filled = new Set();
+  for (const icon of icons) {
+    if (declaredVariant(icon, ctx) !== "thin") continue;
+    if ((await solidAreaShare(icon)) > FILLED_AREA_LIMIT) filled.add(icon.id);
+  }
+  return filled;
+}
+
+async function main() {
   const collectionsFile = path.join(dataRoot, "collections.json");
   const collectionsData = readJson(collectionsFile);
   const byId = new Map(collectionsData.collections.map((c) => [c.id, c]));
@@ -500,22 +647,26 @@ function main() {
     if (!fs.existsSync(iconsFile)) continue;
 
     const icons = readJson(iconsFile);
-    for (const icon of icons) normalize(icon, collectionId);
+    for (const icon of icons) {
+      normalize(icon, collectionId);
+      // Keep the first run's value: re-running must not read back its own output.
+      if (!("sourceStyle" in icon)) icon.sourceStyle = icon.style ?? null;
+    }
 
     const ctx = {
       prefixPartition: detectPrefixPartition(icons),
       themeVariants: detectThemeVariants(icons),
       suffixVariants: detectSuffixVariants(icons),
       duotoneAnywhere: detectDuotoneAnywhere(icons),
+      filledTwins: detectFilledTwins(icons),
     };
+    // Needs the rest of ctx: only icons that declare the thin variant are drawn.
+    ctx.filledThin = await detectFilledThin(icons, ctx);
 
     const counts = {};
     let moved = 0;
 
     for (const icon of icons) {
-      // Keep the first run's value: re-running must not read back its own output.
-      if (!("sourceStyle" in icon)) icon.sourceStyle = icon.style ?? null;
-
       const info = analyzeSvg(icon.svg || "");
       const style = classify(icon, info, ctx);
 
@@ -548,6 +699,12 @@ function main() {
 
     totalIcons += icons.length;
     totalMoved += moved;
+    // Only Thin is ordered by weight; anything that left Thin drops a stale one.
+    for (const icon of icons) {
+      if (icon.style === "thin") icon.lineWeight = await lineWeight(icon);
+      else delete icon.lineWeight;
+    }
+
     writeJson(iconsFile, icons);
 
     // metadata.json and the collections.json entry both feed the style chips.
@@ -597,4 +754,7 @@ function main() {
   );
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

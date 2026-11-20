@@ -13,6 +13,18 @@ function styleRank(style?: string): number {
   return i === -1 ? STYLE_ORDER.length : i;
 }
 
+// Thin holds true hairlines and heavier light weights side by side (Phosphor
+// ships both under the same names). Hairlines are listed first so the grid
+// reads evenly. lineWeight comes from scripts/reclassify-icon-styles.js:
+// hairline sets measure 0.01-0.24, light weights 0.45+.
+const HAIRLINE_MAX_WEIGHT = 0.33;
+
+function weightBand(result: any): number {
+  if (result.style !== 'thin') return 0;
+  const weight = typeof result.lineWeight === 'number' ? result.lineWeight : 1;
+  return weight <= HAIRLINE_MAX_WEIGHT ? 0 : 1;
+}
+
 interface Icon {
   id: string;
   name: string;
@@ -66,7 +78,7 @@ export class IconsService implements OnModuleInit {
     this.miniSearch = new MiniSearch({
       idField: 'uid',
       fields: ['name', 'tags'],
-      storeFields: ['id', 'name', 'collection', 'collectionName', 'category', 'style', 'viewBox', 'license', 'isEditableStroke', 'imageUrl', 'source', 'sourceName', 'author', 'licenseUrl']
+      storeFields: ['id', 'name', 'collection', 'collectionName', 'category', 'style', 'viewBox', 'license', 'isEditableStroke', 'lineWeight', 'imageUrl', 'source', 'sourceName', 'author', 'licenseUrl']
     });
     
     // We don't await this so the server starts immediately. The search will wait or fallback until ready.
@@ -265,6 +277,12 @@ export class IconsService implements OnModuleInit {
       const hasFilters = collectionsToSearch || categoryFilter || styleFilter || licenseFilter || idsFilter;
       results = hasFilters ? this.allIconsMetadata.filter(filterFn) : this.allIconsMetadata;
       results = results.map(r => ({ ...r, relevance: 0.5 }));
+
+      // Browsing Thin: hairlines first, then the heavier light weights. The
+      // sort is stable, so each band keeps the curated collection order.
+      if (styleFilter && styleFilter.length === 1 && styleFilter[0] === 'thin') {
+        results.sort((a, b) => weightBand(a) - weightBand(b));
+      }
     } else {
       // Use MiniSearch
       const searchResults = this.miniSearch.search(query, {
@@ -282,8 +300,13 @@ export class IconsService implements OnModuleInit {
       // Deliberately not applied to the empty query: browsing with no search
       // renders collections in their curated order (Phosphor first), and
       // regrouping that by style would change the default view.
+      // Within Thin, every hairline hit comes before the heavier light
+      // weights, matching the browse order; relevance orders each group.
       results.sort(
-        (a, b) => styleRank(a.style) - styleRank(b.style) || b.relevance - a.relevance,
+        (a, b) =>
+          styleRank(a.style) - styleRank(b.style) ||
+          weightBand(a) - weightBand(b) ||
+          b.relevance - a.relevance,
       );
     }
 
@@ -294,6 +317,8 @@ export class IconsService implements OnModuleInit {
 
     // Fetch full SVG payloads only for the paginated items
     for (const item of paginated) {
+      // Lets the client keep hairlines ahead when it re-sorts a page by name.
+      item.weightBand = weightBand(item);
       const colIcons = await this.loaderService.getCollection(item.collection);
       if (colIcons) {
         const fullIcon = colIcons.find((i: any) => i.id === item.id);
