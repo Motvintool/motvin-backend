@@ -115,6 +115,18 @@ export class McpUsageService implements OnModuleDestroy {
     };
   }
 
+  /**
+   * Forgets a person, for when they delete their account: their own days and
+   * searches, and their (hashed) place in each day's head count. The day
+   * totals stay, since they no longer point at anyone.
+   */
+  forget(uid: string): void {
+    const person = hashPerson(uid);
+    this.people.delete(person);
+    for (const day of this.daysByDate.values()) day.people = day.people.filter((entry) => entry !== person);
+    this.markDirty();
+  }
+
   private recordForPerson(key: string, call: UsageCall): void {
     let mine = this.people.get(key);
     if (!mine) {

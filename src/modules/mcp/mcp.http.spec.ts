@@ -785,6 +785,30 @@ describe('Motvin MCP over HTTP', () => {
       expect((await rpc(other.tokens.access_token, 'tools/list', {})).statusCode).toBe(200);
     });
 
+    it('forgets a person who deletes their account: tools cut off, usage erased, others untouched', async () => {
+      const rae = { sub: 'uid-rae', email: 'rae@example.com' };
+      const kit = { sub: 'uid-kit', email: 'kit@example.com' };
+      const usage = (person: typeof rae) => inject({ method: 'GET', url: '/api/mcp/connections/usage', headers: { authorization: `Bearer ${firebaseToken(person)}` } });
+      const mine = await connect(rae);
+      const theirs = await connect(kit);
+      await callTool(mine.tokens.access_token, 'search_screens', { query: 'paywall', platform: 'ios' });
+      await callTool(theirs.tokens.access_token, 'search_screens', { query: 'checkout', platform: 'ios' });
+      expect((await usage(rae)).json().data.recent_searches).toHaveLength(1);
+
+      const res = await inject({ method: 'POST', url: '/api/mcp/connections/forget', headers: { authorization: `Bearer ${firebaseToken(rae)}` } });
+      expect(res.statusCode).toBe(200);
+      expect(res.json().data).toEqual({ disconnected: 1 });
+
+      expect((await rpc(mine.tokens.access_token, 'tools/list', {})).statusCode).toBe(401);
+      const after = (await usage(rae)).json().data;
+      expect(after.recent_searches).toEqual([]);
+      expect(after.today.used).toBe(0);
+      expect(after.days.every((day: { calls: number }) => day.calls === 0)).toBe(true);
+
+      expect((await rpc(theirs.tokens.access_token, 'tools/list', {})).statusCode).toBe(200);
+      expect((await usage(kit)).json().data.recent_searches).toHaveLength(1);
+    });
+
     it('drops a connection when the tool itself disconnects', async () => {
       const { tokens } = await connect({ sub: 'uid-jo', email: 'jo@example.com' });
       await inject({ method: 'POST', url: '/api/mcp/oauth/revoke', payload: { token: tokens.refresh_token } });
