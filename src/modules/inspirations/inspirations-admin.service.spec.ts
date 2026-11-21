@@ -91,6 +91,36 @@ describe('InspirationsAdminService', () => {
       expect(() => service.saveSettings({ newThisWeek: { added: { ios: ['../etc'] } } })).toThrow();
       expect(existsSync(join(store, 'settings.json'))).toBe(false);
     });
+
+    describe('kept outside the store (INSPIRATIONS_SETTINGS_FILE)', () => {
+      let saved: string;
+      beforeEach(() => {
+        saved = join(tmp, 'state', 'settings.json');
+        process.env.INSPIRATIONS_SETTINGS_FILE = saved;
+      });
+      afterEach(() => {
+        delete process.env.INSPIRATIONS_SETTINGS_FILE;
+      });
+
+      it("starts from the store's copy, then saves only to its own file", () => {
+        writeFileSync(join(store, 'settings.json'), JSON.stringify({ freshness: { newDays: 7, updatedDays: 7 } }));
+        expect(service.getState().settings.freshness).toEqual({ newDays: 7, updatedDays: 7 });
+        service.saveSettings({ newThisWeek: { added: { ios: ['notion'] } } });
+        expect(JSON.parse(readFileSync(saved, 'utf-8')).newThisWeek.added.ios).toEqual(['notion']);
+        expect(JSON.parse(readFileSync(join(store, 'settings.json'), 'utf-8')).newThisWeek).toBeUndefined();
+      });
+
+      it('survives a redeploy that brings back an older manifest and settings from git', async () => {
+        service.saveSettings({ newThisWeek: { added: { ios: ['notion'], webs: ['canva'] } } });
+        // What a deploy does: the store comes back as it is in git, the saved file stays.
+        const fromGit = { ...readManifest(store), settings: { freshness: { newDays: 14, updatedDays: 14 } } };
+        writeFileSync(join(store, 'manifest.json'), JSON.stringify(fromGit));
+        writeFileSync(join(store, 'settings.json'), JSON.stringify({ freshness: { newDays: 14, updatedDays: 14 } }));
+        const { loader: afterDeploy } = makeService(tmp);
+        const served = (await afterDeploy.getManifest()).settings;
+        expect(served?.newThisWeek?.added).toEqual({ ios: ['notion'], webs: ['canva'] });
+      });
+    });
   });
 
   describe('app category', () => {

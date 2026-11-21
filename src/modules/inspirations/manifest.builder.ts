@@ -354,10 +354,23 @@ function freshDays(value: unknown, fallback: number): number {
   return Number.isInteger(n) && n >= 0 && n <= MAX_FRESH_DAYS ? n : fallback;
 }
 
-/** The store's settings, with defaults for anything missing or out of range. */
+/**
+ * Where the settings are saved. INSPIRATIONS_SETTINGS_FILE puts them outside the
+ * data folder — in production a mounted folder, so a redeploy (which rebuilds the
+ * data folder from git) keeps what the admin saved. Unset, they sit in the store.
+ */
+export function settingsFile(root: string): string {
+  return process.env.INSPIRATIONS_SETTINGS_FILE || join(root, 'settings.json');
+}
+
+/**
+ * The store's settings, with defaults for anything missing or out of range. Until
+ * the admin first saves to INSPIRATIONS_SETTINGS_FILE, the store's own copy is read.
+ */
 export function readLibrarySettings(root: string): LibrarySettings {
+  const saved = settingsFile(root);
   const file = readJson<Partial<{ freshness: Record<string, unknown>; newThisWeek: Record<string, unknown> }>>(
-    join(root, 'settings.json'),
+    existsSync(saved) ? saved : join(root, 'settings.json'),
     {},
   );
   const fresh = file.freshness ?? {};

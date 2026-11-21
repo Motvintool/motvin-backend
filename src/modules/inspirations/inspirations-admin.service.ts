@@ -26,6 +26,7 @@ import {
   MAX_NEW_THIS_WEEK_IDS,
   sectionLists,
   readLibrarySettings,
+  settingsFile,
   titleCase,
   VERSION_DIR_RE,
   VERSIONS_DIR_NAME,
@@ -369,7 +370,7 @@ export class InspirationsAdminService {
       freshness: { newDays: days('newDays', '"Latest"'), updatedDays: days('updatedDays', '"Updated"') },
       newThisWeek: { added: lists('added'), order: lists('order') },
     };
-    this.writeJson(join(this.root, 'settings.json'), settings);
+    this.writeJson(settingsFile(this.root), settings);
     return { settings, report: this.rebuild() };
   }
 
