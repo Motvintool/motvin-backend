@@ -34,6 +34,11 @@ COPY --from=builder /app/dist ./dist
 # Copy icon data (pre-built locally)
 COPY data/ ./data/
 
+# The library admin's settings (Week's new apps, Latest / Updated days) are saved
+# here, outside ./data, which every deploy rebuilds from git. Mount a persistent
+# volume at /app/state so they survive redeploys.
+ENV INSPIRATIONS_SETTINGS_FILE=/app/state/settings.json
+
 # Expose port
 EXPOSE 5000
 

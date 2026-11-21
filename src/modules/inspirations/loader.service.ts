@@ -2,6 +2,7 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { mkdir, readFile, rename, stat, writeFile } from 'fs/promises';
 import { join, resolve, sep } from 'path';
+import { readLibrarySettings } from './manifest.builder';
 
 /**
  * Loads data/inspirations/manifest.json — the index the build script writes
@@ -234,6 +235,13 @@ export class LoaderService implements OnModuleInit {
         cardScreens: Array.isArray(app.cardScreens) ? app.cardScreens : [],
       }));
       parsed.taxonomy = { ...EMPTY_MANIFEST.taxonomy, ...(parsed.taxonomy || {}) };
+      // The settings as saved now, not as they were when this manifest was built: a redeploy brings the
+      // manifest from git, while the admin's settings live in their own file (INSPIRATIONS_SETTINGS_FILE).
+      try {
+        parsed.settings = readLibrarySettings(this.root);
+      } catch (error) {
+        this.logger.warn(`Settings unreadable, serving the manifest's own: ${(error as Error).message}`);
+      }
       this.manifest = { ...EMPTY_MANIFEST, ...parsed };
       this.manifestMtime = mtime;
       this.index();
