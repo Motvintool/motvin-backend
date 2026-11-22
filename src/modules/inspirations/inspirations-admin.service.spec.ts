@@ -931,4 +931,103 @@ describe('InspirationsAdminService', () => {
       expect(() => service.deleteVersion('acme', '2025-01-15')).toThrow(/only one version/i);
     });
   });
+
+  describe('store screenshots', () => {
+    const approve = () =>
+      service.saveSource('acme', { permission: 'own-work', license: 'CC0', attribution: 'Motvin', redistribution: 'allowed', status: 'approved' });
+
+    beforeEach(() => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'home.png', PNG_1X1, false, '');
+      approve();
+    });
+
+    it('saves a set as webp in order under store/<platform>/<app>/<date>, and publishes it on that platform only', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
+      await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-11-01', last: true });
+      // Acme is not on the web: a web set is refused, as it would never show.
+      await expect(service.uploadStoreShot('web', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true })).rejects.toThrow(/no web screens/);
+
+      expect(existsSync(join(store, 'store', 'ios', 'acme', '2026-11-01', '2.webp'))).toBe(true);
+      const app = readManifest(store).apps.find((a: any) => a.id === 'acme');
+      expect(Object.keys(app.storeShots)).toEqual(['ios']);
+      expect(app.storeShots.ios.date).toBe('2026-11-01');
+      expect(app.storeShots.ios.source).toBe('manual');
+      expect(app.storeShots.ios.images.map((i: any) => i.file)).toEqual(['ios/acme/2026-11-01/1.webp', 'ios/acme/2026-11-01/2.webp']);
+      expect(app.storeShots.ios.images[0].url).toMatch(/^\/api\/inspirations\/store\/ios\/acme\/2026-11-01\/1\.webp\?v=/);
+    });
+
+    it('replaces a day\'s set when one is uploaded again, and shows the newest day', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-10-01', start: true });
+      await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-10-01', last: true });
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
+      await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-11-01' });
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true });
+
+      const set = readManifest(store).apps[0].storeShots.ios;
+      expect(set.date).toBe('2026-11-01');
+      expect(set.images).toHaveLength(1);
+
+      service.deleteStoreShots('ios', 'acme', '2026-11-01');
+      expect(readManifest(store).apps[0].storeShots.ios.date).toBe('2026-10-01');
+
+      // The last set gone: no set on the app, and no empty folders left behind.
+      service.deleteStoreShots('ios', 'acme', '2026-10-01');
+      expect(readManifest(store).apps[0].storeShots).toEqual({});
+      expect(existsSync(join(store, 'store', 'ios'))).toBe(false);
+    });
+
+    it('marks a set downloadable only where the app\'s licence allows redistribution', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true });
+      expect(readManifest(store).apps[0].storeShots.ios.downloadable).toBe(true);
+
+      service.saveSource('acme', { permission: 'own-work', license: 'All rights reserved', attribution: 'Acme', redistribution: 'view-only', status: 'approved' });
+      expect(readManifest(store).apps[0].storeShots.ios.downloadable).toBe(false);
+    });
+
+    it('keeps the published set when a new one fails part way, and publishes nothing until its last image', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
+      await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-11-01', last: true });
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
+      expect(readManifest(store).apps[0].storeShots.ios.images).toHaveLength(2);
+      await expect(service.uploadStoreShot('ios', 'acme', '2', Buffer.from('not an image'), { date: '2026-11-01', last: true })).rejects.toThrow(/not an image/i);
+      expect(readManifest(store).apps[0].storeShots.ios.images).toHaveLength(2);
+      // An image with no set begun is refused rather than left loose.
+      await expect(service.uploadStoreShot('ios', 'acme', '3', PNG_1X1, { date: '2026-12-01' })).rejects.toThrow(/first image/);
+    });
+
+    it('refuses what is not an image, an unlisted app, a bad index or date', async () => {
+      await expect(service.uploadStoreShot('ios', 'acme', '1', Buffer.from('not an image'), { start: true })).rejects.toThrow(/not an image/i);
+      await expect(service.uploadStoreShot('ios', 'nobody', '1', PNG_1X1, {})).rejects.toThrow(/No app/);
+      await expect(service.uploadStoreShot('ios', 'acme', '0', PNG_1X1, { start: true })).rejects.toThrow(/index/);
+      await expect(service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '../x', start: true })).rejects.toThrow(/YYYY-MM-DD/);
+      await expect(service.uploadStoreShot('desktop', 'acme', '1', PNG_1X1, { start: true })).rejects.toThrow(/platform/);
+    });
+
+    it('removes one image of a set, moving the ones after it up, and the set with its last image', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
+      await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-11-01' });
+      await service.uploadStoreShot('ios', 'acme', '3', PNG_1X1, { date: '2026-11-01', last: true });
+      service.deleteStoreShot('ios', 'acme', '2026-11-01', '2');
+      expect(readManifest(store).apps[0].storeShots.ios.images.map((i: any) => i.file.split('/').pop())).toEqual(['1.webp', '2.webp']);
+      service.deleteStoreShot('ios', 'acme', '2026-11-01', '1');
+      service.deleteStoreShot('ios', 'acme', '2026-11-01', '1');
+      expect(readManifest(store).apps[0].storeShots).toEqual({});
+      expect(() => service.deleteStoreShot('ios', 'acme', '2026-11-01', '1')).toThrow(/No store screenshots|No such/);
+    });
+
+    it('removes an app\'s store screenshots with the app', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true });
+      service.deleteApp('acme');
+      expect(existsSync(join(store, 'store', 'ios', 'acme'))).toBe(false);
+    });
+
+    it('serves only the store images the manifest lists', async () => {
+      await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true });
+      const loader = makeService(tmp).loader;
+      await loader.getApp('acme');
+      expect(await loader.resolveServableFile('store/ios/acme/2026-11-01/1.webp')).toBe(join(store, 'store', 'ios', 'acme', '2026-11-01', '1.webp'));
+      expect(await loader.resolveServableFile('store/ios/acme/2026-11-01/meta.json')).toBeNull();
+    });
+  });
 });

@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { existsSync, mkdirSync, readdirSync, renameSync, rmSync, statSync, writeFileSync } from 'fs';
+import { existsSync, mkdirSync, readdirSync, renameSync, rmSync, statSync, utimesSync, writeFileSync } from 'fs';
 import { basename, extname, join, resolve, sep } from 'path';
 import {
   APPROVED_STATUS,
@@ -17,10 +17,12 @@ import {
   PLATFORMS,
   readDimensions,
   readJson,
+  readStoreShots,
   REVIEW_STATUSES,
   screenIdFor,
   SCREEN_STATES,
   SCREEN_TYPES,
+  STORE_DIR_NAME,
   STYLES,
   MAX_FRESH_DAYS,
   MAX_NEW_THIS_WEEK_IDS,
@@ -42,11 +44,13 @@ type ImageOps = {
   removeAlpha(): ImageOps;
   toColourspace(space: string): ImageOps;
   raw(): ImageOps;
+  webp(options?: { quality?: number }): ImageOps;
   toBuffer(): Promise<Buffer>;
+  toFile(file: string): Promise<unknown>;
 };
 // sharp's types sit behind its package "exports", which this project's module resolution does not read.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const sharp: (input: string) => ImageOps = require('sharp');
+const sharp: (input: string | Buffer) => ImageOps = require('sharp');
 
 /**
  * How bright (0–1, perceived) the bottom of a screenshot can be and still
@@ -55,6 +59,9 @@ const sharp: (input: string) => ImageOps = require('sharp');
  * 0.43 there, its light ones at or above it.
  */
 const DARK_BELOW = 0.42;
+
+/** The size part of an App Store artwork template ("…/{w}x{h}{c}.{f}"), swapped for a real size to download it. */
+const TEMPLATE_SIZE = /\{w\}x\{h\}\{c\}\.\{f\}$/;
 
 /**
  * Every write into data/inspirations goes through here.
@@ -299,6 +306,7 @@ export class InspirationsAdminService {
         return a.file.localeCompare(b.file, undefined, { numeric: true });
       }),
       logos,
+      store: this.storeSummary(apps),
       counts: manifest.counts || {},
       settings: readLibrarySettings(this.root),
       generatedAt: manifest.generatedAt || null,
@@ -911,6 +919,311 @@ export class InspirationsAdminService {
     return { logo: `${appId}${ext}`, report: this.rebuild() };
   }
 
+  // ─── Store screenshots ────────────────────────────────────────────────────
+
+  /** Per app, per platform: the newest store screenshot set the admin tabs show ("6 images · 22 Nov 2026"). */
+  private storeSummary(apps: any[]) {
+    const summary: Record<string, Record<string, { date: string; label: string; count: number; source: string; urls: string[] }>> = {};
+    for (const app of apps) {
+      for (const platform of PLATFORMS) {
+        const set = readStoreShots(this.root, platform, app.id);
+        if (!set) continue;
+        (summary[app.id] ||= {})[platform] = {
+          date: set.date,
+          label: set.label,
+          count: set.images.length,
+          source: set.source,
+          urls: set.images.map((image) => image.url),
+        };
+      }
+    }
+    return summary;
+  }
+
+  private assertListedApp(appIdRaw: string): { appId: string; app: any } {
+    const appId = this.assertSlug(appIdRaw, 'app');
+    const apps = readJson<{ apps?: any[] }>(join(this.root, 'apps.json'), { apps: [] }).apps || [];
+    const app = apps.find((a) => a.id === appId);
+    if (!app) throw new NotFoundException(`No app "${appId}" in apps.json`);
+    return { appId, app };
+  }
+
+  /** Store screenshots only for a platform the app has screens on: the app page shows no other, so they would never appear. */
+  private assertAppOnPlatform(appId: string, platform: string) {
+    if (!existsSync(this.inStore('screens', platform, appId))) {
+      throw new BadRequestException(`"${appId}" has no ${platform} screens, so screenshots there would not show`);
+    }
+  }
+
+  /**
+   * One image of a manually uploaded store set, saved as `<index>.webp`.
+   * Images gather in a hidden staging folder (the folder watcher ignores
+   * dotfiles): `start` begins it afresh, and `last` moves the whole set into
+   * that day's folder — replacing what was there — and rebuilds. A set that
+   * fails part way leaves the published one untouched.
+   */
+  async uploadStoreShot(
+    platformRaw: string,
+    appIdRaw: string,
+    indexRaw: string,
+    body: Buffer,
+    options: { date?: string; start?: boolean; last?: boolean } = {},
+  ) {
+    const platform = this.assertPlatform(platformRaw);
+    const { appId } = this.assertListedApp(appIdRaw);
+    this.assertAppOnPlatform(appId, platform);
+    const index = Number(indexRaw);
+    if (!Number.isInteger(index) || index < 1 || index > 30) throw new BadRequestException('index must be 1 to 30');
+    const date = this.assertVersion(options.date) || localDateString();
+    if (!body || !Buffer.isBuffer(body) || body.length === 0) throw new BadRequestException('The image is empty');
+    if (body.length > this.maxUploadBytes) throw new BadRequestException('The image is too large');
+
+    const staging = this.inStore(STORE_DIR_NAME, platform, appId, `.upload-${date}`);
+    if (options.start) {
+      rmSync(staging, { recursive: true, force: true });
+      mkdirSync(staging, { recursive: true });
+    } else if (!existsSync(staging)) {
+      throw new BadRequestException('Start the set with its first image');
+    }
+    const target = join(staging, `${index}.webp`);
+    try {
+      await sharp(body).webp({ quality: 90 }).toFile(target);
+    } catch {
+      rmSync(target, { force: true });
+      throw new BadRequestException('That file is not an image Motvin can read');
+    }
+    const dims = readDimensions(target);
+    if (!dims) {
+      rmSync(target, { force: true });
+      throw new BadRequestException('That file is not an image Motvin can read');
+    }
+    if (!options.last) return { file: `${index}.webp`, date, ...dims, report: null };
+
+    this.writeJson(join(staging, 'meta.json'), { source: 'manual', savedAt: new Date().toISOString() });
+    const dir = this.inStore(STORE_DIR_NAME, platform, appId, date);
+    rmSync(dir, { recursive: true, force: true });
+    renameSync(staging, dir);
+    return { file: `${index}.webp`, date, ...dims, report: this.rebuild() };
+  }
+
+  /** Removes one dated store set; the app falls back to its next newest one, if any. */
+  deleteStoreShots(platformRaw: string, appIdRaw: string, dateRaw: string) {
+    const platform = this.assertPlatform(platformRaw);
+    const appId = this.assertSlug(appIdRaw, 'app');
+    const date = this.assertVersion(dateRaw);
+    if (!date) throw new BadRequestException('date is required');
+    const dir = this.inStore(STORE_DIR_NAME, platform, appId, date);
+    if (!existsSync(dir)) throw new NotFoundException('No store screenshots on that date');
+    rmSync(dir, { recursive: true, force: true });
+    // The app's folder, then the platform's, go too once nothing is left in them.
+    for (const parent of [this.inStore(STORE_DIR_NAME, platform, appId), this.inStore(STORE_DIR_NAME, platform)]) {
+      if (existsSync(parent) && readdirSync(parent).length === 0) rmSync(parent, { recursive: true, force: true });
+    }
+    return { report: this.rebuild() };
+  }
+
+  /**
+   * Removes one image of a dated store set; those after it move up a place
+   * (4.webp becomes 3.webp), so the set stays numbered in order. The last
+   * one going takes the set with it. A later App Store fetch sees the set
+   * as changed and saves the store's full set again.
+   */
+  deleteStoreShot(platformRaw: string, appIdRaw: string, dateRaw: string, indexRaw: string) {
+    const platform = this.assertPlatform(platformRaw);
+    const appId = this.assertSlug(appIdRaw, 'app');
+    const date = this.assertVersion(dateRaw);
+    if (!date) throw new BadRequestException('date is required');
+    const index = Number(indexRaw);
+    if (!Number.isInteger(index) || index < 1) throw new BadRequestException('index must be 1 or more');
+    const dir = this.inStore(STORE_DIR_NAME, platform, appId, date);
+    const target = join(dir, `${index}.webp`);
+    if (!existsSync(target)) throw new NotFoundException('No such store screenshot');
+    const count = readdirSync(dir).filter((f) => /^\d+\.webp$/.test(f)).length;
+    if (count <= 1) return this.deleteStoreShots(platform, appId, date);
+    rmSync(target, { force: true });
+    for (let n = index + 1; n <= count; n++) {
+      const from = join(dir, `${n}.webp`);
+      if (!existsSync(from)) continue;
+      const to = join(dir, `${n - 1}.webp`);
+      renameSync(from, to);
+      // A new time, so its address (which carries the file's time) skips the old picture in browsers' caches.
+      const now = new Date();
+      utimesSync(to, now, now);
+    }
+    return { report: this.rebuild() };
+  }
+
+  /**
+   * Takes an iOS app's iPhone screenshots from its App Store page.
+   *
+   * The app is found by the id its last fetch saved, else by an App Store
+   * link in its source record, else by an exact name match in the store's
+   * search. A set the same as the newest one is left alone; a changed one is
+   * saved under today's date, keeping the older sets as history unless
+   * `replace` asks for them to go.
+   */
+  async fetchStoreShots(appIdRaw: string, options: { country?: string; replace?: boolean } = {}) {
+    const { appId, app } = this.assertListedApp(appIdRaw);
+    this.assertAppOnPlatform(appId, 'ios');
+    const country = /^[a-z]{2}$/.test(options.country || '') ? (options.country as string) : 'us';
+    const appDir = this.inStore(STORE_DIR_NAME, 'ios', appId);
+    const dates = existsSync(appDir)
+      ? readdirSync(appDir).filter((d) => VERSION_DIR_RE.test(d)).sort()
+      : [];
+    const lastMeta = dates.length
+      ? readJson<{ trackId?: number; images?: string[]; source?: string; size?: string }>(join(appDir, dates[dates.length - 1], 'meta.json'), {})
+      : {};
+
+    const sources = readJson<{ sources?: Record<string, any> }>(join(this.root, 'sources.json'), { sources: {} }).sources || {};
+    const linkId = /apps\.apple\.com\/.*\/id(\d+)/.exec(sources[appId]?.sourceUrl || '')?.[1];
+    let trackId = lastMeta.trackId || (linkId ? Number(linkId) : null);
+    if (!trackId) trackId = await this.findAppStoreId(app.name || titleCase(appId), country);
+    if (!trackId) {
+      throw new NotFoundException(`Couldn't find "${app.name || appId}" on the App Store. Add its App Store link in Apps → Source.`);
+    }
+
+    const lookup = await this.storeJson(`https://itunes.apple.com/lookup?id=${trackId}&country=${country}&entity=software`);
+    const result = lookup?.results?.[0];
+    if (!result) throw new NotFoundException(`The App Store has no app ${trackId} in the "${country}" store`);
+    // The store page's own iPhone set first — the tall one it shows today. The lookup API often still answers
+    // with an app's old 5.5-inch set, so it is only the fallback when the page can't be read.
+    const fromPage = await this.pageStoreShots(trackId, country);
+    // The size at the end of a lookup URL is a box the store fits the image into; a large one returns the original.
+    const lookupShots: string[] = Array.isArray(result.screenshotUrls) ? result.screenshotUrls : [];
+    // The page unread but the last set came from it: the lookup's (often older) set would look like a change.
+    if (!fromPage && lastMeta.source === 'appstore' && lastMeta.size && lastMeta.size !== 'lookup') {
+      throw new BadRequestException("Couldn't read the App Store page just now; try again");
+    }
+    const shots = fromPage?.urls ?? lookupShots;
+    const downloads = fromPage?.downloads ?? lookupShots.map((url) => url.replace(/\/[^/]+$/, '/3000x3000bb.webp'));
+    if (!shots.length) throw new NotFoundException('That App Store page has no iPhone screenshots');
+
+    const same = Array.isArray(lastMeta.images) && lastMeta.images.join('\n') === shots.join('\n');
+    const matched = { trackId, name: String(result.trackName || '') };
+    if (same) return { status: 'unchanged' as const, date: dates[dates.length - 1], count: shots.length, matched, report: null };
+    // A set uploaded by hand today is the admin's: the agent does not write over it.
+    const today = localDateString();
+    if (dates.includes(today) && readJson<{ source?: string }>(join(appDir, today, 'meta.json'), {}).source !== 'appstore') {
+      throw new BadRequestException("Today's set was uploaded by hand; remove it in Manual Screenshots to fetch again");
+    }
+
+    // Downloaded into a hidden folder first (the folder watcher ignores dotfiles), then moved into place whole,
+    // so a failed download never leaves half a set showing.
+    const date = today;
+    const temp = this.inStore(STORE_DIR_NAME, 'ios', appId, `.fetch-${date}`);
+    rmSync(temp, { recursive: true, force: true });
+    mkdirSync(temp, { recursive: true });
+    try {
+      for (const [i, full] of downloads.entries()) {
+        // Only Apple's image host: the URLs come from a page, and are fetched from this server.
+        const url = new URL(full);
+        if (url.protocol !== 'https:' || !/(^|\.)mzstatic\.com$/.test(url.hostname)) {
+          throw new BadRequestException(`The App Store image ${i + 1} is not on Apple's image host`);
+        }
+        const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+        if (!res.ok) throw new BadRequestException(`The App Store image ${i + 1} failed to download (${res.status})`);
+        if (Number(res.headers.get('content-length') || 0) > this.maxUploadBytes) {
+          throw new BadRequestException(`The App Store image ${i + 1} is too large`);
+        }
+        const bytes = Buffer.from(await res.arrayBuffer());
+        if (bytes.length > this.maxUploadBytes) throw new BadRequestException(`The App Store image ${i + 1} is too large`);
+        const target = join(temp, `${i + 1}.webp`);
+        // Re-encoded, so what is saved as .webp is one, whatever the store sent.
+        try {
+          await sharp(bytes).webp({ quality: 90 }).toFile(target);
+        } catch {
+          throw new BadRequestException(`The App Store image ${i + 1} could not be read`);
+        }
+        if (!readDimensions(target)) throw new BadRequestException(`The App Store image ${i + 1} could not be read`);
+      }
+      this.writeJson(join(temp, 'meta.json'), {
+        source: 'appstore',
+        trackId,
+        trackViewUrl: result.trackViewUrl || null,
+        country,
+        fetchedAt: new Date().toISOString(),
+        size: fromPage?.mediaType ?? 'lookup',
+        images: shots,
+      });
+      if (options.replace) {
+        for (const d of dates) rmSync(join(appDir, d), { recursive: true, force: true });
+      }
+      const dir = join(appDir, date);
+      rmSync(dir, { recursive: true, force: true });
+      renameSync(temp, dir);
+    } finally {
+      rmSync(temp, { recursive: true, force: true });
+    }
+    return { status: dates.length ? ('updated' as const) : ('added' as const), date, count: shots.length, matched, report: this.rebuild() };
+  }
+
+  /**
+   * The iPhone screenshots the app's App Store page shows, read from the data
+   * the page carries (its phone "product media" shelf), each with its
+   * full-size download URL. Null when the page can't be read, so the caller
+   * falls back to the lookup API's set.
+   */
+  private async pageStoreShots(trackId: number, country: string): Promise<{ urls: string[]; downloads: string[]; mediaType: string } | null> {
+    try {
+      const res = await fetch(`https://apps.apple.com/${country}/app/id${trackId}`, {
+        signal: AbortSignal.timeout(20000),
+        headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36' },
+      });
+      if (!res.ok) return null;
+      const html = await res.text();
+      const json = /<script[^>]*id="serialized-server-data"[^>]*>([\s\S]*?)<\/script>/.exec(html)?.[1];
+      if (!json) return null;
+      let shelf: any = null;
+      const walk = (node: any) => {
+        if (shelf || !node || typeof node !== 'object') return;
+        const meta = node.contentsMetadata;
+        if (meta?.type === 'productMedia' && meta.platform?.appPlatform === 'phone' && Array.isArray(node.items)) {
+          shelf = node;
+          return;
+        }
+        for (const value of Object.values(node)) walk(value);
+      };
+      walk(JSON.parse(json));
+      const shots = (shelf?.items || [])
+        .map((item: any) => item?.screenshot)
+        .filter((art: any) => typeof art?.template === 'string' && TEMPLATE_SIZE.test(art.template) && art.width > 0 && art.height > 0);
+      if (!shots.length) return null;
+      return {
+        urls: shots.map((art: any) => art.template),
+        downloads: shots.map((art: any) => art.template.replace(TEMPLATE_SIZE, `${art.width}x${art.height}bb.webp`)),
+        mediaType: String(shelf.contentsMetadata.platform.mediaType || 'phone'),
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  /** The App Store id of the one app whose name matches exactly (ignoring a ": tagline" or " - tagline"), or null. */
+  private async findAppStoreId(name: string, country: string): Promise<number | null> {
+    const norm = (v: string) => v.split(/\s[-–—:|]\s|:\s/)[0].toLowerCase().replace(/[^a-z0-9]+/g, '');
+    const want = norm(name);
+    const data = await this.storeJson(
+      `https://itunes.apple.com/search?term=${encodeURIComponent(name)}&entity=software&country=${country}&limit=10`,
+    );
+    const hits = (data?.results || []).filter((r: any) => typeof r.trackName === 'string' && norm(r.trackName) === want);
+    // Two apps of that name: guessing would save the wrong one for good, so the admin gives its link instead.
+    if (hits.length > 1) {
+      throw new BadRequestException(`Several App Store apps are named "${name}". Add its App Store link in Apps → Source.`);
+    }
+    return hits[0]?.trackId ?? null;
+  }
+
+  private async storeJson(url: string): Promise<any> {
+    let res: Response;
+    try {
+      res = await fetch(url, { signal: AbortSignal.timeout(20000) });
+    } catch {
+      throw new BadRequestException('The App Store did not answer; try again');
+    }
+    if (!res.ok) throw new BadRequestException(`The App Store answered ${res.status}; try again later`);
+    return res.json();
+  }
+
   // ─── Apps ─────────────────────────────────────────────────────────────────
 
   saveApp(input: any) {
@@ -1110,6 +1423,8 @@ export class InspirationsAdminService {
       // Takes the images and their sidecars with it.
       rmSync(dir, { recursive: true, force: true });
     }
+    // Its store screenshots too, on every platform, so an app added again under this id starts clean.
+    for (const platform of PLATFORMS) rmSync(this.inStore(STORE_DIR_NAME, platform, id), { recursive: true, force: true });
 
     let logoRemoved: string | null = null;
     for (const ext of LOGO_EXT) {
@@ -1195,6 +1510,8 @@ export class InspirationsAdminService {
       }
       rmSync(dir, { recursive: true, force: true });
     }
+    // That platform's store screenshots go with it.
+    rmSync(this.inStore(STORE_DIR_NAME, platform, id), { recursive: true, force: true });
 
     // The record stays, without this platform and without its card pictures.
     const appsFile = join(this.root, 'apps.json');

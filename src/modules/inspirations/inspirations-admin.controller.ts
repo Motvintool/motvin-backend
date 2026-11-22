@@ -132,6 +132,40 @@ export class InspirationsAdminController {
     return { success: true, data: this.admin.uploadLogo(app, file, request.body as Buffer) };
   }
 
+  // ─── Store screenshots ────────────────────────────────────────────────────
+
+  @Post('store/:platform/:app/:index')
+  async uploadStoreShot(
+    @Param('platform') platform: string,
+    @Param('app') app: string,
+    @Param('index') index: string,
+    @Query('date') date: string,
+    @Query('start') start: string,
+    @Query('last') last: string,
+    @Req() request: FastifyRequest,
+  ) {
+    const body = request.body as Buffer;
+    return {
+      success: true,
+      data: await this.admin.uploadStoreShot(platform, app, index, body, { date, start: start === '1', last: last === '1' }),
+    };
+  }
+
+  @Delete('store/:platform/:app/:date')
+  deleteStoreShots(@Param('platform') platform: string, @Param('app') app: string, @Param('date') date: string) {
+    return { success: true, data: this.admin.deleteStoreShots(platform, app, date) };
+  }
+
+  @Delete('store/:platform/:app/:date/:index')
+  deleteStoreShot(@Param('platform') platform: string, @Param('app') app: string, @Param('date') date: string, @Param('index') index: string) {
+    return { success: true, data: this.admin.deleteStoreShot(platform, app, date, index) };
+  }
+
+  @Post('store-fetch/:app')
+  async fetchStoreShots(@Param('app') app: string, @Body() body: { country?: string; replace?: boolean }) {
+    return { success: true, data: await this.admin.fetchStoreShots(app, { country: body?.country, replace: body?.replace === true }) };
+  }
+
   // ─── Apps ─────────────────────────────────────────────────────────────────
 
   @Put('apps/:app')

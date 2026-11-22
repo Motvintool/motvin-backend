@@ -314,6 +314,18 @@ export class InspirationsController {
     return this.sendFile(`screens/${platform}/${app}/versions/${version}/${flow}/${file}`, file, download === '1', reply);
   }
 
+  // GET /api/inspirations/store/:platform/:app/:date/:file
+  @Get('store/:platform/:app/:date/:file')
+  async getStoreFile(
+    @Param('platform') platform: string,
+    @Param('app') app: string,
+    @Param('date') date: string,
+    @Param('file') file: string,
+    @Res() reply: FastifyReply,
+  ) {
+    return this.sendFile(`store/${platform}/${app}/${date}/${file}`, file, false, reply);
+  }
+
   // GET /api/inspirations/logos/:file
   @Get('logos/:file')
   async getLogoFile(@Param('file') file: string, @Res() reply: FastifyReply) {
