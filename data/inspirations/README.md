@@ -21,11 +21,30 @@ data/inspirations/
     ios/<app-slug>/      iPhone captures
     android/<app-slug>/  Android captures
   analysis/              <screen-id>.json — real UI analysis output, when it exists
+  store/<platform>/<app-slug>/<YYYY-MM-DD>/
+                         store screenshots: 1.webp, 2.webp… in the store's order,
+                         plus meta.json (source appstore|manual, App Store id…)
 ```
 
 Platform folders match the platform filter in the UI (Web / iOS / Android).
 "Mobile" is deliberately split in two: the gallery filters and the aspect
 ratios differ between the two platforms.
+
+## Store screenshots
+
+An app's store screenshots (its App Store gallery, or images uploaded for a web
+app) sit apart from its screens, one dated folder per time they were taken. The
+app page shows the newest set as its "Screenshots" card; older folders stay as
+history. Sets are per platform and never mix: an iOS set shows only in the app's
+iOS section. They publish with the app (its `sources.json` entry must be
+approved), and visitors can download them only where its `redistribution` is
+`allowed`, as with screens.
+
+Fill them from Library admin: **Manual Screenshots** (any platform; saved as
+WebP, a second upload on the same day replaces that day's set) or **Agent
+Screenshots** (iOS: takes the iPhone set the app's App Store page shows, falling
+back to the lookup API's; an unchanged set is skipped). Like screens, the images
+must be committed — a deploy rebuilds `data/` from git.
 
 ## Screen file naming
 
@@ -186,4 +205,4 @@ npm run build:inspirations
 
 Either way the same builder runs: it scans the folders, reads image dimensions,
 reads each app's source entry, and writes `manifest.json`. The API serves that
-manifest and streams files straight from `screens/` and `logos/`.
+manifest and streams files straight from `screens/`, `logos/` and `store/`.

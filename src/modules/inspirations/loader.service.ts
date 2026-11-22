@@ -2,7 +2,7 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { mkdir, readFile, rename, stat, writeFile } from 'fs/promises';
 import { join, resolve, sep } from 'path';
-import { readLibrarySettings } from './manifest.builder';
+import { readLibrarySettings, STORE_DIR_NAME, type StoreShotSet } from './manifest.builder';
 
 /**
  * Loads data/inspirations/manifest.json — the index the build script writes
@@ -94,6 +94,8 @@ export interface InspirationApp {
   currentVersion: string | null;
   /** Screen ids the admin picked for the app card's carousel, in order; empty when the card chooses for itself. */
   cardScreens: string[];
+  /** The newest store screenshots per platform (see `readStoreShots`); a platform without any is absent. */
+  storeShots?: Record<string, StoreShotSet>;
 }
 
 export interface InspirationFlow {
@@ -268,7 +270,16 @@ export class LoaderService implements OnModuleInit {
         this.servableFiles.set(`screens/${screen.file}`, abs);
       }
     }
+    const storeRoot = resolve(join(this.root, STORE_DIR_NAME));
     for (const app of this.manifest.apps) {
+      for (const set of Object.values(app.storeShots || {})) {
+        for (const image of set.images) {
+          const abs = resolve(join(storeRoot, image.file));
+          if (abs.startsWith(storeRoot + sep)) {
+            this.servableFiles.set(`${STORE_DIR_NAME}/${image.file}`, abs);
+          }
+        }
+      }
       if (!app.logo) continue;
       const name = app.logo.split('/').pop();
       if (!name) continue;

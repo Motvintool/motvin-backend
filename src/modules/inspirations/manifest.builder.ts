@@ -42,6 +42,43 @@ export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 export const VERSIONS_DIR_NAME = 'versions';
 export const VERSION_DIR_RE = /^\d{4}-\d{2}-\d{2}$/;
 
+/**
+ * An app's store screenshots (its App Store gallery, or images the admin
+ * uploaded for a web app) live apart from its screens, one dated folder per
+ * time they were taken: `store/<platform>/<app>/<YYYY-MM-DD>/<n>.webp`, in the
+ * order the store shows them. Older folders stay as history; the newest is shown.
+ * A folder's `meta.json` says where its images came from.
+ */
+export const STORE_DIR_NAME = 'store';
+
+export type StoreShotSet = {
+  date: string;
+  label: string;
+  source: 'appstore' | 'manual';
+  /** Whether the app's licence lets visitors download them — the rule its screens follow. */
+  downloadable: boolean;
+  images: { file: string; url: string; width: number; height: number }[];
+};
+
+/** The newest set of store screenshots an app has on one platform, or null when it has none. */
+export function readStoreShots(root: string, platform: string, appId: string, downloadable = false): StoreShotSet | null {
+  const appDir = join(root, STORE_DIR_NAME, platform, appId);
+  const date = listDirs(appDir).filter((d) => VERSION_DIR_RE.test(d)).pop();
+  if (!date) return null;
+  const dir = join(appDir, date);
+  const images = listFiles(dir, IMAGE_EXT).flatMap((name) => {
+    const dims = readDimensions(join(dir, name));
+    if (!dims) return [];
+    const file = `${platform}/${appId}/${date}/${name}`;
+    // A re-upload keeps the file name, so the URL carries the file's time to get past the week-long image cache.
+    const v = Math.round(statSync(join(dir, name)).mtimeMs).toString(36);
+    return [{ file, url: `/api/inspirations/${STORE_DIR_NAME}/${file}?v=${v}`, ...dims }];
+  });
+  if (!images.length) return null;
+  const meta = readJson<{ source?: string }>(join(dir, 'meta.json'), {});
+  return { date, label: dayLabel(date), source: meta.source === 'appstore' ? 'appstore' : 'manual', downloadable, images };
+}
+
 /** "2026-09-29" → "29 Sep 2026". */
 export function dayLabel(versionId: string): string {
   const [year, month, day] = versionId.split('-').map(Number);
@@ -943,15 +980,16 @@ export function buildInspirationsManifest(root: string): BuildReport {
         const here = cardScreens.filter((sid) => sid.startsWith(`${appId}-${p}-`)).length;
         if (here < 4) warnings.push(`app "${appId}" has ${here} of 4 card pictures on ${p} — pick them in Apps → ${app.name || appId} → Card`);
       }
+      // Where the app lives: what the admin declared, plus anywhere it has published screens.
+      const platforms = PLATFORMS.filter(
+        (p) => (Array.isArray(app.platforms) && app.platforms.includes(p)) || appScreens.some((s) => s.platform === p),
+      );
       return {
         id: appId,
         name: app.name || titleCase(appId),
         slug: appId,
         industry: app.industry,
-        // Where the app lives: what the admin declared, plus anywhere it has published screens.
-        platforms: PLATFORMS.filter(
-          (p) => (Array.isArray(app.platforms) && app.platforms.includes(p)) || appScreens.some((s) => s.platform === p),
-        ),
+        platforms,
         website: app.website || null,
         tagline: app.tagline || null,
         logo: logo ? `/api/inspirations/logos/${logo}` : null,
@@ -973,6 +1011,13 @@ export function buildInspirationsManifest(root: string): BuildReport {
         versions,
         currentVersion: versions[0]?.id ?? null,
         cardScreens,
+        // Per platform, like the screens: an app's iOS store images never show in its Webs section.
+        storeShots: Object.fromEntries(
+          platforms.flatMap((p) => {
+            const set = readStoreShots(root, p, appId, source.redistribution === 'allowed');
+            return set ? [[p, set]] : [];
+          }),
+        ),
         ...readRating(app, problems, appId),
       };
     })
