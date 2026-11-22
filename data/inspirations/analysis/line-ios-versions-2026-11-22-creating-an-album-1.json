@@ -1,0 +1,144 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-creating-an-album-1",
+  "screen_id": "line-ios-versions-2026-11-22-creating-an-album-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:28.137Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating an album",
+  "flow_position": 82,
+  "name": "All albums",
+  "description": "Messages screen. Dark theme, 8 text elements.",
+  "text": "9:41\nAll albums\nAlbums from all your chats are shown here.\nAlbums from one-to-one chats with hidden or\nAlbums 0\nblocked friends will not appear.\nNo albums yet.\nAlbums created in any of your chats will be\nshown here.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “All albums”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 82 of 99 in “Reading messages”",
+        "Reached from “Chats”",
+        "Leads to “All albums toast”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 7:27 in the recording",
+        "Frame 1498 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#26d16c",
+      "role": "text",
+      "share": 0.046
+    },
+    {
+      "hex": "#0e9646",
+      "role": "accent",
+      "share": 0.017
+    },
+    {
+      "hex": "#575558",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#0c5c2d",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1498,
+    "atSeconds": 447.6,
+    "endSeconds": 449.7,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "All albums",
+    "headline": "No albums yet"
+  },
+  "crawler": {
+    "nodeId": "s197",
+    "depth": 199,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s196",
+        "via": "Open All albums",
+        "name": "Chats"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s198",
+        "via": "Tap “All albums”",
+        "name": "All albums toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

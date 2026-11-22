@@ -1,0 +1,151 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-editing-a-call-link-4",
+  "screen_id": "signal-ios-versions-2026-11-22-editing-a-call-link-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:05.937Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "creation",
+  "flow_name": "Editing a call link",
+  "flow_position": 5,
+  "name": "Add Call Name form",
+  "description": "Form screen with the keyboard open. Dark theme, 31 text elements.",
+  "text": "9:41 C\n•0l\nX\nAdd Call Name\nSignal Call\nThe\nI'm\nQ\nW\nR\nT\nU\nP\nE\nY\n-\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add Call Name”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Dark theme, 31 text elements.",
+        "31 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 7 in “Signal Call”",
+        "Reached from “Loading state”",
+        "Leads to “Signal Call”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 11:20 in the recording",
+        "Frame 2268 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#212022",
+      "role": "background",
+      "share": 0.88
+    },
+    {
+      "hex": "#464646",
+      "role": "surface",
+      "share": 0.065
+    },
+    {
+      "hex": "#626262",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#0e529f",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#0a80fe",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2268,
+    "atSeconds": 680.1,
+    "endSeconds": 680.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 31,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add Call Name",
+    "headline": "Signal Call"
+  },
+  "crawler": {
+    "nodeId": "s336",
+    "depth": 339,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s335",
+        "via": "Wait 2.1s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s337",
+        "via": "Back to Signal Call",
+        "name": "Signal Call"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

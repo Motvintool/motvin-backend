@@ -1,0 +1,150 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-browsing-shared-media-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-browsing-shared-media-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:07.381Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Browsing shared media",
+  "flow_position": 1,
+  "name": "Media home",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:41\noll\nEnn\nMedia & Files\nNov 2026\nvoice_nov_22_2026_03:30:29....\n133 KB | m4a\nvoice_nov_22_2026_03:30:23....\n288 KB |m4a\nAudio\nMedia\nFiles",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "media",
+    "audio",
+    "files",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Media, Audio, Files",
+        "Navigation title reads “Media & Files”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Media”",
+        "Reached from “Other”",
+        "Leads to “Go home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 12:44 in the recording",
+        "Frame 2553 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.894
+    },
+    {
+      "hex": "#302e34",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#4f4c4e",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#283069",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#6274d1",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2553,
+    "atSeconds": 764.1,
+    "endSeconds": 766.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Media",
+      "Audio",
+      "Files"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Media & Files",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s323",
+    "depth": 325,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s322",
+        "via": "Back to Media home",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s324",
+        "via": "Switch to Go",
+        "name": "Go home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

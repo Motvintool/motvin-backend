@@ -1,0 +1,157 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-signing-up-8",
+  "screen_id": "line-ios-versions-2026-11-22-signing-up-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:10.244Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Signing up",
+  "flow_position": 23,
+  "name": "Profile",
+  "description": "Profile bottom sheet. Light theme, 8 text elements.",
+  "text": "9:41 €\n••1| =\n<\nvitalt yasswuru\nMake sure your password is 8 or more characters\nand has at least 3 of the following:\n• An uppercase letter\n• A lowercase letter\n• A number\n• A symbol",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Vitalt yasswuru”",
+        "Bottom sheet, covering 45% of the height from 42% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile bottom sheet. Light theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 23 in “Logging in”",
+        "Reached from “Profile”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.1s at 1:03 in the recording",
+        "Frame 236 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfdfd",
+      "role": "background",
+      "share": 0.944
+    },
+    {
+      "hex": "#dfebe4",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#959695",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#c3cdc7",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#0da047",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 236,
+    "atSeconds": 63,
+    "endSeconds": 71.1,
+    "holdSeconds": 8.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.421875,
+        "w": 0.84375,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Vitalt yasswuru",
+    "headline": "A symbol"
+  },
+  "crawler": {
+    "nodeId": "s028",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s027",
+        "via": "Wait 0.9s",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s029",
+        "via": "Open Create password",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

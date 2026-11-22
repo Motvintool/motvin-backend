@@ -1,0 +1,154 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-logging-in-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-logging-in-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:18.940Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Logging in",
+  "flow_position": 2,
+  "name": "Armenia search",
+  "description": "Search screen with a search bar and the keyboard open. Dark theme, 48 text elements.",
+  "text": "9:41(\nQ Search country\nCancel\nCurrent\nIndia\n+91\nA\nAfghanistan\n+93\nA\nAlbania\n+355\nÅ\nB\nC\nD\nAlgeria\n+213\nE\nF\n+1\nH\nAmerican Samoa\nJ\nK\n+376\nAndorra\nM\nN\nAngola\n+244\nP\nQ\nR\nAnguilla\nS\n+1\nT\nU\nV\nAntarctica\n+672\nW\nY\nZ\nAntigua & Barbuda\n+1\nArgentina\n+54\nArmenia\n+374",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "armenia",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search country”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar and the keyboard open. Dark theme, 48 text elements.",
+        "48 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 14 in “Verifying OTP”",
+        "Reached from “OTP verification”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:07 in the recording",
+        "Frame 30 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d21",
+      "role": "background",
+      "share": 0.863
+    },
+    {
+      "hex": "#403e42",
+      "role": "surface",
+      "share": 0.066
+    },
+    {
+      "hex": "#020600",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#565457",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#a5a5a3",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 30,
+    "atSeconds": 7.2,
+    "endSeconds": 9.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 48,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search country",
+    "headline": "Afghanistan",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s004",
+    "depth": 3,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s003",
+        "via": "Type “Q Search country”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s005",
+        "via": "Type “Q In”",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-getting-help-3",
+  "screen_id": "yubo-ios-versions-2026-11-22-getting-help-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:33.790Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Getting help",
+  "flow_position": null,
+  "name": "Profile — loading",
+  "description": "Loading state of Profile. Dark theme, 5 text elements.",
+  "text": "9:41 (\n<\nModeration\nMy picture was removed\nMy bio was removed\n1 was temporarily banned",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My picture was removed”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Profile. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “My Account”",
+        "Leads to “Profile — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 15:17 in the recording",
+        "Frame 3061 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#302e33",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#4f4d51",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#676569",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 3061,
+    "atSeconds": 917.1,
+    "endSeconds": 918.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My picture was removed",
+    "headline": "My picture was removed"
+  },
+  "crawler": {
+    "nodeId": "s433",
+    "depth": 433,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s432",
+        "via": "Open My picture was removed",
+        "name": "My Account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s434",
+        "via": "Wait 1.5s",
+        "name": "Profile — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

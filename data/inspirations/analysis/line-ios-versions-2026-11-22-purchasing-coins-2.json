@@ -1,0 +1,159 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-purchasing-coins-2",
+  "screen_id": "line-ios-versions-2026-11-22-purchasing-coins-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:56.602Z",
+  "screen_type": "checkout",
+  "published_as": "checkout",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Purchasing coins",
+  "flow_position": 4,
+  "name": "Checkout",
+  "description": "Checkout dialog over a dimmed screen, on top of Includes 100 bonus coins sheet with prices. Dark theme, 22 text elements.",
+  "text": "Purchase Coins\nMy Coins\n50\n{79\nDouble-Click\neto Pay\n70\n100\nR159\nL\n120\n? 215\n130\nz 235\nX\nApp Store\n50 LINE Coin\nLINE\nLINE (13+)\nIn-App Purchase\n$ 89\nOne-time charge\nAccount: +91 6382-102514",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "checkout",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Eto Pay”",
+        "Dialog over a dimmed background, covering 16% of the height from 17% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Checkout dialog over a dimmed screen, on top of Includes 100 bonus coins sheet with prices. Dark theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 6 in “Opening a page”",
+        "Reached from “Includes 100 bonus coins sheet”",
+        "Leads to “Purchase Coins”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 18:21 in the recording",
+        "Frame 3673 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0d0e",
+      "role": "background",
+      "share": 0.713
+    },
+    {
+      "hex": "#323032",
+      "role": "surface",
+      "share": 0.203
+    },
+    {
+      "hex": "#0a5127",
+      "role": "accent",
+      "share": 0.029
+    },
+    {
+      "hex": "#545455",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#1d7642",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3673,
+    "atSeconds": 1101.3,
+    "endSeconds": 1102.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.171875,
+        "w": 0.8125,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Eto Pay",
+    "headline": "App Store"
+  },
+  "crawler": {
+    "nodeId": "s511",
+    "depth": 520,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "checkout step — crawler does not place orders",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s510",
+        "via": "Open Eto Pay",
+        "name": "Includes 100 bonus coins sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s512",
+        "via": "Dismiss",
+        "name": "Purchase Coins"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

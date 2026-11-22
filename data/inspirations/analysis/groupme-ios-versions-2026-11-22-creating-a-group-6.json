@@ -1,0 +1,152 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-a-group-6",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-a-group-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:54.523Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Creating a group",
+  "flow_position": 8,
+  "name": "T Upload image search",
+  "description": "Search screen with a row of 3 category chips and a search bar. Dark theme, 7 text elements.",
+  "text": "9:41 €\nChoose avatar\nSearch GIPHY\nImage Search\nFeatured\nGIFS\naIPHY\nTGIF\nT Upload image",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "t upload image",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose avatar”",
+        "Category strip: Image Search, Featured, GIFS",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a row of 3 category chips and a search bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 21 in “New group detail”",
+        "Reached from “Loading state”",
+        "Leads to “EstorediB home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:49 in the recording",
+        "Frame 368 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080208",
+      "role": "background",
+      "share": 0.337
+    },
+    {
+      "hex": "#241426",
+      "role": "surface",
+      "share": 0.185
+    },
+    {
+      "hex": "#faf9fc",
+      "role": "text",
+      "share": 0.097
+    },
+    {
+      "hex": "#7a9648",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#fb5133",
+      "role": "accent",
+      "share": 0.042
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 368,
+    "atSeconds": 109.8,
+    "endSeconds": 110.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [
+      "Image Search",
+      "Featured",
+      "GIFS"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose avatar",
+    "headline": "TGIF",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s046",
+    "depth": 45,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s045",
+        "via": "Wait 1.5s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s047",
+        "via": "Tap “Choose avatar”",
+        "name": "EstorediB home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,152 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-finding-friends-4",
+  "screen_id": "groupme-ios-versions-2026-11-22-finding-friends-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:53.214Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Finding friends",
+  "flow_position": 31,
+  "name": "Phone number entry",
+  "description": "Login screen with a primary action labelled “Allow access to 1 contact?”. Dark theme, 10 text elements.",
+  "text": "9:41 C\nShow Selected\nPA\nAllow access to 1 contact?\n\"GroupMe\" will only have access to\ncontact information for the\ncontacts you selected. This\nincludes names, emails, photos,\nphone numbers, addresses and\nmore.\nAllow Selected Contact\nNot Now",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "address",
+    "not now",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Show Selected”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a primary action labelled “Allow access to 1 contact?”. Dark theme, 10 text elements.",
+        "Calls to action: “Allow access to 1 contact?”, “Allow Selected Contact”",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 31 of 34 in “Onboarding”",
+        "Reached from “Search”",
+        "Leads to “Set a profile pic”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:20 in the recording",
+        "Frame 272 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1c20",
+      "role": "background",
+      "share": 0.58
+    },
+    {
+      "hex": "#060106",
+      "role": "accent",
+      "share": 0.244
+    },
+    {
+      "hex": "#3f394d",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#555064",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#d1ced7",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 272,
+    "atSeconds": 80.4,
+    "endSeconds": 81.9,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow access to 1 contact?",
+      "Allow Selected Contact"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Show Selected",
+    "headline": "\"GroupMe\" will only have access to",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s033",
+    "depth": 32,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s032",
+        "via": "Tap “Contacts”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s034",
+        "via": "Open Set a profile pic",
+        "name": "Set a profile pic"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

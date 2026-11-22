@@ -1,0 +1,159 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-removing-a-participant-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-removing-a-participant-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:39.335Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Removing a participant",
+  "flow_position": 19,
+  "name": "Participants toast",
+  "description": "Toast over a dimmed screen, on top of Loading state. Dark theme, 14 text elements.",
+  "text": "9:41(\n•0l\nParticipants\nInvite link\nYou\nOwner\n+ Add participant tag +,\nAnantharaman Clg\nLast seen just now\nAnantharaman Clg\nUser info\nChat with Anantharaman Clg\nAudio call\nVideo call\nAdd participant tag\nAssign as Admin\ne\nRemove Participant",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "video",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Participants”",
+        "Toast over a dimmed background, covering 3% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Loading state. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 23 in “Searching”",
+        "Reached from “Participants toast — loading”",
+        "Leads to “Anantharaman Clg”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:27 in the recording",
+        "Frame 1295 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#08070a",
+      "role": "background",
+      "share": 0.434
+    },
+    {
+      "hex": "#322f31",
+      "role": "surface",
+      "share": 0.381
+    },
+    {
+      "hex": "#1d1b1f",
+      "role": "surface",
+      "share": 0.109
+    },
+    {
+      "hex": "#4d4b4e",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#626063",
+      "role": "surface",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1295,
+    "atSeconds": 387.6,
+    "endSeconds": 388.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.8125,
+        "y": 0.0625,
+        "w": 0.09375,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Participants",
+    "headline": "Anantharaman Clg"
+  },
+  "crawler": {
+    "nodeId": "s145",
+    "depth": 146,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s144",
+        "via": "Wait 2.1s",
+        "name": "Participants toast — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s146",
+        "via": "Tap “Anantharaman Clg”",
+        "name": "Anantharaman Clg"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

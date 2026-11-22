@@ -1,0 +1,160 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-getting-verified-6",
+  "screen_id": "yubo-ios-versions-2026-11-22-getting-verified-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:27.469Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Getting verified",
+  "flow_position": 289,
+  "name": "Contact Support (longer) toast",
+  "description": "Toast over a dimmed screen, on top of Help. Dark theme, 11 text elements.",
+  "text": "9:41C\nGet verified\nHelp\nVerify your identity to get a badge on your\nprofile.\nGet help\nTrouble with verification? Try one of\n?\nour other options to get you verified in\nno time.\nContact Support (longer)\nCancel\nGet started",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "get started",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Contact Support (longer)”",
+        "Toast over a dimmed background, covering 8% of the height from 52% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Help. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 289 of 338 in “Subscribing”",
+        "Reached from “Help”",
+        "Leads to “Help”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 13:03 in the recording",
+        "Frame 2613 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080702",
+      "role": "background",
+      "share": 0.727
+    },
+    {
+      "hex": "#232324",
+      "role": "surface",
+      "share": 0.156
+    },
+    {
+      "hex": "#23447c",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#414043",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#766903",
+      "role": "accent",
+      "share": 0.028
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 2613,
+    "atSeconds": 783.6,
+    "endSeconds": 784.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.515625,
+        "w": 0.625,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Contact Support (longer)",
+    "headline": "Contact Support (longer)",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s360",
+    "depth": 360,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s359",
+        "via": "Tap “Get started”",
+        "name": "Help"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s361",
+        "via": "Dismiss",
+        "name": "Help"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

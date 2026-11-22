@@ -1,0 +1,146 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-getting-verified-3",
+  "screen_id": "yubo-ios-versions-2026-11-22-getting-verified-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:26.627Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Getting verified",
+  "flow_position": 280,
+  "name": "Profile",
+  "description": "Profile screen. Dark theme, 7 text elements.",
+  "text": "9:41€\n•01/\nConfirm your photos\nTo get verified, you have to show your face in\nat least one of your profile pictures. We'll\ncompare your face photos with the selfie you\ntook previously.\nV GOOD\nX BAD\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "continue",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm your photos”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 280 of 338 in “Subscribing”",
+        "Reached from “Loading state”",
+        "Leads to “Confirm your photos”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:50 in the recording",
+        "Frame 2573 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090807",
+      "role": "background",
+      "share": 0.602
+    },
+    {
+      "hex": "#411a19",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#3c81fd",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#693735",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#3672dd",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 2573,
+    "atSeconds": 770.7,
+    "endSeconds": 772.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Confirm your photos",
+    "headline": "GOOD",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s351",
+    "depth": 351,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s350",
+        "via": "Wait 2.7s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s352",
+        "via": "Tap “Confirm your photos”",
+        "name": "Confirm your photos"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

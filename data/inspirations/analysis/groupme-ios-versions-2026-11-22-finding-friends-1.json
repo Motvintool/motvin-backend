@@ -1,0 +1,152 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-finding-friends-1",
+  "screen_id": "groupme-ios-versions-2026-11-22-finding-friends-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:52.907Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Finding friends",
+  "flow_position": 28,
+  "name": "Contacts permission",
+  "description": "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 6 text elements.",
+  "text": "9:41C\nSkip\nFind your friends\nGroupMe needs access to your contacts to find your\nfriends\nNot now\nAllow Full Access\n• Your contacts are always kept safe and secure.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Find your friends”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 6 text elements.",
+        "Calls to action: “Allow Full Access”",
+        "6 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 28 of 34 in “Onboarding”",
+        "Reached from “Contacts permission — loading”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 1:11 in the recording",
+        "Frame 248 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060107",
+      "role": "background",
+      "share": 0.673
+    },
+    {
+      "hex": "#2b282b",
+      "role": "surface",
+      "share": 0.188
+    },
+    {
+      "hex": "#fdfdfd",
+      "role": "text",
+      "share": 0.037
+    },
+    {
+      "hex": "#595351",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#b1b1b9",
+      "role": "surface",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 248,
+    "atSeconds": 71.4,
+    "endSeconds": 74.7,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Full Access"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Find your friends",
+    "headline": "Find your friends"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 29,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Wait 0.9s",
+        "name": "Contacts permission — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,143 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-appearance-2",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-appearance-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:02.690Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing appearance",
+  "flow_position": 2,
+  "name": "Appearance",
+  "description": "Other screen. Dark theme, 7 text elements.",
+  "text": "9:41(\n<\nAppearance\nSystem\nTheme\nChat Color & Wallpaper\n>\nApp Icon",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Appearance”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 10 in “Appearance”",
+        "Reached from “The group call has ended”",
+        "Leads to “Bottom sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:08 in the recording",
+        "Frame 2030 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e22",
+      "role": "background",
+      "share": 0.9
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#464449",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#5e5b5f",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#3b3c74",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2030,
+    "atSeconds": 608.7,
+    "endSeconds": 610.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Appearance",
+    "headline": "Chat Color & Wallpaper"
+  },
+  "crawler": {
+    "nodeId": "s301",
+    "depth": 304,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s300",
+        "via": "Tap “The group call has ended”",
+        "name": "The group call has ended"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s302",
+        "via": "Back to Bottom sheet",
+        "name": "Bottom sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

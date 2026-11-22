@@ -1,0 +1,151 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-gif-1",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-gif-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:44.495Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sending a GIF",
+  "flow_position": 1,
+  "name": "Photos home",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 10 text elements.",
+  "text": "9:41(\n•dll\nDesign\nupdates v\nOVerified\nHey\nHey\nNow\nX\nMessage\n000\nGIF\nPhotos\nGIF\nFile\nPoll\nC",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "photos",
+    "file",
+    "poll",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Photos, File, Poll",
+        "Navigation title reads “Updates”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 8 in “Searching for “GIF Search””",
+        "Reached from “Photos”",
+        "Leads to “Search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:51 in the recording",
+        "Frame 974 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b181c",
+      "role": "background",
+      "share": 0.332
+    },
+    {
+      "hex": "#090409",
+      "role": "surface",
+      "share": 0.314
+    },
+    {
+      "hex": "#fefdff",
+      "role": "text",
+      "share": 0.122
+    },
+    {
+      "hex": "#3c393e",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#1a5be4",
+      "role": "accent",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 974,
+    "atSeconds": 291.3,
+    "endSeconds": 292.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Photos",
+      "File",
+      "Poll"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Updates",
+    "headline": "Message"
+  },
+  "crawler": {
+    "nodeId": "s115",
+    "depth": 115,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s114",
+        "via": "Back to Photos home",
+        "name": "Photos"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s116",
+        "via": "Type “GIF Search”",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-browsing-themes-2",
+  "screen_id": "line-ios-versions-2026-11-22-browsing-themes-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:55.851Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Browsing themes",
+  "flow_position": 3,
+  "name": "Payment method",
+  "description": "Payment screen. Dark theme, 27 text elements.",
+  "text": "9:41(\nooll\n<\nMy Themes\nAutomatically convert menu icons\nIf you're using a creators' theme that doesn't support the new\niOs design, the menu icons at the bottom of the screen will be\nconverted automatically. Turn this off to use the default menu\nicons. Official themes aren't affected.\nBy applying multiple themes, you can rotate between them\nautomatically at your preferred frequency. Or, using Focus\nmode on your device, switch between them according to\ndifferent situations.\nFocus mode settings guide\nRotate how often\nEvery 12 hours ›\n1\nLINE\nLINE\nwith BROWN\nWith CONY\nLINE\nOriginal\nCony\nBrown\nNo expiration date\nNo expiration date\nNo expiration date\nTheme Shop",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "payment",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My Themes”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Dark theme, 27 text elements.",
+        "27 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 8 in “My Themes”",
+        "Reached from “Loading state”",
+        "Leads to “My Themes”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 18:01 in the recording",
+        "Frame 3610 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.77
+    },
+    {
+      "hex": "#373339",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#079c45",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#fdebf3",
+      "role": "text",
+      "share": 0.015
+    },
+    {
+      "hex": "#554e53",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3610,
+    "atSeconds": 1081.5,
+    "endSeconds": 1083.3,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My Themes",
+    "headline": "LINE"
+  },
+  "crawler": {
+    "nodeId": "s502",
+    "depth": 511,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s501",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s503",
+        "via": "Tap “My Themes”",
+        "name": "My Themes"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

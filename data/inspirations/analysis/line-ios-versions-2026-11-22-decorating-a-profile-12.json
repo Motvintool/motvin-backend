@@ -1,0 +1,149 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-decorating-a-profile-12",
+  "screen_id": "line-ios-versions-2026-11-22-decorating-a-profile-12",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:10.702Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Decorating a profile",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state. Light theme, 6 text elements.",
+  "text": "9:41C\n.oll\nSave\nCancel\nRemove all\nMotvin\na Echi oroll\nove",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "light",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Remove all”",
+        "Light, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Light theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 61 in “Opening a page (Home)”",
+        "Reached from “Motvin”",
+        "Leads to “Remove all”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:26 in the recording",
+        "Frame 293 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#288379",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#fafafb",
+      "role": "text",
+      "share": 0.013
+    },
+    {
+      "hex": "#569d95",
+      "role": "accent",
+      "share": 0.01
+    },
+    {
+      "hex": "#86b4b4",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a0ccca",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 293,
+    "atSeconds": 86.1,
+    "endSeconds": 88.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Remove all",
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s033",
+    "depth": 34,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s032",
+        "via": "Wait 2.1s",
+        "name": "Motvin"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s034",
+        "via": "Wait 2.1s",
+        "name": "Remove all"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

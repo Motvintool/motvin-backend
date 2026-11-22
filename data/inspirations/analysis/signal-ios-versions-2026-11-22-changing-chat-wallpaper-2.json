@@ -1,0 +1,161 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-chat-wallpaper-2",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-chat-wallpaper-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:58.020Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing chat wallpaper",
+  "flow_position": 20,
+  "name": "Chat Color & Wallpaper",
+  "description": "Messages dialog over a dimmed screen, on top of Chat Color & Wallpaper. Dark theme, 8 text elements.",
+  "text": "9:41€\nChat Color & Wallpaper\n<\nContact Name\n+\nChat Color\nReset Chat Color\nClear chat color for this chat?\nClear Chat Color\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "cancel",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Chat Color & Wallpaper”",
+        "Dialog over a dimmed background, covering 16% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Chat Color & Wallpaper. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 63 in “Searching Chats”",
+        "Reached from “Chat Color & Wallpaper”",
+        "Leads to “Chat Color & Wallpaper”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:28 in the recording",
+        "Frame 1702 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c1f",
+      "role": "background",
+      "share": 0.651
+    },
+    {
+      "hex": "#0d0a0e",
+      "role": "surface",
+      "share": 0.251
+    },
+    {
+      "hex": "#3d3a3d",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#5e5c5f",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#0b2e7a",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1702,
+    "atSeconds": 508.8,
+    "endSeconds": 510.9,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.875,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chat Color & Wallpaper",
+    "headline": "Chat Color",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s249",
+    "depth": 249,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s248",
+        "via": "Tap “Chat Color & Wallpaper”",
+        "name": "Chat Color & Wallpaper"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s250",
+        "via": "Dismiss",
+        "name": "Chat Color & Wallpaper"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

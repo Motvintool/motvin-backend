@@ -1,0 +1,159 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-group-link-4",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-group-link-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:41.349Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a group link",
+  "flow_position": 4,
+  "name": "Toast",
+  "description": "Toast over a dimmed screen, on top of Other. Dark theme, 12 text elements.",
+  "text": "9:41(\nDesign\n•Verified\nDesign\n28 No other group members yet\nco 3 group updates v\nAnyone with this link can view this group's\nname and members and request to join.\nShare it with people you trust.\nShare via Signal\nCopy Link\nQR Code\nShare\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "cancel",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Other. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 25 in “Sharing”",
+        "Reached from “Design”",
+        "Leads to “Essac search”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 3:26 in the recording",
+        "Frame 695 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080308",
+      "role": "background",
+      "share": 0.563
+    },
+    {
+      "hex": "#323134",
+      "role": "surface",
+      "share": 0.325
+    },
+    {
+      "hex": "#19171a",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#504f52",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#69696c",
+      "role": "text",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 695,
+    "atSeconds": 206.4,
+    "endSeconds": 208.8,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Design",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s080",
+    "depth": 79,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s079",
+        "via": "Tap “Design”",
+        "name": "Design"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s081",
+        "via": "Tap “Design”",
+        "name": "Essac search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

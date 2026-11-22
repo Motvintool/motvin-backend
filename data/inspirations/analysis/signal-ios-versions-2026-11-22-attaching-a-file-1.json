@@ -1,0 +1,150 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-attaching-a-file-1",
+  "screen_id": "signal-ios-versions-2026-11-22-attaching-a-file-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:45.448Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Attaching a file",
+  "flow_position": 3,
+  "name": "Photos home",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41C\nDesign\nOVerified\nHey\nNow\nMessage\n000\nGIF\nPhotos\nGIF\nFile\nPoll",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "photos",
+    "file",
+    "poll",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Photos, File, Poll",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Photos”",
+        "Reached from “Vonor yroup members yet”",
+        "Leads to “Photos home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:03 in the recording",
+        "Frame 1015 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#131114",
+      "role": "background",
+      "share": 0.615
+    },
+    {
+      "hex": "#38393d",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#fbfbfc",
+      "role": "text",
+      "share": 0.063
+    },
+    {
+      "hex": "#69686c",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#194dbc",
+      "role": "accent",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1015,
+    "atSeconds": 303.6,
+    "endSeconds": 305.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Photos",
+      "File",
+      "Poll"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Message"
+  },
+  "crawler": {
+    "nodeId": "s124",
+    "depth": 124,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s123",
+        "via": "Open Photos home",
+        "name": "Vonor yroup members yet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s125",
+        "via": "Tap “Message”",
+        "name": "Photos home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

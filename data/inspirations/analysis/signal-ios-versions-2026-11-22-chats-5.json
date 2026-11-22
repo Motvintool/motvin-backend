@@ -1,0 +1,168 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-chats-5",
+  "screen_id": "signal-ios-versions-2026-11-22-chats-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:38.219Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Chats",
+  "flow_position": 35,
+  "name": "Feature tip",
+  "description": "Coach mark dialog over a dimmed screen with a primary action labelled “Got it”. Dark theme, 16 text elements.",
+  "text": "9:41\nChats\nStart your first chat here.\nStorage Space Low\nYour iPhone is running low on storage space. If it fills\nup, Signal will stop working and you could lose data.\nFree up at least 2 GB of space.\nGo to iOS Settings > General > Storage.\nReview the recommendations and\nremove apps you don't use\nDelete large videos from your Photos\n2\napp, Signal, or other messaging apps\nDelete downloaded music or\n3\nother media\nGot it",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "review",
+    "photo",
+    "video",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "coach-mark"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Start your first chat here”",
+        "Dialog over a dimmed background, covering 19% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark dialog over a dimmed screen with a primary action labelled “Got it”. Dark theme, 16 text elements.",
+        "Calls to action: “Got it”",
+        "16 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 35 of 35 in “Entering phone number”",
+        "Reached from “Start your first chat here — loading”",
+        "Leads to “Start your first chat here”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 1:52 in the recording",
+        "Frame 387 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.413
+    },
+    {
+      "hex": "#222023",
+      "role": "surface",
+      "share": 0.369
+    },
+    {
+      "hex": "#3a3a3e",
+      "role": "surface",
+      "share": 0.114
+    },
+    {
+      "hex": "#2d72fd",
+      "role": "accent",
+      "share": 0.035
+    },
+    {
+      "hex": "#274481",
+      "role": "surface",
+      "share": 0.027
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 387,
+    "atSeconds": 112.2,
+    "endSeconds": 116.4,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.078125,
+        "w": 0.75,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Got it"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Start your first chat here",
+    "headline": "Storage Space Low"
+  },
+  "crawler": {
+    "nodeId": "s043",
+    "depth": 42,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s042",
+        "via": "Wait 3s",
+        "name": "Start your first chat here — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s044",
+        "via": "Dismiss",
+        "name": "Start your first chat here"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

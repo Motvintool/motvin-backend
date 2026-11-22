@@ -1,0 +1,160 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-deleting-a-pinned-message-2",
+  "screen_id": "signal-ios-versions-2026-11-22-deleting-a-pinned-message-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:53.641Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Deleting a pinned message",
+  "flow_position": 37,
+  "name": "Search results",
+  "description": "Search results toast over a dimmed screen. Dark theme, 15 text elements.",
+  "text": "9:41C\n•0\n2m\nDesign\nOVerified\natures\nYou\nHey\nWeb\n1m (\nView Results\nE You ended the poll: Design features\nView Poll\nWho would you like to delete this\nmessage tor?\nDelete for Me\nDelete for Everyone\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "search-results",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Toast over a dimmed background, covering 6% of the height from 94% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results toast over a dimmed screen. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 37 of 60 in “Opening a page (File)”",
+        "Reached from “Reply”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:11 in the recording",
+        "Frame 1441 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a050b",
+      "role": "background",
+      "share": 0.489
+    },
+    {
+      "hex": "#313336",
+      "role": "surface",
+      "share": 0.22
+    },
+    {
+      "hex": "#123179",
+      "role": "surface",
+      "share": 0.148
+    },
+    {
+      "hex": "#03184c",
+      "role": "accent",
+      "share": 0.054
+    },
+    {
+      "hex": "#171820",
+      "role": "surface",
+      "share": 0.05
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1441,
+    "atSeconds": 431.4,
+    "endSeconds": 432.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.9375,
+        "w": 0.875,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Who would you like to delete this",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s204",
+    "depth": 204,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s203",
+        "via": "Open Search results",
+        "name": "Reply"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s205",
+        "via": "Dismiss",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

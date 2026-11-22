@@ -1,0 +1,161 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-viewing-group-info-4",
+  "screen_id": "arattai-ios-versions-2026-11-22-viewing-group-info-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:07.791Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing group info",
+  "flow_position": 3,
+  "name": "Trip O dialog",
+  "description": "Dialog over a dimmed screen, on top of Trip Q. Dark theme, 10 text elements.",
+  "text": "9:41 4\n•ll\nEee\nEdit\nTrip O\n1 participant\n• • •\nMute chat\nNone\n1 Hour\n8 Hours\n1 Day\n1 Week\nForever",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "forever",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Trip O”",
+        "Dialog over a dimmed background, covering 41% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Trip Q. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 9 in “Trip Q”",
+        "Reached from “Trip Q”",
+        "Leads to “Trip Q”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:48 in the recording",
+        "Frame 2566 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#160f10",
+      "role": "background",
+      "share": 0.559
+    },
+    {
+      "hex": "#2f2d2f",
+      "role": "surface",
+      "share": 0.41
+    },
+    {
+      "hex": "#545254",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#696769",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#394069",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2566,
+    "atSeconds": 768.6,
+    "endSeconds": 770.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.9375,
+        "h": 0.40625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Trip O",
+    "headline": "Trip O",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s326",
+    "depth": 328,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s325",
+        "via": "Open Trip O",
+        "name": "Trip Q"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s327",
+        "via": "Dismiss",
+        "name": "Trip Q"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

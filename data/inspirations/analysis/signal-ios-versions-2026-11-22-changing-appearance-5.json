@@ -1,0 +1,158 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-appearance-5",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-appearance-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:03.073Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing appearance",
+  "flow_position": 7,
+  "name": "Bottom sheet",
+  "description": "Bottom sheet, on top of Appearance. Dark theme, 4 text elements.",
+  "text": "9:41€\nApp Icon\nThe app name \"Signal\" will be visible on the Home\nScreen, in notifications and in the App Library.\nLearn More",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Screen, in notifications and in the App”",
+        "Bottom sheet, covering 45% of the height from 45% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Appearance. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 10 in “Appearance”",
+        "Reached from “Appearance”",
+        "Leads to “\"Signal\" toast”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 10:16 in the recording",
+        "Frame 2057 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211e23",
+      "role": "background",
+      "share": 0.752
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#3d3c3f",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#2a9dfb",
+      "role": "text",
+      "share": 0.006
+    },
+    {
+      "hex": "#565254",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2057,
+    "atSeconds": 616.5,
+    "endSeconds": 617.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.453125,
+        "w": 0.8125,
+        "h": 0.453125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Screen, in notifications and in the App",
+    "headline": "Learn More"
+  },
+  "crawler": {
+    "nodeId": "s306",
+    "depth": 309,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s305",
+        "via": "Open Screen, in notifications and in the App",
+        "name": "Appearance"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s307",
+        "via": "Open \"Signal\"",
+        "name": "\"Signal\" toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

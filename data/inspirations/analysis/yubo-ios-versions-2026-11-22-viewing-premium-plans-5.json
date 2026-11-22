@@ -1,0 +1,168 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-viewing-premium-plans-5",
+  "screen_id": "yubo-ios-versions-2026-11-22-viewing-premium-plans-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:09.571Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Viewing premium plans",
+  "flow_position": 109,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of Checkout with a primary action labelled “Save 59%” and prices. Dark theme, 19 text elements.",
+  "text": "Infinity Pack\nStand out and get\nnoticed first\nDouble-BriaRC\n1 month\nto Subscribe\n·43.33/day\n722.22\nSave 59%\nIncludad in tha Infinity Dack\nApp Store\nInfinity Pack 1 Week\nYubo : Make friends & chat now (18+\nSubscription\n$ 750 per week\nCancel at any time in Settings > Apple Account at least\none day before each renewal date. Plan automatically\nrenews until cancelled.\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "subscription",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "cta",
+    "button",
+    "banner",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Stand out and get”",
+        "Dialog over a dimmed background, covering 38% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of Checkout with a primary action labelled “Save 59%” and prices. Dark theme, 19 text elements.",
+        "Calls to action: “Save 59%”",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 109 of 338 in “Subscribing”",
+        "Reached from “Checkout”",
+        "Leads to “Checkout”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 6:10 in the recording",
+        "Frame 1236 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0e11",
+      "role": "background",
+      "share": 0.615
+    },
+    {
+      "hex": "#333335",
+      "role": "surface",
+      "share": 0.292
+    },
+    {
+      "hex": "#515052",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#6b6a6d",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#b3a317",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1236,
+    "atSeconds": 370.5,
+    "endSeconds": 371.1,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.0625,
+        "w": 0.65625,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Save 59%"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Stand out and get",
+    "headline": "Noticed first"
+  },
+  "crawler": {
+    "nodeId": "s175",
+    "depth": 174,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s174",
+        "via": "Tap “Stand out and get”",
+        "name": "Checkout"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s176",
+        "via": "Dismiss",
+        "name": "Checkout"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

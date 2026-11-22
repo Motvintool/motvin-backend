@@ -1,0 +1,150 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-archive-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-archive-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:38.956Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Archive",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 7 text elements.",
+  "text": "9:41(\nArchive\nArchived Chats\nFormer chats\nQ\nW\nWWE RP Dead Chat\n...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "messages",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Archived Chats”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Reading messages”",
+        "Reached from “Settings — loading”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 17:48 in the recording",
+        "Frame 3569 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.911
+    },
+    {
+      "hex": "#272429",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#504b4f",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#70696c",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#3d383c",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3569,
+    "atSeconds": 1068.3,
+    "endSeconds": 1071,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Archived Chats",
+    "headline": "WWE RP Dead Chat"
+  },
+  "crawler": {
+    "nodeId": "s524",
+    "depth": 527,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s523",
+        "via": "Wait 1.8s",
+        "name": "Settings — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s525",
+        "via": "Wait 2.7s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

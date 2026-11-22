@@ -1,0 +1,160 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-friends-3",
+  "screen_id": "line-ios-versions-2026-11-22-friends-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:58.725Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Friends",
+  "flow_position": 5,
+  "name": "Hidden accounts sheet",
+  "description": "Bottom sheet, on top of Bottom sheet with a search bar. Dark theme, 10 text elements.",
+  "text": "9:41C\n<\nHidden accounts\nHidden accounts 1\nSelect all\nAccounts you delete from this list can still contact you on LINE. To\ncontact an account you deleted here, you'll have to add it again via\nQR code or Search.\nFriends\nOfficial accounts\nService Messages",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Hidden accounts”",
+        "Search bar present",
+        "Bottom sheet, covering 30% of the height from 61% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Bottom sheet with a search bar. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Opening a page”",
+        "Reached from “Bottom sheet”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 18:55 in the recording",
+        "Frame 3791 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.94
+    },
+    {
+      "hex": "#403e41",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#2a272b",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#dddbde",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#a19fa2",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3791,
+    "atSeconds": 1135.5,
+    "endSeconds": 1137.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.609375,
+        "w": 0.59375,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hidden accounts",
+    "headline": "Official accounts"
+  },
+  "crawler": {
+    "nodeId": "s535",
+    "depth": 545,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s534",
+        "via": "Tap “Hidden accounts”",
+        "name": "Bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s536",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

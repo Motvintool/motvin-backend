@@ -1,0 +1,167 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-starting-a-meeting-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-starting-a-meeting-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:29.128Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Starting a meeting",
+  "flow_position": 26,
+  "name": "Camera permission",
+  "description": "Permission toast over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 12 text elements.",
+  "text": "X\nTrip - 22/11/2026\nAlll\n\"Arattai\" would like to access\nthe Microphone.\nArattai needs microphone access so\nthat you can send voice messages\nand make calls.\nDon't Allow\nAllow\nEnable microphone\nEnable camera\nStart meeting",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "start meeting",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The Microphone”",
+        "Toast over a dimmed background, covering 9% of the height from 45% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen, on top of Loading state with a primary action labelled “Allow”. Dark theme, 12 text elements.",
+        "Calls to action: “Allow”, “Enable microphone”, “Enable camera”",
+        "12 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 52 in “Reading messages”",
+        "Reached from “Camera permission — loading”",
+        "Leads to “Onboarding step — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:18 in the recording",
+        "Frame 667 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d0f",
+      "role": "background",
+      "share": 0.766
+    },
+    {
+      "hex": "#282b3a",
+      "role": "surface",
+      "share": 0.167
+    },
+    {
+      "hex": "#505154",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#323b6c",
+      "role": "accent",
+      "share": 0.009
+    },
+    {
+      "hex": "#7f7d7f",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 667,
+    "atSeconds": 198.9,
+    "endSeconds": 200.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.40625,
+        "y": 0.453125,
+        "w": 0.1875,
+        "h": 0.09375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "Enable microphone",
+      "Enable camera"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "The Microphone",
+    "headline": "The Microphone",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s075",
+    "depth": 74,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s074",
+        "via": "Wait 0.9s",
+        "name": "Camera permission — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s076",
+        "via": "Tap “Start meeting”",
+        "name": "Onboarding step — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

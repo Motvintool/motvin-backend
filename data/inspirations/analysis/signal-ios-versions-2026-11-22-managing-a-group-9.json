@@ -1,0 +1,161 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-managing-a-group-9",
+  "screen_id": "signal-ios-versions-2026-11-22-managing-a-group-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:01.695Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing a group",
+  "flow_position": 61,
+  "name": "1 Member dialog",
+  "description": "Dialog over a dimmed screen. Dark theme, 20 text elements.",
+  "text": "9:41(\n•0\nEdit\n1 Member\n+\nAdd Members\nYou\nAdmin\nDesign\nOn >\nGroup Link\n>\nMember Label\n20\nRequests & Invites\nEnd \"Design\"?\nMembers will no longer be able to send\nmessages or start calls in the group. They\nwill be notified that you ended the group,\nand will still have access to message\nhistory.\nEnd Group\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “1 Member”",
+        "Dialog over a dimmed background, covering 25% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 61 of 63 in “Searching Chats”",
+        "Reached from “Group Link”",
+        "Leads to “Group Link”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:41 in the recording",
+        "Frame 1940 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191518",
+      "role": "background",
+      "share": 0.783
+    },
+    {
+      "hex": "#39373b",
+      "role": "surface",
+      "share": 0.182
+    },
+    {
+      "hex": "#525054",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#69686e",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#848283",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1940,
+    "atSeconds": 581.7,
+    "endSeconds": 582.3,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.875,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "1 Member",
+    "headline": "End \"Design\"?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s290",
+    "depth": 293,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s289",
+        "via": "Tap “1 Member”",
+        "name": "Group Link"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s291",
+        "via": "Dismiss",
+        "name": "Group Link"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

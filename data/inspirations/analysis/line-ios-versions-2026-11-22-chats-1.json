@@ -1,0 +1,158 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-chats-1",
+  "screen_id": "line-ios-versions-2026-11-22-chats-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:27.872Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Chats",
+  "flow_position": 2,
+  "name": "Chats",
+  "description": "Messages screen with a 3-item tab bar and a search bar. Dark theme, 5 text elements.",
+  "text": "9:41€\nChats -\nQ Search\nKeep Memo\nSend any messages, photos, videos, and\nlinks you want to keep for yourself.\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "message",
+    "photo",
+    "video",
+    "home",
+    "chats",
+    "calls",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Navigation title reads “Chats”",
+        "Search bar present",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a 3-item tab bar and a search bar. Dark theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 30 in “Home”",
+        "Reached from “Other”",
+        "Leads to “Delete search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 7:19 in the recording",
+        "Frame 1474 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.938
+    },
+    {
+      "hex": "#434143",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#646265",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#2d2a2d",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#868487",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1474,
+    "atSeconds": 439.5,
+    "endSeconds": 442.5,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chats",
+    "headline": "Keep Memo"
+  },
+  "crawler": {
+    "nodeId": "s194",
+    "depth": 196,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s193",
+        "via": "Back to Chats",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s195",
+        "via": "Tap “Keep Memo”",
+        "name": "Delete search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

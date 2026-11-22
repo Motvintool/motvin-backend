@@ -1,0 +1,161 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-managing-a-group-8",
+  "screen_id": "signal-ios-versions-2026-11-22-managing-a-group-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:01.515Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing a group",
+  "flow_position": 59,
+  "name": "Group Link dialog",
+  "description": "Dialog over a dimmed screen, on top of Group Link. Dark theme, 22 text elements.",
+  "text": "9:41C\n•0\nEdit\n1 Member\n+\nAdd Members\nYou\nAdmin\nDesign\nOn >\nGroup Link\nMember Label\n>\n20\n0>\nRequests & Invites\nPermissions\n>\nReport Spam?\nSignal will be notified that this person may\nbe sending spam. Signal can't see the\ncontent of any chats.\nReport Spam\nReport Spam and Block\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "cancel",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Group Link”",
+        "Dialog over a dimmed background, covering 27% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Group Link. Dark theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 59 of 63 in “Searching Chats”",
+        "Reached from “Group Link”",
+        "Leads to “Group Link”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:38 in the recording",
+        "Frame 1928 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1619",
+      "role": "background",
+      "share": 0.789
+    },
+    {
+      "hex": "#39373b",
+      "role": "surface",
+      "share": 0.187
+    },
+    {
+      "hex": "#68656a",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#544f51",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#b1a8a6",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1928,
+    "atSeconds": 578.1,
+    "endSeconds": 578.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.09375,
+        "w": 0.875,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Group Link",
+    "headline": "Report Spam?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s288",
+    "depth": 290,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s287",
+        "via": "Tap “Group Link”",
+        "name": "Group Link"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s289",
+        "via": "Dismiss",
+        "name": "Group Link"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

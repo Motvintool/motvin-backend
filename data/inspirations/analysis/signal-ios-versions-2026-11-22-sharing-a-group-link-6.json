@@ -1,0 +1,163 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-group-link-6",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-group-link-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:41.511Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Sharing a group link",
+  "flow_position": 6,
+  "name": "Design search",
+  "description": "Search bottom sheet over a dimmed screen, on top of Essac search with a search bar. Dark theme, 6 text elements.",
+  "text": "9:41 €\n•0l\n<\nX\nChoose Recipients\nQ Search\nRecent Chats\nDesign\nDesign",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "design",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Design”",
+        "Search bar present",
+        "Bottom sheet over a dimmed background, covering 38% of the height from 59% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search bottom sheet over a dimmed screen, on top of Essac search with a search bar. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 25 in “Sharing”",
+        "Reached from “Essac search”",
+        "Leads to “Design”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 3:30 in the recording",
+        "Frame 710 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.885
+    },
+    {
+      "hex": "#1d1a1f",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#3f3b41",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#2e559c",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#33a7fe",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 710,
+    "atSeconds": 210,
+    "endSeconds": 213.3,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.59375,
+        "w": 0.90625,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Design",
+    "headline": "Design",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s082",
+    "depth": 81,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s081",
+        "via": "Wait 0.9s",
+        "name": "Essac search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s083",
+        "via": "Back to Other",
+        "name": "Design"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

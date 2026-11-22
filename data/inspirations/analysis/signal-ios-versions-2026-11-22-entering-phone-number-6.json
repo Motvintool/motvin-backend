@@ -1,0 +1,147 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-entering-phone-number-6",
+  "screen_id": "signal-ios-versions-2026-11-22-entering-phone-number-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:35.421Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Entering phone number",
+  "flow_position": null,
+  "name": "Phone number entry — loading",
+  "description": "Loading state of Phone number entry. Dark theme, 4 text elements.",
+  "text": "9:41€\noll\n<\nNext\nConfirm your PIN\nRe-enter the PIN you just created.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Confirm your PIN”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Phone number entry. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Search”",
+        "Leads to “Phone number entry”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 0:19 in the recording",
+        "Frame 211 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#010101",
+      "role": "background",
+      "share": 0.92
+    },
+    {
+      "hex": "#1c1d1f",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#404040",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#666666",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#2bbcff",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 211,
+    "atSeconds": 19.2,
+    "endSeconds": 20.1,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Confirm your PIN",
+    "headline": "Re-enter the PIN you just created"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Tap “Show Selected (1)”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Wait 4.2s",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

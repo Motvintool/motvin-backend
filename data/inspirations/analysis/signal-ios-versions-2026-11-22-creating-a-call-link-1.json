@@ -1,0 +1,173 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-creating-a-call-link-1",
+  "screen_id": "signal-ios-versions-2026-11-22-creating-a-call-link-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:03.518Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a call link",
+  "flow_position": 4,
+  "name": "Get Started",
+  "description": "Messages bottom sheet over a dimmed screen with a 3-item tab bar and a primary action labelled “Get Started”. Dark theme, 8 text elements.",
+  "text": "9:41 (\nChats\nDesign\n6m\nThe group call has ended\nGet Started\nX\nInvite Friends\nChat Color\nCalls\nChats\nStories",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "chats",
+    "calls",
+    "stories",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Chats, Calls, Stories",
+        "Navigation title reads “Get Started”",
+        "Bottom sheet over a dimmed background, covering 22% of the height from 75% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen with a 3-item tab bar and a primary action labelled “Get Started”. Dark theme, 8 text elements.",
+        "Calls to action: “Get Started”",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 17 in “Chats”",
+        "Reached from “Settings”",
+        "Leads to “Get Started — scrolled”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.9s at 10:23 in the recording",
+        "Frame 2090 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.799
+    },
+    {
+      "hex": "#4d5a52",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#222123",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#3a3d38",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#6d7972",
+      "role": "text",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2090,
+    "atSeconds": 623.4,
+    "endSeconds": 627.3,
+    "holdSeconds": 3.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.75,
+        "w": 0.875,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [
+      "Chats",
+      "Calls",
+      "Stories"
+    ],
+    "chipLabels": [],
+    "ctas": [
+      "Get Started"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get Started",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s311",
+    "depth": 314,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s310",
+        "via": "Tap “Chats”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s312",
+        "via": "Dismiss",
+        "name": "Get Started — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

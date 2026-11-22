@@ -1,0 +1,153 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-inviting-participants-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-inviting-participants-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:43.362Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Inviting participants",
+  "flow_position": 1,
+  "name": "Video home",
+  "description": "Home screen with a 4-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41\n00:02\nYou are the only one here\nInvite participants\nVideo\nSpeaker\nMute\nEnd",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "mute",
+    "speaker",
+    "end",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Video, Mute, Speaker, End",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Inviting participants”",
+        "Reached from “Onboarding step”",
+        "Leads to “Loading state”",
+        "Returned to 11 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 21:12 in the recording",
+        "Frame 4246 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1a1e",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#060608",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#4a484b",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#f6f6fb",
+      "role": "text",
+      "share": 0.014
+    },
+    {
+      "hex": "#dfdce3",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4246,
+    "atSeconds": 1272,
+    "endSeconds": 1274.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 11
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Video",
+      "Mute",
+      "Speaker",
+      "End"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s564",
+    "depth": 569,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s563",
+        "via": "Open Video home",
+        "name": "Onboarding step"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s565",
+        "via": "Tap “Invite participants”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

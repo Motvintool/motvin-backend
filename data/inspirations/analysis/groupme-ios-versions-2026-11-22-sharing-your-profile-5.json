@@ -1,0 +1,156 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-sharing-your-profile-5",
+  "screen_id": "groupme-ios-versions-2026-11-22-sharing-your-profile-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:15.327Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Sharing your profile",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state with a search bar. Dark theme, 8 text elements.",
+  "text": "9:41 €\n<\n0O\nContacts\nOX\nQ\nAdd or search contacts\nLet the people know\nShare your profile\nFriends\nRequests",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "friends",
+    "requests",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add or search contacts”",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a search bar. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 9 in “Searching Chat”",
+        "Reached from “Friends search”",
+        "Leads to “Share Profile”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:47 in the recording",
+        "Frame 1975 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.822
+    },
+    {
+      "hex": "#29262a",
+      "role": "surface",
+      "share": 0.139
+    },
+    {
+      "hex": "#4d4b4f",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#676669",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#8badd5",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1975,
+    "atSeconds": 587.7,
+    "endSeconds": 588.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add or search contacts",
+    "headline": "Let the people know",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s269",
+    "depth": 269,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s268",
+        "via": "Wait 1.8s",
+        "name": "Friends search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s270",
+        "via": "Wait 1.5s",
+        "name": "Share Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

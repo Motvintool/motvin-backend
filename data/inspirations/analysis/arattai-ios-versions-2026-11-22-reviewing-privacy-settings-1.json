@@ -1,0 +1,146 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-reviewing-privacy-settings-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-reviewing-privacy-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:59.372Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Reviewing privacy settings",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field. Dark theme, 23 text elements.",
+  "text": "9:41(\n•ll\n‹ Security & Privacy\nPasscode Lock\nSet passcode to add an extra layer of security.\nPrivacy\nNone >\nBlocked users\nEverybody >\nProfile picture\nMy contacts >\nMobile number\nEverybody >\nLast seen & online\nEverybody >\nNew chat\nMy contacts >\nCalls\nEverybody >\nMeetings\nAdd to groups\nMy contacts\n>\nStories\nMy contacts\nBusiness permissions\nArattai nrofila namo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Security & Privacy”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 23 text elements.",
+        "23 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Phone number entry — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 25:03 in the recording",
+        "Frame 5017 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0d11",
+      "role": "background",
+      "share": 0.905
+    },
+    {
+      "hex": "#2d2b32",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#4f4c50",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#646265",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#f3f3f3",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 5017,
+    "atSeconds": 1503.3,
+    "endSeconds": 1505.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Security & Privacy",
+    "headline": "Everybody"
+  },
+  "crawler": {
+    "nodeId": "s684",
+    "depth": 691,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s683",
+        "via": "Tap “Security & Privacy”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s685",
+        "via": "Scroll",
+        "name": "Phone number entry — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

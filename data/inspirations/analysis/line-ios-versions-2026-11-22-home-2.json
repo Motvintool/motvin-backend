@@ -1,0 +1,154 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-home-2",
+  "screen_id": "line-ios-versions-2026-11-22-home-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:40.347Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Home",
+  "flow_position": 6,
+  "name": "Home home",
+  "description": "Feed screen with a 3-item tab bar and a search bar. Dark theme, 19 text elements.",
+  "text": "9:41(\n+\nMotvin\nEnter a status message\nQ Search\nServices\nSee all\nOfficial\nThemes\nStickers\nAccounts\nGroups 1\nV\n^\nFriends\n0>\nOfficial accounts\nReady to add friends?\nAdd friends by QR code or Search.\nAdd friends\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "home",
+    "chats",
+    "calls",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a search bar. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 30 in “Home”",
+        "Reached from “Home”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 12:20 in the recording",
+        "Frame 2478 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.905
+    },
+    {
+      "hex": "#393639",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#535053",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#79777a",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#14b154",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2478,
+    "atSeconds": 740.1,
+    "endSeconds": 743.7,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Ready to add friends?"
+  },
+  "crawler": {
+    "nodeId": "s335",
+    "depth": 340,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s334",
+        "via": "Dismiss",
+        "name": "Home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s336",
+        "via": "Back to Home home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

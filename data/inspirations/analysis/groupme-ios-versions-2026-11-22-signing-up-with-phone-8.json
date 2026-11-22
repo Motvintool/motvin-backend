@@ -1,0 +1,156 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-signing-up-with-phone-8",
+  "screen_id": "groupme-ios-versions-2026-11-22-signing-up-with-phone-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:51.632Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Signing up with phone",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+  "text": "9:41 €\n<\nContact Support\n•\nEnter the code we\nsent you\nWe sent to +91 6382-1025-14 to verify\nDon't see it? Retry in 15 seconds\nIncorrect code. 2 attempts remaining.\nContinue\nÀ Phone numbers aren't shared on your profile\n1\n2\n3\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nTUV\nPQRS",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "otp",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Contact Support”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with the keyboard open and a primary action labelled “Continue”. Dark theme, 27 text elements.",
+        "Calls to action: “Continue”",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 34 in “Onboarding”",
+        "Reached from “OTP verification”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:39 in the recording",
+        "Frame 137 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232024",
+      "role": "background",
+      "share": 0.466
+    },
+    {
+      "hex": "#0a040a",
+      "role": "accent",
+      "share": 0.38
+    },
+    {
+      "hex": "#403d40",
+      "role": "surface",
+      "share": 0.117
+    },
+    {
+      "hex": "#5f5c5f",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#848084",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 137,
+    "atSeconds": 39,
+    "endSeconds": 41.4,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Contact Support",
+    "headline": "Sent you"
+  },
+  "crawler": {
+    "nodeId": "s015",
+    "depth": 14,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s014",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s016",
+        "via": "Type “Motv”",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

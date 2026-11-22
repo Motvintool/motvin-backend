@@ -1,0 +1,164 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-clearing-chat-history-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-clearing-chat-history-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:13.325Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Clearing chat history",
+  "flow_position": 151,
+  "name": "Gallery",
+  "description": "Messages bottom sheet, on top of Motvin team with a paged carousel. Dark theme, 20 text elements.",
+  "text": "9:41 C\nPin\nClear chat history\nReport a concern\nEnd group\nMotvin team\nLet's connect all\nQ\nShare\nMute\nFind\nMembers\n••\n>\n1\nTopics\nCreate\nOrganise your group\nAlbums\n1\nGallery\nCalendar",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "calendar",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Gallery”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet, covering 22% of the height from 72% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet, on top of Motvin team with a paged carousel. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 151 of 169 in “New event”",
+        "Reached from “Motvin team”",
+        "Leads to “Gallery sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 8:45 in the recording",
+        "Frame 1754 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c070c",
+      "role": "background",
+      "share": 0.459
+    },
+    {
+      "hex": "#2c272d",
+      "role": "surface",
+      "share": 0.383
+    },
+    {
+      "hex": "#554756",
+      "role": "surface",
+      "share": 0.092
+    },
+    {
+      "hex": "#716673",
+      "role": "text",
+      "share": 0.012
+    },
+    {
+      "hex": "#433c43",
+      "role": "surface",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1754,
+    "atSeconds": 525,
+    "endSeconds": 526.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.3125,
+        "y": 0.71875,
+        "w": 0.625,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Gallery",
+    "headline": "Report a concern",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s246",
+    "depth": 246,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s245",
+        "via": "Tap “Calendar”",
+        "name": "Motvin team"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s247",
+        "via": "Dismiss",
+        "name": "Gallery sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

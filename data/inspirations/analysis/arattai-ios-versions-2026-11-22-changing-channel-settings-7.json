@@ -1,0 +1,165 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-changing-channel-settings-7",
+  "screen_id": "arattai-ios-versions-2026-11-22-changing-channel-settings-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:21.757Z",
+  "screen_type": "coach_mark",
+  "published_as": "onboarding",
+  "states": [
+    "coach-mark"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Changing channel settings",
+  "flow_position": 9,
+  "name": "Feature tip",
+  "description": "Coach mark toast over a dimmed screen, on top of For the background with a row of 3 category chips. Dark theme, 15 text elements.",
+  "text": "9:414\nPreview\nApply\nCancel\nToday\nSwipe left or right to preview\nbackgrounds\n4:57 AM\nYou can also try 'Motion' option\nfor the background\n4:57 AM W\nOnce set, the background will\nbe applied for everyone in the\nchannel.\nSet\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "review",
+    "coach-mark",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "toast",
+    "coach-mark"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Channel”",
+        "Category strip: Preview, Apply, Cancel",
+        "Toast over a dimmed background, covering 5% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Coach mark toast over a dimmed screen, on top of For the background with a row of 3 category chips. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: coach-mark"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 11 in “Channel settings”",
+        "Reached from “For the background”",
+        "Leads to “Chat background”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 16:00 in the recording",
+        "Frame 3206 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0a0b",
+      "role": "background",
+      "share": 0.866
+    },
+    {
+      "hex": "#282628",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#4e4c4e",
+      "role": "surface",
+      "share": 0.029
+    },
+    {
+      "hex": "#696769",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#a6a6a7",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3206,
+    "atSeconds": 960.6,
+    "endSeconds": 962.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.40625,
+        "y": 0.515625,
+        "w": 0.40625,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [
+      "Preview",
+      "Apply",
+      "Cancel"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Channel",
+    "headline": "Once set, the background will"
+  },
+  "crawler": {
+    "nodeId": "s426",
+    "depth": 429,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s425",
+        "via": "Open Channel",
+        "name": "For the background"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s427",
+        "via": "Tap “channel.”",
+        "name": "Chat background"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,168 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-adding-a-story-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-adding-a-story-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:37.868Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Adding a story",
+  "flow_position": 1,
+  "name": "Stories shared by your sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Settings sheet with a 5-item tab bar. Dark theme, 7 text elements.",
+  "text": "9:41C\nStories\nMy stories\n1m ago\nStories shared by your\ncontacts will be displayed\nhere\n+\nMeetings\nStories\nSettings\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "stories",
+    "meetings",
+    "chats",
+    "calls",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Stories, Meetings, Chats, Calls, Settings",
+        "Navigation title reads “Stories shared by your”",
+        "Bottom sheet over a dimmed background, covering 55% of the height from 42% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Settings sheet with a 5-item tab bar. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 12 in “My stories”",
+        "Reached from “Settings sheet”",
+        "Leads to “My stories”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 19:54 in the recording",
+        "Frame 3986 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0c10",
+      "role": "background",
+      "share": 0.894
+    },
+    {
+      "hex": "#2d2a2e",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#464347",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#f8d302",
+      "role": "accent",
+      "share": 0.01
+    },
+    {
+      "hex": "#757477",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3986,
+    "atSeconds": 1194.6,
+    "endSeconds": 1196.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.421875,
+        "w": 0.84375,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [
+      "Stories",
+      "Meetings",
+      "Chats",
+      "Calls",
+      "Settings"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Stories shared by your",
+    "headline": "Stories shared by your"
+  },
+  "crawler": {
+    "nodeId": "s525",
+    "depth": 530,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s524",
+        "via": "Open Stories shared by your",
+        "name": "Settings sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s526",
+        "via": "Tap “My stories”",
+        "name": "My stories"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

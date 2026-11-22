@@ -1,0 +1,146 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-renaming-a-group-1",
+  "screen_id": "line-ios-versions-2026-11-22-renaming-a-group-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:36.799Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Renaming a group",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 15 text elements.",
+  "text": "9:41(\nSettings\nX\nGroup name\nDesign\nMembers/Invite friends\nMembers join automatically\nOn >\nMembers join the group as soon as they're invited. Disable this\nsetting to always require members to accept an invite before\njoining.\nNote notifications\nGet notified when someone leaves a comment or reaction on your\nnotes.\nInvite by link or QR code\nAllow users to join this group via a link or QR code.\nChat settings\nChat wallpaper",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "notification",
+    "chat settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 4 in “Editing profile”",
+        "Reached from “Settings”",
+        "Leads to “Group name form — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:59 in the recording",
+        "Frame 2201 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#171418",
+      "role": "background",
+      "share": 0.795
+    },
+    {
+      "hex": "#338b9c",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#555356",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#373639",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#fb694e",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2201,
+    "atSeconds": 659.4,
+    "endSeconds": 660.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Design",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s296",
+    "depth": 300,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s295",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s297",
+        "via": "Scroll",
+        "name": "Group name form — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

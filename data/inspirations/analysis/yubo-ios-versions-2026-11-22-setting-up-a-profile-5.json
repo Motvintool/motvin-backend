@@ -1,0 +1,157 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-setting-up-a-profile-5",
+  "screen_id": "yubo-ios-versions-2026-11-22-setting-up-a-profile-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:55.393Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Setting up a profile",
+  "flow_position": 23,
+  "name": "More options sheet",
+  "description": "Bottom sheet over a dimmed screen. Dark theme, 5 text elements.",
+  "text": "9:41(\nooll\nWhat's your\ngender?\nFemale\nMale\nMore options\n→",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “More options”",
+        "Bottom sheet over a dimmed background, covering 48% of the height from 48% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 23 of 60 in “Logging in”",
+        "Reached from “More options”",
+        "Leads to “More options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:39 in the recording",
+        "Frame 136 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.781
+    },
+    {
+      "hex": "#32302f",
+      "role": "surface",
+      "share": 0.152
+    },
+    {
+      "hex": "#5c595b",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#867609",
+      "role": "text",
+      "share": 0.014
+    },
+    {
+      "hex": "#4e4304",
+      "role": "accent",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 136,
+    "atSeconds": 39.3,
+    "endSeconds": 41.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.484375,
+        "w": 0.875,
+        "h": 0.484375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "More options",
+    "headline": "Gender?"
+  },
+  "crawler": {
+    "nodeId": "s025",
+    "depth": 24,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s024",
+        "via": "Tap “gender?”",
+        "name": "More options"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s026",
+        "via": "Dismiss",
+        "name": "More options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-playing-an-audio-message-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-playing-an-audio-message-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:06.526Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Playing an audio message",
+  "flow_position": 2,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen. Dark theme, 4 text elements.",
+  "text": "9:41 1\nYou\nToday 3:30 PM\no|U|o|0\n00:01",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dialog over a dimmed background, covering 16% of the height from 44% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Opening Media toast options”",
+        "Reached from “Media toast”",
+        "Leads to “Add to New home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 12:30 in the recording",
+        "Frame 2509 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0a0e",
+      "role": "background",
+      "share": 0.951
+    },
+    {
+      "hex": "#575557",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#383639",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#262327",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2509,
+    "atSeconds": 750.9,
+    "endSeconds": 753,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.4375,
+        "w": 0.5,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s316",
+    "depth": 318,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s315",
+        "via": "Open Dialog",
+        "name": "Media toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s317",
+        "via": "Dismiss",
+        "name": "Add to New home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-starting-a-video-call-7",
+  "screen_id": "signal-ios-versions-2026-11-22-starting-a-video-call-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:54.257Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Starting a video call",
+  "flow_position": null,
+  "name": "Other — loading",
+  "description": "Loading state of Other. Dark theme, 1 text element.",
+  "text": "•\n•1SO\n9:41 C\nDesign\nStart Call",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "start call",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Other. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Other”",
+        "Leads to “Your camera is off”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 7:19 in the recording",
+        "Frame 1469 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080406",
+      "role": "background",
+      "share": 0.718
+    },
+    {
+      "hex": "#1f1d21",
+      "role": "surface",
+      "share": 0.227
+    },
+    {
+      "hex": "#31cc56",
+      "role": "accent",
+      "share": 0.019
+    },
+    {
+      "hex": "#3f3d3f",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#245e32",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1469,
+    "atSeconds": 439.2,
+    "endSeconds": 441,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s210",
+    "depth": 210,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s209",
+        "via": "Tap “Start Call”",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s211",
+        "via": "Wait 1.8s",
+        "name": "Your camera is off"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

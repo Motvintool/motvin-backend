@@ -1,0 +1,152 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-linking-face-id-1",
+  "screen_id": "line-ios-versions-2026-11-22-linking-face-id-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:51.912Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Linking Face ID",
+  "flow_position": 4,
+  "name": "Sign in with email",
+  "description": "Login screen with 2 input fields and a primary action labelled “Login and security”. Dark theme, 26 text elements.",
+  "text": "9:41(\n•0l\n<\nX\nAccount\nGeneral info\nEmail address\nNot added >\nPassword\nRegistered >\nIf you want to transfer your account, please make sure your\npassword and email address are registered and up-to-date.\nFace ID\nLink >\nApple\nUnlink\nGoogle\nLink\nAuthorized apps\n>\nThese are services you've linked to your LINE account through\nLINE login or by granting permissions.\nLogin and security\nPair a new device\n>\nAllow login\nEnable this setting to log in to your LINE account on other\ndevices (such as PCs, smartphones, tablets, and smartwatches).\nTwo-factor authentication\nEnables two-factor authentication when you log in to other web",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "address",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 2 input fields and a primary action labelled “Login and security”. Dark theme, 26 text elements.",
+        "Calls to action: “Login and security”, “Allow login”",
+        "26 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 27 in “Logging in with email”",
+        "Reached from “Hide or share email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 16:41 in the recording",
+        "Frame 3339 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.932
+    },
+    {
+      "hex": "#514f52",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#353236",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#878d8a",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#666467",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3339,
+    "atSeconds": 1001.1,
+    "endSeconds": 1002,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 26,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Login and security",
+      "Allow login"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Authorized apps"
+  },
+  "crawler": {
+    "nodeId": "s458",
+    "depth": 466,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s457",
+        "via": "Back to Sign in with email",
+        "name": "Hide or share email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s459",
+        "via": "Back to Sign in with email",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

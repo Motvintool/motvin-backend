@@ -1,0 +1,144 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-managing-stickers-3",
+  "screen_id": "line-ios-versions-2026-11-22-managing-stickers-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:18.838Z",
+  "screen_type": "payment",
+  "published_as": "checkout",
+  "states": [],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Managing stickers",
+  "flow_position": 13,
+  "name": "Payment method",
+  "description": "Payment screen. Dark theme, 17 text elements.",
+  "text": "9:41 €\n<\nSticker set order\nDone\nEmoji (1)\nStickers (3)\nDelete stickers or change the order of your stickers in\nyour chats.\n•.\nBrown, Cony & Sally: An...\nNo expiration date\nCHOCO & Friends: Anim...\nNo expiration date\nUNIVERSTAR BT21: Ani..\nNo expiration date\nDiscover a huge collection of expressive stickers\nand emoji.\nSticker Shop",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "payment",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sticker set order”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Payment screen. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 13 of 99 in “Reading messages”",
+        "Reached from “Payment method”",
+        "Leads to “Payment method”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:55 in the recording",
+        "Frame 790 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.917
+    },
+    {
+      "hex": "#3a373b",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#5a5259",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#652228",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#c83135",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 790,
+    "atSeconds": 235.8,
+    "endSeconds": 237.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sticker set order",
+    "headline": "Brown, Cony & Sally: An"
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 111,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "payment entry — crawler does not enter payment details",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Tap “Brown & Cony”",
+        "name": "Payment method"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Wait 1.5s",
+        "name": "Payment method"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,169 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-granting-chat-permissions-4",
+  "screen_id": "line-ios-versions-2026-11-22-granting-chat-permissions-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:16.927Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Granting chat permissions",
+  "flow_position": 61,
+  "name": "Location permission",
+  "description": "Permission toast over a dimmed screen, on top of Keep Memo with a primary action labelled “Allow”. Dark theme, 23 text elements.",
+  "text": "9:41(\nKeep Memo\nToday\nSend any messages, photos, videos, and links you want to\nkeep for yourselt.\nHey\n4:16 PM\n\"LINE\" would like to access the\nia\nMicrophone.\nLINE needs access to your\nmicrophone to enable voice calls and\nsound recording.\nMana\nDon't Allow\nAllow\nD600T6\nGdogle\nIndia Tees\n1440 3Road Main Road, Edema\nNagar, Mmda Layout, Mathur\n600068, Tamil Nadu\nLocation\n4:17 PM\nAa",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "photo",
+    "video",
+    "location",
+    "aa",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"LINE\" would like to access the”",
+        "Toast over a dimmed background, covering 11% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen, on top of Keep Memo with a primary action labelled “Allow”. Dark theme, 23 text elements.",
+        "Calls to action: “Allow”",
+        "23 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 61 of 61 in “Opening a page (Home)”",
+        "Reached from “Keep Memo”",
+        "Leads to “Text scan home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 3:12 in the recording",
+        "Frame 644 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111113",
+      "role": "background",
+      "share": 0.683
+    },
+    {
+      "hex": "#314033",
+      "role": "surface",
+      "share": 0.159
+    },
+    {
+      "hex": "#3a7340",
+      "role": "accent",
+      "share": 0.069
+    },
+    {
+      "hex": "#737474",
+      "role": "text",
+      "share": 0.039
+    },
+    {
+      "hex": "#575d59",
+      "role": "surface",
+      "share": 0.017
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 644,
+    "atSeconds": 192.9,
+    "endSeconds": 193.5,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.34375,
+        "w": 0.0625,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"LINE\" would like to access the",
+    "headline": "Sound recording",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s092",
+    "depth": 94,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s091",
+        "via": "Back to Location permission",
+        "name": "Keep Memo"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s093",
+        "via": "Open Text scan home",
+        "name": "Text scan home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

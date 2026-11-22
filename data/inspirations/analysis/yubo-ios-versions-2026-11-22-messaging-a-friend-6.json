@@ -1,0 +1,170 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-messaging-a-friend-6",
+  "screen_id": "yubo-ios-versions-2026-11-22-messaging-a-friend-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:11.486Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Messaging a friend",
+  "flow_position": 128,
+  "name": "Message",
+  "description": "Messages bottom sheet, on top of Contact support for further form with the keyboard open and a primary action labelled “send”. Dark theme, 36 text elements.",
+  "text": "9:41(\n•ll\nSafety Team\nJust now\nassistance.\nThankyou\nGIF\nBest wishes\nfor you\n0:02\nx1\nMessage...\nGIF\nThe\nI'm\nW\nU\nT\nP\nE\nR\nH\nS\nF\nJ\nK\nD\nG\nZ\nX\nC\nV\nB\nN\nM\nsend\n123\nspace",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Message”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet, covering 50% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet, on top of Contact support for further form with the keyboard open and a primary action labelled “send”. Dark theme, 36 text elements.",
+        "Calls to action: “send”",
+        "36 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 128 of 338 in “Subscribing”",
+        "Reached from “Contact support for further form”",
+        "Leads to “Success”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 8.1s at 6:47 in the recording",
+        "Frame 1383 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0d11",
+      "role": "background",
+      "share": 0.34
+    },
+    {
+      "hex": "#303035",
+      "role": "surface",
+      "share": 0.223
+    },
+    {
+      "hex": "#505153",
+      "role": "surface",
+      "share": 0.119
+    },
+    {
+      "hex": "#7d7e7f",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#e8cec2",
+      "role": "text",
+      "share": 0.029
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1383,
+    "atSeconds": 407.1,
+    "endSeconds": 415.2,
+    "holdSeconds": 8.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.390625,
+        "w": 0.96875,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "send"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Message",
+    "headline": "Best wishes"
+  },
+  "crawler": {
+    "nodeId": "s194",
+    "depth": 193,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s193",
+        "via": "Tap “Best wishes”",
+        "name": "Contact support for further form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s195",
+        "via": "Tap “Best wishes”",
+        "name": "Success"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

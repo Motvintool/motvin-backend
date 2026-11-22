@@ -1,0 +1,142 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-finding-a-person-by-username-3",
+  "screen_id": "signal-ios-versions-2026-11-22-finding-a-person-by-username-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:38.628Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Finding a person by username",
+  "flow_position": null,
+  "name": "Scan QR Code sheet — loading",
+  "description": "Loading state of Scan QR Code sheet. Dark theme, 4 text elements.",
+  "text": "9:41€\nodl\nX\nScan QR Code\nScan the QR Code on your contact's device.\nL",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Scan QR Code”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Scan QR Code sheet. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Find by Username”",
+        "Leads to “Photos — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 2:10 in the recording",
+        "Frame 437 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.96
+    },
+    {
+      "hex": "#2d282d",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#514d51",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#a5a3a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 437,
+    "atSeconds": 130.8,
+    "endSeconds": 131.4,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Scan QR Code",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s048",
+    "depth": 47,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s047",
+        "via": "Wait 1.5s",
+        "name": "Find by Username"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s049",
+        "via": "Wait 0.6s",
+        "name": "Photos — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

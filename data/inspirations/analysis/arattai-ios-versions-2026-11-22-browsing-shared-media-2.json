@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-browsing-shared-media-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-browsing-shared-media-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:18.915Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Browsing shared media",
+  "flow_position": 2,
+  "name": "Media home",
+  "description": "Home screen with a 4-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:414\nC\n•0ll\nX\nMedia, files & links\nYour media will appear here\nThere are currently no media files. When\nyou send or receive media files, they will\nappear here.\nAudio\nMedia\nFiles\nLir",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "media",
+    "audio",
+    "files",
+    "lir",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Media, Audio, Files, Lir",
+        "Navigation title reads “Media, files & links”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Media”",
+        "Reached from “Media, files & links”",
+        "Leads to “Media home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 15:25 in the recording",
+        "Frame 3088 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.806
+    },
+    {
+      "hex": "#312e34",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#115283",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#514e51",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#233267",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3088,
+    "atSeconds": 925.5,
+    "endSeconds": 927,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Media",
+      "Audio",
+      "Files",
+      "Lir"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Media, files & links",
+    "headline": "Your media will appear here"
+  },
+  "crawler": {
+    "nodeId": "s405",
+    "depth": 408,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s404",
+        "via": "Tap “Media, files & links”",
+        "name": "Media, files & links"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s406",
+        "via": "Wait 1.5s",
+        "name": "Media home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

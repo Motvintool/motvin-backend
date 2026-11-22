@@ -1,0 +1,158 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-notification-settings-4",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-notification-settings-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:59.044Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing notification settings",
+  "flow_position": 32,
+  "name": "Chat is muted sheet",
+  "description": "Bottom sheet, on top of Notifications. Dark theme, 9 text elements.",
+  "text": "9:41(\nWhile Muted\nCalls\nRing or notify when a call is started while this chat is\nmuted.\nMentions\nNotify when you are mentioned while this chat is muted.\nReplies\nNotify when someone replies to your message while this\nchat is muted.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Chat is muted”",
+        "Bottom sheet, covering 39% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Notifications. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 63 in “Searching Chats”",
+        "Reached from “Notifications”",
+        "Leads to “Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 8:48 in the recording",
+        "Frame 1764 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f23",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#4a1b0b",
+      "role": "accent",
+      "share": 0.058
+    },
+    {
+      "hex": "#404043",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#615e5e",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#fafdfc",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1764,
+    "atSeconds": 528.6,
+    "endSeconds": 529.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.515625,
+        "w": 0.8125,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chat is muted",
+    "headline": "Mentions"
+  },
+  "crawler": {
+    "nodeId": "s261",
+    "depth": 261,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s260",
+        "via": "Open Chat is muted",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s262",
+        "via": "Dismiss",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

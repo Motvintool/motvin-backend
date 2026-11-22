@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-privacy-settings-1",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-privacy-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:16.340Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Changing privacy settings",
+  "flow_position": 39,
+  "name": "Phone number entry",
+  "description": "Login screen with 1 input field. Dark theme, 17 text elements.",
+  "text": "9:41 (\n<\nPrivacy\nPhone Number\nChoose who can see your phone number and who can\ncontact you on Signal with it.\nBlocked\nRead Receipts\nTyping Indicators\nSee and share when messages are being read and typed.\nIf disabled, you won't see read receipts or typing\nindicators from others.\nOff >\nDisappearing Messages\nSet a default disappearing message timer for all new\nchats started by you.\nApp Security\nHide Screen in App Switcher\nScreen Lock\nUse Face ID to unlock Signal.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "screen lock",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Privacy”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 1 input field. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 39 of 41 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Phone number entry — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 15:29 in the recording",
+        "Frame 3100 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262428",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#070207",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#575659",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#3d3e40",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#797d7e",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 3100,
+    "atSeconds": 929.4,
+    "endSeconds": 930.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Privacy",
+    "headline": "Typing Indicators",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s459",
+    "depth": 464,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s458",
+        "via": "Tap “Privacy”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s460",
+        "via": "Scroll",
+        "name": "Phone number entry — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

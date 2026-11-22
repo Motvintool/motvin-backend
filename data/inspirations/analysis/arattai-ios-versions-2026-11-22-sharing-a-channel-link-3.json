@@ -1,0 +1,159 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-sharing-a-channel-link-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-sharing-a-channel-link-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:17.378Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Sharing a channel link",
+  "flow_position": 3,
+  "name": "Search",
+  "description": "Search bottom sheet, on top of Channel link with a search bar. Dark theme, 6 text elements.",
+  "text": "9:414\nForward\nSearch\nMy stories\nShare with contacts\nPocket\nYour personal storage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Bottom sheet, covering 36% of the height from 56% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search bottom sheet, on top of Channel link with a search bar. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Channel link”",
+        "Reached from “Channel link”",
+        "Leads to “Channel link sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 15:04 in the recording",
+        "Frame 3019 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.839
+    },
+    {
+      "hex": "#403d40",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#105384",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#2a252a",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#656365",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3019,
+    "atSeconds": 904.8,
+    "endSeconds": 906,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.5625,
+        "w": 0.9375,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "My stories"
+  },
+  "crawler": {
+    "nodeId": "s394",
+    "depth": 397,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s393",
+        "via": "Open Search",
+        "name": "Channel link"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s395",
+        "via": "Dismiss",
+        "name": "Channel link sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-settings-6",
+  "screen_id": "signal-ios-versions-2026-11-22-settings-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:16.690Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Settings",
+  "flow_position": 11,
+  "name": "Signal Secure Backups",
+  "description": "Messages screen. Dark theme, 11 text elements.",
+  "text": "9:41(\nBackups\nBack up your message history so you never lose data\nwhen you get a new phone or reinstall Signal.\nSignal Secure Backups\nAutomatic backups with Signal's\nsecure, end-to-end encrypted storage\nservice.\nSet Up\nOther Ways to Backup\nOn-Device Backups\nSave your backups to a folder on this device.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Signal Secure Backups”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 13 in “Reading messages”",
+        "Reached from “Settings”",
+        "Leads to “On-Device Backups”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 15:33 in the recording",
+        "Frame 3118 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222024",
+      "role": "background",
+      "share": 0.854
+    },
+    {
+      "hex": "#403e44",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#615f66",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#c2caf7",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 3118,
+    "atSeconds": 933.9,
+    "endSeconds": 935.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Signal Secure Backups",
+    "headline": "On-Device Backups"
+  },
+  "crawler": {
+    "nodeId": "s463",
+    "depth": 468,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s462",
+        "via": "Open Signal Secure Backups",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s464",
+        "via": "Wait 1.8s",
+        "name": "On-Device Backups"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

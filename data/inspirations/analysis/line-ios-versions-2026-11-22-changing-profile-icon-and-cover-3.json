@@ -1,0 +1,145 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-changing-profile-icon-and-cover-3",
+  "screen_id": "line-ios-versions-2026-11-22-changing-profile-icon-and-cover-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:51.065Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing profile icon and cover",
+  "flow_position": 2,
+  "name": "Set profile icon and cover",
+  "description": "Other screen. Dark theme, 11 text elements.",
+  "text": "9:41€\n<\nSet profile icon and cover\nX\nProfile icon\nOpen camera\nSelect photo or video\nDelete profile icon\nProfile cover\nOpen camera\nSelect photo or video\nDelete profile cover",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "video",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Set profile icon and cover”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Set profile icon and cover”",
+        "Reached from “Video sheet”",
+        "Leads to “Delete profile cover sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 16:21 in the recording",
+        "Frame 3280 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#15111b",
+      "role": "background",
+      "share": 0.922
+    },
+    {
+      "hex": "#423f43",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#472128",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#585559",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#f9f9fa",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3280,
+    "atSeconds": 981.6,
+    "endSeconds": 984.3,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Set profile icon and cover",
+    "headline": "Open camera"
+  },
+  "crawler": {
+    "nodeId": "s449",
+    "depth": 457,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s448",
+        "via": "Back to Set profile icon and cover",
+        "name": "Video sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s450",
+        "via": "Back to Delete profile cover sheet",
+        "name": "Delete profile cover sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

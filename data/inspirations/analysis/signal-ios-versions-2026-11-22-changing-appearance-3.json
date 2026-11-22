@@ -1,0 +1,155 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-appearance-3",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-appearance-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:02.765Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing appearance",
+  "flow_position": 3,
+  "name": "Bottom sheet",
+  "description": "Bottom sheet, on top of Appearance. Dark theme, 4 text elements.",
+  "text": "9:41(\n•ll\nTheme\nSystem\nLight\nDark",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Bottom sheet, covering 25% of the height from 66% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Appearance. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 10 in “Appearance”",
+        "Reached from “Appearance”",
+        "Leads to “Appearance sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:10 in the recording",
+        "Frame 2038 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f23",
+      "role": "background",
+      "share": 0.923
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#48464a",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#635f63",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2038,
+    "atSeconds": 610.2,
+    "endSeconds": 611.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.1875,
+        "y": 0.65625,
+        "w": 0.6875,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Light"
+  },
+  "crawler": {
+    "nodeId": "s302",
+    "depth": 305,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s301",
+        "via": "Back to Bottom sheet",
+        "name": "Appearance"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s303",
+        "via": "Dismiss",
+        "name": "Appearance sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

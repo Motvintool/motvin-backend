@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-running-a-meeting-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-running-a-meeting-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:43.614Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Running a meeting",
+  "flow_position": 1,
+  "name": "Video home",
+  "description": "Home screen with a 4-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41\n00:07\nYou are the only one here\nInvite participants\nVideo\nSpeaker\nMute\nEnd",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "mute",
+    "speaker",
+    "end",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Video, Mute, Speaker, End",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 4-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 16 in “Video”",
+        "Reached from “Loading state”",
+        "Leads to “Video home — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 21:18 in the recording",
+        "Frame 4262 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1c1b1e",
+      "role": "background",
+      "share": 0.819
+    },
+    {
+      "hex": "#4d4637",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#060608",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#f6f6fb",
+      "role": "text",
+      "share": 0.014
+    },
+    {
+      "hex": "#dfdce3",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4262,
+    "atSeconds": 1278.3,
+    "endSeconds": 1278.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Video",
+      "Mute",
+      "Speaker",
+      "End"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s566",
+    "depth": 571,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s565",
+        "via": "Wait 3.6s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s567",
+        "via": "Open Video home — loading",
+        "name": "Video home — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

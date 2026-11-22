@@ -1,0 +1,173 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-chats-4",
+  "screen_id": "line-ios-versions-2026-11-22-chats-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:40.258Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Chats",
+  "flow_position": 5,
+  "name": "Home",
+  "description": "Messages bottom sheet over a dimmed screen with a 3-item tab bar and a search bar. Dark theme, 12 text elements.",
+  "text": "9:41(\nChats •\n®+\nQ Search\n4:35PM\nService Messages\nReport received\n4:23 PM\nDesign1 (1) *\nGroup call ended.\nKeep Memo\nSend any messages, photos, videos, and\nlinks you want to keep for yourself.\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "message",
+    "photo",
+    "video",
+    "home",
+    "chats",
+    "calls",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Navigation title reads “Home”",
+        "Search bar present",
+        "Bottom sheet over a dimmed background, covering 17% of the height from 80% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen with a 3-item tab bar and a search bar. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 30 in “Home”",
+        "Reached from “Group voice call started”",
+        "Leads to “Home home”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 12:16 in the recording",
+        "Frame 2465 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.913
+    },
+    {
+      "hex": "#373438",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#484648",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#1aca5c",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#0e6231",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2465,
+    "atSeconds": 736.2,
+    "endSeconds": 739.8,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.796875,
+        "w": 0.84375,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home",
+    "headline": "Service Messages"
+  },
+  "crawler": {
+    "nodeId": "s334",
+    "depth": 339,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s333",
+        "via": "Open Home",
+        "name": "Group voice call started"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s335",
+        "via": "Dismiss",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

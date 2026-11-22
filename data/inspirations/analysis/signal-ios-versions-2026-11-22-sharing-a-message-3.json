@@ -1,0 +1,150 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-message-3",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-message-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:51.450Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a message",
+  "flow_position": 15,
+  "name": "Messages",
+  "description": "Messages screen with the keyboard open. Dark theme, 40 text elements.",
+  "text": "9:41(\nDesign\n•Verified\n0000000000000000|10000\n0:01\nYou\nVoice Message\nHey\n0:01 •\nNow\n+\nMessage\nThe\nI'm\nR\nU\nQ\nW\nT\nO\nP\nE\nY\n-\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with the keyboard open. Dark theme, 40 text elements.",
+        "40 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 60 in “Opening a page (File)”",
+        "Reached from “Search results”",
+        "Leads to “Reply”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:36 in the recording",
+        "Frame 1324 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0409",
+      "role": "background",
+      "share": 0.399
+    },
+    {
+      "hex": "#232024",
+      "role": "surface",
+      "share": 0.276
+    },
+    {
+      "hex": "#1a61f3",
+      "role": "accent",
+      "share": 0.087
+    },
+    {
+      "hex": "#434043",
+      "role": "surface",
+      "share": 0.064
+    },
+    {
+      "hex": "#5e5b5e",
+      "role": "surface",
+      "share": 0.041
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1324,
+    "atSeconds": 396.3,
+    "endSeconds": 397.5,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 40,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Message"
+  },
+  "crawler": {
+    "nodeId": "s182",
+    "depth": 182,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s181",
+        "via": "Back to Messages",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s183",
+        "via": "Back to Other",
+        "name": "Reply"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

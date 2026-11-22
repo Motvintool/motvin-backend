@@ -1,0 +1,151 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-setting-up-a-profile-4",
+  "screen_id": "yubo-ios-versions-2026-11-22-setting-up-a-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:55.158Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "creation",
+  "flow_name": "Setting up a profile",
+  "flow_position": 20,
+  "name": "Profile form",
+  "description": "Form screen with the keyboard open. Dark theme, 21 text elements.",
+  "text": "9:41 €\nWhen's your\nbirthday?\n04/ 12 /2000\n→\n2\n3\n1\nABC\nDEF\n5\n4\n6\nGHI\nJKL\nMNO\n7\n8\n9\nWXYZ\nPQRS\nTUV",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen with the keyboard open. Dark theme, 21 text elements.",
+        "21 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 20 of 60 in “Logging in”",
+        "Reached from “Profile form”",
+        "Leads to “When's your toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 0:35 in the recording",
+        "Frame 124 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.529
+    },
+    {
+      "hex": "#2f2c2e",
+      "role": "surface",
+      "share": 0.213
+    },
+    {
+      "hex": "#646264",
+      "role": "surface",
+      "share": 0.166
+    },
+    {
+      "hex": "#474547",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#868485",
+      "role": "text",
+      "share": 0.02
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 124,
+    "atSeconds": 35.7,
+    "endSeconds": 37.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Birthday?"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Tap “ABC”",
+        "name": "Profile form"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Tap “When's your”",
+        "name": "When's your toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

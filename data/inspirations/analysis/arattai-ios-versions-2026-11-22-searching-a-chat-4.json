@@ -1,0 +1,166 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-searching-a-chat-4",
+  "screen_id": "arattai-ios-versions-2026-11-22-searching-a-chat-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:02.256Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Searching a chat",
+  "flow_position": 91,
+  "name": "Search",
+  "description": "Search dialog over a dimmed screen, on top of Search with a search bar and the keyboard open. Dark theme, 40 text elements.",
+  "text": "9:414\n•0l\nSearch\nCancel\nYou\nMessages in this group are protected with end-\nto-end encryption.\nToday\nYou have created group Trip\n00:25\nEx Meeting\nTrip - 22/11/2026\n3:24 PM \"\nMeeting ended\nAnantharaman Clg\nEnnadhu da\n3:25 PM\nQ\nW\nR\nT\nY\nU\nP\nE\nA\nS\nD\nG\nH\nJ\nK\nF\nL\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Keyboard is open, so the lower half is input",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 31% of the height from 3% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search dialog over a dimmed screen, on top of Search with a search bar and the keyboard open. Dark theme, 40 text elements.",
+        "40 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 91 of 116 in “Filling in Balaji Abi”",
+        "Reached from “Search”",
+        "Leads to “Trip D”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 11:24 in the recording",
+        "Frame 2294 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141419",
+      "role": "background",
+      "share": 0.624
+    },
+    {
+      "hex": "#2e2d35",
+      "role": "surface",
+      "share": 0.166
+    },
+    {
+      "hex": "#2d3a76",
+      "role": "accent",
+      "share": 0.097
+    },
+    {
+      "hex": "#4a484b",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#636264",
+      "role": "surface",
+      "share": 0.031
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2294,
+    "atSeconds": 684,
+    "endSeconds": 688.5,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.03125,
+        "w": 0.9375,
+        "h": 0.3125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 40,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "Meeting ended"
+  },
+  "crawler": {
+    "nodeId": "s286",
+    "depth": 288,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s285",
+        "via": "Type “You”",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s287",
+        "via": "Tap “Meeting ended”",
+        "name": "Trip D"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

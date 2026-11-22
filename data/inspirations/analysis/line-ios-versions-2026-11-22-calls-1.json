@@ -1,0 +1,152 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-calls-1",
+  "screen_id": "line-ios-versions-2026-11-22-calls-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:46.331Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Calls",
+  "flow_position": 19,
+  "name": "Search — scrolled",
+  "description": "Home screen, scrolled further down from Search with a 3-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41C\noll\nCalls\nDesign1\n4:23 PM\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "home",
+    "chats",
+    "calls",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen, scrolled further down from Search with a 3-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 19 of 30 in “Home”",
+        "Reached from “Search”",
+        "Leads to “4:23 PM Voice call sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 14:56 in the recording",
+        "Frame 2990 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.954
+    },
+    {
+      "hex": "#3f3c3f",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#322729",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#f86a50",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#5f5d60",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2990,
+    "atSeconds": 896.1,
+    "endSeconds": 897.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s401",
+    "depth": 408,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s400",
+        "via": "Scroll",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s402",
+        "via": "Tap “4:23 PM”",
+        "name": "4:23 PM Voice call sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

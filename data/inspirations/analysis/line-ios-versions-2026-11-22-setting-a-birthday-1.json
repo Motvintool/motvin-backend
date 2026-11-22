@@ -1,0 +1,150 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-setting-a-birthday-1",
+  "screen_id": "line-ios-versions-2026-11-22-setting-a-birthday-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:49.774Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Setting a birthday",
+  "flow_position": 1,
+  "name": "Profile",
+  "description": "Profile screen with a primary action labelled “Done”. Dark theme, 30 text elements.",
+  "text": "9:41C\n•0l\nBirthday\nDay, Month, Year\nShow my birthday\nShow my birth year\nIf you choose to show your birthday, your friends will be able to\nsee the date from your profile, the Home and Chat tabs, and\nmore.\nDone\n2002\nJüne\n2001\n18\nJuly\n19\n2000\nAugust\nSeptember\n20\n1999\nOctober\n21\n1998\nNovember\n22\n1997\nDecember\n1996\n23\n24\n1995\n1994\n25\n26\n1993\n1992",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Show my birth year”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with a primary action labelled “Done”. Dark theme, 30 text elements.",
+        "Calls to action: “Done”",
+        "30 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Profile”",
+        "Reached from “Profile”",
+        "Leads to “Profile”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 16:00 in the recording",
+        "Frame 3227 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b181c",
+      "role": "background",
+      "share": 0.914
+    },
+    {
+      "hex": "#363438",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#575558",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#0e6332",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#a4b2aa",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3227,
+    "atSeconds": 960.6,
+    "endSeconds": 962.4,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 30,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Done"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Show my birth year",
+    "headline": "Show my birth year"
+  },
+  "crawler": {
+    "nodeId": "s436",
+    "depth": 444,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s435",
+        "via": "Tap “Profile”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s437",
+        "via": "Wait 3.6s",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

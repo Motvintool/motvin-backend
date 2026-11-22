@@ -1,0 +1,151 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-creating-a-group-2",
+  "screen_id": "signal-ios-versions-2026-11-22-creating-a-group-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:38.473Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Creating a group",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open. Dark theme, 21 text elements.",
+  "text": "9:41 €\n<\nSkip\nSelect Members\nSignal has limited access to your\nManage\nsystem contacts\n>\nFind by Username\nA\nFind by Phone Number\nK\nL\nN\nS\nT\nV\nW\nX\nY\nZ\n#\nQ\nName, username, or number",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select Members”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Dark theme, 21 text elements.",
+        "21 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 41 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Find by Username”",
+        "Returned to 12 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 5.7s at 2:06 in the recording",
+        "Frame 579 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f23",
+      "role": "background",
+      "share": 0.862
+    },
+    {
+      "hex": "#474549",
+      "role": "surface",
+      "share": 0.075
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#626063",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 579,
+    "atSeconds": 126,
+    "endSeconds": 127.8,
+    "holdSeconds": 5.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 12
+  },
+  "signals": {
+    "lineCount": 21,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select Members",
+    "headline": "Find by Phone Number"
+  },
+  "crawler": {
+    "nodeId": "s046",
+    "depth": 45,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s045",
+        "via": "Wait 3.3s",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s047",
+        "via": "Wait 5.7s",
+        "name": "Find by Username"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

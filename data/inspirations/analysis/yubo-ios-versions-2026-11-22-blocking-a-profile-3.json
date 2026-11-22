@@ -1,0 +1,161 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-blocking-a-profile-3",
+  "screen_id": "yubo-ios-versions-2026-11-22-blocking-a-profile-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:07.956Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Blocking a profile",
+  "flow_position": 92,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Profile. Dark theme, 5 text elements.",
+  "text": "9:41€\n•ll\nBlock\nV\nYou blocked Vishal. You won't see their profile\nanymore. If you would like to unblock them,\nyou can do so in Settings.\nDone",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "done",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Anymore. If you would like to unblock”",
+        "Dialog over a dimmed background, covering 14% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Profile. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 92 of 338 in “Subscribing”",
+        "Reached from “Profile”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 5:31 in the recording",
+        "Frame 1109 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090808",
+      "role": "background",
+      "share": 0.866
+    },
+    {
+      "hex": "#26272a",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#3c7ef5",
+      "role": "accent",
+      "share": 0.052
+    },
+    {
+      "hex": "#1e3a71",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#454347",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1109,
+    "atSeconds": 331.8,
+    "endSeconds": 333,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.078125,
+        "w": 0.9375,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Anymore. If you would like to unblock",
+    "headline": "You can do so in Settings",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s158",
+    "depth": 157,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s157",
+        "via": "Tap “anymore.”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s159",
+        "via": "Open Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,144 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-finding-a-person-by-username-1",
+  "screen_id": "signal-ios-versions-2026-11-22-finding-a-person-by-username-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:38.553Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Finding a person by username",
+  "flow_position": 3,
+  "name": "Find by Username",
+  "description": "Onboarding screen with 1 input field. Dark theme, 7 text elements.",
+  "text": "9:41 (\n<\nFind by Username\nNext\nUsername\nEnter a username followed by a dot and its set of\nnumbers.\n8 Scan QR Code",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Find by Username”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with 1 input field. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 41 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Scan QR Code sheet — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:08 in the recording",
+        "Frame 433 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1d21",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#060106",
+      "role": "accent",
+      "share": 0.058
+    },
+    {
+      "hex": "#464449",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#636166",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 433,
+    "atSeconds": 128.7,
+    "endSeconds": 130.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Find by Username",
+    "headline": "Username"
+  },
+  "crawler": {
+    "nodeId": "s047",
+    "depth": 46,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s046",
+        "via": "Wait 5.7s",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s048",
+        "via": "Wait 1.5s",
+        "name": "Scan QR Code sheet — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

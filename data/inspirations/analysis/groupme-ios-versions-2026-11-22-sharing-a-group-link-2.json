@@ -1,0 +1,159 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-sharing-a-group-link-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-sharing-a-group-link-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:56.710Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a group link",
+  "flow_position": 8,
+  "name": "Share group toast",
+  "description": "Toast, on top of Share group. Dark theme, 12 text elements.",
+  "text": "9:41 €\nShare group\nMotvin team\nJoin on GroupMe\nCopy link\nShare QR code\nOX\nSnapchat\nInstagram Stories\n>\niMessage\n>\nWhatsApp\nShare to...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Share group”",
+        "Toast, covering 5% of the height from 5% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast, on top of Share group. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 25 in “Opening Settings options”",
+        "Reached from “Share group”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 2:45 in the recording",
+        "Frame 557 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.779
+    },
+    {
+      "hex": "#ab9fb2",
+      "role": "text",
+      "share": 0.056
+    },
+    {
+      "hex": "#3b353d",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#1e1e1f",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#977b96",
+      "role": "surface",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 557,
+    "atSeconds": 165.3,
+    "endSeconds": 167.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.046875,
+        "w": 0.5625,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Share group",
+    "headline": "Motvin team"
+  },
+  "crawler": {
+    "nodeId": "s069",
+    "depth": 68,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s068",
+        "via": "Tap “Share group”",
+        "name": "Share group"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s070",
+        "via": "Tap “Motvin team”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

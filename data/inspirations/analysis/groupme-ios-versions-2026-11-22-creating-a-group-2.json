@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-a-group-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-a-group-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:53.844Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a group",
+  "flow_position": 2,
+  "name": "New group",
+  "description": "Detail screen with the keyboard open. Dark theme, 27 text elements.",
+  "text": "9:41 €\noll\nNew group\nCreate\nMotv\nAdd a description (optional)\nMOtvin\n\"Motv\nMotvin\ni\nW\nt\ne\nr\nO\nk\nf\nh\nd\na\nS\nJ\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "detail",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New group”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Detail screen with the keyboard open. Dark theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 21 in “New group detail”",
+        "Reached from “New group — loading”",
+        "Leads to “New group”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:37 in the recording",
+        "Frame 330 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#09040a",
+      "role": "background",
+      "share": 0.459
+    },
+    {
+      "hex": "#212026",
+      "role": "surface",
+      "share": 0.383
+    },
+    {
+      "hex": "#474448",
+      "role": "surface",
+      "share": 0.091
+    },
+    {
+      "hex": "#636163",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#0988fc",
+      "role": "accent",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 330,
+    "atSeconds": 97.2,
+    "endSeconds": 99.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New group",
+    "headline": "Motv"
+  },
+  "crawler": {
+    "nodeId": "s040",
+    "depth": 39,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s039",
+        "via": "Wait 2.1s",
+        "name": "New group — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s041",
+        "via": "Tap “New group”",
+        "name": "New group"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

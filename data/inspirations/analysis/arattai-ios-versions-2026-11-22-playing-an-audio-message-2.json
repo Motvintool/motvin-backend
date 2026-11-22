@@ -1,0 +1,157 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-playing-an-audio-message-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-playing-an-audio-message-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:06.756Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Playing an audio message",
+  "flow_position": 3,
+  "name": "O lll toast",
+  "description": "Toast, on top of Loading state. Dark theme, 6 text elements.",
+  "text": "9:414\nYou\nToday 3:30 PM\no lll\n00:06\nU\nU",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “O lll”",
+        "Toast, covering 11% of the height from 11% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast, on top of Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Opening Media toast options”",
+        "Reached from “Add to New home — loading”",
+        "Leads to “Add to New home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 12:36 in the recording",
+        "Frame 2525 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0c10",
+      "role": "background",
+      "share": 0.901
+    },
+    {
+      "hex": "#302d2e",
+      "role": "surface",
+      "share": 0.048
+    },
+    {
+      "hex": "#575456",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#3d3b3e",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#6b696c",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2525,
+    "atSeconds": 756,
+    "endSeconds": 757.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.109375,
+        "w": 0.3125,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "O lll",
+    "headline": "O lll"
+  },
+  "crawler": {
+    "nodeId": "s318",
+    "depth": 320,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s317",
+        "via": "Wait 2.7s",
+        "name": "Add to New home — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s319",
+        "via": "Open Add to New home",
+        "name": "Add to New home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

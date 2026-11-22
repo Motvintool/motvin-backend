@@ -1,0 +1,150 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-inviting-friends-to-signal-1",
+  "screen_id": "signal-ios-versions-2026-11-22-inviting-friends-to-signal-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:06.386Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Inviting friends to Signal",
+  "flow_position": 29,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open. Dark theme, 22 text elements.",
+  "text": "9:41(\no1l\nX\nNew Call\nSignal has limited access to your\nManage\nsystem contacts\nFind by Username\nA\nC\n#\nFind by Phone Number\nMore\nL\nInvite Friends to Signal\nN\nQ\nT\nV\nW\nX\nY\nZ\n#\nQ\nName, username, or number",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New Call”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Dark theme, 22 text elements.",
+        "22 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 29 of 41 in “Logging in with phone number”",
+        "Reached from “No Missed Calls sheet”",
+        "Leads to “Invite Friends”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 11:27 in the recording",
+        "Frame 2296 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222024",
+      "role": "background",
+      "share": 0.852
+    },
+    {
+      "hex": "#484549",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#656266",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2296,
+    "atSeconds": 687.3,
+    "endSeconds": 689.1,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New Call",
+    "headline": "Find by Phone Number"
+  },
+  "crawler": {
+    "nodeId": "s341",
+    "depth": 344,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s340",
+        "via": "Type “New Call”",
+        "name": "No Missed Calls sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s342",
+        "via": "Type “Invite Friends”",
+        "name": "Invite Friends"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

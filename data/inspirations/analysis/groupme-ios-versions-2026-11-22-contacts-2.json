@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-contacts-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-contacts-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:38.550Z",
+  "screen_type": "empty_state",
+  "published_as": "empty",
+  "states": [
+    "empty"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Contacts",
+  "flow_position": 3,
+  "name": "All caught up (empty)",
+  "description": "Empty state screen. Dark theme, 4 text elements, an empty state.",
+  "text": "9:41C\nRequests\nX\nAll caught up\nYou have no requests at the moment\nFriends\nRequests",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "friends",
+    "requests",
+    "empty-state",
+    "empty",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "empty-state"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “All caught up”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Empty state screen. Dark theme, 4 text elements, an empty state.",
+        "4 text elements recognised",
+        "State: empty"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Searching Chat”",
+        "Reached from “Friends search”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 17:42 in the recording",
+        "Frame 3543 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.845
+    },
+    {
+      "hex": "#232024",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#494649",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#7e777d",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#393639",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3543,
+    "atSeconds": 1062.6,
+    "endSeconds": 1063.2,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "All caught up",
+    "headline": "All caught up",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s519",
+    "depth": 522,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s518",
+        "via": "Back to All caught up (empty)",
+        "name": "Friends search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s520",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

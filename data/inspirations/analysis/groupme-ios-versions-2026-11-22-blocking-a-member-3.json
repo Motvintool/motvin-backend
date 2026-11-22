@@ -1,0 +1,162 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-blocking-a-member-3",
+  "screen_id": "groupme-ios-versions-2026-11-22-blocking-a-member-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:26.311Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Blocking a member",
+  "flow_position": 18,
+  "name": "GroupMe toast",
+  "description": "Toast over a dimmed screen, on top of Search members with a search bar. Dark theme, 20 text elements.",
+  "text": "9:41(\nMembers\nSearch members\nInvite by link\n>\nOwner\nGroupMe\n•..\nMe\nBlock GroupMe?\nBlocking will prevent this person from\nsending you a direct message and\nadding you to groups\nCancel\nBlock\nAG\nALICEN GRACE\n..°\n#\n...\nGroupMe\nYou're both in Cardinals vs Chiefs\nSince Jun 2026",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “GroupMe”",
+        "Search bar present",
+        "Toast over a dimmed background, covering 11% of the height from 25% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Search members with a search bar. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 20 in “Searching for “Cancel””",
+        "Reached from “Search members”",
+        "Leads to “AJ Flores dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 13:01 in the recording",
+        "Frame 2606 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090409",
+      "role": "background",
+      "share": 0.844
+    },
+    {
+      "hex": "#252528",
+      "role": "surface",
+      "share": 0.099
+    },
+    {
+      "hex": "#717684",
+      "role": "text",
+      "share": 0.014
+    },
+    {
+      "hex": "#434246",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#16246f",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2606,
+    "atSeconds": 781.2,
+    "endSeconds": 782.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.25,
+        "w": 0.5,
+        "h": 0.109375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "GroupMe",
+    "headline": "Block GroupMe?"
+  },
+  "crawler": {
+    "nodeId": "s389",
+    "depth": 389,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s388",
+        "via": "Tap “GroupMe”",
+        "name": "Search members"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s390",
+        "via": "Tap “GroupMe”",
+        "name": "AJ Flores dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,166 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-searching-messages-1",
+  "screen_id": "line-ios-versions-2026-11-22-searching-messages-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:25.235Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Searching messages",
+  "flow_position": 66,
+  "name": "Messages",
+  "description": "Messages bottom sheet over a dimmed screen with the keyboard open. Dark theme, 49 text elements.",
+  "text": "9:41 (\n•0\nX\nQ Messages\nblack).png\nValid till: 29/11, 4:16 PM\nSize: 40.85 kB\n4:16 PM\nCross St\n117th St-\nMana\nMathur\nLD600T6\n-114th St\nMMDA park\nGaogle\nIndia Tees\n14.40 3Road Main Road, Edema\nNagar, Mmda Layout, Mathur\n600068, Tamil Nadu\nLocation\n4:17 PM\nYou unsent a message.\nThe\nI'm\nR\nU\nQ\nW\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "location",
+    "messages",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 53% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen with the keyboard open. Dark theme, 49 text elements.",
+        "49 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 66 of 99 in “Reading messages”",
+        "Reached from “Keep Memo”",
+        "Leads to “Messages”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 6:09 in the recording",
+        "Frame 1238 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1e",
+      "role": "background",
+      "share": 0.617
+    },
+    {
+      "hex": "#6ae177",
+      "role": "accent",
+      "share": 0.101
+    },
+    {
+      "hex": "#3c3d3d",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#edf0ef",
+      "role": "text",
+      "share": 0.072
+    },
+    {
+      "hex": "#5c5a5c",
+      "role": "surface",
+      "share": 0.053
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1238,
+    "atSeconds": 369,
+    "endSeconds": 371.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.4375,
+        "w": 0.875,
+        "h": 0.53125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 49,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "The",
+    "headline": "Gaogle"
+  },
+  "crawler": {
+    "nodeId": "s167",
+    "depth": 169,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s166",
+        "via": "Type “Q Messages”",
+        "name": "Keep Memo"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s168",
+        "via": "Dismiss",
+        "name": "Messages"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

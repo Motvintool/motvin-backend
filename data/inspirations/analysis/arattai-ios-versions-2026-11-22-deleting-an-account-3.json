@@ -1,0 +1,150 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-an-account-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-an-account-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:56.679Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Deleting an account",
+  "flow_position": 4,
+  "name": "OTP verification",
+  "description": "Verification code screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+  "text": "9:41(\nDelete Account\nDeleting your account\n• Permanently remove your account from Arattai\n• Erase your chat history and profile picture\n• Sign you out of all connected devices\nEnter your mobile number\nWe'll send a verification code to your mobile number\n+91 ×\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Delete Account”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen with a primary action labelled “Continue”. Dark theme, 9 text elements.",
+        "Calls to action: “Continue”",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 5 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 24:28 in the recording",
+        "Frame 4898 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.896
+    },
+    {
+      "hex": "#221b20",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#4b474b",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#363136",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#ac3334",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4898,
+    "atSeconds": 1468.8,
+    "endSeconds": 1469.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Delete Account",
+    "headline": "Enter your mobile number"
+  },
+  "crawler": {
+    "nodeId": "s663",
+    "depth": 668,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s662",
+        "via": "Tap “Delete account”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s664",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

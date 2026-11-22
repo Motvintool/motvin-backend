@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-changing-group-permissions-3",
+  "screen_id": "groupme-ios-versions-2026-11-22-changing-group-permissions-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:22.295Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Changing group permissions",
+  "flow_position": 1,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open. Dark theme, 38 text elements.",
+  "text": "9:41€\n•ll\n<\nChange owner\nType a name or phone number\nadd them to\ngroups, allow\nGroupMe to access\nyour phone\ncontacts.\n*Allow access\nGroupMe never\nspams your\ncontacts.\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nH\nA\nS\nD\nG\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Change owner”",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Dark theme, 38 text elements.",
+        "38 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 20 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 11:54 in the recording",
+        "Frame 2384 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a050b",
+      "role": "background",
+      "share": 0.709
+    },
+    {
+      "hex": "#282528",
+      "role": "surface",
+      "share": 0.183
+    },
+    {
+      "hex": "#454246",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#5d5a5d",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#0d509e",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2384,
+    "atSeconds": 714,
+    "endSeconds": 715.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 38,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Change owner",
+    "headline": "Allow access"
+  },
+  "crawler": {
+    "nodeId": "s348",
+    "depth": 348,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s347",
+        "via": "Type “add them to”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s349",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

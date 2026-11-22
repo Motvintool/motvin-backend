@@ -1,0 +1,151 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-getting-verified-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-getting-verified-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:26.538Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Getting verified",
+  "flow_position": 279,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 20 text elements.",
+  "text": "9:41 €\n<\nGet verified\nWe need to check your selfie and ID to\nsee if they match your profile photos.\nThis verification can be done using our\ntechnology or manually by a specialist.\nCHOOSE A METHOD\n• USUALLY FASTER\nAutomated\nWe'll compare your unique facial geometry\nwith your profile photos and selfie. Facial\ngeometry data may be considered biometric\ndata in your country. We'll only keep the selfie\nas long as your account is active, and we'll\ndelete facial geometry data immediately.\nOR\nMAY TAKE A BIT LONGER\nManual\nVerification will be done by one of our specialists. We'll\nkeep your selfie as long as your account is active.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Get verified”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 279 of 338 in “Subscribing”",
+        "Reached from “Help”",
+        "Leads to “Profile”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 12:48 in the recording",
+        "Frame 2568 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0c0b",
+      "role": "background",
+      "share": 0.75
+    },
+    {
+      "hex": "#2f2e2c",
+      "role": "surface",
+      "share": 0.191
+    },
+    {
+      "hex": "#9f9d9e",
+      "role": "text",
+      "share": 0.015
+    },
+    {
+      "hex": "#bba90e",
+      "role": "accent",
+      "share": 0.013
+    },
+    {
+      "hex": "#606062",
+      "role": "surface",
+      "share": 0.01
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 2568,
+    "atSeconds": 768,
+    "endSeconds": 770.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Get verified",
+    "headline": "Automated"
+  },
+  "crawler": {
+    "nodeId": "s350",
+    "depth": 350,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s349",
+        "via": "Tap “Get verified”",
+        "name": "Help"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s351",
+        "via": "Wait 2.7s",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

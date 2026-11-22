@@ -1,0 +1,149 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-onboarding-2",
+  "screen_id": "line-ios-versions-2026-11-22-onboarding-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:07.828Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Onboarding",
+  "flow_position": 2,
+  "name": "Welcome",
+  "description": "Onboarding screen with a primary action labelled “Log in”. Light theme, 4 text elements.",
+  "text": "9:41€\n•ll ª C\nLINE\nWelcome to LINE\nFree messaging, voice and video calls, and more!\nLog in\nSign up",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "sign up",
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Welcome to LINE”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with a primary action labelled “Log in”. Light theme, 4 text elements.",
+        "Calls to action: “Log in”",
+        "4 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:00 in the recording",
+        "Frame 6 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fdfcfe",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#06c755",
+      "role": "accent",
+      "share": 0.048
+    },
+    {
+      "hex": "#3fd37d",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#d0e2d9",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#b2afb2",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 6,
+    "atSeconds": 0.9,
+    "endSeconds": 2.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Log in"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Welcome to LINE",
+    "headline": "LINE",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Tap “LINE”",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Tap “LINE”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

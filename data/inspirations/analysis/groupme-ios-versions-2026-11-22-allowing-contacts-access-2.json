@@ -1,0 +1,165 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-allowing-contacts-access-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-allowing-contacts-access-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:56.166Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Allowing contacts access",
+  "flow_position": 2,
+  "name": "GroupMe dialog",
+  "description": "Dialog over a dimmed screen, on top of Settings with a search bar and 1 input field. Dark theme, 19 text elements.",
+  "text": "9:41€\n• GroupMe\n<\nGroupMe\nAllow GroupMe to Access\nLimited Access\n>\nContacts\nPhotos\nFull Access\nSiri\nSearch\nNotifications\nBanners, Sounds, Badges\nLive Activities\nBackground App Refresh\n((p))\nMobile Data\nGroupMe Settings\nReset\nAcknowledgements",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "settings",
+    "photo",
+    "notification",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “GroupMe”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 52% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Settings with a search bar and 1 input field. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 25 in “Opening Settings options”",
+        "Reached from “Settings”",
+        "Leads to “Add members”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:25 in the recording",
+        "Frame 488 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e22",
+      "role": "background",
+      "share": 0.449
+    },
+    {
+      "hex": "#070207",
+      "role": "accent",
+      "share": 0.436
+    },
+    {
+      "hex": "#403d41",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#61615f",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#e4ebe6",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 488,
+    "atSeconds": 145.2,
+    "endSeconds": 146.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.046875,
+        "w": 0.8125,
+        "h": 0.515625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "GroupMe",
+    "headline": "Background App Refresh"
+  },
+  "crawler": {
+    "nodeId": "s063",
+    "depth": 62,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s062",
+        "via": "Open GroupMe",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s064",
+        "via": "Back to Add members",
+        "name": "Add members"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

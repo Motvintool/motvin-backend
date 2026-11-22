@@ -1,0 +1,156 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-a-story-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-a-story-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:40.680Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting a story",
+  "flow_position": 8,
+  "name": "Just now sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Just now toast. Dark theme, 8 text elements.",
+  "text": "9:41C\n.0ll\nYou\n• ••\nJust now\nEee\nDelete selected story?\nThe selected story will be deleted.\nDelete\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Just now”",
+        "Bottom sheet over a dimmed background, covering 17% of the height from 80% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Just now toast. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 10 in “My stories”",
+        "Reached from “Just now toast”",
+        "Leads to “My stories”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 20:28 in the recording",
+        "Frame 4097 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0a0c",
+      "role": "background",
+      "share": 0.872
+    },
+    {
+      "hex": "#2b282a",
+      "role": "surface",
+      "share": 0.116
+    },
+    {
+      "hex": "#646164",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#683132",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#464347",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4097,
+    "atSeconds": 1228.5,
+    "endSeconds": 1229.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.796875,
+        "w": 0.875,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Just now",
+    "headline": "Delete selected story?"
+  },
+  "crawler": {
+    "nodeId": "s544",
+    "depth": 549,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s543",
+        "via": "Tap “Just now”",
+        "name": "Just now toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s545",
+        "via": "Tap “Delete selected story?”",
+        "name": "My stories"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,169 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-8",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-8",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:33.654Z",
+  "screen_type": "player",
+  "published_as": "player",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing video in a group call",
+  "flow_position": 1,
+  "name": "Leave",
+  "description": "Player bottom sheet, on top of Motvin's video with a 4-item tab bar. Dark theme, 13 text elements.",
+  "text": "9:41\nX\nMotvin's video\nI SECRETLY CHEA\nCC\nShivang Mini\nAAJ\n0:03 / 15:20\nYoulube\nYo, my lovely mini a\nGuys\nParticipating 1\nMotvin\nD\nLeave\nTurn on\nUnmute\nActivities\nspeaker\nmIc",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "leave",
+    "unmute",
+    "turn on",
+    "activities",
+    "player",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Leave, Unmute, Turn on, Activities",
+        "Navigation title reads “Leave”",
+        "Bottom sheet, covering 30% of the height from 63% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Player bottom sheet, on top of Motvin's video with a 4-item tab bar. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Opening a page (Leave)”",
+        "Reached from “Motvin's video”",
+        "Leads to “Join”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 9:43 in the recording",
+        "Frame 1945 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100d11",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#2c272c",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#484348",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#605c60",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#807d80",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1945,
+    "atSeconds": 583.2,
+    "endSeconds": 583.8,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0,
+        "y": 0.625,
+        "w": 1,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [
+      "Leave",
+      "Unmute",
+      "Turn on",
+      "Activities"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Leave",
+    "headline": "Youlube"
+  },
+  "crawler": {
+    "nodeId": "s260",
+    "depth": 263,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s259",
+        "via": "Tap “Youlube”",
+        "name": "Motvin's video"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s261",
+        "via": "Open Join",
+        "name": "Join"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

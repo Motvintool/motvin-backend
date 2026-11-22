@@ -1,0 +1,153 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-running-a-meeting-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-running-a-meeting-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:44.257Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Running a meeting",
+  "flow_position": 3,
+  "name": "Video home",
+  "description": "Feed screen with a 4-item tab bar. Dark theme, 12 text elements.",
+  "text": "9:41\n00:16\nMeeting details\nInvite participants\nChat\nStart recording\nStart screen share\nLock meeting\nPreferences\nFit video\nSwitch to stage view\nYou are the only one here\nInvite participants\nVideo\nEnd\nSpeaker\nMute",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "video",
+    "mute",
+    "speaker",
+    "end",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Video, Mute, Speaker, End",
+        "Navigation title reads “Meeting details”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 4-item tab bar. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 16 in “Video”",
+        "Reached from “Loading state”",
+        "Leads to “Video home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 21:26 in the recording",
+        "Frame 4293 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201f21",
+      "role": "background",
+      "share": 0.738
+    },
+    {
+      "hex": "#49463f",
+      "role": "surface",
+      "share": 0.127
+    },
+    {
+      "hex": "#070709",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#636264",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#f6f6fb",
+      "role": "text",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4293,
+    "atSeconds": 1286.1,
+    "endSeconds": 1288.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [
+      "Video",
+      "Mute",
+      "Speaker",
+      "End"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Meeting details",
+    "headline": "Lock meeting"
+  },
+  "crawler": {
+    "nodeId": "s571",
+    "depth": 576,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s570",
+        "via": "Wait 1.5s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s572",
+        "via": "Tap “Meeting details”",
+        "name": "Video home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,164 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-a-topic-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-a-topic-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:16.590Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a topic",
+  "flow_position": 7,
+  "name": "Chat",
+  "description": "Messages bottom sheet over a dimmed screen, on top of Loading state with the keyboard open. Dark theme, 33 text elements.",
+  "text": "9:41(\nNew topic\nCreate\n#\nName your topic\nAdd a description (optional)\nCreate a topic to organise your group. It's like a group chat inside of a group\nchat.\nR\nU\nQ\nW\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "messages",
+    "bottom-sheet",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Chat”",
+        "Keyboard is open, so the lower half is input",
+        "Bottom sheet over a dimmed background, covering 42% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen, on top of Loading state with the keyboard open. Dark theme, 33 text elements.",
+        "33 text elements recognised",
+        "State: bottom-sheet, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 23 in “Motvin team”",
+        "Reached from “Loading state”",
+        "Leads to “New topic”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 10:21 in the recording",
+        "Frame 2077 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#232025",
+      "role": "background",
+      "share": 0.429
+    },
+    {
+      "hex": "#09040a",
+      "role": "surface",
+      "share": 0.417
+    },
+    {
+      "hex": "#434043",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#5e5b5e",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#10224f",
+      "role": "accent",
+      "share": 0.016
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2077,
+    "atSeconds": 621.9,
+    "endSeconds": 623.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.546875,
+        "w": 0.875,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 33,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chat",
+    "headline": "Name your topic"
+  },
+  "crawler": {
+    "nodeId": "s284",
+    "depth": 284,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s283",
+        "via": "Wait 2.1s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s285",
+        "via": "Tap “New topic”",
+        "name": "New topic"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

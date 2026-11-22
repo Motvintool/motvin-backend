@@ -1,0 +1,162 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-sending-a-sticker-7",
+  "screen_id": "groupme-ios-versions-2026-11-22-sending-a-sticker-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:07.349Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Sending a sticker",
+  "flow_position": 94,
+  "name": "Permission prompt",
+  "description": "Permission dialog over a dimmed screen, on top of Other with a primary action labelled “Allow”. Dark theme, 8 text elements.",
+  "text": "9:41€\n\"GroupMe\" would like to access\nthe Microphone.\nGroupMe needs access to your\nmicrophone to make and receive\nphone calls and record voice\nmessages.\nDon't Allow\nAllow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “The Microphone”",
+        "Dialog over a dimmed background, covering 14% of the height from 50% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Other with a primary action labelled “Allow”. Dark theme, 8 text elements.",
+        "Calls to action: “Allow”",
+        "8 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 94 of 169 in “New event”",
+        "Reached from “Other”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:36 in the recording",
+        "Frame 1323 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100a0c",
+      "role": "background",
+      "share": 0.659
+    },
+    {
+      "hex": "#291f1a",
+      "role": "surface",
+      "share": 0.266
+    },
+    {
+      "hex": "#413834",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#625b59",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#f6a552",
+      "role": "accent",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1323,
+    "atSeconds": 396.6,
+    "endSeconds": 397.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.5,
+        "w": 0.625,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "The Microphone",
+    "headline": "\"GroupMe\" would like to access"
+  },
+  "crawler": {
+    "nodeId": "s184",
+    "depth": 184,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s183",
+        "via": "Back to Permission prompt",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s185",
+        "via": "Dismiss",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

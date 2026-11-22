@@ -1,0 +1,167 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-choosing-interests-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-choosing-interests-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:57.142Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Choosing interests",
+  "flow_position": 43,
+  "name": "Notifications permission",
+  "description": "Permission toast over a dimmed screen, on top of Notifications with a primary action labelled “Allow”. Dark theme, 13 text elements.",
+  "text": "9:41(\no0l\nCustomize\nnotifications\nGet notified when:\n\"Yubo\" Would Like to Send You\nNotifications\nNotifications may include alerts,\nsounds and icon badges. These can\nbe configured in Settings.\nDon't Allow\nAllow\nReceive messages\nChoose which notifications you receive in app\nSettings.\n→",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "message",
+    "notification",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Sounds and icon badges. These can”",
+        "Toast over a dimmed background, covering 8% of the height from 41% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission toast over a dimmed screen, on top of Notifications with a primary action labelled “Allow”. Dark theme, 13 text elements.",
+        "Calls to action: “Allow”",
+        "13 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 43 of 60 in “Logging in”",
+        "Reached from “Notifications”",
+        "Leads to “TV & Podcasts”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:36 in the recording",
+        "Frame 325 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070207",
+      "role": "background",
+      "share": 0.674
+    },
+    {
+      "hex": "#332d0c",
+      "role": "surface",
+      "share": 0.204
+    },
+    {
+      "hex": "#585013",
+      "role": "surface",
+      "share": 0.085
+    },
+    {
+      "hex": "#807203",
+      "role": "accent",
+      "share": 0.02
+    },
+    {
+      "hex": "#656251",
+      "role": "surface",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 325,
+    "atSeconds": 96.3,
+    "endSeconds": 97.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.40625,
+        "w": 0.6875,
+        "h": 0.078125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Sounds and icon badges. These can",
+    "headline": "Notifications"
+  },
+  "crawler": {
+    "nodeId": "s046",
+    "depth": 45,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s045",
+        "via": "Tap “notifications”",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s047",
+        "via": "Open TV & Podcasts",
+        "name": "TV & Podcasts"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

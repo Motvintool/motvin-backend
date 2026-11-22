@@ -1,0 +1,151 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-inviting-friends-to-signal-3",
+  "screen_id": "signal-ios-versions-2026-11-22-inviting-friends-to-signal-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:06.640Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Inviting friends to Signal",
+  "flow_position": 32,
+  "name": "New Message",
+  "description": "Messages screen with the keyboard open. Dark theme, 27 text elements.",
+  "text": "9:41€\nX\nNew Message\nTo: Adarsh\nI'm inviting you to install Signal!\nHere is the link:\n• Signal\nSignal Messenger: Speak Freely\nsignal.org\n1\ni\nW\nt\nO\ne\nk\nf\nd\na\nJ\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New Message”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with the keyboard open. Dark theme, 27 text elements.",
+        "27 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 32 of 41 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 11:33 in the recording",
+        "Frame 2311 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e21",
+      "role": "background",
+      "share": 0.662
+    },
+    {
+      "hex": "#3e3c3e",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#fcfbfe",
+      "role": "text",
+      "share": 0.072
+    },
+    {
+      "hex": "#060106",
+      "role": "accent",
+      "share": 0.055
+    },
+    {
+      "hex": "#5d5b5d",
+      "role": "surface",
+      "share": 0.05
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2311,
+    "atSeconds": 693,
+    "endSeconds": 693.6,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 27,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New Message",
+    "headline": "Signal"
+  },
+  "crawler": {
+    "nodeId": "s344",
+    "depth": 347,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s343",
+        "via": "Type “New Message”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s345",
+        "via": "Type “New Call”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

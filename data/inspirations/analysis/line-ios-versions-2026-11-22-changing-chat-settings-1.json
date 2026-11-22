@@ -1,0 +1,148 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-changing-chat-settings-1",
+  "screen_id": "line-ios-versions-2026-11-22-changing-chat-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:57.579Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing chat settings",
+  "flow_position": 96,
+  "name": "Chat history backup",
+  "description": "Messages screen. Dark theme, 18 text elements.",
+  "text": "9:41€\n•0l\n<\nChats\nChat wallpaper\nChoose a wallpaper to use as a background for your chats. This\nwon't affect chats that are already using custom wallpapers.\nFont size\nUse device settings ›\nChat history backup\nSend messages with return key\nSend messages using the return key.\nAuto-resend\nAutomatically attempt to resend unsent messages for a certain\nperiod of time.\nURL previews\nShow thumbnails and preview site info for links shared in chat.\nPhishing site detection\nDetect and mark reported phishing sites with warnings. When\nthis setting is enabled, URLs contained in messages will be sent\nto our server for the detection of phishing sites.\nNote: This setting can only be enabled if the \"URL previews\" is\nturned on.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "message",
+    "review",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Chat history backup”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Dark theme, 18 text elements.",
+        "18 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 96 of 99 in “Reading messages”",
+        "Reached from “Settings”",
+        "Leads to “Chat history backup — scrolled”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 18:36 in the recording",
+        "Frame 3725 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.923
+    },
+    {
+      "hex": "#514e52",
+      "role": "surface",
+      "share": 0.038
+    },
+    {
+      "hex": "#353236",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#15763d",
+      "role": "accent",
+      "share": 0.003
+    },
+    {
+      "hex": "#7d8883",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3725,
+    "atSeconds": 1116.9,
+    "endSeconds": 1117.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chat history backup",
+    "headline": "Chat history backup"
+  },
+  "crawler": {
+    "nodeId": "s522",
+    "depth": 532,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s521",
+        "via": "Open Chat history backup",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s523",
+        "via": "Scroll",
+        "name": "Chat history backup — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

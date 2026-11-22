@@ -1,0 +1,160 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-chats-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-chats-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:36.569Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Chats",
+  "flow_position": 2,
+  "name": "Search",
+  "description": "Search bottom sheet, on top of Settings with a search bar. Dark theme, 9 text elements.",
+  "text": "9:41€\n\"ll\nForward\nSearch\nMy stories\nShare with contacts\nPocket\nYour personal storage\nRecent Chats\nTrip\nYou: & Image",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You: & Image”",
+        "Search bar present",
+        "Bottom sheet, covering 42% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search bottom sheet, on top of Settings with a search bar. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 23 in “Searching”",
+        "Reached from “Settings”",
+        "Leads to “Meeting ended”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 5:47 in the recording",
+        "Frame 1161 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.891
+    },
+    {
+      "hex": "#3f3c3f",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#24232f",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#545564",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#5c2f19",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1161,
+    "atSeconds": 347.4,
+    "endSeconds": 348.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.484375,
+        "w": 0.9375,
+        "h": 0.421875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You: & Image",
+    "headline": "Pocket"
+  },
+  "crawler": {
+    "nodeId": "s127",
+    "depth": 127,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Back to Search",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s128",
+        "via": "Back to Meeting ended",
+        "name": "Meeting ended"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

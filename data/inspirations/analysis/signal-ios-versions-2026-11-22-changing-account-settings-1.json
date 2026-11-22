@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-account-settings-1",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-account-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:14.625Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Changing account settings",
+  "flow_position": 36,
+  "name": "Phone number entry",
+  "description": "Login screen. Dark theme, 16 text elements.",
+  "text": "9:41 (\nAccount\nSignal PIN\nChange your PIN\n>\nPIN Reminders\nPINs keep information stored with Signal encrypted so\nonly you can access it. Your PIN cannot be recovered.\nYour profile, settings, and contacts will restore when you\nreinstall Signal. Learn More\nRegistration Lock\nRequire your Signal PIN to register your phone number\nagain with Signal.\nAdvanced PIN Settings\nAccount\nChange Phone Number\nYour Account Data\nDelete Account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "settings",
+    "delete account",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Dark theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 36 of 41 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Loading state”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 14:52 in the recording",
+        "Frame 2995 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262428",
+      "role": "background",
+      "share": 0.852
+    },
+    {
+      "hex": "#484549",
+      "role": "surface",
+      "share": 0.067
+    },
+    {
+      "hex": "#070207",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#605e62",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#d6e7db",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2995,
+    "atSeconds": 892.5,
+    "endSeconds": 893.7,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Signal PIN",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s438",
+    "depth": 441,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s437",
+        "via": "Tap “Account”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s439",
+        "via": "Tap “Change your PIN”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-location-4",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-location-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:47.560Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a location",
+  "flow_position": null,
+  "name": "Search results — loading",
+  "description": "Loading state of Search results. Dark theme, 3 text elements.",
+  "text": "9:41\n•0l\nSelect Contact\nA\nX\nQ\nSearch",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select Contact”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Search results. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Search results”",
+        "Leads to “Search results”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 5:38 in the recording",
+        "Frame 1133 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1f1c21",
+      "role": "background",
+      "share": 0.914
+    },
+    {
+      "hex": "#39363a",
+      "role": "surface",
+      "share": 0.052
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.018
+    },
+    {
+      "hex": "#535055",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#afaebb",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1133,
+    "atSeconds": 338.4,
+    "endSeconds": 340.2,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select Contact",
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s144",
+    "depth": 144,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s143",
+        "via": "Dismiss",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s145",
+        "via": "Wait 1.8s",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

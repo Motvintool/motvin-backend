@@ -1,0 +1,158 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-a-broadcast-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-a-broadcast-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:37.227Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting a broadcast",
+  "flow_position": 10,
+  "name": "Broadcast info toast",
+  "description": "Toast over a dimmed screen, on top of Broadcast info. Dark theme, 13 text elements.",
+  "text": "9:41(\n•ll\nBroadcast info\n• • •\nBroadcast Name\nWork\nThis chat is end-to-end encrypted\nRecipients (2)\nAdd\nDevi M Jio\n10170001 OAAOO\nDelete Work\nDo you want to delete this broadcast list?\nDelete\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Broadcast info”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Broadcast info. Dark theme, 13 text elements.",
+        "13 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 11 in “Search”",
+        "Reached from “Broadcast info”",
+        "Leads to “Broadcast info sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 19:43 in the recording",
+        "Frame 3949 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080709",
+      "role": "background",
+      "share": 0.887
+    },
+    {
+      "hex": "#2c292b",
+      "role": "surface",
+      "share": 0.105
+    },
+    {
+      "hex": "#666466",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#494749",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#a6a4a6",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3949,
+    "atSeconds": 1183.2,
+    "endSeconds": 1185,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Broadcast info",
+    "headline": "Recipients (2)"
+  },
+  "crawler": {
+    "nodeId": "s520",
+    "depth": 525,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s519",
+        "via": "Back to Broadcast info toast",
+        "name": "Broadcast info"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s521",
+        "via": "Dismiss",
+        "name": "Broadcast info sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

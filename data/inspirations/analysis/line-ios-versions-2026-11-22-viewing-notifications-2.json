@@ -1,0 +1,144 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-viewing-notifications-2",
+  "screen_id": "line-ios-versions-2026-11-22-viewing-notifications-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:45.469Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing notifications",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 3 text elements.",
+  "text": "9:41 C\nNotifications\nX\nNo new notifications.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Home home”",
+        "Leads to “Notifications”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 14:37 in the recording",
+        "Frame 2928 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.984
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#5f5d61",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#a7a6a8",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2928,
+    "atSeconds": 877.8,
+    "endSeconds": 878.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "No new notifications"
+  },
+  "crawler": {
+    "nodeId": "s391",
+    "depth": 398,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s390",
+        "via": "Open Notifications",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s392",
+        "via": "Wait 0.9s",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

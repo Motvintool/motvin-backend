@@ -1,0 +1,173 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-chats-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-chats-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:43.870Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Chats",
+  "flow_position": 7,
+  "name": "Select location toast",
+  "description": "Toast over a dimmed screen with a row of 3 category chips, the keyboard open and a paged carousel. Dark theme, 41 text elements.",
+  "text": "9:414\nSelect location\nS.R.M Beaut\nS2 Badminton &\nParlour\nFitness Studio\nS Square\nBadminton\nAcademy\nAmudham Niyaya\nDropped pin\nST\nSubramani St, Subramani Nagar, Chennai\nHh\n2/100\nCancel\n1ST CROSS ST\nSN Agencies\n\"Hh\"\nHhhh\nHhh\ni\nW\nt\ny\nO\ne\nh\nk\nf\nd\na\ng\nJ\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "location",
+    "toast",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select location”",
+        "Category strip: Parlour, S Square, Badminton",
+        "Keyboard is open, so the lower half is input",
+        "Paged carousel with a page indicator",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen with a row of 3 category chips, the keyboard open and a paged carousel. Dark theme, 41 text elements.",
+        "41 text elements recognised",
+        "State: toast, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 18 in “Share location”",
+        "Reached from “Loading state”",
+        "Leads to “Saved locations”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 7:19 in the recording",
+        "Frame 1476 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#202124",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#090a0d",
+      "role": "surface",
+      "share": 0.171
+    },
+    {
+      "hex": "#414145",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#5c5c5f",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#243f64",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1476,
+    "atSeconds": 439.8,
+    "endSeconds": 443.1,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 41,
+    "tabLabels": [],
+    "chipLabels": [
+      "Parlour",
+      "S Square",
+      "Badminton"
+    ],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select location",
+    "headline": "1ST CROSS ST"
+  },
+  "crawler": {
+    "nodeId": "s173",
+    "depth": 174,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s172",
+        "via": "Wait 2.4s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s174",
+        "via": "Dismiss",
+        "name": "Saved locations"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,163 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-a-contact-2",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-a-contact-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:14.301Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a contact",
+  "flow_position": 37,
+  "name": "Keep Memo",
+  "description": "Messages toast over a dimmed screen, on top of Keep Memo. Dark theme, 10 text elements.",
+  "text": "9:41 €\nKeep Memo\nToday\nSend any messages, photos, videos, and links you want to\nkeep for yourselt.\nHey\n4:16 PM\nLINE friend\nla\nDevice contact\nCancel\nAa",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "photo",
+    "video",
+    "aa",
+    "messages",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Keep Memo”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages toast over a dimmed screen, on top of Keep Memo. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 37 of 61 in “Opening a page (Home)”",
+        "Reached from “Keep Memo”",
+        "Leads to “Search”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 2:26 in the recording",
+        "Frame 495 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100e11",
+      "role": "background",
+      "share": 0.81
+    },
+    {
+      "hex": "#2c362c",
+      "role": "surface",
+      "share": 0.149
+    },
+    {
+      "hex": "#666c67",
+      "role": "text",
+      "share": 0.015
+    },
+    {
+      "hex": "#514f45",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#356d3b",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 495,
+    "atSeconds": 146.1,
+    "endSeconds": 148.8,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.1875,
+        "y": 0.953125,
+        "w": 0.71875,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Keep Memo",
+    "headline": "LINE friend",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 69,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Tap “Keep Memo”",
+        "name": "Keep Memo"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Open Choose friends",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

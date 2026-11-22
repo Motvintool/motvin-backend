@@ -1,0 +1,174 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-creating-a-calendar-event-2",
+  "screen_id": "line-ios-versions-2026-11-22-creating-a-calendar-event-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:28.884Z",
+  "screen_type": "calendar",
+  "published_as": "calendar",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "creation",
+  "flow_name": "Creating a calendar event",
+  "flow_position": 2,
+  "name": "Calendar",
+  "description": "Calendar dialog over a dimmed screen, on top of All calendars with a row of 4 category chips and a primary action labelled “Get started”. Dark theme, 34 text elements.",
+  "text": "9:41(\nooll\nX\nAll calendars\nNovember 2026 -\nS\nF\nM\nS\n1\n4\n7\n2\n3\n5\nX\nManage your events together in the\nchat calendar\nGet chat notifications for when events are created,\nedited, or deleted, and get reminders before they\nstart.\n< Family (5)\nMom\nLet's have dinner together!\n8:26 PM\nD20\nHow about on Dec 26?\n8:26 PM\nRead 3\nSounds good!\n8:27 PM\nI'll put it on our calendar so\nRead 3\nwe don't forget.\n8:27 PM\nGet started\nSee this later",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "calendar",
+    "notification",
+    "see this later",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Manage your events together in the”",
+        "Category strip: S, F, M, S",
+        "Dialog over a dimmed background, covering 39% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar dialog over a dimmed screen, on top of All calendars with a row of 4 category chips and a primary action labelled “Get started”. Dark theme, 34 text elements.",
+        "Calls to action: “Get started”",
+        "34 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 31 in “Choosing a date”",
+        "Reached from “All calendars”",
+        "Leads to “All calendars”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 7:43 in the recording",
+        "Frame 1546 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1a1e",
+      "role": "background",
+      "share": 0.493
+    },
+    {
+      "hex": "#09070a",
+      "role": "surface",
+      "share": 0.215
+    },
+    {
+      "hex": "#8fafd8",
+      "role": "text",
+      "share": 0.103
+    },
+    {
+      "hex": "#09cb59",
+      "role": "accent",
+      "share": 0.038
+    },
+    {
+      "hex": "#36353a",
+      "role": "surface",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1546,
+    "atSeconds": 463.2,
+    "endSeconds": 464.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.0625,
+        "w": 0.9375,
+        "h": 0.390625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 34,
+    "tabLabels": [],
+    "chipLabels": [
+      "S",
+      "F",
+      "M",
+      "S"
+    ],
+    "ctas": [
+      "Get started"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Manage your events together in the",
+    "headline": "Manage your events together in the",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s206",
+    "depth": 208,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s205",
+        "via": "Open Manage your events together in the",
+        "name": "All calendars"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s207",
+        "via": "Tap “chat calendar”",
+        "name": "All calendars"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

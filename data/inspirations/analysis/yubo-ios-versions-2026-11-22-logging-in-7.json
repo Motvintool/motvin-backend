@@ -1,0 +1,144 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-logging-in-7",
+  "screen_id": "yubo-ios-versions-2026-11-22-logging-in-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:54.506Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Logging in",
+  "flow_position": 12,
+  "name": "Error",
+  "description": "Error screen. Dark theme, 8 text elements.",
+  "text": "9:41 €\ngulbo\nWe couldn't find\nvour account\nThere is no account connected to\nyour Apple ID. Would you like to\ncreate a new account?\nCreate new account\nOR\n• Log in with username",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "error",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Error screen. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: error"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 12 of 60 in “Logging in”",
+        "Reached from “Choose a login”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:23 in the recording",
+        "Frame 87 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#302d2b",
+      "role": "background",
+      "share": 0.498
+    },
+    {
+      "hex": "#080806",
+      "role": "surface",
+      "share": 0.34
+    },
+    {
+      "hex": "#f5f4f5",
+      "role": "text",
+      "share": 0.032
+    },
+    {
+      "hex": "#b3b1b2",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#fdea05",
+      "role": "accent",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 87,
+    "atSeconds": 23.1,
+    "endSeconds": 26.4,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Vour account"
+  },
+  "crawler": {
+    "nodeId": "s014",
+    "depth": 13,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s013",
+        "via": "Open Error",
+        "name": "Choose a login"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s015",
+        "via": "Type “What's your”",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

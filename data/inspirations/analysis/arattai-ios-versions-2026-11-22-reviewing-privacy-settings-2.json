@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-reviewing-privacy-settings-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-reviewing-privacy-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:59.505Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Reviewing privacy settings",
+  "flow_position": 3,
+  "name": "Phone number entry — scrolled",
+  "description": "Login screen, scrolled further down from Phone number entry with 1 input field. Dark theme, 23 text elements.",
+  "text": "9:41(\noil\n‹ Security & Privacy\nMobile number\nMy contacts ›\nEverybody >\nLast seen & online\nEverybody >\nNew chat\n>\nMy contacts\nCalls\nEverybody >\nMeetings\nMy contacts >\nAdd to groups\nMy contacts >\nStories\nBusiness permissions\n0 >\nArattai profile name\nMobile number\n>\nRead receipts\nWhen enabled, others can see when you've read their\nmessages. Read messages display a blue double tick\nalong with the read time.\nLink preview",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "link preview",
+    "login",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Everybody”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Phone number entry with 1 input field. Dark theme, 23 text elements.",
+        "23 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 25:05 in the recording",
+        "Frame 5020 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100d11",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#2a292e",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#4b494c",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#626365",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#ffffff",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 5020,
+    "atSeconds": 1505.4,
+    "endSeconds": 1506.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 23,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Everybody",
+    "headline": "Everybody",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s685",
+    "depth": 692,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s684",
+        "via": "Scroll",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s686",
+        "via": "Tap “‹ Security & Privacy”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

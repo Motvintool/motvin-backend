@@ -1,0 +1,153 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-account-settings-2",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-account-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:14.710Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Changing account settings",
+  "flow_position": 37,
+  "name": "Loading state",
+  "description": "Loading state with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+  "text": "9:41 €\nChange your PIN\nYou can change your PIN as long as this device is\nregistered. Learn More\nPIN must be at least 4 digits\nCreate Alphanumeric PIN\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "signup",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Change your PIN”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a primary action labelled “Continue”. Dark theme, 6 text elements.",
+        "Calls to action: “Continue”",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 37 of 41 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 14:54 in the recording",
+        "Frame 2986 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1d1d1f",
+      "role": "background",
+      "share": 0.845
+    },
+    {
+      "hex": "#010101",
+      "role": "surface",
+      "share": 0.054
+    },
+    {
+      "hex": "#2a71fd",
+      "role": "accent",
+      "share": 0.034
+    },
+    {
+      "hex": "#1f3762",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#3a3a3c",
+      "role": "surface",
+      "share": 0.019
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2986,
+    "atSeconds": 894.6,
+    "endSeconds": 896.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Change your PIN",
+    "headline": "Create Alphanumeric PIN"
+  },
+  "crawler": {
+    "nodeId": "s439",
+    "depth": 442,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s438",
+        "via": "Tap “Change your PIN”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s440",
+        "via": "Wait 1.5s",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

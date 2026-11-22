@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-a-group-1",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-a-group-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:53.671Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a group",
+  "flow_position": 1,
+  "name": "Messages",
+  "description": "Messages screen with a 3-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41 €\nChat\n+\nWelcome to GroupMe!\nThe easy way to connect with all the\ngroups in your life, big and small.\nCreate a group\nStart your own chat and invite members\nJoin groups\nDiscover trending and nearby groups\nJoin your school\nFind groups and classmates at your school\nDiscover\nChat\nProfile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "discover",
+    "profile",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "banner"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Chat, Discover, Profile",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with a 3-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 21 in “New group detail”",
+        "Reached from “Notifications permission”",
+        "Leads to “New group — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 1:34 in the recording",
+        "Frame 320 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070207",
+      "role": "background",
+      "share": 0.762
+    },
+    {
+      "hex": "#232024",
+      "role": "surface",
+      "share": 0.155
+    },
+    {
+      "hex": "#3e3b3f",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#58555a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#a19591",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 320,
+    "atSeconds": 94.8,
+    "endSeconds": 96.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [
+      "Chat",
+      "Discover",
+      "Profile"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Welcome to GroupMe!"
+  },
+  "crawler": {
+    "nodeId": "s038",
+    "depth": 37,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s037",
+        "via": "Wait 1.5s",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s039",
+        "via": "Wait 1.5s",
+        "name": "New group — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,153 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-editing-the-about-line-1",
+  "screen_id": "signal-ios-versions-2026-11-22-editing-the-about-line-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:12.225Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "scrolled",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Editing the About line",
+  "flow_position": 9,
+  "name": "Profile — scrolled — scrolled — scrolled",
+  "description": "Messages screen, scrolled further down from Profile — scrolled — scrolled with the keyboard open. Dark theme, 37 text elements.",
+  "text": "9:41 €\nX\nAbout\nWrite a few words about yourself...\nSpeak Freely\nEncrypted\nFree to chat\nCoffee lover\nTaking a break\nBe kind\nThe\nI'm\nU\nQ\nW\nR\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "messages",
+    "scrolled",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “About”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen, scrolled further down from Profile — scrolled — scrolled with the keyboard open. Dark theme, 37 text elements.",
+        "37 text elements recognised",
+        "State: scrolled, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 13 in “Reading messages”",
+        "Reached from “Profile — scrolled — scrolled”",
+        "Leads to “Speak Freely”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 13:57 in the recording",
+        "Frame 2795 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#272529",
+      "role": "background",
+      "share": 0.772
+    },
+    {
+      "hex": "#494749",
+      "role": "surface",
+      "share": 0.097
+    },
+    {
+      "hex": "#080208",
+      "role": "surface",
+      "share": 0.071
+    },
+    {
+      "hex": "#626062",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#0a80fe",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2795,
+    "atSeconds": 837.3,
+    "endSeconds": 838.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 37,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "About",
+    "headline": "Encrypted"
+  },
+  "crawler": {
+    "nodeId": "s410",
+    "depth": 413,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s409",
+        "via": "Scroll",
+        "name": "Profile — scrolled — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s411",
+        "via": "Tap “Speak Freely”",
+        "name": "Speak Freely"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}
