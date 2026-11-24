@@ -33,9 +33,9 @@ import { PREVIEW_MIME, ScreenPreviewService } from './screen-preview.service';
  *    mirroring the 403 the download route returns.
  */
 
-export const PLATFORMS = ['ios', 'webapp', 'web'] as const;
+export const PLATFORMS = ['ios', 'webapp', 'site'] as const;
 export type Platform = (typeof PLATFORMS)[number];
-const PLATFORM_LABEL: Record<Platform, string> = { ios: 'iOS', webapp: 'Web Apps', web: 'Webs' };
+const PLATFORM_LABEL: Record<Platform, string> = { ios: 'iOS', webapp: 'Web Apps', site: 'Sites' };
 
 /** Result sizes, chosen so a reply stays well under a megabyte with previews on. */
 const LIMITS = {
@@ -54,17 +54,40 @@ const LIMITS = {
 };
 
 const INSTRUCTIONS = `Motvin is a library of real product UI: screens and multi-step flows captured from shipped apps, organised by platform.
-Three platforms never mix — "ios" (iPhone apps), "webapp" (signed-in web applications) and "web" (marketing websites). Every search names one platform; to compare platforms, call once per platform.
+Three platforms never mix — "ios" (iPhone apps), "webapp" (signed-in web applications) and "site" (marketing websites, kept as whole pages and their sections). Every search names one platform; to compare platforms, call once per platform.
 Start with search_screens to look at individual screens, search_flows for step-by-step journeys, and get_taxonomy for the exact filter values. Results carry a small preview you can look at; image_url is the full-resolution file (present only when the licence allows download) and page_url opens the screen on motvin.com. Name the app when you describe a pattern you saw.`;
 
 type Content = CallToolResult['content'][number];
 type ToolResult = CallToolResult;
 
+// "web" is two platforms (web apps and sites), and platforms never mix: a client that says it is asked to pick one.
 const platformSchema = z
-  .enum(PLATFORMS)
-  .describe('Which library: "ios" (iPhone apps), "webapp" (signed-in web applications) or "web" (marketing websites). Results never mix platforms.');
+  .enum(PLATFORMS, {
+    errorMap: (_issue, ctx) => ({
+      message: ctx.data === 'web'
+        ? '"web" is two platforms here: use "webapp" for web applications or "site" for marketing websites.'
+        : `Use "ios", "webapp" or "site".`,
+    }),
+  })
+  .describe('Which library: "ios" (iPhone apps), "webapp" (signed-in web applications) or "site" (marketing websites). Results never mix platforms.');
 
 const text = (value: string): Content => ({ type: 'text', text: value });
+
+/** A site's page or section by what it is ("pricing page", "hero section"); null for an app screen. */
+function siteKindLabel(screen: { site?: { kind?: string; pageType?: string; sectionType?: string } }): string | null {
+  if (!screen.site) return null;
+  return screen.site.kind === 'section' ? `${screen.site.sectionType ?? 'content'} section` : `${screen.site.pageType ?? 'other'} page`;
+}
+
+/** "1 page", "2 pages". */
+const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? '' : 's'}`;
+
+/** How many of each value, most first. */
+function countBy(values: string[]): [string, number][] {
+  const counts = new Map<string, number>();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
 
 function describeFilters(filters: Record<string, string | undefined>): string {
   const parts = Object.entries(filters)
@@ -165,6 +188,8 @@ export class McpToolsService {
         const apps = await this.appIndex();
         const app = args.app ? apps.get(args.app.toLowerCase()) : undefined;
         if (args.app && !app) return this.fail(`Unknown app "${args.app}". list_apps gives the ids.`);
+        // Sites are whole pages and their sections, kept apart from app screens: searched on their own.
+        if (args.platform === 'site') return this.searchSitePages({ ...args, query: args.query ?? '', limit: args.limit ?? LIMITS.defaultScreens, offset: args.offset ?? 0, include_images: args.include_images ?? true }, apps, app);
 
         const filters = {
           platform: [args.platform],
@@ -201,7 +226,7 @@ export class McpToolsService {
           lines.push(`No ${label} screens match "${args.query}"${described}. Try fewer filters or other words — or another platform, one call each.`);
         } else {
           lines.push(
-            `${ranked.length} ${label} screens match "${args.query}"${described}. Showing ${args.offset + 1}–${args.offset + screens.length}, from ${appCount(screens)}.`,
+            `${ranked.length} ${label} ${ranked.length === 1 ? 'screen matches' : 'screens match'} "${args.query}"${described}. Showing ${args.offset + 1}–${args.offset + screens.length}, from ${appCount(screens)}.`,
           );
           if (types.length) lines.push(`Screen types among the matches: ${types.map(([type, count]) => `${type} (${count})`).join(', ')}.`);
           if (result.flows.length) lines.push(`${result.flows.length} ${label} flows also match — search_flows shows them step by step.`);
@@ -251,6 +276,9 @@ export class McpToolsService {
         const app = args.app ? apps.get(args.app.toLowerCase()) : undefined;
         if (args.app && !app) return this.fail(`Unknown app "${args.app}". list_apps gives the ids.`);
 
+        if (args.platform === 'site') {
+          return { content: [text('Sites have no flows: they are kept as whole pages and their sections. search_screens with platform "site" finds them.')], structuredContent: { platform: 'site', query: args.query ?? null, total: 0, flows: [] } };
+        }
         let flows = await this.inspirations.getFlows(args.category, args.platform);
         if (app) flows = flows.filter((flow) => flow.appId === app.id);
 
@@ -332,6 +360,23 @@ export class McpToolsService {
         const app = args.app ? apps.get(args.app.toLowerCase()) : undefined;
         if (args.app && !app) return this.fail(`Unknown app "${args.app}". list_apps gives the ids.`);
 
+        if (args.platform === 'site') {
+          // Sites have no printed-text index: their pages and sections are matched on headings and names instead.
+          const phrase = args.query.toLowerCase();
+          const all = [...(await this.inspirations.getSiteScreens('page', '', 10000)), ...(await this.inspirations.getSiteScreens('section', '', 10000))];
+          const hits = all.filter((screen) => (!app || screen.appId === app.id) && `${screen.site?.heading ?? ''} ${screen.name ?? ''} ${screen.description ?? ''}`.toLowerCase().includes(phrase));
+          const shown = hits.slice(0, args.limit);
+          const items = shown.map((screen) => this.screenItem(screen, apps));
+          const content: Content[] = [
+            text(
+              shown.length
+                ? `${hits.length === 1 ? '1 Sites page or section has' : `${hits.length} Sites pages and sections have`} "${args.query}" in ${hits.length === 1 ? 'its' : 'their'} heading or name${app ? ` in ${app.name}` : ''} (Sites have no full-text index). Showing ${shown.length}.`
+                : `No Sites page or section has "${args.query}" in its heading or name${app ? ` in ${app.name}` : ''}. Sites have no full-text index; search_screens with platform "site" matches page and section types.`,
+            ),
+          ];
+          await this.appendScreens(content, shown, items, args.include_images, LIMITS.previewWidth);
+          return { content, structuredContent: { platform: 'site', query: args.query, total: hits.length, screens: items } };
+        }
         // The text search is not platform-aware, so it is asked for a generous page and narrowed here.
         const result = await this.inspirations.searchScreenshotText(args.query, 200, 0, app?.id);
         // Every hit matches the phrase equally, so the ordering alone decides who comes first.
@@ -347,7 +392,7 @@ export class McpToolsService {
         const content: Content[] = [
           text(
             screens.length
-              ? `${onPlatform.length} ${label} screens show the text "${args.query}"${app ? ` in ${app.name}` : ''}. Showing ${screens.length}, from ${appCount(screens)}.`
+              ? `${onPlatform.length} ${label} ${onPlatform.length === 1 ? 'screen shows' : 'screens show'} the text "${args.query}"${app ? ` in ${app.name}` : ''}. Showing ${screens.length}, from ${appCount(screens)}.`
               : `No ${label} screens show the text "${args.query}"${app ? ` in ${app.name}` : ''}. Try a shorter phrase.`,
           ),
         ];
@@ -382,7 +427,9 @@ export class McpToolsService {
         const onScreen = clip(typeof analysis?.text === 'string' ? analysis.text.replace(/\s+/g, ' ').trim() : null, LIMITS.textChars);
 
         const lines = [
-          `${item.app.name} — ${item.name} · ${PLATFORM_LABEL[item.platform as Platform] ?? item.platform} · ${item.screen_type}${item.states.length ? ` (${item.states.join(', ')})` : ''}`,
+          `${item.app.name} — ${item.name} · ${PLATFORM_LABEL[item.platform as Platform] ?? item.platform} · ${siteKindLabel(found.screen) ?? item.screen_type}${item.states.length ? ` (${item.states.join(', ')})` : ''}`,
+          found.screen.site?.kind === 'section' ? `On the site's ${found.screen.site.pageType ?? 'other'} page${found.screen.site.heading ? ` · heading: ${found.screen.site.heading}` : ''}` : null,
+          found.screen.site?.pageUrl ? `Address: ${found.screen.site.pageUrl}` : null,
           item.description,
           item.purpose ? `Purpose: ${item.purpose}` : null,
           item.primary_action ? `Primary action: ${item.primary_action}` : null,
@@ -432,6 +479,20 @@ export class McpToolsService {
       async (args) => {
         const screen = await this.loader.getScreen(args.screen_id);
         if (!screen) return this.fail(`No screen with id "${args.screen_id}".`);
+        if (screen.site) {
+          // A site's page or section: the same kind on other sites, as the website's "Other sites" shows.
+          const kind = screen.site.kind === 'section' ? 'section' : 'page';
+          const type = kind === 'section' ? screen.site.sectionType ?? 'content' : screen.site.pageType ?? 'other';
+          const others = (await this.inspirations.getSiteScreens(kind, type, 10000)).filter((other) => other.appId !== screen.appId).slice(0, args.limit);
+          const apps = await this.appIndex();
+          const items = others.map((other) => this.screenItem(other, apps));
+          const label = siteKindLabel(screen);
+          const content: Content[] = [
+            text(others.length ? `${others.length} ${label}s on other sites.` : `No other site has a ${label} yet.`),
+          ];
+          await this.appendScreens(content, others, items, args.include_images, LIMITS.previewWidth);
+          return { content, structuredContent: { platform: 'site', basis: 'type', screens: items } };
+        }
         const similar = await this.inspirations.getSimilar(screen.id, 80);
         const screens = diversify(this.onPlatform(similar?.items ?? [], screen.platform as Platform)).slice(0, args.limit);
         const apps = await this.appIndex();
@@ -525,8 +586,9 @@ export class McpToolsService {
         const items = apps.map((app) => this.appItem(app, args.platform));
         const where = args.platform ? ` on ${PLATFORM_LABEL[args.platform]}` : '';
         const lines = [
-          `${items.length} apps${where}${args.industry ? ` in ${args.industry}` : ''}${args.query ? ` matching "${args.query}"` : ''}.`,
-          ...items.map((app) => `- ${app.name} (id: ${app.id}) · ${app.industry} · ${app.platforms.map((p) => PLATFORM_LABEL[p as Platform] ?? p).join(' + ')} · ${app.screens} screens, ${app.flows} flows${app.tagline ? ` — ${app.tagline}` : ''}`),
+          // Named as what they are on that platform: "24 web apps", "1 site"; with no platform, every kind.
+          `${plural(items.length, args.platform === 'site' ? 'site' : args.platform === 'webapp' ? 'web app' : 'app')}${args.platform === 'ios' ? where : ''}${args.industry ? ` in ${args.industry}` : ''}${args.query ? ` matching "${args.query}"` : ''}.`,
+          ...items.map((app) => `- ${app.name} (id: ${app.id}) · ${app.industry} · ${app.platforms.map((p) => PLATFORM_LABEL[p as Platform] ?? p).join(' + ')} · ${app.platforms.length === 1 && app.platforms[0] === 'site' ? `${app.screens} pages` : `${app.screens} screens, ${app.flows} flows`}${app.tagline ? ` — ${app.tagline}` : ''}`),
         ];
         return { content: [text(lines.join('\n'))], structuredContent: { platform: args.platform ?? null, apps: items } };
       },
@@ -558,21 +620,32 @@ export class McpToolsService {
         const found = await this.inspirations.getApp(app.slug);
         if (!found) return this.fail(`Unknown app "${args.app}".`);
 
-        const screens = this.onPlatform(found.screens, args.platform);
-        const flows = found.flows.filter((flow) => flow.platform === args.platform);
+        // A website: its pages (each with its sections), named by page type — never counted or typed as screens.
+        const onPlatform = this.onPlatform(found.screens, args.platform);
+        const sitePages = onPlatform.filter((screen) => screen.site?.kind === 'page');
+        const siteSections = onPlatform.filter((screen) => screen.site?.kind === 'section');
+        const isSite = sitePages.length > 0 || siteSections.length > 0;
+        const screens = isSite ? sitePages : onPlatform;
+        const flows = isSite ? [] : found.flows.filter((flow) => flow.platform === args.platform);
         const types: Record<string, number> = {};
-        for (const screen of screens) types[screen.screenType] = (types[screen.screenType] ?? 0) + 1;
+        for (const screen of screens) {
+          const type = isSite ? screen.site?.pageType ?? 'other' : screen.screenType;
+          types[type] = (types[type] ?? 0) + 1;
+        }
         const byCategory: Record<string, { id: string; name: string; steps: number }[]> = {};
         for (const flow of flows) (byCategory[flow.category] ??= []).push({ id: flow.id, name: flow.name, steps: flow.screenIds.length });
 
         const item = this.appItem(app, args.platform);
         const lines = [
           `${app.name} · ${PLATFORM_LABEL[args.platform]} · ${app.industry}${app.tagline ? ` — ${app.tagline}` : ''}`,
-          `${screens.length} screens, ${flows.length} flows${app.currentVersion ? ` · latest capture ${app.currentVersion}` : ''}`,
-          `Screen types: ${topEntries(types, 30).map(([type, count]) => `${type} (${count})`).join(', ')}`,
+          isSite
+            ? `${screens.length} pages, ${siteSections.length} sections${app.currentVersion ? ` · latest capture ${app.currentVersion}` : ''}`
+            : `${screens.length} screens, ${flows.length} flows${app.currentVersion ? ` · latest capture ${app.currentVersion}` : ''}`,
+          `${isSite ? 'Page types' : 'Screen types'}: ${topEntries(types, 30).map(([type, count]) => `${type} (${count})`).join(', ')}`,
+          isSite && siteSections.length ? `Section types: ${countBy(siteSections.map((screen) => screen.site?.sectionType ?? 'content')).map(([type, count]) => `${type} (${count})`).join(', ')}` : null,
           ...Object.entries(byCategory).map(([category, list]) => `Flows — ${category}: ${list.map((flow) => `${flow.name} [${flow.id}]`).join('; ')}`),
           `Page: ${item.page_url}`,
-        ];
+        ].filter(Boolean);
 
         const content: Content[] = [text(lines.join('\n'))];
         if (args.include_images) {
@@ -583,7 +656,9 @@ export class McpToolsService {
         }
         return {
           content,
-          structuredContent: { app: item, platform: args.platform, screen_types: types, flows: byCategory },
+          structuredContent: isSite
+            ? { app: item, platform: args.platform, page_types: types, section_types: Object.fromEntries(countBy(siteSections.map((screen) => screen.site?.sectionType ?? 'content'))), pages: screens.length, sections: siteSections.length }
+            : { app: item, platform: args.platform, screen_types: types, flows: byCategory },
         };
       },
     );
@@ -600,22 +675,38 @@ export class McpToolsService {
           'Curated UI patterns — recurring solutions such as progress steppers, soft paywalls or permission primers — each with the screens that show it. Use get_pattern to see the screens on one platform.',
         inputSchema: {
           category: z.string().optional(),
+          platform: platformSchema.optional().describe('Count only this platform\'s screens. Without it, each pattern\'s screens are counted per platform.'),
         },
       },
       async (args) => {
+        // Platforms never mix: screens are counted per platform (a screen id reads "<app>-<platform>-versions-…").
+        if (args.platform === 'site') {
+          return { content: [text('Sites have no patterns: they are kept as whole pages and their sections. search_screens with platform "site" finds them.')], structuredContent: { platform: 'site', patterns: [] } };
+        }
+        const platformOf = (id: string) => (/-(ios|webapp|site)-versions-/.exec(id)?.[1] ?? null) as Platform | null;
         const patterns = await this.inspirations.getPatterns(args.category);
-        const items = patterns.map((pattern) => ({
-          slug: pattern.slug,
-          name: pattern.name,
-          category: pattern.category,
-          description: pattern.description,
-          tags: pattern.tags,
-          screens: pattern.screenIds.length,
-          page_url: `${this.siteUrl}/inspirations/patterns`,
-        }));
+        const items = patterns
+          .map((pattern) => {
+            const byPlatform = new Map(countBy(pattern.screenIds.map(platformOf).filter((platform): platform is Platform => Boolean(platform))));
+            return {
+              slug: pattern.slug,
+              name: pattern.name,
+              category: pattern.category,
+              description: pattern.description,
+              tags: pattern.tags,
+              screens: args.platform ? byPlatform.get(args.platform) ?? 0 : pattern.screenIds.length,
+              screens_by_platform: Object.fromEntries(byPlatform),
+              page_url: `${this.siteUrl}/inspirations/patterns${args.platform ? `?platform=${args.platform === 'ios' ? 'ios' : 'web'}` : ''}`,
+            };
+          })
+          .filter((pattern) => !args.platform || pattern.screens > 0);
+        const split = (pattern: (typeof items)[number]) =>
+          args.platform
+            ? `${pattern.screens} ${PLATFORM_LABEL[args.platform]} screens`
+            : `${pattern.screens} screens (${Object.entries(pattern.screens_by_platform).map(([platform, count]) => `${PLATFORM_LABEL[platform as Platform] ?? platform} ${count}`).join(', ')})`;
         const lines = [
-          `${items.length} patterns${args.category ? ` in ${args.category}` : ''}.`,
-          ...items.map((pattern) => `- ${pattern.name} (slug: ${pattern.slug}) · ${pattern.category} · ${pattern.screens} screens — ${pattern.description}`),
+          `${plural(items.length, 'pattern')}${args.platform ? ` on ${PLATFORM_LABEL[args.platform]}` : ''}${args.category ? ` in ${args.category}` : ''}.`,
+          ...items.map((pattern) => `- ${pattern.name} (slug: ${pattern.slug}) · ${pattern.category} · ${split(pattern)} — ${pattern.description}`),
         ];
         return { content: [text(lines.join('\n'))], structuredContent: { patterns: items } };
       },
@@ -684,6 +775,22 @@ export class McpToolsService {
         },
       },
       async (args) => {
+        if (args.platform === 'site') {
+          const [pages, sections] = await Promise.all([this.inspirations.getSiteScreens('page', '', 10000), this.inspirations.getSiteScreens('section', '', 10000)]);
+          const pageTypes = countBy(pages.map((screen) => screen.site?.pageType ?? 'other'));
+          const sectionTypes = countBy(sections.map((screen) => screen.site?.sectionType ?? 'content'));
+          const siteApps = new Set([...pages, ...sections].map((screen) => screen.appId)).size;
+          const listCounts = (counts: [string, number][]) => (counts.length ? counts.map(([type, count]) => `${type} (${count})`).join(', ') : '(none yet)');
+          const lines = [
+            `Sites: ${plural(siteApps, 'site')}, ${plural(pages.length, 'whole page')} and ${plural(sections.length, 'section')}. Sites have no flows, states or UI elements; search_screens with platform "site" takes a page or section type as screen_type.`,
+            `page_type: ${listCounts(pageTypes)}`,
+            `section_type: ${listCounts(sectionTypes)}`,
+          ];
+          return {
+            content: [text(lines.join('\n'))],
+            structuredContent: { platform: 'site', counts: { sites: siteApps, pages: pages.length, sections: sections.length }, page_types: Object.fromEntries(pageTypes), section_types: Object.fromEntries(sectionTypes) },
+          };
+        }
         const meta = await this.inspirations.getCounts([args.platform]);
         const taxonomy = meta.taxonomy;
         const label = PLATFORM_LABEL[args.platform];
@@ -797,6 +904,58 @@ export class McpToolsService {
     return items.filter((item) => item.platform === platform);
   }
 
+  /**
+   * search_screens on Sites: every site's newest pages and sections, matched word by word on their page or section
+   * type, heading, address and site; whole pages before sections on a tie.
+   */
+  private async searchSitePages(
+    args: { query: string; screen_type?: string; industry?: string; limit: number; offset: number; include_images: boolean },
+    apps: Map<string, InspirationApp>,
+    app: InspirationApp | undefined,
+  ): Promise<ToolResult> {
+    const [pages, sections] = await Promise.all([this.inspirations.getSiteScreens('page', '', 10000), this.inspirations.getSiteScreens('section', '', 10000)]);
+    const asked = args.query.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter((word) => word.length > 1);
+    // "page" / "section" say which kind, not what it is about: "faq section" is FAQ sections, "landing page" pages.
+    const kind = asked.some((word) => /^sections?$/.test(word)) ? 'section' : asked.some((word) => /^(?:pages?|full)$/.test(word)) ? 'page' : null;
+    const words = asked.filter((word) => !/^(?:pages?|sections?|full|whole|site|sites|website|websites)$/.test(word));
+    const stem = (word: string) => word.replace(/(?:ing|es|s)$/, '');
+    const ownType = (screen: InspirationScreen) => (screen.site?.kind === 'section' ? screen.site.sectionType ?? 'content' : screen.site?.pageType ?? 'other');
+    const matched = [...pages, ...sections]
+      .filter((screen) => !kind || screen.site?.kind === kind)
+      .filter((screen) => !app || screen.appId === app.id)
+      .filter((screen) => !args.industry || apps.get(screen.appId.toLowerCase())?.industry === args.industry)
+      .filter((screen) => !args.screen_type || ownType(screen) === args.screen_type)
+      .map((screen) => {
+        const site = screen.site;
+        // A section is its own type ("pricing" section), not the page it sits on: that page goes with the words below.
+        const typeWords = ownType(screen).replace(/-/g, ' ');
+        const other = `${site?.kind === 'section' ? (site.pageType ?? '') : ''} ${site?.heading ?? ''} ${site?.pageUrl ?? ''} ${screen.name ?? ''} ${screen.description ?? ''} ${(screen.tags ?? []).join(' ')} ${apps.get(screen.appId.toLowerCase())?.name ?? ''}`.toLowerCase();
+        const score = words.reduce((sum, word) => sum + (typeWords.includes(stem(word)) ? 3 : other.includes(stem(word)) ? 1 : 0), 0);
+        return { screen, score: score + (site?.kind === 'page' ? 0.5 : 0) };
+      })
+      .filter((entry) => entry.score >= 1 || !words.length || Boolean(args.screen_type))
+      .sort((a, b) => b.score - a.score);
+    // A page or section of the type asked for ("pricing") is the answer; ones that only mention it in passing are not.
+    const scored = matched.some((entry) => entry.score >= 3) ? matched.filter((entry) => entry.score >= 3) : matched;
+    const shown = scored.slice(args.offset, args.offset + args.limit).map((entry) => entry.screen);
+    const items = shown.map((screen) => this.screenItem(screen, apps));
+    const matchedPages = scored.filter((entry) => entry.screen.site?.kind === 'page').length;
+    const types = countBy(scored.map((entry) => (entry.screen.site?.kind === 'page' ? `${entry.screen.site.pageType ?? 'other'} page` : `${entry.screen.site?.sectionType ?? 'content'} section`))).slice(0, 8);
+    const lines = !shown.length
+      ? [`No Sites pages or sections match "${args.query}". get_taxonomy with platform "site" lists the page and section types.`]
+      : [
+          `${scored.length} Sites ${scored.length === 1 ? 'result matches' : 'results match'} "${args.query}": ${plural(matchedPages, 'whole page')} and ${plural(scored.length - matchedPages, 'section')}. Showing ${args.offset + 1}–${args.offset + shown.length}, from ${appCount(shown)}.`,
+          `Among the matches: ${types.map(([type, count]) => `${type} (${count})`).join(', ')}.`,
+        ];
+    const content: Content[] = [text(lines.join('\n'))];
+    await this.appendScreens(content, shown, items, args.include_images, LIMITS.previewWidth);
+    const nextOffset = args.offset + shown.length < scored.length ? args.offset + shown.length : null;
+    return {
+      content,
+      structuredContent: { platform: 'site', query: args.query, total: scored.length, offset: args.offset, next_offset: nextOffset, screens: items, screen_types: Object.fromEntries(types), matched_apps: [], matched_flows: 0 },
+    };
+  }
+
   private screenItem(screen: InspirationScreen, apps: Map<string, InspirationApp>) {
     const app = apps.get(screen.appId.toLowerCase());
     return {
@@ -817,7 +976,10 @@ export class McpToolsService {
       captured_at: screen.capturedAt ?? null,
       // Full-resolution file only where the licence allows a download, matching the 403 on the image route.
       image_url: screen.downloadable ? `${this.apiUrl}${screen.url}` : null,
-      page_url: `${this.siteUrl}/inspirations/screens?screen=${encodeURIComponent(screen.id)}`,
+      page_url: screen.site
+        ? `${this.siteUrl}/inspirations/app/${encodeURIComponent(app?.slug ?? screen.appId)}?screen=${encodeURIComponent(screen.id)}`
+        : `${this.siteUrl}/inspirations/screens?screen=${encodeURIComponent(screen.id)}`,
+      ...(screen.site ? { site: { kind: screen.site.kind, page_type: screen.site.pageType ?? null, section_type: screen.site.sectionType ?? null, url: screen.site.pageUrl ?? null } } : {}),
       downloadable: screen.downloadable,
       attribution: screen.source?.attribution ?? app?.attribution ?? null,
     };
@@ -866,7 +1028,9 @@ export class McpToolsService {
     width: number,
   ) {
     for (const [index, item] of items.entries()) {
-      const meta = [item.screen_type, ...item.states].join(', ');
+      // A site's page or section says which: "pricing page", "hero section".
+      const own = siteKindLabel(screens[index]) ?? item.screen_type;
+      const meta = [own, ...item.states].join(', ');
       const look = item.style.join(', ');
       content.push(
         text(

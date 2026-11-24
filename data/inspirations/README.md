@@ -17,7 +17,8 @@ data/inspirations/
   manifest.json          GENERATED — do not edit by hand
   logos/                 app marks:  <app-slug>.svg | .png | .webp
   screens/
-    web/<app-slug>/      desktop + responsive web captures
+    webapp/<app-slug>/   web app captures (signed-in browser tools)
+    site/<app-slug>/     sites: websites kept as whole pages and their sections
     ios/<app-slug>/      iPhone captures
     android/<app-slug>/  Android captures
   analysis/              <screen-id>.json — real UI analysis output, when it exists
@@ -96,7 +97,7 @@ and URLs.
   "id": "acme",
   "name": "Acme",
   "industry": "saas",
-  "platforms": ["web", "ios"],
+  "platforms": ["webapp", "ios"],
   "website": "https://acme.example",
   "tagline": "One line about the product.",
   "logo": "acme.svg"

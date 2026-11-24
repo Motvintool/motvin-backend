@@ -7,12 +7,14 @@ import {
   Res,
 } from '@nestjs/common';
 import { FastifyReply } from 'fastify';
-import { createReadStream } from 'fs';
-import { stat } from 'fs/promises';
-import { extname } from 'path';
+import { createReadStream, existsSync, mkdirSync } from 'fs';
+import { rename, stat } from 'fs/promises';
+import { dirname, extname, join } from 'path';
 import { appCardScreens } from './app-cards';
 import { InspirationsService } from './inspirations.service';
 import { InspirationScreen, LoaderService } from './loader.service';
+
+const sharp: typeof import('sharp').default = require('sharp');
 
 /**
  * Read-only API over data/inspirations.
@@ -86,6 +88,15 @@ export class InspirationsController {
     return { success: true, data };
   }
 
+  // GET /api/inspirations/site-screens?kind=page&type=pricing — every website's pages (or sections) of one type,
+  // for a website's Z grid. Websites only: web apps and iOS screens are never in it.
+  // With no type: every page (or section) — the Website pages page.
+  @Get('site-screens')
+  async getSiteScreens(@Query('kind') kind?: string, @Query('type') type?: string, @Query('limit') limit = 80) {
+    const data = await this.service.getSiteScreens(kind === 'section' ? 'section' : 'page', type || '', Math.min(Number(limit) || 80, 1000));
+    return { success: true, data };
+  }
+
   // GET /api/inspirations/screen/:id
   @Get('screen/:id')
   async getScreen(@Param('id') id: string) {
@@ -130,6 +141,8 @@ export class InspirationsController {
     const byApp = new Map<string, InspirationScreen[]>();
     for (const screen of await this.loader.getScreens()) {
       if (!wanted.has(screen.appId) || (platforms && !platforms.includes(screen.platform))) continue;
+      // A website's card shows its pages, not the parts cut out of them.
+      if (screen.site?.kind === 'section') continue;
       const list = byApp.get(screen.appId);
       if (list) list.push(screen);
       else byApp.set(screen.appId, [screen]);
@@ -155,7 +168,8 @@ export class InspirationsController {
       if (!f) facets.set(appId, (f = { screens: new Set(), ui: new Set(), flows: new Set(), looks: new Set() }));
       return f;
     };
-    for (const s of await this.loader.getScreens()) {
+    // Library screens only: a website's pages are not screens, so they never give an app a screen type or a look.
+    for (const s of await this.loader.getLibraryScreens()) {
       if (!on(s.platform)) continue;
       const f = of(s.appId);
       if (s.screenType !== 'other') f.screens.add(s.screenType);
@@ -309,9 +323,10 @@ export class InspirationsController {
     @Param('flow') flow: string,
     @Param('file') file: string,
     @Query('download') download: string,
+    @Query('cover') cover: string,
     @Res() reply: FastifyReply,
   ) {
-    return this.sendFile(`screens/${platform}/${app}/versions/${version}/${flow}/${file}`, file, download === '1', reply);
+    return this.sendFile(`screens/${platform}/${app}/versions/${version}/${flow}/${file}`, file, download === '1', reply, cover === '1');
   }
 
   // GET /api/inspirations/store/:platform/:app/:date/:file
@@ -337,10 +352,16 @@ export class InspirationsController {
     fileName: string,
     asDownload: boolean,
     reply: FastifyReply,
+    cover = false,
   ) {
-    const absolute = await this.loader.resolveServableFile(key);
+    let absolute = await this.loader.resolveServableFile(key);
     if (!absolute) {
       return reply.code(404).send({ success: false, error: 'Not found' });
+    }
+    // A website's whole page, for a card: only its top, as the card shows it. The page itself can be 16,000 px
+    // tall; sent whole, every card that shows it makes the grid lag.
+    if (cover && !asDownload && /^screens\/site\/[^/]+\/versions\/[^/]+\/pages\/[^/]+$/.test(key)) {
+      absolute = (await pageCover(absolute).catch(() => null)) ?? absolute;
     }
 
     if (asDownload) {
@@ -389,4 +410,39 @@ export class InspirationsController {
     const base = file.replace(/\.[^.]+$/, '').split('/').join('-');
     return `${app}-${platform}-${base}`;
   }
+}
+
+/** How much of a page a cover keeps, as a share of its width (a card shows about 0.62 of it), and how wide it is. */
+const COVER_HEIGHT_SHARE = 0.8;
+const COVER_WIDTH = 1440;
+const coversBeingMade = new Map<string, Promise<string>>();
+
+/**
+ * The top of a website page as a small picture, made once and kept beside the library (in cache/site-covers,
+ * outside screens/, so it is never taken for a screen). A page changed on disk gets a new cover (its name
+ * carries the page's size and time).
+ */
+async function pageCover(page: string): Promise<string> {
+  const at = page.lastIndexOf('/screens/');
+  if (at < 0) return page;
+  const info = await stat(page);
+  const rel = page.slice(at + '/screens/'.length).replace(/[^a-zA-Z0-9.-]+/g, '_');
+  const out = join(page.slice(0, at), '..', 'cache', 'site-covers', `${rel}-${info.size}-${info.mtimeMs | 0}.webp`);
+  if (existsSync(out)) return out;
+  const making = coversBeingMade.get(out);
+  if (making) return making;
+  const job = (async () => {
+    mkdirSync(dirname(out), { recursive: true });
+    const meta = await sharp(page, { limitInputPixels: false }).metadata();
+    const width = meta.width || 0; const height = meta.height || 0;
+    if (!width || !height) return page;
+    const keep = Math.min(height, Math.round(width * COVER_HEIGHT_SHARE));
+    const temp = `${out}.part`;
+    await sharp(page, { limitInputPixels: false }).extract({ left: 0, top: 0, width, height: keep })
+      .resize({ width: Math.min(width, COVER_WIDTH) }).webp({ quality: 82 }).toFile(temp);
+    await rename(temp, out);
+    return out;
+  })().finally(() => coversBeingMade.delete(out));
+  coversBeingMade.set(out, job);
+  return job;
 }

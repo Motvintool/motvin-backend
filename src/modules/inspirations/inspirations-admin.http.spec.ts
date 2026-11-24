@@ -93,7 +93,7 @@ describe('Inspirations admin API over HTTP', () => {
 
     for (const type of ['image/webp', 'image/jpeg', 'application/octet-stream']) {
       const name = type.split('/')[1].replace('+xml', '');
-      const res = await post(`/api/inspirations/admin/screens/web/acme/login-${name}.png?version=`, PNG_1X1, type);
+      const res = await post(`/api/inspirations/admin/screens/webapp/acme/login-${name}.png?version=`, PNG_1X1, type);
       expect([200, 201]).toContain(res.statusCode);
     }
   });
@@ -202,14 +202,14 @@ describe('Inspirations admin API over HTTP', () => {
       payload: { name: 'Acme', industry: 'saas' },
     });
     await post('/api/inspirations/admin/screens/ios/acme/dashboard.png?version=', PNG_1X1, 'image/png');
-    await post('/api/inspirations/admin/screens/web/acme/login.png?version=', PNG_1X1, 'image/png');
+    await post('/api/inspirations/admin/screens/webapp/acme/login.png?version=', PNG_1X1, 'image/png');
 
     const res = await instance.inject({ method: 'DELETE', url: '/api/inspirations/admin/apps/acme' });
 
     expect(res.statusCode).toBe(200);
     expect(JSON.parse(res.payload).data.removed.screens).toBe(2);
     expect(existsSync(join(store, 'screens', 'ios', 'acme'))).toBe(false);
-    expect(existsSync(join(store, 'screens', 'web', 'acme'))).toBe(false);
+    expect(existsSync(join(store, 'screens', 'webapp', 'acme'))).toBe(false);
 
     const state = JSON.parse(
       (await instance.inject({ method: 'GET', url: '/api/inspirations/admin/state' })).payload,

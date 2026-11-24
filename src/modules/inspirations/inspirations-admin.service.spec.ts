@@ -160,10 +160,10 @@ describe('InspirationsAdminService', () => {
     const apps = () => JSON.parse(readFileSync(join(store, 'apps.json'), 'utf-8')).apps;
 
     it('stores the platforms chosen for an app, in library order, and keeps them when a later save omits them', () => {
-      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['web', 'ios'] });
-      expect(apps()[0].platforms).toEqual(['ios', 'web']);
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['webapp', 'ios'] });
+      expect(apps()[0].platforms).toEqual(['ios', 'webapp']);
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', tagline: 'x' });
-      expect(apps()[0].platforms).toEqual(['ios', 'web']);
+      expect(apps()[0].platforms).toEqual(['ios', 'webapp']);
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: [] });
       expect(apps()[0].platforms).toEqual([]);
     });
@@ -175,27 +175,29 @@ describe('InspirationsAdminService', () => {
 
     it('moves an app between platforms when its declared platform is not the folder its screens were filed under', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'home.png', PNG_1X1, false, '');
-      expect(readManifest(store).screens[0].platform).toBe('web');
+      service.uploadScreen('ios', 'acme', 'home.png', PNG_1X1, false, '');
+      expect(readManifest(store).screens[0].platform).toBe('ios');
 
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['webapp'] });
       const manifest = readManifest(store);
       expect(manifest.screens[0].platform).toBe('webapp');
       expect(manifest.screens[0].tags).toContain('webapp');
-      expect(manifest.screens[0].tags).not.toContain('web');
+      expect(manifest.screens[0].tags).not.toContain('ios');
       expect(manifest.apps.find((a: any) => a.id === 'acme').platforms).toEqual(['webapp']);
       expect(manifest.taxonomy.platforms).toEqual(['webapp']);
       // The file did not move, so its address and id are unchanged.
-      expect(manifest.screens[0].url).toContain('/screens/web/acme/');
+      expect(manifest.screens[0].url).toContain('/screens/ios/acme/');
     });
 
     it('keeps a screen on a declared platform of its own kind, and falls back to the first declared one otherwise', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'webapp'] });
-      service.uploadScreen('web', 'acme', 'home.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'home.png', PNG_1X1, false, '');
       service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
       const platforms = Object.fromEntries(readManifest(store).screens.map((s: any) => [s.file.split('/')[0], s.platform]));
-      // The website's screen is a browser screen, so it goes to the declared browser platform; the iOS one stays.
-      expect(platforms).toEqual({ web: 'webapp', ios: 'ios' });
+      expect(platforms).toEqual({ webapp: 'webapp', ios: 'ios' });
+      // A web app's screen on an app declared iOS alone falls back to iOS.
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios'] });
+      expect(readManifest(store).screens.find((s: any) => s.file.startsWith('webapp/')).platform).toBe('ios');
     });
 
     it('lists a declared platform on the app even before it has screens there', () => {
@@ -278,14 +280,14 @@ describe('InspirationsAdminService', () => {
   describe('the licensing gate', () => {
     beforeEach(() => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
     });
 
     it('publishes a new app without a separate approval step', () => {
       const manifest = readManifest(store);
 
       expect(manifest.counts.screens).toBe(1);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.png'))).toBe(true);
     });
 
     it('records the app in sources.json so its origin is still tracked', () => {
@@ -303,7 +305,7 @@ describe('InspirationsAdminService', () => {
         status: 'approved',
       });
       // A later upload must not reset what someone entered deliberately.
-      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'settings.png', PNG_1X1, false, '');
 
       const sources = JSON.parse(readFileSync(join(store, 'sources.json'), 'utf-8')).sources;
       expect(sources.acme.permission).toBe('owner-granted');
@@ -322,7 +324,7 @@ describe('InspirationsAdminService', () => {
 
       const manifest = readManifest(store);
       expect(manifest.counts.screens).toBe(1);
-      expect(manifest.screens[0].id).toBe('acme-web-dashboard');
+      expect(manifest.screens[0].id).toBe('acme-webapp-dashboard');
       expect(manifest.screens[0].downloadable).toBe(true);
     });
 
@@ -375,21 +377,21 @@ describe('InspirationsAdminService', () => {
     it('takes a deleted screen out of the flows it was a step of', () => {
       writeFileSync(
         join(store, 'flows.json'),
-        JSON.stringify({ version: 1, flows: [{ id: 'acme-web-tour', appId: 'acme', name: 'Tour', category: 'discovery', platform: 'web', screenIds: ['acme-web-dashboard', 'acme-web-other'], steps: [{ screenId: 'acme-web-dashboard' }, { screenId: 'acme-web-other' }] }] }),
+        JSON.stringify({ version: 1, flows: [{ id: 'acme-webapp-tour', appId: 'acme', name: 'Tour', category: 'discovery', platform: 'webapp', screenIds: ['acme-webapp-dashboard', 'acme-webapp-other'], steps: [{ screenId: 'acme-webapp-dashboard' }, { screenId: 'acme-webapp-other' }] }] }),
       );
 
-      service.deleteScreen('web', 'acme', 'dashboard.png');
+      service.deleteScreen('webapp', 'acme', 'dashboard.png');
 
       const flow = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows[0];
-      expect(flow.screenIds).toEqual(['acme-web-other']);
-      expect(flow.steps).toEqual([{ screenId: 'acme-web-other' }]);
+      expect(flow.screenIds).toEqual(['acme-webapp-other']);
+      expect(flow.steps).toEqual([{ screenId: 'acme-webapp-other' }]);
     });
   });
 
   describe('metadata and deletion', () => {
     beforeEach(() => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -399,7 +401,7 @@ describe('InspirationsAdminService', () => {
     });
 
     it('writes a sidecar next to the image and uses it in the manifest', () => {
-      service.saveScreenMeta('web', 'acme', 'dashboard.png', {
+      service.saveScreenMeta('webapp', 'acme', 'dashboard.png', {
         name: 'Revenue overview',
         screenType: 'dashboard',
         tags: ['kpi'],
@@ -407,27 +409,27 @@ describe('InspirationsAdminService', () => {
         style: ['minimal'],
       });
 
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.json'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.json'))).toBe(true);
       const screen = readManifest(store).screens[0];
       expect(screen.name).toBe('Revenue overview');
       expect(screen.elements).toEqual(['chart', 'table']);
-      expect(screen.tags).toEqual(expect.arrayContaining(['kpi', 'saas', 'dashboard', 'web']));
+      expect(screen.tags).toEqual(expect.arrayContaining(['kpi', 'saas', 'dashboard', 'webapp']));
     });
 
     it('accepts a new screen type, style or state, but only in filter-safe form', () => {
       expect(() =>
-        service.saveScreenMeta('web', 'acme', 'dashboard.png', { screenType: 'paywall' as never, style: ['neon'] as never, states: ['offline'] as never }),
+        service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { screenType: 'paywall' as never, style: ['neon'] as never, states: ['offline'] as never }),
       ).not.toThrow();
       expect(() =>
-        service.saveScreenMeta('web', 'acme', 'dashboard.png', { screenType: 'Pay wall!' as never }),
+        service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { screenType: 'Pay wall!' as never }),
       ).toThrow(/screenType/i);
       expect(() =>
-        service.saveScreenMeta('web', 'acme', 'dashboard.png', { style: ['neon glow'] as never }),
+        service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { style: ['neon glow'] as never }),
       ).toThrow(/style/i);
     });
 
     it('lets patterns match from the components recorded on a screen', () => {
-      service.saveScreenMeta('web', 'acme', 'dashboard.png', { elements: ['chart'] });
+      service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { elements: ['chart'] });
       writeFileSync(
         join(store, 'patterns.json'),
         JSON.stringify({
@@ -447,19 +449,19 @@ describe('InspirationsAdminService', () => {
 
       const manifest = service.rebuild();
       expect(manifest.counts.patterns).toBe(1);
-      expect(readManifest(store).patterns[0].screenIds).toEqual(['acme-web-dashboard']);
+      expect(readManifest(store).patterns[0].screenIds).toEqual(['acme-webapp-dashboard']);
     });
 
     it('removes the image, its sidecar and its analysis on delete', () => {
-      service.saveScreenMeta('web', 'acme', 'dashboard.png', { name: 'Revenue overview' });
+      service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { name: 'Revenue overview' });
       mkdirSync(join(store, 'analysis'), { recursive: true });
-      writeFileSync(join(store, 'analysis', 'acme-web-dashboard.json'), '{}');
+      writeFileSync(join(store, 'analysis', 'acme-webapp-dashboard.json'), '{}');
 
-      service.deleteScreen('web', 'acme', 'dashboard.png');
+      service.deleteScreen('webapp', 'acme', 'dashboard.png');
 
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(false);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.json'))).toBe(false);
-      expect(existsSync(join(store, 'analysis', 'acme-web-dashboard.json'))).toBe(false);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.png'))).toBe(false);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.json'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-webapp-dashboard.json'))).toBe(false);
       expect(readManifest(store).counts.screens).toBe(0);
     });
 
@@ -616,20 +618,20 @@ describe('InspirationsAdminService', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       for (const name of ['a', 'b', 'c', 'd']) {
         service.uploadScreen('ios', 'acme', `${name}.png`, PNG_1X1, false, '');
-        service.uploadScreen('web', 'acme', `${name}.png`, PNG_1X1, false, '');
+        service.uploadScreen('webapp', 'acme', `${name}.png`, PNG_1X1, false, '');
       }
-      const picks = ['a', 'b', 'c', 'd'].flatMap((name) => [`acme-ios-${name}`, `acme-web-${name}`]);
+      const picks = ['a', 'b', 'c', 'd'].flatMap((name) => [`acme-ios-${name}`, `acme-webapp-${name}`]);
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: picks });
       expect(readManifest(store).apps[0].cardScreens).toEqual(picks);
     });
 
     it('deletes only one platform of an app on several, keeping the app', () => {
-      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'web'] });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', platforms: ['ios', 'webapp'] });
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
-      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: ['acme-ios-login', 'acme-web-dashboard'] });
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas', cardScreens: ['acme-ios-login', 'acme-webapp-dashboard'] });
 
-      const result = service.deleteApp('acme', 'web');
+      const result = service.deleteApp('acme', 'webapp');
 
       expect(result.removed.app).toBe(false);
       expect(result.removed.screens).toBe(1);
@@ -649,9 +651,9 @@ describe('InspirationsAdminService', () => {
 
     it('removes everything stored for an app when it is deleted', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
-      service.saveScreenMeta('web', 'acme', 'dashboard.png', { name: 'Revenue overview' });
+      service.saveScreenMeta('webapp', 'acme', 'dashboard.png', { name: 'Revenue overview' });
       service.uploadLogo('acme', 'acme.svg', Buffer.from('<svg xmlns="http://www.w3.org/2000/svg"/>'));
       service.saveSource('acme', {
         permission: 'own-work',
@@ -660,7 +662,7 @@ describe('InspirationsAdminService', () => {
         status: 'approved',
       });
       mkdirSync(join(store, 'analysis'), { recursive: true });
-      writeFileSync(join(store, 'analysis', 'acme-web-dashboard.json'), '{}');
+      writeFileSync(join(store, 'analysis', 'acme-webapp-dashboard.json'), '{}');
       expect(readManifest(store).counts.screens).toBe(2);
 
       const result = service.deleteApp('acme');
@@ -673,9 +675,9 @@ describe('InspirationsAdminService', () => {
         logo: 'acme.svg',
         source: true,
       });
-      expect(existsSync(join(store, 'screens', 'web', 'acme'))).toBe(false);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme'))).toBe(false);
       expect(existsSync(join(store, 'screens', 'ios', 'acme'))).toBe(false);
-      expect(existsSync(join(store, 'analysis', 'acme-web-dashboard.json'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-webapp-dashboard.json'))).toBe(false);
       expect(existsSync(join(store, 'logos', 'acme.svg'))).toBe(false);
       expect(readManifest(store).counts.screens).toBe(0);
 
@@ -685,12 +687,77 @@ describe('InspirationsAdminService', () => {
       expect(state.sources.acme).toBeUndefined();
     });
 
+    it('leaves nothing of it in the other lists, so an app added again starts clean', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      // Another app, really there, whose entries stay.
+      service.saveApp({ id: 'other', name: 'Other', industry: 'saas' });
+      service.uploadScreen('ios', 'other', 'home.png', PNG_1X1, false, '');
+      service.saveFlow({ id: 'other-ios-versions-1-onboarding', appId: 'other', name: 'Onboarding', category: 'onboarding', platform: 'ios', screenIds: ['other-ios-home'] });
+      const batches = join(store, '..', 'batches');
+      mkdirSync(batches, { recursive: true });
+      // What the privacy check, the gap filling, flow tagging, a version pin and "New this week" remember.
+      writeFileSync(join(store, 'screen-gaps-checked.json'), JSON.stringify({ ids: ['acme-ios-login', 'other-ios-home'] }));
+      writeFileSync(join(batches, 'protect-checked.json'), JSON.stringify({ 'acme-ios-login': 1, 'other-ios-home': 2 }));
+      writeFileSync(join(store, 'flow-kinds.json'), JSON.stringify({ kinds: { 'acme-ios-versions-1-onboarding': 'Onboarding', 'other-ios-versions-1-onboarding': 'Onboarding' } }));
+      writeFileSync(join(store, 'versions.json'), JSON.stringify({ version: 1, pins: { acme: '2026-01-01', other: '2026-01-01' } }));
+      writeFileSync(join(store, 'settings.json'), JSON.stringify({ newThisWeek: { added: { ios: ['acme', 'other'], webs: [] }, order: { ios: ['other', 'acme'], webs: [] } } }));
+
+      service.deleteApp('acme');
+
+      const read = (file: string) => JSON.parse(readFileSync(file, 'utf-8'));
+      expect(read(join(store, 'screen-gaps-checked.json')).ids).toEqual(['other-ios-home']);
+      expect(read(join(batches, 'protect-checked.json'))).toEqual({ 'other-ios-home': 2 });
+      expect(Object.keys(read(join(store, 'flow-kinds.json')).kinds)).toEqual(['other-ios-versions-1-onboarding']);
+      expect(read(join(store, 'versions.json')).pins).toEqual({ other: '2026-01-01' });
+      expect(read(join(store, 'settings.json')).newThisWeek).toEqual({ added: { ios: ['other'], webs: [] }, order: { ios: ['other'], webs: [] } });
+    });
+
+    it('sweeps every list of what no longer exists after any delete, whatever left it', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.saveApp({ id: 'keep', name: 'Keep', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'keep', 'home.png', PNG_1X1, false, '');
+      service.uploadScreen('ios', 'keep', 'cart.png', PNG_1X1, false, '');
+      const batches = join(store, '..', 'batches');
+      mkdirSync(batches, { recursive: true });
+      // Leftovers from long ago (a renamed flow, an app deleted before the sweep existed) beside real entries.
+      writeFileSync(join(store, 'screen-gaps-checked.json'), JSON.stringify({ ids: ['keep-ios-home', 'old-ios-gone', 'keep-ios-renamed'] }));
+      writeFileSync(join(batches, 'protect-checked.json'), JSON.stringify({ 'keep-ios-home': 1, 'old-ios-gone': 2 }));
+      writeFileSync(join(store, 'versions.json'), JSON.stringify({ version: 1, pins: { keep: '2026-01-01', old: '2026-01-01' } }));
+
+      // Deleting one screen of another app is enough to sweep.
+      service.deleteScreen('ios', 'keep', 'cart.png');
+
+      const read = (file: string) => JSON.parse(readFileSync(file, 'utf-8'));
+      expect(read(join(store, 'screen-gaps-checked.json')).ids).toEqual(['keep-ios-home']);
+      expect(read(join(batches, 'protect-checked.json'))).toEqual({ 'keep-ios-home': 1 });
+      expect(read(join(store, 'versions.json')).pins).toEqual({ keep: '2026-01-01' });
+    });
+
+    it('forgets only the platform deleted when the app stays on another', () => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('ios', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'home.png', PNG_1X1, false, '');
+      writeFileSync(join(store, 'screen-gaps-checked.json'), JSON.stringify({ ids: ['acme-ios-login', 'acme-webapp-home'] }));
+      writeFileSync(join(store, 'versions.json'), JSON.stringify({ version: 1, pins: { acme: '2026-01-01' } }));
+      writeFileSync(join(store, 'settings.json'), JSON.stringify({ newThisWeek: { added: { ios: ['acme'], webs: ['acme'] }, order: { ios: [], webs: [] } } }));
+
+      service.deleteApp('acme', 'webapp');
+
+      const read = (file: string) => JSON.parse(readFileSync(file, 'utf-8'));
+      expect(read(join(store, 'screen-gaps-checked.json')).ids).toEqual(['acme-ios-login']);
+      // Still an app (on iOS): its pin stays, and it leaves only the Webs picks.
+      expect(read(join(store, 'versions.json')).pins).toEqual({ acme: '2026-01-01' });
+      expect(read(join(store, 'settings.json')).newThisWeek.added).toEqual({ ios: ['acme'], webs: [] });
+    });
+
     it('takes the flows with it and leaves other apps untouched', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       service.saveApp({ id: 'other', name: 'Other', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
-      service.uploadScreen('web', 'other', 'landing.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'other', 'landing.png', PNG_1X1, false, '');
       for (const id of ['acme', 'other']) {
         service.saveSource(id, {
           permission: 'own-work',
@@ -700,18 +767,18 @@ describe('InspirationsAdminService', () => {
         });
       }
       service.saveFlow({
-        id: 'acme-web-signin',
+        id: 'acme-webapp-signin',
         appId: 'acme',
         name: 'Sign in',
         category: 'authentication',
-        platform: 'web',
-        screenIds: ['acme-web-login', 'acme-web-dashboard'],
+        platform: 'webapp',
+        screenIds: ['acme-webapp-login', 'acme-webapp-dashboard'],
       });
 
       const result = service.deleteApp('acme');
 
       expect(result.removed.flows).toBe(1);
-      expect(existsSync(join(store, 'screens', 'web', 'other', 'landing.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'other', 'landing.png'))).toBe(true);
       const manifest = readManifest(store);
       expect(manifest.counts.flows).toBe(0);
       expect(manifest.counts.apps).toBe(1);
@@ -729,11 +796,11 @@ describe('InspirationsAdminService', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
       expect(() =>
         service.saveFlow({
-          id: 'acme-web-onboarding',
+          id: 'acme-webapp-onboarding',
           appId: 'acme',
           name: 'Onboarding',
           category: 'onboarding',
-          platform: 'web',
+          platform: 'webapp',
           screenIds: [],
         }),
       ).toThrow(/at least one/i);
@@ -741,8 +808,8 @@ describe('InspirationsAdminService', () => {
 
     it('publishes a flow whose screens are all published', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -751,23 +818,23 @@ describe('InspirationsAdminService', () => {
       });
 
       service.saveFlow({
-        id: 'acme-web-signin',
+        id: 'acme-webapp-signin',
         appId: 'acme',
         name: 'Sign in',
         category: 'authentication',
-        platform: 'web',
-        screenIds: ['acme-web-login', 'acme-web-dashboard'],
+        platform: 'webapp',
+        screenIds: ['acme-webapp-login', 'acme-webapp-dashboard'],
       });
 
       const manifest = readManifest(store);
       expect(manifest.counts.flows).toBe(1);
-      expect(manifest.flows[0].screenIds).toEqual(['acme-web-login', 'acme-web-dashboard']);
+      expect(manifest.flows[0].screenIds).toEqual(['acme-webapp-login', 'acme-webapp-dashboard']);
     });
 
     it('drops flow steps that are not published, and keeps the flow with what remains', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '');
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'login.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         license: 'CC0',
@@ -775,29 +842,29 @@ describe('InspirationsAdminService', () => {
         status: 'approved',
       });
       service.saveFlow({
-        id: 'acme-web-signin',
+        id: 'acme-webapp-signin',
         appId: 'acme',
         name: 'Sign in',
         category: 'authentication',
-        platform: 'web',
-        screenIds: ['acme-web-login', 'acme-web-dashboard'],
+        platform: 'webapp',
+        screenIds: ['acme-webapp-login', 'acme-webapp-dashboard'],
       });
 
-      service.deleteScreen('web', 'acme', 'dashboard.png');
+      service.deleteScreen('webapp', 'acme', 'dashboard.png');
 
       const report = service.rebuild();
       // A journey of one remaining step is still a journey — a section seen
       // once, a sheet opened and dismissed — so the flow survives, shorter.
       expect(report.counts.flows).toBe(1);
       // Deleting the screen took it out of the flow, so the flow keeps the rest.
-      expect(JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows[0].screenIds).toEqual(['acme-web-login']);
+      expect(JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows[0].screenIds).toEqual(['acme-webapp-login']);
     });
   });
 
   describe('versions', () => {
     it('groups legacy (unwrapped) screens into one version, labeled by the source capture date', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', {
         permission: 'own-work',
         capturedAt: '2025-01-15',
@@ -814,14 +881,14 @@ describe('InspirationsAdminService', () => {
 
     it('files a fresh upload with no explicit version into a dated folder under versions/, alongside the legacy one', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
 
       // No version named — lands in a real dated folder, not the legacy bucket.
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
+      service.uploadScreen('webapp', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
 
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-09-29', 'login.png'))).toBe(true);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'versions', '2026-09-29', 'login.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.png'))).toBe(true);
 
       const versions = service.listVersions('acme');
       expect(versions.map((v) => v.id)).toEqual(['2026-09-29', '2025-01-15']);
@@ -830,33 +897,33 @@ describe('InspirationsAdminService', () => {
 
       const manifest = readManifest(store);
       expect(manifest.counts.screens).toBe(2);
-      const login = manifest.screens.find((s: any) => s.id === 'acme-web-versions-2026-09-29-login');
+      const login = manifest.screens.find((s: any) => s.id === 'acme-webapp-versions-2026-09-29-login');
       expect(login.version).toBe('2026-09-29');
-      expect(login.file).toBe('web/acme/versions/2026-09-29/login.png');
+      expect(login.file).toBe('webapp/acme/versions/2026-09-29/login.png');
     });
 
     it('renames a version to change which one is "Latest", moving its screens, analysis and flow ids along with it', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
 
       // Flow-folder screens are written directly to disk by the crawler, not
       // through the admin upload route (which refuses a slash in the file
       // name) — this places one the same way a real ingest would.
-      const flowDir = join(store, 'screens', 'web', 'acme', 'versions', '2026-01-05', 'onboarding');
+      const flowDir = join(store, 'screens', 'webapp', 'acme', 'versions', '2026-01-05', 'onboarding');
       mkdirSync(flowDir, { recursive: true });
       writeFileSync(join(flowDir, '1.png'), PNG_1X1);
       service.rebuild();
 
       mkdirSync(join(store, 'analysis'), { recursive: true });
-      writeFileSync(join(store, 'analysis', 'acme-web-versions-2026-01-05-onboarding-1.json'), '{}');
+      writeFileSync(join(store, 'analysis', 'acme-webapp-versions-2026-01-05-onboarding-1.json'), '{}');
       service.saveFlow({
-        id: 'acme-web-versions-2026-01-05-onboarding',
+        id: 'acme-webapp-versions-2026-01-05-onboarding',
         appId: 'acme',
         name: 'Onboarding',
         category: 'onboarding',
-        platform: 'web',
-        screenIds: ['acme-web-versions-2026-01-05-onboarding-1'],
+        platform: 'webapp',
+        screenIds: ['acme-webapp-versions-2026-01-05-onboarding-1'],
       });
 
       expect(() => service.renameVersion('acme', '2099-01-01', '2030-01-01')).toThrow(/not a known version/i);
@@ -870,24 +937,24 @@ describe('InspirationsAdminService', () => {
       expect(result.versions.map((v) => v.id)).toEqual(['2027-03-10', '2025-01-15']);
       expect(result.versions[0]).toMatchObject({ isLatest: true });
       expect(readManifest(store).apps[0].currentVersion).toBe('2027-03-10');
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2027-03-10', 'onboarding', '1.png'))).toBe(true);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-01-05'))).toBe(false);
-      expect(existsSync(join(store, 'analysis', 'acme-web-versions-2027-03-10-onboarding-1.json'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'versions', '2027-03-10', 'onboarding', '1.png'))).toBe(true);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'versions', '2026-01-05'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-webapp-versions-2027-03-10-onboarding-1.json'))).toBe(true);
 
       const flowsDoc = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8'));
       const flow = flowsDoc.flows.find((f: any) => f.appId === 'acme');
-      expect(flow.id).toBe('acme-web-versions-2027-03-10-onboarding');
-      expect(flow.screenIds).toEqual(['acme-web-versions-2027-03-10-onboarding-1']);
+      expect(flow.id).toBe('acme-webapp-versions-2027-03-10-onboarding');
+      expect(flow.screenIds).toEqual(['acme-webapp-versions-2027-03-10-onboarding-1']);
 
       // A subsequent upload with no version named lands in the renamed
       // (now newest) version, not today's date.
-      service.uploadScreen('web', 'acme', 'settings.png', PNG_1X1, false);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2027-03-10', 'settings.png'))).toBe(true);
+      service.uploadScreen('webapp', 'acme', 'settings.png', PNG_1X1, false);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'versions', '2027-03-10', 'settings.png'))).toBe(true);
     });
 
     it('gives an app with no dated folder a version list of exactly one', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', { permission: 'own-work', status: 'approved' });
 
       expect(service.listVersions('acme')).toHaveLength(1);
@@ -895,15 +962,15 @@ describe('InspirationsAdminService', () => {
 
     it('deletes a whole version: its screens, sidecars and analysis', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
-      service.uploadScreen('web', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
+      service.uploadScreen('webapp', 'acme', 'login.png', PNG_1X1, false, '2026-09-29');
       mkdirSync(join(store, 'analysis'), { recursive: true });
-      writeFileSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'), '{}');
-      const otherFlow = { id: 'acme-web-onboarding', appId: 'acme', name: 'Onboarding', screenIds: ['acme-web-dashboard'] };
+      writeFileSync(join(store, 'analysis', 'acme-webapp-versions-2026-09-29-login.json'), '{}');
+      const otherFlow = { id: 'acme-webapp-onboarding', appId: 'acme', name: 'Onboarding', screenIds: ['acme-webapp-dashboard'] };
       writeFileSync(
         join(store, 'flows.json'),
-        JSON.stringify({ version: 1, flows: [{ id: 'acme-web-versions-2026-09-29-login', appId: 'acme', name: 'Logging in', screenIds: ['acme-web-versions-2026-09-29-login'] }, otherFlow] }),
+        JSON.stringify({ version: 1, flows: [{ id: 'acme-webapp-versions-2026-09-29-login', appId: 'acme', name: 'Logging in', screenIds: ['acme-webapp-versions-2026-09-29-login'] }, otherFlow] }),
       );
 
       const result = service.deleteVersion('acme', '2026-09-29');
@@ -911,10 +978,10 @@ describe('InspirationsAdminService', () => {
       expect(result.removed).toEqual({ screens: 1, analysis: 1, flows: 1 });
       // The version's flows go with it; other versions' flows stay.
       const flowsLeft = JSON.parse(readFileSync(join(store, 'flows.json'), 'utf-8')).flows;
-      expect(flowsLeft.map((flow: { id: string }) => flow.id)).toEqual(['acme-web-onboarding']);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'versions', '2026-09-29'))).toBe(false);
-      expect(existsSync(join(store, 'analysis', 'acme-web-versions-2026-09-29-login.json'))).toBe(false);
-      expect(existsSync(join(store, 'screens', 'web', 'acme', 'dashboard.png'))).toBe(true);
+      expect(flowsLeft.map((flow: { id: string }) => flow.id)).toEqual(['acme-webapp-onboarding']);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'versions', '2026-09-29'))).toBe(false);
+      expect(existsSync(join(store, 'analysis', 'acme-webapp-versions-2026-09-29-login.json'))).toBe(false);
+      expect(existsSync(join(store, 'screens', 'webapp', 'acme', 'dashboard.png'))).toBe(true);
 
       // Deleting the newest version falls back to the one that remains.
       const versions = service.listVersions('acme');
@@ -924,7 +991,7 @@ describe('InspirationsAdminService', () => {
 
     it('refuses to delete an unknown version, or an app\'s only version', () => {
       service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
-      service.uploadScreen('web', 'acme', 'dashboard.png', PNG_1X1, false, '');
+      service.uploadScreen('webapp', 'acme', 'dashboard.png', PNG_1X1, false, '');
       service.saveSource('acme', { permission: 'own-work', capturedAt: '2025-01-15', status: 'approved' });
 
       expect(() => service.deleteVersion('acme', '2099-01-01')).toThrow(/not a known version/i);
@@ -946,7 +1013,7 @@ describe('InspirationsAdminService', () => {
       await service.uploadStoreShot('ios', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true });
       await service.uploadStoreShot('ios', 'acme', '2', PNG_1X1, { date: '2026-11-01', last: true });
       // Acme is not on the web: a web set is refused, as it would never show.
-      await expect(service.uploadStoreShot('web', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true })).rejects.toThrow(/no web screens/);
+      await expect(service.uploadStoreShot('webapp', 'acme', '1', PNG_1X1, { date: '2026-11-01', start: true, last: true })).rejects.toThrow(/no webapp screens/);
 
       expect(existsSync(join(store, 'store', 'ios', 'acme', '2026-11-01', '2.webp'))).toBe(true);
       const app = readManifest(store).apps.find((a: any) => a.id === 'acme');
