@@ -1,0 +1,162 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-deleting-a-message-3",
+  "screen_id": "signal-ios-versions-2026-11-22-deleting-a-message-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:51.753Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Deleting a message",
+  "flow_position": 18,
+  "name": "Search results",
+  "description": "Search results dialog over a dimmed screen, on top of Search results. Dark theme, 11 text elements.",
+  "text": "9:41(\nX\nDesign\nDelete All\n1m\nView Results\nE You ended the poll: Design features\nView Poll\n0:01 •\nDelete Message?\nDelete for Me\nDelete for Everyone\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "search-results",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Design”",
+        "Dialog over a dimmed background, covering 16% of the height from 6% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results dialog over a dimmed screen, on top of Search results. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 60 in “Opening a page (File)”",
+        "Reached from “Search results”",
+        "Leads to “Search results”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 6:41 in the recording",
+        "Frame 1344 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#09050c",
+      "role": "background",
+      "share": 0.562
+    },
+    {
+      "hex": "#122f72",
+      "role": "accent",
+      "share": 0.163
+    },
+    {
+      "hex": "#282a31",
+      "role": "surface",
+      "share": 0.161
+    },
+    {
+      "hex": "#3f3c42",
+      "role": "surface",
+      "share": 0.086
+    },
+    {
+      "hex": "#566063",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1344,
+    "atSeconds": 401.4,
+    "endSeconds": 403.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "w": 0.84375,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Design",
+    "headline": "You ended the poll: Design features",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s185",
+    "depth": 185,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s184",
+        "via": "Tap “Design”",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s186",
+        "via": "Back to Search results",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

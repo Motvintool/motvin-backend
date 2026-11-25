@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-location-3",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-location-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:48.081Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a location",
+  "flow_position": null,
+  "name": "Location picker — loading",
+  "description": "Loading state of Location picker. Dark theme, 5 text elements.",
+  "text": "9:41\n•oll\nSelect Location\nX\nSubramani St\nMaps\nLegal\nQ\nSearch by name or address",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "map",
+    "location",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Select Location”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Location picker. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Location picker”",
+        "Leads to “Location picker”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:45 in the recording",
+        "Frame 1154 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#2c2d31",
+      "role": "background",
+      "share": 0.929
+    },
+    {
+      "hex": "#4f4f52",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#0b080d",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#626b74",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#30446f",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1154,
+    "atSeconds": 345.6,
+    "endSeconds": 346.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Select Location",
+    "headline": "Subramani St"
+  },
+  "crawler": {
+    "nodeId": "s149",
+    "depth": 149,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s148",
+        "via": "Tap “Select Location”",
+        "name": "Location picker"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s150",
+        "via": "Wait 0.9s",
+        "name": "Location picker"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,169 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-11",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-11",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:34.022Z",
+  "screen_type": "player",
+  "published_as": "player",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing video in a group call",
+  "flow_position": 6,
+  "name": "Stop sharing",
+  "description": "Player dialog over a dimmed screen, on top of Motvin's video with a 4-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41\n•0l\nMotvin's video\nX\nCC\nI SECRETLY CHEATED IN HIDE A\nShivang Mini\nStop sharing your screen?\nStop sharing\nCancel\n0:03 / 15:19\nJ YouTube\nYo, my lovely\nLeave\nActivities\nTurn on\nUnmute\nspeaker\nmic",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "leave",
+    "unmute",
+    "turn on",
+    "activities",
+    "player",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Leave, Unmute, Turn on, Activities",
+        "Navigation title reads “Stop sharing”",
+        "Dialog over a dimmed background, covering 27% of the height from 38% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Player dialog over a dimmed screen, on top of Motvin's video with a 4-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 12 in “Leave”",
+        "Reached from “Motvin's video”",
+        "Leads to “Leave home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:49 in the recording",
+        "Frame 1967 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080309",
+      "role": "background",
+      "share": 0.865
+    },
+    {
+      "hex": "#2e272e",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#554a56",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#882630",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#6b676b",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1967,
+    "atSeconds": 589.8,
+    "endSeconds": 590.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.375,
+        "w": 1,
+        "h": 0.265625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [
+      "Leave",
+      "Unmute",
+      "Turn on",
+      "Activities"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Stop sharing",
+    "headline": "Stop sharing"
+  },
+  "crawler": {
+    "nodeId": "s264",
+    "depth": 267,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s263",
+        "via": "Open Stop sharing",
+        "name": "Motvin's video"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s265",
+        "via": "Back to Leave home",
+        "name": "Leave home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

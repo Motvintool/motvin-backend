@@ -1,0 +1,147 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-creating-a-calendar-event-19",
+  "screen_id": "line-ios-versions-2026-11-22-creating-a-calendar-event-19",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:31.242Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a calendar event",
+  "flow_position": 28,
+  "name": "LINE Calendar",
+  "description": "Messages screen. Dark theme, 13 text elements.",
+  "text": "9:41(\n•0\n<\nLINE Calendar\nChat\nShows calendars created in your chats.\n+\nPersonal ^\nWork\nDesign\nCalendar (Apple) ^\nHome\nWork\nBirthdays\nIndia Holidays\nUndo selection",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "calendar",
+    "undo selection",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “LINE Calendar”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 28 of 31 in “Choosing a date”",
+        "Reached from “All calendars”",
+        "Leads to “Surendar sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:48 in the recording",
+        "Frame 1768 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.936
+    },
+    {
+      "hex": "#312f35",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#4c494e",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#69686c",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#2d6477",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1768,
+    "atSeconds": 528.9,
+    "endSeconds": 530.7,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "LINE Calendar",
+    "headline": "Birthdays",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s233",
+    "depth": 236,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s232",
+        "via": "Open LINE Calendar",
+        "name": "All calendars"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s234",
+        "via": "Wait 1.8s",
+        "name": "Surendar sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

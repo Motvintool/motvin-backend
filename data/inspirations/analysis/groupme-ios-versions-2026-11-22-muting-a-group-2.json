@@ -1,0 +1,162 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-muting-a-group-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-muting-a-group-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:14.732Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Muting a group",
+  "flow_position": 165,
+  "name": "Mute with Recap dialog",
+  "description": "Dialog over a dimmed screen, on top of Motvin team dialog. Dark theme, 10 text elements.",
+  "text": "9:41C\nMute with Recap\nStay informed without the interruptions\nSilence notifications\nNo interruptions while you focus\nSummarises messages\nGet summaries of unread conversations\nGet notified when ready\nReceive a recap notification at the right time\nBy tapping continue, you accept the Terms of Use and\nPrivacy Statement.\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "notification",
+    "continue",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "legal-text",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Mute with Recap”",
+        "Dialog over a dimmed background, covering 58% of the height from 11% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Motvin team dialog. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 165 of 169 in “New event”",
+        "Reached from “Motvin team dialog”",
+        "Leads to “Motvin team”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:19 in the recording",
+        "Frame 1867 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090409",
+      "role": "background",
+      "share": 0.729
+    },
+    {
+      "hex": "#29222a",
+      "role": "surface",
+      "share": 0.132
+    },
+    {
+      "hex": "#615762",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#fefdfe",
+      "role": "text",
+      "share": 0.038
+    },
+    {
+      "hex": "#453d48",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1867,
+    "atSeconds": 559.2,
+    "endSeconds": 560.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.109375,
+        "w": 0.625,
+        "h": 0.578125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Mute with Recap",
+    "headline": "Mute with Recap",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s262",
+    "depth": 262,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s261",
+        "via": "Tap “Mute”",
+        "name": "Motvin team dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s263",
+        "via": "Back to Motvin team",
+        "name": "Motvin team"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

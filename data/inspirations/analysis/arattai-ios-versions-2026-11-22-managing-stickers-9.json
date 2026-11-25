@@ -1,0 +1,156 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-managing-stickers-9",
+  "screen_id": "arattai-ios-versions-2026-11-22-managing-stickers-9",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:50.135Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing stickers",
+  "flow_position": 18,
+  "name": "My stickers toast",
+  "description": "Toast over a dimmed screen. Dark theme, 11 text elements.",
+  "text": "9:414\nStickers\nX\nEdit\nAll stickers\nMy stickers\nFrisky Berry\n30 stickers\nSunny the Bunny\n15 stickers\nBaby Appu\n#C",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My stickers”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 116 in “Filling in Balaji Abi”",
+        "Reached from “Loading state”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3s at 8:44 in the recording",
+        "Frame 1758 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0c0f",
+      "role": "background",
+      "share": 0.537
+    },
+    {
+      "hex": "#211e22",
+      "role": "surface",
+      "share": 0.22
+    },
+    {
+      "hex": "#afb7d4",
+      "role": "text",
+      "share": 0.051
+    },
+    {
+      "hex": "#dc4c4e",
+      "role": "accent",
+      "share": 0.04
+    },
+    {
+      "hex": "#424146",
+      "role": "surface",
+      "share": 0.034
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1758,
+    "atSeconds": 524.7,
+    "endSeconds": 527.7,
+    "holdSeconds": 3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My stickers",
+    "headline": "Frisky Berry"
+  },
+  "crawler": {
+    "nodeId": "s213",
+    "depth": 215,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s212",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s214",
+        "via": "Dismiss",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

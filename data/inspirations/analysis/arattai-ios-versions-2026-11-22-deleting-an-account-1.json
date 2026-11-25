@@ -1,0 +1,145 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-an-account-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-an-account-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:56.322Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Deleting an account",
+  "flow_position": 2,
+  "name": "Phone number entry",
+  "description": "Login screen. Dark theme, 6 text elements.",
+  "text": "9:41 €\n•ll\n< Accounts\nChange phone number\n>\nDelete account\nDeleting your account will delete all your contacts and\nchats in Arattai.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Accounts”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 5 in “Logging in with phone number”",
+        "Reached from “Settings”",
+        "Leads to “Phone number entry — loading”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 24:24 in the recording",
+        "Frame 4885 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.967
+    },
+    {
+      "hex": "#2e2c2f",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#4f4d50",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#686669",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#aaa9ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4885,
+    "atSeconds": 1464.6,
+    "endSeconds": 1465.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Accounts",
+    "headline": "Delete account"
+  },
+  "crawler": {
+    "nodeId": "s660",
+    "depth": 665,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s659",
+        "via": "Tap “Accounts”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s661",
+        "via": "Wait 1.2s",
+        "name": "Phone number entry — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

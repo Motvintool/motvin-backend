@@ -1,0 +1,170 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-sending-a-voice-message-1",
+  "screen_id": "yubo-ios-versions-2026-11-22-sending-a-voice-message-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:10.994Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Sending a voice message",
+  "flow_position": 123,
+  "name": "Contacts permission",
+  "description": "Permission dialog over a dimmed screen, on top of Support chat with the keyboard open and a primary action labelled “Allow”. Dark theme, 36 text elements.",
+  "text": "9:41(\n•0ll\nSafety Team\nJust now\nquluelnes. rur tis redsur, ve\nhave not taken action. Please\ncontact support for further\nassistance.\nThankyou\nGIF\n\"Yubo\" would like to access the\nMicrophone.\nAllow microphone access to chat with\nother users while streaming live.\nDon't Allow\nAllow\nW\nE\nR\nT\nU\nP\nQ\nY\nS\nF\nK\nD\nJ\nX\nZ\nB\nN\nM\nV\n123\nsend\nspace",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "permission",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Microphone”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 19% of the height from 34% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Support chat with the keyboard open and a primary action labelled “Allow”. Dark theme, 36 text elements.",
+        "Calls to action: “Allow”, “send”",
+        "36 text elements recognised",
+        "State: permission, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 123 of 338 in “Subscribing”",
+        "Reached from “Support chat”",
+        "Leads to “Support chat”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 6:35 in the recording",
+        "Frame 1320 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141315",
+      "role": "background",
+      "share": 0.592
+    },
+    {
+      "hex": "#2f2d2e",
+      "role": "surface",
+      "share": 0.242
+    },
+    {
+      "hex": "#4b494b",
+      "role": "surface",
+      "share": 0.073
+    },
+    {
+      "hex": "#736b6a",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#0b2e56",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1320,
+    "atSeconds": 395.4,
+    "endSeconds": 396.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.34375,
+        "w": 0.6875,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow",
+      "send"
+    ],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Microphone",
+    "headline": "Microphone"
+  },
+  "crawler": {
+    "nodeId": "s189",
+    "depth": 188,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s188",
+        "via": "Open Microphone",
+        "name": "Support chat"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s190",
+        "via": "Dismiss",
+        "name": "Support chat"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

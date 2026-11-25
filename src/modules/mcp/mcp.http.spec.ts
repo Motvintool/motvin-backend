@@ -2,7 +2,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { Test } from '@nestjs/testing';
 import { createHash, createSign, generateKeyPairSync, randomBytes } from 'crypto';
-import { mkdirSync, mkdtempSync, rmSync } from 'fs';
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { InspirationsAdminService } from '../inspirations/inspirations-admin.service';
@@ -11,6 +11,8 @@ import { InspirationsModule } from '../inspirations/inspirations.module';
 import { McpOAuthService } from './mcp-oauth.service';
 import { McpRateLimitService } from './mcp-rate-limit.service';
 import { McpModule } from './mcp.module';
+
+const sharp: typeof import('sharp').default = require('sharp');
 
 /**
  * The MCP server over real HTTP, the way a client meets it: discovery at the
@@ -181,14 +183,28 @@ describe('Motvin MCP over HTTP', () => {
     admin.saveApp({ id: 'webby', name: 'Webby', industry: 'productivity' });
     admin.uploadScreen('ios', 'mobi', 'home.png', PNG_1X1, false, '');
     admin.uploadScreen('ios', 'mobi', 'cart.png', PNG_1X1, false, '');
-    admin.uploadScreen('web', 'webby', 'home.png', PNG_1X1, false, '');
-    admin.uploadScreen('web', 'webby', 'pricing.png', PNG_1X1, false, '');
+    admin.uploadScreen('webapp', 'webby', 'home.png', PNG_1X1, false, '');
+    admin.uploadScreen('webapp', 'webby', 'pricing.png', PNG_1X1, false, '');
     admin.saveScreenMeta('ios', 'mobi', 'home.png', { screenType: 'home', elements: ['tab-bar'] });
     admin.saveScreenMeta('ios', 'mobi', 'cart.png', { screenType: 'cart', elements: ['tab-bar', 'button'] });
-    admin.saveScreenMeta('web', 'webby', 'home.png', { screenType: 'home', elements: ['nav-bar'] });
-    admin.saveScreenMeta('web', 'webby', 'pricing.png', { screenType: 'pricing', elements: ['nav-bar', 'price'] });
+    admin.saveScreenMeta('webapp', 'webby', 'home.png', { screenType: 'home', elements: ['nav-bar'] });
+    admin.saveScreenMeta('webapp', 'webby', 'pricing.png', { screenType: 'pricing', elements: ['nav-bar', 'price'] });
     admin.saveFlow({ id: 'mobi-checkout', appId: 'mobi', name: 'Checkout', category: 'checkout', platform: 'ios', screenIds: ['mobi-ios-home', 'mobi-ios-cart'] });
-    admin.saveFlow({ id: 'webby-pricing', appId: 'webby', name: 'Choosing a plan', category: 'checkout', platform: 'web', screenIds: ['webby-web-home', 'webby-web-pricing'] });
+    admin.saveFlow({ id: 'webby-pricing', appId: 'webby', name: 'Choosing a plan', category: 'checkout', platform: 'webapp', screenIds: ['webby-webapp-home', 'webby-webapp-pricing'] });
+
+    // A website as the Web Recorder's import writes it: a very tall whole page and two of its sections.
+    admin.saveApp({ id: 'sity', name: 'Sity', industry: 'productivity' });
+    const version = join(dataRoot, 'inspirations', 'screens', 'site', 'sity', 'versions', '2026-11-25');
+    mkdirSync(join(version, 'pages'), { recursive: true });
+    mkdirSync(join(version, 'sections'), { recursive: true });
+    const picture = (w: number, h: number) => sharp({ create: { width: w, height: h, channels: 3, background: '#4060ff' } }).webp().toBuffer();
+    writeFileSync(join(version, 'pages', '1.webp'), await picture(400, 6000));
+    writeFileSync(join(version, 'pages', '1.json'), JSON.stringify({ name: 'Pricing Page', screenType: 'pricing', fineType: 'pricing', kind: 'page', pageType: 'pricing', pageUrl: 'https://sity.test/pricing', title: 'Pricing', order: 1 }));
+    writeFileSync(join(version, 'sections', '1-1.webp'), await picture(400, 300));
+    writeFileSync(join(version, 'sections', '1-1.json'), JSON.stringify({ name: 'Hero', screenType: 'other', fineType: 'hero', kind: 'section', sectionType: 'hero', pageType: 'pricing', parentPage: 'pages/1', top: 0, height: 0.05, heading: 'Simple pricing', order: 1101 }));
+    writeFileSync(join(version, 'sections', '1-2.webp'), await picture(400, 2400));
+    writeFileSync(join(version, 'sections', '1-2.json'), JSON.stringify({ name: 'Pricing', screenType: 'other', fineType: 'pricing', kind: 'section', sectionType: 'pricing', pageType: 'pricing', parentPage: 'pages/1', top: 0.05, height: 0.4, heading: 'Choose your plan', order: 1102 }));
+    admin.rebuild();
   });
 
   afterAll(async () => {
@@ -507,15 +523,30 @@ describe('Motvin MCP over HTTP', () => {
       expect(ios.content.some((c) => c.type === 'image')).toBe(true);
       expect(ios.structuredContent.screens[0].page_url).toBe(`${SITE_URL}/inspirations/screens?screen=mobi-ios-home`);
 
-      const web = await callTool(token, 'search_screens', { query: 'home', platform: 'web' });
-      expect(web.structuredContent.screens.every((s: { platform: string }) => s.platform === 'web')).toBe(true);
-      expect(web.structuredContent.screens.map((s: { id: string }) => s.id)).toContain('webby-web-home');
+      const web = await callTool(token, 'search_screens', { query: 'home', platform: 'webapp' });
+      expect(web.structuredContent.screens.every((s: { platform: string }) => s.platform === 'webapp')).toBe(true);
+      expect(web.structuredContent.screens.map((s: { id: string }) => s.id)).toContain('webby-webapp-home');
       expect(web.structuredContent.screens.map((s: { id: string }) => s.id)).not.toContain('mobi-ios-home');
+    });
+
+    it('list_apps names what a platform holds, and list_patterns never adds platforms together', async () => {
+      const web = await callTool(token, 'list_apps', { platform: 'webapp' });
+      expect(web.content[0].text).toMatch(/^1 web app\./);
+      const sites = await callTool(token, 'list_patterns', { platform: 'site' });
+      expect(sites.content[0].text).toMatch(/^Sites have no patterns/);
+      expect(sites.structuredContent.patterns).toEqual([]);
     });
 
     it('search_screens with images off is text only', async () => {
       const res = await callTool(token, 'search_screens', { query: 'home', platform: 'ios', include_images: false });
       expect(res.content.every((c) => c.type === 'text')).toBe(true);
+    });
+
+    it('asks a client that says "web" to pick web apps or sites, never mixing them', async () => {
+      const res = await rpc(token, 'tools/call', { name: 'search_screens', arguments: { query: 'home', platform: 'web' } });
+      const result = res.json().result;
+      expect(result.isError).toBe(true);
+      expect(result.content[0].text).toContain('"web" is two platforms here: use "webapp" for web applications or "site" for marketing websites.');
     });
 
     it('search_screens says so when a platform has nothing matching', async () => {
@@ -531,30 +562,30 @@ describe('Motvin MCP over HTTP', () => {
     });
 
     it('search_flows and get_flow walk a journey on one platform', async () => {
-      const flows = await callTool(token, 'search_flows', { platform: 'web', category: 'checkout' });
+      const flows = await callTool(token, 'search_flows', { platform: 'webapp', category: 'checkout' });
       expect(flows.structuredContent.flows.map((f: { id: string }) => f.id)).toEqual(['webby-pricing']);
 
       const flow = await callTool(token, 'get_flow', { flow_id: 'webby-pricing' });
-      expect(flow.structuredContent.steps.map((s: { id: string }) => s.id)).toEqual(['webby-web-home', 'webby-web-pricing']);
+      expect(flow.structuredContent.steps.map((s: { id: string }) => s.id)).toEqual(['webby-webapp-home', 'webby-webapp-pricing']);
       expect(flow.structuredContent.steps[0].position).toBe(1);
     });
 
     it('get_taxonomy narrows to the platform asked for', async () => {
-      const res = await callTool(token, 'get_taxonomy', { platform: 'web' });
+      const res = await callTool(token, 'get_taxonomy', { platform: 'webapp' });
       expect(res.structuredContent.screen_types.sort()).toEqual(['home', 'pricing']);
       expect(res.structuredContent.elements).toEqual(expect.arrayContaining(['nav-bar', 'price']));
       expect(res.structuredContent.elements).not.toContain('tab-bar');
     });
 
     it('get_app refuses a platform the app was not captured on', async () => {
-      const res = await callTool(token, 'get_app', { app: 'mobi', platform: 'web' });
+      const res = await callTool(token, 'get_app', { app: 'mobi', platform: 'webapp' });
       expect(res.isError).toBe(true);
-      expect(res.content[0].text).toContain('not captured on Webs');
+      expect(res.content[0].text).toContain('not captured on Web Apps');
     });
 
     it('get_screen carries the full record and a larger preview', async () => {
-      const res = await callTool(token, 'get_screen', { screen_id: 'webby-web-pricing' });
-      expect(res.structuredContent.screen).toMatchObject({ id: 'webby-web-pricing', screen_type: 'pricing', platform: 'web' });
+      const res = await callTool(token, 'get_screen', { screen_id: 'webby-webapp-pricing' });
+      expect(res.structuredContent.screen).toMatchObject({ id: 'webby-webapp-pricing', screen_type: 'pricing', platform: 'webapp' });
       expect(res.structuredContent.flows.map((f: { id: string }) => f.id)).toEqual(['webby-pricing']);
       expect(res.content.some((c) => c.type === 'image')).toBe(true);
     });
@@ -625,8 +656,8 @@ describe('Motvin MCP over HTTP', () => {
     it('stops at the daily budget with its own message', async () => {
       limiter.limits = { ...saved, callsPerDay: 1 };
       const fresh = (await connect({ sub: 'uid-cleo', email: 'cleo@example.com' })).tokens.access_token;
-      await callTool(fresh, 'get_taxonomy', { platform: 'web' });
-      const next = await callTool(fresh, 'get_taxonomy', { platform: 'web' });
+      await callTool(fresh, 'get_taxonomy', { platform: 'webapp' });
+      const next = await callTool(fresh, 'get_taxonomy', { platform: 'webapp' });
       expect(next.isError).toBe(true);
       expect(next.content[0].text).toMatch(/^Daily limit reached: Motvin allows 1 tool calls a day per person/);
     });
@@ -735,7 +766,7 @@ describe('Motvin MCP over HTTP', () => {
       try {
         const { tokens } = await connect(pia);
         await callTool(tokens.access_token, 'search_screens', { query: 'Home  screen', platform: 'ios' });
-        await callTool(tokens.access_token, 'search_screens', { query: 'pricing', platform: 'web' });
+        await callTool(tokens.access_token, 'search_screens', { query: 'pricing', platform: 'webapp' });
         await callTool(tokens.access_token, 'search_screens', { query: 'home screen', platform: 'ios' });
 
         const res = await inject({ method: 'GET', url: '/api/mcp/connections/usage', headers: { authorization: `Bearer ${firebaseToken(pia)}` } });
@@ -827,7 +858,7 @@ describe('Motvin MCP over HTTP', () => {
 
     it('counts calls, tools, AI tools, people and searches', async () => {
       const token = (await connect({ sub: 'uid-kim', email: 'kim@example.com' })).tokens.access_token;
-      await callTool(token, 'search_screens', { query: 'Pricing  Plans', platform: 'web' });
+      await callTool(token, 'search_screens', { query: 'Pricing  Plans', platform: 'webapp' });
       const res = await report({ email: 'admin@example.com' });
       expect(res.statusCode).toBe(200);
       const data = res.json().data;
@@ -844,4 +875,31 @@ describe('Motvin MCP over HTTP', () => {
     });
   });
 
+
+  describe('sites', () => {
+    it('finds a site\u2019s pages and sections on Sites only, with previews a model can read', async () => {
+      const { tokens } = await connect();
+      const token = tokens.access_token as string;
+
+      const listed = await callTool(token, 'list_apps', { platform: 'site' });
+      expect(listed.content[0].text).toMatch(/1 site/);
+      expect(JSON.stringify(listed.structuredContent)).toContain('sity');
+
+      const found = await callTool(token, 'search_screens', { query: 'pricing', platform: 'site' });
+      expect(found.isError).toBeFalsy();
+      expect(JSON.stringify(found.structuredContent)).toContain('sity');
+      // A 400 × 6000 page previews as its top (no taller than wide); a 400 × 2400 section as at most 2.5 widths.
+      const images = found.content.filter((c: any) => c.type === 'image') as unknown as { data: string }[];
+      expect(images.length).toBeGreaterThan(0);
+      for (const image of images) {
+        const { width = 0, height = 0 } = await sharp(Buffer.from(image.data, 'base64')).metadata();
+        expect(height).toBeLessThanOrEqual(Math.ceil(width * 2.5));
+      }
+
+      const apps = await callTool(token, 'search_screens', { query: 'pricing', platform: 'webapp' });
+      expect(JSON.stringify(apps.structuredContent)).not.toContain('sity');
+      const wrong = await callTool(token, 'get_app', { app: 'sity', platform: 'webapp' });
+      expect(wrong.content[0].text).toMatch(/Sity is not captured on/);
+    });
+  });
 });

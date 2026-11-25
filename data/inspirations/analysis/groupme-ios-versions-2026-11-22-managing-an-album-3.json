@@ -1,0 +1,170 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-managing-an-album-3",
+  "screen_id": "groupme-ios-versions-2026-11-22-managing-an-album-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:03.780Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing an album",
+  "flow_position": 57,
+  "name": "Gallery dialog",
+  "description": "Dialog over a dimmed screen with a row of 3 category chips and a primary action labelled “Continue”. Dark theme, 12 text elements.",
+  "text": "9:41 €\n••C\nHey\nO vids\nO views\nO pics\nDelete shared album?\nOnly the album will be deleted. Media\nitems within it will remain in the\ngallery.\nContinue\nCancel\nPost photos without messaging the group\n+ Addlyours",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "chip",
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Gallery”",
+        "Category strip: O vids, O views, O pics",
+        "Dialog over a dimmed background, covering 19% of the height from 39% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen with a row of 3 category chips and a primary action labelled “Continue”. Dark theme, 12 text elements.",
+        "Calls to action: “Continue”",
+        "12 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 57 of 169 in “New event”",
+        "Reached from “O pics”",
+        "Leads to “O pics”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:38 in the recording",
+        "Frame 1131 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090309",
+      "role": "background",
+      "share": 0.832
+    },
+    {
+      "hex": "#252326",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#3b383b",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#838082",
+      "role": "text",
+      "share": 0.019
+    },
+    {
+      "hex": "#535154",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1131,
+    "atSeconds": 338.7,
+    "endSeconds": 339.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.390625,
+        "w": 0.53125,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [
+      "O vids",
+      "O views",
+      "O pics"
+    ],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Gallery",
+    "headline": "Gallery"
+  },
+  "crawler": {
+    "nodeId": "s145",
+    "depth": 145,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s144",
+        "via": "Tap “+Addyours”",
+        "name": "O pics"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s146",
+        "via": "Dismiss",
+        "name": "O pics"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

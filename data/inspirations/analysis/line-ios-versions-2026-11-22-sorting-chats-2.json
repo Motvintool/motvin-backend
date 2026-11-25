@@ -1,0 +1,171 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sorting-chats-2",
+  "screen_id": "line-ios-versions-2026-11-22-sorting-chats-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:04:01.236Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sorting chats",
+  "flow_position": 27,
+  "name": "Home",
+  "description": "Messages bottom sheet, on top of Messages with a 3-item tab bar. Dark theme, 15 text elements.",
+  "text": "9:41(\nSort chats by\nTime received\nUnread messages\n•\n4:40 PM\nFavorites\n4:38PM\nDesign1 (1) *\nGroup call ended.\n4:35 PM\nService Messages\nReport received\nKeep Memo\nSend any messages, photos, videos, and\nlinks you want to keep for yourself.\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "photo",
+    "video",
+    "home",
+    "chats",
+    "calls",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Navigation title reads “Home”",
+        "Bottom sheet, covering 17% of the height from 75% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet, on top of Messages with a 3-item tab bar. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 30 in “Home”",
+        "Reached from “Messages”",
+        "Leads to “Messages”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 19:43 in the recording",
+        "Frame 3950 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.883
+    },
+    {
+      "hex": "#373536",
+      "role": "surface",
+      "share": 0.061
+    },
+    {
+      "hex": "#454446",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#105e29",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#28d168",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3950,
+    "atSeconds": 1183.2,
+    "endSeconds": 1185.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.75,
+        "w": 0.59375,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home",
+    "headline": "Unread messages"
+  },
+  "crawler": {
+    "nodeId": "s563",
+    "depth": 573,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s562",
+        "via": "Open Home",
+        "name": "Messages"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s564",
+        "via": "Dismiss",
+        "name": "Messages"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

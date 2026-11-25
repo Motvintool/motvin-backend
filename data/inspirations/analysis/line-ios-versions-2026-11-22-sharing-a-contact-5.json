@@ -1,0 +1,154 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-a-contact-5",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-a-contact-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:14.758Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Sharing a contact",
+  "flow_position": 42,
+  "name": "Phone number entry",
+  "description": "Login screen with a row of 7 category chips. Dark theme, 64 text elements.",
+  "text": "9:41C\n•0l\nFB\nST\nM\nJT\nA\nJ\nS\nV\nJC\nTH\nSC\nGA\nT\nB\nV\nC\nB\nA\nK\nJJ\nSK\nS\nJ\nTG\nAP\nYS\nOF\nM\nA\nBP\nC\nSS\nMA\nS\nS\nA\nGJ\nDM\nA\nC\nS\nGV\nJC\nG\nD\nV\nDS\nA\nMF\nS\nRF\nPS\n+443\nYou have 505 contacts.\nContact information includes names, emails, photos,\nphone numbers, addresses and more.\nHow do you want to\nshare contacts?\nSelecting contacts lets you pick\nthe ones you want to add right\nnow. You can always add more\nlater. Allowing full access will add\nall vour contacts.\nSelect Contacts\nShare All 505 Contacts",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "address",
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Category strip: V, JC, TH, SC, GA, T, B",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with a row of 7 category chips. Dark theme, 64 text elements.",
+        "64 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 42 of 61 in “Opening a page (Home)”",
+        "Reached from “Camera permission”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 2:37 in the recording",
+        "Frame 528 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#242127",
+      "role": "background",
+      "share": 0.47
+    },
+    {
+      "hex": "#0a050b",
+      "role": "accent",
+      "share": 0.375
+    },
+    {
+      "hex": "#524d5b",
+      "role": "surface",
+      "share": 0.105
+    },
+    {
+      "hex": "#706a81",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#3b3542",
+      "role": "surface",
+      "share": 0.021
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 528,
+    "atSeconds": 157.2,
+    "endSeconds": 158.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 64,
+    "tabLabels": [],
+    "chipLabels": [
+      "V",
+      "JC",
+      "TH",
+      "SC",
+      "GA",
+      "T",
+      "B"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "The ones you want to add right"
+  },
+  "crawler": {
+    "nodeId": "s072",
+    "depth": 74,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s071",
+        "via": "Open Phone number entry",
+        "name": "Camera permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s073",
+        "via": "Tap “TH”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

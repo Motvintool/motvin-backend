@@ -1,0 +1,151 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-allowing-permissions-1",
+  "screen_id": "signal-ios-versions-2026-11-22-allowing-permissions-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:34.870Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Allowing permissions",
+  "flow_position": 3,
+  "name": "Notifications permission",
+  "description": "Permission screen. Dark theme, 9 text elements.",
+  "text": "9:41€\nAllow Permissions\nSignal would like to request the following\npermissions.\nNotifications\nGet notified when new messages arrive.\nContacts\nFind people you know. Your contacts are\nencrypted and not visible to the Signal\nservice.\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "alert"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow Permissions”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Onboarding”",
+        "Reached from “Welcome”",
+        "Leads to “Notifications permission”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 0:04 in the recording",
+        "Frame 25 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.837
+    },
+    {
+      "hex": "#221d23",
+      "role": "surface",
+      "share": 0.076
+    },
+    {
+      "hex": "#2b78f3",
+      "role": "text",
+      "share": 0.034
+    },
+    {
+      "hex": "#3b363b",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#215fc0",
+      "role": "accent",
+      "share": 0.012
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 25,
+    "atSeconds": 4.5,
+    "endSeconds": 7.8,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow Permissions",
+    "headline": "Permissions",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s003",
+    "depth": 2,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s002",
+        "via": "Open Allow Permissions",
+        "name": "Welcome"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s004",
+        "via": "Tap “Allow Permissions”",
+        "name": "Notifications permission"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

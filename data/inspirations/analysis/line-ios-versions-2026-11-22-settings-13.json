@@ -1,0 +1,147 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-settings-13",
+  "screen_id": "line-ios-versions-2026-11-22-settings-13",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:56.425Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Settings",
+  "flow_position": 2,
+  "name": "Onboarding step",
+  "description": "Onboarding screen with a primary action labelled “Next 3 months”. Dark theme, 12 text elements.",
+  "text": "9:41(\n•ll\n<\nCoins\nBuy\nMy Coins\nL\nIncludes 0 purchased Coins and O bonus Coins you've\nalready received.0\nYou can only use purchased Coins on the iOS version of LINE.\nPurchase history\nCoin usage history\nNo activity for last 3 months.\nNext 3 months",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with a primary action labelled “Next 3 months”. Dark theme, 12 text elements.",
+        "Calls to action: “Next 3 months”",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 6 in “Opening a page”",
+        "Reached from “Settings”",
+        "Leads to “Includes 100 bonus coins sheet”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 18:12 in the recording",
+        "Frame 3649 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141116",
+      "role": "background",
+      "share": 0.962
+    },
+    {
+      "hex": "#353337",
+      "role": "surface",
+      "share": 0.025
+    },
+    {
+      "hex": "#545153",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#8c7328",
+      "role": "accent",
+      "share": 0.001
+    },
+    {
+      "hex": "#6a686c",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3649,
+    "atSeconds": 1092.3,
+    "endSeconds": 1095,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Next 3 months"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Purchase history"
+  },
+  "crawler": {
+    "nodeId": "s509",
+    "depth": 518,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s508",
+        "via": "Open Onboarding step",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s510",
+        "via": "Open Includes 100 bonus coins",
+        "name": "Includes 100 bonus coins sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

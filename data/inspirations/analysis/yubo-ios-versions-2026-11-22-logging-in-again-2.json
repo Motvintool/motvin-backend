@@ -1,0 +1,164 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-logging-in-again-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-logging-in-again-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:35.885Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Logging in again",
+  "flow_position": 5,
+  "name": "Sign-in options",
+  "description": "Login toast over a dimmed screen, on top of Sign in with a primary action labelled “Sign in with Apple”. Dark theme, 7 text elements.",
+  "text": "9:41 €\n•1l S\nyuba\nChoose a login\nSign in with Apple\nSign in to Yubo using your Apple Account.\nSurendar V\nSV\nYour account\nSign In",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "sign in",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Yuba”",
+        "Toast over a dimmed background, covering 6% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login toast over a dimmed screen, on top of Sign in with a primary action labelled “Sign in with Apple”. Dark theme, 7 text elements.",
+        "Calls to action: “Sign in with Apple”",
+        "7 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 11 in “Logging in”",
+        "Reached from “Sign in”",
+        "Leads to “Sign-in options”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 15:55 in the recording",
+        "Frame 3191 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1b1a19",
+      "role": "background",
+      "share": 0.736
+    },
+    {
+      "hex": "#060500",
+      "role": "accent",
+      "share": 0.105
+    },
+    {
+      "hex": "#3e3c3c",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#5b5a5b",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#50480b",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 3191,
+    "atSeconds": 955.5,
+    "endSeconds": 957.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.375,
+        "y": 0.078125,
+        "w": 0.25,
+        "h": 0.0625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in with Apple"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Yuba",
+    "headline": "Choose a login",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s458",
+    "depth": 458,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s457",
+        "via": "Tap “Choose a login”",
+        "name": "Sign in"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s459",
+        "via": "Tap “Choose a login”",
+        "name": "Sign-in options"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

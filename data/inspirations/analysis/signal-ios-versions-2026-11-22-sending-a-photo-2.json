@@ -1,0 +1,167 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-photo-2",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-photo-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:43.117Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Sending a photo",
+  "flow_position": 24,
+  "name": "Location permission",
+  "description": "Permission dialog over a dimmed screen with a primary action labelled “Allow Full Access”. Dark theme, 12 text elements.",
+  "text": "9:41(\nDesign\nOVerified\n\"Signal\" would like full access to\nyour Photo Library.\nSignal will let you choose which\nphotos from your library to send.\n5,031 Photos, 390 Videos\nPhotos may contain data associated with\nlocation, depth information, captions and audio.\nLimit Access...\nAllow Full Access\nDon't Allow\n+\nMessage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "photo",
+    "video",
+    "location",
+    "message",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Limit Access”",
+        "Dialog over a dimmed background, covering 22% of the height from 52% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen with a primary action labelled “Allow Full Access”. Dark theme, 12 text elements.",
+        "Calls to action: “Allow Full Access”",
+        "12 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 24 of 25 in “Sharing”",
+        "Reached from “Hey Now”",
+        "Leads to “HeyNow”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 4:10 in the recording",
+        "Frame 836 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b070c",
+      "role": "background",
+      "share": 0.599
+    },
+    {
+      "hex": "#282628",
+      "role": "surface",
+      "share": 0.226
+    },
+    {
+      "hex": "#454542",
+      "role": "surface",
+      "share": 0.047
+    },
+    {
+      "hex": "#61605f",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#727b79",
+      "role": "text",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 836,
+    "atSeconds": 250.2,
+    "endSeconds": 251.1,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.515625,
+        "w": 0.5625,
+        "h": 0.21875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Full Access"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Limit Access",
+    "headline": "\"Signal\" would like full access to",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s100",
+    "depth": 100,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s099",
+        "via": "Tap “Message”",
+        "name": "Hey Now"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s101",
+        "via": "Dismiss",
+        "name": "HeyNow"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

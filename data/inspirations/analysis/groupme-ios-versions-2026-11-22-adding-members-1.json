@@ -1,0 +1,152 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-adding-members-1",
+  "screen_id": "groupme-ios-versions-2026-11-22-adding-members-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:12.213Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Adding members",
+  "flow_position": 138,
+  "name": "Phone number entry",
+  "description": "Login screen with the keyboard open. Dark theme, 45 text elements.",
+  "text": "9:41(\n•ll\nAdd members\n|Type a name or phone number\nƠ\nCopy link\nShare to...\nStories\niMessage WhatsApp\nTo help you find\nyour friends and\nadd them to\ngroups, allow\nGroupMe to access\nyour phone\ncontacts.\n# Allow access\nGroupMe never\nspams your\ncontacts.\nU\nQ\nW\nR\nT\nO\nP\nE\nY\n-\nH\nL\nA\nS\nD\nG\nK\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "login",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add members”",
+        "Keyboard is open, so the lower half is input",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with the keyboard open. Dark theme, 45 text elements.",
+        "45 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 138 of 169 in “New event”",
+        "Reached from “Loading state”",
+        "Leads to “Add members”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.2s at 8:14 in the recording",
+        "Frame 1662 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090309",
+      "role": "background",
+      "share": 0.551
+    },
+    {
+      "hex": "#231f23",
+      "role": "surface",
+      "share": 0.309
+    },
+    {
+      "hex": "#444145",
+      "role": "surface",
+      "share": 0.058
+    },
+    {
+      "hex": "#5d5b5d",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#0d509e",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1662,
+    "atSeconds": 494.7,
+    "endSeconds": 498.9,
+    "holdSeconds": 4.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 45,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add members",
+    "headline": "Allow access"
+  },
+  "crawler": {
+    "nodeId": "s233",
+    "depth": 233,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s232",
+        "via": "Wait 2.7s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s234",
+        "via": "Tap “Stories”",
+        "name": "Add members"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

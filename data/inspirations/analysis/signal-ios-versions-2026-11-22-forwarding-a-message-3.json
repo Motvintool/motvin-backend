@@ -1,0 +1,154 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-forwarding-a-message-3",
+  "screen_id": "signal-ios-versions-2026-11-22-forwarding-a-message-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:50.946Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Forwarding a message",
+  "flow_position": 10,
+  "name": "Loading state",
+  "description": "Loading state with a search bar. Dark theme, 16 text elements.",
+  "text": "9:41 (\ntures\nDesign\nults\nOVerified\nApp\n1\nWeb\n1ml\nView Results\nE You ended the poll: Design features\nView Poll\nX\nForward To\nQ Search\nDesign\nAdd a message\nDesign",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "design",
+    "search-results",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a search bar. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 10 of 60 in “Opening a page (File)”",
+        "Reached from “Search results”",
+        "Leads to “Voice Message”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:29 in the recording",
+        "Frame 1300 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#201e24",
+      "role": "background",
+      "share": 0.466
+    },
+    {
+      "hex": "#07030a",
+      "role": "surface",
+      "share": 0.316
+    },
+    {
+      "hex": "#103079",
+      "role": "accent",
+      "share": 0.151
+    },
+    {
+      "hex": "#3c3a43",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#39517a",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1300,
+    "atSeconds": 389.1,
+    "endSeconds": 390.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Design",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s177",
+    "depth": 177,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s176",
+        "via": "Wait 1.5s",
+        "name": "Search results"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s178",
+        "via": "Wait 1.2s",
+        "name": "Voice Message"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

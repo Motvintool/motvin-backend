@@ -1,0 +1,144 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-verifying-phone-number-2",
+  "screen_id": "signal-ios-versions-2026-11-22-verifying-phone-number-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:36.281Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Verifying phone number",
+  "flow_position": 14,
+  "name": "OTP verification — scrolled",
+  "description": "Other screen, scrolled further down from OTP verification. Dark theme, 2 text elements.",
+  "text": "9:41C\nC\nValidating Code...",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen, scrolled further down from OTP verification. Dark theme, 2 text elements.",
+        "2 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 35 in “Entering phone number”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:46 in the recording",
+        "Frame 156 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.981
+    },
+    {
+      "hex": "#403c40",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#1b3a82",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#1d181d",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#132353",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 156,
+    "atSeconds": 46.5,
+    "endSeconds": 47.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 2,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Validating Code"
+  },
+  "crawler": {
+    "nodeId": "s020",
+    "depth": 19,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bOTP\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s019",
+        "via": "Scroll",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s021",
+        "via": "Tap “9:41C”",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

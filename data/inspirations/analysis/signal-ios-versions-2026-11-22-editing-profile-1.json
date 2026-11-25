@@ -1,0 +1,146 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-editing-profile-1",
+  "screen_id": "signal-ios-versions-2026-11-22-editing-profile-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:11.981Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Editing profile",
+  "flow_position": 1,
+  "name": "Profile",
+  "description": "Profile screen with 1 input field. Dark theme, 11 text elements.",
+  "text": "9:41 €\no8l\nProfile\nSave\nEdit Photo\nMotvin Tool\nSpeak Freely\nYour profile and changes to it will be visible to people you\nmessage, contacts and groups.\nUsername\nPeople can now message you using your optional\nusername so you don't have to give out your phone\nnumber.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "message",
+    "photo",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Profile”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with 1 input field. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Editing profile”",
+        "Reached from “Settings”",
+        "Leads to “Profile — scrolled”",
+        "Returned to 8 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 13:53 in the recording",
+        "Frame 2807 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222024",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#423f43",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#5c5a5e",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#f5f4f7",
+      "role": "text",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2807,
+    "atSeconds": 833.7,
+    "endSeconds": 834.9,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 8
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Profile",
+    "headline": "Message, contacts and groups"
+  },
+  "crawler": {
+    "nodeId": "s407",
+    "depth": 410,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s406",
+        "via": "Open Profile",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s408",
+        "via": "Scroll",
+        "name": "Profile — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

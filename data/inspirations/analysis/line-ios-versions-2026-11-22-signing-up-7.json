@@ -1,0 +1,143 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-signing-up-7",
+  "screen_id": "line-ios-versions-2026-11-22-signing-up-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:10.155Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Signing up",
+  "flow_position": 22,
+  "name": "Profile",
+  "description": "Profile screen with 1 input field. Light theme, 10 text elements.",
+  "text": "9:41 €\n<\nCreate password\nMake sure your password is 8 or more characters\nand has at least 3 of the following:\n• An uppercase letter\n• A lowercase letter\n• A number\n• A symbol\nPassword\nReenter password",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create password”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen with 1 input field. Light theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 22 of 23 in “Logging in”",
+        "Reached from “Create a new account”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:53 in the recording",
+        "Frame 179 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfcfc",
+      "role": "background",
+      "share": 0.956
+    },
+    {
+      "hex": "#e2e2e2",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#afafaf",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#959595",
+      "role": "text",
+      "share": 0.007
+    },
+    {
+      "hex": "#c8c8c8",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 179,
+    "atSeconds": 53.1,
+    "endSeconds": 54,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create password",
+    "headline": "Reenter password"
+  },
+  "crawler": {
+    "nodeId": "s027",
+    "depth": 27,
+    "path": [],
+    "visits": 2,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s026",
+        "via": "Open Create password",
+        "name": "Create a new account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s028",
+        "via": "Wait 0.9s",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

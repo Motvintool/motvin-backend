@@ -1,0 +1,149 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-viewing-polls-1",
+  "screen_id": "groupme-ios-versions-2026-11-22-viewing-polls-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:18.483Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Viewing polls",
+  "flow_position": 5,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 16 text elements.",
+  "text": "9:41€\n•0l\n+\n<\nPolls\nActive\nCompleted\nAsked by you\nM\nTeam\nVotes:\nLeading result\n1\nDesign\nTotal votes: 1\nPublic poll (your vote is visible to others)\nVoting ends: 23/11/26, 2:00 PM\nView results",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search-results",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 19 in “Untitled event”",
+        "Reached from “Gallery”",
+        "Leads to “There are no completed polls”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 10:53 in the recording",
+        "Frame 2181 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.677
+    },
+    {
+      "hex": "#2c292c",
+      "role": "surface",
+      "share": 0.305
+    },
+    {
+      "hex": "#4c494c",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#666366",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#807d80",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2181,
+    "atSeconds": 653.4,
+    "endSeconds": 654.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Team"
+  },
+  "crawler": {
+    "nodeId": "s305",
+    "depth": 305,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s304",
+        "via": "Open Loading state",
+        "name": "Gallery"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s306",
+        "via": "Wait 1.2s",
+        "name": "There are no completed polls"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

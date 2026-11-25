@@ -1,0 +1,161 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-selected-messages-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-selected-messages-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:00.748Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting selected messages",
+  "flow_position": 82,
+  "name": "HAPPY",
+  "description": "Messages dialog over a dimmed screen, on top of Messages. Dark theme, 16 text elements.",
+  "text": "9:414\n1/25 message selected\nCancel\nHeyk\nHAPPY\nERADAY\n3:30 PM V\n00:06\n3:30 PM\nV\n00:02\n3:30 PM\n|Vaul\nDelete this message?\nAre you sure you want to permanently delete the\nselected message?\nDelete for everyone\nDelete for me",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "delete for me",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “HAPPY”",
+        "Dialog over a dimmed background, covering 17% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Messages. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 82 of 116 in “Filling in Balaji Abi”",
+        "Reached from “Messages”",
+        "Leads to “FRADAY”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 11:05 in the recording",
+        "Frame 2226 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0c14",
+      "role": "background",
+      "share": 0.752
+    },
+    {
+      "hex": "#232226",
+      "role": "surface",
+      "share": 0.138
+    },
+    {
+      "hex": "#3b3335",
+      "role": "surface",
+      "share": 0.1
+    },
+    {
+      "hex": "#5f5d60",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#4b494d",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2226,
+    "atSeconds": 665.7,
+    "endSeconds": 668.1,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.3125,
+        "y": 0.09375,
+        "w": 0.375,
+        "h": 0.171875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "HAPPY",
+    "headline": "ERADAY",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s277",
+    "depth": 279,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s276",
+        "via": "Back to HAPPY",
+        "name": "Messages"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s278",
+        "via": "Dismiss",
+        "name": "FRADAY"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

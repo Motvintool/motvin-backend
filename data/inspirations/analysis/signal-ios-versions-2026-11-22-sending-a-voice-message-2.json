@@ -1,0 +1,154 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-voice-message-2",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-voice-message-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:49.265Z",
+  "screen_type": "search_results",
+  "published_as": "search",
+  "states": [],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Sending a voice message",
+  "flow_position": 5,
+  "name": "Search results",
+  "description": "Search results screen with a 4-item tab bar. Dark theme, 10 text elements.",
+  "text": "Web\n9:41(\n•0\nDesign\n<\nNd\nOVerified\nView Results\nE You ended the poll: Design features\nView Poll\nNow\nMessage\n000\nLocation\nFile\nPoll\nContact",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "file",
+    "poll",
+    "contact",
+    "location",
+    "search-results",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: File, Poll, Contact, Location",
+        "Navigation title reads “View Results”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search results screen with a 4-item tab bar. Dark theme, 10 text elements.",
+        "10 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 12 in “File”",
+        "Reached from “Other”",
+        "Leads to “Search results”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 6:04 in the recording",
+        "Frame 1218 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080308",
+      "role": "background",
+      "share": 0.435
+    },
+    {
+      "hex": "#1b181c",
+      "role": "surface",
+      "share": 0.325
+    },
+    {
+      "hex": "#0a2668",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#0f42b2",
+      "role": "accent",
+      "share": 0.025
+    },
+    {
+      "hex": "#3b393d",
+      "role": "surface",
+      "share": 0.024
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1218,
+    "atSeconds": 364.2,
+    "endSeconds": 365.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "File",
+      "Poll",
+      "Contact",
+      "Location"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "View Results",
+    "headline": "Message"
+  },
+  "crawler": {
+    "nodeId": "s160",
+    "depth": 160,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s159",
+        "via": "Open View Results",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s161",
+        "via": "Tap “Now”",
+        "name": "Search results"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

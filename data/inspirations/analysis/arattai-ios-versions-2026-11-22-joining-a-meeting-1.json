@@ -1,0 +1,162 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-joining-a-meeting-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-joining-a-meeting-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:47.753Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Joining a meeting",
+  "flow_position": 1,
+  "name": "Stories home",
+  "description": "Feed screen with a 5-item tab bar, a row of 3 category chips and a paged carousel. Dark theme, 15 text elements.",
+  "text": "9:41(\nMeetings\n••\n→\nSchedule\nJoin\nNew meeting\nPrevious\nUpcoming\nToday\n1722 Sun, 4:15 PM\nIn 29m\nMeet\n30 minutes | Trip\nYou\nStart\nMeetings\nSettings\nStories\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "stories",
+    "meetings",
+    "chats",
+    "calls",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "list",
+    "chip",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Stories, Meetings, Chats, Calls, Settings",
+        "Category strip: Schedule, Join, New meeting",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 5-item tab bar, a row of 3 category chips and a paged carousel. Dark theme, 15 text elements.",
+        "15 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 2 in “Join a meeting detail”",
+        "Reached from “Video home”",
+        "Leads to “Join a meeting”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 22:16 in the recording",
+        "Frame 4460 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b10",
+      "role": "background",
+      "share": 0.877
+    },
+    {
+      "hex": "#2e2b32",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#525054",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#333d72",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#4d5788",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4460,
+    "atSeconds": 1336.2,
+    "endSeconds": 1338.3,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Stories",
+      "Meetings",
+      "Chats",
+      "Calls",
+      "Settings"
+    ],
+    "chipLabels": [
+      "Schedule",
+      "Join",
+      "New meeting"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Upcoming"
+  },
+  "crawler": {
+    "nodeId": "s596",
+    "depth": 601,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s595",
+        "via": "Switch to Stories",
+        "name": "Video home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s597",
+        "via": "Type “Join a meeting”",
+        "name": "Join a meeting"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

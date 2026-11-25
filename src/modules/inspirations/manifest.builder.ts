@@ -22,7 +22,8 @@ import {
 } from 'fs';
 import { basename, extname, join } from 'path';
 
-export const PLATFORMS = ['ios', 'webapp', 'web'] as const;
+// Sites (websites) are kept under screens/site: whole pages and their sections, never app screens.
+export const PLATFORMS = ['ios', 'webapp', 'site'] as const;
 export const IMAGE_EXT = ['.webp', '.png', '.jpg', '.jpeg', '.avif', '.gif'];
 export const LOGO_EXT = [...IMAGE_EXT, '.svg'];
 
@@ -565,6 +566,31 @@ function uniq<T>(list: T[]): T[] {
  * `file` may carry a flow folder (`onboarding/1.png`), in which case the folder
  * becomes part of the id. Without that, every flow's `1.png` would collide.
  */
+/**
+ * Web (sites) facts from a sidecar the Motvin Web Recorder wrote: what page it is, or which part of which page.
+ * A section names its page as `pages/<n>`, a path in its own version folder; that becomes the page's screen id.
+ */
+function siteFacts(sidecar: Record<string, any>, platform: string, appId: string, file: string, bucketRelFile: string) {
+  const kind = sidecar.kind === 'section' ? 'section' : 'page';
+  const parentPage = kind === 'section' && typeof sidecar.parentPage === 'string' ? sidecar.parentPage : null;
+  const share = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : null);
+  return {
+    kind,
+    pageType: slugValue(sidecar.pageType) || 'other',
+    sectionType: kind === 'section' ? slugValue(sidecar.sectionType) || 'content' : null,
+    parentId: parentPage
+      ? screenIdFor(platform, appId, `${file.slice(0, file.length - bucketRelFile.length)}${parentPage}${extname(file)}`)
+      : null,
+    top: kind === 'section' ? share(sidecar.top) : null,
+    height: kind === 'section' ? share(sidecar.height) : null,
+    pageUrl: stringOrNull(sidecar.pageUrl),
+    // What the section says it is ("Products menu", a section's headline), when the capture recorded one.
+    heading: kind === 'section' ? stringOrNull(sidecar.heading) : null,
+    // The page's own name, typed in the recorder when no page type fitted ("Integrations Hub"); a section carries its page's.
+    customName: stringOrNull(sidecar.customName)?.slice(0, 40) ?? null,
+  };
+}
+
 export function screenIdFor(platform: string, appId: string, file: string): string {
   const withoutExtension = file.slice(0, file.length - extname(file).length);
   const slug = withoutExtension.split('/').filter(Boolean).join('-');
@@ -738,6 +764,11 @@ export function buildInspirationsManifest(root: string): BuildReport {
           warnings.push(`${platform}/${appId}/${file} filename does not start with a known screen type — filed as "other"`);
         }
 
+        // Web (sites) is page based: every screen is a whole page or a part of one, never a step in a flow.
+        if (platform === 'site' && sidecar.kind !== 'page' && sidecar.kind !== 'section') {
+          warnings.push(`web/${appId}/${file} has no "kind" (page or section) in its sidecar — it shows as a whole page`);
+        }
+
         // A loose file's basename is `${screenType}-${appId}-${platform}-${index}`
         // — every part but the type is already shown elsewhere (app logo/name,
         // platform pill, URL), so titleCasing the whole thing just repeats that
@@ -786,6 +817,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
             style: styles,
             capturedAt: sidecar.capturedAt || source.capturedAt || null,
             version: versionId,
+            ...(platform === 'site' ? { site: siteFacts(sidecar, platform, appId, file, bucketRelFile) } : {}),
             hasAnalysis: existsSync(join(analysisDir, `${id}.json`)),
             downloadable: source.redistribution === 'allowed',
             source: {
@@ -853,7 +885,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
     const declared = appRecords.get(appId)?.platforms;
     return Array.isArray(declared) ? PLATFORMS.filter((p) => declared.includes(p)) : [];
   };
-  const familyOf = (platform: string) => (platform === 'ios' ? 'mobile' : 'browser');
+  // Sites are their own kind: a site's page is never re-filed as a web app's screen (nor the other way).
+  const familyOf = (platform: string) => (platform === 'ios' ? 'mobile' : platform === 'site' ? 'site' : 'browser');
   const effectivePlatform = (appId: string, own: string): string => {
     const declared = declaredPlatforms(appId);
     if (!declared.length || declared.includes(own)) return own;
@@ -872,7 +905,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
     screensByApp.get(screen.appId)!.push(screen);
   }
 
-  const knownScreenIds = new Set(screens.map((s) => s.id));
+  // A website's pages and sections are never steps of a flow: flows are app journeys (iOS, Web Apps).
+  const knownScreenIds = new Set(screens.filter((s) => !s.site).map((s) => s.id));
   const screenById = new Map(screens.map((s) => [s.id, s]));
   const publishedFlows = (flowsFile.flows || [])
     .map((flow) => {
@@ -958,6 +992,17 @@ export function buildInspirationsManifest(root: string): BuildReport {
     }));
   }
 
+  // A website section is tagged by what it is (Hero, Pricing…), never the screen classifier's "other", and links to
+  // the address of the page it was cut from.
+  for (const appScreens of screensByApp.values()) {
+    const pages = new Map(appScreens.filter((s) => s.site?.kind === 'page').map((s) => [s.id, s]));
+    for (const s of appScreens) {
+      if (s.site?.kind !== 'section') continue;
+      s.tags = uniq<string>([s.site.sectionType, ...(s.tags || []).filter((t: string) => t !== 'other')].filter(Boolean));
+      if (!s.site.pageUrl) s.site.pageUrl = pages.get(s.site.parentId)?.site?.pageUrl ?? pages.get(s.site.parentId)?.source?.url ?? null;
+    }
+  }
+
   const apps = Array.from(appsSeen)
     .map((appId) => {
       const app = appRecords.get(appId);
@@ -971,6 +1016,16 @@ export function buildInspirationsManifest(root: string): BuildReport {
       const appScreenIds = new Set<string>(appScreens.map((s) => s.id));
       const wantedCard: string[] = Array.isArray(app.cardScreens) ? app.cardScreens.filter((v: unknown) => typeof v === 'string') : [];
       const cardScreens = wantedCard.filter((sid) => appScreenIds.has(sid));
+      // A website's card shows its pages by itself: the newest capture's, the landing page first, up to four,
+      // after any the admin picked. Never its sections — they are parts of those pages.
+      const sitePages = appScreens
+        .filter((s) => s.platform === 'site' && s.site?.kind === 'page' && !cardScreens.includes(s.id))
+        .sort((a, b) => String(b.version).localeCompare(String(a.version)) || Number(b.site.pageType === 'landing') - Number(a.site.pageType === 'landing') || (a.order ?? 0) - (b.order ?? 0));
+      const newestSite = sitePages[0]?.version;
+      for (const page of sitePages.filter((s) => s.version === newestSite)) {
+        if (cardScreens.filter((sid) => sid.startsWith(`${appId}-site-`)).length >= 4) break;
+        cardScreens.push(page.id);
+      }
       if (cardScreens.length < wantedCard.length) {
         const dropped = wantedCard.filter((sid) => !appScreenIds.has(sid));
         warnings.push(`app "${appId}" card drops ${dropped.length} screen id(s) not stored or not approved: ${dropped.join(', ')}`);
@@ -978,7 +1033,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
       // Four per platform it has screens on: short of that, the card in that section shows one automatic picture.
       for (const p of PLATFORMS.filter((p) => appScreens.some((s) => s.platform === p))) {
         const here = cardScreens.filter((sid) => sid.startsWith(`${appId}-${p}-`)).length;
-        if (here < 4) warnings.push(`app "${appId}" has ${here} of 4 card pictures on ${p} — pick them in Apps → ${app.name || appId} → Card`);
+        const pagesOnly = p === 'site' && appScreens.some((s) => s.platform === 'site' && s.site);
+        if (here < 4 && !pagesOnly) warnings.push(`app "${appId}" has ${here} of 4 card pictures on ${p} — pick them in Apps → ${app.name || appId} → Card`);
       }
       // Where the app lives: what the admin declared, plus anywhere it has published screens.
       const platforms = PLATFORMS.filter(
@@ -993,7 +1049,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
         website: app.website || null,
         tagline: app.tagline || null,
         logo: logo ? `/api/inspirations/logos/${logo}` : null,
-        screenCount: appScreens.length,
+        // A website counts its pages: its sections are parts of those pages, not more of them.
+        screenCount: appScreens.filter((s) => s.site?.kind !== 'section').length,
         flowCount: publishedFlows.filter((f) => f.appId === appId).length,
         // The same counts per platform it is on: an app on iOS and the web is shown with the count of the
         // section it is seen in (Claude in Webs: its web screens), never the two added together.
@@ -1001,7 +1058,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
           PLATFORMS.filter((p) => appScreens.some((s) => s.platform === p)).map((p) => [
             p,
             {
-              screens: appScreens.filter((s) => s.platform === p).length,
+              screens: appScreens.filter((s) => s.platform === p && s.site?.kind !== 'section').length,
               flows: publishedFlows.filter((f) => f.appId === appId && f.platform === p).length,
             },
           ]),
@@ -1034,6 +1091,8 @@ export function buildInspirationsManifest(root: string): BuildReport {
     .map((pattern) => {
       const m = pattern.match || {};
       const matched = screens.filter((screen) => {
+        // A website's pages and sections live on its own page only (Full Page / Sections), never in a pattern.
+        if (screen.site) return false;
         if (m.platforms && !m.platforms.includes(screen.platform)) return false;
         if (m.screenTypes && !m.screenTypes.some((t: string) => (screen.screenTypes ?? [screen.screenType]).includes(t))) return false;
         // Only the screen's main type — a detail screen that is also a little onboarding is not a welcome screen.
@@ -1070,7 +1129,7 @@ export function buildInspirationsManifest(root: string): BuildReport {
     generatedAt: new Date().toISOString(),
     counts: {
       apps: apps.length,
-      screens: screens.length,
+      screens: screens.filter((s) => !s.site).length,
       flows: publishedFlows.length,
       patterns: patterns.length,
       // Screens that show at least one element, each once.

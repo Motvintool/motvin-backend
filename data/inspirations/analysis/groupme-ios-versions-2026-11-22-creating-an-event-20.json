@@ -1,0 +1,165 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-an-event-20",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-an-event-20",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:58.847Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating an event",
+  "flow_position": 4,
+  "name": "RSVP dialog",
+  "description": "Dialog over a dimmed screen, on top of Add a location toast with a row of 4 category chips. Dark theme, 19 text elements.",
+  "text": "9:41(\n•0\nX\nNew event\n> Create\nUNTITLED EVENT\n16-Bit\nSCRIBBLE\nBookish\nClassic\nRefin\nRSVP\nDate & Time\nAll day\n2:00 PM\n22 Nov 2026\nStarts\nEnds\n3:00 PM\n22 Nov 2026\nRemove End Time\nRecurring event\nAuu d utselpuun ul yuul even",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “RSVP”",
+        "Category strip: SCRIBBLE, Bookish, Classic, Refin",
+        "Dialog over a dimmed background, covering 47% of the height from 2% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Add a location toast with a row of 4 category chips. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 4 of 169 in “New event”",
+        "Reached from “Add a location toast”",
+        "Leads to “Theme”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:31 in the recording",
+        "Frame 708 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141717",
+      "role": "background",
+      "share": 0.768
+    },
+    {
+      "hex": "#050006",
+      "role": "accent",
+      "share": 0.092
+    },
+    {
+      "hex": "#37393b",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#68524d",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#646366",
+      "role": "surface",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 708,
+    "atSeconds": 211.2,
+    "endSeconds": 212.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.015625,
+        "w": 0.9375,
+        "h": 0.46875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [
+      "SCRIBBLE",
+      "Bookish",
+      "Classic",
+      "Refin"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "RSVP",
+    "headline": "RSVP"
+  },
+  "crawler": {
+    "nodeId": "s091",
+    "depth": 90,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s090",
+        "via": "Tap “RSVP”",
+        "name": "Add a location toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s092",
+        "via": "Dismiss",
+        "name": "Theme"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

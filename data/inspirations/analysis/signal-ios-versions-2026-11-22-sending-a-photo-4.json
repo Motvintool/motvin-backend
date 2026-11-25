@@ -1,0 +1,150 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-photo-4",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-photo-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:43.491Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sending a photo",
+  "flow_position": 3,
+  "name": "Messages",
+  "description": "Messages screen with the keyboard open. Dark theme, 25 text elements.",
+  "text": "9:41C\nX\n1 Design\nTap here to make this message disappear after it\nis viewed.\nHey\n\"Hey\"\nHey's\ni\nW\nt\nO\ne\nk\nf\nd\na\nJ\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with the keyboard open. Dark theme, 25 text elements.",
+        "25 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 11 in “Opening a page (Photos)”",
+        "Reached from “Other”",
+        "Leads to “Form”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 4:19 in the recording",
+        "Frame 869 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a050a",
+      "role": "background",
+      "share": 0.318
+    },
+    {
+      "hex": "#232024",
+      "role": "surface",
+      "share": 0.268
+    },
+    {
+      "hex": "#9b999b",
+      "role": "text",
+      "share": 0.136
+    },
+    {
+      "hex": "#494649",
+      "role": "surface",
+      "share": 0.087
+    },
+    {
+      "hex": "#3375fd",
+      "role": "accent",
+      "share": 0.043
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 869,
+    "atSeconds": 259.2,
+    "endSeconds": 261,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 25,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Hey's"
+  },
+  "crawler": {
+    "nodeId": "s104",
+    "depth": 104,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s103",
+        "via": "Open Messages",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s105",
+        "via": "Tap “is viewed.”",
+        "name": "Form"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

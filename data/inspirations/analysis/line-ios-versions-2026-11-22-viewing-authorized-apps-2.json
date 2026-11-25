@@ -1,0 +1,156 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-viewing-authorized-apps-2",
+  "screen_id": "line-ios-versions-2026-11-22-viewing-authorized-apps-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:53.704Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Viewing authorized apps",
+  "flow_position": 22,
+  "name": "Authorized apps — scrolled",
+  "description": "Login screen, scrolled further down from Authorized apps with a primary action labelled “Allow login”. Dark theme, 19 text elements.",
+  "text": "9:41 C\n•0l\n<\nX\nAccount\nAuthorized apps\nThese are services you've linked to your LINE account through\nLINE login or by granting permissions.\nLogin and security\nPair a new device\nAllow login\nEnable this setting to log in to your LINE account on other\ndevices (such as PCs, smartphones, tablets, and smartwatches).\nTwo-factor authentication\nEnables two-factor authentication when you log in to other web\nservices with LINE.\nSome services require two-factor authentication to log in.\nLog in with password\nFor security, we recommend disabling \"Log in with password\".\nYou can still log in other ways while this setting is off.\nPasskey\nDevices\nDelete account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "devices",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Authorized apps”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen, scrolled further down from Authorized apps with a primary action labelled “Allow login”. Dark theme, 19 text elements.",
+        "Calls to action: “Allow login”, “Log in with password”",
+        "19 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 22 of 27 in “Logging in with email”",
+        "Reached from “Authorized apps”",
+        "Leads to “Sign in with email — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 17:23 in the recording",
+        "Frame 3481 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161417",
+      "role": "background",
+      "share": 0.927
+    },
+    {
+      "hex": "#49464a",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#302d31",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#551b23",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#636666",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3481,
+    "atSeconds": 1043.7,
+    "endSeconds": 1044.6,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow login",
+      "Log in with password"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Authorized apps",
+    "headline": "Pair a new device",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s478",
+    "depth": 486,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s477",
+        "via": "Scroll",
+        "name": "Authorized apps"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s479",
+        "via": "Tap “Pair a new device”",
+        "name": "Sign in with email — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

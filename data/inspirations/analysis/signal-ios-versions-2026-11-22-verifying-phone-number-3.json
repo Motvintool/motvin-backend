@@ -1,0 +1,143 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-verifying-phone-number-3",
+  "screen_id": "signal-ios-versions-2026-11-22-verifying-phone-number-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:36.352Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Verifying phone number",
+  "flow_position": 15,
+  "name": "OTP verification",
+  "description": "Verification code screen. Dark theme, 7 text elements.",
+  "text": "9:41€\nodll\nVerification code\nEnter the code we sent to +91 63821 02514\nWrong number?\n-\n-\nThe code you entered is not valid. Please\nresend the code and try again.\nOK",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Verification code”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 35 in “Entering phone number”",
+        "Reached from “OTP verification — scrolled”",
+        "Leads to “OTP verification — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:47 in the recording",
+        "Frame 160 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080308",
+      "role": "background",
+      "share": 0.874
+    },
+    {
+      "hex": "#383639",
+      "role": "surface",
+      "share": 0.083
+    },
+    {
+      "hex": "#201f22",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#636064",
+      "role": "text",
+      "share": 0.002
+    },
+    {
+      "hex": "#555155",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 160,
+    "atSeconds": 47.4,
+    "endSeconds": 48.3,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Verification code",
+    "headline": "Wrong number?"
+  },
+  "crawler": {
+    "nodeId": "s021",
+    "depth": 20,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s020",
+        "via": "Tap “9:41C”",
+        "name": "OTP verification — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s022",
+        "via": "Scroll",
+        "name": "OTP verification — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

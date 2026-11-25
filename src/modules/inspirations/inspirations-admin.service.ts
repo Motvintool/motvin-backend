@@ -332,6 +332,85 @@ export class InspirationsAdminService {
   /** When the manifest was last rebuilt (ms), so the folder watcher can skip changes a rebuild already covered. */
   lastRebuildAt = 0;
 
+  /** After a delete: the rebuild, then the lists swept of anything that no longer exists. */
+  private rebuildAfterDelete(): BuildReport {
+    const report = this.rebuild();
+    this.sweepLeftovers();
+    return report;
+  }
+
+  /**
+   * Lists that remember screens and flows by id — the privacy check, the gap filling, flow kinds — and apps by id —
+   * version pins, "New this week" — kept to what is still there, whatever left an id behind (a delete, a renamed
+   * flow, a replaced version). Run after every delete, so nothing piles up; a mark that goes only means that screen
+   * is checked again should it ever come back.
+   */
+  sweepLeftovers(): { screens: number; flows: number; apps: number } {
+    const screenIds = new Set<string>();
+    for (const platform of PLATFORMS) {
+      const platformDir = this.inStore('screens', platform);
+      if (!existsSync(platformDir)) continue;
+      for (const app of readdirSync(platformDir)) {
+        const dir = join(platformDir, app);
+        if (!statSync(dir).isDirectory()) continue;
+        for (const entry of listAppScreenFiles(dir)) screenIds.add(screenIdFor(platform, app, entry.file));
+      }
+    }
+    const flowIds = new Set(readJson<{ flows?: { id: string }[] }>(join(this.root, 'flows.json'), { flows: [] }).flows?.map((flow) => flow.id) ?? []);
+    const appIds = new Set(readJson<{ apps?: { id: string }[] }>(join(this.root, 'apps.json'), { apps: [] }).apps?.map((app) => app.id) ?? []);
+    const swept = { screens: 0, flows: 0, apps: 0 };
+
+    const gapsFile = join(this.root, 'screen-gaps-checked.json');
+    if (existsSync(gapsFile)) {
+      const gaps = readJson<{ ids?: string[] }>(gapsFile, { ids: [] });
+      const kept = (gaps.ids ?? []).filter((id) => screenIds.has(id));
+      swept.screens += (gaps.ids ?? []).length - kept.length;
+      if (kept.length !== (gaps.ids ?? []).length) this.writeJson(gapsFile, { ...gaps, ids: kept });
+    }
+    const protectFile = join(this.root, '..', 'batches', 'protect-checked.json');
+    if (existsSync(protectFile)) {
+      const checked = readJson<Record<string, unknown>>(protectFile, {});
+      const stale = Object.keys(checked).filter((id) => !screenIds.has(id));
+      for (const id of stale) delete checked[id];
+      swept.screens += stale.length;
+      if (stale.length) this.writeJson(protectFile, checked);
+    }
+    const kindsFile = join(this.root, 'flow-kinds.json');
+    if (existsSync(kindsFile)) {
+      const kinds = readJson<{ kinds?: Record<string, string> }>(kindsFile, { kinds: {} });
+      const stale = Object.keys(kinds.kinds ?? {}).filter((id) => !flowIds.has(id));
+      for (const id of stale) delete kinds.kinds![id];
+      swept.flows += stale.length;
+      if (stale.length) this.writeJson(kindsFile, kinds);
+    }
+    const pinsFile = join(this.root, 'versions.json');
+    if (existsSync(pinsFile)) {
+      const pins = readJson<{ version?: number; pins?: Record<string, string> }>(pinsFile, { version: 1, pins: {} });
+      const stale = Object.keys(pins.pins ?? {}).filter((id) => !appIds.has(id));
+      for (const id of stale) delete pins.pins![id];
+      swept.apps += stale.length;
+      if (stale.length) this.writeJson(pinsFile, pins);
+    }
+    const saved = settingsFile(this.root);
+    if (existsSync(saved)) {
+      const settings = readJson<Record<string, any>>(saved, {});
+      let stale = 0;
+      for (const list of ['added', 'order']) {
+        for (const section of ['ios', 'webs']) {
+          const ids = settings.newThisWeek?.[list]?.[section];
+          if (!Array.isArray(ids)) continue;
+          const kept = ids.filter((id: string) => appIds.has(id));
+          stale += ids.length - kept.length;
+          settings.newThisWeek[list][section] = kept;
+        }
+      }
+      swept.apps += stale;
+      if (stale) this.writeJson(saved, settings);
+    }
+    if (swept.screens || swept.flows || swept.apps) this.logger.log(`Swept leftovers: ${swept.screens} screen mark(s), ${swept.flows} flow kind(s), ${swept.apps} app entr(ies)`);
+    return swept;
+  }
+
   rebuild(): BuildReport {
     const report = buildInspirationsManifest(this.root);
     this.lastRebuildAt = Date.now();
@@ -651,7 +730,7 @@ export class InspirationsAdminService {
     if (flowsChanged) this.writeJson(flowsFile, { version: flowsData.version || 1, flows: flowsData.flows });
 
     this.logger.log(`Deleted screens/${platform}/${appId}/${file}${flowsChanged ? ` (taken out of ${flowsChanged} flow(s))` : ''}`);
-    return { report: this.rebuild() };
+    return { report: this.rebuildAfterDelete() };
   }
 
   // ─── Versions ─────────────────────────────────────────────────────────────
@@ -874,7 +953,7 @@ export class InspirationsAdminService {
     if (flowsRemoved) this.writeJson(flowsFile, { version: flowsData.version || 1, flows: keptFlows });
 
     this.logger.log(`Deleted version ${versionId} of ${appId}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)`);
-    return { removed: { screens: screensRemoved, analysis: analysisRemoved.length, flows: flowsRemoved }, report: this.rebuild() };
+    return { removed: { screens: screensRemoved, analysis: analysisRemoved.length, flows: flowsRemoved }, report: this.rebuildAfterDelete() };
   }
 
   // ─── Logos ────────────────────────────────────────────────────────────────
@@ -1473,6 +1552,8 @@ export class InspirationsAdminService {
       }
     }
 
+    this.forgetApp(id, PLATFORMS.map((platform) => `${id}-${platform}-`), PLATFORMS);
+
     this.logger.log(
       `Deleted app ${id}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)` +
         (logoRemoved ? ', logo' : ''),
@@ -1487,8 +1568,64 @@ export class InspirationsAdminService {
         logo: logoRemoved,
         source: sourceExisted,
       },
-      report: this.rebuild(),
+      report: this.rebuildAfterDelete(),
     };
+  }
+
+  /**
+   * What other lists remember of a deleted app's screens and flows (ids start "<app>-<platform>-"), so an app
+   * added again under the same id and version starts clean: the privacy check and the gap filling look at its
+   * screens afresh, old flow kinds do not come back. A whole app also leaves its version pin and the
+   * "New this week" picks; one platform leaves its section's picks once the app has no platform there.
+   */
+  private forgetApp(id: string, prefixes: string[], platforms: readonly (typeof PLATFORMS)[number][]) {
+    const gone = (key: string) => prefixes.some((prefix) => key.startsWith(prefix));
+    const gapsFile = join(this.root, 'screen-gaps-checked.json');
+    if (existsSync(gapsFile)) {
+      const gaps = readJson<{ ids?: string[] }>(gapsFile, { ids: [] });
+      this.writeJson(gapsFile, { ...gaps, ids: (gaps.ids ?? []).filter((key) => !gone(key)) });
+    }
+    const protectFile = join(this.root, '..', 'batches', 'protect-checked.json');
+    if (existsSync(protectFile)) {
+      const checked = readJson<Record<string, unknown>>(protectFile, {});
+      for (const key of Object.keys(checked)) if (gone(key)) delete checked[key];
+      this.writeJson(protectFile, checked);
+    }
+    const kindsFile = join(this.root, 'flow-kinds.json');
+    if (existsSync(kindsFile)) {
+      const kinds = readJson<{ kinds?: Record<string, string> }>(kindsFile, { kinds: {} });
+      for (const key of Object.keys(kinds.kinds ?? {})) if (gone(key)) delete kinds.kinds![key];
+      this.writeJson(kindsFile, kinds);
+    }
+    const left = PLATFORMS.filter((platform) => !platforms.includes(platform) && existsSync(this.inStore('screens', platform, id)));
+    if (!left.length) {
+      const pinsFile = join(this.root, 'versions.json');
+      if (existsSync(pinsFile)) {
+        const pins = readJson<{ version?: number; pins?: Record<string, string> }>(pinsFile, { version: 1, pins: {} });
+        if (pins.pins?.[id]) {
+          delete pins.pins[id];
+          this.writeJson(pinsFile, pins);
+        }
+      }
+    }
+    // "New this week": the app leaves a section's picks when it is no longer in that section.
+    const sections = [...(left.includes('ios') ? [] : ['ios']), ...(left.some((platform) => platform !== 'ios') ? [] : ['webs'])] as ('ios' | 'webs')[];
+    const saved = settingsFile(this.root);
+    if (sections.length && existsSync(saved)) {
+      const settings = readJson<Record<string, any>>(saved, {});
+      const week = settings.newThisWeek;
+      let changed = false;
+      for (const list of ['added', 'order']) {
+        for (const section of sections) {
+          const ids = week?.[list]?.[section];
+          if (Array.isArray(ids) && ids.includes(id)) {
+            week[list][section] = ids.filter((other: string) => other !== id);
+            changed = true;
+          }
+        }
+      }
+      if (changed) this.writeJson(saved, settings);
+    }
   }
 
   /** `deleteApp` for one platform of an app that is on others too. */
@@ -1540,10 +1677,12 @@ export class InspirationsAdminService {
       for (const entry of readdirSync(reviewsDir)) if (entry.startsWith(prefix)) rmSync(join(reviewsDir, entry), { recursive: true, force: true });
     }
 
+    this.forgetApp(id, [prefix], [platform]);
+
     this.logger.log(`Deleted ${platform} of app ${id}: ${screensRemoved} screenshot(s), ${flowsRemoved} flow(s)`);
     return {
       removed: { app: false, screens: screensRemoved, analysis: analysisRemoved, flows: flowsRemoved, logo: null, source: false },
-      report: this.rebuild(),
+      report: this.rebuildAfterDelete(),
     };
   }
 

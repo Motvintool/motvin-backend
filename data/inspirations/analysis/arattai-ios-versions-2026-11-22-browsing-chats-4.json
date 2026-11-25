@@ -1,0 +1,177 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-browsing-chats-4",
+  "screen_id": "arattai-ios-versions-2026-11-22-browsing-chats-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:27.176Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Browsing chats",
+  "flow_position": 11,
+  "name": "Meetings sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Current Affairs with a 5-item tab bar, a row of 4 category chips and a paged carousel. Dark theme, 10 text elements.",
+  "text": "9:41(\n•0l\nArattai\n•••\n+\nGroups\nChannels\nts\nDirect\nInvite Friends\nBring in your friends to Arattai\n+\nChats\nMeetings\nSettings\nStories\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "stories",
+    "meetings",
+    "chats",
+    "calls",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "chip",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Stories, Meetings, Chats, Calls, Settings",
+        "Navigation title reads “Meetings”",
+        "Category strip: Groups, Channels, ts, Direct",
+        "Paged carousel with a page indicator",
+        "Bottom sheet over a dimmed background, covering 44% of the height from 53% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Current Affairs with a 5-item tab bar, a row of 4 category chips and a paged carousel. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 46 in “Stories”",
+        "Reached from “Current Affairs”",
+        "Leads to “Bottom sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 17:26 in the recording",
+        "Frame 3491 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.914
+    },
+    {
+      "hex": "#2b2931",
+      "role": "surface",
+      "share": 0.041
+    },
+    {
+      "hex": "#474548",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#5e5f6e",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#323e7f",
+      "role": "accent",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 3491,
+    "atSeconds": 1046.1,
+    "endSeconds": 1047.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.53125,
+        "w": 0.875,
+        "h": 0.4375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [
+      "Stories",
+      "Meetings",
+      "Chats",
+      "Calls",
+      "Settings"
+    ],
+    "chipLabels": [
+      "Groups",
+      "Channels",
+      "ts",
+      "Direct"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Meetings",
+    "headline": "Invite Friends"
+  },
+  "crawler": {
+    "nodeId": "s461",
+    "depth": 465,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s460",
+        "via": "Open Meetings",
+        "name": "Current Affairs"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s462",
+        "via": "Open You are currently not in any groups.",
+        "name": "Bottom sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

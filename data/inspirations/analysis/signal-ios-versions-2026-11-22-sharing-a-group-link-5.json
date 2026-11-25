@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sharing-a-group-link-5",
+  "screen_id": "signal-ios-versions-2026-11-22-sharing-a-group-link-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:41.434Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Sharing a group link",
+  "flow_position": 5,
+  "name": "Essac search",
+  "description": "Search screen with a search bar. Dark theme, 7 text elements.",
+  "text": "9:41(\n•0l\nChoose Recipients\nQ\n,Search\nRecent Chats\nDesign\nNo o\nR8\nChoose a recipient\nessac",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "essac",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose Recipients”",
+        "Search bar present",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a search bar. Dark theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 25 in “Sharing”",
+        "Reached from “Toast”",
+        "Leads to “Design search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 3:28 in the recording",
+        "Frame 698 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.901
+    },
+    {
+      "hex": "#201d21",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#423e44",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#5e595e",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#365a9a",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 698,
+    "atSeconds": 208.8,
+    "endSeconds": 209.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose Recipients",
+    "headline": "Design",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s081",
+    "depth": 80,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s080",
+        "via": "Tap “Design”",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s082",
+        "via": "Wait 0.9s",
+        "name": "Design search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

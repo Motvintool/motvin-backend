@@ -1,0 +1,143 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-logging-in-5",
+  "screen_id": "yubo-ios-versions-2026-11-22-logging-in-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:54.251Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Logging in",
+  "flow_position": null,
+  "name": "Hide or share email — loading",
+  "description": "Loading state of Hide or share email. Dark theme, 1 text element.",
+  "text": "Continue with Passcode\nDelete",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "delete",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Continue with Passcode”",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Hide or share email. Dark theme, 1 text element.",
+        "1 text element recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Hide or share email”",
+        "Leads to “Hide or share email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 0:15 in the recording",
+        "Frame 60 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191919",
+      "role": "background",
+      "share": 0.974
+    },
+    {
+      "hex": "#3c3c3c",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#545454",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#9d9d9d",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 60,
+    "atSeconds": 15.9,
+    "endSeconds": 18.3,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 1,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Continue with Passcode",
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s011",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s010",
+        "via": "Tap “Continue with Passcode”",
+        "name": "Hide or share email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s012",
+        "via": "Wait 2.4s",
+        "name": "Hide or share email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

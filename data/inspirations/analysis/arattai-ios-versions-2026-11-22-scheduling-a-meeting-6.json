@@ -1,0 +1,162 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-scheduling-a-meeting-6",
+  "screen_id": "arattai-ios-versions-2026-11-22-scheduling-a-meeting-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:04.518Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Scheduling a meeting",
+  "flow_position": 105,
+  "name": "Duration toast",
+  "description": "Toast over a dimmed screen, on top of Schedule Meeting with a primary action labelled “Done”. Dark theme, 22 text elements.",
+  "text": "9:414\n[nn\nSchedule Meeting\nMeet\nDate\nTime\n22 November, 20...\n4:15 PM\n(GMT +05:30) Asia/Kolkata\n30 minutes\nDuration\nRepeat\nNever\nCo-Hosts\nAdd\nRecord\nDuration\nCancel\nDone\n45\n15\nO hours 30 min\n45\n1\n2\n3\n15\n30",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Duration”",
+        "Toast over a dimmed background, covering 5% of the height from 33% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Schedule Meeting with a primary action labelled “Done”. Dark theme, 22 text elements.",
+        "Calls to action: “Done”",
+        "22 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 105 of 116 in “Filling in Balaji Abi”",
+        "Reached from “Schedule Meeting”",
+        "Leads to “Schedule Meeting”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 12:01 in the recording",
+        "Frame 2407 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151317",
+      "role": "background",
+      "share": 0.7
+    },
+    {
+      "hex": "#080609",
+      "role": "surface",
+      "share": 0.257
+    },
+    {
+      "hex": "#333137",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#555256",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#6a686b",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2407,
+    "atSeconds": 721.5,
+    "endSeconds": 722.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.328125,
+        "w": 0.71875,
+        "h": 0.046875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 22,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Done"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Duration",
+    "headline": "Meet"
+  },
+  "crawler": {
+    "nodeId": "s301",
+    "depth": 303,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s300",
+        "via": "Tap “Meet”",
+        "name": "Schedule Meeting"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s302",
+        "via": "Dismiss",
+        "name": "Schedule Meeting"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

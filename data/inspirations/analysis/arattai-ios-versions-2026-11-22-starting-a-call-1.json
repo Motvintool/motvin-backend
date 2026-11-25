@@ -1,0 +1,168 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-starting-a-call-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-starting-a-call-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:51.846Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Starting a call",
+  "flow_position": 1,
+  "name": "Call logs sheet",
+  "description": "Bottom sheet, on top of Loading state with a 5-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41€\nCalls\nCall logs\nYour call history will be listed here.\nSettings\nStories\nMeetings\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "stories",
+    "meetings",
+    "chats",
+    "calls",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 5 items: Stories, Meetings, Chats, Calls, Settings",
+        "Navigation title reads “Call logs”",
+        "Bottom sheet, covering 56% of the height from 31% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Loading state with a 5-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 7 in “Start call”",
+        "Reached from “Call logs sheet — loading”",
+        "Leads to “Start call”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 23:17 in the recording",
+        "Frame 4717 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.893
+    },
+    {
+      "hex": "#26262c",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#423f42",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#158ecf",
+      "role": "accent",
+      "share": 0.014
+    },
+    {
+      "hex": "#5e5c61",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4717,
+    "atSeconds": 1397.4,
+    "endSeconds": 1398.6,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.3125,
+        "w": 0.75,
+        "h": 0.5625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Stories",
+      "Meetings",
+      "Chats",
+      "Calls",
+      "Settings"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Call logs",
+    "headline": "Call logs"
+  },
+  "crawler": {
+    "nodeId": "s626",
+    "depth": 631,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s625",
+        "via": "Wait 0.9s",
+        "name": "Call logs sheet — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s627",
+        "via": "Open Start call",
+        "name": "Start call"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

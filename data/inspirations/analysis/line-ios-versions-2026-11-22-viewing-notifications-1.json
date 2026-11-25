@@ -1,0 +1,155 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-viewing-notifications-1",
+  "screen_id": "line-ios-versions-2026-11-22-viewing-notifications-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:45.378Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing notifications",
+  "flow_position": 15,
+  "name": "Home home",
+  "description": "Feed screen with a 3-item tab bar and a search bar. Dark theme, 20 text elements.",
+  "text": "9:41(\n+\nMotvin\nEnter a status message\nQ Search\nServices\nSee all\nOfficial\nThemes\nStickers\nAccounts\nGroups 1\nCreate a group\n'2+\nGather your friends in a group chat.\nDesign1 (1)\nFriends\nOfficial accounts\nReady to add friends?\nAdd friends by QR code or Search.\nAdd friends\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "message",
+    "home",
+    "chats",
+    "calls",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar and a search bar. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 30 in “Home”",
+        "Reached from “Search”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 14:36 in the recording",
+        "Frame 2923 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.885
+    },
+    {
+      "hex": "#403c40",
+      "role": "surface",
+      "share": 0.063
+    },
+    {
+      "hex": "#2e2a2d",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#595659",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#f76a4f",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2923,
+    "atSeconds": 876.3,
+    "endSeconds": 877.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Create a group"
+  },
+  "crawler": {
+    "nodeId": "s390",
+    "depth": 397,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s389",
+        "via": "Back to Home home",
+        "name": "Search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s391",
+        "via": "Open Notifications",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

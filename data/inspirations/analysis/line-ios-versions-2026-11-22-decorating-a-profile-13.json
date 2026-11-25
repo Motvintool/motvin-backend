@@ -1,0 +1,143 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-decorating-a-profile-13",
+  "screen_id": "line-ios-versions-2026-11-22-decorating-a-profile-13",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:10.607Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Decorating a profile",
+  "flow_position": 2,
+  "name": "Motvin",
+  "description": "Other screen. Light theme, 5 text elements.",
+  "text": "9:41 C\n• S C\nX\nMotvin\nEnter a status message\nDecorate\nKeep Memo",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Light, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Light theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 61 in “Opening a page (Home)”",
+        "Reached from “Toast”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 1:24 in the recording",
+        "Frame 286 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#288379",
+      "role": "background",
+      "share": 0.938
+    },
+    {
+      "hex": "#529794",
+      "role": "accent",
+      "share": 0.022
+    },
+    {
+      "hex": "#fbfafb",
+      "role": "text",
+      "share": 0.013
+    },
+    {
+      "hex": "#85b3b4",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#a1cbca",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 286,
+    "atSeconds": 84,
+    "endSeconds": 86.1,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Motvin"
+  },
+  "crawler": {
+    "nodeId": "s032",
+    "depth": 33,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s031",
+        "via": "Tap “Motvin”",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s033",
+        "via": "Wait 2.1s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,152 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-story-privacy-1",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-story-privacy-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:09.051Z",
+  "screen_type": "home",
+  "published_as": "home",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing story privacy",
+  "flow_position": 1,
+  "name": "Chats home",
+  "description": "Home screen with a 3-item tab bar. Dark theme, 6 text elements.",
+  "text": "9:41(\n•0l\nStories\nMy Stories ›\nNoW\n+\nReady when vou are\nSignal\nChats\nCalls\nStories",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chats",
+    "calls",
+    "stories",
+    "home",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Chats, Calls, Stories",
+        "Navigation title reads “My Stories”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Home screen with a 3-item tab bar. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 5 in “Story Privacy”",
+        "Reached from “My Story search”",
+        "Leads to “Story Privacy — loading”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 12:36 in the recording",
+        "Frame 2529 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.87
+    },
+    {
+      "hex": "#1e1b21",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#3e3a40",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#c6c7d7",
+      "role": "text",
+      "share": 0.01
+    },
+    {
+      "hex": "#5b575d",
+      "role": "surface",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2529,
+    "atSeconds": 756.6,
+    "endSeconds": 759,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [
+      "Chats",
+      "Calls",
+      "Stories"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My Stories",
+    "headline": "Signal"
+  },
+  "crawler": {
+    "nodeId": "s370",
+    "depth": 373,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s369",
+        "via": "Open My Stories",
+        "name": "My Story search"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s371",
+        "via": "Tap “My Stories ›”",
+        "name": "Story Privacy — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

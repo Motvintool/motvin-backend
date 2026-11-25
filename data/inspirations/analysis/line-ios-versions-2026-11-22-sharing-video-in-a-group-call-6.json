@@ -1,0 +1,155 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-6",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-video-in-a-group-call-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:33.479Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing video in a group call",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state with a 4-item tab bar. Dark theme, 3 text elements.",
+  "text": "9:41\nPaused\nParticipating 1\nMotvin\nLeave\nTurn on\nUnmute\nActivities\nspeaker\nmIc",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "leave",
+    "unmute",
+    "turn on",
+    "activities",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 4 items: Leave, Unmute, Turn on, Activities",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 4-item tab bar. Dark theme, 3 text elements.",
+        "3 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Leave home”",
+        "Leads to “Motvin's video”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 9:38 in the recording",
+        "Frame 1931 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0b10",
+      "role": "background",
+      "share": 0.949
+    },
+    {
+      "hex": "#2b2529",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#463e42",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#fc3e56",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#671c27",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1931,
+    "atSeconds": 578.1,
+    "endSeconds": 579.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [
+      "Leave",
+      "Unmute",
+      "Turn on",
+      "Activities"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Participating 1"
+  },
+  "crawler": {
+    "nodeId": "s258",
+    "depth": 261,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s257",
+        "via": "Tap “Motvin”",
+        "name": "Leave home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s259",
+        "via": "Wait 1.5s",
+        "name": "Motvin's video"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

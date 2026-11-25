@@ -1,0 +1,152 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-reporting-a-group-1",
+  "screen_id": "line-ios-versions-2026-11-22-reporting-a-group-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:38.516Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Reporting a group",
+  "flow_position": 7,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 16 text elements.",
+  "text": "9:41C\nSettings\nNote notifications\nGet notified when someone leaves a comment or reaction on your\nnotes.\nInvite by link or QR code\nAllow users to join this group via a link or QR code.\nChat settings\nChat wallpaper\nExport chat history\nExport this chat's history as a text file.\nEncryption keys\na This chat is protected with Letter Sealing.\nILINEI Chatin Desiam,txi\nDelete data\nReport\nLeave group",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "notification",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 16 text elements.",
+        "16 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 27 in “Settings”",
+        "Reached from “Settings”",
+        "Leads to “Chat wallpaper”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 11:39 in the recording",
+        "Frame 2358 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.931
+    },
+    {
+      "hex": "#514f53",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#373538",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#501922",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#0f582d",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2358,
+    "atSeconds": 699.9,
+    "endSeconds": 700.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Chat wallpaper"
+  },
+  "crawler": {
+    "nodeId": "s316",
+    "depth": 320,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s315",
+        "via": "Tap “Settings”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s317",
+        "via": "Wait 2.7s",
+        "name": "Chat wallpaper"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

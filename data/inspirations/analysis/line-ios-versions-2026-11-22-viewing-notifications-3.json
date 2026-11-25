@@ -1,0 +1,144 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-viewing-notifications-3",
+  "screen_id": "line-ios-versions-2026-11-22-viewing-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:45.544Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing notifications",
+  "flow_position": 1,
+  "name": "Notifications",
+  "description": "Notifications screen. Dark theme, 11 text elements.",
+  "text": "9:41 C\n•0l\nHome notifications\nNew friends\nNew friends and friend recommendations\nUpdates from Favorites\nProfile updates from your Favorited friends\nGroup updates\nGroup invitations and new members\nAlbum reactions\nReactions received for albums\nNote updates\nComments or reactions on your notes",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "notification",
+    "notifications",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Home notifications”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Checking notifications”",
+        "Reached from “Loading state”",
+        "Leads to “Home home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 14:41 in the recording",
+        "Frame 2939 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.925
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.043
+    },
+    {
+      "hex": "#5d5c5e",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#272e2b",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#0e6a35",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2939,
+    "atSeconds": 881.4,
+    "endSeconds": 882,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Home notifications",
+    "headline": "Group updates"
+  },
+  "crawler": {
+    "nodeId": "s392",
+    "depth": 399,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s391",
+        "via": "Wait 0.9s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s393",
+        "via": "Back to Home home",
+        "name": "Home home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

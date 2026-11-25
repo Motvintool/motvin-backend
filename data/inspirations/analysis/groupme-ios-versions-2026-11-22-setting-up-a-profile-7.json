@@ -1,0 +1,144 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-setting-up-a-profile-7",
+  "screen_id": "groupme-ios-versions-2026-11-22-setting-up-a-profile-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:50.535Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Setting up a profile",
+  "flow_position": 2,
+  "name": "Create account",
+  "description": "Sign up screen. Light theme, 6 text elements.",
+  "text": "9:41 €\n#\nReal chats\nhappen here\nor\n,Sign Up with Phone\nBy continuing, l agree to GroupMe's Terms\nof Use and Privacy Policy.\nAlready have an account? Sign in >",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "legal-text"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Happen here”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen. Light theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 34 in “Onboarding”",
+        "Reached from “Splash”",
+        "Leads to “November sheet”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 0:00 in the recording",
+        "Frame 8 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#f5edb6",
+      "role": "background",
+      "share": 0.155
+    },
+    {
+      "hex": "#f6e74e",
+      "role": "accent",
+      "share": 0.095
+    },
+    {
+      "hex": "#a1e774",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#537b82",
+      "role": "text",
+      "share": 0.076
+    },
+    {
+      "hex": "#79e3cd",
+      "role": "surface",
+      "share": 0.07
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 8,
+    "atSeconds": 0.6,
+    "endSeconds": 2.7,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Happen here",
+    "headline": "Happen here"
+  },
+  "crawler": {
+    "nodeId": "s002",
+    "depth": 1,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s001",
+        "via": "Open Happen here",
+        "name": "Splash"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s003",
+        "via": "Open November",
+        "name": "November sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

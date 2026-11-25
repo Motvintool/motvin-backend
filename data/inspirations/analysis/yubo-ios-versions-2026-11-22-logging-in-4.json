@@ -1,0 +1,163 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-logging-in-4",
+  "screen_id": "yubo-ios-versions-2026-11-22-logging-in-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:54.055Z",
+  "screen_type": "external_auth",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Logging in",
+  "flow_position": 8,
+  "name": "Hide or share email",
+  "description": "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in with Apple”. Dark theme, 12 text elements.",
+  "text": "9:41 €\n•0ll\nyuba\nX\nSign in with Apple\nCreate an account for Yubo using your\nApple Account (+91 6382-102514).\nName\nX\nSurendar V\nShare My Email\nsurendarv638@gmail.com\nHide My Email\nForward To: surendarv638@gmail.com\nContinue with Passcode",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "external-auth",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Yuba”",
+        "Toast, covering 9% of the height from 5% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "A third-party sign-in page, not the app's own design with 1 input field and a primary action labelled “Sign in with Apple”. Dark theme, 12 text elements.",
+        "Calls to action: “Sign in with Apple”",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 60 in “Logging in”",
+        "Reached from “Hide or share email”",
+        "Leads to “Hide or share email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:12 in the recording",
+        "Frame 47 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1a1817",
+      "role": "background",
+      "share": 0.75
+    },
+    {
+      "hex": "#333132",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#494748",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#30b5ff",
+      "role": "accent",
+      "share": 0.016
+    },
+    {
+      "hex": "#686667",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 47,
+    "atSeconds": 12.9,
+    "endSeconds": 14.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.21875,
+        "y": 0.046875,
+        "w": 0.5625,
+        "h": 0.09375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Sign in with Apple"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Yuba",
+    "headline": "Create an account for Yubo using your"
+  },
+  "crawler": {
+    "nodeId": "s009",
+    "depth": 8,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bsign in with (apple|google|facebook)\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s008",
+        "via": "Dismiss",
+        "name": "Hide or share email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s010",
+        "via": "Dismiss",
+        "name": "Hide or share email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

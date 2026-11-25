@@ -1,0 +1,152 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-managing-the-account-5",
+  "screen_id": "yubo-ios-versions-2026-11-22-managing-the-account-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:32.088Z",
+  "screen_type": "login",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Managing the account",
+  "flow_position": 1,
+  "name": "Sign in with email",
+  "description": "Login screen with 3 input fields and a primary action labelled “Confirm”. Dark theme, 14 text elements.",
+  "text": "9:41(\nAccount\nMotvin\nName\nmotvin\nUsername\nBirthday\n04/12/2000\nGender\nMale\nEmail\nsurendarv638@gmail.com\nConfirm\nLogin methods\nDelete account",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "login",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "form",
+    "list",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Login screen with 3 input fields and a primary action labelled “Confirm”. Dark theme, 14 text elements.",
+        "Calls to action: “Confirm”, “Login methods”",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 6 in “Logging in with email”",
+        "Reached from “Subscription plans”",
+        "Leads to “Sign in with email — loading”",
+        "Returned to 4 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 14:40 in the recording",
+        "Frame 2944 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141116",
+      "role": "background",
+      "share": 0.668
+    },
+    {
+      "hex": "#312f33",
+      "role": "surface",
+      "share": 0.293
+    },
+    {
+      "hex": "#5b595d",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#eb9929",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#464448",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 2944,
+    "atSeconds": 880.8,
+    "endSeconds": 883.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 4
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Confirm",
+      "Login methods"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account",
+    "headline": "Birthday"
+  },
+  "crawler": {
+    "nodeId": "s411",
+    "depth": 411,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "authentication screen — crawler does not sign in",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s410",
+        "via": "Tap “Account”",
+        "name": "Subscription plans"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s412",
+        "via": "Wait 2.7s",
+        "name": "Sign in with email — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

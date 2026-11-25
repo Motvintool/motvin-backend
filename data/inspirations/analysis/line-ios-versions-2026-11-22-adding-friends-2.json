@@ -1,0 +1,168 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-adding-friends-2",
+  "screen_id": "line-ios-versions-2026-11-22-adding-friends-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:43.725Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Adding friends",
+  "flow_position": 3,
+  "name": "Add friends toast",
+  "description": "Toast over a dimmed screen, on top of Add friends with a row of 3 category chips, a search bar and 1 input field. Dark theme, 17 text elements.",
+  "text": "9:41 €\nX\nAdd friends\n+\nInvite\nQR code\nSearch\nAuto-add friends\n[2+\nAllow\nAuto-add contacts as friends.\nText message\nEmail\nWhatsApp\nFacebook\nCancel\nWe don't\nThave any recommendations for you right now.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "list",
+    "chip",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add friends”",
+        "Category strip: Invite, QR code, Search",
+        "Search bar present",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Add friends with a row of 3 category chips, a search bar and 1 input field. Dark theme, 17 text elements.",
+        "17 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 14 in “Creating a group”",
+        "Reached from “Add friends”",
+        "Leads to “Search”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 13:55 in the recording",
+        "Frame 2788 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0c0f",
+      "role": "background",
+      "share": 0.775
+    },
+    {
+      "hex": "#2b2b2c",
+      "role": "surface",
+      "share": 0.191
+    },
+    {
+      "hex": "#605f60",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#464546",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#116130",
+      "role": "accent",
+      "share": 0.007
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2788,
+    "atSeconds": 835.5,
+    "endSeconds": 836.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.953125,
+        "w": 0.8125,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [
+      "Invite",
+      "QR code",
+      "Search"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add friends",
+    "headline": "WhatsApp"
+  },
+  "crawler": {
+    "nodeId": "s373",
+    "depth": 379,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s372",
+        "via": "Wait 2.4s",
+        "name": "Add friends"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s374",
+        "via": "Type “Choose friends”",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

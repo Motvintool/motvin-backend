@@ -1,0 +1,162 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-managing-a-group-6",
+  "screen_id": "signal-ios-versions-2026-11-22-managing-a-group-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:01.148Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing a group",
+  "flow_position": 55,
+  "name": "Add Members dialog",
+  "description": "Dialog over a dimmed screen, on top of Group Link. Dark theme, 19 text elements.",
+  "text": "9:41C\n•0\nEdit\n1 Member\n+\nAdd Members\nYou\nAdmin\nDesign\nGroup Link\nOn >\nMember Label\n0>\nRequests & Invites\nPermissions\n>\nLeave Group\nDo you really want to leave?\nYou will no longer be able to send or\nreceive messages in this group.\nLeave\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Add Members”",
+        "Dialog over a dimmed background, covering 19% of the height from 9% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Group Link. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 55 of 63 in “Searching Chats”",
+        "Reached from “Group Link”",
+        "Leads to “Group Link”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:33 in the recording",
+        "Frame 1915 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#191518",
+      "role": "background",
+      "share": 0.831
+    },
+    {
+      "hex": "#373539",
+      "role": "surface",
+      "share": 0.149
+    },
+    {
+      "hex": "#555153",
+      "role": "surface",
+      "share": 0.014
+    },
+    {
+      "hex": "#696770",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#6f3b3c",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1915,
+    "atSeconds": 573.9,
+    "endSeconds": 574.8,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.09375,
+        "y": 0.09375,
+        "w": 0.8125,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Add Members",
+    "headline": "Leave Group",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s284",
+    "depth": 286,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s283",
+        "via": "Tap “Add Members”",
+        "name": "Group Link"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s285",
+        "via": "Dismiss",
+        "name": "Group Link"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

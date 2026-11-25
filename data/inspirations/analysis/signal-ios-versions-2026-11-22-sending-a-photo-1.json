@@ -1,0 +1,157 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-photo-1",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-photo-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:43.315Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sending a photo",
+  "flow_position": 1,
+  "name": "Loading state",
+  "description": "Loading state with a 3-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41(\nDesign\n<\nOVerified\nDesign\n28 No other group members yet\nco 3 group updates v\nHey Now\nX\nMessage\nOOU\nGIF\nPhotos\nGIF\nFile\nPoll",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "photos",
+    "file",
+    "poll",
+    "feed",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Photos, File, Poll",
+        "Navigation title reads “Hey Now”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with a 3-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 11 in “Opening a page (Photos)”",
+        "Reached from “HeyNow”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 4:13 in the recording",
+        "Frame 851 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0a0f",
+      "role": "background",
+      "share": 0.855
+    },
+    {
+      "hex": "#2e2c30",
+      "role": "surface",
+      "share": 0.051
+    },
+    {
+      "hex": "#4e4b4f",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#fefefe",
+      "role": "text",
+      "share": 0.011
+    },
+    {
+      "hex": "#6c696d",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 851,
+    "atSeconds": 253.8,
+    "endSeconds": 255.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [
+      "Photos",
+      "File",
+      "Poll"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Hey Now",
+    "headline": "Design"
+  },
+  "crawler": {
+    "nodeId": "s102",
+    "depth": 102,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s101",
+        "via": "Tap “Design”",
+        "name": "HeyNow"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s103",
+        "via": "Wait 1.8s",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

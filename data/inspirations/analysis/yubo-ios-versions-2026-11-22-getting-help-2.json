@@ -1,0 +1,145 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-getting-help-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-getting-help-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:33.712Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Getting help",
+  "flow_position": 15,
+  "name": "My Account",
+  "description": "Profile screen. Dark theme, 9 text elements.",
+  "text": "9:41(\n<\nWhat about?\nModeration\nVerification\nMy Account\nSwipe\nLive\nPurchase\nSafety & Security\nContact us",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "contact us",
+    "profile",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “My Account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile screen. Dark theme, 9 text elements.",
+        "9 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 32 in “Subscribing”",
+        "Reached from “Help”",
+        "Leads to “Profile — loading”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 15:15 in the recording",
+        "Frame 3056 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161318",
+      "role": "background",
+      "share": 0.665
+    },
+    {
+      "hex": "#2f2d32",
+      "role": "surface",
+      "share": 0.294
+    },
+    {
+      "hex": "#525054",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#6c6a6e",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 3056,
+    "atSeconds": 915.9,
+    "endSeconds": 917.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "My Account",
+    "headline": "My Account",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s432",
+    "depth": 432,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s431",
+        "via": "Wait 1.2s",
+        "name": "Help"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s433",
+        "via": "Open My picture was removed",
+        "name": "Profile — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

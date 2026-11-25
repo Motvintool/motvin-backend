@@ -1,0 +1,156 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-appearance-6",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-appearance-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:03.165Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing appearance",
+  "flow_position": 8,
+  "name": "\"Signal\" toast",
+  "description": "Toast over a dimmed screen, on top of Bottom sheet. Dark theme, 4 text elements.",
+  "text": "9:41C\nApp Icon\nYou have changed the icon for\n\"Signal\".\nOK",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"Signal\"”",
+        "Toast over a dimmed background, covering 13% of the height from 44% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Bottom sheet. Dark theme, 4 text elements.",
+        "4 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 10 in “Appearance”",
+        "Reached from “Bottom sheet”",
+        "Leads to “App Icon”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 10:18 in the recording",
+        "Frame 2062 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#110f13",
+      "role": "background",
+      "share": 0.817
+    },
+    {
+      "hex": "#2d3034",
+      "role": "surface",
+      "share": 0.081
+    },
+    {
+      "hex": "#5e5e67",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#4a4b3f",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#183f6e",
+      "role": "accent",
+      "share": 0.008
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2062,
+    "atSeconds": 618,
+    "endSeconds": 618.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.4375,
+        "w": 0.59375,
+        "h": 0.125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"Signal\"",
+    "headline": "\"Signal\""
+  },
+  "crawler": {
+    "nodeId": "s307",
+    "depth": 310,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s306",
+        "via": "Open \"Signal\"",
+        "name": "Bottom sheet"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s308",
+        "via": "Dismiss",
+        "name": "App Icon"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

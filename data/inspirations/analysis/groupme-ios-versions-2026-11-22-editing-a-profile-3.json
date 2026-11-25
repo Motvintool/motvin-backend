@@ -1,0 +1,162 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-editing-a-profile-3",
+  "screen_id": "groupme-ios-versions-2026-11-22-editing-a-profile-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:35.550Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Editing a profile",
+  "flow_position": 5,
+  "name": "Choose photo dialog",
+  "description": "Dialog over a dimmed screen, on top of Profile. Dark theme, 14 text elements.",
+  "text": "9:41(\n•0l\nProfile\nM\nSet avatar\nTake photo\nChoose photo\nCancel\nInte\nFree food\nWhat are you into?\nShare your favs. Maybe, y'know,\nsomeone will notice\nBasketball\nAdd interests\ngek life\nBio\nAdd a bio (optional)",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "bio",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose photo”",
+        "Dialog over a dimmed background, covering 16% of the height from 39% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Profile. Dark theme, 14 text elements.",
+        "14 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 7 in “Profile”",
+        "Reached from “Profile”",
+        "Leads to “Profile”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 16:26 in the recording",
+        "Frame 3294 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c070d",
+      "role": "background",
+      "share": 0.796
+    },
+    {
+      "hex": "#2d2a2d",
+      "role": "surface",
+      "share": 0.149
+    },
+    {
+      "hex": "#143677",
+      "role": "accent",
+      "share": 0.022
+    },
+    {
+      "hex": "#4d4a4c",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#646264",
+      "role": "surface",
+      "share": 0.011
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3294,
+    "atSeconds": 986.4,
+    "endSeconds": 988.5,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.390625,
+        "w": 0.625,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose photo",
+    "headline": "Free food",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s484",
+    "depth": 487,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s483",
+        "via": "Tap “Free”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s485",
+        "via": "Dismiss",
+        "name": "Profile"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

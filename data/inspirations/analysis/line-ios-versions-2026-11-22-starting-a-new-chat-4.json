@@ -1,0 +1,153 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-starting-a-new-chat-4",
+  "screen_id": "line-ios-versions-2026-11-22-starting-a-new-chat-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:38.082Z",
+  "screen_type": "search",
+  "published_as": "search",
+  "states": [],
+  "category": "social",
+  "flow": "search",
+  "flow_name": "Starting a new chat",
+  "flow_position": 92,
+  "name": "Search",
+  "description": "Search screen with a row of 4 category chips, a search bar and 1 input field. Dark theme, 8 text elements.",
+  "text": "9:41 C\noll\nChoose friends\nInvite\nInvite link\nQR code\nText message\nEmail\nQ Search by name\nYou don't have any friends to choose from.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "search-bar",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Choose friends”",
+        "Category strip: Invite link, QR code, Text message, Email",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Search screen with a row of 4 category chips, a search bar and 1 input field. Dark theme, 8 text elements.",
+        "8 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 92 of 99 in “Reading messages”",
+        "Reached from “New Message”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 11:30 in the recording",
+        "Frame 2307 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.964
+    },
+    {
+      "hex": "#322f33",
+      "role": "surface",
+      "share": 0.023
+    },
+    {
+      "hex": "#565357",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#a8a6a9",
+      "role": "text",
+      "share": 0.001
+    },
+    {
+      "hex": "#6c696d",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2307,
+    "atSeconds": 690.6,
+    "endSeconds": 692.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [
+      "Invite link",
+      "QR code",
+      "Text message",
+      "Email"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Choose friends",
+    "headline": "QR code"
+  },
+  "crawler": {
+    "nodeId": "s311",
+    "depth": 315,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s310",
+        "via": "Back to Search",
+        "name": "New Message"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s312",
+        "via": "Open Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

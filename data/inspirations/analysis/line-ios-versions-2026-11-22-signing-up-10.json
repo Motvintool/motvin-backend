@@ -1,0 +1,170 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-signing-up-10",
+  "screen_id": "line-ios-versions-2026-11-22-signing-up-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:10.421Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Signing up",
+  "flow_position": 1,
+  "name": "Ready to add friends? sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Loading state with a 3-item tab bar and a search bar. Dark theme, 19 text elements.",
+  "text": "9:41(\n+\nMotvin\nEnter a status message\nQ Search\nServices\nSee all\nOfficial\nThemes\nStickers\nAccounts\nGroups\nV\n^\nFriends\n0>\nOfficial accounts\nReady to add friends?\nAdd friends by QR code or Search.\nAdd friends\nChats\nHome\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "home",
+    "chats",
+    "calls",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Navigation title reads “Ready to add friends?”",
+        "Search bar present",
+        "Bottom sheet over a dimmed background, covering 72% of the height from 25% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Loading state with a 3-item tab bar and a search bar. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 30 in “Home”",
+        "Reached from “Loading state”",
+        "Leads to “Toast”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.8s at 1:14 in the recording",
+        "Frame 278 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#39363a",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#535053",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#787679",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#14b154",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 278,
+    "atSeconds": 74.4,
+    "endSeconds": 75,
+    "holdSeconds": 4.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.03125,
+        "y": 0.25,
+        "w": 0.9375,
+        "h": 0.71875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Ready to add friends?",
+    "headline": "Ready to add friends?"
+  },
+  "crawler": {
+    "nodeId": "s030",
+    "depth": 31,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s029",
+        "via": "Wait 2.7s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s031",
+        "via": "Back to Toast",
+        "name": "Toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

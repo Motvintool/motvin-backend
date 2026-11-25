@@ -1,0 +1,152 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-forwarding-a-message-4",
+  "screen_id": "signal-ios-versions-2026-11-22-forwarding-a-message-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:51.038Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Forwarding a message",
+  "flow_position": 11,
+  "name": "Voice Message",
+  "description": "Messages screen with the keyboard open. Dark theme, 42 text elements.",
+  "text": "9:41(\nDesign\n•Verified\noonoonDooluuo\n0:01\nYou\nVoice Message\nHey\n1O10||00|00\n0:01\n•\nNow\n+\nV Message sent\nMes\nThe\nI'm\nR\nU\nQ\nW\nT\nO\nP\nE\nY\nA\nS\nD\nG\nH\nK\nL\nF\nJ\nX\nZ\nC\nV\nB\nN\nM\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "messages",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Voice Message”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen with the keyboard open. Dark theme, 42 text elements.",
+        "42 text elements recognised",
+        "State: keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 11 of 60 in “Opening a page (File)”",
+        "Reached from “Loading state”",
+        "Leads to “Hey”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 6:30 in the recording",
+        "Frame 1305 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#090409",
+      "role": "background",
+      "share": 0.377
+    },
+    {
+      "hex": "#232024",
+      "role": "surface",
+      "share": 0.27
+    },
+    {
+      "hex": "#1a5ff0",
+      "role": "accent",
+      "share": 0.095
+    },
+    {
+      "hex": "#434144",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#5f5d60",
+      "role": "surface",
+      "share": 0.049
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1305,
+    "atSeconds": 390.6,
+    "endSeconds": 391.8,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 42,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Voice Message",
+    "headline": "OonoonDooluuo"
+  },
+  "crawler": {
+    "nodeId": "s178",
+    "depth": 178,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s177",
+        "via": "Wait 1.2s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s179",
+        "via": "Back to Hey",
+        "name": "Hey"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

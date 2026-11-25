@@ -1,0 +1,154 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-allowing-permissions-3",
+  "screen_id": "signal-ios-versions-2026-11-22-allowing-permissions-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:35.035Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Allowing permissions",
+  "flow_position": 5,
+  "name": "Notifications permission",
+  "description": "Permission screen with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "text": "9:41(\nodll\nAllow Permissions\nSignal would like to request the following\npermissions.\nNotifications\n\"Signal\" would like to access\nyour Contacts.\nSignal uses your contacts to find\nusers you know. We do not store your\ncontacts on the server.\nDon't Allow\nContinue\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "continue",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Allow Permissions”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue”",
+        "11 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 5 in “Onboarding”",
+        "Reached from “Notifications permission”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 0:09 in the recording",
+        "Frame 33 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a050a",
+      "role": "background",
+      "share": 0.842
+    },
+    {
+      "hex": "#252225",
+      "role": "surface",
+      "share": 0.106
+    },
+    {
+      "hex": "#474547",
+      "role": "surface",
+      "share": 0.034
+    },
+    {
+      "hex": "#635e5b",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#e0ddd1",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 33,
+    "atSeconds": 9.3,
+    "endSeconds": 10.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Allow Permissions",
+    "headline": "\"Signal\" would like to access",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s005",
+    "depth": 4,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s004",
+        "via": "Tap “Allow Permissions”",
+        "name": "Notifications permission"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s006",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

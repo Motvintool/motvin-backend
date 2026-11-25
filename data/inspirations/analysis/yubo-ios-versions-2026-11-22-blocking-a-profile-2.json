@@ -1,0 +1,158 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-blocking-a-profile-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-blocking-a-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:07.876Z",
+  "screen_type": "profile",
+  "published_as": "profile",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Blocking a profile",
+  "flow_position": 91,
+  "name": "Profile",
+  "description": "Profile dialog over a dimmed screen, on top of Dialog. Dark theme, 10 text elements.",
+  "text": "9:41€\n•dll\nBlock\nYou will no longer see the profile\nof Vishal\nWe won't notify Vishal that you\nblocked them. Also, they won't be able\nto see your profile, contact you, watch\nyour live, or see your messages\nanymore.\nWant to add any information?\nBlock\nReport and block",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "message",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Block”",
+        "Dialog over a dimmed background, covering 30% of the height from 55% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Profile dialog over a dimmed screen, on top of Dialog. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 91 of 338 in “Subscribing”",
+        "Reached from “Dialog”",
+        "Leads to “Dialog”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 5:28 in the recording",
+        "Frame 1104 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0b0a",
+      "role": "background",
+      "share": 0.813
+    },
+    {
+      "hex": "#2c2a28",
+      "role": "surface",
+      "share": 0.094
+    },
+    {
+      "hex": "#3d80fb",
+      "role": "accent",
+      "share": 0.039
+    },
+    {
+      "hex": "#2d5cb3",
+      "role": "surface",
+      "share": 0.026
+    },
+    {
+      "hex": "#4d4947",
+      "role": "surface",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1104,
+    "atSeconds": 328.2,
+    "endSeconds": 331.5,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.546875,
+        "w": 0.9375,
+        "h": 0.296875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Block",
+    "headline": "Blocked them. Also, they won't be able"
+  },
+  "crawler": {
+    "nodeId": "s157",
+    "depth": 156,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s156",
+        "via": "Tap “Block”",
+        "name": "Dialog"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s158",
+        "via": "Tap “anymore.”",
+        "name": "Dialog"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

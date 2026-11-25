@@ -1,0 +1,148 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-account-transfer-3",
+  "screen_id": "line-ios-versions-2026-11-22-account-transfer-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:55.336Z",
+  "screen_type": "confirmation",
+  "published_as": "success",
+  "states": [
+    "success",
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Account transfer",
+  "flow_position": 3,
+  "name": "Loading state — scrolled",
+  "description": "Success screen, scrolled further down from Loading state. Light theme, 10 text elements.",
+  "text": "oll\n9:41 C\n<\nAccount transfer options\nSkip 2-step authentication\nDO NOT enable the feature except when you want to transfer\nyour account.\nEnable this option to skip 2-step authentication and transfer your\naccount to another device.\nThe option will turn off automatically after a certain amount of time\nor if your account is successfully transferred.\nWhen do I need to use this?",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "confirmation",
+    "success",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Account transfer options”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Success screen, scrolled further down from Loading state. Light theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: success, scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Easy transfer QR code detail”",
+        "Reached from “Loading state — scrolled — loading”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 17:52 in the recording",
+        "Frame 3578 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fcfafd",
+      "role": "background",
+      "share": 0.886
+    },
+    {
+      "hex": "#0c0b0e",
+      "role": "text",
+      "share": 0.046
+    },
+    {
+      "hex": "#e3d6da",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#201f22",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#c0bec0",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3578,
+    "atSeconds": 1072.5,
+    "endSeconds": 1073.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Account transfer options",
+    "headline": "Skip 2-step authentication"
+  },
+  "crawler": {
+    "nodeId": "s496",
+    "depth": 505,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s495",
+        "via": "Scroll",
+        "name": "Loading state — scrolled — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s497",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,148 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-a-username-5",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-a-username-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:14.543Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Changing a username",
+  "flow_position": 5,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 20 text elements.",
+  "text": "9:41(\nSettings\nMotvin Tool\n+91 63821 02514\n00\nmotvintool1.19\nSpeak Freely\nAccount\nLinked Devices\n>\nDonate to Signal\n>\nAppearance\nChats\n>\nStories\nNotifications\n>\nPrivacy\n>\nBackups\nData Usage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "notification",
+    "data usage",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Settings”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 20 text elements.",
+        "20 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 14 in “Settings”",
+        "Reached from “Profile”",
+        "Leads to “Phone number entry”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 14:51 in the recording",
+        "Frame 3322 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#29272c",
+      "role": "background",
+      "share": 0.834
+    },
+    {
+      "hex": "#555357",
+      "role": "surface",
+      "share": 0.068
+    },
+    {
+      "hex": "#070207",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#403e43",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#727074",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 3322,
+    "atSeconds": 891.3,
+    "endSeconds": 892.5,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Settings",
+    "headline": "Motvin Tool",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s437",
+    "depth": 440,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s436",
+        "via": "Tap “Motvin Tool”",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s438",
+        "via": "Tap “Account”",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

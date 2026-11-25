@@ -1,0 +1,165 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-continuing-a-chat-3",
+  "screen_id": "yubo-ios-versions-2026-11-22-continuing-a-chat-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:14.685Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Continuing a chat",
+  "flow_position": 161,
+  "name": "Dialog",
+  "description": "Dialog over a dimmed screen, on top of Other with a primary action labelled “Continue the chat?”. Dark theme, 4 text elements.",
+  "text": "9:41C\n•il\nContinue the chat?\nOpen Snapchat and explore your new\nconnection\n• Copied v\nOpen Snapchat",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "open snapchat",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "cta",
+    "button",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dialog over a dimmed background, covering 55% of the height from 5% down",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Other with a primary action labelled “Continue the chat?”. Dark theme, 4 text elements.",
+        "Calls to action: “Continue the chat?”",
+        "4 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 161 of 338 in “Subscribing”",
+        "Reached from “Other”",
+        "Leads to “Other”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 8:03 in the recording",
+        "Frame 1621 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161417",
+      "role": "background",
+      "share": 0.712
+    },
+    {
+      "hex": "#504e4c",
+      "role": "surface",
+      "share": 0.124
+    },
+    {
+      "hex": "#373130",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#7e7b7e",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#f8f6f8",
+      "role": "text",
+      "share": 0.014
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 1621,
+    "atSeconds": 483,
+    "endSeconds": 483.6,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.046875,
+        "w": 0.71875,
+        "h": 0.546875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 4,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue the chat?"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s227",
+    "depth": 226,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s226",
+        "via": "Open Dialog",
+        "name": "Other"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s228",
+        "via": "Back to Other",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

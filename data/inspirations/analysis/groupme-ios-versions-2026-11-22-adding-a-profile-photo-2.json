@@ -1,0 +1,156 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-adding-a-profile-photo-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-adding-a-profile-photo-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:53.388Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Adding a profile photo",
+  "flow_position": 33,
+  "name": "Location permission",
+  "description": "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 13 text elements.",
+  "text": "9:41\n•0\nSkip\nIlI,\n\"GroupMe\" would like full\naccess to your Photo Library.\nGroupMe would like to access your\nphoto library to help you share\npictures in your chats.\n5,026 Photos, 390 Videos\nPhotos may contain data associated with\nlocation, depth information, captions and audio.\nLimit Access...\nAllow Full Access\nDon't Allow",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "photo",
+    "video",
+    "location",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “\"GroupMe\" would like full”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission screen with a primary action labelled “Allow Full Access”. Dark theme, 13 text elements.",
+        "Calls to action: “Allow Full Access”",
+        "13 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 33 of 34 in “Onboarding”",
+        "Reached from “Set a profile pic”",
+        "Leads to “Set a profile pic”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 1:26 in the recording",
+        "Frame 289 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0f0b10",
+      "role": "background",
+      "share": 0.613
+    },
+    {
+      "hex": "#302e30",
+      "role": "surface",
+      "share": 0.183
+    },
+    {
+      "hex": "#4d4a4c",
+      "role": "surface",
+      "share": 0.074
+    },
+    {
+      "hex": "#6f6d66",
+      "role": "surface",
+      "share": 0.028
+    },
+    {
+      "hex": "#9d9486",
+      "role": "text",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 289,
+    "atSeconds": 86.1,
+    "endSeconds": 87,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Full Access"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "\"GroupMe\" would like full",
+    "headline": "\"GroupMe\" would like full"
+  },
+  "crawler": {
+    "nodeId": "s035",
+    "depth": 34,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s034",
+        "via": "Open \"GroupMe\" would like full",
+        "name": "Set a profile pic"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s036",
+        "via": "Back to Set a profile pic",
+        "name": "Set a profile pic"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

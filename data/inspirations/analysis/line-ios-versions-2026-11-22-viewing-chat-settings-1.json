@@ -1,0 +1,156 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-viewing-chat-settings-1",
+  "screen_id": "line-ios-versions-2026-11-22-viewing-chat-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:34.946Z",
+  "screen_type": "calendar",
+  "published_as": "calendar",
+  "states": [],
+  "category": "social",
+  "flow": "creation",
+  "flow_name": "Viewing chat settings",
+  "flow_position": 5,
+  "name": "Photos & videos",
+  "description": "Calendar screen with a row of 4 category chips. Dark theme, 19 text elements.",
+  "text": "9:41(\no0l\n<\nDesign (1)\n))\nLeave\nMute\nMembers\nInvite\nPhotos & videos\nNo photos or videos found.\nAlbums\nKeep your best photos in albums and share them with the chat.\nCreate album\nNotes\nCalendar\nN\n31\nEvents\nLinks\nFiles\nSettings\n& This chat is protected with Letter Sealing",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "calendar",
+    "photo",
+    "video",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "chip"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Photos & videos”",
+        "Category strip: Leave, Mute, Members, Invite",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Calendar screen with a row of 4 category chips. Dark theme, 19 text elements.",
+        "19 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 25 in “Opening Leave home options”",
+        "Reached from “Toast”",
+        "Leads to “Search”",
+        "Returned to 6 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 10:06 in the recording",
+        "Frame 2025 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.796
+    },
+    {
+      "hex": "#2f2d2f",
+      "role": "surface",
+      "share": 0.183
+    },
+    {
+      "hex": "#4c4a4d",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#676568",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#1c6239",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2025,
+    "atSeconds": 606,
+    "endSeconds": 607.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 6
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [
+      "Leave",
+      "Mute",
+      "Members",
+      "Invite"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Photos & videos",
+    "headline": "Photos & videos",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s274",
+    "depth": 277,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s273",
+        "via": "Open Photos & videos",
+        "name": "Toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s275",
+        "via": "Wait 1.8s",
+        "name": "Search"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

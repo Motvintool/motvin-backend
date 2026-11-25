@@ -1,0 +1,165 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-viewing-the-group-gallery-4",
+  "screen_id": "groupme-ios-versions-2026-11-22-viewing-the-group-gallery-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:17.551Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing the group gallery",
+  "flow_position": 18,
+  "name": "New album dialog",
+  "description": "Dialog over a dimmed screen, on top of Gallery with the keyboard open. Dark theme, 14 text elements, shown only briefly.",
+  "text": "9:41(\nGallery\n+\nX New album\n7 Create\npics from last night\nW\nU\nQ\nE\nR\nT\nY\nO\nP\nG\nH\nJ\nK\nL\nA\nS\nD\nF\n7\nN",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "dialog",
+    "modal",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New album”",
+        "Keyboard is open, so the lower half is input",
+        "Dialog over a dimmed background, covering 50% of the height from 23% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen, on top of Gallery with the keyboard open. Dark theme, 14 text elements, shown only briefly.",
+        "14 text elements recognised",
+        "State: modal, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 23 in “Motvin team”",
+        "Reached from “Gallery”",
+        "Leads to “Gallery”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.3s at 10:42 in the recording",
+        "Shown only briefly; kept because it was distinct from its neighbours",
+        "Frame 2140 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080207",
+      "role": "background",
+      "share": 0.585
+    },
+    {
+      "hex": "#262226",
+      "role": "surface",
+      "share": 0.259
+    },
+    {
+      "hex": "#676568",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#4b474b",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#51799f",
+      "role": "accent",
+      "share": 0.015
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2140,
+    "atSeconds": 642,
+    "endSeconds": 642.3,
+    "holdSeconds": 0.3,
+    "brief": true,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0.234375,
+        "w": 1,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New album",
+    "headline": "New album"
+  },
+  "crawler": {
+    "nodeId": "s295",
+    "depth": 295,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s294",
+        "via": "Type “X New album”",
+        "name": "Gallery"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s296",
+        "via": "Dismiss",
+        "name": "Gallery"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

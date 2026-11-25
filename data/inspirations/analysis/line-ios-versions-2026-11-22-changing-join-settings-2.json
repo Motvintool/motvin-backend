@@ -1,0 +1,148 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-changing-join-settings-2",
+  "screen_id": "line-ios-versions-2026-11-22-changing-join-settings-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:38.345Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing join settings",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 6 text elements.",
+  "text": "9:41(\noll\n<\nMembers join automatically\nMembers join automatically\nMembers join the group as soon as they're invited. Disable this\nsetting to always require members to accept an invite before\njoining.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Members join automatically”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Members join automatically”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 11:35 in the recording",
+        "Frame 2323 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.964
+    },
+    {
+      "hex": "#565457",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#2e3231",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#6d6b6e",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#087e38",
+      "role": "accent",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2323,
+    "atSeconds": 695.7,
+    "endSeconds": 697.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Members join automatically",
+    "headline": "Joining"
+  },
+  "crawler": {
+    "nodeId": "s314",
+    "depth": 318,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s313",
+        "via": "Tap “Members join automatically”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s315",
+        "via": "Wait 1.5s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

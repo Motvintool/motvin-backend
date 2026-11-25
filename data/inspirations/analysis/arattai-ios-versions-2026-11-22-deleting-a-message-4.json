@@ -1,0 +1,161 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-deleting-a-message-4",
+  "screen_id": "arattai-ios-versions-2026-11-22-deleting-a-message-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:37.171Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting a message",
+  "flow_position": 6,
+  "name": "Trip toast",
+  "description": "Toast over a dimmed screen, on top of Meeting ended. Dark theme, 19 text elements.",
+  "text": "9:41(\nTrip\n<\n2 participants\n• Messages in this group are protected with end-\nto-end encryption.\nToday\nYou have created group Trip\nEx Meeting\n00:25\nTrip - 22/11/2026\n3:24 PM W\nMeeting ended\nAnantharaman Clg\nEnnadhu da\n3:25 PM\nDelete this message?\nAre you sure you want to permanently delete the\nselected message?\nDelete for everyone\nDelete for me",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "delete for me",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Trip”",
+        "Toast over a dimmed background, covering 3% of the height from 8% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen, on top of Meeting ended. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 23 in “Searching”",
+        "Reached from “Meeting ended”",
+        "Leads to “Meeting ended”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 5:57 in the recording",
+        "Frame 1195 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0b10",
+      "role": "background",
+      "share": 0.727
+    },
+    {
+      "hex": "#232125",
+      "role": "surface",
+      "share": 0.16
+    },
+    {
+      "hex": "#3a3335",
+      "role": "surface",
+      "share": 0.104
+    },
+    {
+      "hex": "#5f5d60",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#4b494d",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1195,
+    "atSeconds": 357,
+    "endSeconds": 358.8,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.078125,
+        "w": 0.875,
+        "h": 0.03125
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Trip",
+    "headline": "Meeting ended",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s131",
+    "depth": 131,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s130",
+        "via": "Tap “Trip”",
+        "name": "Meeting ended"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s132",
+        "via": "Dismiss",
+        "name": "Meeting ended"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

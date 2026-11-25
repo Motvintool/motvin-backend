@@ -1,0 +1,149 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-browsing-settings-pages-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-browsing-settings-pages-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:39.767Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Browsing settings pages",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 6 text elements.",
+  "text": "9:41€\nCopilot\nShow Copilot\nYou can use Copilot to summarise chats, generate images,\nand get Al answers. Your group chats are never stored or\nused for training data by Copilot.\nLearn more",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Opening a page”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 18:03 in the recording",
+        "Frame 3612 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.881
+    },
+    {
+      "hex": "#272428",
+      "role": "surface",
+      "share": 0.096
+    },
+    {
+      "hex": "#4b4b4d",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#7c8b88",
+      "role": "surface",
+      "share": 0.003
+    },
+    {
+      "hex": "#a3a6a6",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3612,
+    "atSeconds": 1083.3,
+    "endSeconds": 1083.9,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Used for training data by Copilot"
+  },
+  "crawler": {
+    "nodeId": "s534",
+    "depth": 537,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s533",
+        "via": "Open Loading state",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s535",
+        "via": "Wait 0.6s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

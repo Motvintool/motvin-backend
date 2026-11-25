@@ -1,0 +1,163 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-changing-email-6",
+  "screen_id": "groupme-ios-versions-2026-11-22-changing-email-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:37.154Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Changing email",
+  "flow_position": 7,
+  "name": "OTP verification",
+  "description": "Verification code toast, on top of OTP verification with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+  "text": "9:41 €\n•ll\n<\nVerify your email\nEnter the code for motvintool@gmail.com. Your email is\nalready saved; leaving won't undo changes.\n4\n2\n2\n3\n3\nDon't see it? Retry in 23 seconds\nContinue",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button",
+    "toast"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Verify your email”",
+        "Toast, covering 9% of the height from 9% down",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code toast, on top of OTP verification with a primary action labelled “Continue”. Dark theme, 11 text elements.",
+        "Calls to action: “Continue”",
+        "11 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 7 of 20 in “Logging in with phone number”",
+        "Reached from “OTP verification”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 17:06 in the recording",
+        "Frame 3427 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.724
+    },
+    {
+      "hex": "#262226",
+      "role": "surface",
+      "share": 0.25
+    },
+    {
+      "hex": "#4a464a",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#777477",
+      "role": "text",
+      "share": 0.009
+    },
+    {
+      "hex": "#5f5c5f",
+      "role": "surface",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3427,
+    "atSeconds": 1026.9,
+    "endSeconds": 1028.4,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": false,
+      "box": {
+        "x": 0.0625,
+        "y": 0.09375,
+        "w": 0.875,
+        "h": 0.09375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Verify your email",
+    "headline": "Don't see it? Retry in 23 seconds"
+  },
+  "crawler": {
+    "nodeId": "s502",
+    "depth": 505,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s501",
+        "via": "Tap “Verify your email”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s503",
+        "via": "Back to Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

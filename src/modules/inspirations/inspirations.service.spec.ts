@@ -37,14 +37,14 @@ describe('InspirationsService.getCounts', () => {
     admin.saveApp({ id: 'webby', name: 'Webby', industry: 'productivity' });
     admin.uploadScreen('ios', 'mobi', 'home.png', PNG_1X1, false, '');
     admin.uploadScreen('ios', 'mobi', 'cart.png', PNG_1X1, false, '');
-    admin.uploadScreen('web', 'webby', 'feed.png', PNG_1X1, false, '');
-    admin.uploadScreen('web', 'webby', 'compose.png', PNG_1X1, false, '');
+    admin.uploadScreen('webapp', 'webby', 'feed.png', PNG_1X1, false, '');
+    admin.uploadScreen('webapp', 'webby', 'compose.png', PNG_1X1, false, '');
     admin.saveScreenMeta('ios', 'mobi', 'home.png', { screenType: 'home', elements: ['tab-bar'] });
     admin.saveScreenMeta('ios', 'mobi', 'cart.png', { screenType: 'cart', elements: ['tab-bar', 'button'] });
-    admin.saveScreenMeta('web', 'webby', 'feed.png', { screenType: 'feed', elements: ['navbar'] });
-    admin.saveScreenMeta('web', 'webby', 'compose.png', { screenType: 'modal', elements: ['navbar'] });
+    admin.saveScreenMeta('webapp', 'webby', 'feed.png', { screenType: 'feed', elements: ['navbar'] });
+    admin.saveScreenMeta('webapp', 'webby', 'compose.png', { screenType: 'modal', elements: ['navbar'] });
     admin.saveFlow({ id: 'mobi-checkout', appId: 'mobi', name: 'Checkout', category: 'checkout', platform: 'ios', screenIds: ['mobi-ios-home', 'mobi-ios-cart'] });
-    admin.saveFlow({ id: 'webby-posting', appId: 'webby', name: 'Posting', category: 'creation', platform: 'web', screenIds: ['webby-web-feed', 'webby-web-compose'] });
+    admin.saveFlow({ id: 'webby-posting', appId: 'webby', name: 'Posting', category: 'creation', platform: 'webapp', screenIds: ['webby-webapp-feed', 'webby-webapp-compose'] });
   });
 
   afterEach(() => rmSync(tmp, { recursive: true, force: true }));
@@ -57,7 +57,7 @@ describe('InspirationsService.getCounts', () => {
   });
 
   it('for web offers only what web has', async () => {
-    const meta = await service.getCounts(['web']);
+    const meta = await service.getCounts(['webapp']);
     expect(meta.counts.apps).toBe(1);
     expect(meta.counts.screens).toBe(2);
     expect(meta.counts.flows).toBe(1);
@@ -78,16 +78,16 @@ describe('InspirationsService.getCounts', () => {
   });
 
   it('for a platform with nothing stored is empty, and still lists the platforms that exist', async () => {
-    const meta = await service.getCounts(['webapp']);
+    const meta = await service.getCounts(['site']);
     expect(meta.counts.screens).toBe(0);
     expect(meta.counts.apps).toBe(0);
     expect(meta.taxonomy.screenTypes).toEqual([]);
     expect(meta.taxonomy.elements).toEqual([]);
-    expect(meta.taxonomy.platforms.sort()).toEqual(['ios', 'web']);
+    expect(meta.taxonomy.platforms.sort()).toEqual(['ios', 'webapp']);
   });
 
   it('for several platforms is their union', async () => {
-    const meta = await service.getCounts(['ios', 'web']);
+    const meta = await service.getCounts(['ios', 'webapp']);
     expect(meta.counts.screens).toBe(4);
     expect(meta.taxonomy.industries.sort()).toEqual(['food', 'productivity']);
   });

@@ -1,0 +1,173 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sorting-chats-1",
+  "screen_id": "line-ios-versions-2026-11-22-sorting-chats-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:04:01.146Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sorting chats",
+  "flow_position": 26,
+  "name": "Messages",
+  "description": "Messages bottom sheet over a dimmed screen, on top of Enter a status message with a 3-item tab bar and a search bar. Dark theme, 15 text elements.",
+  "text": "9:41C\n•0l\nChats •\nQ Search\n4:40PM\nLINE\nLINE\nYour password has been changed.\n4:38 PM\nDesign1 (1) *\nGroup call ended.\n4:35 PM\nService Messages\nReport received\nKeep Memo\nSend any messages, photos, videos, and\nlinks you want to keep for yourself.\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "chat",
+    "message",
+    "photo",
+    "video",
+    "home",
+    "chats",
+    "calls",
+    "messages",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "search-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Navigation title reads “Send any messages, photos, videos, and”",
+        "Search bar present",
+        "Bottom sheet over a dimmed background, covering 48% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages bottom sheet over a dimmed screen, on top of Enter a status message with a 3-item tab bar and a search bar. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 30 in “Home”",
+        "Reached from “Enter a status message”",
+        "Leads to “Home”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 19:41 in the recording",
+        "Frame 3943 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#161317",
+      "role": "background",
+      "share": 0.905
+    },
+    {
+      "hex": "#353236",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#454346",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#0e6a2f",
+      "role": "accent",
+      "share": 0.006
+    },
+    {
+      "hex": "#28d168",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3943,
+    "atSeconds": 1181.1,
+    "endSeconds": 1183.2,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.484375,
+        "w": 0.875,
+        "h": 0.484375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Send any messages, photos, videos, and",
+    "headline": "Keep Memo"
+  },
+  "crawler": {
+    "nodeId": "s562",
+    "depth": 572,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s561",
+        "via": "Back to Messages",
+        "name": "Enter a status message"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s563",
+        "via": "Open Home",
+        "name": "Home"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

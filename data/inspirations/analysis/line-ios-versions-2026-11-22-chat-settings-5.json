@@ -1,0 +1,148 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-chat-settings-5",
+  "screen_id": "line-ios-versions-2026-11-22-chat-settings-5",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:27.352Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Chat settings",
+  "flow_position": 3,
+  "name": "Delete data",
+  "description": "Other screen. Dark theme, 13 text elements.",
+  "text": "9:41(\n•0\n<\nDelete data\nAll periods -\nPhotos 0KB\nDelete\nVideos 0KB\nDelete\nVoice messages ОKB\nDelete\nOther files 41.8KB\nDelete\nDelete all chat data and messages\nThis will delete all chat messages and data.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "photo",
+    "video",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Delete data”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Chatting with support”",
+        "Reached from “Support chat”",
+        "Leads to “Keep Memo”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.3s at 7:01 in the recording",
+        "Frame 1415 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.962
+    },
+    {
+      "hex": "#3b282d",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#59575a",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#454246",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#aaa8ab",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1415,
+    "atSeconds": 421.5,
+    "endSeconds": 424.8,
+    "holdSeconds": 3.3,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Delete data",
+    "headline": "Voice messages ОKB"
+  },
+  "crawler": {
+    "nodeId": "s189",
+    "depth": 191,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s188",
+        "via": "Open Delete data",
+        "name": "Support chat"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s190",
+        "via": "Open Keep Memo",
+        "name": "Keep Memo"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

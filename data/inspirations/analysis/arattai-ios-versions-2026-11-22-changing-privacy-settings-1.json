@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-changing-privacy-settings-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-changing-privacy-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:59.637Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing privacy settings",
+  "flow_position": null,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field. Dark theme, 18 text elements.",
+  "text": "9:41(\n•il a\n‹ Security & Privacy\nEverybody >\nMeetings\nAdd to groups\nMy contacts ›\nStories\nMy contacts ›\nBusiness permissions\nArattai profile name\nMobile number\nRead receipts\nWhen enabled, others can see when you've read their\nmessages. Read messages display a blue double tick\nalong with the read time.\nLink preview\nGenerate link previews in encrypted chats using Arattai\nservers. Disable to stop fetching previews.\nSync contacts\nOnce turned off, any contacts you add to the device\nwill no longer sync with the Arattai server.\nScreen security",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "message",
+    "review",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Security & Privacy”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field. Dark theme, 18 text elements.",
+        "18 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Phone number entry — scrolled”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 25:06 in the recording",
+        "Frame 5023 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#110e12",
+      "role": "background",
+      "share": 0.904
+    },
+    {
+      "hex": "#2f2e34",
+      "role": "surface",
+      "share": 0.046
+    },
+    {
+      "hex": "#4e4d4f",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#656467",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#f8fbfa",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 5023,
+    "atSeconds": 1506.3,
+    "endSeconds": 1507.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 18,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Security & Privacy",
+    "headline": "Read receipts"
+  },
+  "crawler": {
+    "nodeId": "s686",
+    "depth": 693,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s685",
+        "via": "Tap “‹ Security & Privacy”",
+        "name": "Phone number entry — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s687",
+        "via": "Wait 0.9s",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

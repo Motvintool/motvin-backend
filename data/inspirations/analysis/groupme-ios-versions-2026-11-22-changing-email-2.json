@@ -1,0 +1,145 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-changing-email-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-changing-email-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:36.839Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing email",
+  "flow_position": 3,
+  "name": "Email address",
+  "description": "Other screen with 1 input field. Dark theme, 6 text elements.",
+  "text": "9:41 €\n<\nEnter your\nemail address\nChanging this email saves it for account recovery\nbefore verification. Leaving won't undo the change.\nmotvintool@gmail.com",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "address",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Email address”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen with 1 input field. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 20 in “Logging in with phone number”",
+        "Reached from “Phone number entry”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 16:58 in the recording",
+        "Frame 3402 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060006",
+      "role": "background",
+      "share": 0.739
+    },
+    {
+      "hex": "#292629",
+      "role": "surface",
+      "share": 0.159
+    },
+    {
+      "hex": "#fffeff",
+      "role": "text",
+      "share": 0.037
+    },
+    {
+      "hex": "#666266",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#c1bec2",
+      "role": "surface",
+      "share": 0.013
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3402,
+    "atSeconds": 1018.2,
+    "endSeconds": 1020.9,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Email address",
+    "headline": "Email address"
+  },
+  "crawler": {
+    "nodeId": "s498",
+    "depth": 501,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s497",
+        "via": "Tap “Email”",
+        "name": "Phone number entry"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s499",
+        "via": "Open Verify your email",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

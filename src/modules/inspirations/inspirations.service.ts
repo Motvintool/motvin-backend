@@ -95,7 +95,7 @@ const SYNONYMS: Record<string, string[]> = {
   player: ['player'], video: ['player'], music: ['player'], podcast: ['player'],
   form: ['form'], input: ['form'], fields: ['form'],
   keyboard: ['keyboard'], scrolled: ['scrolled'],
-  mobile: ['ios'], iphone: ['ios'], desktop: ['web'], website: ['web'], webapp: ['webapp'],
+  mobile: ['ios'], iphone: ['ios'], desktop: ['webapp', 'site'], website: ['site'], websites: ['site'], site: ['site'], sites: ['site'], webapp: ['webapp'],
   clean: ['minimal'], simple: ['minimal'], black: ['dark'], white: ['light'],
   enterprise: ['corporate'], professional: ['corporate'],
 };
@@ -139,7 +139,8 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
   backfillWords(): Promise<void> {
     this.backfill ??= (async () => {
       try {
-        const screens = await this.loader.getScreens();
+        // Library screens only: a website's tall full-page captures are never searched by their words.
+        const screens = await this.loader.getLibraryScreens();
         const missing: InspirationScreen[] = [];
         for (const screen of screens) if (!(await this.loader.getWords(screen.id))) missing.push(screen);
         if (!missing.length) return;
@@ -190,7 +191,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
   async getCounts(platforms?: string[]) {
     const manifest = await this.loader.getManifest();
     if (!platforms?.length) {
-      const allScreens = await this.loader.getScreens();
+      const allScreens = await this.loader.getLibraryScreens();
       const allFlows = await this.loader.getFlows();
       return {
         counts: manifest.counts,
@@ -202,7 +203,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     }
 
     const on = new Set(platforms);
-    const screens = (await this.loader.getScreens()).filter((s) => on.has(s.platform));
+    const screens = (await this.loader.getLibraryScreens()).filter((s) => on.has(s.platform));
     const flows = (await this.loader.getFlows()).filter((f) => on.has(f.platform));
     const apps = (await this.loader.getApps()).filter((a) => a.platforms.some((p) => on.has(p)));
 
@@ -276,10 +277,18 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     return out;
   }
 
+  /** Website pages (or sections) from every site — of one type, or all of them — each site's newest capture only. */
+  async getSiteScreens(kind: 'page' | 'section', type: string, limit: number): Promise<InspirationScreen[]> {
+    const all = (await this.loader.getScreens()).filter((s) => s.site?.kind === kind && (!type || (kind === 'page' ? s.site.pageType : s.site.sectionType) === type));
+    const newest = new Map<string, string>();
+    for (const s of all) if (String(s.version ?? '') > (newest.get(s.appId) ?? '')) newest.set(s.appId, String(s.version ?? ''));
+    return this.sortScreens(all.filter((s) => String(s.version ?? '') === (newest.get(s.appId) ?? '')), 'curated').slice(0, limit);
+  }
+
   async getScreens(query: ScreenQuery): Promise<Page<InspirationScreen>> {
     // `app` is one app id, or several comma-separated (the web's colour filter: every app of one brand colour).
     const appIds = query.app?.split(',').map((id) => id.trim()).filter(Boolean);
-    let screens = this.filterScreens(await this.loader.getScreens(), { ...query, apps: appIds?.length ? appIds : undefined });
+    let screens = this.filterScreens(await this.loader.getLibraryScreens(), { ...query, apps: appIds?.length ? appIds : undefined });
 
     if (query.q?.trim()) {
       const apps = await this.loader.getApps();
@@ -388,7 +397,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
     if (platforms?.length) {
       const on = new Set(platforms);
       const counts: Record<string, number> = {};
-      for (const s of await this.loader.getScreens()) {
+      for (const s of await this.loader.getLibraryScreens()) {
         if (!on.has(s.platform)) continue;
         for (const e of s.elements) counts[e] = (counts[e] ?? 0) + 1;
       }
@@ -423,9 +432,12 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
   async getSimilar(screenId: string, limit = 12) {
     const screen = await this.loader.getScreen(screenId);
     if (!screen) return null;
-    const screens = await this.loader.getScreens();
+    // A website page or section has its own, website-only list (site-screens); app screens are never "similar" to it.
+    if (screen.site) return { basis: 'metadata', items: [] };
+    const screens = await this.loader.getLibraryScreens();
     const items = screens
-      .filter((s) => s.id !== screenId)
+      // Platforms never mix: an iOS screen meets iOS screens, a Web App screen Web App screens.
+      .filter((s) => s.id !== screenId && s.platform === screen.platform)
       .map((s) => {
         let score = 0;
         if (s.screenType === screen.screenType) score += 5;
@@ -453,7 +465,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
    */
   async search(q: string, limit = 50, offset = 0, filters: SearchFilters = {}, literal = false) {
     const [allScreens, allApps, allFlows, patterns] = await Promise.all([
-      this.loader.getScreens(),
+      this.loader.getLibraryScreens(),
       this.loader.getApps(),
       this.loader.getFlows(),
       this.loader.getPatterns(),
@@ -526,7 +538,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
 
   /** OCR-backed search is opt-in: the regular search remains metadata-only. */
   async searchScreenshotText(q: string, limit = 50, offset = 0, appId?: string) {
-    const [allScreens, manifest] = await Promise.all([this.loader.getScreens(), this.loader.getManifest()]);
+    const [allScreens, manifest] = await Promise.all([this.loader.getLibraryScreens(), this.loader.getManifest()]);
     const screens = appId ? allScreens.filter((screen) => screen.appId === appId) : allScreens;
     const intent = this.interpret(q, manifest);
     const query = q.trim().toLocaleLowerCase();
@@ -672,7 +684,7 @@ export class InspirationsService implements OnModuleDestroy, OnApplicationBootst
    * screens among equals. Same matching and filters as `search`.
    */
   async rankedScreens(q: string, filters: SearchFilters = {}): Promise<{ screen: InspirationScreen; score: number }[]> {
-    const [allScreens, allApps] = await Promise.all([this.loader.getScreens(), this.loader.getApps()]);
+    const [allScreens, allApps] = await Promise.all([this.loader.getLibraryScreens(), this.loader.getApps()]);
     // Meaning-based relevance (word forms, same-meaning words, field weights),
     // scaled to 0–5 points against the best match and added to the usual score.
     const semantic = this.semanticIndex(allScreens, allApps).score(q);

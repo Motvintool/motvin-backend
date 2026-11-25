@@ -1,0 +1,144 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-changing-meeting-preferences-1",
+  "screen_id": "arattai-ios-versions-2026-11-22-changing-meeting-preferences-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:46.818Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Changing meeting preferences",
+  "flow_position": 1,
+  "name": "Settings",
+  "description": "Settings screen. Dark theme, 11 text elements.",
+  "text": "9:41\nPreferences\nDone\nWaiting room for participants\nOnly users admitted by the host can join the meeting.\nView recording\n>\nAll attendees and invited participants\nMute participants upon entry\nParticipants video\nScreen share\nThese permissions will be applicable only for this meeting.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "video",
+    "settings",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Waiting room for participants”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 3 in “Settings”",
+        "Reached from “Video home”",
+        "Leads to “Settings”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 22:03 in the recording",
+        "Frame 4412 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141215",
+      "role": "background",
+      "share": 0.723
+    },
+    {
+      "hex": "#363537",
+      "role": "surface",
+      "share": 0.21
+    },
+    {
+      "hex": "#5d5d5e",
+      "role": "surface",
+      "share": 0.045
+    },
+    {
+      "hex": "#257447",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#fbfdfc",
+      "role": "text",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4412,
+    "atSeconds": 1323,
+    "endSeconds": 1323.9,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Waiting room for participants",
+    "headline": "Mute participants upon entry"
+  },
+  "crawler": {
+    "nodeId": "s589",
+    "depth": 594,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s588",
+        "via": "Open Waiting room for participants",
+        "name": "Video home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s590",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

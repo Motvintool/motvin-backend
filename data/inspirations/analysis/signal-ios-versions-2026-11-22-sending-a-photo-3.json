@@ -1,0 +1,145 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-sending-a-photo-3",
+  "screen_id": "signal-ios-versions-2026-11-22-sending-a-photo-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:43.405Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sending a photo",
+  "flow_position": 2,
+  "name": "Other",
+  "description": "Other screen. Dark theme, 3 text elements.",
+  "text": "9:41C\n1 Design\nTap here to make this message disappear after it\nis viewed.\nMessage",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 3 text elements.",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 11 in “Opening a page (Photos)”",
+        "Reached from “Loading state”",
+        "Leads to “Messages”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 4:16 in the recording",
+        "Frame 862 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.578
+    },
+    {
+      "hex": "#fefdff",
+      "role": "text",
+      "share": 0.192
+    },
+    {
+      "hex": "#3f7dfd",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#282528",
+      "role": "surface",
+      "share": 0.032
+    },
+    {
+      "hex": "#2456c9",
+      "role": "accent",
+      "share": 0.022
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 862,
+    "atSeconds": 256.2,
+    "endSeconds": 258.9,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s103",
+    "depth": 103,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s102",
+        "via": "Wait 1.8s",
+        "name": "Loading state"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s104",
+        "via": "Open Messages",
+        "name": "Messages"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

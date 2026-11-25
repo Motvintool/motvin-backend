@@ -1,0 +1,153 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-editing-profile-2",
+  "screen_id": "signal-ios-versions-2026-11-22-editing-profile-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:12.062Z",
+  "screen_type": "form",
+  "published_as": "form",
+  "states": [
+    "scrolled",
+    "keyboard"
+  ],
+  "category": "social",
+  "flow": "creation",
+  "flow_name": "Editing profile",
+  "flow_position": 2,
+  "name": "Profile — scrolled",
+  "description": "Form screen, scrolled further down from Profile with the keyboard open. Dark theme, 24 text elements.",
+  "text": "9:41€\nX\nYour Name\nMotvinl\nTool\ni\nW\nt\ny\nO\ne\nk\nf\nh\nd\na\nJ\nS\nb\nZ\nm\nC\nV\nn\n123",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "form",
+    "scrolled",
+    "keyboard",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "keyboard",
+    "text-field",
+    "form",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Name”",
+        "Keyboard is open, so the lower half is input",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Form screen, scrolled further down from Profile with the keyboard open. Dark theme, 24 text elements.",
+        "24 text elements recognised",
+        "State: scrolled, keyboard"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Editing profile”",
+        "Reached from “Profile”",
+        "Leads to “Profile — scrolled — scrolled”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 13:54 in the recording",
+        "Frame 2786 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#222024",
+      "role": "background",
+      "share": 0.816
+    },
+    {
+      "hex": "#4a484b",
+      "role": "surface",
+      "share": 0.095
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.066
+    },
+    {
+      "hex": "#666467",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#838187",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2786,
+    "atSeconds": 834.9,
+    "endSeconds": 836.1,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 24,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": true,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your Name",
+    "headline": "Motvinl"
+  },
+  "crawler": {
+    "nodeId": "s408",
+    "depth": 411,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s407",
+        "via": "Scroll",
+        "name": "Profile"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s409",
+        "via": "Scroll",
+        "name": "Profile — scrolled — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

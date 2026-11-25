@@ -1,0 +1,159 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-reporting-a-profile-4",
+  "screen_id": "yubo-ios-versions-2026-11-22-reporting-a-profile-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:03.526Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Reporting a profile",
+  "flow_position": 45,
+  "name": "Other sheet",
+  "description": "Bottom sheet, on top of Enforcement immediately. Dark theme, 10 text elements.",
+  "text": "9:41(\nooll\nReport\nWhere did it happen?\nIf someone you know is an imminent threat or\nin immediate danger, contact local law\nenforcement immediately.\nChat (direct message)\n>\nLive (streaming or chatting)\nProfile pictures\nOther",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "message",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Other”",
+        "Bottom sheet, covering 38% of the height from 48% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Enforcement immediately. Dark theme, 10 text elements.",
+        "10 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 45 of 338 in “Subscribing”",
+        "Reached from “Enforcement immediately”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 3:41 in the recording",
+        "Frame 741 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a0908",
+      "role": "background",
+      "share": 0.908
+    },
+    {
+      "hex": "#3d1d1c",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#4b4a4a",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#666464",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#353435",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 741,
+    "atSeconds": 221.4,
+    "endSeconds": 222.6,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.03125,
+        "y": 0.484375,
+        "w": 0.5625,
+        "h": 0.375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 10,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Other",
+    "headline": "In immediate danger, contact local law"
+  },
+  "crawler": {
+    "nodeId": "s109",
+    "depth": 108,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s108",
+        "via": "Back to Other sheet",
+        "name": "Enforcement immediately"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s110",
+        "via": "Tap “Report”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

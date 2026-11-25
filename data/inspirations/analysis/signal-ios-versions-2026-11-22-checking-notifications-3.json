@@ -1,0 +1,146 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-checking-notifications-3",
+  "screen_id": "signal-ios-versions-2026-11-22-checking-notifications-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:16.166Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Checking notifications",
+  "flow_position": 3,
+  "name": "Create account",
+  "description": "Sign up screen. Dark theme, 16 text elements.",
+  "text": "9:41€\n•8l\n<\nNotifications\nCall and Message notitications can appear while your\nphone is locked.\nUnread Reminders\nOccasionally notify when there are unread messages in\nmuted chats.\nReaction Notifications\nShow notifications for reactions to messages you send.\nContact Joins Signal\nShow a notification when a phone contact joins Signal.\nApp Badge\nBadge Count\nUnread Messages >\nInclude Muted Chats\nRe-register Push Notifications\nReset Notification Settings\nReset notification settings to default, including custom\nsettings for your chats.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "notification",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Notifications”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen. Dark theme, 16 text elements.",
+        "16 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Checking notifications”",
+        "Reached from “Notifications”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 15:25 in the recording",
+        "Frame 3088 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#262428",
+      "role": "background",
+      "share": 0.821
+    },
+    {
+      "hex": "#474449",
+      "role": "surface",
+      "share": 0.079
+    },
+    {
+      "hex": "#070207",
+      "role": "accent",
+      "share": 0.06
+    },
+    {
+      "hex": "#5b5a5e",
+      "role": "surface",
+      "share": 0.02
+    },
+    {
+      "hex": "#5c3132",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 3088,
+    "atSeconds": 925.8,
+    "endSeconds": 926.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 16,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Notifications",
+    "headline": "App Badge"
+  },
+  "crawler": {
+    "nodeId": "s457",
+    "depth": 461,
+    "path": [],
+    "visits": 2,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s456",
+        "via": "Tap “Notifications”",
+        "name": "Notifications"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s458",
+        "via": "Back to Settings",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

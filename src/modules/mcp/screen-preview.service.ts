@@ -14,6 +14,8 @@ import { InspirationScreen, LoaderService } from '../inspirations/loader.service
  */
 
 type ImageOps = {
+  metadata(): Promise<{ width?: number; height?: number }>;
+  extract(region: { left: number; top: number; width: number; height: number }): ImageOps;
   resize(options: { width: number; withoutEnlargement: boolean }): ImageOps;
   jpeg(options: { quality: number; mozjpeg?: boolean }): ImageOps;
   toBuffer(): Promise<Buffer>;
@@ -23,7 +25,14 @@ type ImageOps = {
 // native binary and a CommonJS entry, so a plain require keeps the import
 // simple under the project's module settings.
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const sharp: (input: string) => ImageOps = require('sharp');
+const sharp: (input: string, options?: { limitInputPixels: false }) => ImageOps = require('sharp');
+
+/**
+ * A website's whole page can be 16,000px tall: shrunk to preview width it is a thin strip no model can read.
+ * Its preview is its top, as a visitor first sees it; a section taller than this many widths keeps its top too.
+ */
+const PAGE_TOP_SHARE = 1;
+const SECTION_MAX_SHARE = 2.5;
 
 export const PREVIEW_MIME = 'image/jpeg';
 
@@ -46,7 +55,14 @@ export class ScreenPreviewService {
     const absolute = await this.loader.resolveServableFile(`screens/${screen.file}`);
     if (!absolute) return null;
 
-    const buffer = await sharp(absolute)
+    let image = sharp(absolute, { limitInputPixels: false });
+    const site = screen.site;
+    if (site) {
+      const { width: w = 0, height: h = 0 } = await image.metadata();
+      const keep = Math.round(w * (site.kind === 'page' ? PAGE_TOP_SHARE : SECTION_MAX_SHARE));
+      if (w && h > keep) image = sharp(absolute, { limitInputPixels: false }).extract({ left: 0, top: 0, width: w, height: keep });
+    }
+    const buffer = await image
       .resize({ width, withoutEnlargement: true })
       .jpeg({ quality: 70, mozjpeg: true })
       .toBuffer();

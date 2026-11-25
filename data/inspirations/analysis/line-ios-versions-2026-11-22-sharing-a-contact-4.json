@@ -1,0 +1,171 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-sharing-a-contact-4",
+  "screen_id": "line-ios-versions-2026-11-22-sharing-a-contact-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:14.660Z",
+  "screen_type": "permission",
+  "published_as": "permission",
+  "states": [
+    "permission"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Sharing a contact",
+  "flow_position": 41,
+  "name": "Camera permission",
+  "description": "Permission dialog over a dimmed screen, on top of Keep Memo with a search bar and a primary action labelled “Continue”. Dark theme, 15 text elements.",
+  "text": "9:41(\n•0\nKeep Memo\nToday\nSend any messages, photos, videos, and links you want to\nkeep for yourselt.\nHey\n4:16 PM\n\"LINE\" would like to access\nyour Contacts.\nla\nYour device's contacts will be sent to\nLINE's servers and only used to\nsearch for your friends and prevent\nunauthorized use of LINE.\nDon't Allow\nContinue\n+\nAa",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "message",
+    "photo",
+    "video",
+    "aa",
+    "permission",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "cta",
+    "button",
+    "modal",
+    "alert"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Your Contacts”",
+        "Search bar present",
+        "Dialog over a dimmed background, covering 14% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Permission dialog over a dimmed screen, on top of Keep Memo with a search bar and a primary action labelled “Continue”. Dark theme, 15 text elements.",
+        "Calls to action: “Continue”",
+        "15 text elements recognised",
+        "State: permission"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 41 of 61 in “Opening a page (Home)”",
+        "Reached from “Keep Memo”",
+        "Leads to “Phone number entry”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:36 in the recording",
+        "Frame 523 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#111113",
+      "role": "background",
+      "share": 0.847
+    },
+    {
+      "hex": "#2c362c",
+      "role": "surface",
+      "share": 0.102
+    },
+    {
+      "hex": "#5a605a",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#4b4d4b",
+      "role": "surface",
+      "share": 0.006
+    },
+    {
+      "hex": "#356c3b",
+      "role": "accent",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 523,
+    "atSeconds": 156.3,
+    "endSeconds": 157.2,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.40625,
+        "w": 0.8125,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Continue"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Your Contacts",
+    "headline": "Your Contacts",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s071",
+    "depth": 73,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "system permission prompt — needs a human decision",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s070",
+        "via": "Open Your Contacts",
+        "name": "Keep Memo"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s072",
+        "via": "Open Phone number entry",
+        "name": "Phone number entry"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

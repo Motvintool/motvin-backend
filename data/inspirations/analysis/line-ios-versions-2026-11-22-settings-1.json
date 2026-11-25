@@ -1,0 +1,151 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-settings-1",
+  "screen_id": "line-ios-versions-2026-11-22-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:45.891Z",
+  "screen_type": "settings",
+  "published_as": "settings",
+  "states": [],
+  "category": "social",
+  "flow": "settings",
+  "flow_name": "Settings",
+  "flow_position": 15,
+  "name": "Settings",
+  "description": "Settings screen with a search bar. Dark theme, 14 text elements.",
+  "text": "9:41(\n•0l\nSettings\nQ. Search settings, help articles\nProfile\n>\nPersonal info\nAccount\nPrivacy\nBackup and transfer\nChat history backup\nEasy transfer QR code\nAccount transfer options\nShops\nStickers\n>\nThemes\nCoins\n>",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "profile",
+    "settings",
+    "chat",
+    "themes",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Q. Search settings, help articles”",
+        "Search bar present",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Settings screen with a search bar. Dark theme, 14 text elements.",
+        "14 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 15 of 27 in “Settings”",
+        "Reached from “Home home”",
+        "Leads to “Settings — scrolled”",
+        "Returned to 7 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 14:46 in the recording",
+        "Frame 2958 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.889
+    },
+    {
+      "hex": "#383539",
+      "role": "surface",
+      "share": 0.078
+    },
+    {
+      "hex": "#545154",
+      "role": "surface",
+      "share": 0.027
+    },
+    {
+      "hex": "#6d6a6b",
+      "role": "surface",
+      "share": 0.001
+    },
+    {
+      "hex": "#aea9af",
+      "role": "text",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 2958,
+    "atSeconds": 886.2,
+    "endSeconds": 887.7,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 7
+  },
+  "signals": {
+    "lineCount": 14,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Q. Search settings, help articles",
+    "headline": "Chat history backup",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s396",
+    "depth": 403,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s395",
+        "via": "Tap “Q Search”",
+        "name": "Home home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s397",
+        "via": "Scroll",
+        "name": "Settings — scrolled"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

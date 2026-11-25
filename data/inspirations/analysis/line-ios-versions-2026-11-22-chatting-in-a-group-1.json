@@ -1,0 +1,161 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-chatting-in-a-group-1",
+  "screen_id": "line-ios-versions-2026-11-22-chatting-in-a-group-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:31.507Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Chatting in a group",
+  "flow_position": null,
+  "name": "Set up group profile — loading",
+  "description": "Loading state of Set up group profile with a 3-item tab bar and a row of 3 category chips. Dark theme, 5 text elements.",
+  "text": "9:41(\nCreate\nGroup\nChat\nMeeting\nlinks you want to keep for yourself.\nHome\nChats\nCalls",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "home",
+    "chats",
+    "calls",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "chip",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Home, Chats, Calls",
+        "Category strip: Group, Chat, Meeting",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Set up group profile with a 3-item tab bar and a row of 3 category chips. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Chats”",
+        "Leads to “Set up group profile — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 8:53 in the recording",
+        "Frame 1785 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0a090b",
+      "role": "background",
+      "share": 0.971
+    },
+    {
+      "hex": "#272528",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#565457",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#413e42",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#6c6a6d",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1785,
+    "atSeconds": 533.7,
+    "endSeconds": 535.8,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Home",
+      "Chats",
+      "Calls"
+    ],
+    "chipLabels": [
+      "Group",
+      "Chat",
+      "Meeting"
+    ],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": "Meeting"
+  },
+  "crawler": {
+    "nodeId": "s236",
+    "depth": 239,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s235",
+        "via": "Open Set up group profile — loading",
+        "name": "Chats"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s237",
+        "via": "Wait 2.1s",
+        "name": "Set up group profile — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

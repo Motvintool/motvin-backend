@@ -1,0 +1,145 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-deleting-an-account-2",
+  "screen_id": "line-ios-versions-2026-11-22-deleting-an-account-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:54.166Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting an account",
+  "flow_position": 26,
+  "name": "Delete account",
+  "description": "Other screen. Dark theme, 17 text elements.",
+  "text": "9:41(\n•ll\n<\nDelete account\nAre you sure you want to delete your\nLINE account?\nYour Items\nCoins\n>\nPoints\nStickers\n8\nThemes\n3\n>\nIf you delete your LINE account, your purchase history,\nCoins, Points, and purchased items will all be permanently\ndeleted.\nDelete account\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "cancel",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Delete account”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 17 text elements.",
+        "17 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 26 of 27 in “Logging in with email”",
+        "Reached from “Sign in with email”",
+        "Leads to “Sign in with email”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 17:32 in the recording",
+        "Frame 3514 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151216",
+      "role": "background",
+      "share": 0.926
+    },
+    {
+      "hex": "#423f43",
+      "role": "surface",
+      "share": 0.055
+    },
+    {
+      "hex": "#5d5a5e",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#2b282c",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#a7a6a8",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3514,
+    "atSeconds": 1052.7,
+    "endSeconds": 1054.5,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 17,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Delete account",
+    "headline": "Are you sure you want to delete your",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s483",
+    "depth": 492,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s482",
+        "via": "Tap “Delete account”",
+        "name": "Sign in with email"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s484",
+        "via": "Wait 1.8s",
+        "name": "Sign in with email"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

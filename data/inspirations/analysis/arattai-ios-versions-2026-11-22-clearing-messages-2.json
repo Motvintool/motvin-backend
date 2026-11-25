@@ -1,0 +1,152 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-clearing-messages-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-clearing-messages-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:12.987Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Clearing messages",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 15 text elements.",
+  "text": "9:414\nTrip\n1 participant\nMedia & Files\nMute chat\nStarred messages\nClear messages\nThis will clear all the messages in Trip\nonly for you\nRemove from chat listing\nClear\nCancel\nClear messages\nLeave group\nDelete group\nCreated by You.\nThis chat is end-to-end encrypted",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "message",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Media & Files”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 3 in “Media & Files”",
+        "Reached from “Media & Files”",
+        "Leads to “Explore contacts”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.4s at 13:51 in the recording",
+        "Frame 2778 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c090c",
+      "role": "background",
+      "share": 0.841
+    },
+    {
+      "hex": "#2b292b",
+      "role": "surface",
+      "share": 0.141
+    },
+    {
+      "hex": "#474547",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#615f61",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#633334",
+      "role": "accent",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2778,
+    "atSeconds": 831.3,
+    "endSeconds": 833.7,
+    "holdSeconds": 2.4,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Media & Files",
+    "headline": "Media & Files"
+  },
+  "crawler": {
+    "nodeId": "s364",
+    "depth": 367,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s363",
+        "via": "Tap “Media & Files”",
+        "name": "Media & Files"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s365",
+        "via": "Wait 2.4s",
+        "name": "Explore contacts"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

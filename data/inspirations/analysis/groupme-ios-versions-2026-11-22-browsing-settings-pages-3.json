@@ -1,0 +1,150 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-browsing-settings-pages-3",
+  "screen_id": "groupme-ios-versions-2026-11-22-browsing-settings-pages-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:39.932Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Browsing settings pages",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 7 text elements.",
+  "text": "9:41(\nPause notifications\nFor 1 hour\nFor 2 hours\nFor 4 hours\nFor 8 hours\nFor 12 hours\nFor 24 hours",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "notification",
+    "notifications",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Pause notifications”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Checking notifications”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 18:05 in the recording",
+        "Frame 3618 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.712
+    },
+    {
+      "hex": "#2b282b",
+      "role": "surface",
+      "share": 0.257
+    },
+    {
+      "hex": "#4a474a",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#a2a1a2",
+      "role": "text",
+      "share": 0.003
+    },
+    {
+      "hex": "#7d7b7d",
+      "role": "surface",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 3618,
+    "atSeconds": 1085.1,
+    "endSeconds": 1085.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Pause notifications",
+    "headline": "For 12 hours"
+  },
+  "crawler": {
+    "nodeId": "s536",
+    "depth": 539,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s535",
+        "via": "Tap “Pause notifications”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s537",
+        "via": "Wait 0.6s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,147 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-creating-a-pin-1",
+  "screen_id": "signal-ios-versions-2026-11-22-creating-a-pin-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:36.508Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [
+    "scrolled"
+  ],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Creating a PIN",
+  "flow_position": 17,
+  "name": "OTP verification — scrolled — scrolled",
+  "description": "Onboarding screen, scrolled further down from OTP verification — scrolled. Dark theme, 6 text elements.",
+  "text": "9:41 €\n•ll\nNext\n..\nCreate your PIN\nPINs can help you restore your account and keep\nyour info encrypted with Signal. Learn More\nPIN must be at least 4 digits\nCreate Alphanumeric PIN",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "onboarding",
+    "scrolled",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create your PIN”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen, scrolled further down from OTP verification — scrolled. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: scrolled"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 17 of 35 in “Entering phone number”",
+        "Reached from “OTP verification — scrolled”",
+        "Leads to “Create your PIN”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:50 in the recording",
+        "Frame 171 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.9
+    },
+    {
+      "hex": "#1e1d25",
+      "role": "surface",
+      "share": 0.082
+    },
+    {
+      "hex": "#454145",
+      "role": "surface",
+      "share": 0.011
+    },
+    {
+      "hex": "#6d6a6d",
+      "role": "surface",
+      "share": 0.007
+    },
+    {
+      "hex": "#a5a2a5",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 171,
+    "atSeconds": 50.1,
+    "endSeconds": 51.6,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "scrolled",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create your PIN",
+    "headline": "PIN must be at least 4 digits"
+  },
+  "crawler": {
+    "nodeId": "s023",
+    "depth": 22,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bOTP\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s022",
+        "via": "Scroll",
+        "name": "OTP verification — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s024",
+        "via": "Tap “Create your PIN”",
+        "name": "Create your PIN"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -51,6 +51,22 @@ export interface InspirationScreen {
   capturedAt: string | null;
   /** Which dated capture this screen belongs to, e.g. "2026-09-29". */
   version: string;
+  /**
+   * Web (sites) only: a whole page (`kind: 'page'`, what it is in `pageType`) or one part of a page
+   * (`kind: 'section'`, `sectionType`, its page in `parentId`, where it sits as shares of the page's height).
+   * Absent on Web Apps and iOS screens.
+   */
+  site?: {
+    kind: 'page' | 'section';
+    pageType: string;
+    sectionType: string | null;
+    parentId: string | null;
+    top: number | null;
+    height: number | null;
+    pageUrl: string | null;
+    heading?: string | null;
+    customName?: string | null;
+  };
   hasAnalysis: boolean;
   downloadable: boolean;
   source: {
@@ -310,6 +326,15 @@ export class LoaderService implements OnModuleInit {
 
   async getScreens(): Promise<InspirationScreen[]> {
     return (await this.getManifest()).screens;
+  }
+
+  /**
+   * The screens the library lists anywhere but an app's own page — browse, search, similar, counts, elements.
+   * A website's pages and sections are left out: websites are browsed by site, each page whole on the site's
+   * own page (Full Page / Sections), so they never mix into the Web Apps and iOS screen lists.
+   */
+  async getLibraryScreens(): Promise<InspirationScreen[]> {
+    return (await this.getScreens()).filter((s) => !s.site);
   }
 
   async getScreen(id: string): Promise<InspirationScreen | null> {

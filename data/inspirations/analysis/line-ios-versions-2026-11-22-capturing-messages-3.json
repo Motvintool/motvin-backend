@@ -1,0 +1,163 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-capturing-messages-3",
+  "screen_id": "line-ios-versions-2026-11-22-capturing-messages-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:23.111Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Capturing messages",
+  "flow_position": 52,
+  "name": "Capture",
+  "description": "Messages dialog over a dimmed screen, on top of Black).png toast. Dark theme, 28 text elements.",
+  "text": "9:41(\nCapture\nReselect\nFirst message selected! Tap last message of capture.\n4:16 PM\nmotvin logo (social media\nblack).png\nValid till: 29/11, 4:16 PM\nSize: 40.85 kB\n4:16 PM\nCross St\n117th St\nW\nMana\nMathur\nLD600T6\n-114th St\nMMDA park\nGaogle\nIndia Tees\n14.40 3Road Main Road, Edema\nNagar, Mmda Layout, Mathur\n600068, Tamil Nadu\n• Location\n4:17 PM\n4:18 PM\nHllld\n00:04\n4:19 PM\nHide info\nCapture",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "location",
+    "hide info",
+    "capture",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Capture”",
+        "Dialog over a dimmed background, covering 19% of the height from 6% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Black).png toast. Dark theme, 28 text elements.",
+        "28 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 52 of 99 in “Reading messages”",
+        "Reached from “Black).png toast”",
+        "Leads to “Other — loading”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 6s at 5:23 in the recording",
+        "Frame 1097 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#121014",
+      "role": "background",
+      "share": 0.623
+    },
+    {
+      "hex": "#366c3d",
+      "role": "accent",
+      "share": 0.148
+    },
+    {
+      "hex": "#757576",
+      "role": "text",
+      "share": 0.107
+    },
+    {
+      "hex": "#2a302b",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#4f4c4e",
+      "role": "surface",
+      "share": 0.026
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1097,
+    "atSeconds": 323.4,
+    "endSeconds": 329.4,
+    "holdSeconds": 6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.0625,
+        "w": 0.71875,
+        "h": 0.1875
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 28,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Capture",
+    "headline": "Gaogle",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s150",
+    "depth": 152,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s149",
+        "via": "Tap “Gaogle”",
+        "name": "Black).png toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s151",
+        "via": "Tap “Reselect”",
+        "name": "Other — loading"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

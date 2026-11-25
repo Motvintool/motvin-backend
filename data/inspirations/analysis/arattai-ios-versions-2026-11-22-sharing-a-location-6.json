@@ -1,0 +1,144 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-sharing-a-location-6",
+  "screen_id": "arattai-ios-versions-2026-11-22-sharing-a-location-6",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:44.019Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a location",
+  "flow_position": 8,
+  "name": "Saved locations",
+  "description": "Other screen. Dark theme, 6 text elements.",
+  "text": "9:41 4\n•1| 9\nSaved locations\nX\n1 place\nHh\n• ••\nSubramani St, Subramani Nagar, Chennai",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "location",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Saved locations”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 6 text elements.",
+        "6 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 8 of 18 in “Share location”",
+        "Reached from “Select location toast”",
+        "Leads to “Saved locations sheet”",
+        "Returned to 5 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 7:23 in the recording",
+        "Frame 1483 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0d0a0e",
+      "role": "background",
+      "share": 0.965
+    },
+    {
+      "hex": "#262329",
+      "role": "surface",
+      "share": 0.017
+    },
+    {
+      "hex": "#4d4a4e",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#3f4da8",
+      "role": "accent",
+      "share": 0.002
+    },
+    {
+      "hex": "#6d82fa",
+      "role": "text",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1483,
+    "atSeconds": 443.7,
+    "endSeconds": 445.2,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 5
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Saved locations",
+    "headline": null
+  },
+  "crawler": {
+    "nodeId": "s174",
+    "depth": 175,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s173",
+        "via": "Dismiss",
+        "name": "Select location toast"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s175",
+        "via": "Wait 1.5s",
+        "name": "Saved locations sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,151 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-starting-a-call-4",
+  "screen_id": "arattai-ios-versions-2026-11-22-starting-a-call-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:52.511Z",
+  "screen_type": "error",
+  "published_as": "error",
+  "states": [
+    "error",
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Starting a call",
+  "flow_position": 6,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 7 text elements.",
+  "text": "Calling...\nDevi M Jio\n& End to end encrypted\nUnable to Call\nThis call cannot be placed due to the privacy\nsettings of the user.\nOK",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "error",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Devi M Jio”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: error, loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 7 in “Start call”",
+        "Reached from “Start call”",
+        "Leads to “Start call”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 23:30 in the recording",
+        "Frame 4704 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0b1929",
+      "role": "background",
+      "share": 0.908
+    },
+    {
+      "hex": "#32353c",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#163757",
+      "role": "surface",
+      "share": 0.031
+    },
+    {
+      "hex": "#5f070d",
+      "role": "accent",
+      "share": 0.012
+    },
+    {
+      "hex": "#444d5a",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 4704,
+    "atSeconds": 1410,
+    "endSeconds": 1411.5,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Devi M Jio",
+    "headline": "Devi M Jio"
+  },
+  "crawler": {
+    "nodeId": "s631",
+    "depth": 636,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s630",
+        "via": "Tap “Devi M Jio”",
+        "name": "Start call"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s632",
+        "via": "Wait 1.5s",
+        "name": "Start call"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

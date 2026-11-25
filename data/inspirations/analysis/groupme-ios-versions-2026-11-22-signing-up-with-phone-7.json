@@ -1,0 +1,143 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-signing-up-with-phone-7",
+  "screen_id": "groupme-ios-versions-2026-11-22-signing-up-with-phone-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:51.553Z",
+  "screen_type": "otp",
+  "published_as": "login",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Signing up with phone",
+  "flow_position": 14,
+  "name": "OTP verification",
+  "description": "Verification code screen. Dark theme, 12 text elements.",
+  "text": "9:41 €\n<\nContact Support\n•\nEnter the code we\nsent you\nWe sent to +91 6382-1025-14 to verify\n6\n2\n5\n1\n5\nDon't see it? Retry in 17 seconds\nÔ Phone numbers aren't shared on your profile",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "otp",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Contact Support”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Verification code screen. Dark theme, 12 text elements.",
+        "12 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 14 of 34 in “Onboarding”",
+        "Reached from “OTP verification”",
+        "Leads to “OTP verification”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 0:38 in the recording",
+        "Frame 128 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.709
+    },
+    {
+      "hex": "#272327",
+      "role": "surface",
+      "share": 0.193
+    },
+    {
+      "hex": "#faf8fa",
+      "role": "text",
+      "share": 0.048
+    },
+    {
+      "hex": "#4f4b4f",
+      "role": "surface",
+      "share": 0.03
+    },
+    {
+      "hex": "#827f83",
+      "role": "surface",
+      "share": 0.009
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 128,
+    "atSeconds": 38.1,
+    "endSeconds": 38.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Contact Support",
+    "headline": "Sent you"
+  },
+  "crawler": {
+    "nodeId": "s014",
+    "depth": 13,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "access control detected in screen text (\\bverification code\\b)",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s013",
+        "via": "Tap “Enter the code we”",
+        "name": "OTP verification"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s015",
+        "via": "Back to OTP verification",
+        "name": "OTP verification"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

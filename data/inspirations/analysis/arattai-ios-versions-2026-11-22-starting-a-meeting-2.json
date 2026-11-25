@@ -1,0 +1,150 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-starting-a-meeting-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-starting-a-meeting-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:29.405Z",
+  "screen_type": "onboarding",
+  "published_as": "onboarding",
+  "states": [],
+  "category": "social",
+  "flow": "onboarding",
+  "flow_name": "Starting a meeting",
+  "flow_position": 27,
+  "name": "Onboarding step",
+  "description": "Onboarding screen with a primary action labelled “Enable microphone”. Dark theme, 3 text elements.",
+  "text": "9:41\nTrip - 22/11/2026\nEnable microphone\nEnable camera\nStart meeting",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "start meeting",
+    "onboarding",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "cta",
+    "button"
+  ],
+  "style": [
+    "dark",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Dark, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Onboarding screen with a primary action labelled “Enable microphone”. Dark theme, 3 text elements.",
+        "Calls to action: “Enable microphone”, “Enable camera”",
+        "3 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 27 of 52 in “Reading messages”",
+        "Reached from “Onboarding step — loading”",
+        "Leads to “Onboarding step”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 3:21 in the recording",
+        "Frame 675 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#101214",
+      "role": "background",
+      "share": 0.428
+    },
+    {
+      "hex": "#c0bbb1",
+      "role": "text",
+      "share": 0.149
+    },
+    {
+      "hex": "#432f2c",
+      "role": "surface",
+      "share": 0.115
+    },
+    {
+      "hex": "#9b9b97",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#69524f",
+      "role": "surface",
+      "share": 0.055
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 675,
+    "atSeconds": 201.3,
+    "endSeconds": 202.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 3,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Enable microphone",
+      "Enable camera"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": null,
+    "headline": null,
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s077",
+    "depth": 76,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s076",
+        "via": "Wait 5.4s",
+        "name": "Onboarding step — loading"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s078",
+        "via": "Tap “Start meeting”",
+        "name": "Onboarding step"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

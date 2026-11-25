@@ -1,0 +1,149 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-changing-group-settings-10",
+  "screen_id": "groupme-ios-versions-2026-11-22-changing-group-settings-10",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:20.737Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing group settings",
+  "flow_position": 2,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 11 text elements.",
+  "text": "9:41(\n•ll\n<\nPrivacy\nWho can join?\nAnyone\nAnyone can join the group\nApproved members\nAdmins approval required before joining\nJoin Question\n+\nAdd a join question\nWhen a user requests to join, ask them a question",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Privacy”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 11 text elements.",
+        "11 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Privacy”",
+        "Reached from “Settings”",
+        "Leads to “Settings”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 3.6s at 11:30 in the recording",
+        "Frame 2311 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#070107",
+      "role": "background",
+      "share": 0.795
+    },
+    {
+      "hex": "#2c292c",
+      "role": "surface",
+      "share": 0.176
+    },
+    {
+      "hex": "#4d494d",
+      "role": "surface",
+      "share": 0.018
+    },
+    {
+      "hex": "#625f62",
+      "role": "surface",
+      "share": 0.01
+    },
+    {
+      "hex": "#838183",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2311,
+    "atSeconds": 690,
+    "endSeconds": 693.6,
+    "holdSeconds": 3.6,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Privacy",
+    "headline": "Approved members"
+  },
+  "crawler": {
+    "nodeId": "s329",
+    "depth": 329,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s328",
+        "via": "Tap “Privacy”",
+        "name": "Settings"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s330",
+        "via": "Wait 3.6s",
+        "name": "Settings"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

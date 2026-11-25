@@ -1,0 +1,145 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-changing-the-chat-wallpaper-4",
+  "screen_id": "line-ios-versions-2026-11-22-changing-the-chat-wallpaper-4",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:26.757Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing the chat wallpaper",
+  "flow_position": 80,
+  "name": "Chat wallpaper",
+  "description": "Messages screen. Light theme, 5 text elements.",
+  "text": "9:41(\nX\nChat wallpaper\nIllustrations\nColors\nYour photos\nWallpaper changed.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "photo",
+    "messages",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light",
+    "minimal"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Chat wallpaper”",
+        "Light, Minimal style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages screen. Light theme, 5 text elements.",
+        "5 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 80 of 99 in “Reading messages”",
+        "Reached from “Wallpaper preview”",
+        "Leads to “Keep Memo”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 6:42 in the recording",
+        "Frame 1347 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#dddcec",
+      "role": "background",
+      "share": 0.323
+    },
+    {
+      "hex": "#151417",
+      "role": "text",
+      "share": 0.198
+    },
+    {
+      "hex": "#fad8b2",
+      "role": "surface",
+      "share": 0.044
+    },
+    {
+      "hex": "#b3b7e7",
+      "role": "surface",
+      "share": 0.035
+    },
+    {
+      "hex": "#e69da4",
+      "role": "surface",
+      "share": 0.035
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1347,
+    "atSeconds": 402.3,
+    "endSeconds": 404.4,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Chat wallpaper",
+    "headline": "Your photos"
+  },
+  "crawler": {
+    "nodeId": "s183",
+    "depth": 185,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s182",
+        "via": "Back to Chat wallpaper",
+        "name": "Wallpaper preview"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s184",
+        "via": "Open Keep Memo",
+        "name": "Keep Memo"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

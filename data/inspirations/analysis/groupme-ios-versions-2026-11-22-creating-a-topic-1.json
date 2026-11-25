@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-creating-a-topic-1",
+  "screen_id": "groupme-ios-versions-2026-11-22-creating-a-topic-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:16.512Z",
+  "screen_type": "detail",
+  "published_as": "detail",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Creating a topic",
+  "flow_position": 6,
+  "name": "Loading state",
+  "description": "Loading state with 1 input field. Dark theme, 9 text elements.",
+  "text": "9:41 €\nNew topic\nCreate\n#\nName your topic\nAdd a description (optional)\nCreate a topic to organise your group. It's like a group chat inside of a group\nchat.\nAnnouncement only\nOnly owners and admins post",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chat",
+    "detail",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "text-field",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “New topic”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state with 1 input field. Dark theme, 9 text elements.",
+        "9 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 6 of 23 in “Motvin team”",
+        "Reached from “Motvin team”",
+        "Leads to “Chat”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.1s at 10:19 in the recording",
+        "Frame 2071 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#080208",
+      "role": "background",
+      "share": 0.744
+    },
+    {
+      "hex": "#242125",
+      "role": "surface",
+      "share": 0.187
+    },
+    {
+      "hex": "#424043",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#5b575a",
+      "role": "surface",
+      "share": 0.009
+    },
+    {
+      "hex": "#716f72",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2071,
+    "atSeconds": 619.5,
+    "endSeconds": 621.6,
+    "holdSeconds": 2.1,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 9,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "New topic",
+    "headline": "Name your topic"
+  },
+  "crawler": {
+    "nodeId": "s283",
+    "depth": 283,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s282",
+        "via": "Open New topic",
+        "name": "Motvin team"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s284",
+        "via": "Wait 2.1s",
+        "name": "Chat"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

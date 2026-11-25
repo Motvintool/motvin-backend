@@ -1,0 +1,164 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-changing-notification-settings-1",
+  "screen_id": "line-ios-versions-2026-11-22-changing-notification-settings-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:57.043Z",
+  "screen_type": "notifications",
+  "published_as": "notifications",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing notification settings",
+  "flow_position": 2,
+  "name": "Notifications",
+  "description": "Notifications bottom sheet over a dimmed screen. Dark theme, 19 text elements.",
+  "text": "9:41 C\n<\nNotifications\nNotifications\nForce closing the app may cause notifications to arrive late or not\nbe delivered.\nMute\nOff\nSound\nDefault >\nNew messages\nMessage previews\nGet previews of messages in notifications.\nShow profile icons\nShow the sender's or group's profile icon in notifications.\nThumbnail previews\nGet photo, video, GIF, and sticker thumbnails in notifications.\nMentions\nGet notified whenever you are mentioned in chats, even if chat\nnotifications are turned off.\nAlbum reactions\nReceive notifications for reactions in albums.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "chat",
+    "message",
+    "review",
+    "photo",
+    "video",
+    "notifications",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Show profile icons”",
+        "Bottom sheet over a dimmed background, covering 36% of the height from 61% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Notifications bottom sheet over a dimmed screen. Dark theme, 19 text elements.",
+        "19 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 2 in “Mute”",
+        "Reached from “Settings — scrolled”",
+        "Leads to “Notifications”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.6s at 18:29 in the recording",
+        "Frame 3698 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#151316",
+      "role": "background",
+      "share": 0.906
+    },
+    {
+      "hex": "#4d4b4e",
+      "role": "surface",
+      "share": 0.042
+    },
+    {
+      "hex": "#333134",
+      "role": "surface",
+      "share": 0.024
+    },
+    {
+      "hex": "#0f6935",
+      "role": "accent",
+      "share": 0.007
+    },
+    {
+      "hex": "#636e69",
+      "role": "surface",
+      "share": 0.005
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 3698,
+    "atSeconds": 1109.1,
+    "endSeconds": 1109.7,
+    "holdSeconds": 0.6,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.0625,
+        "y": 0.609375,
+        "w": 0.875,
+        "h": 0.359375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 19,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Show profile icons",
+    "headline": "Message previews"
+  },
+  "crawler": {
+    "nodeId": "s516",
+    "depth": 526,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s515",
+        "via": "Open Show profile icons",
+        "name": "Settings — scrolled"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s517",
+        "via": "Dismiss",
+        "name": "Notifications"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

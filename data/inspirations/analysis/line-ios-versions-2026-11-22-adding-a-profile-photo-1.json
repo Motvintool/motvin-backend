@@ -1,0 +1,140 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-adding-a-profile-photo-1",
+  "screen_id": "line-ios-versions-2026-11-22-adding-a-profile-photo-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:08.507Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Adding a profile photo",
+  "flow_position": 5,
+  "name": "Create a new account",
+  "description": "Other screen. Light theme, 7 text elements.",
+  "text": "9:41€\n<\nCreate a new account\nOther people on LINE can see your display name\nand profile media.\nOpen camera\nSelect photo or video\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "profile",
+    "photo",
+    "video",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Create a new account”",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Light theme, 7 text elements.",
+        "7 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 5 of 23 in “Logging in”",
+        "Reached from “Create a new account”",
+        "Leads to “Category page”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 0:18 in the recording",
+        "Frame 64 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#858385",
+      "role": "background",
+      "share": 0.797
+    },
+    {
+      "hex": "#504e50",
+      "role": "surface",
+      "share": 0.184
+    },
+    {
+      "hex": "#6a676a",
+      "role": "surface",
+      "share": 0.019
+    },
+    {
+      "hex": "#332f33",
+      "role": "surface",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 64,
+    "atSeconds": 18.3,
+    "endSeconds": 19.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create a new account",
+    "headline": "Select photo or video"
+  },
+  "crawler": {
+    "nodeId": "s010",
+    "depth": 10,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s009",
+        "via": "Tap “Create a new account”",
+        "name": "Create a new account"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s011",
+        "via": "Wait 1.5s",
+        "name": "Category page"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

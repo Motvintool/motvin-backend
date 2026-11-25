@@ -1,0 +1,152 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-editing-a-call-link-1",
+  "screen_id": "signal-ios-versions-2026-11-22-editing-a-call-link-1",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:05.519Z",
+  "screen_type": "feed",
+  "published_as": "feed",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Editing a call link",
+  "flow_position": 1,
+  "name": "Chats home",
+  "description": "Feed screen with a 3-item tab bar. Dark theme, 11 text elements.",
+  "text": "9:41 C\n•0\nMissed\nAll\nCreate a Call Link\nSignal Call\nC Call Link\nSignal Call\nNow\n@ Call Link\nDesign\n7m\nk Incoming\nCalls\nChats\nStories",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "chats",
+    "calls",
+    "stories",
+    "feed",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Chats, Calls, Stories",
+        "Navigation title reads “Create a Call Link”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Feed screen with a 3-item tab bar. Dark theme, 11 text elements.",
+        "11 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 1 of 7 in “Signal Call”",
+        "Reached from “Chats home”",
+        "Leads to “Signal Call”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 2.7s at 11:14 in the recording",
+        "Frame 2282 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.861
+    },
+    {
+      "hex": "#221e23",
+      "role": "surface",
+      "share": 0.072
+    },
+    {
+      "hex": "#3e3b3e",
+      "role": "surface",
+      "share": 0.039
+    },
+    {
+      "hex": "#5e575b",
+      "role": "surface",
+      "share": 0.008
+    },
+    {
+      "hex": "#918e92",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2282,
+    "atSeconds": 674.4,
+    "endSeconds": 675,
+    "holdSeconds": 2.7,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 11,
+    "tabLabels": [
+      "Chats",
+      "Calls",
+      "Stories"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Create a Call Link",
+    "headline": "Signal Call"
+  },
+  "crawler": {
+    "nodeId": "s332",
+    "depth": 335,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s331",
+        "via": "Wait 1.5s",
+        "name": "Chats home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s333",
+        "via": "Wait 2.7s",
+        "name": "Signal Call"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

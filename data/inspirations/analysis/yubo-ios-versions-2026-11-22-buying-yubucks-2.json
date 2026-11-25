@@ -1,0 +1,163 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-buying-yubucks-2",
+  "screen_id": "yubo-ios-versions-2026-11-22-buying-yubucks-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:00:05.676Z",
+  "screen_type": "paywall",
+  "published_as": "pricing",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "checkout",
+  "flow_name": "Buying YuBucks",
+  "flow_position": 67,
+  "name": "Subscription plans",
+  "description": "Paywall dialog over a dimmed screen, on top of More YuBucks with prices. Dark theme, 15 text elements.",
+  "text": "Shop\nDouble-Click\nto Subscribe\nYou need\nmore YuBucks\nYou need 490 YuBucks to make this purchase.\nApp Store\nOne Week YuBucks\nYubo : Make friends & chat now (18+\nSubscription\n$ 819 per week\nCancel at any time in Settings > Apple Account at least\none day before each renewal date. Plan automatically\nrenews until cancelled.\nAccount: +91 6382-102514\nConfirm with Side Button",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "subscription",
+    "paywall",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "price",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “You need”",
+        "Dialog over a dimmed background, covering 23% of the height from 16% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Paywall dialog over a dimmed screen, on top of More YuBucks with prices. Dark theme, 15 text elements.",
+        "15 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 67 of 338 in “Subscribing”",
+        "Reached from “More YuBucks”",
+        "Leads to “More YuBucks”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 4:38 in the recording",
+        "Frame 930 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0c0b09",
+      "role": "background",
+      "share": 0.631
+    },
+    {
+      "hex": "#323132",
+      "role": "surface",
+      "share": 0.292
+    },
+    {
+      "hex": "#504e50",
+      "role": "surface",
+      "share": 0.06
+    },
+    {
+      "hex": "#686668",
+      "role": "surface",
+      "share": 0.004
+    },
+    {
+      "hex": "#b3a317",
+      "role": "accent",
+      "share": 0.004
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 930,
+    "atSeconds": 278.1,
+    "endSeconds": 279.3,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.15625,
+        "y": 0.15625,
+        "w": 0.75,
+        "h": 0.234375
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 15,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "You need",
+    "headline": "More YuBucks"
+  },
+  "crawler": {
+    "nodeId": "s132",
+    "depth": 131,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "subscription gate — crawler does not purchase or bypass",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s131",
+        "via": "Tap “You need”",
+        "name": "More YuBucks"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s133",
+        "via": "Dismiss",
+        "name": "More YuBucks"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

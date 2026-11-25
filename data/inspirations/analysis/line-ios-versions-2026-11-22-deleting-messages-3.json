@@ -1,0 +1,161 @@
+{
+  "screenId": "line-ios-versions-2026-11-22-deleting-messages-3",
+  "screen_id": "line-ios-versions-2026-11-22-deleting-messages-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T14:03:24.170Z",
+  "screen_type": "messages",
+  "published_as": "messages",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Deleting messages",
+  "flow_position": 58,
+  "name": "Delete only on this device",
+  "description": "Messages dialog over a dimmed screen, on top of Delete messages. Dark theme, 20 text elements.",
+  "text": "9:41€\nDelete messages\n4:16 PM\nmotvin logo (social media\nblack).png\nValid till: 29/11, 4:16 PM\nSize: 40.85 KB\n4:16 PM\nCross St\n117th St\nMana\nMothur\nLD 600T6\nThe selectedmessages willonly\nbe deleted on this device. Continue?\nDelete only on this device\nCancel\n4:17PM\n4:18 PM\n00:04\n4:19 PM\nDelete (1)\nCancel",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "cancel",
+    "messages",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "modal"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Delete only on this device”",
+        "Dialog over a dimmed background, covering 16% of the height from 45% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Messages dialog over a dimmed screen, on top of Delete messages. Dark theme, 20 text elements.",
+        "20 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 58 of 99 in “Reading messages”",
+        "Reached from “Delete messages”",
+        "Leads to “Keep Memo”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 5:51 in the recording",
+        "Frame 1175 of 3992 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0c0e",
+      "role": "background",
+      "share": 0.726
+    },
+    {
+      "hex": "#283829",
+      "role": "surface",
+      "share": 0.159
+    },
+    {
+      "hex": "#4a484a",
+      "role": "surface",
+      "share": 0.056
+    },
+    {
+      "hex": "#4c141a",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#bb283a",
+      "role": "accent",
+      "share": 0.018
+    }
+  ],
+  "capture": {
+    "source": "Line.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3992,
+    "frame": 1175,
+    "atSeconds": 351.3,
+    "endSeconds": 352.8,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.453125,
+        "w": 0.5,
+        "h": 0.15625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 20,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Delete only on this device",
+    "headline": "Cross St",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s159",
+    "depth": 161,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s158",
+        "via": "Tap “Cross St”",
+        "name": "Delete messages"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s160",
+        "via": "Back to Keep Memo",
+        "name": "Keep Memo"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

@@ -1,0 +1,154 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-viewing-group-info-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-viewing-group-info-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:06.271Z",
+  "screen_type": "loading",
+  "published_as": "loading",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Viewing group info",
+  "flow_position": null,
+  "name": "Media toast — loading",
+  "description": "Loading state of Media toast with a 3-item tab bar. Dark theme, 5 text elements.",
+  "text": "9:41\nooll\n[nn\nMedia & Files\nYour media will appear here\nThere are currently no media files. When\nyou send or receive media files, they will\nappear here.\nAudio\nMedia\nFiles",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "media",
+    "audio",
+    "files",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "tab-bar",
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "Tab bar with 3 items: Media, Audio, Files",
+        "Navigation title reads “Media & Files”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state of Media toast with a 3-item tab bar. Dark theme, 5 text elements.",
+        "5 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Reached from “Trip Q”",
+        "Leads to “Media toast”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.8s at 12:27 in the recording",
+        "Frame 2497 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#141115",
+      "role": "background",
+      "share": 0.868
+    },
+    {
+      "hex": "#322f34",
+      "role": "surface",
+      "share": 0.08
+    },
+    {
+      "hex": "#524f51",
+      "role": "surface",
+      "share": 0.04
+    },
+    {
+      "hex": "#273069",
+      "role": "accent",
+      "share": 0.004
+    },
+    {
+      "hex": "#6678d1",
+      "role": "text",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2497,
+    "atSeconds": 747.6,
+    "endSeconds": 749.4,
+    "holdSeconds": 1.8,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 5,
+    "tabLabels": [
+      "Media",
+      "Audio",
+      "Files"
+    ],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Media & Files",
+    "headline": "Your media will appear here"
+  },
+  "crawler": {
+    "nodeId": "s314",
+    "depth": 316,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s313",
+        "via": "Tap “Media & Files”",
+        "name": "Trip Q"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s315",
+        "via": "Wait 1.8s",
+        "name": "Media toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

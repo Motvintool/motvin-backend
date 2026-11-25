@@ -1,0 +1,154 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-attaching-a-file-2",
+  "screen_id": "signal-ios-versions-2026-11-22-attaching-a-file-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:40:45.779Z",
+  "screen_type": "signup",
+  "published_as": "signup",
+  "states": [],
+  "category": "social",
+  "flow": "authentication",
+  "flow_name": "Attaching a file",
+  "flow_position": 2,
+  "name": "Create account",
+  "description": "Sign up screen with a 3-item tab bar, a search bar and a paged carousel. Dark theme, 36 text elements.",
+  "text": "9:41(\nX\nRecents\n•••\nQ\nSearch\nkeyword.js\nmotvin logo\ncode.js\n07/04/26\n(social...black)\n07/04/26\n6 KB\n30 KB\n4:13 PM\n42 KB\nBSD\nutils.js\nLICENSE.BSD\nast.js\n07/04/26\n07/04/26\n07/04/26\n1 KB\n5 KB\n2 KB\nREADME\nregister-hook-\nbrowser-source-\n07/04/26\nmap-support.js\nrequire.js\n9 KB\n07/04/26\n07/04/26\n44 bytes\n54 KB\nShared\nRecents\nBrowse",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "search",
+    "map",
+    "recents",
+    "shared",
+    "browse",
+    "signup",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "search-bar",
+    "list",
+    "carousel",
+    "page-indicator"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Search”",
+        "Search bar present",
+        "Paged carousel with a page indicator",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Sign up screen with a 3-item tab bar, a search bar and a paged carousel. Dark theme, 36 text elements.",
+        "36 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 3 in “Creating an account”",
+        "Reached from “Photos home”",
+        "Leads to “Vunor yroup members yet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 5:07 in the recording",
+        "Frame 1028 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#1e1c20",
+      "role": "background",
+      "share": 0.63
+    },
+    {
+      "hex": "#3f3d40",
+      "role": "surface",
+      "share": 0.088
+    },
+    {
+      "hex": "#f3f2f4",
+      "role": "text",
+      "share": 0.078
+    },
+    {
+      "hex": "#868487",
+      "role": "surface",
+      "share": 0.07
+    },
+    {
+      "hex": "#030601",
+      "role": "accent",
+      "share": 0.053
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 1028,
+    "atSeconds": 307.8,
+    "endSeconds": 308.7,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "screen",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 36,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Search",
+    "headline": "Utils.js",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s127",
+    "depth": 127,
+    "path": [],
+    "visits": 1,
+    "blocked": true,
+    "blockedReason": "account creation screen — crawler does not register accounts",
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s126",
+        "via": "Switch to Recents",
+        "name": "Photos home"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s128",
+        "via": "Tap “44 bytes”",
+        "name": "Vunor yroup members yet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

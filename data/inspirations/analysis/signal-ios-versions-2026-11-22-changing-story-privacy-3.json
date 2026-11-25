@@ -1,0 +1,162 @@
+{
+  "screenId": "signal-ios-versions-2026-11-22-changing-story-privacy-3",
+  "screen_id": "signal-ios-versions-2026-11-22-changing-story-privacy-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:41:09.282Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Changing story privacy",
+  "flow_position": 3,
+  "name": "Replies & Reactions sheet",
+  "description": "Bottom sheet, on top of Story Privacy with a primary action labelled “Allow Replies & Reactions”. Dark theme, 13 text elements.",
+  "text": "9:41(\no1l\nMy Story\nWho Can View This Story\nAll Signal Connections\nView\n0 Viewers\nAll Except...\nOnly Share With...\nChoose which Signal Connections can view your story. Changes\nwon't attect stories you've already sent.\nLearn More\nReplies & Reactions\nAllow Replies & Reactions\nLet people who can view your story react and reply.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list",
+    "cta",
+    "button",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Replies & Reactions”",
+        "Bottom sheet, covering 50% of the height from 41% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Story Privacy with a primary action labelled “Allow Replies & Reactions”. Dark theme, 13 text elements.",
+        "Calls to action: “Allow Replies & Reactions”",
+        "13 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 5 in “Story Privacy”",
+        "Reached from “Story Privacy”",
+        "Leads to “View Receipts sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 12:42 in the recording",
+        "Frame 2546 of 3355 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#211f24",
+      "role": "background",
+      "share": 0.856
+    },
+    {
+      "hex": "#3d3b3f",
+      "role": "surface",
+      "share": 0.057
+    },
+    {
+      "hex": "#070107",
+      "role": "accent",
+      "share": 0.056
+    },
+    {
+      "hex": "#5a585c",
+      "role": "surface",
+      "share": 0.022
+    },
+    {
+      "hex": "#327f46",
+      "role": "surface",
+      "share": 0.001
+    }
+  ],
+  "capture": {
+    "source": "Signal.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3355,
+    "frame": 2546,
+    "atSeconds": 762.6,
+    "endSeconds": 764.1,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.09375,
+        "y": 0.40625,
+        "w": 0.8125,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [
+      "Allow Replies & Reactions"
+    ],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Replies & Reactions",
+    "headline": "Who Can View This Story"
+  },
+  "crawler": {
+    "nodeId": "s373",
+    "depth": 376,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s372",
+        "via": "Wait 2.1s",
+        "name": "Story Privacy"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s374",
+        "via": "Dismiss",
+        "name": "View Receipts sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

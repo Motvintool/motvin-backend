@@ -1,0 +1,157 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-ending-a-group-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-ending-a-group-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:14.284Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Ending a group",
+  "flow_position": 160,
+  "name": "Gallery sheet",
+  "description": "Bottom sheet over a dimmed screen, on top of Clear chat history. Dark theme, 12 text elements.",
+  "text": "9:41 (\n•lsO\nMotvin team\nLet's connect all\nDelete group 'Motvin team'?\nThis action cannot be undone.\nEnd group\nCancel\nTopics\nCreate\nOrganise your group\nAlbums\n1\nGallery\nCalendar",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "calendar",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Gallery”",
+        "Bottom sheet over a dimmed background, covering 25% of the height from 72% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet over a dimmed screen, on top of Clear chat history. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 160 of 169 in “New event”",
+        "Reached from “Clear chat history”",
+        "Leads to “Motvin team”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 9:12 in the recording",
+        "Frame 1844 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100c11",
+      "role": "background",
+      "share": 0.801
+    },
+    {
+      "hex": "#2f282f",
+      "role": "surface",
+      "share": 0.125
+    },
+    {
+      "hex": "#584b5b",
+      "role": "surface",
+      "share": 0.036
+    },
+    {
+      "hex": "#7e7181",
+      "role": "text",
+      "share": 0.013
+    },
+    {
+      "hex": "#56393d",
+      "role": "surface",
+      "share": 0.006
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 1844,
+    "atSeconds": 552.6,
+    "endSeconds": 553.5,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": true,
+      "box": {
+        "x": 0.34375,
+        "y": 0.71875,
+        "w": 0.5625,
+        "h": 0.25
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Gallery",
+    "headline": "Delete group 'Motvin team'?",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s257",
+    "depth": 257,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s256",
+        "via": "Back to Gallery sheet",
+        "name": "Clear chat history"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s258",
+        "via": "Dismiss",
+        "name": "Motvin team"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

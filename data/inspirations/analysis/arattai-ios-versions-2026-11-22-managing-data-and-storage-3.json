@@ -1,0 +1,147 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-managing-data-and-storage-3",
+  "screen_id": "arattai-ios-versions-2026-11-22-managing-data-and-storage-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:21.364Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Managing data and storage",
+  "flow_position": 2,
+  "name": "Storage usage",
+  "description": "Other screen. Dark theme, 13 text elements.",
+  "text": "9:41(\n‹ Storage usage\nMedia storage\nPhotos, videos and other files that is not accessed for\nselected time period will be removed from this device\nmemory.\nStore media\nForever\nClear all cache\nYour device is running low on storage. To free up\nspace, try clearing the cache by going to Settings >\nGeneral > iPhone Storage.\nEmpty >\nOverall media",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "photo",
+    "video",
+    "other",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "list"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Storage usage”",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Other screen. Dark theme, 13 text elements.",
+        "13 text elements recognised"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 2 of 4 in “Storage usage”",
+        "Reached from “Explore contacts”",
+        "Leads to “Storage usage toast”",
+        "Returned to 3 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 4.5s at 1:18 in the recording",
+        "Frame 286 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100c10",
+      "role": "background",
+      "share": 0.957
+    },
+    {
+      "hex": "#2e2027",
+      "role": "surface",
+      "share": 0.021
+    },
+    {
+      "hex": "#474548",
+      "role": "surface",
+      "share": 0.013
+    },
+    {
+      "hex": "#646165",
+      "role": "surface",
+      "share": 0.005
+    },
+    {
+      "hex": "#191d3a",
+      "role": "accent",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 286,
+    "atSeconds": 78,
+    "endSeconds": 79.8,
+    "holdSeconds": 4.5,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 3
+  },
+  "signals": {
+    "lineCount": 13,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Storage usage",
+    "headline": "Empty"
+  },
+  "crawler": {
+    "nodeId": "s022",
+    "depth": 21,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s021",
+        "via": "Open Storage usage",
+        "name": "Explore contacts"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s023",
+        "via": "Wait 4.5s",
+        "name": "Storage usage toast"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

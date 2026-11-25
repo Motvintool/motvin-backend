@@ -1,0 +1,159 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-exporting-a-chat-2",
+  "screen_id": "arattai-ios-versions-2026-11-22-exporting-a-chat-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:48:11.763Z",
+  "screen_type": "toast",
+  "published_as": "modal",
+  "states": [
+    "toast"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Exporting a chat",
+  "flow_position": 18,
+  "name": "Media & Files toast",
+  "description": "Toast over a dimmed screen. Dark theme, 12 text elements.",
+  "text": "9:414\nTrip\n1 participant\nMedia & Files\nMute chat\nStarred messages\nParticipants\nGroup settings\nExport chat\nClear messages\nExport chat\nChoose how you want to export this chat.\nExport with media\nExport without media",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "settings",
+    "chat",
+    "message",
+    "toast",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "toast"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Media & Files”",
+        "Toast over a dimmed background, covering 2% of the height from 95% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Toast over a dimmed screen. Dark theme, 12 text elements.",
+        "12 text elements recognised",
+        "State: toast"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 18 of 20 in “QR code”",
+        "Reached from “Media & Files”",
+        "Leads to “Loading state”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.5s at 13:40 in the recording",
+        "Frame 2740 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#100f12",
+      "role": "background",
+      "share": 0.858
+    },
+    {
+      "hex": "#312f32",
+      "role": "surface",
+      "share": 0.108
+    },
+    {
+      "hex": "#545255",
+      "role": "surface",
+      "share": 0.033
+    },
+    {
+      "hex": "#6c6a6c",
+      "role": "surface",
+      "share": 0
+    },
+    {
+      "hex": "#a8a7a7",
+      "role": "text",
+      "share": 0
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 2740,
+    "atSeconds": 820.8,
+    "endSeconds": 822.3,
+    "holdSeconds": 1.5,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "toast",
+      "dimmed": true,
+      "box": {
+        "x": 0.25,
+        "y": 0.953125,
+        "w": 0.65625,
+        "h": 0.015625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 12,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Media & Files",
+    "headline": "Media & Files"
+  },
+  "crawler": {
+    "nodeId": "s355",
+    "depth": 358,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s354",
+        "via": "Back to Media & Files toast",
+        "name": "Media & Files"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s356",
+        "via": "Tap “Media & Files”",
+        "name": "Loading state"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

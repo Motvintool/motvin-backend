@@ -1,0 +1,160 @@
+{
+  "screenId": "arattai-ios-versions-2026-11-22-sharing-a-location-7",
+  "screen_id": "arattai-ios-versions-2026-11-22-sharing-a-location-7",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:47:44.127Z",
+  "screen_type": "bottom_sheet",
+  "published_as": "modal",
+  "states": [
+    "bottom-sheet"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Sharing a location",
+  "flow_position": 9,
+  "name": "Saved locations sheet",
+  "description": "Bottom sheet, on top of Saved locations with a paged carousel. Dark theme, 8 text elements.",
+  "text": "9:414\n•ll\nSaved locations\nX\n1 place\nHh\n•••\nSubramani St, Subramani Nagar, Chennai\nEdit\nÜ Delete",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "location",
+    "bottom-sheet",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "carousel",
+    "page-indicator",
+    "bottom-sheet"
+  ],
+  "style": [
+    "dark"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Saved locations”",
+        "Paged carousel with a page indicator",
+        "Bottom sheet, covering 14% of the height from 72% down",
+        "Dark style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Bottom sheet, on top of Saved locations with a paged carousel. Dark theme, 8 text elements.",
+        "8 text elements recognised",
+        "State: bottom-sheet"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 9 of 18 in “Share location”",
+        "Reached from “Saved locations”",
+        "Leads to “Saved locations sheet”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 7:25 in the recording",
+        "Frame 1487 of 5174 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#0e0b0f",
+      "role": "background",
+      "share": 0.96
+    },
+    {
+      "hex": "#28242b",
+      "role": "surface",
+      "share": 0.016
+    },
+    {
+      "hex": "#4a474b",
+      "role": "surface",
+      "share": 0.015
+    },
+    {
+      "hex": "#3f4da8",
+      "role": "surface",
+      "share": 0.002
+    },
+    {
+      "hex": "#581618",
+      "role": "accent",
+      "share": 0.002
+    }
+  ],
+  "capture": {
+    "source": "Arattai.mov",
+    "fps": 3.3333333333333335,
+    "frames": 5174,
+    "frame": 1487,
+    "atSeconds": 445.2,
+    "endSeconds": 446.4,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "bottom_sheet",
+      "dimmed": false,
+      "box": {
+        "x": 0.34375,
+        "y": 0.71875,
+        "w": 0.59375,
+        "h": 0.140625
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 8,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Saved locations",
+    "headline": "Delete"
+  },
+  "crawler": {
+    "nodeId": "s175",
+    "depth": 176,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s174",
+        "via": "Wait 1.5s",
+        "name": "Saved locations"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s176",
+        "via": "Dismiss",
+        "name": "Saved locations sheet"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

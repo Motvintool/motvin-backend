@@ -1,0 +1,159 @@
+{
+  "screenId": "yubo-ios-versions-2026-11-22-verifying-age-3",
+  "screen_id": "yubo-ios-versions-2026-11-22-verifying-age-3",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:59:59.037Z",
+  "screen_type": "dialog",
+  "published_as": "modal",
+  "states": [
+    "modal"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Verifying age",
+  "flow_position": 3,
+  "name": "Place your face in the oval dialog",
+  "description": "Dialog over a dimmed screen. Light theme, 7 text elements.",
+  "text": "9:41€\n<\nPlace your face in the oval\nTips\nSit or stand upright\nFind a well-lit area\nRemove your hat\nSunglasses off\nGot it",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "got it",
+    "dialog",
+    "modal",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "modal"
+  ],
+  "style": [
+    "light"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Place your face in the oval”",
+        "Dialog over a dimmed background, covering 50% of the height from 0% down",
+        "Light style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Dialog over a dimmed screen. Light theme, 7 text elements.",
+        "7 text elements recognised",
+        "State: modal"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 338 in “Subscribing”",
+        "Reached from “Continue”",
+        "Leads to “Other”"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 0.9s at 2:25 in the recording",
+        "Frame 487 of 3244 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#fefcfe",
+      "role": "background",
+      "share": 0.376
+    },
+    {
+      "hex": "#b3b1b3",
+      "role": "surface",
+      "share": 0.215
+    },
+    {
+      "hex": "#050105",
+      "role": "accent",
+      "share": 0.165
+    },
+    {
+      "hex": "#939193",
+      "role": "surface",
+      "share": 0.157
+    },
+    {
+      "hex": "#dad8da",
+      "role": "surface",
+      "share": 0.037
+    }
+  ],
+  "capture": {
+    "source": "Yubo.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3244,
+    "frame": 487,
+    "atSeconds": 145.5,
+    "endSeconds": 146.4,
+    "holdSeconds": 0.9,
+    "brief": false,
+    "kind": "overlay",
+    "overlay": {
+      "kind": "dialog",
+      "dimmed": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "w": 1,
+        "h": 0.5
+      }
+    },
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 1
+  },
+  "signals": {
+    "lineCount": 7,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Place your face in the oval",
+    "headline": "Tips",
+    "tabBar": false
+  },
+  "crawler": {
+    "nodeId": "s067",
+    "depth": 66,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s066",
+        "via": "Open Place your face in the oval",
+        "name": "Continue"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s068",
+        "via": "Dismiss",
+        "name": "Other"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}

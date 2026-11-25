@@ -1,0 +1,151 @@
+{
+  "screenId": "groupme-ios-versions-2026-11-22-editing-a-group-2",
+  "screen_id": "groupme-ios-versions-2026-11-22-editing-a-group-2",
+  "analyzer": "motvin on-device (Vision OCR + rules)",
+  "analyzedAt": "2026-11-22T13:42:20.142Z",
+  "screen_type": "other",
+  "published_as": "other",
+  "states": [
+    "loading"
+  ],
+  "category": "social",
+  "flow": "discovery",
+  "flow_name": "Editing a group",
+  "flow_position": 3,
+  "name": "Loading state",
+  "description": "Loading state. Dark theme, 6 text elements.",
+  "text": "9:41€\noill\nEmoji like\nChoose the double tap\nThis is the first reaction for your group and when you\ndouble tap a message, they'll use this reaction.\nC\nCould not load emoji. Tap to retry.",
+  "purpose": null,
+  "primary_action": null,
+  "tags": [
+    "message",
+    "other",
+    "loading",
+    "ios"
+  ],
+  "elements": [
+    "nav-bar",
+    "skeleton",
+    "progress"
+  ],
+  "style": [
+    "dark",
+    "bold"
+  ],
+  "sections": [
+    {
+      "title": "Layout",
+      "points": [
+        "No tab bar",
+        "Navigation title reads “Emoji like”",
+        "Dark, Bold style"
+      ]
+    },
+    {
+      "title": "Content",
+      "points": [
+        "Loading state. Dark theme, 6 text elements.",
+        "6 text elements recognised",
+        "State: loading"
+      ]
+    },
+    {
+      "title": "Navigation",
+      "points": [
+        "Step 3 of 4 in “Editing a group”",
+        "Reached from “Edit group”",
+        "Leads to “Edit group”",
+        "Returned to 2 times in the recording"
+      ]
+    },
+    {
+      "title": "Capture",
+      "points": [
+        "Held for 1.2s at 11:22 in the recording",
+        "Frame 2278 of 3729 sampled at 3.3333333333333335 fps",
+        "Classified on-device from recognised text and pixels"
+      ]
+    }
+  ],
+  "palette": [
+    {
+      "hex": "#060106",
+      "role": "background",
+      "share": 0.669
+    },
+    {
+      "hex": "#2b282b",
+      "role": "surface",
+      "share": 0.306
+    },
+    {
+      "hex": "#555155",
+      "role": "surface",
+      "share": 0.012
+    },
+    {
+      "hex": "#f92e7c",
+      "role": "accent",
+      "share": 0.005
+    },
+    {
+      "hex": "#6f183c",
+      "role": "surface",
+      "share": 0.003
+    }
+  ],
+  "capture": {
+    "source": "GroupMe.mov",
+    "fps": 3.3333333333333335,
+    "frames": 3729,
+    "frame": 2278,
+    "atSeconds": 682.5,
+    "endSeconds": 683.7,
+    "holdSeconds": 1.2,
+    "brief": false,
+    "kind": "loading",
+    "overlay": null,
+    "overlayOf": null,
+    "loadingOf": null,
+    "scrolledFrom": null,
+    "visits": 2
+  },
+  "signals": {
+    "lineCount": 6,
+    "tabLabels": [],
+    "chipLabels": [],
+    "ctas": [],
+    "keyboard": false,
+    "layout": "phone",
+    "navLabels": [],
+    "activeTab": null,
+    "listedInSidebar": false,
+    "title": "Emoji like",
+    "headline": "Choose the double tap"
+  },
+  "crawler": {
+    "nodeId": "s322",
+    "depth": 322,
+    "path": [],
+    "visits": 1,
+    "blocked": false,
+    "blockedReason": null,
+    "actions": [],
+    "reachedFrom": [
+      {
+        "from": "s321",
+        "via": "Open Emoji like",
+        "name": "Edit group"
+      }
+    ],
+    "leadsTo": [
+      {
+        "to": "s323",
+        "via": "Wait 1.2s",
+        "name": "Edit group"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-22",
+  "capturedBy": "motvin-ios-crawler"
+}
