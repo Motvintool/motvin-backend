@@ -999,6 +999,57 @@ describe('InspirationsAdminService', () => {
     });
   });
 
+  describe('agent store screenshots for a web app', () => {
+    const realFetch = global.fetch;
+    const page = (device: string) =>
+      `<script id="serialized-server-data" type="application/json">${JSON.stringify({
+        shelf: {
+          contentsMetadata: { type: 'productMedia', platform: { appPlatform: device, mediaType: device } },
+          items: [1, 2].map((n) => ({ screenshot: { template: `https://is1-ssl.mzstatic.com/image/thumb/a/${n}.png/{w}x{h}{c}.{f}`, width: 2560, height: 1600 } })),
+        },
+      })}</script>`;
+    const stub = (kind: string, device: string) => {
+      const asked: string[] = [];
+      global.fetch = jest.fn(async (input: any) => {
+        const url = String(input);
+        asked.push(url);
+        const json = (body: unknown) => new Response(JSON.stringify(body), { status: 200 });
+        if (url.includes('/search?')) return json({ results: [{ kind, trackName: 'Acme', trackId: 42 }] });
+        if (url.includes('/lookup?')) return json({ results: [{ kind, trackName: 'Acme', trackId: 42, trackViewUrl: 'https://apps.apple.com/us/app/acme/id42?mt=12', screenshotUrls: [] }] });
+        if (url.includes('apps.apple.com')) return new Response(page(device), { status: 200 });
+        return new Response(PNG_1X1, { status: 200 });
+      }) as any;
+      return asked;
+    };
+
+    beforeEach(() => {
+      service.saveApp({ id: 'acme', name: 'Acme', industry: 'saas' });
+      service.uploadScreen('webapp', 'acme', 'home.png', PNG_1X1, false, '');
+    });
+    afterEach(() => {
+      global.fetch = realFetch;
+    });
+
+    it("saves its Mac app's Mac screenshots under the web app, found in the Mac App Store", async () => {
+      const asked = stub('mac-software', 'mac');
+      const result = await service.fetchStoreShots('acme', { platform: 'webapp' });
+
+      expect(result.count).toBe(2);
+      expect(asked.find((url) => url.includes('/search?'))).toContain('entity=macSoftware');
+      const app = readManifest(store).apps.find((a: any) => a.id === 'acme');
+      expect(Object.keys(app.storeShots)).toEqual(['webapp']);
+      expect(app.storeShots.webapp.source).toBe('appstore');
+      expect(app.storeShots.webapp.images.map((i: any) => i.file)).toEqual([`webapp/acme/${result.date}/1.webp`, `webapp/acme/${result.date}/2.webp`]);
+    });
+
+    it('refuses an app that is not a Mac app, and websites', async () => {
+      stub('software', 'phone');
+      await expect(service.fetchStoreShots('acme', { platform: 'webapp' })).rejects.toThrow(/Mac App Store|not a Mac app/);
+      await expect(service.fetchStoreShots('acme', { platform: 'site' })).rejects.toThrow(/Websites have no App Store page/);
+      expect(existsSync(join(store, 'store', 'webapp'))).toBe(false);
+    });
+  });
+
   describe('store screenshots', () => {
     const approve = () =>
       service.saveSource('acme', { permission: 'own-work', license: 'CC0', attribution: 'Motvin', redistribution: 'allowed', status: 'approved' });

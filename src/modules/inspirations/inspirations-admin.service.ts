@@ -1133,19 +1133,25 @@ export class InspirationsAdminService {
   }
 
   /**
-   * Takes an iOS app's iPhone screenshots from its App Store page.
+   * Takes an app's store screenshots from its App Store page: an iOS app's
+   * iPhone set, or a web app's Mac set from its Mac App Store page (web apps
+   * have no store of their own; many have a Mac app showing the same product).
    *
    * The app is found by the id its last fetch saved, else by an App Store
-   * link in its source record, else by an exact name match in the store's
-   * search. A set the same as the newest one is left alone; a changed one is
+   * link in its source record (iOS only: that link is the iPhone app), else
+   * by an exact name match in the store's search. A set the same as the newest one is left alone; a changed one is
    * saved under today's date, keeping the older sets as history unless
    * `replace` asks for them to go.
    */
-  async fetchStoreShots(appIdRaw: string, options: { country?: string; replace?: boolean } = {}) {
+  async fetchStoreShots(appIdRaw: string, options: { country?: string; replace?: boolean; platform?: string } = {}) {
     const { appId, app } = this.assertListedApp(appIdRaw);
-    this.assertAppOnPlatform(appId, 'ios');
+    const platform = options.platform === undefined ? 'ios' : this.assertPlatform(options.platform);
+    if (platform === 'site') throw new BadRequestException('Websites have no App Store page; upload their screenshots in Manual Screenshots');
+    this.assertAppOnPlatform(appId, platform);
+    const mac = platform === 'webapp';
+    const store = mac ? 'Mac App Store' : 'App Store';
     const country = /^[a-z]{2}$/.test(options.country || '') ? (options.country as string) : 'us';
-    const appDir = this.inStore(STORE_DIR_NAME, 'ios', appId);
+    const appDir = this.inStore(STORE_DIR_NAME, platform, appId);
     const dates = existsSync(appDir)
       ? readdirSync(appDir).filter((d) => VERSION_DIR_RE.test(d)).sort()
       : [];
@@ -1154,28 +1160,34 @@ export class InspirationsAdminService {
       : {};
 
     const sources = readJson<{ sources?: Record<string, any> }>(join(this.root, 'sources.json'), { sources: {} }).sources || {};
-    const linkId = /apps\.apple\.com\/.*\/id(\d+)/.exec(sources[appId]?.sourceUrl || '')?.[1];
+    const linkId = mac ? undefined : /apps\.apple\.com\/.*\/id(\d+)/.exec(sources[appId]?.sourceUrl || '')?.[1];
     let trackId = lastMeta.trackId || (linkId ? Number(linkId) : null);
-    if (!trackId) trackId = await this.findAppStoreId(app.name || titleCase(appId), country);
+    if (!trackId) trackId = await this.findAppStoreId(app.name || titleCase(appId), country, mac);
     if (!trackId) {
-      throw new NotFoundException(`Couldn't find "${app.name || appId}" on the App Store. Add its App Store link in Apps → Source.`);
+      throw new NotFoundException(
+        mac
+          ? `Couldn't find a Mac app named "${app.name || appId}" on the Mac App Store. Upload its screenshots in Manual Screenshots.`
+          : `Couldn't find "${app.name || appId}" on the App Store. Add its App Store link in Apps → Source.`,
+      );
     }
 
-    const lookup = await this.storeJson(`https://itunes.apple.com/lookup?id=${trackId}&country=${country}&entity=software`);
+    const lookup = await this.storeJson(`https://itunes.apple.com/lookup?id=${trackId}&country=${country}&entity=${mac ? 'macSoftware' : 'software'}`);
     const result = lookup?.results?.[0];
-    if (!result) throw new NotFoundException(`The App Store has no app ${trackId} in the "${country}" store`);
-    // The store page's own iPhone set first — the tall one it shows today. The lookup API often still answers
+    if (!result) throw new NotFoundException(`The ${store} has no app ${trackId} in the "${country}" store`);
+    // A web app's set is only ever a Mac app's: an iPhone app's screens are another platform's.
+    if (mac && result.kind !== 'mac-software') throw new NotFoundException(`App ${trackId} is not a Mac app`);
+    // The store page's own set first — the tall iPhone one it shows today. The lookup API often still answers
     // with an app's old 5.5-inch set, so it is only the fallback when the page can't be read.
-    const fromPage = await this.pageStoreShots(trackId, country);
+    const fromPage = await this.pageStoreShots(trackId, country, mac ? 'mac' : 'phone');
     // The size at the end of a lookup URL is a box the store fits the image into; a large one returns the original.
     const lookupShots: string[] = Array.isArray(result.screenshotUrls) ? result.screenshotUrls : [];
     // The page unread but the last set came from it: the lookup's (often older) set would look like a change.
     if (!fromPage && lastMeta.source === 'appstore' && lastMeta.size && lastMeta.size !== 'lookup') {
-      throw new BadRequestException("Couldn't read the App Store page just now; try again");
+      throw new BadRequestException(`Couldn't read the ${store} page just now; try again`);
     }
     const shots = fromPage?.urls ?? lookupShots;
     const downloads = fromPage?.downloads ?? lookupShots.map((url) => url.replace(/\/[^/]+$/, '/3000x3000bb.webp'));
-    if (!shots.length) throw new NotFoundException('That App Store page has no iPhone screenshots');
+    if (!shots.length) throw new NotFoundException(`That ${store} page has no ${mac ? 'Mac' : 'iPhone'} screenshots`);
 
     const same = Array.isArray(lastMeta.images) && lastMeta.images.join('\n') === shots.join('\n');
     const matched = { trackId, name: String(result.trackName || '') };
@@ -1189,7 +1201,7 @@ export class InspirationsAdminService {
     // Downloaded into a hidden folder first (the folder watcher ignores dotfiles), then moved into place whole,
     // so a failed download never leaves half a set showing.
     const date = today;
-    const temp = this.inStore(STORE_DIR_NAME, 'ios', appId, `.fetch-${date}`);
+    const temp = this.inStore(STORE_DIR_NAME, platform, appId, `.fetch-${date}`);
     rmSync(temp, { recursive: true, force: true });
     mkdirSync(temp, { recursive: true });
     try {
@@ -1222,6 +1234,7 @@ export class InspirationsAdminService {
         country,
         fetchedAt: new Date().toISOString(),
         size: fromPage?.mediaType ?? 'lookup',
+        ...(mac ? { store: 'mac' } : {}),
         images: shots,
       });
       if (options.replace) {
@@ -1237,12 +1250,13 @@ export class InspirationsAdminService {
   }
 
   /**
-   * The iPhone screenshots the app's App Store page shows, read from the data
-   * the page carries (its phone "product media" shelf), each with its
-   * full-size download URL. Null when the page can't be read, so the caller
-   * falls back to the lookup API's set.
+   * The screenshots the app's App Store page shows for one device (`phone`
+   * for an iPhone app, `mac` for a Mac app), read from the data the page
+   * carries (that device's "product media" shelf), each with its full-size
+   * download URL. Null when the page can't be read, so the caller falls back
+   * to the lookup API's set.
    */
-  private async pageStoreShots(trackId: number, country: string): Promise<{ urls: string[]; downloads: string[]; mediaType: string } | null> {
+  private async pageStoreShots(trackId: number, country: string, device: 'phone' | 'mac'): Promise<{ urls: string[]; downloads: string[]; mediaType: string } | null> {
     try {
       const res = await fetch(`https://apps.apple.com/${country}/app/id${trackId}`, {
         signal: AbortSignal.timeout(20000),
@@ -1256,7 +1270,7 @@ export class InspirationsAdminService {
       const walk = (node: any) => {
         if (shelf || !node || typeof node !== 'object') return;
         const meta = node.contentsMetadata;
-        if (meta?.type === 'productMedia' && meta.platform?.appPlatform === 'phone' && Array.isArray(node.items)) {
+        if (meta?.type === 'productMedia' && meta.platform?.appPlatform === device && Array.isArray(node.items)) {
           shelf = node;
           return;
         }
@@ -1270,7 +1284,7 @@ export class InspirationsAdminService {
       return {
         urls: shots.map((art: any) => art.template),
         downloads: shots.map((art: any) => art.template.replace(TEMPLATE_SIZE, `${art.width}x${art.height}bb.webp`)),
-        mediaType: String(shelf.contentsMetadata.platform.mediaType || 'phone'),
+        mediaType: String(shelf.contentsMetadata.platform.mediaType || device),
       };
     } catch {
       return null;
@@ -1278,16 +1292,22 @@ export class InspirationsAdminService {
   }
 
   /** The App Store id of the one app whose name matches exactly (ignoring a ": tagline" or " - tagline"), or null. */
-  private async findAppStoreId(name: string, country: string): Promise<number | null> {
+  private async findAppStoreId(name: string, country: string, mac = false): Promise<number | null> {
     const norm = (v: string) => v.split(/\s[-–—:|]\s|:\s/)[0].toLowerCase().replace(/[^a-z0-9]+/g, '');
     const want = norm(name);
     const data = await this.storeJson(
-      `https://itunes.apple.com/search?term=${encodeURIComponent(name)}&entity=software&country=${country}&limit=10`,
+      `https://itunes.apple.com/search?term=${encodeURIComponent(name)}&entity=${mac ? 'macSoftware' : 'software'}&country=${country}&limit=10`,
     );
-    const hits = (data?.results || []).filter((r: any) => typeof r.trackName === 'string' && norm(r.trackName) === want);
+    const hits = (data?.results || []).filter(
+      (r: any) => typeof r.trackName === 'string' && norm(r.trackName) === want && (!mac || r.kind === 'mac-software'),
+    );
     // Two apps of that name: guessing would save the wrong one for good, so the admin gives its link instead.
     if (hits.length > 1) {
-      throw new BadRequestException(`Several App Store apps are named "${name}". Add its App Store link in Apps → Source.`);
+      throw new BadRequestException(
+        mac
+          ? `Several Mac apps are named "${name}"; upload its screenshots in Manual Screenshots.`
+          : `Several App Store apps are named "${name}". Add its App Store link in Apps → Source.`,
+      );
     }
     return hits[0]?.trackId ?? null;
   }
