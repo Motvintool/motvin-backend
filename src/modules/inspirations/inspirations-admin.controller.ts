@@ -162,8 +162,8 @@ export class InspirationsAdminController {
   }
 
   @Post('store-fetch/:app')
-  async fetchStoreShots(@Param('app') app: string, @Body() body: { country?: string; replace?: boolean }) {
-    return { success: true, data: await this.admin.fetchStoreShots(app, { country: body?.country, replace: body?.replace === true }) };
+  async fetchStoreShots(@Param('app') app: string, @Body() body: { country?: string; replace?: boolean; platform?: string }) {
+    return { success: true, data: await this.admin.fetchStoreShots(app, { country: body?.country, replace: body?.replace === true, platform: body?.platform }) };
   }
 
   // ─── Apps ─────────────────────────────────────────────────────────────────
