@@ -11,6 +11,7 @@ import {
   InspirationScreen,
   LoaderService,
 } from '../inspirations/loader.service';
+import { countBy, LibrarySearchService, PLATFORM_LABEL, PLATFORMS, type Platform } from './library-search.service';
 import { McpOAuthService, type McpIdentity } from './mcp-oauth.service';
 import { appCount, arrange, diversify } from './mcp-ranking';
 import { McpRateLimitService, waitText } from './mcp-rate-limit.service';
@@ -32,10 +33,6 @@ import { PREVIEW_MIME, ScreenPreviewService } from './screen-preview.service';
  *    inline preview (looking is allowed) but no full-resolution `image_url`,
  *    mirroring the 403 the download route returns.
  */
-
-export const PLATFORMS = ['ios', 'webapp', 'site'] as const;
-export type Platform = (typeof PLATFORMS)[number];
-const PLATFORM_LABEL: Record<Platform, string> = { ios: 'iOS', webapp: 'Web Apps', site: 'Sites' };
 
 /** Result sizes, chosen so a reply stays well under a megabyte with previews on. */
 const LIMITS = {
@@ -82,13 +79,6 @@ function siteKindLabel(screen: { site?: { kind?: string; pageType?: string; sect
 /** "1 page", "2 pages". */
 const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? '' : 's'}`;
 
-/** How many of each value, most first. */
-function countBy(values: string[]): [string, number][] {
-  const counts = new Map<string, number>();
-  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
-  return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-}
-
 function describeFilters(filters: Record<string, string | undefined>): string {
   const parts = Object.entries(filters)
     .filter(([, value]) => value)
@@ -127,6 +117,7 @@ export class McpToolsService {
     private readonly limits: McpRateLimitService,
     private readonly usage: McpUsageService,
     private readonly oauth: McpOAuthService,
+    private readonly search: LibrarySearchService,
   ) {
     this.apiUrl = config.get<string>('mcp.issuer');
     this.siteUrl = config.get<string>('mcp.siteUrl');
@@ -191,24 +182,19 @@ export class McpToolsService {
         // Sites are whole pages and their sections, kept apart from app screens: searched on their own.
         if (args.platform === 'site') return this.searchSitePages({ ...args, query: args.query ?? '', limit: args.limit ?? LIMITS.defaultScreens, offset: args.offset ?? 0, include_images: args.include_images ?? true }, apps, app);
 
-        const filters = {
-          platform: [args.platform],
-          screenType: args.screen_type ? [args.screen_type] : undefined,
-          state: args.state ? [args.state] : undefined,
-          industry: args.industry ? [args.industry] : undefined,
-          style: args.style ? [args.style] : undefined,
-          element: args.element ? [args.element] : undefined,
-          apps: app ? [app.id] : undefined,
-        };
-        // The search supplies the counts beside the screens; the screens themselves come
-        // scored, whole, so the ordering (mcp-ranking.ts) is the same on every page.
-        const [result, scored] = await Promise.all([
-          this.inspirations.search(args.query, 0, 0, filters),
-          this.inspirations.rankedScreens(args.query, filters),
-        ]);
-        const onPlatform = scored.filter((r) => r.screen.platform === args.platform);
-        const ranked = arrange(onPlatform, args.query, app ? Infinity : 1);
-        const screens = ranked.slice(args.offset, args.offset + args.limit);
+        const found = await this.search.screens({
+          query: args.query,
+          platform: args.platform,
+          screen_type: args.screen_type,
+          state: args.state,
+          industry: args.industry,
+          style: args.style,
+          element: args.element,
+          app,
+          offset: args.offset,
+          limit: args.limit,
+        });
+        const screens = found.screens;
         const items = screens.map((screen) => this.screenItem(screen, apps));
         const label = PLATFORM_LABEL[args.platform];
         const described = describeFilters({
@@ -219,34 +205,33 @@ export class McpToolsService {
           element: args.element,
           app: app?.name,
         });
-        const types = topEntries(result.facets?.screenTypes, 8);
+        const types = found.screenTypes;
 
         const lines: string[] = [];
         if (!screens.length) {
           lines.push(`No ${label} screens match "${args.query}"${described}. Try fewer filters or other words — or another platform, one call each.`);
         } else {
           lines.push(
-            `${ranked.length} ${label} ${ranked.length === 1 ? 'screen matches' : 'screens match'} "${args.query}"${described}. Showing ${args.offset + 1}–${args.offset + screens.length}, from ${appCount(screens)}.`,
+            `${found.total} ${label} ${found.total === 1 ? 'screen matches' : 'screens match'} "${args.query}"${described}. Showing ${args.offset + 1}–${args.offset + screens.length}, from ${appCount(screens)}.`,
           );
           if (types.length) lines.push(`Screen types among the matches: ${types.map(([type, count]) => `${type} (${count})`).join(', ')}.`);
-          if (result.flows.length) lines.push(`${result.flows.length} ${label} flows also match — search_flows shows them step by step.`);
+          if (found.matchedFlows) lines.push(`${found.matchedFlows} ${label} flows also match — search_flows shows them step by step.`);
         }
 
         const content: Content[] = [text(lines.join('\n'))];
         await this.appendScreens(content, screens, items, args.include_images, LIMITS.previewWidth);
-        const nextOffset = args.offset + screens.length < ranked.length ? args.offset + screens.length : null;
         return {
           content,
           structuredContent: {
             platform: args.platform,
             query: args.query,
-            total: ranked.length,
+            total: found.total,
             offset: args.offset,
-            next_offset: nextOffset,
+            next_offset: found.nextOffset,
             screens: items,
             screen_types: Object.fromEntries(types),
-            matched_apps: result.apps.slice(0, 10).map((a) => ({ id: a.id, name: a.name, slug: a.slug })),
-            matched_flows: result.flows.length,
+            matched_apps: found.matchedApps.slice(0, 10).map((a) => ({ id: a.id, name: a.name, slug: a.slug })),
+            matched_flows: found.matchedFlows,
           },
         };
       },
@@ -279,20 +264,8 @@ export class McpToolsService {
         if (args.platform === 'site') {
           return { content: [text('Sites have no flows: they are kept as whole pages and their sections. search_screens with platform "site" finds them.')], structuredContent: { platform: 'site', query: args.query ?? null, total: 0, flows: [] } };
         }
-        let flows = await this.inspirations.getFlows(args.category, args.platform);
-        if (app) flows = flows.filter((flow) => flow.appId === app.id);
-
         const query = (args.query ?? '').trim();
-        if (query) {
-          const matched = await this.inspirations.search(query, 1, 0, { platform: [args.platform], apps: app ? [app.id] : undefined });
-          const byScreens = new Set(matched.flows.map((flow) => flow.id));
-          const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
-          const byWords = (flow: InspirationFlow) => {
-            const hay = `${flow.name} ${flow.kind ?? ''} ${flow.category} ${flow.summary ?? ''} ${apps.get(flow.appId)?.name ?? ''}`.toLowerCase();
-            return terms.every((term) => hay.includes(term));
-          };
-          flows = [...flows.filter((flow) => byScreens.has(flow.id)), ...flows.filter((flow) => !byScreens.has(flow.id) && byWords(flow))];
-        }
+        const flows = await this.search.flows({ query, platform: args.platform, category: args.category, app }, apps);
 
         const total = flows.length;
         const page = flows.slice(0, args.limit);
@@ -889,14 +862,8 @@ export class McpToolsService {
   }
 
   /** Apps by id and by slug, lower-cased, so either names an app. */
-  private async appIndex(): Promise<Map<string, InspirationApp>> {
-    const apps = await this.loader.getApps();
-    const index = new Map<string, InspirationApp>();
-    for (const app of apps) {
-      index.set(app.id.toLowerCase(), app);
-      index.set(app.slug.toLowerCase(), app);
-    }
-    return index;
+  private appIndex(): Promise<Map<string, InspirationApp>> {
+    return this.search.appIndex();
   }
 
   /** The platform rule, enforced on every list that leaves this service. */
@@ -913,46 +880,22 @@ export class McpToolsService {
     apps: Map<string, InspirationApp>,
     app: InspirationApp | undefined,
   ): Promise<ToolResult> {
-    const [pages, sections] = await Promise.all([this.inspirations.getSiteScreens('page', '', 10000), this.inspirations.getSiteScreens('section', '', 10000)]);
-    const asked = args.query.toLowerCase().split(/[^\p{L}\p{N}]+/u).filter((word) => word.length > 1);
-    // "page" / "section" say which kind, not what it is about: "faq section" is FAQ sections, "landing page" pages.
-    const kind = asked.some((word) => /^sections?$/.test(word)) ? 'section' : asked.some((word) => /^(?:pages?|full)$/.test(word)) ? 'page' : null;
-    const words = asked.filter((word) => !/^(?:pages?|sections?|full|whole|site|sites|website|websites)$/.test(word));
-    const stem = (word: string) => word.replace(/(?:ing|es|s)$/, '');
-    const ownType = (screen: InspirationScreen) => (screen.site?.kind === 'section' ? screen.site.sectionType ?? 'content' : screen.site?.pageType ?? 'other');
-    const matched = [...pages, ...sections]
-      .filter((screen) => !kind || screen.site?.kind === kind)
-      .filter((screen) => !app || screen.appId === app.id)
-      .filter((screen) => !args.industry || apps.get(screen.appId.toLowerCase())?.industry === args.industry)
-      .filter((screen) => !args.screen_type || ownType(screen) === args.screen_type)
-      .map((screen) => {
-        const site = screen.site;
-        // A section is its own type ("pricing" section), not the page it sits on: that page goes with the words below.
-        const typeWords = ownType(screen).replace(/-/g, ' ');
-        const other = `${site?.kind === 'section' ? (site.pageType ?? '') : ''} ${site?.heading ?? ''} ${site?.pageUrl ?? ''} ${screen.name ?? ''} ${screen.description ?? ''} ${(screen.tags ?? []).join(' ')} ${apps.get(screen.appId.toLowerCase())?.name ?? ''}`.toLowerCase();
-        const score = words.reduce((sum, word) => sum + (typeWords.includes(stem(word)) ? 3 : other.includes(stem(word)) ? 1 : 0), 0);
-        return { screen, score: score + (site?.kind === 'page' ? 0.5 : 0) };
-      })
-      .filter((entry) => entry.score >= 1 || !words.length || Boolean(args.screen_type))
-      .sort((a, b) => b.score - a.score);
-    // A page or section of the type asked for ("pricing") is the answer; ones that only mention it in passing are not.
-    const scored = matched.some((entry) => entry.score >= 3) ? matched.filter((entry) => entry.score >= 3) : matched;
-    const shown = scored.slice(args.offset, args.offset + args.limit).map((entry) => entry.screen);
+    const found = await this.search.sitePages({ query: args.query, screen_type: args.screen_type, industry: args.industry, app, offset: args.offset, limit: args.limit }, apps);
+    const shown = found.screens;
     const items = shown.map((screen) => this.screenItem(screen, apps));
-    const matchedPages = scored.filter((entry) => entry.screen.site?.kind === 'page').length;
-    const types = countBy(scored.map((entry) => (entry.screen.site?.kind === 'page' ? `${entry.screen.site.pageType ?? 'other'} page` : `${entry.screen.site?.sectionType ?? 'content'} section`))).slice(0, 8);
+    const matchedPages = found.matchedPages;
+    const types = found.types;
     const lines = !shown.length
       ? [`No Sites pages or sections match "${args.query}". get_taxonomy with platform "site" lists the page and section types.`]
       : [
-          `${scored.length} Sites ${scored.length === 1 ? 'result matches' : 'results match'} "${args.query}": ${plural(matchedPages, 'whole page')} and ${plural(scored.length - matchedPages, 'section')}. Showing ${args.offset + 1}–${args.offset + shown.length}, from ${appCount(shown)}.`,
+          `${found.total} Sites ${found.total === 1 ? 'result matches' : 'results match'} "${args.query}": ${plural(matchedPages, 'whole page')} and ${plural(found.total - matchedPages, 'section')}. Showing ${args.offset + 1}–${args.offset + shown.length}, from ${appCount(shown)}.`,
           `Among the matches: ${types.map(([type, count]) => `${type} (${count})`).join(', ')}.`,
         ];
     const content: Content[] = [text(lines.join('\n'))];
     await this.appendScreens(content, shown, items, args.include_images, LIMITS.previewWidth);
-    const nextOffset = args.offset + shown.length < scored.length ? args.offset + shown.length : null;
     return {
       content,
-      structuredContent: { platform: 'site', query: args.query, total: scored.length, offset: args.offset, next_offset: nextOffset, screens: items, screen_types: Object.fromEntries(types), matched_apps: [], matched_flows: 0 },
+      structuredContent: { platform: 'site', query: args.query, total: found.total, offset: args.offset, next_offset: found.nextOffset, screens: items, screen_types: Object.fromEntries(types), matched_apps: [], matched_flows: 0 },
     };
   }
 
