@@ -5,6 +5,7 @@ import { LogosModule } from './modules/logos/logos.module';
 import { IllustrationsModule } from './modules/illustrations/illustrations.module';
 import { InspirationsModule } from './modules/inspirations/inspirations.module';
 import { McpModule } from './modules/mcp/mcp.module';
+import { FigmaModule } from './modules/figma/figma.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -20,6 +21,7 @@ import configuration from './config/configuration';
     IllustrationsModule,
     InspirationsModule,
     McpModule,
+    FigmaModule,
   ],
   controllers: [],
 })

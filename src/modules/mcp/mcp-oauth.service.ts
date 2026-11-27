@@ -447,14 +447,7 @@ export class McpOAuthService implements OnModuleDestroy {
    */
   async approve(request: string, idToken: string): Promise<{ redirectTo: string }> {
     const pending = this.pending(request);
-    if (typeof idToken !== 'string' || !idToken) throw new OAuthError('invalid_request', 'Sign in first', 401);
-
-    const claims = await this.verifier.verify(idToken);
-    if (claims.firebase?.sign_in_provider === 'anonymous') {
-      throw new OAuthError('access_denied', 'Guest sessions cannot connect an AI tool — sign in with a Motvin account', 403);
-    }
-    const email = (claims.email || '').toLowerCase();
-    if (!email) throw new OAuthError('access_denied', 'This account has no email address', 403);
+    const { claims, email } = await this.connectingPerson(idToken);
 
     const code: CodeRecord = {
       ...pending,
@@ -471,6 +464,34 @@ export class McpOAuthService implements OnModuleDestroy {
         state: pending.state ?? undefined,
       }),
     };
+  }
+
+  /**
+   * A first-party app of Motvin's own (the Figma plugin) connected on the
+   * person's say-so: no redirect, no code — the caller hands the tokens to the
+   * app itself. It is an ordinary connection otherwise: listed on the person's
+   * settings page, refreshed at /token with `clientId`, and disconnected the
+   * same way.
+   */
+  async connectFirstParty(idToken: string, clientId: string, clientName: string): Promise<TokenResponse & { email: string }> {
+    const { claims, email } = await this.connectingPerson(idToken);
+    const grant = randomBytes(12).toString('hex');
+    this.connections.upsert({ id: grant, uid: claims.sub, email, clientName, expiresAt: this.refreshExpiry() });
+    this.usage?.recordConnection();
+    this.logger.log(`${email} connected ${clientName}`);
+    return { ...this.issue(grant, claims.sub, email, claims.name || null, clientId, clientName, MCP_SCOPE), email };
+  }
+
+  /** Who is connecting a tool, from their Firebase ID token. Guests and accounts without an email are refused. */
+  private async connectingPerson(idToken: string) {
+    if (typeof idToken !== 'string' || !idToken) throw new OAuthError('invalid_request', 'Sign in first', 401);
+    const claims = await this.verifier.verify(idToken);
+    if (claims.firebase?.sign_in_provider === 'anonymous') {
+      throw new OAuthError('access_denied', 'Guest sessions cannot connect an AI tool — sign in with a Motvin account', 403);
+    }
+    const email = (claims.email || '').toLowerCase();
+    if (!email) throw new OAuthError('access_denied', 'This account has no email address', 403);
+    return { claims, email };
   }
 
   /** The person clicked Don't allow. */
